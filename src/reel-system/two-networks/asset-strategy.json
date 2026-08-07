@@ -1,0 +1,23 @@
+{
+  "laboratoryChambers": {
+    "assetType": "R3F",
+    "reason": "glass depth, lighting and camera movement materially improve object clarity",
+    "silhouetteMode": true
+  },
+  "dataCubes": {
+    "assetType": "R3F",
+    "reason": "simple physical cubes must remain identical and readable"
+  },
+  "routes": {
+    "assetType": "SVG",
+    "reason": "deterministic filaments are lighter and clearer than complex particle systems"
+  },
+  "text": {
+    "assetType": "HTML/SVG",
+    "reason": "precise Russian typography and environmental engravings"
+  },
+  "mascot": {
+    "assetType": "none",
+    "reason": "intentional no-mascot reel"
+  }
+}

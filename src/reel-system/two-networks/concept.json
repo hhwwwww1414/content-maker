@@ -1,0 +1,10 @@
+{
+  "id": "ghostpepe-two-networks-reel",
+  "title": "ОДИН VPN / ДВЕ СЕТИ",
+  "hook": ["WI-FI — РАБОТАЕТ", "VPN ТОТ ЖЕ", "LTE — НЕ ОТКРЫВАЕТ"],
+  "thesis": "Один VPN не означает одинаковый результат во всех сетях.",
+  "accuracy": "В периоды временных ограничений мобильного интернета доступность ресурсов через мобильную сеть может отличаться от доступности через Wi-Fi или другую сеть.",
+  "creativeDirection": "PREMIUM SCIENTIFIC A/B EXPERIMENT",
+  "forbidden": ["mascot", "CTA", "dark cyberspace", "smartphone", "VPN UI", "Telegram flow", "traffic/highway metaphors"],
+  "durationSeconds": 13.8
+}

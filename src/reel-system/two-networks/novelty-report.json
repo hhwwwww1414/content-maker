@@ -1,0 +1,32 @@
+{
+  "valid": true,
+  "candidate": {
+    "id": "ghostpepe-two-networks-reel",
+    "concept": "Cyber network lab experiment showing one VPN producing different outcomes in Wi-Fi and mobile network conditions",
+    "hookType": "ACTION-FIRST",
+    "firstFrameType": "twin chamber experiment already active",
+    "heroObject": "twin network chamber",
+    "heroObjectCategory": "connected physical network apparatus",
+    "environment": "cyberspace brand foundation with cyber network lab foreground",
+    "cameraOpening": "medium-wide observational push",
+    "cameraLanguage": "OBSERVATIONAL CYBER LAB",
+    "compositionStyle": "single hero object evolving through internal state",
+    "dominantGeometry": "connected chambers and route filaments",
+    "mascotUsage": "no mascot",
+    "mascotEntrance": "none",
+    "textComposition": "one calm thesis at a time plus phrase captions",
+    "transitionLanguage": "continuous push, macro inspection, pull back",
+    "endingType": "RETURN-TO-HERO-THESIS",
+    "ctaType": "none",
+    "visualMetaphor": "controlled network conditions inside one twin chamber",
+    "usedObjects": ["twin network chamber", "graphite data blocks", "route filaments", "platform engravings"],
+    "usedMotionPatterns": ["camera.observational-push", "camera.macro-inspection", "transitions.return-to-hero", "typography.phrase-caption"],
+    "accentColors": ["#22F0D0", "#F6FAF9"]
+  },
+  "comparisons": [
+    {"reelId": "ghostpepe-reel", "score": 0.13, "matches": ["ENVIRONMENT"], "fields": {"hero": false, "opening": false, "ending": false, "environment": true, "camera": false, "mascotEntrance": false, "visualMetaphor": false, "composition": false}},
+    {"reelId": "ghostpepe-dual-internet-reel", "score": 0.13, "matches": ["ENVIRONMENT"], "fields": {"hero": false, "opening": false, "ending": false, "environment": true, "camera": false, "mascotEntrance": false, "visualMetaphor": false, "composition": false}},
+    {"reelId": "ghostpepe-traffic-signature-reel", "score": 0.13, "matches": ["ENVIRONMENT"], "fields": {"hero": false, "opening": false, "ending": false, "environment": true, "camera": false, "mascotEntrance": false, "visualMetaphor": false, "composition": false}}
+  ],
+  "note": "Cyberspace background is treated as reusable brand foundation. Novelty is judged by hero object, camera grammar, composition, ending and visual metaphor."
+}

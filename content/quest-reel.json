@@ -1,0 +1,34 @@
+{
+  "id": "ghostpepebot-quest-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "speechRate": "90%",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "cta": "Открыть в Telegram",
+  "telegramLabel": "@ghostpepebot",
+  "finalHoldMs": 1100,
+  "voiceoverSegments": [
+    {"id": "hook_a", "text": "Пять минут назад", "pauseAfterMs": 180},
+    {"id": "hook_b", "text": "ты хотел просто открыть страницу", "pauseAfterMs": 350},
+
+    {"id": "maze_a", "text": "Теперь выбираешь сервер", "pauseAfterMs": 180},
+    {"id": "maze_b", "text": "проверяешь ключ", "pauseAfterMs": 180},
+    {"id": "maze_c", "text": "и снова возвращаешься в начало", "pauseAfterMs": 400},
+
+    {"id": "trial_a", "text": "Похоже", "pauseAfterMs": 180},
+    {"id": "trial_b", "text": "интернет решил устроить тебе испытание", "pauseAfterMs": 350},
+
+    {"id": "arrival_a", "text": "GhostPepeBot убирает лишний маршрут", "spokenText": "Гост Пепе Бот убирает лишний маршрут", "pauseAfterMs": 180},
+    {"id": "arrival_b", "text": "и оставляет один понятный путь", "pauseAfterMs": 400},
+
+    {"id": "route_a", "text": "От Телеграма", "pauseAfterMs": 180},
+    {"id": "route_b", "text": "до рабочего соединения", "pauseAfterMs": 180},
+    {"id": "route_c", "text": "без прогулок по настройкам", "pauseAfterMs": 300},
+
+    {"id": "cta_a", "text": "GhostPepeBot", "spokenText": "Гост Пепе Бот", "pauseAfterMs": 180},
+    {"id": "cta_b", "text": "когда интернет должен просто работать", "pauseAfterMs": 0}
+  ]
+}

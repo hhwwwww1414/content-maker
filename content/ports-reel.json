@@ -1,0 +1,105 @@
+{
+  "id": "ports-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1600,
+  "voiceoverSegments": [
+    {
+      "id": "hook_doors",
+      "text": "У твоего устройства 65 тысяч дверей",
+      "spokenText": "У твоего устройства шестьдесят пять тысяч дверей.",
+      "rate": "74%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "hook_knock",
+      "text": "А стучишь ты только в пару",
+      "spokenText": "А стучишься ты каждый день лишь в пару из них.",
+      "rate": "68%",
+      "pitch": "low",
+      "pauseAfterMs": 560
+    },
+    {
+      "id": "ip_house",
+      "text": "IP-адрес — это дом",
+      "spokenText": "Смотри. Айпи адрес, это твой дом.",
+      "rate": "73%",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "port_door",
+      "text": "А порт — это дверь в доме",
+      "spokenText": "А порт, это конкретная дверь в этом доме.",
+      "rate": "73%",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "known",
+      "text": "80 — сайты, 443 — шифрованный вход",
+      "spokenText": "Восемьдесят, это обычные сайты. Четыреста сорок три, шифрованный вход.",
+      "rate": "73%",
+      "pauseAfterMs": 260
+    },
+    {
+      "id": "each_service",
+      "text": "У каждой службы своя дверь",
+      "spokenText": "У каждой программы и службы своя дверь.",
+      "rate": "73%",
+      "pitch": "high",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "filters_watch",
+      "text": "Фильтры следят, в какую дверь ты стучишь",
+      "spokenText": "А фильтры провайдера следят, в какую именно дверь ты постучал.",
+      "rate": "73%",
+      "pitch": "low",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "vpn_one",
+      "text": "VPN уводит всё в одну зашифрованную дверь",
+      "spokenText": "Ви пи эн уводит весь твой трафик в одну зашифрованную дверь.",
+      "rate": "73%",
+      "pitch": "high",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "vpn_look",
+      "text": "Снаружи — обычный шифрованный стук",
+      "spokenText": "И снаружи это выглядит как обычный шифрованный стук.",
+      "rate": "73%",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "cta_q",
+      "text": "Хочешь одну надёжную дверь?",
+      "spokenText": "Хочешь одну надёжную дверь вместо тысяч открытых?",
+      "rate": "75%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_brand",
+      "text": "GhostPepe — VPN в Telegram",
+      "spokenText": "Гост Пепе, ви пи эн прямо в телеграм.",
+      "rate": "73%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_tap",
+      "text": "Подключение в пару нажатий",
+      "spokenText": "Подключение в пару нажатий.",
+      "rate": "71%",
+      "pauseAfterMs": 300
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "ghostpepebot-whitelist-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "telegramLabel": "@ghostpepebot",
+  "trimEdgeSilence": true,
+  "finalHoldMs": 1000,
+  "voiceoverSegments": [
+    {"id": "hook_a", "text": "Похоже", "pauseAfterMs": 150},
+    {"id": "hook_b", "text": "интернет теперь тоже с фейс контролем", "pauseAfterMs": 180},
+
+    {"id": "fact_a", "text": "В Петербурге пользователи сообщали", "pauseAfterMs": 190},
+    {"id": "fact_b", "text": "мобильный интернет работает только по белому списку", "pauseAfterMs": 220},
+
+    {"id": "pass_a", "text": "Одни сервисы проходят", "pauseAfterMs": 180},
+    {"id": "pass_b", "text": "другие остаются за цифровой дверью", "pauseAfterMs": 220},
+
+    {"id": "link_a", "text": "Связь есть", "pauseAfterMs": 190},
+    {"id": "link_b", "text": "а привычного интернета уже нет", "pauseAfterMs": 220},
+
+    {"id": "cta_a", "text": "А у тебя что открывается", "pauseAfterMs": 190},
+    {"id": "cta_b", "text": "напиши город в комментариях", "pauseAfterMs": 0}
+  ]
+}

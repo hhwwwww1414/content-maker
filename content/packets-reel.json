@@ -1,0 +1,105 @@
+{
+  "id": "packets-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1600,
+  "voiceoverSegments": [
+    {
+      "id": "hook_torn",
+      "text": "Твоё видео едет разорванным на тысячи кусков",
+      "spokenText": "Твоё видео едет к тебе, разорванное на тысячи кусочков.",
+      "rate": "75%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "hook_perfect",
+      "text": "И собирается идеально",
+      "spokenText": "И всё равно собирается идеально.",
+      "rate": "69%",
+      "pitch": "low",
+      "pauseAfterMs": 560
+    },
+    {
+      "id": "not_whole",
+      "text": "Данные не едут целиком",
+      "spokenText": "Смотри. Данные никогда не едут целиком.",
+      "rate": "74%",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cut",
+      "text": "Их режут на маленькие пакеты",
+      "spokenText": "Их режут на маленькие пакеты.",
+      "rate": "74%",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "numbered",
+      "text": "У каждого номер и адрес",
+      "spokenText": "У каждого пакета есть свой номер и адрес.",
+      "rate": "74%",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "paths",
+      "text": "Едут разными путями, обгоняя друг друга",
+      "spokenText": "И едут они разными путями, обгоняя друг друга.",
+      "rate": "74%",
+      "pitch": "high",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "reassemble",
+      "text": "На месте собираются по номерам",
+      "spokenText": "На месте их собирают обратно по номерам.",
+      "rate": "74%",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "lost",
+      "text": "Потерялся — просто переспросят",
+      "spokenText": "Потерялся один? Его просто переспросят.",
+      "rate": "74%",
+      "pitch": "low",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "vpn_each",
+      "text": "А VPN шифрует каждый пакет отдельно",
+      "spokenText": "А ви пи эн шифрует каждый такой пакет по отдельности.",
+      "rate": "74%",
+      "pitch": "high",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "cta_q",
+      "text": "Хочешь, чтобы каждый кусочек был закрыт?",
+      "spokenText": "Хочешь, чтобы каждый кусочек твоих данных был закрыт?",
+      "rate": "76%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_brand",
+      "text": "GhostPepe — VPN в Telegram",
+      "spokenText": "Гост Пепе, ви пи эн прямо в телеграм.",
+      "rate": "74%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_tap",
+      "text": "Подключение в пару нажатий",
+      "spokenText": "Подключение в пару нажатий.",
+      "rate": "73%",
+      "pauseAfterMs": 300
+    }
+  ]
+}

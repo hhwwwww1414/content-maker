@@ -1,0 +1,114 @@
+{
+  "id": "keys-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1600,
+  "voiceoverSegments": [
+    {
+      "id": "hook_lock",
+      "text": "Как отправить замок, а ключ не передавать?",
+      "spokenText": "Как отправить кому-то замок, но при этом не передавать ключ?",
+      "rate": "78%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "hook_open",
+      "text": "И чтобы открыл только получатель",
+      "spokenText": "И так, чтобы открыть его смог только получатель.",
+      "rate": "71%",
+      "pitch": "low",
+      "pauseAfterMs": 560
+    },
+    {
+      "id": "old_way",
+      "text": "Обычный ключ надо передать — и его перехватят",
+      "spokenText": "Смотри. Обычный ключ пришлось бы передать. А по дороге его перехватят.",
+      "rate": "77%",
+      "pitch": "low",
+      "pauseAfterMs": 300
+    },
+    {
+      "id": "two_keys",
+      "text": "Хитрость: ключей два",
+      "spokenText": "И вот хитрость. Ключей на самом деле два.",
+      "rate": "77%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "public_closes",
+      "text": "Открытый ключ только закрывает замок",
+      "spokenText": "Открытый ключ умеет только закрывать замок.",
+      "rate": "77%",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "private_opens",
+      "text": "Закрытый — только открывает",
+      "spokenText": "А закрытый, только открывать.",
+      "rate": "77%",
+      "pauseAfterMs": 260
+    },
+    {
+      "id": "share_public",
+      "text": "Открытый раздаёшь всем, закрытый — только у тебя",
+      "spokenText": "Открытый ключ ты раздаёшь всем подряд. Закрытый остаётся только у тебя.",
+      "rate": "77%",
+      "pitch": "high",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "they_close",
+      "text": "Тебе закрывают твоим открытым ключом",
+      "spokenText": "Тебе присылают сообщение, закрыв его твоим открытым ключом.",
+      "rate": "77%",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "only_you",
+      "text": "Откроешь только ты",
+      "spokenText": "А открыть его сможешь только ты один.",
+      "rate": "75%",
+      "pitch": "low",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "vpn_use",
+      "text": "Так VPN меняется ключами, не передавая секрет",
+      "spokenText": "Именно так ви пи эн обменивается ключами, не передавая сам секрет.",
+      "rate": "77%",
+      "pitch": "high",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "cta_q",
+      "text": "Хочешь замок, который откроешь только ты?",
+      "spokenText": "Хочешь замок, который откроешь только ты?",
+      "rate": "79%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_brand",
+      "text": "GhostPepe — VPN в Telegram",
+      "spokenText": "Гост Пепе, ви пи эн прямо в телеграм.",
+      "rate": "77%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_tap",
+      "text": "Подключение в пару нажатий",
+      "spokenText": "Подключение в пару нажатий.",
+      "rate": "75%",
+      "pauseAfterMs": 300
+    }
+  ]
+}

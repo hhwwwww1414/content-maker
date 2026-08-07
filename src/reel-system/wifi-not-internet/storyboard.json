@@ -1,0 +1,85 @@
+{
+  "id": "ghostpepe-wifi-not-internet",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "shots": [
+    {
+      "id": "s1-hook", "start": 0, "end": 120, "purpose": "Мгновенный хук: полный Wi-Fi, но видео не грузится",
+      "hero": {"semanticName": "confused-user", "visualDescription": "растерянный пользователь с телефоном, полный сигнал, крутится загрузка", "assetType": "IMAGE", "silhouetteImportance": "high", "referenceGeometry": "chibi ghost in hoodie holding phone"},
+      "supportElements": ["phone", "wifi-arc"], "camera": "static", "framing": "medium", "composition": "user left, phone right",
+      "text": ["4 полоски. Интернета нет."], "visualChange": "спиннер крутится, лицо растерянное",
+      "transitionIn": "cut", "transitionOut": "freeze", "transitionReason": "заморозка времени готовит выход рассказчика", "background": "cyberspace-dark", "depthLayers": ["bg", "hero", "text"], "assetType": "IMAGE"
+    },
+    {
+      "id": "s2-enter", "start": 120, "end": 300, "purpose": "Выход GhostPepe из мятного дыма",
+      "hero": {"semanticName": "ghostpepe", "visualDescription": "каноничный маскот появляется из мятного дыма", "assetType": "IMAGE", "silhouetteImportance": "high", "referenceGeometry": "canonical frog mascot"},
+      "supportElements": ["mint-glow"], "camera": "gentle push", "framing": "medium", "composition": "centered mascot",
+      "text": ["GhostPepe объясняет"], "visualChange": "дым рассеивается, маскот проявляется",
+      "transitionIn": "smoke-reveal", "transitionOut": "fade", "transitionReason": "рассказчик открывает пространство схемы", "background": "cyberspace-dark", "depthLayers": ["bg", "glow", "hero"], "assetType": "IMAGE"
+    },
+    {
+      "id": "s3-wifinet", "start": 300, "end": 560, "purpose": "Wi-Fi не равен интернету",
+      "hero": {"semanticName": "fake-wifi", "visualDescription": "хитрый роутер с полным сигналом, за ним тёмный цифровой город", "assetType": "IMAGE", "silhouetteImportance": "high", "referenceGeometry": "router face with antennae"},
+      "supportElements": ["phone", "city-grid"], "camera": "pull back", "framing": "wide", "composition": "phone left, router centre, city behind",
+      "text": ["Wi-Fi ≠ интернет"], "visualChange": "камера отъезжает, открывая город за роутером",
+      "transitionIn": "fade", "transitionOut": "fade", "transitionReason": "масштаб раскрывает путь за роутером", "background": "cyberspace-dark", "depthLayers": ["bg", "city", "hero", "text"], "assetType": "IMAGE"
+    },
+    {
+      "id": "s4-packet", "start": 560, "end": 760, "purpose": "Рождение пакета, быстрый путь до роутера",
+      "hero": {"semanticName": "data-packet", "visualDescription": "пакет-курьер стартует от телефона к роутеру", "assetType": "IMAGE", "silhouetteImportance": "high", "referenceGeometry": "courier ghost with satchel"},
+      "supportElements": ["phone", "fake-wifi"], "camera": "follow", "framing": "medium", "composition": "packet travels left to right",
+      "text": ["Телефон → роутер"], "visualChange": "пакет летит от телефона к роутеру",
+      "transitionIn": "start-burst", "transitionOut": "space-expand", "transitionReason": "после роутера пространство расширяется", "background": "cyberspace-dark", "depthLayers": ["bg", "hero", "text"], "assetType": "IMAGE"
+    },
+    {
+      "id": "s5-journey", "start": 760, "end": 1160, "purpose": "Настоящее путешествие: очередь, круг, проверка",
+      "hero": {"semanticName": "gatekeeper", "visualDescription": "цифровой страж сканирует пакет несколько раз", "assetType": "IMAGE", "silhouetteImportance": "high", "referenceGeometry": "tactical ghost with scanner"},
+      "supportElements": ["data-packet", "route-path"], "camera": "follow packet", "framing": "medium", "composition": "sequential episodes",
+      "text": ["Ещё одна проверка"], "visualChange": "очередь, лишний круг, повторный скан",
+      "transitionIn": "flow", "transitionOut": "cut-to-user", "transitionReason": "последствие пути — вернуться к пользователю", "background": "cyberspace-dark", "depthLayers": ["bg", "path", "hero", "text"], "assetType": "IMAGE"
+    },
+    {
+      "id": "s6-loading", "start": 1160, "end": 1360, "purpose": "Бесконечная загрузка — юмор",
+      "hero": {"semanticName": "loading-spirit", "visualDescription": "уставший дух загрузки вращается в кольце уже годами", "assetType": "IMAGE", "silhouetteImportance": "high", "referenceGeometry": "tired ghost in glowing ring"},
+      "supportElements": ["phone"], "camera": "static", "framing": "medium", "composition": "phone left, spirit right",
+      "text": ["кружок живёт уже несколько лет"], "visualChange": "спиннер всё ещё крутится",
+      "transitionIn": "fade", "transitionOut": "fade", "transitionReason": "после шутки переходим к честному объяснению", "background": "cyberspace-dark", "depthLayers": ["bg", "hero", "text"], "assetType": "IMAGE"
+    },
+    {
+      "id": "s7-twocases", "start": 1360, "end": 1560, "purpose": "Честно: слабый сигнал vs проблема в маршруте",
+      "hero": {"semanticName": "ghostpepe", "visualDescription": "маскот разводит два случая", "assetType": "IMAGE", "silhouetteImportance": "high", "referenceGeometry": "canonical frog mascot"},
+      "supportElements": ["case-signal", "case-route"], "camera": "static", "framing": "wide", "composition": "two cards, mascot below",
+      "text": ["Не любую медленную сеть"], "visualChange": "появляются две карточки",
+      "transitionIn": "fade", "transitionOut": "route-fold", "transitionReason": "выбранный случай ведёт к решению маршрута", "background": "cyberspace-dark", "depthLayers": ["bg", "cards", "hero"], "assetType": "IMAGE"
+    },
+    {
+      "id": "s8-newroute", "start": 1560, "end": 1780, "purpose": "Более стабильный путь без лишних кругов",
+      "hero": {"semanticName": "data-packet", "visualDescription": "пакет летит через один мятный тоннель", "assetType": "IMAGE", "silhouetteImportance": "high", "referenceGeometry": "courier ghost"},
+      "supportElements": ["mint-tunnel", "gatekeeper"], "camera": "follow", "framing": "wide", "composition": "packet through tunnel",
+      "text": ["Более стабильный путь"], "visualChange": "запутанные маршруты сворачиваются в тоннель",
+      "transitionIn": "fold", "transitionOut": "arrive", "transitionReason": "пакет доезжает — развязка", "background": "cyberspace-dark", "depthLayers": ["bg", "tunnel", "hero", "text"], "assetType": "IMAGE"
+    },
+    {
+      "id": "s9-resolve", "start": 1780, "end": 1920, "purpose": "Пакет доставлен, видео запускается",
+      "hero": {"semanticName": "data-packet", "visualDescription": "пакет передаёт посылку, видео играет", "assetType": "IMAGE", "silhouetteImportance": "high", "referenceGeometry": "courier ghost"},
+      "supportElements": ["phone"], "camera": "static", "framing": "medium", "composition": "packet left, phone right",
+      "text": ["видео запускается"], "visualChange": "play вместо спиннера",
+      "transitionIn": "deliver", "transitionOut": "clean-cut", "transitionReason": "переход к чистому выводу", "background": "cyberspace-dark", "depthLayers": ["bg", "hero", "text"], "assetType": "IMAGE"
+    },
+    {
+      "id": "s10-simple", "start": 1920, "end": 2010, "purpose": "Дверь до роутера и весь путь после",
+      "hero": {"semanticName": "route-diagram", "visualDescription": "телефон, роутер, длинный путь до сервера с подписями", "assetType": "SVG", "silhouetteImportance": "medium", "referenceGeometry": "phone router path line"},
+      "supportElements": ["door-label", "path-label"], "camera": "static", "framing": "wide", "composition": "left to right diagram",
+      "text": ["Дверь и весь путь за ней"], "visualChange": "подсвечиваются два участка",
+      "transitionIn": "fade", "transitionOut": "group-gather", "transitionReason": "образ собирает финальную сцену", "background": "cyberspace-dark", "depthLayers": ["bg", "diagram", "text"], "assetType": "SVG"
+    },
+    {
+      "id": "s11-finale", "start": 2010, "end": 2092, "purpose": "Финал: слоган, бренд, CTA",
+      "hero": {"semanticName": "ghostpepe", "visualDescription": "маскот в центре, вокруг довольный пользователь и пакет", "assetType": "IMAGE", "silhouetteImportance": "high", "referenceGeometry": "canonical frog mascot"},
+      "supportElements": ["user", "data-packet"], "camera": "static", "framing": "wide", "composition": "group shot with slogan and cta",
+      "text": ["Не быстрее света. Просто умнее маршрут."], "visualChange": "появляются слоган, бренд и CTA",
+      "transitionIn": "gather", "transitionOut": "hold", "transitionReason": "финальный кадр удерживается для CTA", "background": "cyberspace-dark", "depthLayers": ["bg", "glow", "heroes", "text"], "assetType": "IMAGE"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "ghostpepebot-deadline-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "cta": "Подключить в Telegram",
+  "telegramLabel": "@ghostpepebot",
+  "finalHoldMs": 1150,
+  "voiceoverSegments": [
+    {"id": "hook", "text": "До созвона пятнадцать секунд а VPN всё ещё думает", "spokenText": "До созвона пятнадцать секунд а ви-пи-эн всё ещё думает", "pauseAfterMs": 200},
+    {"id": "problem", "text": "Знакомая ситуация", "pauseAfterMs": 250},
+    {"id": "solution", "text": "Открываешь GhostPepeBot получаешь подписку и подключаешься", "spokenText": "Открываешь Гост Пепе Бот получаешь подписку и подключаешься", "pauseAfterMs": 300},
+    {"id": "result", "text": "Без лишних шагов и постоянного поиска нового VPN", "spokenText": "Без лишних шагов и постоянного поиска нового ви-пи-эн", "pauseAfterMs": 250},
+    {"id": "cta", "text": "GhostPepeBot интернет без лишней возни", "spokenText": "Гост Пепе Бот интернет без лишней возни", "pauseAfterMs": 0}
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "craft04-avalanche",
+  "batchId": "2026-07-25-b1",
+  "voiceProfile": "MEASURED-DEMONSTRATION",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1700,
+  "voiceoverSegments": [
+    {"id": "hk_bit", "text": "Меняем один бит из миллиона", "spokenText": "Меняем один бит из миллиона", "rate": "84%", "pauseAfterMs": 220},
+    {"id": "hk_half", "text": "Отпечаток меняется наполовину", "spokenText": "А отпечаток меняется почти наполовину", "rate": "80%", "pitch": "low", "pauseAfterMs": 620},
+    {"id": "wh_name", "text": "Это лавинный эффект", "spokenText": "Это называется лавинный эффект", "rate": "82%", "pauseAfterMs": 520},
+
+    {"id": "hs_what", "text": "Хэш — короткий отпечаток файла", "spokenText": "Хэш это короткий отпечаток любого файла", "rate": "84%", "pauseAfterMs": 240},
+    {"id": "hs_same", "text": "Тот же файл — тот же отпечаток", "spokenText": "Один и тот же файл даёт тот же самый отпечаток", "rate": "84%", "pauseAfterMs": 540},
+
+    {"id": "tn_one", "text": "Меняем одну букву", "spokenText": "А теперь меняем всего одну букву", "rate": "82%", "pauseAfterMs": 420},
+    {"id": "tn_boom", "text": "Половина клеток другая", "spokenText": "И половина клеток становится другой", "rate": "80%", "pitch": "high", "pauseAfterMs": 620},
+
+
+    {"id": "us_check", "text": "Поэтому VPN проверяет каждый пакет", "spokenText": "Поэтому ви пи эн проверяет каждый пакет", "rate": "84%", "pauseAfterMs": 240},
+    {"id": "us_mac", "text": "К пакету цепляют отпечаток на ключе", "spokenText": "К пакету цепляют отпечаток, посчитанный на ключе", "rate": "84%", "pauseAfterMs": 240},
+    {"id": "us_drop", "text": "Не сошёлся — пакет выбрасывают", "spokenText": "Не сошёлся, и пакет выбрасывают молча", "rate": "80%", "pitch": "low", "pauseAfterMs": 300},
+    {"id": "rf_hmac", "text": "Это называют HMAC", "spokenText": "Это называют аш мак", "rate": "82%", "pauseAfterMs": 560},
+
+    {"id": "br_ghost", "text": "GhostPepeBot отбрасывает подменённое", "spokenText": "Гост Пепе Бот отбрасывает подменённое, не спрашивая", "rate": "84%", "pauseAfterMs": 300},
+    {"id": "en_type", "text": "Один бит. Весь отпечаток", "spokenText": "Один бит. Весь отпечаток", "rate": "76%", "pitch": "low", "pauseAfterMs": 300}
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "batch05-outage-ritual",
+  "batchId": "2026-07-25-a1",
+  "voiceProfile": "CONVERSATIONAL-OBSERVATION",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1300,
+  "voiceoverSegments": [
+    {"id": "r_stuck", "text": "Лента встала на середине", "spokenText": "Лента встала прямо на середине", "rate": "88%", "pauseAfterMs": 200},
+    {"id": "r_start", "text": "Дальше — по инструкции", "spokenText": "Дальше всё по инструкции", "rate": "84%", "pitch": "low", "pauseAfterMs": 460},
+
+    {"id": "st_1", "text": "Потянуть вниз. Ещё раз потянуть вниз", "spokenText": "Потянуть вниз. Ещё раз потянуть вниз", "rate": "88%", "pauseAfterMs": 200},
+    {"id": "st_2", "text": "Авиарежим туда и обратно", "spokenText": "Авиарежим туда и обратно", "rate": "88%", "pauseAfterMs": 200},
+    {"id": "st_3", "text": "Подойти к окну", "spokenText": "Подойти к окну", "rate": "86%", "pauseAfterMs": 200},
+    {"id": "st_4", "text": "Написать в чат: «у вас тоже?»", "spokenText": "Написать в чат. У вас тоже?", "rate": "88%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "st_5", "text": "Открыть карту сбоев", "spokenText": "И наконец открыть карту сбоев", "rate": "86%", "pauseAfterMs": 540},
+
+    {"id": "f_yes", "text": "Есть. Лежит у всех", "spokenText": "Есть. Лежит у всех", "rate": "82%", "pitch": "high", "pauseAfterMs": 240},
+    {"id": "f_news", "text": "21 июля жалобы шли по всей стране", "spokenText": "Двадцать первого июля жалобы шли по всей стране", "rate": "86%", "pauseAfterMs": 600},
+
+    {"id": "p_relief", "text": "Стало легче?", "spokenText": "Ну что, стало легче?", "rate": "82%", "pitch": "high", "pauseAfterMs": 420},
+    {"id": "p_ten", "text": "Десять минут на доказательство невиновности", "spokenText": "Десять минут на доказательство невиновности", "rate": "86%", "pauseAfterMs": 220},
+    {"id": "p_zero", "text": "И ноль — на решение", "spokenText": "И ровно ноль на решение", "rate": "82%", "pitch": "low", "pauseAfterMs": 520},
+
+    {"id": "b_ghost", "text": "GhostPepeBot просто открывает обход и молчит", "spokenText": "Гост Пепе Бот просто открывает обход, и молчит", "rate": "86%", "pauseAfterMs": 240},
+
+    {"id": "pun_end", "text": "Мы точно не виноваты. Лента всё ещё стоит", "spokenText": "Мы точно не виноваты. Лента всё ещё стоит", "rate": "84%", "pitch": "low", "pauseAfterMs": 300}
+  ]
+}

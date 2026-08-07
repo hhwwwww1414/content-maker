@@ -1,0 +1,120 @@
+{
+  "id": "chatcontrol-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1600,
+  "voiceoverSegments": [
+    {
+      "id": "hook_vote",
+      "text": "Европа голосовала за сканирование личных сообщений",
+      "spokenText": "Европа голосовала за сканирование личных сообщений.",
+      "rate": "84%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "hook_short",
+      "text": "Отклонить — не хватило голосов",
+      "spokenText": "Отклонить не хватило голосов.",
+      "rate": "77%",
+      "pitch": "low",
+      "pauseAfterMs": 560
+    },
+    {
+      "id": "what_check",
+      "text": "Платформам разрешают проверять переписку",
+      "spokenText": "Платформам разрешают проверять твою переписку.",
+      "rate": "84%",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "what_no",
+      "text": "Без ордера. Без подозрений. До 2028 года",
+      "spokenText": "Без ордера. Без подозрений. И так до две тысячи двадцать восьмого года.",
+      "rate": "81%",
+      "pitch": "low",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "key_open",
+      "text": "Но сканируют лишь то, что НЕ зашифровано",
+      "spokenText": "Но есть нюанс. Сканируют лишь то, что не зашифровано.",
+      "rate": "84%",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "key_auto",
+      "text": "Всё открытое читается автоматически",
+      "spokenText": "Всё открытое читается автоматически.",
+      "rate": "79%",
+      "pitch": "low",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "e2e_only",
+      "text": "Сообщения защищает одно — сквозное шифрование",
+      "spokenText": "Твои сообщения защищает только одно. Сквозное шифрование.",
+      "rate": "84%",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "e2e_pass",
+      "text": "Его не сканируют. Выбирай мессенджеры с ним",
+      "spokenText": "Его не сканируют. Поэтому выбирай мессенджеры именно с ним.",
+      "rate": "84%",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "vpn_channel",
+      "text": "А твоё соединение закрывает VPN",
+      "spokenText": "А твоё соединение закрывает ви пи эн.",
+      "rate": "85%",
+      "pitch": "high",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "vpn_hide",
+      "text": "Где ты и что открываешь — провайдер не видит",
+      "spokenText": "Где ты и что ты открываешь, провайдер уже не видит.",
+      "rate": "84%",
+      "pauseAfterMs": 260
+    },
+    {
+      "id": "vpn_honest",
+      "text": "Он не читает переписку за тебя — он закрывает канал",
+      "spokenText": "Он не читает переписку за тебя. Он просто закрывает сам канал.",
+      "rate": "81%",
+      "pitch": "low",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "cta_q",
+      "text": "Хочешь, чтобы твой канал был закрыт?",
+      "spokenText": "Хочешь, чтобы твой канал был закрыт?",
+      "rate": "86%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_brand",
+      "text": "GhostPepe — VPN в Telegram",
+      "spokenText": "Гост Пепе, ви пи эн прямо в телеграм.",
+      "rate": "84%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_tap",
+      "text": "Подключение в пару нажатий",
+      "spokenText": "Подключение в пару нажатий.",
+      "rate": "81%",
+      "pauseAfterMs": 300
+    }
+  ]
+}

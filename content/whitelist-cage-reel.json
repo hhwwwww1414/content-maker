@@ -1,0 +1,35 @@
+{
+  "id": "whitelist-cage-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1600,
+  "voiceoverSegments": [
+    {"id": "hook_a", "text": "Заметил?", "spokenText": "Заметил?", "rate": "84%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "hook_b", "text": "Интернет стал короче", "spokenText": "Интернет как будто стал короче.", "rate": "78%", "pitch": "low", "pauseAfterMs": 560},
+
+    {"id": "wl_allow", "text": "Работает только то, что кто-то разрешил", "spokenText": "Работает только то, что кто-то заранее разрешил.", "rate": "84%", "pauseAfterMs": 240},
+    {"id": "wl_name", "text": "Это белый список", "spokenText": "Это называется белый список.", "rate": "80%", "pitch": "low", "pauseAfterMs": 300},
+    {"id": "wl_few", "text": "Горстка адресов. Остальное будто не существует", "spokenText": "Горстка разрешённых адресов. А всё остальное будто не существует.", "rate": "83%", "pauseAfterMs": 620},
+
+    {"id": "cage_open", "text": "Мессенджер открылся, а полсети — нет", "spokenText": "Мессенджер открылся, а половина сети просто не грузится.", "rate": "84%", "pauseAfterMs": 240},
+    {"id": "cage_link", "text": "Связь есть, а интернета нет", "spokenText": "Связь есть... а привычного интернета уже нет.", "rate": "76%", "pitch": "low", "pauseAfterMs": 300},
+    {"id": "cage_inside", "text": "Ты внутри чужого списка", "spokenText": "И ты сидишь внутри чужого списка.", "rate": "76%", "pitch": "low", "pauseAfterMs": 640},
+
+    {"id": "vpn_out", "text": "VPN уводит трафик за пределы списка", "spokenText": "Ви пи эн уводит твой трафик за пределы этого списка.", "rate": "85%", "pitch": "high", "pauseAfterMs": 240},
+    {"id": "vpn_tunnel", "text": "Через зашифрованный туннель наружу", "spokenText": "Через зашифрованный туннель, наружу.", "rate": "84%", "pauseAfterMs": 260},
+    {"id": "vpn_back", "text": "И снова работает весь интернет", "spokenText": "И снова работает весь интернет.", "rate": "82%", "pitch": "high", "pauseAfterMs": 620},
+
+    {"id": "cmp_before", "text": "Было: горстка разрешённых сайтов", "spokenText": "Было. Горстка разрешённых сайтов.", "rate": "82%", "pitch": "low", "pauseAfterMs": 260},
+    {"id": "cmp_after", "text": "Стало: интернет целиком", "spokenText": "Стало. Интернет целиком.", "rate": "84%", "pitch": "high", "pauseAfterMs": 620},
+
+    {"id": "cta_q", "text": "Хочешь выйти из чужого белого списка?", "spokenText": "Хочешь выйти из чужого белого списка?", "rate": "85%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "cta_brand", "text": "GhostPepe — VPN в Telegram", "spokenText": "Гост Пепе, ви пи эн прямо в телеграм.", "rate": "84%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "cta_tap", "text": "Подключение в пару нажатий", "spokenText": "Подключение в пару нажатий.", "rate": "82%", "pauseAfterMs": 300}
+  ]
+}

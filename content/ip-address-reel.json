@@ -1,0 +1,25 @@
+{
+  "id": "ip-address-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1500,
+  "voiceoverSegments": [
+    {"id": "hook_threat", "text": "«Вычислю по айпи» — слышал?", "spokenText": "Вычислю тебя по айпи. Слышал такую угрозу?", "rate": "79%", "pitch": "high", "pauseAfterMs": 260},
+    {"id": "hook_bluff", "text": "Почти всегда это блеф", "spokenText": "Так вот, почти всегда это блеф. Разберём, что видно на самом деле.", "rate": "74%", "pitch": "low", "pauseAfterMs": 540},
+    {"id": "isp", "text": "Видно: провайдер и примерный город", "spokenText": "По айпи видно твоего провайдера и примерный город.", "rate": "78%", "pauseAfterMs": 260},
+    {"id": "online", "text": "И что ты сейчас в сети", "spokenText": "И то, что ты прямо сейчас в сети.", "rate": "78%", "pitch": "high", "pauseAfterMs": 300},
+    {"id": "nothome", "text": "Но не квартиру и не имя", "spokenText": "А вот квартиру и твоё имя по айпи не увидеть.", "rate": "78%", "pitch": "low", "pauseAfterMs": 520},
+    {"id": "onlyisp", "text": "Точный адрес знает только провайдер", "spokenText": "Точный адрес знает только провайдер. И отдаёт его лишь по запросу закона.", "rate": "78%", "pauseAfterMs": 300},
+    {"id": "vpn", "text": "VPN подменяет видимый айпи на чужой", "spokenText": "А ви пи эн подменяет твой видимый айпи на адрес чужого города.", "rate": "78%", "pitch": "high", "pauseAfterMs": 520},
+    {"id": "payoff", "text": "IP — это район, а не дверь", "spokenText": "Айпи это район. А не дверь в твою квартиру.", "rate": "77%", "pitch": "high", "pauseAfterMs": 560},
+    {"id": "cta_q", "text": "Хочешь показывать сети чужой район?", "spokenText": "Хочешь показывать интернету чужой город вместо своего?", "rate": "80%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "cta_brand", "text": "GhostPepe — VPN в Telegram", "spokenText": "Гост Пепе, ви пи эн прямо в телеграм.", "rate": "78%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "cta_tap", "text": "Подключение в пару нажатий", "spokenText": "Подключение в пару нажатий.", "rate": "76%", "pauseAfterMs": 300}
+  ]
+}

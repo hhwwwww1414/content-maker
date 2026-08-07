@@ -1,0 +1,787 @@
+{
+  "schemaVersion": 1,
+  "reels": [
+    {
+      "id": "ghostpepe-reel",
+      "concept": "Telegram VPN bot explains fast access through a cyber connection flow",
+      "hookType": "TEXT-FIRST",
+      "firstFrameType": "headline",
+      "heroObject": "connection tunnel",
+      "heroObjectCategory": "network",
+      "environment": "cyberspace",
+      "cameraOpening": "dolly-in",
+      "cameraLanguage": "STATIC-MACRO",
+      "compositionStyle": "centered hero with supporting panels",
+      "dominantGeometry": "cards and connection lines",
+      "mascotUsage": "main character",
+      "mascotEntrance": "front reveal",
+      "textComposition": "headline top, subtitles bottom",
+      "transitionLanguage": "fade and scale",
+      "endingType": "mascot logo cta",
+      "ctaType": "direct bot call",
+      "visualMetaphor": "secure tunnel",
+      "usedObjects": [
+        "mascot",
+        "phone",
+        "vpn card",
+        "tunnel"
+      ],
+      "usedMotionPatterns": [
+        "camera.dolly-in",
+        "reveals.depth-reveal",
+        "typography.static-hook"
+      ],
+      "accentColors": [
+        "#28f0a6",
+        "#7dd3fc"
+      ]
+    },
+    {
+      "id": "ghostpepe-two-networks-reel",
+      "concept": "Cyber network lab experiment showing one VPN producing different outcomes in Wi-Fi and mobile network conditions",
+      "hookType": "ACTION-FIRST",
+      "firstFrameType": "twin chamber experiment already active",
+      "heroObject": "twin network chamber",
+      "heroObjectCategory": "connected physical network apparatus",
+      "environment": "cyberspace brand foundation with cyber network lab foreground",
+      "cameraOpening": "medium-wide observational push",
+      "cameraLanguage": "OBSERVATIONAL CYBER LAB",
+      "compositionStyle": "single hero object evolving through internal state",
+      "dominantGeometry": "connected chambers and route filaments",
+      "mascotUsage": "no mascot",
+      "mascotEntrance": "none",
+      "textComposition": "one calm thesis at a time plus phrase captions",
+      "transitionLanguage": "continuous push, macro inspection, pull back",
+      "endingType": "RETURN-TO-HERO-THESIS",
+      "ctaType": "none",
+      "visualMetaphor": "controlled network conditions inside one twin chamber",
+      "usedObjects": [
+        "twin network chamber",
+        "graphite data blocks",
+        "route filaments",
+        "platform engravings"
+      ],
+      "usedMotionPatterns": [
+        "camera.observational-push",
+        "camera.macro-inspection",
+        "transitions.return-to-hero",
+        "typography.phrase-caption"
+      ],
+      "accentColors": [
+        "#22F0D0",
+        "#F6FAF9"
+      ]
+    },
+    {
+      "id": "ghostpepe-batch-wifi-migration",
+      "concept": "За полгода россияне подключились к чужому Wi-Fi 4,1 миллиарда раз",
+      "hookType": "ACTION-FIRST",
+      "firstFrameType": "ACTION-FIRST",
+      "heroObject": "счётчик подключений на карте города",
+      "heroObjectCategory": "город как поле светящихся чужих точек доступа, к которым стягиваются нити подключений",
+      "environment": "ночной городской план сверху на brand-фоне cyberspace-dark, тёплый жёлтый против графита",
+      "cameraOpening": "ONE-CONTINUOUS-OBSERVATIONAL-TAKE",
+      "cameraLanguage": "ONE-CONTINUOUS-OBSERVATIONAL-TAKE",
+      "compositionStyle": "Ночной город сверху: тёмный графит, тёплые янтарные точки чужих сетей, холодная мятная нить своего трафика.",
+      "dominantGeometry": "PHYSICAL-STATE-EVOLUTION: одно поле точек последовательно меняет состояние.",
+      "mascotUsage": "no mascot",
+      "mascotEntrance": "no mascot",
+      "textComposition": "ENVIRONMENTAL-LABELS",
+      "transitionLanguage": "continuity by camera movement",
+      "endingType": "LOOP-BACK-TO-FIRST-FRAME",
+      "ctaType": "LOOP-BACK-TO-FIRST-FRAME",
+      "visualMetaphor": "город как поле светящихся чужих точек доступа, к которым стягиваются нити подключений",
+      "usedObjects": [
+        "счётчик подключений на карте города"
+      ],
+      "usedMotionPatterns": [
+        "PHYSICAL-STATE-EVOLUTION"
+      ],
+      "accentColors": [
+        "#22F0D0"
+      ],
+      "factualTopic": "public-wifi-migration-2026",
+      "voiceProfile": "DOCUMENTARY-URGENCY",
+      "usedPhrases": [
+        "4 100 000 000 подключений",
+        "За полгода. К чужим сетям",
+        "Мобильный интернет ограничивают всё чаще",
+        "И телефон ищет любую открытую точку",
+        "Рост в три с половиной раза за год",
+        "Публичная точка видит, куда ты идёшь",
+        "А теперь ещё обязана знать, кто ты",
+        "Постановление 1667 — идентификация в кафе и аэропортах",
+        "Эти сети мы не выбирали",
+        "Нас в них вытеснили",
+        "GhostPepeBot закрывает трафик до выхода из кармана",
+        "Четыре миллиарда раз",
+        "И завтра снова"
+      ],
+      "batchId": "2026-07-25-a1"
+    },
+    {
+      "id": "ghostpepe-batch-whitelist-pov",
+      "concept": "Одна сеть, один телефон — и ровно половина приложений живая",
+      "hookType": "POV",
+      "firstFrameType": "POV",
+      "heroObject": "экран телефона в руке от первого лица",
+      "heroObjectCategory": "список приложений, где строки штампуются «пропустить» или «нет» невидимым контролёром",
+      "environment": "из-за плеча, вечерняя комната, отражение экрана в стекле",
+      "cameraOpening": "CONTROLLED-FIRST-PERSON-OVER-SHOULDER",
+      "cameraLanguage": "CONTROLLED-FIRST-PERSON-OVER-SHOULDER",
+      "compositionStyle": "Вечерняя комната от первого лица: телефон в руке, тёплый свет сбоку, холодное отражение экрана.",
+      "dominantGeometry": "POV-ENVIRONMENTAL-REVEAL: смысл раскрывается движением наблюдателя, а не сменой объекта.",
+      "mascotUsage": "cameo",
+      "mascotEntrance": "cameo",
+      "textComposition": "POV-ATTACHED-TYPOGRAPHY",
+      "transitionLanguage": "foreground occlusion",
+      "endingType": "QUESTION-END",
+      "ctaType": "QUESTION-END",
+      "visualMetaphor": "список приложений, где строки штампуются «пропустить» или «нет» невидимым контролёром",
+      "usedObjects": [
+        "экран телефона в руке от первого лица"
+      ],
+      "usedMotionPatterns": [
+        "POV-ENVIRONMENTAL-REVEAL"
+      ],
+      "accentColors": [
+        "#22F0D0"
+      ],
+      "factualTopic": "mintsifry-whitelist-filtering",
+      "voiceProfile": "DRY-IRONY",
+      "usedPhrases": [
+        "Госуслуги — открылись",
+        "Карты — думают",
+        "Мессенджер — молчит",
+        "Один телефон, одна сеть, одна минута",
+        "Перезагружать нечего",
+        "Есть белый список Минцифры",
+        "К весне в нём сотни разрешённых сервисов",
+        "Оператор смотрит на домен и адрес",
+        "Совпало — пропустил",
+        "Не совпало — тишина",
+        "На Wi-Fi это правило не действует",
+        "Только на мобильном трафике",
+        "GhostPepeBot возвращает вторую половину экрана",
+        "А что у тебя не открылось первым?"
+      ],
+      "batchId": "2026-07-25-a1"
+    },
+    {
+      "id": "ghostpepe-batch-sni-envelope",
+      "concept": "HTTPS не скрывает, куда ты идёшь",
+      "hookType": "TEXT-FIRST",
+      "firstFrameType": "TEXT-FIRST",
+      "heroObject": "конверт с восковой печатью и прозрачным окном",
+      "heroObjectCategory": "запечатанный конверт с прозрачным окном, в котором остаётся имя получателя",
+      "environment": "макро-стол, направленный боковой свет, фон уходит в чёрный",
+      "cameraOpening": "STATIC-MACRO-WITH-OBJECT-TRANSFORMATION",
+      "cameraLanguage": "STATIC-MACRO-WITH-OBJECT-TRANSFORMATION",
+      "compositionStyle": "Макро-стол под жёстким боковым светом: один конверт, воск, бумага, чёрный провал вокруг.",
+      "dominantGeometry": "PRECISION-OBJECT-TRANSFORMATION: один объект механически меняется шаг за шагом.",
+      "mascotUsage": "reflection",
+      "mascotEntrance": "reflection",
+      "textComposition": "LARGE-STATIC-CONTRADICTION",
+      "transitionLanguage": "object morph",
+      "endingType": "HARD-THESIS-END",
+      "ctaType": "HARD-THESIS-END",
+      "visualMetaphor": "запечатанный конверт с прозрачным окном, в котором остаётся имя получателя",
+      "usedObjects": [
+        "конверт с восковой печатью и прозрачным окном"
+      ],
+      "usedMotionPatterns": [
+        "PRECISION-OBJECT-TRANSFORMATION"
+      ],
+      "accentColors": [
+        "#22F0D0"
+      ],
+      "factualTopic": "tls-sni-and-ech",
+      "voiceProfile": "CALM-MYTH-BUSTING",
+      "usedPhrases": [
+        "«Замок — значит меня не видно»",
+        "Замок закрывает письмо, а не конверт",
+        "Первое сообщение уходит до шифрования",
+        "В нём поле server name",
+        "Имя сайта. Открытым текстом",
+        "В марте 2026 вышел RFC 9849",
+        "Encrypted Client Hello закрывает это поле",
+        "Измерения FOCI: в России его вырезают",
+        "Скрыть содержимое и скрыть адресата — разное",
+        "GhostPepeBot снимает подпись с конверта целиком",
+        "Адрес — это тоже данные"
+      ],
+      "batchId": "2026-07-25-a1"
+    },
+    {
+      "id": "ghostpepe-batch-packet-too-big",
+      "concept": "Страница открылась. Картинки — нет. Сеть при этом «работает»",
+      "hookType": "MACRO-MYSTERY",
+      "firstFrameType": "MACRO-MYSTERY",
+      "heroObject": "пакет данных как физический груз перед мерной щелью",
+      "heroObjectCategory": "калибровочная щель, через которую груз проходит только определённого размера",
+      "environment": "микроскопический разрез канала, ортографическая проекция, холодный лабораторный свет",
+      "cameraOpening": "MICRO-ORTHOGRAPHIC-EXPLORATION",
+      "cameraLanguage": "MICRO-ORTHOGRAPHIC-EXPLORATION",
+      "compositionStyle": "Ортографический разрез канала под лабораторным светом: направляющая, мерная щель, поток посылок.",
+      "dominantGeometry": "MICROSCOPIC-FLOW-CHOREOGRAPHY: множество малых элементов образует один ясный процесс.",
+      "mascotUsage": "no mascot",
+      "mascotEntrance": "no mascot",
+      "textComposition": "TECHNICAL-ANNOTATIONS",
+      "transitionLanguage": "flow continuation",
+      "endingType": "OBJECT-TRANSFORMS-TO-BRAND",
+      "ctaType": "OBJECT-TRANSFORMS-TO-BRAND",
+      "visualMetaphor": "калибровочная щель, через которую груз проходит только определённого размера",
+      "usedObjects": [
+        "пакет данных как физический груз перед мерной щелью"
+      ],
+      "usedMotionPatterns": [
+        "MICROSCOPIC-FLOW-CHOREOGRAPHY"
+      ],
+      "accentColors": [
+        "#22F0D0"
+      ],
+      "factualTopic": "pmtud-black-hole",
+      "voiceProfile": "SCIENTIFIC-CURIOSITY",
+      "usedPhrases": [
+        "Текст страницы загрузился",
+        "Картинки — нет",
+        "Ping при этом идёт",
+        "Подойдём ближе",
+        "У канала есть предел размера пакета",
+        "Он называется MTU",
+        "Мелкие проходят свободно",
+        "Крупный — шире проёма на пару байт",
+        "Маршрутизатор должен ответить: слишком большой",
+        "Но это служебное сообщение отфильтровано",
+        "Отправитель шлёт тот же пакет снова",
+        "RFC 2923 называет это чёрной дырой",
+        "GhostPepeBot ведёт пакеты своим каналом",
+        "Ломается не связь",
+        "Ломается обратная связь"
+      ],
+      "batchId": "2026-07-25-a1"
+    },
+    {
+      "id": "ghostpepe-batch-outage-ritual",
+      "concept": "Сначала мы проверяем, что сломалось не у нас одних",
+      "hookType": "INTERRUPTED-ACTION",
+      "firstFrameType": "INTERRUPTED-ACTION",
+      "heroObject": "человек с телефоном у окна, повторяющий цикл",
+      "heroObjectCategory": "один и тот же цикл действий, повторяющийся по кругу в комнате",
+      "environment": "обычная комната, тёплая настольная лампа против холодного окна",
+      "cameraOpening": "DOCUMENTARY-OBSERVATION",
+      "cameraLanguage": "DOCUMENTARY-OBSERVATION",
+      "compositionStyle": "Обычная комната: тёплая лампа слева, холодное окно справа, маскот ходит по кругу.",
+      "dominantGeometry": "CHARACTER-ENVIRONMENT-INTERACTION: сцена движется действиями персонажа.",
+      "mascotUsage": "main character",
+      "mascotEntrance": "main character",
+      "textComposition": "DIALOGUE-LIKE-PHRASE-PLACEMENT",
+      "transitionLanguage": "action match cut",
+      "endingType": "VISUAL-PUNCHLINE",
+      "ctaType": "VISUAL-PUNCHLINE",
+      "visualMetaphor": "один и тот же цикл действий, повторяющийся по кругу в комнате",
+      "usedObjects": [
+        "человек с телефоном у окна, повторяющий цикл"
+      ],
+      "usedMotionPatterns": [
+        "CHARACTER-ENVIRONMENT-INTERACTION"
+      ],
+      "accentColors": [
+        "#22F0D0"
+      ],
+      "factualTopic": "july-2026-outage-and-checking-behaviour",
+      "voiceProfile": "CONVERSATIONAL-OBSERVATION",
+      "usedPhrases": [
+        "Лента встала на середине",
+        "Дальше — по инструкции",
+        "Потянуть вниз. Ещё раз потянуть вниз",
+        "Авиарежим туда и обратно",
+        "Подойти к окну",
+        "Написать в чат: «у вас тоже?»",
+        "Открыть карту сбоев",
+        "Есть. Лежит у всех",
+        "21 июля жалобы шли по всей стране",
+        "Стало легче?",
+        "Десять минут на доказательство невиновности",
+        "И ноль — на решение",
+        "GhostPepeBot просто открывает обход и молчит",
+        "Мы точно не виноваты. Лента всё ещё стоит"
+      ],
+      "batchId": "2026-07-25-a1"
+    },
+    {
+      "id": "ghostpepe-batch-rerouted-map",
+      "concept": "Ни один кабель не порван. Дойти всё равно нельзя",
+      "hookType": "BEFORE-AFTER",
+      "firstFrameType": "BEFORE-AFTER",
+      "heroObject": "изометрический макет маршрутной сети",
+      "heroObjectCategory": "целый макет города сверху, в котором перестраиваются не улицы, а разрешения",
+      "environment": "архитектурный макет сверху, мятно-графитовый свет сверху вниз",
+      "cameraOpening": "ARCHITECTURAL-ISOMETRIC-TOP-DOWN",
+      "cameraLanguage": "ARCHITECTURAL-ISOMETRIC-TOP-DOWN",
+      "compositionStyle": "Архитектурный макет сверху: ортогональные кварталы графита, мятные линии маршрутов, один узел управления.",
+      "dominantGeometry": "GEOMETRIC-SPATIAL-RECOMPOSITION: кадр перестраивается по сетке, без хаотичного морфа.",
+      "mascotUsage": "background observer",
+      "mascotEntrance": "background observer",
+      "textComposition": "ARCHITECTURAL-TYPOGRAPHY",
+      "transitionLanguage": "geometric match cut",
+      "endingType": "NO-END-CARD",
+      "ctaType": "NO-END-CARD",
+      "visualMetaphor": "целый макет города сверху, в котором перестраиваются не улицы, а разрешения",
+      "usedObjects": [
+        "изометрический макет маршрутной сети"
+      ],
+      "usedMotionPatterns": [
+        "GEOMETRIC-SPATIAL-RECOMPOSITION"
+      ],
+      "accentColors": [
+        "#22F0D0"
+      ],
+      "factualTopic": "centralized-backbone-routing-2026",
+      "voiceProfile": "MINIMAL-THRILLER",
+      "usedPhrases": [
+        "Кабель цел",
+        "Станция работает",
+        "Сигнал полный",
+        "Дойти нельзя",
+        "С первого марта магистраль управляется централизованно",
+        "Точки обмена — под единым управлением",
+        "Ограничить ресурс можно за минуты",
+        "Без участия оператора",
+        "Внутри ТСПУ стоит DPI",
+        "Он читает протокол, домен, поведение соединения",
+        "Сеть не сломали",
+        "Ей переписали правила прохода",
+        "GhostPepeBot прокладывает собственный путь поверх этих правил",
+        "Карта та же",
+        "Проход другой"
+      ],
+      "batchId": "2026-07-25-a1"
+    },
+    {
+      "id": "ghostpepe-batch-paint-secret",
+      "concept": "Двое кричат друг другу через двор — и получают общий пароль, которого никто не услышал",
+      "hookType": "OBJECT-FIRST",
+      "firstFrameType": "OBJECT-FIRST",
+      "heroObject": "три стеклянные банки с краской на столе",
+      "heroObjectCategory": "смешивание красок: смешать легко, разделить невозможно",
+      "environment": "вид сверху на тёмный лабораторный стол, направленный свет, бренд-фон как дальняя стена",
+      "cameraOpening": "OVERHEAD-TABLETOP-LOCKED",
+      "cameraLanguage": "OVERHEAD-TABLETOP-LOCKED",
+      "compositionStyle": "Тёмный лабораторный стол сверху: стеклянные банки, направленный свет, влажные блики на краске.",
+      "dominantGeometry": "IRREVERSIBLE-LIQUID-MIXING: жидкости соединяются, и обратного хода нет.",
+      "mascotUsage": "no mascot",
+      "mascotEntrance": "no mascot",
+      "textComposition": "LAB-NOTE-ANNOTATIONS",
+      "transitionLanguage": "material continuity — новая мысль вырастает из того же вещества",
+      "endingType": "HARD-THESIS-END",
+      "ctaType": "HARD-THESIS-END",
+      "visualMetaphor": "смешивание красок: смешать легко, разделить невозможно",
+      "usedObjects": [
+        "три стеклянные банки с краской на столе"
+      ],
+      "usedMotionPatterns": [
+        "IRREVERSIBLE-LIQUID-MIXING"
+      ],
+      "accentColors": [
+        "#22F0D0"
+      ],
+      "factualTopic": "diffie-hellman-key-exchange",
+      "voiceProfile": "WARM-EXPLAINER",
+      "usedPhrases": [
+        "Двое кричат пароль через двор",
+        "Никто вокруг его не узнал",
+        "Так начинается каждое VPN-соединение",
+        "Одна общая. Её видят все",
+        "У каждого есть своя, тайная",
+        "Каждый мешает свою с общей",
+        "И отдаёт смесь открыто",
+        "Теперь домешивают свою ещё раз",
+        "Цвет получился одинаковый",
+        "Видны только смеси. Разделить нельзя",
+        "В математике вместо краски — числа",
+        "GhostPepeBot так открывает каждую сессию",
+        "Секрет, который никто не передавал"
+      ],
+      "batchId": "2026-07-25-b1"
+    },
+    {
+      "id": "ghostpepe-batch-xor-switch",
+      "concept": "Эта операция шифрует. И эта же операция расшифровывает",
+      "hookType": "FAKE-SYSTEM",
+      "firstFrameType": "FAKE-SYSTEM",
+      "heroObject": "панель из восьми битовых тумблеров",
+      "heroObjectCategory": "панель тумблеров, где повторное нажатие возвращает всё как было",
+      "environment": "строго фронтальный приборный щит, тёмный металл и мятная подсветка",
+      "cameraOpening": "FLAT-FRONTAL-PANEL",
+      "cameraLanguage": "FLAT-FRONTAL-PANEL",
+      "compositionStyle": "Приборный щит: тёмный металл, ряды битовых окошек, мятная подсветка снизу.",
+      "dominantGeometry": "BITWISE-TOGGLE-SYMMETRY: клетки щёлкают, и повтор возвращает всё назад.",
+      "mascotUsage": "cameo",
+      "mascotEntrance": "cameo",
+      "textComposition": "MONOSPACE-READOUT",
+      "transitionLanguage": "state toggle — переход происходит переключением, а не склейкой",
+      "endingType": "OBJECT-TRANSFORMS-TO-BRAND",
+      "ctaType": "OBJECT-TRANSFORMS-TO-BRAND",
+      "visualMetaphor": "панель тумблеров, где повторное нажатие возвращает всё как было",
+      "usedObjects": [
+        "панель из восьми битовых тумблеров"
+      ],
+      "usedMotionPatterns": [
+        "BITWISE-TOGGLE-SYMMETRY"
+      ],
+      "accentColors": [
+        "#22F0D0"
+      ],
+      "factualTopic": "xor-stream-cipher-symmetry",
+      "voiceProfile": "PLAYFUL-PRECISION",
+      "usedPhrases": [
+        "Эта операция шифрует",
+        "И она же расшифровывает",
+        "Одинаковые — ноль, разные — единица",
+        "Берём кусочек данных",
+        "И такой же кусочек ключа",
+        "Складываем — получается шум",
+        "Тот же ключ. Ещё раз",
+        "Данные вернулись",
+        "Ключ дважды отменяет сам себя",
+        "Так работает ChaCha20 внутри VPN",
+        "GhostPepeBot гоняет трафик этим потоком",
+        "Шифр и расшифровка — одна кнопка"
+      ],
+      "batchId": "2026-07-25-b1"
+    },
+    {
+      "id": "ghostpepe-batch-box-in-box",
+      "concept": "Чтобы спрятать посылку, её не прячут. Её кладут в другую посылку",
+      "hookType": "SECURITY-CAMERA",
+      "firstFrameType": "SECURITY-CAMERA",
+      "heroObject": "посылка на упаковочном конвейере",
+      "heroObjectCategory": "посылку с адресом упаковывают в другую посылку с другим адресом",
+      "environment": "сортировочный цех сверху под углом, зернистая картинка камеры наблюдения",
+      "cameraOpening": "FIXED-OVERHEAD-CONVEYOR",
+      "cameraLanguage": "FIXED-OVERHEAD-CONVEYOR",
+      "compositionStyle": "Сортировочный цех глазами камеры наблюдения: зерно, лёгкая виньетка, конвейер по диагонали.",
+      "dominantGeometry": "NESTED-WRAPPING-ASSEMBLY: коробку кладут в коробку, ничего не исчезает.",
+      "mascotUsage": "background observer",
+      "mascotEntrance": "background observer",
+      "textComposition": "SURVEILLANCE-OVERLAY",
+      "transitionLanguage": "belt continuation — переход происходит потому, что предмет доехал",
+      "endingType": "ENVIRONMENTAL-BRAND",
+      "ctaType": "ENVIRONMENTAL-BRAND",
+      "visualMetaphor": "посылку с адресом упаковывают в другую посылку с другим адресом",
+      "usedObjects": [
+        "посылка на упаковочном конвейере"
+      ],
+      "usedMotionPatterns": [
+        "NESTED-WRAPPING-ASSEMBLY"
+      ],
+      "accentColors": [
+        "#22F0D0"
+      ],
+      "factualTopic": "ip-encapsulation-tunnel-mode",
+      "voiceProfile": "DEADPAN-OBSERVER",
+      "usedPhrases": [
+        "Чтобы спрятать посылку, её не прячут",
+        "Её кладут в другую посылку",
+        "Любой пакет — адрес и содержимое",
+        "По дороге читают только адрес",
+        "VPN берёт твой пакет целиком",
+        "И делает его содержимым нового",
+        "Снаружи — адрес VPN-сервера",
+        "Настоящий адрес лежит внутри",
+        "Приём старый: RFC 2003, 1994 год",
+        "На сервере обёртку снимают",
+        "GhostPepeBot и есть эта внешняя коробка",
+        "Коробка в коробке. Больше ничего"
+      ],
+      "batchId": "2026-07-25-b1"
+    },
+    {
+      "id": "ghostpepe-batch-avalanche",
+      "concept": "Меняем один бит из миллиона. Отпечаток меняется наполовину",
+      "hookType": "ABSTRACT-MOTION",
+      "firstFrameType": "ABSTRACT-MOTION",
+      "heroObject": "решётка 8×8 из светящихся клеток — отпечаток",
+      "heroObjectCategory": "поле из квадратов, где переворот одной клетки опрокидывает половину поля",
+      "environment": "плоское тёмное поле без глубины, только сетка и подсветка",
+      "cameraOpening": "ORTHOGONAL-GRID-LOCK",
+      "cameraLanguage": "ORTHOGONAL-GRID-LOCK",
+      "compositionStyle": "Плоское тёмное поле без глубины: сетка 8×8, каждая клетка — часть отпечатка.",
+      "dominantGeometry": "AVALANCHE-PROPAGATION: одна клетка запускает волну по всему полю.",
+      "mascotUsage": "no mascot",
+      "mascotEntrance": "no mascot",
+      "textComposition": "HEX-DIFF-COMPARISON",
+      "transitionLanguage": "state cascade — переход несёт сама волна изменений",
+      "endingType": "TYPOGRAPHIC-END",
+      "ctaType": "TYPOGRAPHIC-END",
+      "visualMetaphor": "поле из квадратов, где переворот одной клетки опрокидывает половину поля",
+      "usedObjects": [
+        "решётка 8×8 из светящихся клеток — отпечаток"
+      ],
+      "usedMotionPatterns": [
+        "AVALANCHE-PROPAGATION"
+      ],
+      "accentColors": [
+        "#22F0D0"
+      ],
+      "factualTopic": "hash-avalanche-and-hmac",
+      "voiceProfile": "MEASURED-DEMONSTRATION",
+      "usedPhrases": [
+        "Меняем один бит из миллиона",
+        "Отпечаток меняется наполовину",
+        "Это лавинный эффект",
+        "Хэш — короткий отпечаток файла",
+        "Тот же файл — тот же отпечаток",
+        "Меняем одну букву",
+        "Половина клеток другая",
+        "Поэтому VPN проверяет каждый пакет",
+        "К пакету цепляют отпечаток на ключе",
+        "Не сошёлся — пакет выбрасывают",
+        "Это называют HMAC",
+        "GhostPepeBot отбрасывает подменённое",
+        "Один бит. Весь отпечаток"
+      ],
+      "batchId": "2026-07-25-b1"
+    },
+    {
+      "id": "ghostpepe-batch-concierge-ledger",
+      "concept": "Дома десять устройств и один адрес в интернете. Почему ответы не путаются?",
+      "hookType": "DOCUMENTARY",
+      "firstFrameType": "DOCUMENTARY",
+      "heroObject": "журнал соответствий на стойке консьержа",
+      "heroObjectCategory": "консьерж с журналом: письмо приходит на номер ячейки, а не на имя",
+      "environment": "вестибюль со стойкой, тёплый свет лампы, ряд ячеек за спиной",
+      "cameraOpening": "WIDE-LOBBY-DESK-OBSERVATION",
+      "cameraLanguage": "WIDE-LOBBY-DESK-OBSERVATION",
+      "compositionStyle": "Вестибюль: стойка на переднем плане, стена ячеек за спиной, тёплая настольная лампа.",
+      "dominantGeometry": "TABLE-LOOKUP-CHOREOGRAPHY: строка находится, и предмет уходит по адресу.",
+      "mascotUsage": "main character",
+      "mascotEntrance": "main character",
+      "textComposition": "LEDGER-ROWS",
+      "transitionLanguage": "hand-off — переход происходит, когда предмет передают из рук в ячейку",
+      "endingType": "VISUAL-PUNCHLINE",
+      "ctaType": "VISUAL-PUNCHLINE",
+      "visualMetaphor": "консьерж с журналом: письмо приходит на номер ячейки, а не на имя",
+      "usedObjects": [
+        "журнал соответствий на стойке консьержа"
+      ],
+      "usedMotionPatterns": [
+        "TABLE-LOOKUP-CHOREOGRAPHY"
+      ],
+      "accentColors": [
+        "#22F0D0"
+      ],
+      "factualTopic": "nat-port-multiplexing",
+      "voiceProfile": "STORYTELLER-NEIGHBOUR",
+      "usedPhrases": [
+        "Дома десять устройств",
+        "Адрес в интернете — один",
+        "Почему ответы не путаются?",
+        "У роутера есть журнал",
+        "Каждый выход наружу — строка",
+        "К адресу добавляют номер — порт",
+        "Ноутбук — пятьдесят одна тысяча",
+        "Телефон — пятьдесят две",
+        "Ответ приходит на этот номер",
+        "Роутер смотрит в журнал и отдаёт",
+        "RFC 3022 описал это в 2001-м",
+        "VPN-сервер делает ровно то же",
+        "Только за адресом GhostPepeBot — толпа",
+        "Один адрес. И попробуй найди своего"
+      ],
+      "batchId": "2026-07-25-b1"
+    },
+    {
+      "id": "ghostpepe-batch-two-timers",
+      "concept": "Соединение надёжное. Второе тоже надёжное. Вместе они встают намертво",
+      "hookType": "ENVIRONMENT-FIRST",
+      "firstFrameType": "ENVIRONMENT-FIRST",
+      "heroObject": "два циферблата обратного отсчёта, один над другим",
+      "heroObjectCategory": "два таймера, которые тикают вразнобой и заваливают трубу повторами",
+      "environment": "боковой разрез трубы с двумя ярусами, холодный свет и накапливающаяся очередь",
+      "cameraOpening": "SIDE-SCROLL-TWO-TIER",
+      "cameraLanguage": "SIDE-SCROLL-TWO-TIER",
+      "compositionStyle": "Разрез трубы в два яруса: верхний — внутреннее соединение, нижний — внешнее; холодный свет, растущая очередь.",
+      "dominantGeometry": "DUELING-TIMERS-CASCADE: два ритма расходятся, и разница копится очередью.",
+      "mascotUsage": "reveal late",
+      "mascotEntrance": "reveal late",
+      "textComposition": "TIMER-DIALS",
+      "transitionLanguage": "timeline drift — переход происходит вместе со сдвигом времени",
+      "endingType": "MASCOT-ONLY",
+      "ctaType": "MASCOT-ONLY",
+      "visualMetaphor": "два таймера, которые тикают вразнобой и заваливают трубу повторами",
+      "usedObjects": [
+        "два циферблата обратного отсчёта, один над другим"
+      ],
+      "usedMotionPatterns": [
+        "DUELING-TIMERS-CASCADE"
+      ],
+      "accentColors": [
+        "#22F0D0"
+      ],
+      "factualTopic": "tcp-over-tcp-meltdown",
+      "voiceProfile": "TENSE-BUILD",
+      "usedPhrases": [
+        "Соединение надёжное",
+        "Второе тоже надёжное",
+        "Вместе они встают намертво",
+        "TCP — курьер-перфекционист",
+        "Потерялась посылка — шлёт снова",
+        "Теперь один курьер внутри другого",
+        "У каждого свои часы",
+        "Внешний тормозит и удваивает паузу",
+        "Внутренний об этом не знает",
+        "И шлёт повтор. И ещё один",
+        "Канал встаёт. Это meltdown",
+        "Олаф Титц описал это в 2001-м",
+        "Поэтому туннель ходит по UDP",
+        "GhostPepeBot держит туннель на UDP"
+      ],
+      "batchId": "2026-07-25-b1"
+    },
+    {
+      "id": "ghostpepe-wifi-not-internet",
+      "concept": "Wi-Fi показывает полный сигнал, но видео не грузится — GhostPepe объясняет, что полоски это только телефон-роутер, а интернет весь путь после",
+      "hookType": "RECOGNIZABLE-SITUATION",
+      "firstFrameType": "phone with full Wi-Fi and stuck video plus confused user",
+      "heroObject": "путешествие пакета данных от телефона через роутер в цифровой город",
+      "heroObjectCategory": "character-driven routing explainer with a cast acting out the problem",
+      "environment": "тёмный графитовый цифровой мир на brand-фоне cyberspace-dark с мятным свечением",
+      "cameraOpening": "STATIC-SCENE-HANDOFF",
+      "cameraLanguage": "CHARACTER-STAGE-EXPLAINER",
+      "compositionStyle": "GhostPepe как рассказчик и вспомогательные персонажи, каждый разыгрывает шаг маршрута",
+      "dominantGeometry": "characters plus phone plus route path",
+      "mascotUsage": "narrator main character",
+      "mascotEntrance": "mint smoke side reveal",
+      "textComposition": "scene labels top, phrase subtitles bottom",
+      "transitionLanguage": "scene fade handoff with long pause boundaries",
+      "endingType": "GROUP-SHOT-WITH-SLOGAN-CTA",
+      "ctaType": "link in profile",
+      "visualMetaphor": "Wi-Fi это дверь до роутера, интернет это весь путь после неё",
+      "usedObjects": [
+        "confused user ghost",
+        "data packet courier",
+        "gatekeeper",
+        "fake wi-fi router",
+        "loading spirit",
+        "phone"
+      ],
+      "usedMotionPatterns": [
+        "character-stage-handoff",
+        "packet-route-follow",
+        "typography.phrase-caption"
+      ],
+      "accentColors": [
+        "#22F0D0",
+        "#FF6B61"
+      ],
+      "factualTopic": "wifi-link-vs-internet-routing",
+      "voiceProfile": "CALM-IRONIC-NARRATOR",
+      "usedPhrases": [
+        "4 полоски. Интернета нет",
+        "Полоски показывают только одно",
+        "Телефон хорошо видит роутер",
+        "Это ещё не значит что роутер хорошо видит интернет",
+        "Пакет может попасть в очередь",
+        "Значок Wi-Fi сияет, а кружок загрузки начал новую жизнь",
+        "GhostPepe не создаёт скорость из воздуха",
+        "Если проблема в маршруте, он помогает",
+        "Wi-Fi это дверь до роутера",
+        "Интернет это весь путь после неё",
+        "Не быстрее света. Просто умнее маршрут"
+      ],
+      "rubric": "GHOSTPEPE ОБЪЯСНЯЕТ ИНТЕРНЕТ"
+    },
+    {
+      "id": "ghostpepe-cache",
+      "concept": "Почему сайт открылся мгновенно во второй раз при том же интернете — браузер держит копию рядом (кэш)",
+      "hookType": "RECOGNIZABLE-SITUATION",
+      "firstFrameType": "headline contrast slow vs instant",
+      "heroObject": "близкая полка-кэш против дальнего склада в сети",
+      "heroObjectCategory": "diagram explainer",
+      "compositionStyle": "reel-kit headline stack + two-node ты↔склад diagram with shelf",
+      "endingType": "MASCOT-CTA",
+      "ctaType": "telegram vpn",
+      "visualMetaphor": "кэш — близкая полка вместо дальнего склада",
+      "factualTopic": "browser-http-cache",
+      "accentColors": ["#22F0D0", "#FF6B61", "#FFC24B"],
+      "group": "web"
+    },
+    {
+      "id": "ghostpepe-cookie",
+      "concept": "Сайт узнаёт тебя без логина — при первом визите он выдал браузеру бейджик (cookie), который показывается каждый раз",
+      "hookType": "SURPRISE-QUESTION",
+      "firstFrameType": "headline не логинился а узнал",
+      "heroObject": "бейджик-идентификатор, копируемый между сайтами",
+      "heroObjectCategory": "diagram explainer",
+      "compositionStyle": "reel-kit + badge issuance ты↔shop and cross-site tracker cards",
+      "endingType": "MASCOT-CTA",
+      "ctaType": "telegram vpn",
+      "visualMetaphor": "cookie — бейджик, который узнаёт тебя за тебя",
+      "factualTopic": "http-cookies-and-third-party-tracking",
+      "accentColors": ["#FF9F45", "#22F0D0", "#FF6B61"],
+      "group": "web"
+    },
+    {
+      "id": "ghostpepe-password",
+      "concept": "Короткий сложный пароль слабее длинной простой фразы, потому что каждый лишний символ умножает пространство перебора",
+      "hookType": "COUNTERINTUITIVE-CLAIM",
+      "firstFrameType": "headline Tr0b4! vs фраза",
+      "heroObject": "две шкалы времени взлома",
+      "heroObjectCategory": "diagram explainer",
+      "compositionStyle": "reel-kit + two crack-time bars growing on compare",
+      "endingType": "MASCOT-CTA",
+      "ctaType": "telegram vpn",
+      "visualMetaphor": "длина бьёт сложность",
+      "factualTopic": "password-entropy-length-vs-complexity",
+      "accentColors": ["#FF9F45", "#22F0D0", "#FF6B61"],
+      "group": "web"
+    },
+    {
+      "id": "ghostpepe-incognito",
+      "concept": "Режим инкогнито чистит локальную историю и cookie, но провайдер и сайты по-прежнему видят, куда ты ходил",
+      "hookType": "MYTH-BUST",
+      "firstFrameType": "headline не плащ-невидимка",
+      "heroObject": "очки инкогнито; что прячет vs что нет",
+      "heroObjectCategory": "diagram explainer",
+      "compositionStyle": "reel-kit + incognito badge, hides-card (check) vs sees-card (provider eye, cross)",
+      "endingType": "MASCOT-CTA",
+      "ctaType": "telegram vpn",
+      "visualMetaphor": "прячет следы дома, но не в сети",
+      "factualTopic": "private-browsing-limits",
+      "accentColors": ["#FF9F45", "#FF6B61", "#22F0D0"],
+      "group": "web"
+    },
+    {
+      "id": "ghostpepe-ip-address",
+      "concept": "«Вычислю по айпи» — блеф: по IP видно провайдера, примерный город и факт онлайна, но не квартиру и не имя",
+      "hookType": "MYTH-BUST",
+      "firstFrameType": "headline вычислю по айпи",
+      "heroObject": "IP-карточка с колонками видно / не видно",
+      "heroObjectCategory": "diagram explainer",
+      "compositionStyle": "reel-kit + IP pill and two checklist columns, VPN city swap",
+      "endingType": "MASCOT-CTA",
+      "ctaType": "telegram vpn",
+      "visualMetaphor": "IP — это район, а не дверь",
+      "factualTopic": "what-ip-address-reveals",
+      "accentColors": ["#FF6B61", "#22F0D0", "#FFC24B"],
+      "group": "web"
+    },
+    {
+      "id": "ghostpepe-https-lock",
+      "concept": "Замочек HTTPS значит лишь что канал зашифрован; у фишингового сайта он тоже есть, поэтому доверие проверяют по адресу",
+      "hookType": "COUNTERINTUITIVE-CLAIM",
+      "firstFrameType": "headline у фишинга тоже есть замок",
+      "heroObject": "две адресные строки с замком: настоящий vs поддельный",
+      "heroObjectCategory": "diagram explainer",
+      "compositionStyle": "reel-kit + two address bars, address highlight on check",
+      "endingType": "MASCOT-CTA",
+      "ctaType": "telegram vpn",
+      "visualMetaphor": "замочек ≠ честный сайт",
+      "factualTopic": "https-encryption-vs-site-trust",
+      "accentColors": ["#FF6B61", "#FFC24B", "#22F0D0"],
+      "group": "web"
+    }
+  ]
+}

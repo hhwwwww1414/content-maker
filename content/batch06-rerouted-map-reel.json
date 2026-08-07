@@ -1,0 +1,36 @@
+{
+  "id": "batch06-rerouted-map",
+  "batchId": "2026-07-25-a1",
+  "voiceProfile": "MINIMAL-THRILLER",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1800,
+  "voiceoverSegments": [
+    {"id": "x_cable", "text": "Кабель цел", "spokenText": "Кабель цел", "rate": "76%", "pitch": "low", "pauseAfterMs": 420},
+    {"id": "x_station", "text": "Станция работает", "spokenText": "Станция работает", "rate": "76%", "pitch": "low", "pauseAfterMs": 420},
+    {"id": "x_signal", "text": "Сигнал полный", "spokenText": "Сигнал полный", "rate": "76%", "pauseAfterMs": 460},
+    {"id": "x_cant", "text": "Дойти нельзя", "spokenText": "Дойти нельзя", "rate": "72%", "pitch": "low", "pauseAfterMs": 650},
+
+    {"id": "y_march", "text": "С первого марта магистраль управляется централизованно", "spokenText": "С первого марта магистраль управляется централизованно", "rate": "84%", "pauseAfterMs": 240},
+    {"id": "y_points", "text": "Точки обмена — под единым управлением", "spokenText": "Точки обмена трафиком под единым управлением", "rate": "82%", "pauseAfterMs": 240},
+    {"id": "y_minutes", "text": "Ограничить ресурс можно за минуты", "spokenText": "Ограничить ресурс можно за минуты", "rate": "82%", "pauseAfterMs": 200},
+    {"id": "y_nooperator", "text": "Без участия оператора", "spokenText": "Без участия оператора", "rate": "78%", "pitch": "low", "pauseAfterMs": 620},
+
+    {"id": "z_dpi", "text": "Внутри ТСПУ стоит DPI", "spokenText": "Внутри тэ эс пэ у стоит ди пи ай", "rate": "82%", "pauseAfterMs": 220},
+    {"id": "z_reads", "text": "Он читает протокол, домен, поведение соединения", "spokenText": "Он читает протокол, домен и поведение соединения", "rate": "84%", "pauseAfterMs": 600},
+
+    {"id": "w_notbroken", "text": "Сеть не сломали", "spokenText": "Сеть не сломали", "rate": "76%", "pauseAfterMs": 300},
+    {"id": "w_rewrote", "text": "Ей переписали правила прохода", "spokenText": "Ей переписали правила прохода", "rate": "74%", "pitch": "low", "pauseAfterMs": 620},
+
+    {"id": "b_ghost", "text": "GhostPepeBot прокладывает собственный путь поверх этих правил", "spokenText": "Гост Пепе Бот прокладывает собственный путь поверх этих правил", "rate": "84%", "pauseAfterMs": 300},
+
+    {"id": "f_map", "text": "Карта та же", "spokenText": "Карта та же", "rate": "74%", "pauseAfterMs": 320},
+    {"id": "f_route", "text": "Проход другой", "spokenText": "Проход другой", "rate": "70%", "pitch": "low", "pauseAfterMs": 300}
+  ]
+}

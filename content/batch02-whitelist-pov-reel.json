@@ -1,0 +1,35 @@
+{
+  "id": "batch02-whitelist-pov",
+  "batchId": "2026-07-25-a1",
+  "voiceProfile": "DRY-IRONY",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1500,
+  "voiceoverSegments": [
+    {"id": "p_gos", "text": "Госуслуги — открылись", "spokenText": "Госуслуги открылись", "rate": "88%", "pauseAfterMs": 200},
+    {"id": "p_maps", "text": "Карты — думают", "spokenText": "Карты думают", "rate": "84%", "pauseAfterMs": 200},
+    {"id": "p_msg", "text": "Мессенджер — молчит", "spokenText": "Мессенджер молчит", "rate": "80%", "pitch": "low", "pauseAfterMs": 480},
+
+    {"id": "p_same", "text": "Один телефон, одна сеть, одна минута", "spokenText": "Один телефон. Одна сеть. Одна минута", "rate": "86%", "pauseAfterMs": 240},
+    {"id": "p_notphone", "text": "Перезагружать нечего", "spokenText": "Перезагружать тут нечего", "rate": "84%", "pitch": "low", "pauseAfterMs": 540},
+
+    {"id": "w_list", "text": "Есть белый список Минцифры", "spokenText": "Есть белый список Минцифры", "rate": "86%", "pauseAfterMs": 220},
+    {"id": "w_hundreds", "text": "К весне в нём сотни разрешённых сервисов", "spokenText": "К весне в нём уже сотни разрешённых сервисов", "rate": "86%", "pauseAfterMs": 240},
+    {"id": "w_how", "text": "Оператор смотрит на домен и адрес", "spokenText": "Оператор смотрит на домен и на адрес", "rate": "86%", "pauseAfterMs": 220},
+    {"id": "w_match", "text": "Совпало — пропустил", "spokenText": "Совпало, пропустил", "rate": "84%", "pauseAfterMs": 200},
+    {"id": "w_nomatch", "text": "Не совпало — тишина", "spokenText": "Не совпало, тишина", "rate": "80%", "pitch": "low", "pauseAfterMs": 600},
+
+    {"id": "w_wifi", "text": "На Wi-Fi это правило не действует", "spokenText": "Кстати, на вай фай это правило не действует", "rate": "86%", "pauseAfterMs": 240},
+    {"id": "w_mobile", "text": "Только на мобильном трафике", "spokenText": "Только на мобильном трафике", "rate": "84%", "pauseAfterMs": 480},
+
+    {"id": "b_ghost", "text": "GhostPepeBot возвращает вторую половину экрана", "spokenText": "Гост Пепе Бот возвращает вторую половину экрана", "rate": "86%", "pauseAfterMs": 260},
+
+    {"id": "q_end", "text": "А что у тебя не открылось первым?", "spokenText": "А что не открылось первым у тебя?", "rate": "84%", "pitch": "high", "pauseAfterMs": 300}
+  ]
+}

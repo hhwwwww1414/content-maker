@@ -1,0 +1,2 @@
+import {colors} from '../theme/colors';
+export const MissingDataSlot:React.FC<{filled:number;glow:number}>=({filled,glow})=><div style={{position:'relative',width:106,height:106,borderRadius:28,border:`3px dashed rgba(140,255,233,${.35+.5*glow})`,background:`rgba(34,240,208,${.04+.12*filled})`,boxShadow:`0 0 ${20+glow*30}px rgba(34,240,208,${.12+.25*glow})`}}><div style={{position:'absolute',inset:18,borderRadius:12,background:colors.mint,opacity:filled,scale:.8+.2*filled}}/></div>;

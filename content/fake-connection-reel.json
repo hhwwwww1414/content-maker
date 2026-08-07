@@ -1,0 +1,19 @@
+{
+  "id": "ghostpepebot-fake-connection-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "cta": "Подключить в Telegram",
+  "telegramLabel": "@ghostpepebot",
+  "finalHoldMs": 1050,
+  "voiceoverSegments": [
+    {"id": "hook", "text": "VPN пишет подключено но почему ничего не грузится", "spokenText": "Ви пи эн пишет подключено но почему ничего не грузится", "pauseAfterMs": 180},
+    {"id": "explain", "text": "Зелёная кнопка ещё не значит что соединение работает", "pauseAfterMs": 220},
+    {"id": "intro", "text": "С GhostPepeBot всё проще", "spokenText": "С Гост Пепе Бот всё проще", "pauseAfterMs": 180},
+    {"id": "solution", "text": "Получаешь подписку подключаешься и продолжаешь пользоваться интернетом", "pauseAfterMs": 180},
+    {"id": "cta", "text": "GhostPepeBot интернет без лишней возни", "spokenText": "Гост Пепе Бот интернет без лишней возни", "pauseAfterMs": 0}
+  ]
+}

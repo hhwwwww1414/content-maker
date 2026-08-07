@@ -1,0 +1,33 @@
+{
+  "id": "superapp-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1600,
+  "voiceoverSegments": [
+    {"id": "hook_one", "text": "На каждом новом телефоне — один и тот же app", "spokenText": "На каждом новом телефоне в стране теперь один и тот же апп.", "rate": "76%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "hook_conv", "text": "И это не про удобство", "spokenText": "И это не про удобство.", "rate": "68%", "pitch": "low", "pauseAfterMs": 560},
+
+    {"id": "what_super", "text": "Max — это суперапп", "spokenText": "Макс, это суперапп.", "rate": "74%", "pauseAfterMs": 220},
+    {"id": "what_all", "text": "Чат, банк, платежи, госуслуги, цифровой ID — всё в одном", "spokenText": "Чат, соцсеть, банк, платежи, госуслуги, цифровой айди, всё в одном месте.", "rate": "78%", "pauseAfterMs": 260},
+    {"id": "what_enc", "text": "И без сквозного шифрования", "spokenText": "И при этом без сквозного шифрования.", "rate": "72%", "pitch": "low", "pauseAfterMs": 620},
+
+    {"id": "funnel_block", "text": "WhatsApp заблокировали. Telegram душат", "spokenText": "Ватсап заблокировали. Телеграм душат.", "rate": "76%", "pauseAfterMs": 240},
+    {"id": "funnel_here", "text": "Чтобы ты переехал именно сюда", "spokenText": "Чтобы ты переехал именно сюда.", "rate": "72%", "pitch": "low", "pauseAfterMs": 620},
+
+    {"id": "dossier_one", "text": "Всё в одном приложении — это досье в одном месте", "spokenText": "Но всё в одном приложении, это и есть досье в одном месте.", "rate": "76%", "pauseAfterMs": 240},
+    {"id": "dossier_seen", "text": "Переписка, платежи, геолокация — как на ладони", "spokenText": "Переписка, платежи, геолокация, всё как на ладони.", "rate": "74%", "pitch": "low", "pauseAfterMs": 620},
+
+    {"id": "vpn_alive", "text": "VPN держит твой Telegram живым", "spokenText": "Что делать? Ви пи эн держит твой телеграм живым.", "rate": "77%", "pitch": "high", "pauseAfterMs": 240},
+    {"id": "vpn_yours", "text": "И твои чаты остаются твоими", "spokenText": "И твои чаты остаются только твоими.", "rate": "76%", "pauseAfterMs": 620},
+
+    {"id": "cta_q", "text": "Не хочешь переезжать в суперапп-надзиратель?", "spokenText": "Не хочешь переезжать в суперапп, который смотрит за тобой?", "rate": "78%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "cta_brand", "text": "GhostPepe — VPN в Telegram", "spokenText": "Гост Пепе, ви пи эн прямо в телеграм.", "rate": "76%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "cta_tap", "text": "Подключение в пару нажатий", "spokenText": "Подключение в пару нажатий.", "rate": "74%", "pauseAfterMs": 300}
+  ]
+}

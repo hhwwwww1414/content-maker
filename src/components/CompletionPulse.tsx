@@ -1,0 +1,1 @@
+export const CompletionPulse:React.FC<{progress:number}>=({progress})=><div style={{position:'absolute',left:540,top:960,width:700,height:700,borderRadius:'50%',border:'4px solid rgba(34,240,208,.7)',translate:'-50% -50%',scale:.15+progress*1.35,opacity:(1-progress)*.8,boxShadow:'0 0 45px rgba(34,240,208,.35)'}}/>;

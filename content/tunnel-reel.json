@@ -1,0 +1,105 @@
+{
+  "id": "tunnel-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1600,
+  "voiceoverSegments": [
+    {
+      "id": "hook_letter",
+      "text": "Письмо внутри письма",
+      "spokenText": "Письмо внутри письма.",
+      "rate": "76%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "hook_postman",
+      "text": "Почтальон видит конверт, но не то, что внутри",
+      "spokenText": "Почтальон видит конверт, но не то, что лежит внутри.",
+      "rate": "73%",
+      "pitch": "low",
+      "pauseAfterMs": 560
+    },
+    {
+      "id": "req_letter",
+      "text": "Твой запрос — это письмо",
+      "spokenText": "Смотри. Твой запрос в интернет, это письмо.",
+      "rate": "76%",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "isp_reads",
+      "text": "Провайдер, как почтальон, читает адрес",
+      "spokenText": "Провайдер, как почтальон, спокойно читает адрес на конверте.",
+      "rate": "76%",
+      "pitch": "low",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "vpn_wrap",
+      "text": "VPN кладёт письмо в другой конверт",
+      "spokenText": "Что делает ви пи эн? Он кладёт твоё письмо в другой конверт.",
+      "rate": "76%",
+      "pitch": "high",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "vpn_outer",
+      "text": "Снаружи — только адрес VPN-сервера",
+      "spokenText": "И снаружи виден только адрес ви пи эн сервера.",
+      "rate": "76%",
+      "pauseAfterMs": 260
+    },
+    {
+      "id": "vpn_enc",
+      "text": "А внутри — всё зашифровано",
+      "spokenText": "А внутри всё зашифровано.",
+      "rate": "75%",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "reveal_encap",
+      "text": "Это инкапсуляция — пакет внутри пакета",
+      "spokenText": "Это называется инкапсуляция. Пакет внутри пакета.",
+      "rate": "76%",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "reveal_see",
+      "text": "Провайдер видит одно: ты говоришь с VPN",
+      "spokenText": "Провайдер видит только одно. Ты говоришь с ви пи эн. И всё.",
+      "rate": "76%",
+      "pitch": "low",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "cta_q",
+      "text": "Хочешь спрятать письмо в конверт?",
+      "spokenText": "Хочешь спрятать своё письмо в надёжный конверт?",
+      "rate": "78%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_brand",
+      "text": "GhostPepe — VPN в Telegram",
+      "spokenText": "Гост Пепе, ви пи эн прямо в телеграм.",
+      "rate": "76%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_tap",
+      "text": "Подключение в пару нажатий",
+      "spokenText": "Подключение в пару нажатий.",
+      "rate": "75%",
+      "pauseAfterMs": 300
+    }
+  ]
+}

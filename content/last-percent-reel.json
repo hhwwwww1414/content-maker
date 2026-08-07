@@ -1,0 +1,24 @@
+{
+  "id": "ghostpepebot-last-percent-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "telegramLabel": "@ghostpepebot",
+  "trimEdgeSilence": true,
+  "finalHoldMs": 1000,
+  "voiceoverSegments": [
+    {"id":"hook_a","text":"Иногда интернет замирает","pauseAfterMs":180},
+    {"id":"hook_b","text":"на последнем проценте","pauseAfterMs":220},
+    {"id":"search_a","text":"Всё почти готово","pauseAfterMs":200},
+    {"id":"search_b","text":"но один пакет так и не дошёл","pauseAfterMs":220},
+    {"id":"find_a","text":"GhostPepeBot","spokenText":"Гост Пепе Бот","pauseAfterMs":160},
+    {"id":"find_b","text":"находит недостающий пакет","pauseAfterMs":200},
+    {"id":"resume_a","text":"И загрузка наконец","pauseAfterMs":160},
+    {"id":"resume_b","text":"продолжает движение","pauseAfterMs":180},
+    {"id":"cta_a","text":"Не жди последний процент","pauseAfterMs":200},
+    {"id":"cta_b","text":"попробуй GhostPepeBot","spokenText":"попробуй Гост Пепе Бот","pauseAfterMs":0}
+  ]
+}

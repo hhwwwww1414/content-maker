@@ -1,0 +1,42 @@
+{
+  "id": "vpn-proxy-dns-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "aidar",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1600,
+  "voiceoverSegments": [
+    {"id": "hook_confuse", "text": "Путаешь VPN, прокси и DNS?", "spokenText": "Ты всё ещё путаешь ви пи эн, прокси и ди эн эс?", "pauseAfterMs": 220},
+    {"id": "hook_same", "text": "Кажется, это одно и то же", "spokenText": "Кажется, что все три это одно и то же", "pauseAfterMs": 200},
+    {"id": "hook_three", "text": "Но это три разные вещи", "spokenText": "Но это три разные вещи", "pauseAfterMs": 240},
+    {"id": "hook_price", "text": "И путаница стоит приватности", "spokenText": "И кто их путает, платит своей приватностью", "pauseAfterMs": 560},
+
+    {"id": "dns_book", "text": "DNS — телефонная книга интернета", "spokenText": "Ди эн эс это телефонная книга интернета", "pauseAfterMs": 240},
+    {"id": "dns_open", "text": "Меняешь DNS — сайт открывается", "spokenText": "Меняешь ди эн эс, и сайт открывается, даже если провайдер спрятал адрес", "pauseAfterMs": 260},
+    {"id": "dns_visible", "text": "Но трафик виден провайдеру", "spokenText": "Но твой трафик виден как на ладони, ничего не шифруется", "pauseAfterMs": 620},
+
+    {"id": "proxy_middle", "text": "Прокси — посредник", "spokenText": "Прокси это посредник", "pauseAfterMs": 220},
+    {"id": "proxy_addr", "text": "Сайт видит его адрес, не твой", "spokenText": "Твой запрос идёт через чужой сервер, и сайт видит его адрес, а не твой", "pauseAfterMs": 260},
+    {"id": "proxy_one", "text": "Но чаще это один браузер", "spokenText": "Но обычно это один браузер, а не всё устройство, и сам прокси видит, что ты передаёшь", "pauseAfterMs": 620},
+
+    {"id": "vpn_tunnel", "text": "VPN — зашифрованный туннель", "spokenText": "Ви пи эн это зашифрованный туннель", "pauseAfterMs": 220},
+    {"id": "vpn_all", "text": "Для всего устройства сразу", "spokenText": "Для всего устройства сразу", "pauseAfterMs": 260},
+    {"id": "vpn_hide", "text": "Прячет и адрес, и содержимое", "spokenText": "Провайдер видит только что соединение есть, но не куда и не что. Прячет всё целиком", "pauseAfterMs": 640},
+
+    {"id": "trap_q", "text": "«Сменил DNS — значит защищён»?", "spokenText": "И вот ловушка. Сменил ди эн эс или поставил бесплатный прокси, значит защищён?", "pauseAfterMs": 240},
+    {"id": "trap_no", "text": "Нет. DNS не шифрует", "spokenText": "Нет. Ди эн эс не шифрует", "pauseAfterMs": 220},
+    {"id": "trap_leak", "text": "А бесплатный прокси часто сливает", "spokenText": "А бесплатный прокси часто сам логирует и сливает твои данные", "pauseAfterMs": 620},
+
+    {"id": "sum_dns", "text": "Обойти блокировку — это DNS", "spokenText": "Запомни. Обойти блокировку по имени это ди эн эс", "pauseAfterMs": 220},
+    {"id": "sum_proxy", "text": "Сменить адрес — это прокси", "spokenText": "Сменить адрес одному приложению это прокси", "pauseAfterMs": 220},
+    {"id": "sum_vpn", "text": "Спрятать всё устройство — это VPN", "spokenText": "А зашифровать и спрятать всё устройство это ви пи эн", "pauseAfterMs": 600},
+
+    {"id": "cta_ask", "text": "Хочешь прятать весь трафик?", "spokenText": "Хочешь прятать весь трафик, а не только адрес?", "pauseAfterMs": 220},
+    {"id": "cta_brand", "text": "GhostPepe — VPN в Telegram", "spokenText": "Гост Пепе, ви пи эн прямо в телеграм", "pauseAfterMs": 220},
+    {"id": "cta_tap", "text": "Подключение в пару нажатий", "spokenText": "Подключение в пару нажатий", "pauseAfterMs": 300}
+  ]
+}

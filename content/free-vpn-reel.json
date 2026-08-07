@@ -1,0 +1,151 @@
+{
+  "id": "free-vpn-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1600,
+  "voiceoverSegments": [
+    {
+      "id": "hook_free",
+      "text": "Поставил бесплатный VPN?",
+      "spokenText": "Поставил бесплатный ви пи эн?",
+      "rate": "89%",
+      "pitch": "high",
+      "pauseAfterMs": 200
+    },
+    {
+      "id": "hook_news",
+      "text": "Тогда плохие новости",
+      "spokenText": "Тогда плохие новости.",
+      "rate": "75%",
+      "pitch": "low",
+      "pauseAfterMs": 340
+    },
+    {
+      "id": "hook_product",
+      "text": "Если ты не платишь за VPN — товар это ты",
+      "spokenText": "Если ты не платишь за ви пи эн, значит товар это ты.",
+      "rate": "79%",
+      "pitch": "low",
+      "pauseAfterMs": 640
+    },
+    {
+      "id": "m1_how",
+      "text": "Смотри, как это работает",
+      "spokenText": "Смотри, как это работает.",
+      "rate": "87%",
+      "pitch": "high",
+      "pauseAfterMs": 200
+    },
+    {
+      "id": "m1_all",
+      "text": "Он пропускает через себя всё, что ты открываешь",
+      "spokenText": "Бесплатный ви пи эн пропускает через себя всё, что ты открываешь.",
+      "rate": "85%",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "m1_sell",
+      "text": "А этот поток можно продать",
+      "spokenText": "А такой поток можно продать. Рекламным сетям, брокерам данных.",
+      "rate": "80%",
+      "pitch": "low",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "m2_inject",
+      "text": "Второе: реклама и трекеры",
+      "spokenText": "Второе. Некоторые вшивают в страницы свою рекламу и трекеры.",
+      "rate": "85%",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "m2_marked",
+      "text": "Думаешь, что спрятался — а тебя метят плотнее",
+      "spokenText": "Ты думаешь, что спрятался... А тебя метят плотнее прежнего.",
+      "rate": "78%",
+      "pitch": "low",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "m3_worst",
+      "text": "Третье — самое неприятное",
+      "spokenText": "И третье. Самое неприятное.",
+      "rate": "80%",
+      "pitch": "low",
+      "pauseAfterMs": 260
+    },
+    {
+      "id": "m3_node",
+      "text": "Твоё устройство делают выходным узлом",
+      "spokenText": "Часть бесплатных превращает твоё устройство в выходной узел.",
+      "rate": "84%",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "m3_blame",
+      "text": "Через твой IP ходит чужой трафик",
+      "spokenText": "Через твой айпи ходит чужой трафик. А вопросы прилетят тебе.",
+      "rate": "79%",
+      "pitch": "low",
+      "pauseAfterMs": 640
+    },
+    {
+      "id": "price_title",
+      "text": "И вот цена",
+      "spokenText": "И вот она, настоящая цена.",
+      "rate": "75%",
+      "pitch": "low",
+      "pauseAfterMs": 280
+    },
+    {
+      "id": "price_pay",
+      "text": "Экономишь пару долларов — отдаёшь историю и репутацию IP",
+      "spokenText": "Ты экономишь пару долларов, а отдаёшь историю, метки и репутацию своего айпи.",
+      "rate": "82%",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "fix_sub",
+      "text": "Нормальный VPN живёт на подписке. Не на тебе",
+      "spokenText": "Нормальный ви пи эн живёт на подписке. Не на тебе.",
+      "rate": "82%",
+      "pauseAfterMs": 280
+    },
+    {
+      "id": "fix_rules",
+      "text": "Понятная оплата. Без рекламы. Без логов",
+      "spokenText": "Понятная оплата. Без рекламы. Без логов на продажу.",
+      "rate": "84%",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "cta_q",
+      "text": "Хочешь VPN, который зарабатывает на подписке?",
+      "spokenText": "Хочешь ви пи эн, который зарабатывает на подписке, а не на тебе?",
+      "rate": "87%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_brand",
+      "text": "GhostPepe — VPN в Telegram",
+      "spokenText": "Гост Пепе, ви пи эн прямо в телеграм.",
+      "rate": "85%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_tap",
+      "text": "Подключение в пару нажатий",
+      "spokenText": "Подключение в пару нажатий.",
+      "rate": "84%",
+      "pauseAfterMs": 300
+    }
+  ]
+}

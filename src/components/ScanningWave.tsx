@@ -1,0 +1,1 @@
+export const ScanningWave:React.FC<{progress:number;opacity:number}>=({progress,opacity})=><div style={{position:'absolute',left:250+progress*350,top:640,width:8,height:520,borderRadius:10,background:'linear-gradient(180deg,transparent,#22F0D0,transparent)',boxShadow:'0 0 34px rgba(34,240,208,.65)',opacity:opacity*(1-progress*.65),zIndex:9}}/>;

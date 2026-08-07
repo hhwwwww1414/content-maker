@@ -1,0 +1,35 @@
+{
+  "id": "batch01-wifi-migration",
+  "batchId": "2026-07-25-a1",
+  "voiceProfile": "DOCUMENTARY-URGENCY",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1400,
+  "voiceoverSegments": [
+    {"id": "n_count", "text": "4,1 млрд подключений", "spokenText": "Четыре миллиарда сто миллионов подключений", "rate": "86%", "pauseAfterMs": 200},
+    {"id": "n_when", "text": "За полгода. К чужим сетям", "spokenText": "За полгода к чужим сетям", "rate": "84%", "pitch": "low", "pauseAfterMs": 520},
+
+    {"id": "why_limit", "text": "Мобильный интернет ограничивают всё чаще", "spokenText": "Мобильный интернет ограничивают всё чаще", "rate": "86%", "pauseAfterMs": 220},
+    {"id": "why_search", "text": "И телефон ищет любую открытую точку", "spokenText": "И телефон ищет любую открытую точку", "rate": "86%", "pauseAfterMs": 460},
+
+    {"id": "d_growth", "text": "Рост в три с половиной раза за год", "spokenText": "Рост в три с половиной раза за год", "rate": "86%", "pauseAfterMs": 560},
+
+    {"id": "t_sees", "text": "Публичная точка видит, куда ты идёшь", "spokenText": "Публичная точка видит, куда ты идёшь", "rate": "84%", "pitch": "low", "pauseAfterMs": 240},
+    {"id": "t_knows", "text": "А теперь ещё обязана знать, кто ты", "spokenText": "А теперь она ещё обязана знать, кто ты", "rate": "84%", "pauseAfterMs": 240},
+    {"id": "t_rule", "text": "Постановление 1667 — идентификация в кафе и аэропортах", "spokenText": "Постановление тысяча шестьсот шестьдесят семь. Идентификация в кафе и аэропортах", "rate": "86%", "pauseAfterMs": 620},
+
+    {"id": "th_choice", "text": "Эти сети мы не выбирали", "spokenText": "Эти сети мы не выбирали", "rate": "84%", "pauseAfterMs": 200},
+    {"id": "th_push", "text": "Нас в них вытеснили", "spokenText": "Нас в них вытеснили", "rate": "80%", "pitch": "low", "pauseAfterMs": 600},
+
+    {"id": "br_ghost", "text": "GhostPepeBot закрывает трафик до выхода из кармана", "spokenText": "Гост Пепе Бот закрывает трафик до выхода из кармана", "rate": "86%", "pauseAfterMs": 240},
+
+    {"id": "loop_back", "text": "Четыре миллиарда раз", "spokenText": "Четыре миллиарда раз", "rate": "82%", "pauseAfterMs": 240},
+    {"id": "loop_again", "text": "И завтра снова", "spokenText": "И завтра снова", "rate": "78%", "pitch": "low", "pauseAfterMs": 300}
+  ]
+}

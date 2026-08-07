@@ -1,0 +1,50 @@
+{
+  "id": "wifi-not-internet-reel",
+  "ttsProvider": "silero", "voice": "v5_5_ru", "speaker": "eugene",
+  "fps": 30, "width": 1080, "height": 1920,
+  "trimEdgeSilence": true, "captionMode": "phrase", "finalHoldMs": 1700,
+  "voiceoverSegments": [
+    {"id": "s1_bars", "text": "У него четыре полоски Wi-Fi", "spokenText": "У него четыре полоски вай-фай.", "rate": "80%", "pitch": "high", "pauseAfterMs": 240},
+    {"id": "s1_video", "text": "Но видео всё равно не грузится", "spokenText": "Но видео всё равно не грузится.", "rate": "80%", "pauseAfterMs": 260},
+    {"id": "s1_how", "text": "Как так?", "spokenText": "Как так?", "rate": "76%", "pitch": "high", "pauseAfterMs": 640},
+
+    {"id": "s2_look", "text": "Смотри", "spokenText": "Смотри.", "rate": "76%", "pitch": "low", "pauseAfterMs": 520},
+    {"id": "s2_one", "text": "Полоски показывают только одно", "spokenText": "Полоски показывают только одно.", "rate": "80%", "pauseAfterMs": 240},
+    {"id": "s2_router", "text": "Телефон хорошо видит роутер", "spokenText": "Телефон хорошо видит роутер.", "rate": "80%", "pauseAfterMs": 460},
+
+    {"id": "s3_notmean", "text": "Это ещё не значит", "spokenText": "Это ещё не значит,", "rate": "80%", "pauseAfterMs": 200},
+    {"id": "s3_net", "text": "что роутер хорошо видит интернет", "spokenText": "что роутер хорошо видит интернет.", "rate": "78%", "pitch": "low", "pauseAfterMs": 520},
+
+    {"id": "s4_send", "text": "Теперь отправим маленький пакет данных", "spokenText": "Теперь отправим маленький пакет данных.", "rate": "82%", "pitch": "high", "pauseAfterMs": 240},
+    {"id": "s4_fast", "text": "Сначала он быстро долетает", "spokenText": "Сначала он быстро долетает", "rate": "82%", "pauseAfterMs": 160},
+    {"id": "s4_torouter", "text": "от телефона до роутера", "spokenText": "от телефона до роутера.", "rate": "82%", "pauseAfterMs": 480},
+
+    {"id": "s5_journey", "text": "А дальше начинается настоящее путешествие", "spokenText": "А вот дальше начинается настоящее путешествие.", "rate": "80%", "pauseAfterMs": 320},
+    {"id": "s5_queue", "text": "Пакет может попасть в очередь", "spokenText": "Пакет может попасть в очередь,", "rate": "80%", "pauseAfterMs": 220},
+    {"id": "s5_detour", "text": "уйти по неудачному маршруту", "spokenText": "уйти по неудачному маршруту,", "rate": "80%", "pauseAfterMs": 220},
+    {"id": "s5_check", "text": "несколько раз пройти проверку", "spokenText": "несколько раз пройти проверку,", "rate": "80%", "pauseAfterMs": 220},
+    {"id": "s5_stuck", "text": "или застрять на перегруженном участке", "spokenText": "или застрять на перегруженном участке.", "rate": "80%", "pitch": "low", "pauseAfterMs": 520},
+
+    {"id": "s6_shines", "text": "Значок Wi-Fi сияет", "spokenText": "Поэтому значок вай-фай сияет,", "rate": "80%", "pauseAfterMs": 200},
+    {"id": "s6_newlife", "text": "а кружок загрузки начал новую жизнь", "spokenText": "а кружок загрузки уже начал новую жизнь.", "rate": "78%", "pitch": "low", "pauseAfterMs": 660},
+
+    {"id": "s7_notfix", "text": "GhostPepe не чинит слабый сигнал", "spokenText": "Гост Пепе не чинит слабый сигнал", "rate": "80%", "pauseAfterMs": 180},
+    {"id": "s7_noair", "text": "и не создаёт скорость из воздуха", "spokenText": "и не создаёт скорость из воздуха.", "rate": "78%", "pitch": "low", "pauseAfterMs": 520},
+
+    {"id": "s8_ifroute", "text": "Но если проблема в маршруте", "spokenText": "Но если проблема находится в маршруте,", "rate": "80%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "s8_helps", "text": "он помогает отправить трафик", "spokenText": "он помогает отправить трафик", "rate": "80%", "pauseAfterMs": 160},
+    {"id": "s8_stable", "text": "по более стабильному пути — без лишних кругов", "spokenText": "по более стабильному пути. Без лишних кругов.", "rate": "80%", "pauseAfterMs": 520},
+
+    {"id": "s9_arrives", "text": "Пакет приходит", "spokenText": "Пакет приходит.", "rate": "80%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "s9_plays", "text": "Видео запускается", "spokenText": "Видео запускается.", "rate": "80%", "pauseAfterMs": 240},
+    {"id": "s9_believe", "text": "Пользователь снова верит в технологии", "spokenText": "Пользователь снова начинает верить в технологии.", "rate": "80%", "pauseAfterMs": 520},
+
+    {"id": "s10_remember", "text": "Запомни", "spokenText": "Запомни.", "rate": "76%", "pitch": "low", "pauseAfterMs": 420},
+    {"id": "s10_door", "text": "Wi-Fi — это дверь до роутера", "spokenText": "Вай-фай, это дверь до роутера.", "rate": "80%", "pauseAfterMs": 300},
+    {"id": "s10_path", "text": "Интернет — это весь путь после неё", "spokenText": "Интернет, это весь путь после неё.", "rate": "80%", "pauseAfterMs": 560},
+
+    {"id": "s11_bot", "text": "GhostPepeBot", "spokenText": "Гост Пепе Бот.", "rate": "80%", "pitch": "low", "pauseAfterMs": 480},
+    {"id": "s11_notlight", "text": "Не быстрее света", "spokenText": "Не быстрее света.", "rate": "78%", "pitch": "low", "pauseAfterMs": 300},
+    {"id": "s11_smarter", "text": "Просто умнее маршрут", "spokenText": "Просто умнее маршрут.", "rate": "78%", "pauseAfterMs": 300}
+  ]
+}

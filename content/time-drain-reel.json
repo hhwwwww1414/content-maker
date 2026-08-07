@@ -1,0 +1,25 @@
+{
+  "id": "ghostpepebot-time-drain-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "telegramLabel": "@ghostpepebot",
+  "trimEdgeSilence": true,
+  "finalHoldMs": 930,
+  "voiceoverSegments": [
+    {"id": "hook_a", "text": "Ты замечал", "pauseAfterMs": 160},
+    {"id": "hook_b", "text": "сколько времени забирает медленный интернет", "pauseAfterMs": 230},
+    {"id": "drain_a", "text": "Подождал", "pauseAfterMs": 160},
+    {"id": "drain_b", "text": "повторил попытку", "pauseAfterMs": 160},
+    {"id": "drain_c", "text": "и снова отдал несколько секунд", "pauseAfterMs": 230},
+    {"id": "cost_a", "text": "Самая дорогая подписка", "pauseAfterMs": 200},
+    {"id": "cost_b", "text": "та которую ты оплачиваешь своим временем", "pauseAfterMs": 270},
+    {"id": "freeze_a", "text": "Время слишком дорого", "pauseAfterMs": 180},
+    {"id": "freeze_b", "text": "чтобы отдавать его ожиданию", "pauseAfterMs": 230},
+    {"id": "cta_a", "text": "Оставь время себе", "pauseAfterMs": 190},
+    {"id": "cta_b", "text": "GhostPepeBot", "spokenText": "Гост Пепе Бот", "pauseAfterMs": 0}
+  ]
+}

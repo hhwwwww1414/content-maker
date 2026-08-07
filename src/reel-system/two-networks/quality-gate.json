@@ -1,0 +1,12 @@
+{
+  "noveltyValid": true,
+  "storyboardValid": true,
+  "layoutValid": true,
+  "collisionValid": true,
+  "safeZoneValid": true,
+  "heroClarityValid": true,
+  "sceneComplexityValid": true,
+  "captionValid": true,
+  "timelineValid": true,
+  "audioValid": true
+}

@@ -1,0 +1,38 @@
+{
+  "id": "batch04-packet-too-big",
+  "batchId": "2026-07-25-a1",
+  "voiceProfile": "SCIENTIFIC-CURIOSITY",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1700,
+  "voiceoverSegments": [
+    {"id": "s_page", "text": "Текст страницы загрузился", "spokenText": "Текст страницы загрузился", "rate": "84%", "pauseAfterMs": 200},
+    {"id": "s_img", "text": "Картинки — нет", "spokenText": "А картинки нет", "rate": "80%", "pitch": "low", "pauseAfterMs": 240},
+    {"id": "s_ping", "text": "Ping при этом идёт", "spokenText": "Пинг при этом спокойно идёт", "rate": "82%", "pauseAfterMs": 560},
+
+    {"id": "z_closer", "text": "Подойдём ближе", "spokenText": "Подойдём ближе", "rate": "78%", "pauseAfterMs": 420},
+
+    {"id": "z_mtu", "text": "У канала есть предел размера пакета", "spokenText": "У любого канала есть предел размера пакета", "rate": "84%", "pauseAfterMs": 200},
+    {"id": "z_name", "text": "Он называется MTU", "spokenText": "Он называется эм ти ю", "rate": "82%", "pauseAfterMs": 440},
+
+    {"id": "z_small", "text": "Мелкие проходят свободно", "spokenText": "Мелкие проходят свободно", "rate": "84%", "pauseAfterMs": 200},
+    {"id": "z_big", "text": "Крупный — шире проёма на пару байт", "spokenText": "А крупный шире проёма на пару байт", "rate": "82%", "pauseAfterMs": 520},
+
+    {"id": "i_should", "text": "Маршрутизатор должен ответить: слишком большой", "spokenText": "Маршрутизатор должен ответить. Слишком большой", "rate": "84%", "pauseAfterMs": 220},
+    {"id": "i_filtered", "text": "Но это служебное сообщение отфильтровано", "spokenText": "Но это служебное сообщение отфильтровано", "rate": "82%", "pitch": "low", "pauseAfterMs": 640},
+
+    {"id": "r_repeat", "text": "Отправитель шлёт тот же пакет снова", "spokenText": "Отправитель шлёт тот же самый пакет снова", "rate": "84%", "pauseAfterMs": 200},
+    {"id": "r_rfc", "text": "RFC 2923 называет это чёрной дырой", "spokenText": "Эр эф си двадцать девять двадцать три называет это чёрной дырой", "rate": "84%", "pauseAfterMs": 620},
+
+    {"id": "b_ghost", "text": "GhostPepeBot ведёт пакеты своим каналом", "spokenText": "Гост Пепе Бот ведёт пакеты своим каналом", "rate": "86%", "pauseAfterMs": 240},
+
+    {"id": "f_thesis", "text": "Ломается не связь", "spokenText": "Ломается не связь", "rate": "80%", "pauseAfterMs": 260},
+    {"id": "f_feedback", "text": "Ломается обратная связь", "spokenText": "Ломается обратная связь", "rate": "76%", "pitch": "low", "pauseAfterMs": 300}
+  ]
+}

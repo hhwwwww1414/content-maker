@@ -1,0 +1,35 @@
+{
+  "id": "craft05-concierge-ledger",
+  "batchId": "2026-07-25-b1",
+  "voiceProfile": "STORYTELLER-NEIGHBOUR",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1400,
+  "voiceoverSegments": [
+    {"id": "hk_ten", "text": "Дома десять устройств", "spokenText": "Дома у тебя десять устройств", "rate": "90%", "pauseAfterMs": 200},
+    {"id": "hk_one", "text": "Адрес в интернете — один", "spokenText": "А адрес в интернете один", "rate": "86%", "pitch": "low", "pauseAfterMs": 240},
+    {"id": "hk_ask", "text": "Почему ответы не путаются?", "spokenText": "Почему же ответы не путаются?", "rate": "88%", "pitch": "high", "pauseAfterMs": 560},
+
+    {"id": "lg_book", "text": "У роутера есть журнал", "spokenText": "У роутера есть журнал", "rate": "88%", "pauseAfterMs": 240},
+    {"id": "lg_row", "text": "Каждый выход наружу — строка", "spokenText": "Каждый выход наружу это отдельная строка", "rate": "88%", "pauseAfterMs": 240},
+    {"id": "lg_port", "text": "К адресу добавляют номер — порт", "spokenText": "К адресу добавляют номер. Порт", "rate": "86%", "pauseAfterMs": 520},
+
+    {"id": "lg_two", "text": "Ноутбук — пятьдесят одна тысяча", "spokenText": "Ноутбук получил пятьдесят одну тысячу", "rate": "88%", "pauseAfterMs": 200},
+    {"id": "lg_phone", "text": "Телефон — пятьдесят две", "spokenText": "Телефон пятьдесят две", "rate": "88%", "pauseAfterMs": 480},
+
+    {"id": "bk_come", "text": "Ответ приходит на этот номер", "spokenText": "Ответ приходит именно на этот номер", "rate": "88%", "pauseAfterMs": 220},
+    {"id": "bk_find", "text": "Роутер смотрит в журнал и отдаёт", "spokenText": "Роутер смотрит в журнал и отдаёт кому надо", "rate": "88%", "pauseAfterMs": 540},
+
+    {"id": "rf_nat", "text": "RFC 3022 описал это в 2001-м", "spokenText": "Эр эф си три тысячи двадцать два описал это ещё в две тысячи первом", "rate": "88%", "pauseAfterMs": 280},
+    {"id": "vp_same", "text": "VPN-сервер делает ровно то же", "spokenText": "Ви пи эн сервер делает ровно то же самое", "rate": "88%", "pauseAfterMs": 300},
+
+    {"id": "br_ghost", "text": "Только за адресом GhostPepeBot — толпа", "spokenText": "Только за адресом Гост Пепе Бота стоит целая толпа", "rate": "88%", "pauseAfterMs": 280},
+    {"id": "en_punch", "text": "Один адрес. И попробуй найди своего", "spokenText": "Один адрес. И попробуй найди в нём своего", "rate": "84%", "pitch": "low", "pauseAfterMs": 300}
+  ]
+}

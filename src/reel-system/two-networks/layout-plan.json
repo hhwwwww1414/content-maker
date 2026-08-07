@@ -1,0 +1,12 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "safeZones": "Instagram right and bottom overlays avoided by primary text/chamber activity",
+  "criticalElements": [
+    {"id": "headline-scene-1", "kind": "headline", "box": {"x": 84, "y": 130, "width": 400, "height": 120}},
+    {"id": "chambers", "kind": "heroCriticalArea", "box": {"x": 130, "y": 470, "width": 790, "height": 780}},
+    {"id": "captions", "kind": "subtitle", "box": {"x": 120, "y": 1360, "width": 760, "height": 150}},
+    {"id": "final-question", "kind": "headline", "box": {"x": 90, "y": 260, "width": 850, "height": 260}}
+  ],
+  "typographyEvolution": ["small top-left title", "rail-following labels", "large asymmetric thesis", "environmental engraving", "centered final question"]
+}

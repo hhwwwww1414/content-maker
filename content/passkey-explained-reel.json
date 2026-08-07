@@ -1,0 +1,962 @@
+{
+  "id": "passkey-explained",
+  "compositionId": "PasskeyExplainedReel",
+  "contactSheetCompositionId": "PasskeyExplainedContactSheet",
+  "title": "Почему passkey безопаснее пароля",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/passkey-explained/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 900,
+  "background": {
+    "type": "loop-video",
+    "file": "assets/background.mp4",
+    "muted": true,
+    "fit": "cover",
+    "overlayOpacity": 0.44,
+    "note": "Единственный фон ролика. Зациклен, без звука, нижний постоянный слой."
+  },
+  "source": {
+    "primary": "FIDO Alliance",
+    "secondary": "Google · Apple",
+    "badge": "Источник: FIDO · Google · Apple",
+    "topic": "Passkey authentication"
+  },
+  "tts": {
+    "language": "ru",
+    "direction": "Начало спокойно. После «Но это не так» — пауза. «passkey» произносить одинаково во всех местах. «Само лицо на сайт не отправляется» выделить. Метафору с двумя частями читать медленнее. Финальный выбор — дружелюбно.",
+    "note": "text = произносимый вариант: passkey → «пасски», Face ID → «фейс-ай-ди», SMS → «эс-эм-эс», чтобы multilingual-модель не переключала язык. WebAuthn, FIDO2 и «криптография с открытым ключом» не произносятся вообще. На экране показываются оригинальные написания.",
+    "speed": 1.2,
+    "speedNote": "Голос, модель, формат и voice settings — те же, что в ai-cheated-test. 1.2 удерживает ролик в окне 55–65 с."
+  },
+  "captionClusters": {
+    "targetSeconds": [
+      0.55,
+      0.85
+    ],
+    "growUntilSeconds": 0.45,
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и",
+      "а",
+      "но",
+      "не",
+      "ни",
+      "в",
+      "во",
+      "на",
+      "по",
+      "за",
+      "из",
+      "от",
+      "до",
+      "к",
+      "ко",
+      "с",
+      "со",
+      "у",
+      "о",
+      "об",
+      "про",
+      "для",
+      "что",
+      "как",
+      "это",
+      "всё",
+      "ещё",
+      "же",
+      "ты",
+      "он",
+      "она",
+      "я",
+      "мы",
+      "который",
+      "которую",
+      "которая",
+      "чтобы",
+      "так",
+      "там",
+      "уже",
+      "или",
+      "бы",
+      "тебе",
+      "этот",
+      "над",
+      "тем",
+      "её",
+      "его",
+      "ему",
+      "их",
+      "то",
+      "есть",
+      "одной",
+      "своей",
+      "потом",
+      "чего",
+      "самое",
+      "могут",
+      "своё",
+      "если",
+      "твоему",
+      "твоём",
+      "теперь",
+      "моё",
+      "они",
+      "себе",
+      "почти",
+      "вот",
+      "даже",
+      "будет",
+      "была",
+      "только",
+      "когда",
+      "потому",
+      "поэтому",
+      "вообще",
+      "никуда",
+      "нужны"
+    ],
+    "highlightWords": {
+      "yellow": [
+        "пасски",
+        "замок",
+        "частями",
+        "части",
+        "часть",
+        "частью",
+        "вопрос",
+        "одноразовый",
+        "ключ",
+        "ключа",
+        "адресу"
+      ],
+      "mint": [
+        "устройству",
+        "устройстве",
+        "секретный",
+        "секретной",
+        "секретную",
+        "открытая",
+        "открытой",
+        "телефону",
+        "телефон",
+        "защищает",
+        "привычнее"
+      ],
+      "red": [
+        "лицо",
+        "отпечаток",
+        "фишинга",
+        "мошенник",
+        "поддельную",
+        "украдут",
+        "украденных",
+        "сработает",
+        "нельзя"
+      ]
+    },
+    "displayReplacements": {
+      "пасски": "PASSKEY",
+      "фейс-ай-ди": "Face ID",
+      "эс-эм-эс": "СМС"
+    }
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "chapter": "hook",
+      "text": "Когда сайт предлагает создать пасски,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l02",
+      "chapter": "hook",
+      "text": "многие думают:",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l03",
+      "chapter": "hook",
+      "text": "«Теперь он будет хранить моё лицо».",
+      "framing": "myth",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l04",
+      "chapter": "hook",
+      "text": "Но это не так.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l05",
+      "chapter": "faceid",
+      "text": "Фейс-ай-ди или отпечаток",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l06",
+      "chapter": "faceid",
+      "text": "нужны только твоему устройству.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l07",
+      "chapter": "faceid",
+      "text": "Они разрешают телефону",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l08",
+      "chapter": "faceid",
+      "text": "использовать секретный ключ.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l09",
+      "chapter": "faceid",
+      "text": "Само лицо на сайт не отправляется.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l10",
+      "chapter": "halves",
+      "text": "Представь замок",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l11",
+      "chapter": "halves",
+      "text": "с двумя разными частями.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l12",
+      "chapter": "halves",
+      "text": "Одна часть хранится у сайта.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l13",
+      "chapter": "halves",
+      "text": "Она открытая",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l14",
+      "chapter": "halves",
+      "text": "и сама по себе почти бесполезна.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l15",
+      "chapter": "halves",
+      "text": "Вторая часть остаётся",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l16",
+      "chapter": "halves",
+      "text": "на твоём устройстве.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l17",
+      "chapter": "login",
+      "text": "Когда ты входишь,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l18",
+      "chapter": "login",
+      "text": "сайт отправляет телефону",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l19",
+      "chapter": "login",
+      "text": "одноразовый вопрос.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l20",
+      "chapter": "login",
+      "text": "Телефон подтверждает ответ",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l21",
+      "chapter": "login",
+      "text": "секретной частью ключа.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l22",
+      "chapter": "login",
+      "text": "А сайт проверяет его открытой частью.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l23",
+      "chapter": "login",
+      "text": "Пароль никуда не отправляется.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l24",
+      "chapter": "login",
+      "text": "Потому что общего пароля вообще нет.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l25",
+      "chapter": "phish",
+      "text": "И вот главное.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l26",
+      "chapter": "phish",
+      "text": "Если мошенник создаст",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l27",
+      "chapter": "phish",
+      "text": "поддельную копию сайта,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l28",
+      "chapter": "phish",
+      "text": "пасски настоящего сайта",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l29",
+      "chapter": "phish",
+      "text": "там не сработает.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l30",
+      "chapter": "phish",
+      "text": "Ключ привязан к правильному адресу.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l31",
+      "chapter": "breach",
+      "text": "Даже если базу сервиса украдут,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l32",
+      "chapter": "breach",
+      "text": "там будет только",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l33",
+      "chapter": "breach",
+      "text": "открытая часть ключа.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l34",
+      "chapter": "breach",
+      "text": "Из неё нельзя получить секретную часть.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l35",
+      "chapter": "cta",
+      "text": "Поэтому пасски лучше защищает",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l36",
+      "chapter": "cta",
+      "text": "от фишинга и украденных паролей.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l37",
+      "chapter": "cta",
+      "text": "А фейс-ай-ди остаётся на твоём устройстве.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l38",
+      "chapter": "cta",
+      "text": "Что тебе привычнее:",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l39",
+      "chapter": "cta",
+      "text": "пароль",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l40",
+      "chapter": "cta",
+      "text": "или вход по лицу?",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l41",
+      "chapter": "cta",
+      "text": "Напиши: ПАРОЛЬ или ЛИЦО.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l42",
+      "chapter": "cta",
+      "text": "А следующим роликом я объясню,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l43",
+      "chapter": "cta",
+      "text": "почему код из эс-эм-эс",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l44",
+      "chapter": "cta",
+      "text": "не всегда спасает аккаунт.",
+      "breakAfter": "none"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "hook",
+      "eyebrow": "ГЛАВА 1",
+      "label": "ГЛАВНЫЙ СТРАХ ПРО PASSKEY",
+      "fromLine": "l01",
+      "toLine": "l04",
+      "headline": "FACE ID\nУХОДИТ НА САЙТ?"
+    },
+    {
+      "id": "faceid",
+      "eyebrow": "ГЛАВА 2",
+      "label": "ЧТО ДЕЛАЕТ FACE ID",
+      "fromLine": "l05",
+      "toLine": "l09",
+      "headline": "ЛИЦО ОСТАЁТСЯ\nВ ТЕЛЕФОНЕ"
+    },
+    {
+      "id": "halves",
+      "eyebrow": "ГЛАВА 3",
+      "label": "ЗАМОК ИЗ ДВУХ ЧАСТЕЙ",
+      "fromLine": "l10",
+      "toLine": "l16",
+      "headline": "ДВЕ РАЗНЫЕ\nЧАСТИ КЛЮЧА"
+    },
+    {
+      "id": "login",
+      "eyebrow": "ГЛАВА 4",
+      "label": "ВХОД БЕЗ ПАРОЛЯ",
+      "fromLine": "l17",
+      "toLine": "l24",
+      "headline": "ПАРОЛЬ\nНЕ ПЕРЕДАЁТСЯ"
+    },
+    {
+      "id": "phish",
+      "eyebrow": "ГЛАВА 5",
+      "label": "ЗАЩИТА ОТ ФИШИНГА",
+      "fromLine": "l25",
+      "toLine": "l30",
+      "headline": "НА ПОДДЕЛКЕ\nКЛЮЧ НЕ СРАБОТАЕТ"
+    },
+    {
+      "id": "breach",
+      "eyebrow": "ГЛАВА 6",
+      "label": "УКРАДЕННАЯ БАЗА",
+      "fromLine": "l31",
+      "toLine": "l34",
+      "headline": "УКРАЛИ БАЗУ ≠\nПОЛУЧИЛИ ВХОД"
+    },
+    {
+      "id": "cta",
+      "eyebrow": "ИТОГ",
+      "label": "ПАРОЛЬ ИЛИ ЛИЦО",
+      "fromLine": "l35",
+      "toLine": "l44",
+      "headline": "ЧТО ТЕБЕ\nПРИВЫЧНЕЕ?"
+    }
+  ],
+  "avatarStates": [
+    {
+      "at": "l01",
+      "state": "skeptical"
+    },
+    {
+      "at": "l05",
+      "state": "thinking"
+    },
+    {
+      "at": "l10",
+      "state": "idea"
+    },
+    {
+      "at": "l17",
+      "state": "approved"
+    },
+    {
+      "at": "l25",
+      "state": "shocked"
+    },
+    {
+      "at": "l31",
+      "state": "approved"
+    },
+    {
+      "at": "l35",
+      "state": "excited"
+    },
+    {
+      "at": "l38",
+      "state": "question"
+    },
+    {
+      "at": "l44",
+      "state": "skeptical"
+    }
+  ],
+  "canvasActions": [
+    {
+      "id": "sourceBadge",
+      "at": "l01",
+      "offsetMs": 1300,
+      "lifecycle": "persistent",
+      "type": "reveal"
+    },
+    {
+      "id": "hookCard",
+      "at": "l01",
+      "lifecycle": "chapter",
+      "untilLine": "l05",
+      "type": "card",
+      "label": "СОЗДАТЬ PASSKEY?"
+    },
+    {
+      "id": "hookFear",
+      "at": "l03",
+      "lifecycle": "chapter",
+      "untilLine": "l05",
+      "framing": "myth",
+      "type": "quote",
+      "label": "«ТЕПЕРЬ САЙТ БУДЕТ ХРАНИТЬ МОЁ ЛИЦО»"
+    },
+    {
+      "id": "hookNo",
+      "at": "l04",
+      "lifecycle": "chapter",
+      "untilLine": "l05",
+      "type": "answer",
+      "tone": "danger",
+      "label": "НЕТ"
+    },
+    {
+      "id": "hookAnswer",
+      "at": "l04",
+      "offsetMs": 700,
+      "lifecycle": "chapter",
+      "untilLine": "l05",
+      "type": "detail",
+      "label": "САЙТ НЕ ПОЛУЧАЕТ ТВОЁ ЛИЦО"
+    },
+    {
+      "id": "phoneFrame",
+      "at": "l05",
+      "lifecycle": "chapter",
+      "untilLine": "l10",
+      "type": "card",
+      "label": "ТВОЁ УСТРОЙСТВО"
+    },
+    {
+      "id": "faceUnlock",
+      "at": "l05",
+      "offsetMs": 800,
+      "lifecycle": "chapter",
+      "untilLine": "l10",
+      "type": "node",
+      "label": "FACE ID / ОТПЕЧАТОК / PIN"
+    },
+    {
+      "id": "onlyDevice",
+      "at": "l06",
+      "lifecycle": "chapter",
+      "untilLine": "l10",
+      "type": "detail",
+      "label": "НУЖНЫ ТОЛЬКО УСТРОЙСТВУ"
+    },
+    {
+      "id": "unlockArrow",
+      "at": "l07",
+      "lifecycle": "chapter",
+      "untilLine": "l10",
+      "type": "arrow",
+      "label": "РАЗРЕШИТЬ ИСПОЛЬЗОВАТЬ КЛЮЧ"
+    },
+    {
+      "id": "safeInside",
+      "at": "l08",
+      "lifecycle": "chapter",
+      "untilLine": "l10",
+      "type": "node",
+      "label": "СЕКРЕТНЫЙ КЛЮЧ"
+    },
+    {
+      "id": "blockedToSite",
+      "at": "l09",
+      "lifecycle": "chapter",
+      "untilLine": "l10",
+      "type": "strike",
+      "label": "ЛИЦО → САЙТ"
+    },
+    {
+      "id": "chipFace",
+      "at": "l09",
+      "offsetMs": 900,
+      "lifecycle": "persistent",
+      "type": "chip",
+      "tone": "mint",
+      "label": "ЛИЦО НЕ УХОДИТ",
+      "railLabel": "ЛИЦО НЕ УХОДИТ"
+    },
+    {
+      "id": "lockFrame",
+      "at": "l10",
+      "lifecycle": "chapter",
+      "untilLine": "l17",
+      "type": "card",
+      "label": "ЗАМОК ИЗ ДВУХ ЧАСТЕЙ"
+    },
+    {
+      "id": "splitKey",
+      "at": "l11",
+      "lifecycle": "chapter",
+      "untilLine": "l17",
+      "type": "split"
+    },
+    {
+      "id": "sitePart",
+      "at": "l12",
+      "lifecycle": "chapter",
+      "untilLine": "l17",
+      "type": "node",
+      "label": "У САЙТА · ОТКРЫТАЯ ЧАСТЬ"
+    },
+    {
+      "id": "siteUseless",
+      "at": "l14",
+      "lifecycle": "chapter",
+      "untilLine": "l17",
+      "type": "detail",
+      "label": "САМА ПО СЕБЕ ПОЧТИ БЕСПОЛЕЗНА"
+    },
+    {
+      "id": "userPart",
+      "at": "l15",
+      "lifecycle": "chapter",
+      "untilLine": "l17",
+      "type": "node",
+      "label": "У ТЕБЯ · СЕКРЕТНАЯ ЧАСТЬ"
+    },
+    {
+      "id": "secretStays",
+      "at": "l16",
+      "lifecycle": "chapter",
+      "untilLine": "l17",
+      "type": "answer",
+      "label": "СЕКРЕТ НЕ УХОДИТ НА СЕРВЕР"
+    },
+    {
+      "id": "chipSecret",
+      "at": "l16",
+      "offsetMs": 800,
+      "lifecycle": "persistent",
+      "type": "chip",
+      "tone": "mint",
+      "label": "СЕКРЕТ У ТЕБЯ",
+      "railLabel": "СЕКРЕТ У ТЕБЯ"
+    },
+    {
+      "id": "loginFrame",
+      "at": "l17",
+      "lifecycle": "chapter",
+      "untilLine": "l25",
+      "type": "card",
+      "label": "КАК ПРОХОДИТ ВХОД"
+    },
+    {
+      "id": "stepQuestion",
+      "at": "l18",
+      "lifecycle": "chapter",
+      "untilLine": "l25",
+      "type": "step",
+      "label": "САЙТ ЗАДАЁТ ОДНОРАЗОВЫЙ ВОПРОС"
+    },
+    {
+      "id": "stepAnswer",
+      "at": "l20",
+      "lifecycle": "chapter",
+      "untilLine": "l25",
+      "type": "step",
+      "label": "ТЕЛЕФОН ПОДТВЕРЖДАЕТ ОТВЕТ"
+    },
+    {
+      "id": "stepVerify",
+      "at": "l22",
+      "lifecycle": "chapter",
+      "untilLine": "l25",
+      "type": "step",
+      "label": "САЙТ ПРОВЕРЯЕТ ОТКРЫТОЙ ЧАСТЬЮ"
+    },
+    {
+      "id": "noPassword",
+      "at": "l23",
+      "lifecycle": "chapter",
+      "untilLine": "l25",
+      "type": "answer",
+      "label": "ПАРОЛЬ НЕ ПЕРЕДАЁТСЯ"
+    },
+    {
+      "id": "noSharedPassword",
+      "at": "l24",
+      "lifecycle": "chapter",
+      "untilLine": "l25",
+      "type": "detail",
+      "label": "ОБЩЕГО ПАРОЛЯ ПРОСТО НЕТ"
+    },
+    {
+      "id": "chipNoPass",
+      "at": "l24",
+      "offsetMs": 800,
+      "lifecycle": "persistent",
+      "type": "chip",
+      "tone": "mint",
+      "label": "ПАРОЛЯ НЕТ",
+      "railLabel": "ПАРОЛЯ НЕТ"
+    },
+    {
+      "id": "phishFrame",
+      "at": "l25",
+      "lifecycle": "chapter",
+      "untilLine": "l31",
+      "type": "card"
+    },
+    {
+      "id": "realSite",
+      "at": "l25",
+      "offsetMs": 600,
+      "lifecycle": "chapter",
+      "untilLine": "l31",
+      "type": "node",
+      "label": "НАСТОЯЩИЙ САЙТ"
+    },
+    {
+      "id": "fakeSite",
+      "at": "l27",
+      "lifecycle": "chapter",
+      "untilLine": "l31",
+      "type": "node",
+      "tone": "danger",
+      "label": "ПОДДЕЛЬНЫЙ САЙТ"
+    },
+    {
+      "id": "keyToReal",
+      "at": "l28",
+      "lifecycle": "chapter",
+      "untilLine": "l31",
+      "type": "arrow",
+      "label": "PASSKEY ИДЁТ К НАСТОЯЩЕМУ АДРЕСУ"
+    },
+    {
+      "id": "keyFails",
+      "at": "l29",
+      "lifecycle": "chapter",
+      "untilLine": "l31",
+      "type": "answer",
+      "tone": "danger",
+      "label": "КЛЮЧ НЕ ПОДХОДИТ"
+    },
+    {
+      "id": "boundToAddress",
+      "at": "l30",
+      "lifecycle": "chapter",
+      "untilLine": "l31",
+      "type": "detail",
+      "label": "КЛЮЧ ПРИВЯЗАН К АДРЕСУ САЙТА"
+    },
+    {
+      "id": "breachFrame",
+      "at": "l31",
+      "lifecycle": "chapter",
+      "untilLine": "l35",
+      "type": "card",
+      "label": "БАЗА СЕРВИСА"
+    },
+    {
+      "id": "publicRows",
+      "at": "l32",
+      "lifecycle": "chapter",
+      "untilLine": "l35",
+      "type": "rows",
+      "label": "ТОЛЬКО ОТКРЫТЫЕ ЧАСТИ"
+    },
+    {
+      "id": "missingSecret",
+      "at": "l33",
+      "lifecycle": "chapter",
+      "untilLine": "l35",
+      "type": "gap",
+      "label": "СЕКРЕТНОЙ ЧАСТИ ЗДЕСЬ НЕТ"
+    },
+    {
+      "id": "cantDerive",
+      "at": "l34",
+      "lifecycle": "chapter",
+      "untilLine": "l35",
+      "type": "answer",
+      "label": "УКРАЛИ БАЗУ ≠ ПОЛУЧИЛИ ВХОД"
+    },
+    {
+      "id": "breachNote",
+      "at": "l34",
+      "offsetMs": 1000,
+      "lifecycle": "chapter",
+      "untilLine": "l35",
+      "type": "footnote",
+      "label": "УТЕЧКА БАЗЫ ВСЁ РАВНО ОПАСНА · НО ВОЙТИ ПО НЕЙ НЕЛЬЗЯ"
+    },
+    {
+      "id": "memoryFrame",
+      "at": "l35",
+      "lifecycle": "transient",
+      "untilLine": "l38",
+      "type": "overlay"
+    },
+    {
+      "id": "ctaQuestion",
+      "at": "l38",
+      "lifecycle": "persistent",
+      "type": "overlay"
+    },
+    {
+      "id": "ctaOptionA",
+      "at": "l39",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    },
+    {
+      "id": "ctaOptionB",
+      "at": "l40",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    },
+    {
+      "id": "ctaHint",
+      "at": "l41",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    },
+    {
+      "id": "nextTeaser",
+      "at": "l42",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    },
+    {
+      "id": "teaserDetail",
+      "at": "l43",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    }
+  ],
+  "memoryFrame": {
+    "fromLine": "l35",
+    "untilLine": "l38",
+    "maxHoldMs": 6000,
+    "staggerMs": 560,
+    "minHoldSeconds": 2.8,
+    "title": "PASSKEY",
+    "items": [
+      "САЙТ ХРАНИТ ОТКРЫТУЮ ЧАСТЬ",
+      "ТЕЛЕФОН ХРАНИТ СЕКРЕТНУЮ ЧАСТЬ",
+      "FACE ID ТОЛЬКО РАЗРЕШАЕТ ЕЁ ИСПОЛЬЗОВАТЬ"
+    ]
+  },
+  "cta": {
+    "fromLine": "l38",
+    "prompt": "ЧТО ТЕБЕ ПРИВЫЧНЕЕ?",
+    "optionA": "ПАРОЛЬ",
+    "divider": "или",
+    "optionB": "ЛИЦО",
+    "options": [
+      {
+        "label": "ПАРОЛЬ",
+        "tone": "yellow",
+        "at": "ctaOptionA"
+      },
+      {
+        "label": "ЛИЦО",
+        "tone": "mint",
+        "at": "ctaOptionB"
+      }
+    ],
+    "comment": "Напиши одно слово в комментарии.",
+    "teaser": "ПОЧЕМУ КОД ИЗ СМС НЕ ВСЕГДА СПАСАЕТ"
+  },
+  "qa": {
+    "durationSeconds": [
+      50,
+      70
+    ],
+    "factFraming": {
+      "banPatterns": [
+        "(passkey|пасски)\\s+(абсолютно|полностью|совершенно)\\s+(неуязвим|безопас|надёжн|надежн)",
+        "(passkey|пасски)\\s+невозможно\\s+(взломать|украсть|обойти)",
+        "(лицо|отпечаток)\\s+(отправляется|уходит|передаётся|передается)\\s+(на\\s+)?(сайт|сервер)",
+        "(сайт|сервис|сервер)\\s+хранит\\s+(тво[её]|мо[её])\\s+(лицо|отпечаток)",
+        "(passkey|пасски)\\s+(это|—)\\s*(код|смс|эс-эм-эс)",
+        "утечка\\s+базы\\s+(не\\s+опасна|ничего\\s+не\\s+значит)"
+      ],
+      "requiredTexts": [
+        "на сайт не отправляется",
+        "только твоему устройству",
+        "там не сработает",
+        "привязан к правильному адресу",
+        "открытая часть ключа",
+        "УТЕЧКА БАЗЫ ВСЁ РАВНО ОПАСНА"
+      ],
+      "mythChapters": []
+    },
+    "contentPolarity": "light-on-dark"
+  },
+  "publish": {
+    "cover": "FACE ID\nНЕ УХОДИТ НА САЙТ",
+    "coverSub": "Подстрочник: **Passkey работает не так, как все думают**",
+    "coverNote": "Кадр для обложки: первые 2 с — заголовок «FACE ID УХОДИТ НА САЙТ?», карточка «СОЗДАТЬ PASSKEY?» и красный ответ «НЕТ».",
+    "caption": "Passkey не отправляет сайту твоё лицо или отпечаток.\n\nБиометрия только разрешает устройству\nиспользовать приватную часть ключа.\n\nСервис хранит публичную часть,\nа секрет остаётся у пользователя —\nна устройстве или в защищённой синхронизации\nего экосистемы.\n\nПри входе сайт задаёт одноразовый вопрос,\nтелефон подтверждает ответ приватной частью,\nа сайт проверяет его публичной.\nОбщего пароля, который можно украсть\nи использовать повторно, просто нет.\n\nКроме того, passkey привязан к настоящему сайту,\nпоэтому фишинговая копия не может просто украсть его,\nкак обычный пароль.\n\nЧто тебе привычнее:\nпароль или вход по лицу?",
+    "hashtags": [
+      "#passkey",
+      "#кибербезопасность",
+      "#пароли",
+      "#фишинг",
+      "#технологии"
+    ],
+    "pinnedComment": "Уточнение: passkey — не магия и не абсолютная защита.\nОн снимает два конкретных класса проблем: повторное использование украденного пароля и классический фишинг на поддельном домене.\nУтечка базы сервиса всё равно остаётся неприятной — просто по публичной части ключа войти в аккаунт нельзя.\nИ passkey — это не код из СМС: код можно продиктовать мошеннику, приватную часть ключа — нет.",
+    "sources": {
+      "FIDO Alliance": "Passkeys — https://fidoalliance.org/passkeys/",
+      "FIDO Alliance (2)": "How FIDO works — https://fidoalliance.org/how-fido-works/",
+      "Google": "Passkeys developer docs — https://developers.google.com/identity/passkeys",
+      "Apple": "About passkeys — https://support.apple.com/en-gb/102195"
+    }
+  }
+}

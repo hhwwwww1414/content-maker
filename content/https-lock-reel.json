@@ -1,0 +1,25 @@
+{
+  "id": "https-lock-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1500,
+  "voiceoverSegments": [
+    {"id": "hook_lock", "text": "У фишингового сайта тоже есть замочек", "spokenText": "У поддельного, фишингового сайта тоже есть замочек в адресной строке.", "rate": "79%", "pitch": "high", "pauseAfterMs": 280},
+    {"id": "hook_safe", "text": "Значит, замок ≠ безопасно", "spokenText": "Значит, замочек и безопасность это не одно и то же.", "rate": "74%", "pitch": "low", "pauseAfterMs": 540},
+    {"id": "means", "text": "Замок значит: по дороге не подслушают", "spokenText": "Смотри. Замочек говорит только одно. По дороге тебя не подслушают.", "rate": "78%", "pauseAfterMs": 280},
+    {"id": "notmeans", "text": "Но не значит, что на том конце — не мошенник", "spokenText": "Но он не обещает, что на том конце сидит честный сайт.", "rate": "78%", "pitch": "high", "pauseAfterMs": 300},
+    {"id": "phish", "text": "Поддельный сайт легко получает свой замок", "spokenText": "Поддельная страница получает свой замочек за пару минут и бесплатно.", "rate": "78%", "pitch": "low", "pauseAfterMs": 520},
+    {"id": "check", "text": "Смотри на адрес, а не только на замок", "spokenText": "Поэтому смотри на сам адрес сайта, а не только на иконку замка.", "rate": "78%", "pauseAfterMs": 300},
+    {"id": "truth", "text": "Замок защищает канал. Доверие — проверяешь ты", "spokenText": "Замок защищает канал. А доверие к сайту проверяешь ты сам.", "rate": "78%", "pauseAfterMs": 520},
+    {"id": "payoff", "text": "Замочек ≠ честный сайт", "spokenText": "Запомни. Замочек не равно честный сайт.", "rate": "77%", "pitch": "high", "pauseAfterMs": 560},
+    {"id": "cta_q", "text": "Хочешь шифровать весь путь, а не один сайт?", "spokenText": "Хочешь шифровать весь путь в сеть, а не один сайт?", "rate": "80%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "cta_brand", "text": "GhostPepe — VPN в Telegram", "spokenText": "Гост Пепе, ви пи эн прямо в телеграм.", "rate": "78%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "cta_tap", "text": "Подключение в пару нажатий", "spokenText": "Подключение в пару нажатий.", "rate": "76%", "pauseAfterMs": 300}
+  ]
+}

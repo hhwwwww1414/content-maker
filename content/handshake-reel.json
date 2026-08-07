@@ -1,0 +1,105 @@
+{
+  "id": "handshake-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1600,
+  "voiceoverSegments": [
+    {
+      "id": "hook_shout",
+      "text": "Как договориться о секрете, крича на весь двор?",
+      "spokenText": "Как договориться о секретном пароле, крича его на весь двор?",
+      "rate": "79%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "hook_nobody",
+      "text": "И чтобы враг ничего не понял",
+      "spokenText": "И так, чтобы враг вокруг ничего не понял.",
+      "rate": "72%",
+      "pitch": "low",
+      "pauseAfterMs": 560
+    },
+    {
+      "id": "paint_own",
+      "text": "Представь краски",
+      "spokenText": "Смотри. Представь обычные краски.",
+      "rate": "78%",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "paint_mix",
+      "text": "У каждого своя тайная краска и одна общая",
+      "spokenText": "У каждого есть своя тайная краска. И одна общая, которую видят все.",
+      "rate": "78%",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "paint_swap",
+      "text": "Смешали, обменялись смесями",
+      "spokenText": "Каждый смешал свою краску с общей и отдал смесь другому.",
+      "rate": "78%",
+      "pauseAfterMs": 260
+    },
+    {
+      "id": "paint_same",
+      "text": "Добавил свою — цвет совпал",
+      "spokenText": "Теперь каждый добавляет свою тайную краску. И цвет получается одинаковый.",
+      "rate": "78%",
+      "pitch": "high",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "enemy_stuck",
+      "text": "Враг видел смеси, но повторить не может",
+      "spokenText": "А враг видел только смеси. Разделить их обратно почти невозможно.",
+      "rate": "78%",
+      "pitch": "low",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "reveal_dh",
+      "text": "Это и есть рукопожатие",
+      "spokenText": "Вот это и есть рукопожатие.",
+      "rate": "78%",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "reveal_vpn",
+      "text": "С него начинается каждое VPN-соединение",
+      "spokenText": "С такого обмена начинается каждое ви пи эн соединение.",
+      "rate": "78%",
+      "pitch": "high",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "cta_q",
+      "text": "Хочешь соединение, что начинается с секрета?",
+      "spokenText": "Хочешь соединение, которое начинается с общего секрета?",
+      "rate": "80%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_brand",
+      "text": "GhostPepe — VPN в Telegram",
+      "spokenText": "Гост Пепе, ви пи эн прямо в телеграм.",
+      "rate": "78%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_tap",
+      "text": "Подключение в пару нажатий",
+      "spokenText": "Подключение в пару нажатий.",
+      "rate": "76%",
+      "pauseAfterMs": 300
+    }
+  ]
+}

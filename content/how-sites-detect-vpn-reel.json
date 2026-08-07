@@ -1,0 +1,966 @@
+{
+  "id": "how-sites-detect-vpn",
+  "compositionId": "HowSitesDetectVpnReel",
+  "contactSheetCompositionId": "HowSitesDetectVpnContactSheet",
+  "title": "Как сайт понимает, что у тебя VPN",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/how-sites-detect-vpn/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 900,
+  "background": {
+    "type": "loop-video",
+    "file": "assets/background.mp4",
+    "muted": true,
+    "fit": "cover",
+    "overlayOpacity": 0.44,
+    "note": "Единственный фон ролика. Зациклен, без звука, нижний постоянный слой."
+  },
+  "source": {
+    "primary": "Cloudflare Docs",
+    "badge": "Источник: Cloudflare Docs",
+    "topic": "IP-based VPN and proxy risk signals"
+  },
+  "tts": {
+    "language": "ru",
+    "direction": "Начало с лёгкой иронией. После «Он просто собирает следы» — пауза. Три следа произнести как понятный список. «Сайт не видит кнопку VPN» выделить. Финальный вопрос — естественно, не как техническая лекция.",
+    "note": "text = произносимый вариант: VPN → «ви-пи-эн», IP → «ай-пи», чтобы multilingual-модель не переключала язык. ASN в озвучке не произносится вообще — только мелкой подписью на экране. На экране показываются оригинальные написания.",
+    "speed": 1.2,
+    "speedNote": "Голос, модель, формат и voice settings — те же, что в vpn-age-verification и ai-cheated-test. 1.2 удерживает ролик в окне 55–65 с."
+  },
+  "captionClusters": {
+    "targetSeconds": [
+      0.55,
+      0.85
+    ],
+    "growUntilSeconds": 0.45,
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и",
+      "а",
+      "но",
+      "не",
+      "ни",
+      "в",
+      "во",
+      "на",
+      "по",
+      "за",
+      "из",
+      "от",
+      "до",
+      "к",
+      "ко",
+      "с",
+      "со",
+      "у",
+      "о",
+      "об",
+      "про",
+      "для",
+      "что",
+      "как",
+      "это",
+      "всё",
+      "ещё",
+      "же",
+      "ты",
+      "он",
+      "она",
+      "я",
+      "мы",
+      "который",
+      "которую",
+      "которые",
+      "которая",
+      "чтобы",
+      "так",
+      "там",
+      "уже",
+      "или",
+      "бы",
+      "тебе",
+      "этот",
+      "этого",
+      "над",
+      "тем",
+      "её",
+      "его",
+      "ему",
+      "их",
+      "то",
+      "есть",
+      "одной",
+      "одного",
+      "своей",
+      "твой",
+      "твоя",
+      "тебя",
+      "им",
+      "ли",
+      "нему",
+      "потом",
+      "чей",
+      "какой",
+      "какая",
+      "сколько",
+      "если",
+      "поэтому",
+      "будто",
+      "обычно",
+      "просто",
+      "раньше",
+      "чаще",
+      "всего",
+      "может",
+      "быть",
+      "могут"
+    ],
+    "highlightWords": {
+      "yellow": [
+        "ви-пи-эн",
+        "следы",
+        "след",
+        "ай-пи",
+        "адрес",
+        "адреса",
+        "страну",
+        "страны",
+        "сеть",
+        "дата-центров",
+        "репутация",
+        "признаки",
+        "маршрут"
+      ],
+      "mint": [
+        "наверняка",
+        "работает",
+        "проверку",
+        "провайдеру",
+        "квартиры",
+        "человека"
+      ],
+      "red": [
+        "отключите",
+        "сотни",
+        "спам",
+        "боты",
+        "блокировку",
+        "невидимый",
+        "странно",
+        "рекламой",
+        "доверять"
+      ]
+    },
+    "displayReplacements": {
+      "ви-пи-эн": "VPN",
+      "ай-пи": "IP"
+    }
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "chapter": "hook",
+      "text": "Когда сайт пишет:",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l02",
+      "chapter": "hook",
+      "text": "«Отключите ви-пи-эн»,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l03",
+      "chapter": "hook",
+      "text": "кажется, будто он заглянул в твой телефон.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l04",
+      "chapter": "hook",
+      "text": "Но обычно сайт не знает наверняка,",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l05",
+      "chapter": "hook",
+      "text": "включён у тебя ви-пи-эн или нет.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l06",
+      "chapter": "hook",
+      "text": "Он просто собирает следы.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l07",
+      "chapter": "ip",
+      "text": "Первый след — твой ай-пи.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l08",
+      "chapter": "ip",
+      "text": "Это как обратный адрес",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l09",
+      "chapter": "ip",
+      "text": "на интернет-посылке.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l10",
+      "chapter": "ip",
+      "text": "По нему сайт видит:",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l11",
+      "chapter": "ip",
+      "text": "примерную страну",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l12",
+      "chapter": "ip",
+      "text": "и сеть, из которой пришёл запрос.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l13",
+      "chapter": "home",
+      "text": "Домашний ай-пи принадлежит",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l14",
+      "chapter": "home",
+      "text": "обычному интернет-провайдеру.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l15",
+      "chapter": "home",
+      "text": "А многие ви-пи-эн выходят",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l16",
+      "chapter": "home",
+      "text": "через серверы дата-центров.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l17",
+      "chapter": "shared",
+      "text": "Второй след:",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l18",
+      "chapter": "shared",
+      "text": "с одного ай-пи",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l19",
+      "chapter": "shared",
+      "text": "могут одновременно приходить",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l20",
+      "chapter": "shared",
+      "text": "сотни пользователей.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l21",
+      "chapter": "shared",
+      "text": "Для обычной квартиры",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l22",
+      "chapter": "shared",
+      "text": "это странно.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l23",
+      "chapter": "rep",
+      "text": "Третий след — репутация адреса.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l24",
+      "chapter": "rep",
+      "text": "Если с этого ай-пи шёл спам,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l25",
+      "chapter": "rep",
+      "text": "боты",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l26",
+      "chapter": "rep",
+      "text": "или слишком много запросов,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l27",
+      "chapter": "rep",
+      "text": "сервис начинает ему меньше доверять.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l28",
+      "chapter": "risk",
+      "text": "Потом сайт складывает признаки:",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l29",
+      "chapter": "risk",
+      "text": "чей это адрес,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l30",
+      "chapter": "risk",
+      "text": "из какой страны,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l31",
+      "chapter": "risk",
+      "text": "сколько людей им пользуются,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l32",
+      "chapter": "risk",
+      "text": "и похоже ли поведение на человека.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l33",
+      "chapter": "risk",
+      "text": "Поэтому один ви-пи-эн работает,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l34",
+      "chapter": "risk",
+      "text": "а другой сразу получает проверку или блокировку.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l35",
+      "chapter": "cta",
+      "text": "Сайт не видит кнопку ви-пи-эн.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l36",
+      "chapter": "cta",
+      "text": "Он видит следы, которые оставляет твой маршрут.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l37",
+      "chapter": "cta",
+      "text": "Поэтому фраза «полностью невидимый ви-пи-эн»",
+      "framing": "myth",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l38",
+      "chapter": "cta",
+      "text": "чаще всего является рекламой.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l39",
+      "chapter": "cta",
+      "text": "Какой сервис чаще всего",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l40",
+      "chapter": "cta",
+      "text": "просит отключить ви-пи-эн?",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l41",
+      "chapter": "cta",
+      "text": "Напиши его название.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l42",
+      "chapter": "cta",
+      "text": "В следующем ролике объясню,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l43",
+      "chapter": "cta",
+      "text": "почему вход по лицу",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l44",
+      "chapter": "cta",
+      "text": "может быть безопаснее пароля.",
+      "breakAfter": "none"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "hook",
+      "eyebrow": "ГЛАВА 1",
+      "label": "САЙТ НЕ СМОТРИТ В ТЕЛЕФОН",
+      "fromLine": "l01",
+      "toLine": "l06",
+      "headline": "КАК САЙТ\nВИДИТ ТВОЙ VPN?"
+    },
+    {
+      "id": "ip",
+      "eyebrow": "ГЛАВА 2",
+      "label": "ПЕРВЫЙ СЛЕД — IP",
+      "fromLine": "l07",
+      "toLine": "l12",
+      "headline": "IP =\nОБРАТНЫЙ АДРЕС"
+    },
+    {
+      "id": "home",
+      "eyebrow": "ГЛАВА 3",
+      "label": "ДОМ ИЛИ ДАТА-ЦЕНТР",
+      "fromLine": "l13",
+      "toLine": "l16",
+      "headline": "АДРЕС ВЫГЛЯДИТ\nНЕ КАК ДОМАШНИЙ"
+    },
+    {
+      "id": "shared",
+      "eyebrow": "ГЛАВА 4",
+      "label": "ВТОРОЙ СЛЕД — ОБЩИЙ АДРЕС",
+      "fromLine": "l17",
+      "toLine": "l22",
+      "headline": "СОТНИ ЛЮДЕЙ\nС ОДНОГО АДРЕСА"
+    },
+    {
+      "id": "rep",
+      "eyebrow": "ГЛАВА 5",
+      "label": "ТРЕТИЙ СЛЕД — РЕПУТАЦИЯ",
+      "fromLine": "l23",
+      "toLine": "l27",
+      "headline": "РЕПУТАЦИЯ\nАДРЕСА"
+    },
+    {
+      "id": "risk",
+      "eyebrow": "ГЛАВА 6",
+      "label": "ИТОГОВАЯ ОЦЕНКА",
+      "fromLine": "l28",
+      "toLine": "l34",
+      "headline": "СЛОЖИЛ ПРИЗНАКИ\nОЦЕНИЛ РИСК"
+    },
+    {
+      "id": "cta",
+      "eyebrow": "ИТОГ",
+      "label": "ЧТО НА САМОМ ДЕЛЕ ВИДИТ САЙТ",
+      "fromLine": "l35",
+      "toLine": "l44",
+      "headline": "САЙТ НЕ ВИДИТ\nКНОПКУ VPN"
+    }
+  ],
+  "avatarStates": [
+    {
+      "at": "l01",
+      "state": "question"
+    },
+    {
+      "at": "l07",
+      "state": "thinking"
+    },
+    {
+      "at": "l13",
+      "state": "skeptical"
+    },
+    {
+      "at": "l17",
+      "state": "shocked"
+    },
+    {
+      "at": "l23",
+      "state": "facepalm"
+    },
+    {
+      "at": "l28",
+      "state": "idea"
+    },
+    {
+      "at": "l35",
+      "state": "approved"
+    },
+    {
+      "at": "l39",
+      "state": "question"
+    }
+  ],
+  "canvasActions": [
+    {
+      "id": "sourceBadge",
+      "at": "l01",
+      "offsetMs": 1300,
+      "lifecycle": "persistent",
+      "type": "reveal"
+    },
+    {
+      "id": "phoneCard",
+      "at": "l01",
+      "lifecycle": "chapter",
+      "untilLine": "l07",
+      "type": "card",
+      "label": "ТВОЙ ТЕЛЕФОН"
+    },
+    {
+      "id": "siteBanner",
+      "at": "l02",
+      "lifecycle": "chapter",
+      "untilLine": "l07",
+      "type": "banner",
+      "label": "ОТКЛЮЧИТЕ VPN"
+    },
+    {
+      "id": "peekCross",
+      "at": "l03",
+      "offsetMs": 1200,
+      "lifecycle": "chapter",
+      "untilLine": "l07",
+      "type": "strike",
+      "label": "САЙТ НЕ ВИДИТ ЭКРАН"
+    },
+    {
+      "id": "notSure",
+      "at": "l04",
+      "lifecycle": "chapter",
+      "untilLine": "l07",
+      "type": "answer",
+      "label": "НЕ ЗНАЕТ НАВЕРНЯКА"
+    },
+    {
+      "id": "unknownState",
+      "at": "l05",
+      "lifecycle": "chapter",
+      "untilLine": "l07",
+      "type": "toggle",
+      "label": "ВКЛЮЧЁН? · ВЫКЛЮЧЕН?"
+    },
+    {
+      "id": "tracesLabel",
+      "at": "l06",
+      "lifecycle": "chapter",
+      "untilLine": "l07",
+      "type": "detail",
+      "label": "ОН СОБИРАЕТ СЛЕДЫ"
+    },
+    {
+      "id": "parcelCard",
+      "at": "l07",
+      "lifecycle": "chapter",
+      "untilLine": "l13",
+      "type": "card",
+      "label": "СЛЕД 1 · ИНТЕРНЕТ-ПОСЫЛКА"
+    },
+    {
+      "id": "returnAddress",
+      "at": "l08",
+      "lifecycle": "chapter",
+      "untilLine": "l13",
+      "type": "note",
+      "label": "IP = ОБРАТНЫЙ АДРЕС"
+    },
+    {
+      "id": "ipCard",
+      "at": "l10",
+      "lifecycle": "chapter",
+      "untilLine": "l13",
+      "type": "node",
+      "label": "IP-АДРЕС"
+    },
+    {
+      "id": "chipIp",
+      "at": "l10",
+      "offsetMs": 700,
+      "lifecycle": "persistent",
+      "type": "chip",
+      "tone": "warning",
+      "label": "IP-АДРЕС",
+      "railLabel": "IP-АДРЕС"
+    },
+    {
+      "id": "fieldCountry",
+      "at": "l11",
+      "lifecycle": "chapter",
+      "untilLine": "l13",
+      "type": "field",
+      "label": "СТРАНА"
+    },
+    {
+      "id": "fieldNetwork",
+      "at": "l12",
+      "lifecycle": "chapter",
+      "untilLine": "l13",
+      "type": "field",
+      "label": "СЕТЬ"
+    },
+    {
+      "id": "asnNote",
+      "at": "l12",
+      "offsetMs": 1100,
+      "lifecycle": "chapter",
+      "untilLine": "l13",
+      "type": "footnote",
+      "label": "ASN — СЕТЬ ВЛАДЕЛЬЦА АДРЕСА"
+    },
+    {
+      "id": "compareFrame",
+      "at": "l13",
+      "lifecycle": "chapter",
+      "untilLine": "l17",
+      "type": "card"
+    },
+    {
+      "id": "homeSide",
+      "at": "l13",
+      "lifecycle": "chapter",
+      "untilLine": "l17",
+      "type": "node",
+      "label": "ДОМАШНИЙ ПРОВАЙДЕР"
+    },
+    {
+      "id": "homeDetail",
+      "at": "l14",
+      "lifecycle": "chapter",
+      "untilLine": "l17",
+      "type": "detail",
+      "label": "ОДИН ДОМ · ОДНА ЛИНИЯ"
+    },
+    {
+      "id": "dcSide",
+      "at": "l15",
+      "lifecycle": "chapter",
+      "untilLine": "l17",
+      "type": "node",
+      "label": "ДАТА-ЦЕНТР"
+    },
+    {
+      "id": "dcDetail",
+      "at": "l16",
+      "lifecycle": "chapter",
+      "untilLine": "l17",
+      "type": "detail",
+      "label": "СЕРВЕРНЫЙ ШКАФ · МНОГО ЛИНИЙ"
+    },
+    {
+      "id": "sharedFrame",
+      "at": "l17",
+      "lifecycle": "chapter",
+      "untilLine": "l23",
+      "type": "card",
+      "label": "СЛЕД 2 · ОДИН АДРЕС НА МНОГИХ"
+    },
+    {
+      "id": "sharedIp",
+      "at": "l18",
+      "lifecycle": "chapter",
+      "untilLine": "l23",
+      "type": "node",
+      "label": "ОДИН IP"
+    },
+    {
+      "id": "counterStart",
+      "at": "l19",
+      "lifecycle": "chapter",
+      "untilLine": "l23",
+      "type": "counter",
+      "label": "1"
+    },
+    {
+      "id": "counterPeak",
+      "at": "l20",
+      "lifecycle": "chapter",
+      "untilLine": "l23",
+      "type": "counter",
+      "label": "500"
+    },
+    {
+      "id": "chipShared",
+      "at": "l20",
+      "offsetMs": 700,
+      "lifecycle": "persistent",
+      "type": "chip",
+      "tone": "warning",
+      "label": "ОБЩИЙ АДРЕС",
+      "railLabel": "ОБЩИЙ АДРЕС"
+    },
+    {
+      "id": "flatNote",
+      "at": "l21",
+      "lifecycle": "chapter",
+      "untilLine": "l23",
+      "type": "detail",
+      "label": "ДЛЯ ОБЫЧНОЙ КВАРТИРЫ ЭТО СТРАННО"
+    },
+    {
+      "id": "notAlways",
+      "at": "l22",
+      "lifecycle": "chapter",
+      "untilLine": "l23",
+      "type": "footnote",
+      "label": "ЭТО ПРИЗНАК, А НЕ ДОКАЗАТЕЛЬСТВО VPN"
+    },
+    {
+      "id": "repFrame",
+      "at": "l23",
+      "lifecycle": "chapter",
+      "untilLine": "l28",
+      "type": "card",
+      "label": "СЛЕД 3 · РЕПУТАЦИЯ АДРЕСА"
+    },
+    {
+      "id": "chipRep",
+      "at": "l23",
+      "offsetMs": 900,
+      "lifecycle": "persistent",
+      "type": "chip",
+      "tone": "danger",
+      "label": "РЕПУТАЦИЯ",
+      "railLabel": "РЕПУТАЦИЯ"
+    },
+    {
+      "id": "markSpam",
+      "at": "l24",
+      "lifecycle": "chapter",
+      "untilLine": "l28",
+      "type": "mark",
+      "label": "СПАМ"
+    },
+    {
+      "id": "markBots",
+      "at": "l25",
+      "lifecycle": "chapter",
+      "untilLine": "l28",
+      "type": "mark",
+      "label": "БОТЫ"
+    },
+    {
+      "id": "markFlood",
+      "at": "l26",
+      "lifecycle": "chapter",
+      "untilLine": "l28",
+      "type": "mark",
+      "label": "СЛИШКОМ МНОГО ЗАПРОСОВ"
+    },
+    {
+      "id": "repDrop",
+      "at": "l27",
+      "lifecycle": "chapter",
+      "untilLine": "l28",
+      "type": "answer",
+      "label": "МЕНЬШЕ ДОВЕРИЯ"
+    },
+    {
+      "id": "riskFrame",
+      "at": "l28",
+      "lifecycle": "chapter",
+      "untilLine": "l35",
+      "type": "card",
+      "label": "ОЦЕНКА РИСКА"
+    },
+    {
+      "id": "sigIp",
+      "at": "l29",
+      "lifecycle": "chapter",
+      "untilLine": "l35",
+      "type": "signal",
+      "label": "IP"
+    },
+    {
+      "id": "sigCountry",
+      "at": "l30",
+      "lifecycle": "chapter",
+      "untilLine": "l35",
+      "type": "signal",
+      "label": "СТРАНА"
+    },
+    {
+      "id": "sigNetwork",
+      "at": "l30",
+      "offsetMs": 700,
+      "lifecycle": "chapter",
+      "untilLine": "l35",
+      "type": "signal",
+      "label": "СЕТЬ"
+    },
+    {
+      "id": "sigShared",
+      "at": "l31",
+      "lifecycle": "chapter",
+      "untilLine": "l35",
+      "type": "signal",
+      "label": "ОБЩИЙ АДРЕС"
+    },
+    {
+      "id": "sigRep",
+      "at": "l31",
+      "offsetMs": 800,
+      "lifecycle": "chapter",
+      "untilLine": "l35",
+      "type": "signal",
+      "label": "РЕПУТАЦИЯ"
+    },
+    {
+      "id": "sigBehaviour",
+      "at": "l32",
+      "lifecycle": "chapter",
+      "untilLine": "l35",
+      "type": "signal",
+      "label": "ПОВЕДЕНИЕ"
+    },
+    {
+      "id": "outAllow",
+      "at": "l33",
+      "lifecycle": "chapter",
+      "untilLine": "l35",
+      "type": "verdict",
+      "tone": "mint",
+      "label": "РАЗРЕШИТЬ"
+    },
+    {
+      "id": "outCheck",
+      "at": "l34",
+      "lifecycle": "chapter",
+      "untilLine": "l35",
+      "type": "verdict",
+      "tone": "warning",
+      "label": "ПРОВЕРИТЬ"
+    },
+    {
+      "id": "outBlock",
+      "at": "l34",
+      "offsetMs": 900,
+      "lifecycle": "chapter",
+      "untilLine": "l35",
+      "type": "verdict",
+      "tone": "danger",
+      "label": "ЗАБЛОКИРОВАТЬ"
+    },
+    {
+      "id": "memoryFrame",
+      "at": "l35",
+      "lifecycle": "transient",
+      "untilLine": "l39",
+      "type": "overlay"
+    },
+    {
+      "id": "ctaQuestion",
+      "at": "l39",
+      "lifecycle": "persistent",
+      "type": "overlay"
+    },
+    {
+      "id": "ctaHint",
+      "at": "l41",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    },
+    {
+      "id": "nextTeaser",
+      "at": "l42",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    },
+    {
+      "id": "teaserDetail",
+      "at": "l44",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    }
+  ],
+  "memoryFrame": {
+    "fromLine": "l35",
+    "untilLine": "l39",
+    "maxHoldMs": 6000,
+    "staggerMs": 600,
+    "minHoldSeconds": 2.8,
+    "title": "САЙТ НЕ «ВИДИТ VPN» — ОН ПРОВЕРЯЕТ",
+    "items": [
+      "IP · СТРАНУ · СЕТЬ",
+      "СКОЛЬКО ЛЮДЕЙ НА АДРЕСЕ",
+      "РЕПУТАЦИЮ И ПОВЕДЕНИЕ"
+    ]
+  },
+  "cta": {
+    "fromLine": "l39",
+    "prompt": "КАКОЙ СЕРВИС ЧАЩЕ ВСЕГО БЛОКИРУЕТ ТВОЙ VPN?",
+    "comment": "Напиши название в комментарии.",
+    "teaser": "ПОЧЕМУ ВХОД ПО ЛИЦУ БЕЗОПАСНЕЕ ПАРОЛЯ"
+  },
+  "qa": {
+    "durationSeconds": [
+      50,
+      70
+    ],
+    "factFraming": {
+      "banPatterns": [
+        "сайт\\s+(точно|всегда)\\s+(зна|вид|определя)",
+        "(vpn|ви-пи-эн)\\s+(всегда|точно)\\s+(вид|определя|распозна)",
+        "как\\s+обойти\\s+(антифрод|блокировк|проверк|защит)",
+        "(гарантированно|100\\s*%)\\s*(обойд|скрыт|невидим)",
+        "не\\s+определяется\\s+никогда"
+      ],
+      "requiredTexts": [
+        "не знает наверняка",
+        "просто собирает следы",
+        "не видит кнопку",
+        "является рекламой",
+        "ЭТО ПРИЗНАК, А НЕ ДОКАЗАТЕЛЬСТВО VPN"
+      ],
+      "mythChapters": []
+    },
+    "contentPolarity": "light-on-dark"
+  },
+  "publish": {
+    "cover": "КАК САЙТ\nВИДИТ ТВОЙ VPN",
+    "coverSub": "Подстрочник: **Спойлер: кнопку VPN он не видит**",
+    "coverNote": "Кадр для обложки: первые 2 с — заголовок «КАК САЙТ ВИДИТ ТВОЙ VPN?», телефон и баннер «ОТКЛЮЧИТЕ VPN».",
+    "caption": "Сервис обычно не получает готовый сигнал:\n«у пользователя включён VPN».\n\nОн видит публичный IP входящего запроса\nи оценивает признаки: примерную страну, сеть,\nсколько людей пользуются адресом,\nего репутацию и поведение запросов.\n\nДомашний адрес обычно принадлежит\nобычному интернет-провайдеру,\nа многие VPN выходят через дата-центры.\n\nПоэтому один VPN работает,\nа другой сразу получает проверку или блокировку.\nОпределение здесь вероятностное — и оно ошибается.\n\nКакой сервис чаще всего просит тебя отключить VPN?",
+    "hashtags": [
+      "#vpn",
+      "#интернет",
+      "#приватность",
+      "#кибербезопасность",
+      "#технологии"
+    ],
+    "pinnedComment": "Уточнение: универсального сигнала «VPN включён» у сайта нет.\nВсё перечисленное — вероятностные признаки, которые регулярно ошибаются: под них попадают корпоративные прокси, мобильные операторы с общим адресом и обычные пользователи за NAT.\nПоэтому «полностью невидимый VPN» — это рекламная формулировка, а не техническая гарантия.",
+    "sources": {
+      "Cloudflare": "IP Geolocation — https://developers.cloudflare.com/network/ip-geolocation/",
+      "Cloudflare (2)": "IP Access Rules — https://developers.cloudflare.com/waf/tools/ip-access-rules/",
+      "Cloudflare (3)": "Challenges troubleshooting — https://developers.cloudflare.com/cloudflare-challenges/troubleshooting/",
+      "Cloudflare (4)": "Privacy Pass — https://developers.cloudflare.com/waf/tools/privacy-pass/"
+    }
+  }
+}

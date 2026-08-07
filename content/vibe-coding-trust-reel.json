@@ -1,0 +1,708 @@
+{
+  "id": "vibe-coding-trust",
+  "compositionId": "VibeCodingTrustReel",
+  "title": "Vibe coding — это казино?",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/vibe-coding-trust/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 900,
+  "source": {
+    "platform": "Reddit",
+    "community": "r/ClaudeAI",
+    "author": "Alex Klos",
+    "publishedAt": "2026-07-24",
+    "title": "How Do We Stop Vibe Coding?",
+    "badge": "Источник: r/ClaudeAI · Alex Klos · 24.07.2026",
+    "redditUrl": "https://www.reddit.com/r/ClaudeAI/comments/1v58gax/how_do_we_stop_vibe_coding_spoiler_we_dont_we_fix/",
+    "articleUrl": "https://alexklos.ca/blog/how-do-we-stop-vibe-coding"
+  },
+  "tts": {
+    "language": "ru",
+    "direction": "Уверенный спокойный технологичный рассказчик, не рекламный диктор, без спешки. Хук — с сухой иронией.",
+    "note": "text = произносимый вариант. Латиница транслитерирована в кириллицу, чтобы multilingual-модель не переключала акцент.",
+    "speed": 1.1,
+    "speedNote": "Голос читает бриф спокойно, но длинно: 1.1 держит целевые 58-65 с без тараторения."
+  },
+  "captionClusters": {
+    "targetSeconds": [
+      0.55,
+      0.85
+    ],
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и",
+      "а",
+      "но",
+      "не",
+      "ни",
+      "в",
+      "во",
+      "на",
+      "по",
+      "за",
+      "из",
+      "от",
+      "до",
+      "к",
+      "ко",
+      "с",
+      "со",
+      "у",
+      "о",
+      "об",
+      "про",
+      "для",
+      "что",
+      "как",
+      "это",
+      "всё",
+      "ещё",
+      "же",
+      "ты",
+      "он",
+      "я",
+      "мы",
+      "которые",
+      "которому",
+      "которого",
+      "какие",
+      "какой",
+      "три",
+      "сам",
+      "себя",
+      "уже",
+      "просто"
+    ],
+    "highlightWords": [
+      "код",
+      "кода",
+      "коду",
+      "казино",
+      "доверие",
+      "вещи",
+      "изменилось",
+      "доделал",
+      "архитектуру",
+      "проверяет",
+      "намерение",
+      "файлы",
+      "тест",
+      "тесты",
+      "бласт-рэдиус",
+      "контроль",
+      "автомата"
+    ],
+    "growUntilSeconds": 0.45
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "chapter": "hook",
+      "text": "Ты больше не пишешь код.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l02",
+      "chapter": "hook",
+      "text": "Ты дёргаешь ручку игрового автомата.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l03",
+      "chapter": "trust",
+      "text": "И свежая дискуссия в сообществе Клод Эй-Ай утверждает:",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l04",
+      "chapter": "trust",
+      "text": "главная проблема вайб-кодинга — не скорость.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l05",
+      "chapter": "trust",
+      "text": "Проблема… доверие.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l06",
+      "chapter": "blind",
+      "text": "Агент выдаёт план.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l07",
+      "chapter": "blind",
+      "text": "Пишет сотни строк.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l08",
+      "chapter": "blind",
+      "text": "Тесты проходят.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l09",
+      "chapter": "blind",
+      "text": "Но ты не знаешь три вещи:",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l10",
+      "chapter": "blind",
+      "text": "что реально изменилось,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l11",
+      "chapter": "blind",
+      "text": "что он не доделал,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l12",
+      "chapter": "blind",
+      "text": "и где следующий запрос сломает архитектуру.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l13",
+      "chapter": "docs",
+      "text": "Маркдаун-спеки и скиллы выглядят как контроль.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l14",
+      "chapter": "docs",
+      "text": "Но если агент сам читает инструкцию,",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l15",
+      "chapter": "docs",
+      "text": "сам пишет код",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l16",
+      "chapter": "docs",
+      "text": "и сам проверяет себя —",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l17",
+      "chapter": "docs",
+      "text": "это всё ещё казино.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l18",
+      "chapter": "docs",
+      "text": "Просто с красивой документацией.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l19",
+      "chapter": "system",
+      "text": "Выход — хранить в центре системы не код, а намерение:",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l20",
+      "chapter": "system",
+      "text": "что функция обязана делать,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l21",
+      "chapter": "system",
+      "text": "какие файлы это реализуют,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l22",
+      "chapter": "system",
+      "text": "и какой тест это доказывает.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l23",
+      "chapter": "system",
+      "text": "А любое изменение должно показывать бласт-рэдиус",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l24",
+      "chapter": "system",
+      "text": "ещё до коммита.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l25",
+      "chapter": "system",
+      "text": "Тогда Кодекс становится не магом, которому ты веришь,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l26",
+      "chapter": "system",
+      "text": "а исполнителем, которого проверяет система.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l27",
+      "chapter": "cta",
+      "text": "Как ты работаешь сейчас:",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l28",
+      "chapter": "cta",
+      "text": "казино или контроль?",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l29",
+      "chapter": "cta",
+      "text": "Напиши одно слово в комментариях.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l30",
+      "chapter": "cta",
+      "text": "А в следующем ролике я покажу",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l31",
+      "chapter": "cta",
+      "text": "три проверки, которые реально спасают вайб-проект.",
+      "breakAfter": "none"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "hook",
+      "eyebrow": "ГЛАВА 1",
+      "label": "КАЗИНО",
+      "fromLine": "l01",
+      "toLine": "l02",
+      "headline": "ТЫ БОЛЬШЕ\nНЕ ПИШЕШЬ КОД"
+    },
+    {
+      "id": "trust",
+      "eyebrow": "ГЛАВА 2",
+      "label": "НЕ СКОРОСТЬ",
+      "fromLine": "l03",
+      "toLine": "l05",
+      "headline": "ПРОБЛЕМА\nНЕ В СКОРОСТИ"
+    },
+    {
+      "id": "blind",
+      "eyebrow": "ГЛАВА 3",
+      "label": "СЛЕПЫЕ ЗОНЫ",
+      "fromLine": "l06",
+      "toLine": "l12",
+      "headline": "ТРИ СЛЕПЫЕ ЗОНЫ"
+    },
+    {
+      "id": "docs",
+      "eyebrow": "ГЛАВА 4",
+      "label": "ДОКУМЕНТАЦИЯ",
+      "fromLine": "l13",
+      "toLine": "l18",
+      "headline": "КРАСИВАЯ\nДОКУМЕНТАЦИЯ"
+    },
+    {
+      "id": "system",
+      "eyebrow": "ГЛАВА 5",
+      "label": "СИСТЕМА",
+      "fromLine": "l19",
+      "toLine": "l26",
+      "headline": "СИСТЕМА ДОВЕРИЯ"
+    },
+    {
+      "id": "cta",
+      "eyebrow": "ИТОГ",
+      "label": "ВЫБОР",
+      "fromLine": "l27",
+      "toLine": "l31",
+      "headline": "КАЗИНО\nИЛИ КОНТРОЛЬ"
+    }
+  ],
+  "avatarStates": [
+    {
+      "at": "l01",
+      "state": "shocked"
+    },
+    {
+      "at": "l03",
+      "state": "skeptical"
+    },
+    {
+      "at": "l09",
+      "state": "question"
+    },
+    {
+      "at": "l12",
+      "state": "facepalm"
+    },
+    {
+      "at": "l13",
+      "state": "thinking"
+    },
+    {
+      "at": "l17",
+      "state": "angry"
+    },
+    {
+      "at": "l19",
+      "state": "idea"
+    },
+    {
+      "at": "l24",
+      "state": "approved"
+    },
+    {
+      "at": "l27",
+      "state": "question"
+    }
+  ],
+  "canvasActions": [
+    {
+      "id": "slot",
+      "at": "l02",
+      "lifecycle": "persistent",
+      "type": "reveal",
+      "note": "игровой автомат: барабаны PROMPT / CODE / HOPE"
+    },
+    {
+      "id": "slotLever",
+      "at": "l02",
+      "offsetMs": 350,
+      "lifecycle": "transient",
+      "untilLine": "l03",
+      "type": "pull"
+    },
+    {
+      "id": "chipCasino",
+      "at": "l02",
+      "offsetMs": 700,
+      "lifecycle": "persistent",
+      "type": "chip",
+      "tone": "danger",
+      "label": "КАЗИНО"
+    },
+    {
+      "id": "sourceBadge",
+      "at": "l03",
+      "lifecycle": "persistent",
+      "type": "reveal",
+      "offsetMs": 900
+    },
+    {
+      "id": "slotShrink",
+      "at": "l04",
+      "lifecycle": "persistent",
+      "type": "transform",
+      "target": "slot",
+      "note": "автомат уменьшается и остаётся частью схемы"
+    },
+    {
+      "id": "speedWord",
+      "at": "l04",
+      "lifecycle": "transient",
+      "untilLine": "l06",
+      "type": "strike",
+      "label": "СКОРОСТЬ",
+      "offsetMs": 650
+    },
+    {
+      "id": "trustWord",
+      "at": "l05",
+      "lifecycle": "persistent",
+      "type": "reveal",
+      "label": "ДОВЕРИЕ"
+    },
+    {
+      "id": "pipeline",
+      "at": "l06",
+      "lifecycle": "chapter",
+      "untilLine": "l09",
+      "type": "reveal",
+      "note": "ПЛАН → СТРОКИ → ТЕСТЫ ✓"
+    },
+    {
+      "id": "pipelineStep2",
+      "at": "l07",
+      "lifecycle": "transient",
+      "type": "step",
+      "target": "pipeline"
+    },
+    {
+      "id": "pipelineStep3",
+      "at": "l08",
+      "lifecycle": "transient",
+      "type": "step",
+      "target": "pipeline"
+    },
+    {
+      "id": "openLoop3",
+      "at": "l09",
+      "lifecycle": "chapter",
+      "untilLine": "l13",
+      "type": "counter",
+      "label": "3"
+    },
+    {
+      "id": "card1",
+      "at": "l10",
+      "lifecycle": "chapter",
+      "untilLine": "l13",
+      "type": "card",
+      "label": "ЧТО ИЗМЕНИЛОСЬ?"
+    },
+    {
+      "id": "card2",
+      "at": "l11",
+      "lifecycle": "chapter",
+      "untilLine": "l13",
+      "type": "card",
+      "label": "ЧТО НЕ ДОДЕЛАНО?"
+    },
+    {
+      "id": "card3",
+      "at": "l12",
+      "lifecycle": "chapter",
+      "untilLine": "l13",
+      "type": "card",
+      "label": "ЧТО СЛОМАЕТСЯ ДАЛЬШЕ?"
+    },
+    {
+      "id": "docChain",
+      "at": "l13",
+      "lifecycle": "chapter",
+      "untilLine": "l19",
+      "type": "chain",
+      "note": "ИНСТРУКЦИЯ → АГЕНТ → КОД → ТЕСТ → «ВСЁ ХОРОШО»"
+    },
+    {
+      "id": "docStep2",
+      "at": "l14",
+      "lifecycle": "chapter",
+      "untilLine": "l19",
+      "type": "step",
+      "target": "docChain"
+    },
+    {
+      "id": "docStep3",
+      "at": "l15",
+      "lifecycle": "chapter",
+      "untilLine": "l19",
+      "type": "step",
+      "target": "docChain"
+    },
+    {
+      "id": "loopArrow",
+      "at": "l16",
+      "lifecycle": "chapter",
+      "untilLine": "l19",
+      "type": "loop",
+      "note": "стрелка от теста обратно к агенту"
+    },
+    {
+      "id": "chipSelfCheck",
+      "at": "l17",
+      "lifecycle": "chapter",
+      "untilLine": "l19",
+      "type": "chip",
+      "tone": "danger",
+      "label": "АГЕНТ ПРОВЕРИЛ САМ СЕБЯ"
+    },
+    {
+      "id": "chipDocsCasino",
+      "at": "l18",
+      "lifecycle": "chapter",
+      "untilLine": "l19",
+      "type": "chip",
+      "tone": "warning",
+      "label": "КАЗИНО С ДОКУМЕНТАЦИЕЙ"
+    },
+    {
+      "id": "agentBlock",
+      "at": "l19",
+      "lifecycle": "persistent",
+      "type": "morph",
+      "target": "slot",
+      "note": "автомат превращается в боковой исполнительный блок AGENT"
+    },
+    {
+      "id": "nodeIntent",
+      "at": "l19",
+      "offsetMs": 900,
+      "lifecycle": "persistent",
+      "type": "node",
+      "label": "НАМЕРЕНИЕ"
+    },
+    {
+      "id": "nodeIntentDetail",
+      "at": "l20",
+      "lifecycle": "persistent",
+      "type": "detail",
+      "target": "nodeIntent"
+    },
+    {
+      "id": "nodeFiles",
+      "at": "l21",
+      "lifecycle": "persistent",
+      "type": "node",
+      "label": "ФАЙЛЫ"
+    },
+    {
+      "id": "linkRequirement",
+      "at": "l21",
+      "lifecycle": "persistent",
+      "type": "link",
+      "label": "требование → реализация"
+    },
+    {
+      "id": "nodeFilesDetail",
+      "at": "l21",
+      "offsetMs": 700,
+      "lifecycle": "persistent",
+      "type": "detail",
+      "target": "nodeFiles"
+    },
+    {
+      "id": "nodeTests",
+      "at": "l22",
+      "lifecycle": "persistent",
+      "type": "node",
+      "label": "ТЕСТЫ"
+    },
+    {
+      "id": "linkProof",
+      "at": "l22",
+      "lifecycle": "persistent",
+      "type": "link",
+      "label": "реализация → доказательство"
+    },
+    {
+      "id": "nodeTestsDetail",
+      "at": "l22",
+      "offsetMs": 700,
+      "lifecycle": "persistent",
+      "type": "detail",
+      "target": "nodeTests"
+    },
+    {
+      "id": "nodeBlast",
+      "at": "l23",
+      "lifecycle": "persistent",
+      "type": "node",
+      "label": "DIFF / BLAST RADIUS"
+    },
+    {
+      "id": "linkBlast",
+      "at": "l23",
+      "lifecycle": "persistent",
+      "type": "link",
+      "label": "изменение → область воздействия"
+    },
+    {
+      "id": "nodeBlastDetail",
+      "at": "l24",
+      "lifecycle": "persistent",
+      "type": "detail",
+      "target": "nodeBlast"
+    },
+    {
+      "id": "memoryFrame",
+      "at": "l25",
+      "lifecycle": "transient",
+      "untilLine": "l27",
+      "type": "overlay"
+    },
+    {
+      "id": "ctaQuestion",
+      "at": "l27",
+      "lifecycle": "persistent",
+      "type": "overlay"
+    },
+    {
+      "id": "ctaOptionB",
+      "at": "l28",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    },
+    {
+      "id": "ctaComment",
+      "at": "l29",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    },
+    {
+      "id": "nextTeaser",
+      "at": "l30",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    },
+    {
+      "id": "teaserSteps",
+      "at": "l31",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    }
+  ],
+  "memoryFrame": {
+    "fromLine": "l25",
+    "untilLine": "l27",
+    "minHoldSeconds": 3,
+    "title": "НЕ ВЕРЬ АГЕНТУ НА СЛОВО",
+    "chain": [
+      "НАМЕРЕНИЕ",
+      "ФАЙЛЫ",
+      "ТЕСТЫ",
+      "BLAST RADIUS"
+    ],
+    "maxHoldMs": 4000
+  },
+  "cta": {
+    "fromLine": "l27",
+    "prompt": "ТЫ СЕЙЧАС В РЕЖИМЕ:",
+    "optionA": "КАЗИНО",
+    "divider": "или",
+    "optionB": "КОНТРОЛЬ?",
+    "teaser": "Следом: 3 проверки для vibe-проекта"
+  },
+  "contactSheetCompositionId": "VibeCodingTrustContactSheet",
+  "qa": {
+    "durationSeconds": [
+      52,
+      68
+    ]
+  },
+  "publish": {
+    "cover": "VIBE CODING —\nЭТО КАЗИНО?",
+    "coverNote": "Кадр для обложки: первые 1.5 с (заголовок «ТЫ БОЛЬШЕ НЕ ПИШЕШЬ КОД» + игровой автомат).",
+    "caption": "AI-агент пишет сотни строк за пару минут — и это правда быстро.\n\nПроблема начинается дальше: он сам формулирует план, сам пишет код,\nсам придумывает тесты и сам сообщает, что всё работает.\n\nСкорость растёт. Понимание проекта — падает.\n\nТы не видишь трёх вещей: что реально изменилось, что осталось недоделанным\nи где следующий запрос сломает архитектуру. Маркдаун-спеки и skills это\nне чинят — если агент сам себе и автор, и проверяющий, это всё ещё казино,\nпросто с красивой документацией.\n\nРабочий вариант — держать в центре системы не код, а намерение:\nчто функция обязана делать → какие файлы это реализуют → какой тест\nэто доказывает → какой blast radius у изменения. И показывать расхождение\nдо коммита, а не после.\n\nТы сейчас работаешь в режиме КАЗИНО или КОНТРОЛЬ?\nНапиши одно слово.\n\nВ следующем ролике — три проверки, которые стоит запускать\nдо каждого AI-коммита.\n\nИсточник: обсуждение в r/ClaudeAI по статье Alex Klos\n«How Do We Stop Vibe Coding?» (24.07.2026).",
+    "hashtags": [
+      "#vibecoding",
+      "#codex",
+      "#claudecode",
+      "#нейросети",
+      "#разработка"
+    ],
+    "pinnedComment": "Продолжение: три проверки для vibe-проекта — в следующем ролике.\nЕсли хочешь, чтобы я разобрал конкретный кейс, напиши его в комментариях.",
+    "sources": {
+      "Reddit": "https://www.reddit.com/r/ClaudeAI/comments/1v58gax/how_do_we_stop_vibe_coding_spoiler_we_dont_we_fix/",
+      "Статья": "https://alexklos.ca/blog/how-do-we-stop-vibe-coding"
+    }
+  }
+}

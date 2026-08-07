@@ -1,0 +1,28 @@
+{
+  "id": "ghostpepebot-two-networks-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1500,
+  "voiceoverSegments": [
+    {"id": "s1_wifi", "text": "НА WI-FI ВСЁ РАБОТАЕТ", "spokenText": "На вайфай всё работает", "pauseAfterMs": 320},
+    {"id": "s1_mobile", "text": "ПЕРЕКЛЮЧАЕШЬСЯ НА МОБИЛЬНУЮ СЕТЬ", "spokenText": "Переключаешься на мобильную сеть", "pauseAfterMs": 280},
+    {"id": "s1_result", "text": "И РЕЗУЛЬТАТ УЖЕ ДРУГОЙ", "spokenText": "И результат уже другой", "pauseAfterMs": 520},
+    {"id": "s1_same_vpn", "text": "ХОТЯ VPN ТОТ ЖЕ", "spokenText": "Хотя ви пи эн тот же", "pauseAfterMs": 600},
+    {"id": "s2_device", "text": "УСТРОЙСТВО НЕ ИЗМЕНИЛОСЬ", "spokenText": "Устройство не изменилось", "pauseAfterMs": 320},
+    {"id": "s2_vpn", "text": "VPN ТОЖЕ", "spokenText": "Ви пи эн тоже", "pauseAfterMs": 500},
+    {"id": "s2_network", "text": "ИЗМЕНИЛАСЬ САМА СЕТЬ", "spokenText": "Изменилась сама сеть", "pauseAfterMs": 650},
+    {"id": "s3_vpn", "text": "ПОТОМУ ЧТО VPN", "spokenText": "Потому что ви пи эн", "pauseAfterMs": 220},
+    {"id": "s3_route", "text": "ЭТО ТОЛЬКО ЧАСТЬ МАРШРУТА", "spokenText": "это только часть маршрута", "pauseAfterMs": 420},
+    {"id": "s3_traffic", "text": "ДАЛЬШЕ ТРАФИК ПРОХОДИТ ЧЕРЕЗ СЕТЬ", "spokenText": "Дальше трафик проходит через сеть", "pauseAfterMs": 320},
+    {"id": "s3_conditions", "text": "УСЛОВИЯ В РАЗНЫХ СЕТЯХ МОГУТ ОТЛИЧАТЬСЯ", "spokenText": "А условия в разных сетях могут отличаться", "pauseAfterMs": 650},
+    {"id": "end_check_vpn", "text": "ПРОВЕРЯЙ НЕ ТОЛЬКО САМ VPN", "spokenText": "Поэтому проверяй не только сам ви пи эн", "pauseAfterMs": 380},
+    {"id": "end_look", "text": "СМОТРИ", "spokenText": "Смотри", "pauseAfterMs": 620},
+    {"id": "end_network", "text": "В КАКОЙ СЕТИ ВОЗНИКАЕТ ПРОБЛЕМА", "spokenText": "в какой сети возникает проблема", "pauseAfterMs": 700}
+  ]
+}

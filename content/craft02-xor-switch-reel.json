@@ -1,0 +1,33 @@
+{
+  "id": "craft02-xor-switch",
+  "batchId": "2026-07-25-b1",
+  "voiceProfile": "PLAYFUL-PRECISION",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1400,
+  "voiceoverSegments": [
+    {"id": "hk_same", "text": "Эта операция шифрует", "spokenText": "Эта операция шифрует", "rate": "90%", "pauseAfterMs": 200},
+    {"id": "hk_back", "text": "И она же расшифровывает", "spokenText": "И эта же операция расшифровывает", "rate": "88%", "pitch": "high", "pauseAfterMs": 540},
+
+    {"id": "ru_rule", "text": "Одинаковые — ноль, разные — единица", "spokenText": "Правило простое. Одинаковые дают ноль, разные дают единицу", "rate": "90%", "pauseAfterMs": 480},
+
+    {"id": "da_byte", "text": "Берём кусочек данных", "spokenText": "Берём маленький кусочек данных", "rate": "90%", "pauseAfterMs": 200},
+    {"id": "da_key", "text": "И такой же кусочек ключа", "spokenText": "И такой же кусочек ключа", "rate": "90%", "pauseAfterMs": 200},
+    {"id": "da_noise", "text": "Складываем — получается шум", "spokenText": "Складываем по правилу, и получается шум", "rate": "88%", "pauseAfterMs": 520},
+
+    {"id": "ag_again", "text": "Тот же ключ. Ещё раз", "spokenText": "А теперь тот же самый ключ. Ещё раз", "rate": "90%", "pauseAfterMs": 220},
+    {"id": "ag_back", "text": "Данные вернулись", "spokenText": "И данные вернулись", "rate": "86%", "pitch": "high", "pauseAfterMs": 560},
+
+    {"id": "wh_cancel", "text": "Ключ дважды отменяет сам себя", "spokenText": "Ключ, применённый дважды, отменяет сам себя", "rate": "88%", "pauseAfterMs": 300},
+
+    {"id": "ch_cha", "text": "Так работает ChaCha20 внутри VPN", "spokenText": "Так работает Ча Ча двадцать внутри ви пи эн", "rate": "88%", "pauseAfterMs": 280},
+    {"id": "br_ghost", "text": "GhostPepeBot гоняет трафик этим потоком", "spokenText": "Гост Пепе Бот гоняет трафик через такой поток", "rate": "88%", "pauseAfterMs": 260},
+    {"id": "en_one", "text": "Шифр и расшифровка — одна кнопка", "spokenText": "Шифрование и расшифровка. Одна кнопка", "rate": "84%", "pitch": "low", "pauseAfterMs": 300}
+  ]
+}

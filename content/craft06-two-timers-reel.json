@@ -1,0 +1,36 @@
+{
+  "id": "craft06-two-timers",
+  "batchId": "2026-07-25-b1",
+  "voiceProfile": "TENSE-BUILD",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1600,
+  "voiceoverSegments": [
+    {"id": "hk_rel", "text": "Соединение надёжное", "spokenText": "Соединение надёжное", "rate": "86%", "pauseAfterMs": 200},
+    {"id": "hk_rel2", "text": "Второе тоже надёжное", "spokenText": "Второе тоже надёжное", "rate": "84%", "pauseAfterMs": 240},
+    {"id": "hk_stuck", "text": "Вместе они встают намертво", "spokenText": "А вместе они встают намертво", "rate": "80%", "pitch": "low", "pauseAfterMs": 620},
+
+    {"id": "tc_who", "text": "TCP — курьер-перфекционист", "spokenText": "Тэ сэ пэ это курьер перфекционист", "rate": "86%", "pauseAfterMs": 240},
+    {"id": "tc_lost", "text": "Потерялась посылка — шлёт снова", "spokenText": "Потерялась посылка, он ждёт и шлёт снова", "rate": "86%", "pauseAfterMs": 540},
+
+    {"id": "tw_in", "text": "Теперь один курьер внутри другого", "spokenText": "А теперь положим одного курьера внутрь другого", "rate": "84%", "pauseAfterMs": 260},
+    {"id": "tw_own", "text": "У каждого свои часы", "spokenText": "И у каждого свои часы", "rate": "82%", "pauseAfterMs": 520},
+
+    {"id": "tw_slow", "text": "Внешний тормозит и удваивает паузу", "spokenText": "Внешний тормозит и удваивает паузу", "rate": "82%", "pauseAfterMs": 240},
+    {"id": "tw_inner", "text": "Внутренний об этом не знает", "spokenText": "А внутренний об этом ничего не знает", "rate": "82%", "pauseAfterMs": 240},
+    {"id": "tw_send", "text": "И шлёт повтор. И ещё один", "spokenText": "И шлёт повтор. И ещё один", "rate": "80%", "pauseAfterMs": 300},
+
+    {"id": "ml_melt", "text": "Канал встаёт. Это meltdown", "spokenText": "Канал встаёт. Это называют мелтдаун", "rate": "76%", "pitch": "low", "pauseAfterMs": 640},
+
+    {"id": "rf_titz", "text": "Олаф Титц описал это в 2001-м", "spokenText": "Олаф Титц описал это ещё в две тысячи первом", "rate": "84%", "pauseAfterMs": 280},
+    {"id": "ud_why", "text": "Поэтому туннель ходит по UDP", "spokenText": "Поэтому туннель ходит по у дэ пэ", "rate": "84%", "pauseAfterMs": 300},
+
+    {"id": "br_end", "text": "GhostPepeBot держит туннель на UDP", "spokenText": "Гост Пепе Бот держит туннель на у дэ пэ", "rate": "82%", "pitch": "low", "pauseAfterMs": 300}
+  ]
+}

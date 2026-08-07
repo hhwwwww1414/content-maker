@@ -1,0 +1,105 @@
+{
+  "id": "ping-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1600,
+  "voiceoverSegments": [
+    {
+      "id": "hook_world",
+      "text": "Твой клик оббегает полмира за 40 миллисекунд",
+      "spokenText": "Твой один клик оббегает полмира за сорок миллисекунд.",
+      "rate": "73%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "hook_how",
+      "text": "Как так?",
+      "spokenText": "Как так вообще получается?",
+      "rate": "67%",
+      "pitch": "low",
+      "pauseAfterMs": 520
+    },
+    {
+      "id": "not_direct",
+      "text": "Запрос идёт не напрямую",
+      "spokenText": "Смотри. Твой запрос идёт до сайта не напрямую.",
+      "rate": "72%",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "hops",
+      "text": "Он прыгает по узлам, как по камням через реку",
+      "spokenText": "Он прыгает по узлам сети, как по камням через реку.",
+      "rate": "72%",
+      "pauseAfterMs": 260
+    },
+    {
+      "id": "each_time",
+      "text": "Каждый прыжок — немного времени",
+      "spokenText": "И каждый такой прыжок, это немного времени.",
+      "rate": "72%",
+      "pitch": "low",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "ping_is",
+      "text": "Пинг — это время туда и обратно",
+      "spokenText": "Пинг, это время, за которое сигнал сходил туда и обратно.",
+      "rate": "72%",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "farther",
+      "text": "Дальше сервер — больше пинг, больше лаг",
+      "spokenText": "Чем дальше сервер, тем больше пинг и тем сильнее лаг.",
+      "rate": "72%",
+      "pitch": "low",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "vpn_near",
+      "text": "Поэтому близкий VPN-сервер — это скорость",
+      "spokenText": "Поэтому близкий ви пи эн сервер, это скорость.",
+      "rate": "72%",
+      "pitch": "high",
+      "pauseAfterMs": 240
+    },
+    {
+      "id": "vpn_choose",
+      "text": "Выбирай сервер поближе — и лага нет",
+      "spokenText": "Выбирай сервер поближе, и лага почти нет.",
+      "rate": "72%",
+      "pauseAfterMs": 620
+    },
+    {
+      "id": "cta_q",
+      "text": "Хочешь VPN с сервером поближе?",
+      "spokenText": "Хочешь ви пи эн с быстрым сервером рядом?",
+      "rate": "73%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_brand",
+      "text": "GhostPepe — VPN в Telegram",
+      "spokenText": "Гост Пепе, ви пи эн прямо в телеграм.",
+      "rate": "72%",
+      "pitch": "high",
+      "pauseAfterMs": 220
+    },
+    {
+      "id": "cta_tap",
+      "text": "Подключение в пару нажатий",
+      "spokenText": "Подключение в пару нажатий.",
+      "rate": "70%",
+      "pauseAfterMs": 300
+    }
+  ]
+}

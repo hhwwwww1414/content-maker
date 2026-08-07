@@ -1,0 +1,32 @@
+{
+  "id": "batch03-sni-envelope",
+  "batchId": "2026-07-25-a1",
+  "voiceProfile": "CALM-MYTH-BUSTING",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1600,
+  "voiceoverSegments": [
+    {"id": "m_claim", "text": "«Замок — значит меня не видно»", "spokenText": "Замок в адресной строке. Значит меня не видно", "rate": "86%", "pauseAfterMs": 220},
+    {"id": "m_no", "text": "Замок закрывает письмо, а не конверт", "spokenText": "Замок закрывает письмо, а не конверт", "rate": "82%", "pitch": "low", "pauseAfterMs": 560},
+
+    {"id": "h_first", "text": "Первое сообщение уходит до шифрования", "spokenText": "Первое сообщение уходит ещё до шифрования", "rate": "86%", "pauseAfterMs": 220},
+    {"id": "h_field", "text": "В нём поле server name", "spokenText": "В нём есть поле сервер нэйм", "rate": "84%", "pauseAfterMs": 200},
+    {"id": "h_plain", "text": "Имя сайта. Открытым текстом", "spokenText": "Имя сайта. Открытым текстом", "rate": "80%", "pitch": "low", "pauseAfterMs": 620},
+
+    {"id": "e_rfc", "text": "В марте 2026 вышел RFC 9849", "spokenText": "В марте две тысячи двадцать шестого вышел эр эф си девять восемь четыре девять", "rate": "84%", "pauseAfterMs": 220},
+    {"id": "e_ech", "text": "Encrypted Client Hello закрывает это поле", "spokenText": "Инкриптед Клаент Хеллоу закрывает это поле", "rate": "86%", "pauseAfterMs": 240},
+    {"id": "e_cut", "text": "Измерения FOCI: в России его вырезают", "spokenText": "Но измерения Фоки показали. В России его вырезают", "rate": "82%", "pitch": "low", "pauseAfterMs": 640},
+
+    {"id": "t_two", "text": "Скрыть содержимое и скрыть адресата — разное", "spokenText": "Скрыть содержимое и скрыть адресата, это разные задачи", "rate": "84%", "pauseAfterMs": 480},
+
+    {"id": "b_ghost", "text": "GhostPepeBot снимает подпись с конверта целиком", "spokenText": "Гост Пепе Бот снимает подпись с конверта целиком", "rate": "86%", "pauseAfterMs": 260},
+
+    {"id": "t_final", "text": "Адрес — это тоже данные", "spokenText": "Адрес это тоже данные", "rate": "78%", "pitch": "low", "pauseAfterMs": 300}
+  ]
+}

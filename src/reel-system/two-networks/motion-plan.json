@@ -1,0 +1,19 @@
+{
+  "cameraGrammar": "SCIENTIFIC PRODUCT FILM",
+  "patternIds": [
+    "camera.static-symmetric-opening",
+    "camera.scientific-lateral-dolly",
+    "camera.macro-push",
+    "transitions.loop-return",
+    "reveals.medium-transparency-reveal",
+    "typography.environmental-engraving"
+  ],
+  "rules": {
+    "cssAnimation": false,
+    "cssTransition": false,
+    "cameraShake": false,
+    "simultaneousCameraMoves": 1,
+    "interpolateClamp": true
+  },
+  "pacing": "fast semantic beats with slow camera"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "ghostpepebot-graveyard-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "cta": "Подключить в Telegram",
+  "telegramLabel": "@ghostpepebot",
+  "finalHoldMs": 3000,
+  "voiceoverSegments": [
+    {"id": "hook", "text": "Ты скачал уже пятый VPN за вечер", "pauseAfterMs": 5700},
+    {"id": "died", "text": "И он тоже умер", "pauseAfterMs": 1250},
+    {"id": "transition", "text": "Хватит каждый раз искать новый", "pauseAfterMs": 1800},
+    {"id": "connect", "text": "Открываешь GhostPepeBot, получаешь подписку — и подключаешься", "spokenText": "Открываешь Гост Пепе Бот, получаешь подписку — и подключаешься", "pauseAfterMs": 3400},
+    {"id": "benefits1", "text": "Несколько локаций", "pauseAfterMs": 750},
+    {"id": "benefits2", "text": "Современные протоколы", "pauseAfterMs": 750},
+    {"id": "benefits3", "text": "Поддержка разных устройств", "pauseAfterMs": 900},
+    {"id": "cta1", "text": "GhostPepeBot", "spokenText": "Гост Пепе Бот", "pauseAfterMs": 500},
+    {"id": "cta2", "text": "Интернет без лишней возни", "pauseAfterMs": 0}
+  ]
+}

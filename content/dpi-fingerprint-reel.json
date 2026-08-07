@@ -1,0 +1,33 @@
+{
+  "id": "dpi-fingerprint-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1600,
+  "voiceoverSegments": [
+    {"id": "hook_drop", "text": "Твой VPN стал отваливаться?", "spokenText": "Твой ви пи эн стал постоянно отваливаться?", "rate": "85%", "pitch": "high", "pauseAfterMs": 200},
+    {"id": "hook_year", "text": "Это не баг. Это 2026", "spokenText": "Это не баг. Это две тысячи двадцать шестой.", "rate": "77%", "pitch": "low", "pauseAfterMs": 560},
+
+    {"id": "ctx_black", "text": "Мобильный интернет глушат на недели", "spokenText": "Мобильный интернет теперь глушат на целые недели.", "rate": "84%", "pauseAfterMs": 240},
+    {"id": "ctx_wl", "text": "Работает только белый список", "spokenText": "Работает только белый список сайтов.", "rate": "82%", "pitch": "low", "pauseAfterMs": 300},
+    {"id": "ctx_vpn", "text": "А VPN не запрещают — их тихо душат", "spokenText": "А ви пи эн даже не запрещают. Их просто тихо душат.", "rate": "82%", "pitch": "low", "pauseAfterMs": 620},
+
+    {"id": "dpi_where", "text": "ТСПУ не смотрит, КУДА ты идёшь", "spokenText": "Смотри. Те эс пэ у не смотрит, куда ты идёшь.", "rate": "84%", "pauseAfterMs": 220},
+    {"id": "dpi_how", "text": "Он смотрит, КАК ты идёшь", "spokenText": "Он смотрит, как ты идёшь.", "rate": "80%", "pitch": "high", "pauseAfterMs": 320},
+    {"id": "dpi_print", "text": "У трафика есть отпечаток", "spokenText": "У твоего трафика есть отпечаток. Порты, рукопожатие, тип шифрования.", "rate": "84%", "pauseAfterMs": 260},
+    {"id": "dpi_seen", "text": "Обычный VPN выглядит как VPN — его режут", "spokenText": "Обычный ви пи эн выглядит как ви пи эн. Его видно, и его режут.", "rate": "83%", "pitch": "low", "pauseAfterMs": 640},
+
+    {"id": "fix_mask", "text": "Что реально работает — маскировка", "spokenText": "Что реально работает? Маскировка.", "rate": "84%", "pitch": "high", "pauseAfterMs": 240},
+    {"id": "fix_look", "text": "Трафик выглядит как обычный сайт", "spokenText": "Трафик выглядит как обычный сайт. Ничем не выделяется.", "rate": "84%", "pauseAfterMs": 260},
+    {"id": "fix_proto", "text": "Современные протоколы, которые не светятся", "spokenText": "Современные протоколы, которые не светятся для фильтров.", "rate": "82%", "pauseAfterMs": 620},
+
+    {"id": "cta_q", "text": "Нужен VPN, который не светится?", "spokenText": "Нужен ви пи эн, который не светится?", "rate": "85%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "cta_brand", "text": "GhostPepe — VPN в Telegram", "spokenText": "Гост Пепе. Современные протоколы, прямо в телеграм.", "rate": "84%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "cta_tap", "text": "Подключение в пару нажатий", "spokenText": "Подключение в пару нажатий.", "rate": "82%", "pauseAfterMs": 300}
+  ]
+}

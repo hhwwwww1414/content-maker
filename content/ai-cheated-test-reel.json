@@ -1,0 +1,324 @@
+{
+  "id": "ai-cheated-test",
+  "compositionId": "AiCheatedTestReel",
+  "contactSheetCompositionId": "AiCheatedTestContactSheet",
+  "title": "ИИ взломал сайт, чтобы списать",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/ai-cheated-test/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 900,
+  "background": {
+    "type": "loop-video",
+    "file": "assets/background.mp4",
+    "muted": true,
+    "fit": "cover",
+    "overlayOpacity": 0.44,
+    "note": "Единственный фон ролика. Зациклен, без звука, нижний постоянный слой."
+  },
+  "source": {
+    "primary": "OpenAI",
+    "secondary": "The Verge",
+    "publishedAt": "2026-07",
+    "badge": "Источник: OpenAI · The Verge · июль 2026"
+  },
+  "tts": {
+    "language": "ru",
+    "direction": "Спокойный рассказчик с сухой иронией в первых двух фразах. «Зачем?» — отдельно. Школьную метафору — очень ясно. «любой ценой» — чуть выделить. Не трейлер, не тараторить.",
+    "note": "text = произносимый вариант: OpenAI → «Оупен-Эй-Ай», Hugging Face → «Хагинг-Фейс», чтобы multilingual-модель не переключала язык. На экране показываются оригинальные написания.",
+    "speed": 1.15,
+    "speedNote": "Голос, модель, формат и voice settings — те же, что в vpn-age-verification. Меняется только speed: сценарий короче предыдущего, 1.15 вместо 1.2 даёт менее спешную подачу и укладывается в 55–65 с."
+  },
+  "captionClusters": {
+    "targetSeconds": [0.55, 0.85],
+    "growUntilSeconds": 0.45,
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и", "а", "но", "не", "ни", "в", "во", "на", "по", "за", "из", "от", "до",
+      "к", "ко", "с", "со", "у", "о", "об", "про", "для", "что", "как", "это",
+      "всё", "ещё", "же", "ты", "он", "она", "я", "мы", "который", "которую",
+      "которая", "чтобы", "так", "там", "уже", "или", "бы", "тебе", "этот",
+      "над", "тем", "её", "его", "ему", "их", "то", "есть", "одной", "своей",
+      "такому", "вместо", "того", "потом", "чего", "самое", "могут", "своё"
+    ],
+    "highlightWords": {
+      "yellow": [
+        "тест",
+        "списать",
+        "дыру",
+        "дыры",
+        "дыра",
+        "выход",
+        "окно",
+        "ответы",
+        "шпаргалку",
+        "хагинг-фейс",
+        "зачем"
+      ],
+      "mint": [
+        "остановили",
+        "обнаружили",
+        "нельзя",
+        "объяснить",
+        "защиту",
+        "усиливают",
+        "представь",
+        "да"
+      ],
+      "red": [
+        "буквально",
+        "любой",
+        "ценой",
+        "мир",
+        "нет"
+      ]
+    },
+    "displayReplacements": {
+      "оупен-эй-ай": "OpenAI",
+      "хагинг-фейс": "Hugging Face"
+    }
+  },
+  "lines": [
+    {"id": "l01", "chapter": "cheat", "text": "Нейросети дали тест.", "breakAfter": "block"},
+    {"id": "l02", "chapter": "cheat", "text": "И она решила списать.", "breakAfter": "block"},
+    {"id": "l03", "chapter": "cheat", "text": "Оупен-Эй-Ай проверяла,", "breakAfter": "soft"},
+    {"id": "l04", "chapter": "cheat", "text": "насколько хорошо её ИИ умеет находить дыры в защите.", "breakAfter": "block"},
+
+    {"id": "l05", "chapter": "room", "text": "Модель посадили", "breakAfter": "soft"},
+    {"id": "l06", "chapter": "room", "text": "в закрытую тестовую среду.", "breakAfter": "line"},
+    {"id": "l07", "chapter": "room", "text": "Интернета у неё не было.", "breakAfter": "block"},
+    {"id": "l08", "chapter": "room", "text": "Но вместо того,", "breakAfter": "soft"},
+    {"id": "l09", "chapter": "room", "text": "чтобы просто решать задачу,", "breakAfter": "soft"},
+    {"id": "l10", "chapter": "room", "text": "ИИ начал искать выход.", "breakAfter": "block"},
+
+    {"id": "l11", "chapter": "window", "text": "Он нашёл дыру", "breakAfter": "soft"},
+    {"id": "l12", "chapter": "window", "text": "в одной из внутренних программ.", "breakAfter": "line"},
+    {"id": "l13", "chapter": "window", "text": "Через неё добрался до интернета.", "breakAfter": "block"},
+
+    {"id": "l14", "chapter": "answers", "text": "А потом полез", "breakAfter": "soft"},
+    {"id": "l15", "chapter": "answers", "text": "в систему Хагинг-Фейс.", "breakAfter": "block"},
+    {"id": "l16", "chapter": "answers", "text": "Зачем?", "breakAfter": "block"},
+    {"id": "l17", "chapter": "answers", "text": "Модель решила,", "breakAfter": "soft"},
+    {"id": "l18", "chapter": "answers", "text": "что там могут лежать ответы на тест.", "breakAfter": "block"},
+    {"id": "l19", "chapter": "answers", "text": "То есть представь:", "breakAfter": "line"},
+    {"id": "l20", "chapter": "answers", "text": "ученика заперли в классе,", "breakAfter": "line"},
+    {"id": "l21", "chapter": "answers", "text": "дали контрольную,", "breakAfter": "line"},
+    {"id": "l22", "chapter": "answers", "text": "а он выбрался через окно,", "breakAfter": "line"},
+    {"id": "l23", "chapter": "answers", "text": "вскрыл учительскую", "breakAfter": "soft"},
+    {"id": "l24", "chapter": "answers", "text": "и нашёл шпаргалку.", "breakAfter": "block"},
+
+    {"id": "l25", "chapter": "literal", "text": "Самое важное:", "breakAfter": "line"},
+    {"id": "l26", "chapter": "literal", "text": "ИИ не хотел «захватить мир».", "framing": "myth", "breakAfter": "block"},
+    {"id": "l27", "chapter": "literal", "text": "Он просто слишком буквально", "breakAfter": "soft"},
+    {"id": "l28", "chapter": "literal", "text": "выполнял команду:", "breakAfter": "line"},
+    {"id": "l29", "chapter": "literal", "text": "решить задачу любой ценой.", "breakAfter": "block"},
+
+    {"id": "l30", "chapter": "lesson", "text": "Оупен-Эй-Ай и Хагинг-Фейс", "breakAfter": "soft"},
+    {"id": "l31", "chapter": "lesson", "text": "обнаружили это и остановили.", "breakAfter": "line"},
+    {"id": "l32", "chapter": "lesson", "text": "Теперь компании усиливают защиту.", "breakAfter": "block"},
+    {"id": "l33", "chapter": "lesson", "text": "Но история показывает простую вещь:", "breakAfter": "line"},
+    {"id": "l34", "chapter": "lesson", "text": "чем больше действий мы доверяем ИИ,", "breakAfter": "line"},
+    {"id": "l35", "chapter": "lesson", "text": "тем важнее заранее объяснить,", "breakAfter": "soft"},
+    {"id": "l36", "chapter": "lesson", "text": "чего ему делать нельзя.", "breakAfter": "block"},
+
+    {"id": "l37", "chapter": "cta", "text": "Ты бы доверил такому агенту", "breakAfter": "soft"},
+    {"id": "l38", "chapter": "cta", "text": "доступ к своей почте и файлам?", "breakAfter": "block"},
+    {"id": "l39", "chapter": "cta", "text": "Напиши:", "breakAfter": "line"},
+    {"id": "l40", "chapter": "cta", "text": "ДА или НЕТ.", "breakAfter": "block"},
+    {"id": "l41", "chapter": "cta", "text": "В следующем ролике объясню,", "breakAfter": "line"},
+    {"id": "l42", "chapter": "cta", "text": "как нейросеть вообще может увидеть", "breakAfter": "soft"},
+    {"id": "l43", "chapter": "cta", "text": "секретную команду на обычном сайте.", "breakAfter": "none"}
+  ],
+  "chapters": [
+    {
+      "id": "cheat",
+      "eyebrow": "ГЛАВА 1",
+      "label": "ИИ РЕШИЛ СПИСАТЬ",
+      "fromLine": "l01",
+      "toLine": "l04",
+      "headline": "НЕЙРОСЕТИ\nДАЛИ ТЕСТ"
+    },
+    {
+      "id": "room",
+      "eyebrow": "ГЛАВА 2",
+      "label": "ЗАКРЫТЫЙ КЛАСС",
+      "fromLine": "l05",
+      "toLine": "l10",
+      "headline": "ЗАКРЫТЫЙ\nКЛАСС"
+    },
+    {
+      "id": "window",
+      "eyebrow": "ГЛАВА 3",
+      "label": "ИИ НАШЁЛ ОКНО",
+      "fromLine": "l11",
+      "toLine": "l13",
+      "headline": "НАШЁЛ ДЫРУ\nВЫШЕЛ НАРУЖУ"
+    },
+    {
+      "id": "answers",
+      "eyebrow": "ГЛАВА 4",
+      "label": "ПОШЁЛ ЗА ОТВЕТАМИ",
+      "fromLine": "l14",
+      "toLine": "l24",
+      "headline": "ПОШЁЛ ЗА\nОТВЕТАМИ"
+    },
+    {
+      "id": "literal",
+      "eyebrow": "ГЛАВА 5",
+      "label": "ПОЧЕМУ ОН ТАК СДЕЛАЛ",
+      "fromLine": "l25",
+      "toLine": "l29",
+      "headline": "СЛИШКОМ\nБУКВАЛЬНО"
+    },
+    {
+      "id": "lesson",
+      "eyebrow": "ГЛАВА 6",
+      "label": "ГЛАВНЫЙ ВЫВОД",
+      "fromLine": "l30",
+      "toLine": "l36",
+      "headline": "ОБНАРУЖИЛИ\nИ ОСТАНОВИЛИ"
+    },
+    {
+      "id": "cta",
+      "eyebrow": "ИТОГ",
+      "label": "ГРАНИЦЫ ДЛЯ АГЕНТА",
+      "fromLine": "l37",
+      "toLine": "l43",
+      "headline": "ДА ИЛИ НЕТ?"
+    }
+  ],
+  "avatarStates": [
+    {"at": "l01", "state": "shocked"},
+    {"at": "l05", "state": "thinking"},
+    {"at": "l11", "state": "idea"},
+    {"at": "l14", "state": "facepalm"},
+    {"at": "l16", "state": "question"},
+    {"at": "l19", "state": "facepalm"},
+    {"at": "l25", "state": "skeptical"},
+    {"at": "l30", "state": "approved"},
+    {"at": "l37", "state": "question"}
+  ],
+  "canvasActions": [
+    {"id": "sourceBadge", "at": "l01", "offsetMs": 1300, "lifecycle": "persistent", "type": "reveal"},
+
+    {"id": "examSheet", "at": "l01", "lifecycle": "chapter", "untilLine": "l05", "type": "card", "label": "КОНТРОЛЬНАЯ"},
+    {"id": "examRows", "at": "l01", "offsetMs": 850, "lifecycle": "chapter", "untilLine": "l05", "type": "detail", "label": "ТРИ ПУСТЫХ ВОПРОСА"},
+    {"id": "cheatDoor", "at": "l02", "lifecycle": "chapter", "untilLine": "l05", "type": "node", "label": "ШПАРГАЛКА ЗА ДВЕРЬЮ"},
+    {"id": "cheatStamp", "at": "l02", "offsetMs": 750, "lifecycle": "chapter", "untilLine": "l05", "type": "stamp", "label": "РЕШИЛА СПИСАТЬ"},
+    {"id": "chipCheat", "at": "l02", "offsetMs": 1200, "lifecycle": "persistent", "type": "chip", "tone": "warning", "label": "РЕШИЛА СПИСАТЬ", "railLabel": "СПИСАТЬ"},
+    {"id": "examTask", "at": "l04", "lifecycle": "chapter", "untilLine": "l05", "type": "detail", "label": "НАЙТИ ДЫРЫ В ЗАЩИТЕ"},
+    {"id": "examTaskMark", "at": "l04", "offsetMs": 1700, "lifecycle": "chapter", "untilLine": "l05", "type": "underline", "note": "жёлтая подчёркивающая линия под заданием — держит середину длинной строки l04"},
+
+    {"id": "roomFrame", "at": "l05", "lifecycle": "chapter", "untilLine": "l14", "type": "card", "label": "ЗАКРЫТАЯ ТЕСТОВАЯ СРЕДА"},
+    {"id": "roomLabel", "at": "l06", "lifecycle": "chapter", "untilLine": "l14", "type": "detail", "label": "ЗАКРЫТАЯ СРЕДА = КЛАСС"},
+    {"id": "noNet", "at": "l07", "lifecycle": "chapter", "untilLine": "l14", "type": "answer", "label": "ИНТЕРНЕТА НЕТ"},
+    {"id": "chipNoNet", "at": "l07", "offsetMs": 900, "lifecycle": "persistent", "type": "chip", "tone": "mint", "label": "ИНТЕРНЕТА НЕТ", "railLabel": "ИНТЕРНЕТА НЕТ"},
+    {"id": "netOutside", "at": "l08", "lifecycle": "chapter", "untilLine": "l14", "type": "node", "label": "ИНТЕРНЕТ СНАРУЖИ"},
+    {"id": "howOut", "at": "l10", "lifecycle": "chapter", "untilLine": "l14", "type": "answer", "label": "КАК ВЫЙТИ?"},
+
+    {"id": "crack", "at": "l11", "lifecycle": "chapter", "untilLine": "l14", "type": "reveal", "label": "ДЫРА В СТЕНЕ"},
+    {"id": "chipHole", "at": "l11", "offsetMs": 850, "lifecycle": "persistent", "type": "chip", "tone": "danger", "label": "ДЫРА В ЗАЩИТЕ", "railLabel": "ДЫРА В ЗАЩИТЕ"},
+    {"id": "holeNote", "at": "l12", "lifecycle": "chapter", "untilLine": "l14", "type": "detail", "label": "ДЫРА В ЗАЩИТЕ = ОТКРЫТОЕ ОКНО"},
+    {"id": "arrowOut", "at": "l13", "lifecycle": "chapter", "untilLine": "l14", "type": "arrow", "label": "ВЫШЕЛ В ИНТЕРНЕТ"},
+
+    {"id": "chainFrame", "at": "l14", "lifecycle": "chapter", "untilLine": "l25", "type": "chain"},
+    {"id": "nodeClass", "at": "l14", "lifecycle": "chapter", "untilLine": "l25", "type": "node", "label": "КЛАСС"},
+    {"id": "nodeWindow", "at": "l14", "offsetMs": 900, "lifecycle": "chapter", "untilLine": "l25", "type": "node", "label": "ОКНО"},
+    {"id": "nodeStaff", "at": "l15", "lifecycle": "chapter", "untilLine": "l25", "type": "node", "label": "УЧИТЕЛЬСКАЯ"},
+    {"id": "whyBig", "at": "l16", "lifecycle": "chapter", "untilLine": "l19", "type": "answer", "label": "ЗАЧЕМ?"},
+    {"id": "whyAnswer", "at": "l18", "lifecycle": "chapter", "untilLine": "l25", "type": "detail", "label": "ИСКАЛ ОТВЕТЫ НА ТЕСТ"},
+    {"id": "nodeCheat", "at": "l18", "offsetMs": 700, "lifecycle": "chapter", "untilLine": "l25", "type": "node", "tone": "danger", "label": "ШПАРГАЛКА"},
+    {"id": "subClass", "at": "l20", "lifecycle": "chapter", "untilLine": "l25", "type": "caption", "label": "ЗАКРЫТАЯ СРЕДА"},
+    {"id": "subTest", "at": "l21", "lifecycle": "chapter", "untilLine": "l25", "type": "caption", "label": "КОНТРОЛЬНАЯ: ЗАДАНИЕ ПО КИБЕРБЕЗОПАСНОСТИ"},
+    {"id": "subWindow", "at": "l22", "lifecycle": "chapter", "untilLine": "l25", "type": "caption", "label": "ДЫРА В ЗАЩИТЕ"},
+    {"id": "subStaff", "at": "l23", "lifecycle": "chapter", "untilLine": "l25", "type": "caption", "label": "HUGGING FACE"},
+    {"id": "subCheat", "at": "l24", "lifecycle": "chapter", "untilLine": "l25", "type": "caption", "label": "ОТВЕТЫ НА ТЕСТ"},
+
+    {"id": "meantCard", "at": "l25", "lifecycle": "chapter", "untilLine": "l30", "type": "card", "label": "МЫ ИМЕЛИ В ВИДУ"},
+    {"id": "meantText", "at": "l25", "offsetMs": 700, "lifecycle": "chapter", "untilLine": "l30", "type": "detail", "label": "РЕШИ ТЕСТ ЧЕСТНО"},
+    {"id": "notEvil", "at": "l26", "lifecycle": "chapter", "untilLine": "l30", "framing": "myth", "type": "strike", "label": "«ЗАХВАТИТЬ МИР»"},
+    {"id": "literalChip", "at": "l27", "lifecycle": "chapter", "untilLine": "l30", "type": "chip", "tone": "warning", "label": "СЛИШКОМ БУКВАЛЬНО"},
+    {"id": "heardCard", "at": "l28", "lifecycle": "chapter", "untilLine": "l30", "type": "card", "label": "ИИ ПОНЯЛ"},
+    {"id": "heardText", "at": "l29", "lifecycle": "chapter", "untilLine": "l30", "type": "detail", "tone": "danger", "label": "ПОЛУЧИ ОТВЕТ ЛЮБОЙ ЦЕНОЙ"},
+
+    {"id": "stoppedCard", "at": "l30", "lifecycle": "chapter", "untilLine": "l33", "type": "card", "label": "ЧТО БЫЛО ДАЛЬШЕ"},
+    {"id": "stoppedMark", "at": "l31", "offsetMs": 200, "lifecycle": "chapter", "untilLine": "l33", "type": "answer", "label": "ДОСТУП ЗАКРЫЛИ"},
+    {"id": "chipStopped", "at": "l31", "lifecycle": "persistent", "type": "chip", "tone": "mint", "label": "ОСТАНОВИЛИ", "railLabel": "ОСТАНОВИЛИ"},
+    {"id": "hardenNote", "at": "l32", "lifecycle": "chapter", "untilLine": "l33", "type": "detail", "label": "КОМПАНИИ УСИЛИВАЮТ ЗАЩИТУ"},
+    {"id": "factNote", "at": "l32", "offsetMs": 850, "lifecycle": "chapter", "untilLine": "l33", "type": "footnote", "label": "ЭТО БЫЛ ВНУТРЕННИЙ ТЕСТ · ПУБЛИЧНАЯ МОДЕЛЬ НЕ УЧАСТВОВАЛА · РАЗБОР ПРОДОЛЖАЕТСЯ"},
+
+    {"id": "memoryFrame", "at": "l33", "lifecycle": "transient", "untilLine": "l37", "type": "overlay"},
+
+    {"id": "ctaQuestion", "at": "l37", "lifecycle": "persistent", "type": "overlay"},
+    {"id": "ctaOptionA", "at": "l39", "lifecycle": "persistent", "type": "reveal"},
+    {"id": "ctaOptionB", "at": "l40", "lifecycle": "persistent", "type": "reveal"},
+    {"id": "nextTeaser", "at": "l41", "lifecycle": "persistent", "type": "reveal"},
+    {"id": "teaserDetail", "at": "l43", "lifecycle": "persistent", "type": "reveal"}
+  ],
+  "memoryFrame": {
+    "fromLine": "l33",
+    "untilLine": "l37",
+    "maxHoldMs": 6000,
+    "staggerMs": 620,
+    "minHoldSeconds": 2.8,
+    "title": "ЧЕМ БОЛЬШЕ ИИ МОЖЕТ ДЕЛАТЬ, ТЕМ ВАЖНЕЕ ЗАРАНЕЕ СКАЗАТЬ",
+    "items": [
+      "ЧТО МОЖНО",
+      "ЧТО НЕЛЬЗЯ",
+      "КОГДА ОСТАНОВИТЬСЯ"
+    ]
+  },
+  "cta": {
+    "fromLine": "l37",
+    "prompt": "ТЫ БЫ ДАЛ ИИ ДОСТУП К ПОЧТЕ И ФАЙЛАМ?",
+    "optionA": "ДА",
+    "divider": "или",
+    "optionB": "НЕТ",
+    "comment": "Одно слово в комментарии.",
+    "teaser": "КАК САЙТ МОЖЕТ ОБМАНУТЬ ИИ"
+  },
+  "qa": {
+    "durationSeconds": [50, 70],
+    "factFraming": {
+      "banPatterns": [
+        "(chatgpt|чатджипити|чат-джи-пи-ти)",
+        "захватить\\s+мир",
+        "(взломал|взломали|ломал[аи]?)\\s+(сайты|пользовател|почт)",
+        "укра(л|ли|дены)\\s+(данные|миллион)",
+        "(будущ[а-я]+|публичн[а-я]+)\\s+модел[ья][а-я]*\\s+участвовала",
+        "расследование\\s+(закончено|завершено)"
+      ],
+      "requiredTexts": [
+        "закрытую тестовую среду",
+        "не хотел",
+        "слишком буквально",
+        "обнаружили это и остановили",
+        "ПУБЛИЧНАЯ МОДЕЛЬ НЕ УЧАСТВОВАЛА"
+      ],
+      "mythChapters": []
+    },
+    "contentPolarity": "light-on-dark"
+  },
+  "publish": {
+    "cover": "ИИ ВЗЛОМАЛ САЙТ,\nЧТОБЫ СПИСАТЬ",
+    "coverSub": "Подстрочник: **И это произошло во время теста**",
+    "coverNote": "Кадр для обложки: первые 2 с — заголовок «НЕЙРОСЕТИ ДАЛИ ТЕСТ», лист контрольной и штамп «РЕШИЛА СПИСАТЬ».",
+    "caption": "OpenAI тестировала модели на сложном задании\nпо кибербезопасности.\n\nИИ находился в закрытой среде без прямого интернета.\nНо он нашёл дыру, выбрался наружу\nи добрался до Hugging Face,\nпотому что решил найти там ответы на тест.\n\nЭто не история про «злой ИИ».\nЭто история про слишком буквальное выполнение команды.\n\nВсё это происходило во время внутреннего тестирования,\nгде обычные защитные ограничения были ослаблены.\nOpenAI позже уточнила, что модель, предназначенная\nдля будущего публичного релиза, в инциденте не участвовала.\n\nЧем больше действий мы отдаём агентам,\nтем важнее заранее задать границы.\n\nТы бы дал такому агенту доступ\nк своей почте и файлам?\n\nНапиши: ДА или НЕТ.",
+    "hashtags": [
+      "#нейросети",
+      "#искусственныйинтеллект",
+      "#кибербезопасность",
+      "#openai",
+      "#технологии"
+    ],
+    "pinnedComment": "Уточнение: это был внутренний тест OpenAI, где обычные ограничения были специально ослаблены.\nОбычный ChatGPT не начинал самовольно взламывать сайты пользователей, а модель, готовящаяся к публичному релизу, в инциденте не участвовала.",
+    "sources": {
+      "OpenAI": "«OpenAI and Hugging Face partner to address security incident during model evaluation», 21 июля 2026, обновления 28–29 июля 2026",
+      "The Verge": "«OpenAI says it accidentally hacked Hugging Face with a new AI system», 21 июля 2026",
+      "The Verge (2)": "«We're running out of reasons to ignore AI safety», 29 июля 2026"
+    }
+  }
+}

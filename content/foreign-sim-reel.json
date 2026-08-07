@@ -1,0 +1,24 @@
+{
+  "id": "ghostpepebot-foreign-sim-news-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "telegramLabel": "@ghostpepebot",
+  "trimEdgeSilence": true,
+  "finalHoldMs": 930,
+  "voiceoverSegments": [
+    {"id": "hook_a", "text": "Иностранная сим карта", "pauseAfterMs": 180},
+    {"id": "hook_b", "text": "это уже не другой интернет", "pauseAfterMs": 240},
+    {"id": "minc_a", "text": "Минцифры пояснило", "pauseAfterMs": 190},
+    {"id": "minc_b", "text": "роуминговый трафик проходит общую фильтрацию", "spokenText": "ро+уминговый трафик проходит общую фильтрацию", "pauseAfterMs": 250},
+    {"id": "rule_a", "text": "Другая сим карта", "pauseAfterMs": 180},
+    {"id": "rule_b", "text": "не значит другие правила", "pauseAfterMs": 240},
+    {"id": "turn_a", "text": "Сим карта та же", "pauseAfterMs": 190},
+    {"id": "turn_b", "text": "изменились правила трафика", "pauseAfterMs": 240},
+    {"id": "cta_a", "text": "Пользовался иностранной симкой", "pauseAfterMs": 180},
+    {"id": "cta_b", "text": "заметил разницу", "pauseAfterMs": 0}
+  ]
+}

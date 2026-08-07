@@ -1,0 +1,27 @@
+{
+  "id": "ghostpepebot-dual-internet-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "telegramLabel": "@ghostpepebot",
+  "trimEdgeSilence": true,
+  "finalHoldMs": 950,
+  "voiceoverSegments": [
+    {"id": "s1a", "text": "Включил VPN", "spokenText": "Включил ви пи эн", "pauseAfterMs": 170},
+    {"id": "s1c", "text": "а другое пропало", "pauseAfterMs": 240},
+    {"id": "s2a", "text": "С включённым VPN", "spokenText": "С включённым ви пи эн", "pauseAfterMs": 150},
+    {"id": "s2b", "text": "часть российских сервисов", "pauseAfterMs": 150},
+    {"id": "s2c", "text": "может ограничивать доступ", "pauseAfterMs": 240},
+    {"id": "s2d", "text": "выключаешь и наоборот", "pauseAfterMs": 260},
+    {"id": "s3a", "text": "А что если", "pauseAfterMs": 200},
+    {"id": "s3b", "text": "не переключать всё", "pauseAfterMs": 160},
+    {"id": "s3c", "text": "а разделить маршруты", "pauseAfterMs": 240},
+    {"id": "s4a", "text": "Разному трафику свои маршруты", "pauseAfterMs": 210},
+    {"id": "s4c", "text": "без переключений", "pauseAfterMs": 230},
+    {"id": "s5a", "text": "Интернету не нужен рубильник", "pauseAfterMs": 190},
+    {"id": "s5b", "text": "нужны правильные маршруты", "pauseAfterMs": 0}
+  ]
+}

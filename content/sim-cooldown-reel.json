@@ -1,0 +1,34 @@
+{
+  "id": "sim-cooldown-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1600,
+  "voiceoverSegments": [
+    {"id": "hook_back", "text": "Вернулся из-за границы — а интернета нет?", "spokenText": "Вернулся из-за границы, а мобильного интернета нет?", "rate": "84%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "hook_cool", "text": "Твоя SIM «остывает»", "spokenText": "Спокойно. Твоя симка просто остывает.", "rate": "78%", "pitch": "low", "pauseAfterMs": 560},
+
+    {"id": "what_law", "text": "С 10 ноября — «период охлаждения» SIM", "spokenText": "С десятого ноября в России ввели период охлаждения для сим-карт.", "rate": "84%", "pauseAfterMs": 240},
+    {"id": "what_off", "text": "Сутки без мобильного интернета и SMS", "spokenText": "Целые сутки. Без мобильного интернета и без эс эм эс.", "rate": "82%", "pitch": "low", "pauseAfterMs": 260},
+    {"id": "what_calls", "text": "Но звонки работают", "spokenText": "Но звонки при этом работают.", "rate": "82%", "pauseAfterMs": 620},
+
+    {"id": "trig_two", "text": "Срабатывает в двух случаях", "spokenText": "Охлаждение включается в двух случаях.", "rate": "84%", "pauseAfterMs": 220},
+    {"id": "trig_roam", "text": "Первое: вернулся из роуминга", "spokenText": "Первое. Ты вернулся из роуминга.", "rate": "84%", "pauseAfterMs": 220},
+    {"id": "trig_silent", "text": "Второе: SIM молчала больше 72 часов", "spokenText": "Второе. Симка молчала больше семидесяти двух часов.", "rate": "84%", "pauseAfterMs": 620},
+
+    {"id": "why_check", "text": "Зачем? Проверить, что SIM у человека", "spokenText": "А зачем всё это? Чтобы проверить, что сим-карта у человека.", "rate": "84%", "pauseAfterMs": 240},
+    {"id": "why_drone", "text": "А не встроена в беспилотник", "spokenText": "А не встроена в беспилотник.", "rate": "80%", "pitch": "low", "pauseAfterMs": 620},
+
+    {"id": "how_captcha", "text": "Как снять? На номер придёт капча", "spokenText": "Как снять ограничение? На номер придёт ссылка на капчу.", "rate": "84%", "pauseAfterMs": 240},
+    {"id": "how_back", "text": "Прошёл — интернет вернулся", "spokenText": "Прошёл проверку, и интернет вернулся.", "rate": "84%", "pitch": "high", "pauseAfterMs": 620},
+
+    {"id": "cta_half", "text": "Вернулся — но открыт не весь", "spokenText": "Вот только открыт он будет не весь.", "rate": "84%", "pitch": "low", "pauseAfterMs": 240},
+    {"id": "cta_brand", "text": "GhostPepe возвращает остальное — VPN в Telegram", "spokenText": "Гост Пепе возвращает остальное. Ви пи эн прямо в телеграм.", "rate": "84%", "pitch": "high", "pauseAfterMs": 220},
+    {"id": "cta_tap", "text": "Подключение в пару нажатий", "spokenText": "Подключение в пару нажатий.", "rate": "82%", "pauseAfterMs": 300}
+  ]
+}

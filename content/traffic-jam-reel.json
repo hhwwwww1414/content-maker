@@ -1,0 +1,26 @@
+{
+  "id": "ghostpepebot-traffic-jam-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "telegramLabel": "@ghostpepebot",
+  "trimEdgeSilence": true,
+  "speechRate": "110%",
+  "finalHoldMs": 900,
+  "voiceoverSegments": [
+    {"id": "hook_a", "text": "Дело не в слабом интернете", "pauseAfterMs": 150},
+    {"id": "hook_b", "text": "иногда трафик просто встал", "pauseAfterMs": 200},
+    {"id": "jam_a", "text": "Запросы копятся", "pauseAfterMs": 120},
+    {"id": "jam_b", "text": "видео ждёт", "pauseAfterMs": 120},
+    {"id": "jam_c", "text": "сообщения тормозят", "pauseAfterMs": 190},
+    {"id": "hero_a", "text": "GhostPepeBot не добавляет хаос", "spokenText": "Гост Пепе Бот не добавляет хаос", "pauseAfterMs": 160},
+    {"id": "hero_b", "text": "он открывает свободный поток", "pauseAfterMs": 190},
+    {"id": "flow_a", "text": "Когда поток движется", "pauseAfterMs": 150},
+    {"id": "flow_b", "text": "интернет перестаёт тормозить", "pauseAfterMs": 190},
+    {"id": "cta_a", "text": "Выйди из цифровой пробки", "pauseAfterMs": 200},
+    {"id": "cta_b", "text": "GhostPepeBot", "spokenText": "Гост Пепе Бот", "pauseAfterMs": 0}
+  ]
+}

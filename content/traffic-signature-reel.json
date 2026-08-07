@@ -1,0 +1,22 @@
+{
+  "id": "ghostpepebot-traffic-signature-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "telegramLabel": "@ghostpepebot",
+  "trimEdgeSilence": true,
+  "finalHoldMs": 600,
+  "voiceoverSegments": [
+    {"id": "s1a", "text": "Трафик зашифрован", "pauseAfterMs": 170},
+    {"id": "s1b", "text": "но его узнали", "pauseAfterMs": 240},
+    {"id": "s1c", "text": "Как", "pauseAfterMs": 260},
+    {"id": "s2a", "text": "У потока остаётся почерк", "pauseAfterMs": 190},
+    {"id": "s2b", "text": "размер и ритм", "pauseAfterMs": 230},
+    {"id": "s4a", "text": "Шифрование не значит невидимость", "pauseAfterMs": 210},
+    {"id": "s5a", "text": "Теперь ты знаешь", "pauseAfterMs": 160},
+    {"id": "s5b", "text": "что выдаёт зашифрованный поток", "pauseAfterMs": 0}
+  ]
+}

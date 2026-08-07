@@ -1,0 +1,33 @@
+{
+  "id": "craft03-box-in-box",
+  "batchId": "2026-07-25-b1",
+  "voiceProfile": "DEADPAN-OBSERVER",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "trimEdgeSilence": true,
+  "captionMode": "phrase",
+  "finalHoldMs": 1500,
+  "voiceoverSegments": [
+    {"id": "hk_hide", "text": "Чтобы спрятать посылку, её не прячут", "spokenText": "Чтобы спрятать посылку, её не прячут", "rate": "84%", "pauseAfterMs": 240},
+    {"id": "hk_put", "text": "Её кладут в другую посылку", "spokenText": "Её просто кладут в другую посылку", "rate": "82%", "pitch": "low", "pauseAfterMs": 600},
+
+    {"id": "pk_two", "text": "Любой пакет — адрес и содержимое", "spokenText": "Любой сетевой пакет это адрес и содержимое", "rate": "84%", "pauseAfterMs": 300},
+    {"id": "pk_read", "text": "По дороге читают только адрес", "spokenText": "По дороге узлы читают только адрес", "rate": "84%", "pauseAfterMs": 560},
+
+    {"id": "vp_take", "text": "VPN берёт твой пакет целиком", "spokenText": "Ви пи эн берёт твой пакет целиком", "rate": "84%", "pauseAfterMs": 300},
+    {"id": "vp_wrap", "text": "И делает его содержимым нового", "spokenText": "И делает его содержимым нового пакета", "rate": "84%", "pauseAfterMs": 300},
+    {"id": "vp_addr", "text": "Снаружи — адрес VPN-сервера", "spokenText": "Снаружи теперь адрес ви пи эн сервера", "rate": "84%", "pauseAfterMs": 560},
+
+    {"id": "sn_in", "text": "Настоящий адрес лежит внутри", "spokenText": "А настоящий адрес лежит внутри, зашифрованный", "rate": "82%", "pitch": "low", "pauseAfterMs": 600},
+
+    {"id": "rf_old", "text": "Приём старый: RFC 2003, 1994 год", "spokenText": "Приём не новый. Стандарт вышел в девяносто четвёртом", "rate": "84%", "pauseAfterMs": 300},
+    {"id": "un_wrap", "text": "На сервере обёртку снимают", "spokenText": "На сервере обёртку снимают, и пакет идёт дальше", "rate": "84%", "pauseAfterMs": 320},
+
+    {"id": "br_ghost", "text": "GhostPepeBot и есть эта внешняя коробка", "spokenText": "Гост Пепе Бот и есть та самая внешняя коробка", "rate": "84%", "pauseAfterMs": 280},
+    {"id": "en_env", "text": "Коробка в коробке. Больше ничего", "spokenText": "Коробка в коробке. Больше ничего", "rate": "80%", "pitch": "low", "pauseAfterMs": 300}
+  ]
+}

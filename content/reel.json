@@ -1,0 +1,18 @@
+{
+  "id": "ghostpepebot-main-reel",
+  "ttsProvider": "silero",
+  "voice": "v5_5_ru",
+  "speaker": "eugene",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "cta": "Подключить в Telegram",
+  "telegramLabel": "@ghostpepebot",
+  "voiceoverSegments": [
+    {"id": "problem", "text": "Обычный VPN снова не подключается?", "spokenText": "Обычный ви-пи-эн снова не подключается?", "pauseAfterMs": 250},
+    {"id": "intro", "text": "С GhostPepeBot всё проще.", "spokenText": "С Гост Пепе Бот всё проще.", "pauseAfterMs": 200},
+    {"id": "connect", "text": "Открываешь Telegram, получаешь подписку и подключаешься в одно нажатие.", "spokenText": "Открываешь Телеграм, получаешь подписку и подключаешься в одно нажатие.", "pauseAfterMs": 250},
+    {"id": "benefits", "text": "Несколько локаций, современные протоколы и поддержка разных устройств.", "pauseAfterMs": 250},
+    {"id": "cta", "text": "GhostPepeBot. Интернет без лишней возни.", "spokenText": "Гост Пепе Бот. Интернет без лишней возни.", "pauseAfterMs": 0}
+  ]
+}

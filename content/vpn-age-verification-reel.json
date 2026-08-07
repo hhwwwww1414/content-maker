@@ -1,0 +1,778 @@
+{
+  "id": "vpn-age-verification",
+  "compositionId": "VpnAgeVerificationReel",
+  "contactSheetCompositionId": "VpnAgeVerificationContactSheet",
+  "title": "VPN запретят в Европе?",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/vpn-age-verification/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 900,
+  "background": {
+    "type": "loop-video",
+    "file": "assets/background.mp4",
+    "muted": true,
+    "fit": "cover",
+    "overlayOpacity": 0.42,
+    "note": "Единственный фон ролика. Зациклен, без звука, нижний постоянный слой."
+  },
+  "source": {
+    "platform": "Reddit",
+    "communities": [
+      "r/technology",
+      "r/VPN"
+    ],
+    "topic": "VPNs and EU age verification",
+    "publishedAt": "2026-05",
+    "badge": "Источник: r/technology · r/VPN · EPRS · European Commission"
+  },
+  "tts": {
+    "language": "ru",
+    "direction": "Спокойный уверенный tech-рассказчик. Хук — тревожно, но сдержанно. Без рекламного пафоса и без искусственной драматизации.",
+    "note": "text = произносимый вариант: VPN → «ви-пи-эн», Reddit → «Реддит», чтобы multilingual-модель не переключала язык.",
+    "speed": 1.2,
+    "speedNote": "Сценарий на 16% длиннее первого ролика; 1.2 — потолок ElevenLabs, нужен чтобы уложиться в лимит длительности."
+  },
+  "captionClusters": {
+    "targetSeconds": [
+      0.55,
+      0.85
+    ],
+    "growUntilSeconds": 0.45,
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и",
+      "а",
+      "но",
+      "не",
+      "ни",
+      "в",
+      "во",
+      "на",
+      "по",
+      "за",
+      "из",
+      "от",
+      "до",
+      "к",
+      "ко",
+      "с",
+      "со",
+      "у",
+      "о",
+      "об",
+      "про",
+      "для",
+      "что",
+      "как",
+      "это",
+      "всё",
+      "ещё",
+      "же",
+      "ты",
+      "он",
+      "я",
+      "мы",
+      "который",
+      "которую",
+      "которая",
+      "чтобы",
+      "так",
+      "там",
+      "уже",
+      "или",
+      "бы",
+      "тебе",
+      "этот",
+      "над",
+      "тем"
+    ],
+    "highlightWords": {
+      "mint": [
+        "правда",
+        "брифинг",
+        "исследовательский",
+        "восемнадцать",
+        "имени",
+        "просмотров",
+        "паспорта",
+        "нет"
+      ],
+      "yellow": [
+        "ви-пи-эн",
+        "лазейку",
+        "возраст",
+        "возрастную",
+        "возрастной",
+        "проверку",
+        "анонимности",
+        "страну"
+      ],
+      "red": [
+        "запретят",
+        "запретить",
+        "паникой",
+        "контроля",
+        "обходить",
+        "спор"
+      ],
+      "default": "mint"
+    },
+    "displayReplacements": {
+      "ви-пи-эн": "VPN"
+    }
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "chapter": "panic",
+      "text": "В Реддите разлетелась новость:",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l02",
+      "chapter": "panic",
+      "text": "Европа якобы хочет закрыть лазейку под названием ви-пи-эн.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l03",
+      "chapter": "panic",
+      "text": "Звучит так, будто ви-пи-эн скоро запретят.",
+      "framing": "myth",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l04",
+      "chapter": "panic",
+      "text": "Но это не правда.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l05",
+      "chapter": "document",
+      "text": "Документ, на который все ссылаются, —",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l06",
+      "chapter": "document",
+      "text": "не новый закон.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l07",
+      "chapter": "document",
+      "text": "Это исследовательский брифинг для Европарламента.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l08",
+      "chapter": "document",
+      "text": "Он действительно говорит:",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l09",
+      "chapter": "document",
+      "text": "ви-пи-эн позволяет сменить страну",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l10",
+      "chapter": "document",
+      "text": "и обойти возрастную проверку.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l11",
+      "chapter": "document",
+      "text": "Но запретить ви-пи-эн этот документ не предлагает.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l12",
+      "chapter": "system",
+      "text": "Настоящая проблема сложнее.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l13",
+      "chapter": "system",
+      "text": "Европа строит систему,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l14",
+      "chapter": "system",
+      "text": "где сайт должен узнать только одно:",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l15",
+      "chapter": "system",
+      "text": "тебе уже есть восемнадцать или нет.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l16",
+      "chapter": "system",
+      "text": "Без имени.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l17",
+      "chapter": "system",
+      "text": "Без истории просмотров.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l18",
+      "chapter": "system",
+      "text": "Без передачи паспорта каждому сайту.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l19",
+      "chapter": "bypass",
+      "text": "Но если человек включает ви-пи-эн",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l20",
+      "chapter": "bypass",
+      "text": "и виртуально переезжает в другую страну,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l21",
+      "chapter": "bypass",
+      "text": "возрастной экран может просто не появиться.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l22",
+      "chapter": "conflict",
+      "text": "И регулятор получает выбор:",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l23",
+      "chapter": "conflict",
+      "text": "оставить систему, которую легко обходить,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l24",
+      "chapter": "conflict",
+      "text": "или добавить ещё один уровень контроля",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l25",
+      "chapter": "conflict",
+      "text": "над тем, откуда и как ты выходишь в интернет.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l26",
+      "chapter": "conflict",
+      "text": "Поэтому заголовок",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l27",
+      "chapter": "conflict",
+      "text": "«ви-пи-эн запретят»",
+      "framing": "myth",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l28",
+      "chapter": "conflict",
+      "text": "пока является паникой.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l29",
+      "chapter": "conflict",
+      "text": "Но спор вокруг анонимности",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l30",
+      "chapter": "conflict",
+      "text": "уже начался.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l31",
+      "chapter": "cta",
+      "text": "Ты бы согласился подтверждать возраст,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l32",
+      "chapter": "cta",
+      "text": "чтобы открыть обычный сайт?",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l33",
+      "chapter": "cta",
+      "text": "Напиши:",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l34",
+      "chapter": "cta",
+      "text": "ДА или НЕТ.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l35",
+      "chapter": "cta",
+      "text": "А следующим роликом я покажу,",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l36",
+      "chapter": "cta",
+      "text": "как сайты вообще понимают,",
+      "breakAfter": "soft"
+    },
+    {
+      "id": "l37",
+      "chapter": "cta",
+      "text": "что ты включил ви-пи-эн.",
+      "breakAfter": "none"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "panic",
+      "eyebrow": "ГЛАВА 1",
+      "label": "ПАНИКА",
+      "framing": "myth",
+      "fromLine": "l01",
+      "toLine": "l04",
+      "headline": "VPN ЗАПРЕТЯТ\nВ ЕВРОПЕ?"
+    },
+    {
+      "id": "document",
+      "eyebrow": "ГЛАВА 2",
+      "label": "ЧТО ЗА ДОКУМЕНТ",
+      "fromLine": "l05",
+      "toLine": "l11",
+      "headline": "БРИФИНГ\n≠ ЗАКОН"
+    },
+    {
+      "id": "system",
+      "eyebrow": "ГЛАВА 3",
+      "label": "КАК ЗАДУМАНО",
+      "fromLine": "l12",
+      "toLine": "l18",
+      "headline": "ЧТО ДОЛЖЕН\nУЗНАТЬ САЙТ"
+    },
+    {
+      "id": "bypass",
+      "eyebrow": "ГЛАВА 4",
+      "label": "ПОЧЕМУ ЛОМАЕТСЯ",
+      "fromLine": "l19",
+      "toLine": "l21",
+      "headline": "ТУРНИКЕТ\nОСТАЁТСЯ ПОЗАДИ"
+    },
+    {
+      "id": "conflict",
+      "eyebrow": "ГЛАВА 5",
+      "label": "КОНФЛИКТ",
+      "fromLine": "l22",
+      "toLine": "l30",
+      "headline": "СПОР ВОКРУГ\nАНОНИМНОСТИ"
+    },
+    {
+      "id": "cta",
+      "eyebrow": "ИТОГ",
+      "label": "ВЫБОР",
+      "fromLine": "l31",
+      "toLine": "l37",
+      "headline": "ДА ИЛИ НЕТ?"
+    }
+  ],
+  "avatarStates": [
+    {
+      "at": "l01",
+      "state": "shocked"
+    },
+    {
+      "at": "l04",
+      "state": "skeptical"
+    },
+    {
+      "at": "l05",
+      "state": "thinking"
+    },
+    {
+      "at": "l12",
+      "state": "question"
+    },
+    {
+      "at": "l13",
+      "state": "idea"
+    },
+    {
+      "at": "l16",
+      "state": "approved"
+    },
+    {
+      "at": "l19",
+      "state": "skeptical"
+    },
+    {
+      "at": "l21",
+      "state": "facepalm"
+    },
+    {
+      "at": "l28",
+      "state": "approved"
+    },
+    {
+      "at": "l31",
+      "state": "question"
+    }
+  ],
+  "canvasActions": [
+    {
+      "id": "sourceBadge",
+      "at": "l01",
+      "offsetMs": 1400,
+      "lifecycle": "persistent",
+      "type": "reveal"
+    },
+    {
+      "id": "euMap",
+      "at": "l02",
+      "lifecycle": "persistent",
+      "type": "reveal",
+      "note": "минималистичная карта Европы + VPN-тоннель"
+    },
+    {
+      "id": "loopholeQuote",
+      "at": "l02",
+      "offsetMs": 900,
+      "lifecycle": "chapter",
+      "untilLine": "l05",
+      "framing": "myth",
+      "type": "quote",
+      "label": "«ЛАЗЕЙКА, КОТОРУЮ НУЖНО ЗАКРЫТЬ»"
+    },
+    {
+      "id": "chipMyth",
+      "at": "l03",
+      "lifecycle": "persistent",
+      "framing": "myth",
+      "type": "chip",
+      "tone": "danger",
+      "label": "МИФ",
+      "railLabel": "МИФ"
+    },
+    {
+      "id": "strikeBan",
+      "at": "l04",
+      "lifecycle": "persistent",
+      "type": "strike",
+      "target": "headline",
+      "note": "перечёркивает слово ЗАПРЕТЯТ в заголовке"
+    },
+    {
+      "id": "docCard",
+      "at": "l06",
+      "lifecycle": "chapter",
+      "untilLine": "l12",
+      "type": "card",
+      "label": "БРИФИНГ ≠ ЗАКОН"
+    },
+    {
+      "id": "docSub",
+      "at": "l07",
+      "lifecycle": "chapter",
+      "untilLine": "l12",
+      "type": "detail",
+      "label": "ИССЛЕДОВАНИЕ ДЛЯ ДЕПУТАТОВ"
+    },
+    {
+      "id": "docQuoteOpen",
+      "at": "l08",
+      "lifecycle": "chapter",
+      "untilLine": "l12",
+      "type": "quoteOpen",
+      "label": "ДОКУМЕНТ ГОВОРИТ:"
+    },
+    {
+      "id": "docSays",
+      "at": "l09",
+      "lifecycle": "chapter",
+      "untilLine": "l12",
+      "type": "detail",
+      "label": "СМЕНА СТРАНЫ ОБХОДИТ ПРОВЕРКУ"
+    },
+    {
+      "id": "docSays2",
+      "at": "l10",
+      "lifecycle": "chapter",
+      "untilLine": "l12",
+      "type": "detail",
+      "label": "ВОЗРАСТНОЙ ЭКРАН ОБХОДИТСЯ"
+    },
+    {
+      "id": "chipNoBan",
+      "at": "l11",
+      "lifecycle": "persistent",
+      "type": "chip",
+      "tone": "mint",
+      "label": "ЗАПРЕТА В ДОКУМЕНТЕ НЕТ",
+      "railLabel": "ЗАПРЕТА НЕТ"
+    },
+    {
+      "id": "ageCard",
+      "at": "l14",
+      "lifecycle": "chapter",
+      "untilLine": "l19",
+      "type": "card",
+      "label": "САЙТ ПОЛУЧАЕТ"
+    },
+    {
+      "id": "ageAnswer",
+      "at": "l15",
+      "lifecycle": "chapter",
+      "untilLine": "l19",
+      "type": "answer",
+      "label": "18+ = ДА"
+    },
+    {
+      "id": "crossName",
+      "at": "l16",
+      "lifecycle": "chapter",
+      "untilLine": "l19",
+      "type": "strike",
+      "label": "ИМЯ"
+    },
+    {
+      "id": "crossHistory",
+      "at": "l17",
+      "lifecycle": "chapter",
+      "untilLine": "l19",
+      "type": "strike",
+      "label": "ИСТОРИЯ ПРОСМОТРОВ"
+    },
+    {
+      "id": "crossPassport",
+      "at": "l18",
+      "lifecycle": "chapter",
+      "untilLine": "l19",
+      "type": "strike",
+      "label": "ПАСПОРТ"
+    },
+    {
+      "id": "chipIdea",
+      "at": "l18",
+      "offsetMs": 1100,
+      "lifecycle": "persistent",
+      "type": "chip",
+      "tone": "mint",
+      "label": "ДОКАЗАТЬ ВОЗРАСТ, НЕ РАСКРЫВАЯ ЛИЧНОСТЬ",
+      "railLabel": "18+ = ДА"
+    },
+    {
+      "id": "nodeUser",
+      "at": "l19",
+      "lifecycle": "chapter",
+      "untilLine": "l22",
+      "type": "node",
+      "label": "ПОЛЬЗОВАТЕЛЬ"
+    },
+    {
+      "id": "nodeVpn",
+      "at": "l19",
+      "offsetMs": 1000,
+      "lifecycle": "chapter",
+      "untilLine": "l22",
+      "type": "node",
+      "label": "VPN: ДРУГАЯ СТРАНА"
+    },
+    {
+      "id": "nodeRegion",
+      "at": "l20",
+      "lifecycle": "chapter",
+      "untilLine": "l22",
+      "type": "node",
+      "label": "САЙТ ВИДИТ ДРУГОЙ РЕГИОН"
+    },
+    {
+      "id": "nodeNoGate",
+      "at": "l21",
+      "lifecycle": "chapter",
+      "untilLine": "l22",
+      "type": "node",
+      "tone": "danger",
+      "label": "ВОЗРАСТНОЙ ЭКРАН НЕ ПОЯВЛЯЕТСЯ"
+    },
+    {
+      "id": "scaleFrame",
+      "at": "l22",
+      "lifecycle": "chapter",
+      "untilLine": "l31",
+      "type": "scale",
+      "items": [
+        "ЗАЩИТА ДЕТЕЙ",
+        "ПРИВАТНОСТЬ"
+      ]
+    },
+    {
+      "id": "tintSplit",
+      "at": "l22",
+      "lifecycle": "transient",
+      "untilLine": "l26",
+      "type": "tint",
+      "note": "краткий красно-мятный split tint поверх фона"
+    },
+    {
+      "id": "scaleLeft",
+      "at": "l23",
+      "lifecycle": "chapter",
+      "untilLine": "l31",
+      "type": "scaleSide",
+      "label": "ЛЕГКО ОБОЙТИ"
+    },
+    {
+      "id": "scaleRight",
+      "at": "l24",
+      "lifecycle": "chapter",
+      "untilLine": "l31",
+      "type": "scaleSide",
+      "label": "БОЛЬШЕ КОНТРОЛЯ"
+    },
+    {
+      "id": "scaleNote",
+      "at": "l25",
+      "lifecycle": "chapter",
+      "untilLine": "l31",
+      "type": "detail",
+      "label": "ОТКУДА И КАК ТЫ ВЫХОДИШЬ В СЕТЬ"
+    },
+    {
+      "id": "chipPanic",
+      "at": "l27",
+      "lifecycle": "persistent",
+      "framing": "myth",
+      "type": "chip",
+      "tone": "warning",
+      "label": "«VPN ЗАПРЕТЯТ» — ПОКА ПАНИКА"
+    },
+    {
+      "id": "memoryFrame",
+      "at": "l29",
+      "lifecycle": "transient",
+      "untilLine": "l31",
+      "type": "overlay"
+    },
+    {
+      "id": "ctaQuestion",
+      "at": "l31",
+      "lifecycle": "persistent",
+      "type": "overlay"
+    },
+    {
+      "id": "ctaOptionA",
+      "at": "l33",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    },
+    {
+      "id": "ctaOptionB",
+      "at": "l34",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    },
+    {
+      "id": "nextTeaser",
+      "at": "l35",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    },
+    {
+      "id": "teaserDetail",
+      "at": "l37",
+      "lifecycle": "persistent",
+      "type": "reveal"
+    }
+  ],
+  "memoryFrame": {
+    "fromLine": "l28",
+    "untilLine": "l31",
+    "maxHoldMs": 3500,
+    "minHoldSeconds": 2.8,
+    "title": "ЧТО ИЗВЕСТНО СЕЙЧАС",
+    "items": [
+      "VPN В ЕС НЕ ЗАПРЕЩЁН",
+      "БРИФИНГ ≠ ЗАКОН",
+      "ОБХОД ПРОВЕРОК — РЕАЛЬНАЯ ПРОБЛЕМА"
+    ]
+  },
+  "cta": {
+    "fromLine": "l31",
+    "prompt": "ТЫ БЫ ПОДТВЕРЖДАЛ ВОЗРАСТ?",
+    "optionA": "ДА",
+    "divider": "или",
+    "optionB": "НЕТ",
+    "comment": "Одно слово в комментарии.",
+    "teaser": "КАК САЙТЫ РАСПОЗНАЮТ VPN"
+  },
+  "qa": {
+    "durationSeconds": [
+      52,
+      70
+    ],
+    "factFraming": {
+      "banPatterns": [
+        "(vpn|ви-пи-эн)\\s+(уже\\s+)?(запрещён|запрещен|запретили|под\\s+запретом)",
+        "(vpn|ви-пи-эн)\\s+(скоро\\s+)?запретят",
+        "запретят\\s+(vpn|ви-пи-эн)",
+        "закон[а-я]*\\s+о\\s+запрете\\s+(vpn|ви-пи-эн)"
+      ],
+      "requiredTexts": [
+        "не новый закон",
+        "не правда",
+        "брифинг",
+        "не предлагает",
+        "не запрещён"
+      ],
+      "mythChapters": [
+        "panic"
+      ]
+    },
+    "contentPolarity": "light-on-dark"
+  },
+  "publish": {
+    "cover": "VPN ЗАПРЕТЯТ\nВ ЕВРОПЕ?",
+    "coverSub": "Подстрочник: **Что на самом деле сказано в документе**",
+    "coverNote": "Кадр для обложки: первые 2 с — заголовок с перечёркнутым «ЗАПРЕТЯТ» и красный чип МИФ.",
+    "caption": "В Reddit разлетелся заголовок:\nЕвропа якобы собирается закрыть «лазейку» под названием VPN.\n\nНо исследовательский брифинг — ещё не закон,\nа общеевропейского запрета VPN сейчас нет.\n\nРеальный конфликт сложнее:\nкак проверять возраст в интернете,\nне превращая каждый сайт в пункт проверки документов?\n\nЕврокомиссия работает над схемой, где сайт узнаёт только «18+: да»\n— без имени, без истории просмотров, без паспорта на каждом сайте.\nПроблема в том, что смена страны через VPN такую проверку обходит.\n\nТы бы согласился подтверждать возраст,\nчтобы открыть обычный сайт?\n\nНапиши: ДА или НЕТ.\n\nСледующий разбор —\nкак сервисы определяют, что пользователь включил VPN.",
+    "hashtags": [
+      "#vpn",
+      "#приватность",
+      "#интернет",
+      "#кибербезопасность",
+      "#технологии"
+    ],
+    "pinnedComment": "Уточнение: речь про исследовательский брифинг EPRS, а не про принятый закон.\nЕсли встретишь пост «в ЕС запретили VPN» — попроси ссылку на текст закона.",
+    "sources": {
+      "Reddit": "r/technology · r/VPN, обсуждение мая 2026",
+      "EPRS": "исследовательский брифинг Европарламента о возрастной верификации",
+      "European Commission": "работа над privacy-preserving age verification"
+    }
+  }
+}

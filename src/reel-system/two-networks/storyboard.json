@@ -1,0 +1,108 @@
+{
+  "id": "ghostpepe-two-networks-storyboard",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "shots": [
+    {
+      "id": "scene-01-twin-network-chamber",
+      "start": 0,
+      "end": 0,
+      "purpose": "Show one coherent experiment: Wi-Fi and Mobile chambers receive identical data objects, then behavior diverges",
+      "hero": {
+        "semanticName": "twin network chamber",
+        "visualDescription": "one connected cyber-lab apparatus with two transparent vertical chambers on a shared platform",
+        "assetType": "SVG",
+        "silhouetteImportance": "high",
+        "referenceGeometry": "two tall rounded chambers connected by one base"
+      },
+      "supportElements": ["WI-FI/MOBILE engraved base labels"],
+      "camera": "medium-wide observational push",
+      "framing": "single centered hero object over cyberspace brand foundation",
+      "composition": "one hero, one message, no mascot",
+      "text": ["НА WI-FI РАБОТАЕТ / НА МОБИЛЬНОЙ СЕТИ — ИНАЧЕ / VPN ТОТ ЖЕ"],
+      "visualChange": "both sides begin similarly; mobile side gradually slows and dims selected route activity",
+      "transitionIn": "none",
+      "transitionOut": "slow push toward platform labels",
+      "transitionReason": "the same physical setup reveals the changed variable",
+      "background": "cyberspace-dark brand foundation",
+      "depthLayers": ["cyberspace", "lab frame", "twin chamber", "routes", "headline"],
+      "assetType": "SVG"
+    },
+    {
+      "id": "scene-02-variable-isolation",
+      "start": 0,
+      "end": 0,
+      "purpose": "Let DEVICE, VPN, NETWORK labels appear one by one at natural speech pace",
+      "hero": {
+        "semanticName": "shared platform measurement labels",
+        "visualDescription": "environmental engraving on the shared base: DEVICE SAME, VPN SAME, NETWORK CHANGED",
+        "assetType": "HTML",
+        "silhouetteImportance": "medium",
+        "referenceGeometry": "engraved rail embedded in base"
+      },
+      "supportElements": ["DEVICE/VPN/NETWORK labels"],
+      "camera": "slow push closer",
+      "framing": "same twin chamber, slightly closer platform view",
+      "composition": "labels evolve the same object rather than introducing a new hero",
+      "text": ["УСТРОЙСТВО ТО ЖЕ / VPN ТОЖЕ / МЕНЯЕТСЯ СЕТЬ"],
+      "visualChange": "focus advances from DEVICE to VPN to NETWORK",
+      "transitionIn": "continued push",
+      "transitionOut": "gentle macro inspection inside chambers",
+      "transitionReason": "NETWORK CHANGED points camera toward internal conditions",
+      "background": "cyberspace-dark brand foundation",
+      "depthLayers": ["cyberspace", "base", "labels", "chambers"],
+      "assetType": "HTML"
+    },
+    {
+      "id": "scene-03-network-conditions",
+      "start": 0,
+      "end": 0,
+      "purpose": "Explain that VPN is only part of the route and network conditions also affect the result",
+      "hero": {
+        "semanticName": "route activity inside twin chamber",
+        "visualDescription": "Wi-Fi side keeps more active routes; Mobile side has fewer or slower active routes without error marks",
+        "assetType": "SVG",
+        "silhouetteImportance": "high",
+        "referenceGeometry": "connected chambers containing route filaments"
+      },
+      "supportElements": ["route activity only"],
+      "camera": "gentle macro inspection",
+      "framing": "same object, route activity emphasized",
+      "composition": "one thesis at a time over the same apparatus",
+      "text": ["VPN — ТОЛЬКО ЧАСТЬ МАРШРУТА / СЕТЬ ТОЖЕ МЕНЯЕТ РЕЗУЛЬТАТ"],
+      "visualChange": "route movement and brightness clarify different conditions",
+      "transitionIn": "macro inspection",
+      "transitionOut": "slow pull back to full apparatus",
+      "transitionReason": "returning to full view prepares the final diagnostic question",
+      "background": "cyberspace-dark brand foundation",
+      "depthLayers": ["cyberspace", "chambers", "routes", "thesis"],
+      "assetType": "SVG"
+    },
+    {
+      "id": "ending-return-to-hero",
+      "start": 0,
+      "end": 0,
+      "purpose": "Return to the full twin chamber and leave a calm diagnostic question",
+      "hero": {
+        "semanticName": "twin network chamber final view",
+        "visualDescription": "same apparatus remains on screen with small environmental GhostPepeBot branding",
+        "assetType": "SVG",
+        "silhouetteImportance": "high",
+        "referenceGeometry": "two connected chambers and shared base"
+      },
+      "supportElements": ["tiny GhostPepeBot environmental mark"],
+      "camera": "slow pull back",
+      "framing": "general view, same hero",
+      "composition": "final thesis, no end card, no CTA button",
+      "text": ["ПРОВЕРЯЙ НЕ ТОЛЬКО VPN / ПРОВЕРЯЙ В КАКОЙ ТЫ СЕТИ"],
+      "visualChange": "routes settle while the final question holds",
+      "transitionIn": "slow pull back",
+      "transitionOut": "final visual hold",
+      "transitionReason": "the ending remains inside the experiment rather than cutting to a brand card",
+      "background": "cyberspace-dark brand foundation",
+      "depthLayers": ["cyberspace", "twin chamber", "final text", "tiny brand"],
+      "assetType": "SVG"
+    }
+  ]
+}

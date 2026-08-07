@@ -1,0 +1,11 @@
+{
+  "profile": "balanced",
+  "canvas": {"width": 1080, "height": 1920},
+  "unsafe": {
+    "top": {"x": 0, "y": 0, "width": 1080, "height": 220},
+    "bottom": {"x": 0, "y": 1440, "width": 1080, "height": 480},
+    "right": {"x": 900, "y": 980, "width": 180, "height": 620}
+  },
+  "safe": {"left": 90, "right": 90, "top": 240, "bottom": 500, "captionBottomInset": 520, "captionMaxLines": 2},
+  "qa": {"edgeThreshold": 45, "maxEdgeFraction": 0.01, "severity": {"top": "fail", "bottom": "fail", "right": "warn"}}
+}
