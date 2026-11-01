@@ -1,0 +1,930 @@
+{
+  "id": "demo-self-ban",
+  "topic": "Самозапрет на кредиты: как закрыть чужой кредит на своё имя",
+  "niche": "finance",
+  "language": "ru",
+  "status": {
+    "factCheck": "partial",
+    "scriptApproval": "demo",
+    "publication": "draft",
+    "production": "rendered"
+  },
+  "sources": [
+    {
+      "id": "cbr",
+      "url": "https://www.cbr.ru/ckki/self-prohibition_credit/",
+      "publisher": "Банк России",
+      "accessed": "2026-11-01",
+      "claim": "Since 1 March 2025; free via Gosuslugi, MFC since 1 Sept 2025; excludes mortgages and vehicle-secured car loans; a lender that lends anyway cannot demand repayment; removal takes effect on the second calendar day."
+    },
+    {
+      "id": "ceo",
+      "url": "https://finance.mail.ru/article/glava-cb-samozapret-na-kredity-ustanovili-pochti-20-mln-rossiyan-69202940/",
+      "publisher": "Глава ЦБ, Mail.ru Финансы",
+      "accessed": "2026-11-01",
+      "claim": "Almost 20 million Russians have set the self-ban. Secondary report, seen via search results."
+    }
+  ],
+  "title": "Самозапрет на кредиты",
+  "hook": "Кредит на тебя может взять чужой.",
+  "centralIdea": "Самозапрет бесплатно блокирует потребительские кредиты, а банк, выдавший кредит вопреки ему, не сможет потребовать долг.",
+  "style": "warm paper editorial: large serif type, stamp and document",
+  "theme": "paper",
+  "captionStyle": "ink",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 30.9,
+  "scenes": [
+    {
+      "id": "hook",
+      "start": 0,
+      "duration": 5.333333333333333,
+      "voice": "Кредит на тебя может взять чужой. Хватит паспортных данных. Выключается за пять минут.",
+      "onScreen": "ЧУЖОЙ КРЕДИТ НА ТВОЁ ИМЯ",
+      "thought": "Кредит могут оформить на чужое имя.",
+      "animation": "huge serif words rise with the voice, a loan form slides up",
+      "sources": [
+        "cbr"
+      ],
+      "visual": {
+        "layers": [
+          {
+            "type": "kinetic",
+            "box": [
+              110,
+              250,
+              800,
+              500
+            ],
+            "text": "Кредит на тебя может взять *чужой*",
+            "size": 104,
+            "mode": "mask",
+            "sync": true,
+            "cue": 0
+          },
+          {
+            "type": "document",
+            "box": [
+              110,
+              830,
+              800,
+              370
+            ],
+            "title": "Заявка на кредит",
+            "cue": "паспортных",
+            "lines": [
+              {
+                "text": "Паспорт: твои данные",
+                "cue": "паспортных",
+                "mark": true
+              },
+              {
+                "text": "Заёмщик: не ты",
+                "cue": "данных"
+              }
+            ]
+          }
+        ],
+        "camera": [
+          {
+            "cue": "Хватит",
+            "y": -10
+          }
+        ]
+      }
+    },
+    {
+      "id": "what",
+      "start": 5.333333333333333,
+      "duration": 5.2,
+      "voice": "Называется самозапрет. Банк обязан его проверить. С ним кредит не дадут.",
+      "onScreen": "САМОЗАПРЕТ",
+      "thought": "Кредитор обязан проверить отметку перед выдачей.",
+      "animation": "stamp hits on the word, the check runs down to a refusal",
+      "sources": [
+        "cbr"
+      ],
+      "visual": {
+        "layers": [
+          {
+            "type": "stamp",
+            "box": [
+              110,
+              260,
+              800,
+              300
+            ],
+            "text": "САМОЗАПРЕТ",
+            "cue": "самозапрет",
+            "size": 96
+          },
+          {
+            "type": "flow",
+            "box": [
+              110,
+              600,
+              800,
+              660
+            ],
+            "nodes": [
+              {
+                "id": "a",
+                "label": "Заявка",
+                "x": 240,
+                "y": 0,
+                "w": 320,
+                "cue": "Банк"
+              },
+              {
+                "id": "b",
+                "label": "Банк проверяет",
+                "x": 200,
+                "y": 250,
+                "w": 400,
+                "cue": "проверить",
+                "tone": "accent2",
+                "hotCue": "проверить"
+              },
+              {
+                "id": "c",
+                "label": "Кредит не дадут",
+                "x": 200,
+                "y": 500,
+                "w": 400,
+                "cue": "кредит",
+                "tone": "danger"
+              }
+            ],
+            "edges": [
+              {
+                "from": "a",
+                "to": "b",
+                "cue": "проверить",
+                "tone": "accent2"
+              },
+              {
+                "from": "b",
+                "to": "c",
+                "cue": "кредит",
+                "tone": "danger"
+              }
+            ]
+          }
+        ],
+        "transition": {
+          "type": "diagonal",
+          "frames": 16
+        }
+      }
+    },
+    {
+      "id": "twist",
+      "start": 10.533333333333333,
+      "duration": 4.733333333333334,
+      "voice": "А если выдаст всё равно, долг с тебя требовать не смогут. Это его проблема.",
+      "onScreen": "ЭТО ЕГО ПРОБЛЕМА",
+      "thought": "Выдавший вопреки запрету кредитор не сможет потребовать исполнения.",
+      "animation": "two cards collide from opposite sides, the winner lights up",
+      "sources": [
+        "cbr"
+      ],
+      "visual": {
+        "layers": [
+          {
+            "type": "compare",
+            "box": [
+              110,
+              290,
+              800,
+              900
+            ],
+            "left": {
+              "title": "Банк выдал кредит",
+              "lines": [
+                "несмотря на запрет"
+              ],
+              "tone": "accent2"
+            },
+            "right": {
+              "title": "С тебя не потребуют",
+              "lines": [
+                "Это проблема банка"
+              ],
+              "tone": "accent"
+            },
+            "leftCue": "выдаст",
+            "rightCue": "требовать",
+            "winner": "right",
+            "winnerCue": "проблема"
+          }
+        ],
+        "transition": {
+          "type": "blinds",
+          "frames": 18
+        },
+        "backdrop": "dots"
+      }
+    },
+    {
+      "id": "numbers",
+      "start": 15.266666666666667,
+      "duration": 6.6,
+      "voice": "Работает с марта 2025. Поставили 20 миллионов. Бесплатно, через Госуслуги.",
+      "onScreen": "20 МИЛЛИОНОВ САМОЗАПРЕТОВ",
+      "thought": "Механизм с 1 марта 2025; почти 20 млн; бесплатно.",
+      "animation": "number counts up to the spoken figure as a crowd fills in",
+      "sources": [
+        "cbr",
+        "ceo"
+      ],
+      "visual": {
+        "layers": [
+          {
+            "type": "counter",
+            "box": [
+              110,
+              400,
+              800,
+              300
+            ],
+            "value": 20,
+            "suffix": "млн",
+            "label": "поставили самозапрет",
+            "cue": "Поставили",
+            "until": "миллионов",
+            "size": 190
+          },
+          {
+            "type": "kinetic",
+            "box": [
+              110,
+              265,
+              800,
+              110
+            ],
+            "text": "Работает *с марта 2025*",
+            "size": 56,
+            "font": "body",
+            "align": "center",
+            "mode": "slide",
+            "cue": "Работает"
+          },
+          {
+            "type": "unitgrid",
+            "box": [
+              110,
+              715,
+              800,
+              290
+            ],
+            "count": 20,
+            "columns": 7,
+            "size": 78,
+            "cue": "Поставили",
+            "until": "Бесплатно"
+          },
+          {
+            "type": "kinetic",
+            "box": [
+              110,
+              1040,
+              800,
+              180
+            ],
+            "text": "*Бесплатно,* через Госуслуги",
+            "size": 58,
+            "font": "body",
+            "align": "center",
+            "mode": "slide",
+            "cue": "Бесплатно"
+          }
+        ],
+        "transition": {
+          "type": "zoomThrough",
+          "frames": 14
+        }
+      }
+    },
+    {
+      "id": "catch",
+      "start": 21.866666666666667,
+      "duration": 5.833333333333332,
+      "voice": "Ипотеку и автокредит не закроет. Снятие ждёт двое суток. Пауза и спасает.",
+      "onScreen": "ЧЕГО ОН НЕ ЗАКРЫВАЕТ",
+      "thought": "Есть исключения, а снятие вступает в силу на второй день.",
+      "animation": "list ticks item by item, the pause line lands last",
+      "sources": [
+        "cbr"
+      ],
+      "visual": {
+        "layers": [
+          {
+            "type": "checklist",
+            "box": [
+              110,
+              260,
+              800,
+              640
+            ],
+            "items": [
+              {
+                "text": "Ипотеку не закрывает",
+                "mark": "cross",
+                "cue": "Ипотеку"
+              },
+              {
+                "text": "Автокредит под залог тоже",
+                "mark": "cross",
+                "cue": "автокредит"
+              },
+              {
+                "text": "Снятие ждёт двое суток",
+                "mark": "clock",
+                "cue": "Снятие"
+              }
+            ]
+          },
+          {
+            "type": "kinetic",
+            "box": [
+              110,
+              950,
+              800,
+              280
+            ],
+            "text": "Пауза и *спасает*",
+            "size": 110,
+            "mode": "rise",
+            "align": "center",
+            "cue": "Пауза"
+          }
+        ],
+        "camera": [
+          {
+            "cue": "Пауза",
+            "y": -10,
+            "scale": 1.02
+          }
+        ],
+        "transition": {
+          "type": "shutter",
+          "frames": 16
+        }
+      }
+    },
+    {
+      "id": "cta",
+      "start": 27.7,
+      "duration": 3.1999999999999993,
+      "voice": "Поставишь себе? Поставлю. Уже стоит.",
+      "onScreen": "ПОСТАВИШЬ СЕБЕ?",
+      "thought": "Вопрос зрителю.",
+      "animation": "large question, two stamped answers land on their words",
+      "sources": [
+        "cbr"
+      ],
+      "visual": {
+        "layers": [
+          {
+            "type": "kinetic",
+            "box": [
+              110,
+              300,
+              800,
+              460
+            ],
+            "text": "Поставишь *себе?*",
+            "size": 128,
+            "mode": "mask",
+            "align": "center",
+            "cue": "Поставишь"
+          },
+          {
+            "type": "callout",
+            "box": [
+              110,
+              800,
+              800,
+              160
+            ],
+            "text": "Поставлю",
+            "cue": "Поставлю",
+            "size": 76,
+            "tone": "accent2"
+          },
+          {
+            "type": "callout",
+            "box": [
+              110,
+              990,
+              800,
+              160
+            ],
+            "text": "Уже стоит",
+            "cue": "Уже",
+            "size": 76,
+            "tone": "accent"
+          }
+        ],
+        "transition": {
+          "type": "iris",
+          "origin": [
+            0.5,
+            0.3
+          ],
+          "frames": 16
+        }
+      }
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/demo-self-ban/voice-imported-70efcb1b7ca617cc.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "musicLicense": null,
+    "timingMode": "ElevenLabs alignment imported from the legacy take",
+    "importedFrom": "credit-self-ban",
+    "sourceSha256": "70efcb1b7ca617cc",
+    "durationSeconds": 30.38,
+    "sourceDurationSeconds": 30.38,
+    "localTempo": 1
+  },
+  "captions": [
+    {
+      "text": "Кредит",
+      "startMs": 40,
+      "endMs": 300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "на",
+      "startMs": 327,
+      "endMs": 380,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тебя",
+      "startMs": 428,
+      "endMs": 620,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "может",
+      "startMs": 673,
+      "endMs": 940,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "взять",
+      "startMs": 967,
+      "endMs": 1180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "чужой.",
+      "startMs": 1260,
+      "endMs": 1780,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Хватит",
+      "startMs": 1920,
+      "endMs": 2300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "паспортных",
+      "startMs": 2430,
+      "endMs": 2860,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "данных.",
+      "startMs": 2906,
+      "endMs": 3260,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Выключается",
+      "startMs": 3590,
+      "endMs": 4220,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "за",
+      "startMs": 4273,
+      "endMs": 4380,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "пять",
+      "startMs": 4412,
+      "endMs": 4540,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "минут.",
+      "startMs": 4593,
+      "endMs": 4940,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Называется",
+      "startMs": 5340,
+      "endMs": 5740,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "самозапрет.",
+      "startMs": 5840,
+      "endMs": 6700,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Банк",
+      "startMs": 7030,
+      "endMs": 7340,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "обязан",
+      "startMs": 7450,
+      "endMs": 7900,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "его",
+      "startMs": 7960,
+      "endMs": 8140,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "проверить.",
+      "startMs": 8197,
+      "endMs": 8860,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "С",
+      "startMs": 9020,
+      "endMs": 9060,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ним",
+      "startMs": 9060,
+      "endMs": 9180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "кредит",
+      "startMs": 9237,
+      "endMs": 9580,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 9670,
+      "endMs": 9700,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "дадут.",
+      "startMs": 9700,
+      "endMs": 10100,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "А",
+      "startMs": 10530,
+      "endMs": 10540,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "если",
+      "startMs": 10588,
+      "endMs": 10780,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "выдаст",
+      "startMs": 10833,
+      "endMs": 11180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "всё",
+      "startMs": 11250,
+      "endMs": 11420,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "равно,",
+      "startMs": 11487,
+      "endMs": 12100,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "долг",
+      "startMs": 12210,
+      "endMs": 12420,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "с",
+      "startMs": 12440,
+      "endMs": 12460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тебя",
+      "startMs": 12508,
+      "endMs": 12700,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "требовать",
+      "startMs": 12748,
+      "endMs": 13100,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 13153,
+      "endMs": 13260,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "смогут.",
+      "startMs": 13324,
+      "endMs": 13740,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Это",
+      "startMs": 13980,
+      "endMs": 14060,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "его",
+      "startMs": 14120,
+      "endMs": 14300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "проблема.",
+      "startMs": 14353,
+      "endMs": 14820,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Работает",
+      "startMs": 15250,
+      "endMs": 15660,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "с",
+      "startMs": 15700,
+      "endMs": 15740,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "марта",
+      "startMs": 15793,
+      "endMs": 16060,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "2025.",
+      "startMs": 16110,
+      "endMs": 17620,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Поставили",
+      "startMs": 17770,
+      "endMs": 18220,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "20",
+      "startMs": 18348,
+      "endMs": 18940,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "миллионов.",
+      "startMs": 18993,
+      "endMs": 19620,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Бесплатно,",
+      "startMs": 19780,
+      "endMs": 20300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "через",
+      "startMs": 20480,
+      "endMs": 20620,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Госуслуги.",
+      "startMs": 20700,
+      "endMs": 21380,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Ипотеку",
+      "startMs": 21870,
+      "endMs": 22460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 22590,
+      "endMs": 22620,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "автокредит",
+      "startMs": 22700,
+      "endMs": 23340,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 23393,
+      "endMs": 23500,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "закроет.",
+      "startMs": 23560,
+      "endMs": 24140,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Снятие",
+      "startMs": 24310,
+      "endMs": 24700,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ждёт",
+      "startMs": 24740,
+      "endMs": 24940,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "двое",
+      "startMs": 24993,
+      "endMs": 25180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "суток.",
+      "startMs": 25260,
+      "endMs": 25660,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Пауза",
+      "startMs": 25950,
+      "endMs": 26300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 26420,
+      "endMs": 26540,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "спасает.",
+      "startMs": 26620,
+      "endMs": 27220,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Поставишь",
+      "startMs": 27710,
+      "endMs": 28060,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "себе?",
+      "startMs": 28124,
+      "endMs": 28620,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Поставлю.",
+      "startMs": 28860,
+      "endMs": 29540,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Уже",
+      "startMs": 29700,
+      "endMs": 29820,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "стоит.",
+      "startMs": 29900,
+      "endMs": 30380,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "editorialReview": {
+    "reviewedAt": "2026-11-01",
+    "verdict": "partial: demo only",
+    "verified": [
+      "Launch date, Gosuslugi, free of charge, exclusions, consequence for the lender and the removal delay are on cbr.ru."
+    ],
+    "openClaims": [
+      "\"Выключается за пять минут\" has no source: cbr.ru only says a template form is enough.",
+      "\"Хватит паспортных данных\" simplifies how fraud works and has no source.",
+      "\"Поставили 20 миллионов\" rests on a secondary report seen in search results, not on a cbr.ru page that was read.",
+      "\"Ипотеку и автокредит\" shortens the rule: only vehicle-secured car loans are excluded, and also main education loans and suretyships."
+    ]
+  },
+  "renderPath": "out/studio/demo-self-ban.mp4",
+  "qa": {
+    "path": "out/studio/demo-self-ban-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  }
+}

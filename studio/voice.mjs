@@ -5,14 +5,19 @@ import {readFileSync, writeFileSync, mkdirSync, existsSync} from 'node:fs';
 import {resolve} from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {ROOT, loadDotEnv} from '../scripts/eleven/lib/env.mjs';
+import {decodeEnvelope,refineOnsets} from './lib/onsets.mjs';
+import {applyWordTimings, gateFor, limitsFor, projectPath} from './lib/project.mjs';
 
 loadDotEnv();
-const projectFile=resolve(ROOT,process.argv[2]||'studio/gps-offline.json');
+const cacheOnly=process.argv.includes('--cache-only');
+const projectFile=projectPath(process.argv.slice(2).find(a=>!a.startsWith('--')));
 const p=JSON.parse(readFileSync(projectFile,'utf8'));
-if(p.status?.scriptApproval!=='approved'||p.status?.factCheck!=='reviewed') throw Error('Editorial approval and fact review required before voice');
-const key=process.env.ELEVENLABS_API_KEY;
-const voiceId=process.env.ELEVENLABS_VOICE_ID;
-if(!key||!voiceId) throw Error('Set ELEVENLABS_API_KEY and ELEVENLABS_VOICE_ID in .env before voice generation');
+if(!gateFor(p).mayBuyVoice) throw Error('Editorial approval and fact review required before voice');
+const limits=limitsFor(p);
+const API=process.env.ELEVENLABS_BASE_URL||'https://api.elevenlabs.io';
+const keys=[process.env.ELEVENLABS_API_KEY,process.env.ELEVENLABS_API_KEY_2,process.env.ELEVENLABS_API_KEY_3,process.env.ELEVENLABS_API_KEY_4].map(k=>(k||'').trim()).filter(Boolean);
+const voiceId=p.audio.voiceId||process.env.ELEVENLABS_VOICE_ID;
+if((!keys.length&&!cacheOnly)||!voiceId) throw Error('Set ELEVENLABS_API_KEY and ELEVENLABS_VOICE_ID in .env before voice generation');
 const text=p.scenes.map(s=>s.voice).join(' ');
 const modelId=p.audio.modelId||process.env.ELEVENLABS_MODEL_ID||'eleven_multilingual_v2';
 const voiceSettings=p.audio.voiceSettings||{speed:1.04,stability:.58,similarity_boost:.75};
@@ -26,13 +31,19 @@ if(existsSync(cacheFile)){
   data=JSON.parse(readFileSync(cacheFile,'utf8'));
   console.log('Reusing cached ElevenLabs take; no synthesis request.');
 }else{
-  const quota=await fetch('https://api.elevenlabs.io/v1/user/subscription',{headers:{'xi-api-key':key},signal:AbortSignal.timeout(20000)});
-  if(!quota.ok) throw Error('Cannot verify ElevenLabs quota (HTTP '+quota.status+'). No synthesis request was made.');
-  const subscription=await quota.json();
-  const remaining=subscription.character_limit-subscription.character_count;
-  if(!Number.isFinite(remaining)||remaining<text.length) throw Error('Insufficient or unavailable ElevenLabs quota. No synthesis request was made.');
+  if(cacheOnly) throw Error('No cached take for this text, voice and settings. Nothing was requested.');
+  // Keys are accounts: take the first with enough characters, as the legacy process does.
+  let key=null,remaining=NaN;
+  for(const candidate of keys){
+    const quota=await fetch(API+'/v1/user/subscription',{headers:{'xi-api-key':candidate},signal:AbortSignal.timeout(20000)});
+    if(!quota.ok) continue;
+    const subscription=await quota.json();
+    remaining=subscription.character_limit-subscription.character_count;
+    if(Number.isFinite(remaining)&&remaining>=text.length){key=candidate;break;}
+  }
+  if(!key) throw Error('Insufficient or unavailable ElevenLabs quota on every key. No synthesis request was made.');
   console.log('Generating one approved take ('+text.length+' characters); available quota '+remaining+'.');
-  const url='https://api.elevenlabs.io/v1/text-to-speech/'+encodeURIComponent(voiceId)+'/with-timestamps?output_format=mp3_44100_128';
+  const url=API+'/v1/text-to-speech/'+encodeURIComponent(voiceId)+'/with-timestamps?output_format=mp3_44100_128';
   const response=await fetch(url,{method:'POST',headers:{'xi-api-key':key,'Content-Type':'application/json'},body:JSON.stringify({text,model_id:modelId,voice_settings:voiceSettings}),signal:AbortSignal.timeout(120000)});
   if(!response.ok) throw Error('ElevenLabs synthesis failed (HTTP '+response.status+'). No automatic retry was made.');
   data=await response.json();
@@ -55,29 +66,21 @@ const tool=(name,args)=>{
 const probe=JSON.parse(tool('ffprobe',['-v','error','-show_format','-of','json',resolve(ROOT,'public',rawPath)]));
 const rawDuration=Number(probe.format.duration);
 if(!Number.isFinite(rawDuration)||rawDuration<=0) throw Error('Cannot measure the generated voice');
-const speed=rawDuration>24.1?rawDuration/24.1:1;
-if(speed>1.18) throw Error('The cached take is too long for a natural 20–25 second delivery. Edit the script before another synthesis.');
+const tempoTarget=limits.maxSeconds-limits.tempoHeadroomSeconds-limits.audioPadSeconds;
+const speed=rawDuration>tempoTarget?rawDuration/tempoTarget:1;
+if(speed>limits.maxTempo) throw Error('The take needs tempo x'+speed.toFixed(3)+', above the x'+limits.maxTempo+' limit. Edit the script before another synthesis; the take stays cached.');
 const voicePath='generated/'+p.id+'/voice-'+hash+'-mix.wav';
 tool('ffmpeg',['-y','-v','error','-i',resolve(ROOT,'public',rawPath),'-af','atempo='+speed+',loudnorm=I=-16:TP=-1.5:LRA=7','-ar','48000','-ac','1','-c:a','pcm_s16le',resolve(ROOT,'public',voicePath)]);
 const fade=spawnSync('python3',[resolve(ROOT,'studio/fade-audio.py'),resolve(ROOT,'public',voicePath)],{encoding:'utf8'});
 if(fade.status!==0) throw Error('Local audio fade failed: '+fade.stderr);
 const processedProbe=JSON.parse(tool('ffprobe',['-v','error','-show_format','-of','json',resolve(ROOT,'public',voicePath)]));
 const measured=Number(processedProbe.format.duration);
-const captions=[];
+const words=[];
 for(const match of text.matchAll(/\S+/g)){
   const start=match.index,end=start+match[0].length-1;
-  captions.push({text:match[0],startMs:Math.round(starts[start]/speed*1000),endMs:Math.round(ends[end]/speed*1000),timestampMs:null,confidence:null});
+  words.push({startMs:Math.round(starts[start]/speed*1000),endMs:Math.round(ends[end]/speed*1000)});
 }
-let offset=0;
-for(const scene of p.scenes){
-  scene.start=offset===0?0:Math.round(starts[offset]/speed*p.fps)/p.fps;
-  offset+=scene.voice.length+1;
-}
-const lastSpeech=ends[ends.length-1]/speed;
-p.durationSeconds=Math.ceil(Math.max(20,measured+.3,lastSpeech+.5)*p.fps)/p.fps;
-if(p.durationSeconds>25) throw Error('Processed audio does not fit the approved 20–25 second target; take is cached.');
-for(let i=0;i<p.scenes.length;i++) p.scenes[i].duration=(p.scenes[i+1]?.start??p.durationSeconds)-p.scenes[i].start;
+applyWordTimings(p,p.audio.refineOnsets===false?words:refineOnsets(words,decodeEnvelope(resolve(ROOT,'public',voicePath))),measured);
 p.audio={...p.audio,voicePath,sourcePath:rawPath,voiceId,modelId,timingMode:'ElevenLabs character alignment',sourceDurationSeconds:rawDuration,durationSeconds:measured,localTempo:speed,cacheHash:hash,normalization:'FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades'};
-p.captions=captions;
 writeFileSync(projectFile,JSON.stringify(p,null,2)+'\n');
-console.log(JSON.stringify({voicePath,rawDurationSeconds:rawDuration,measuredDurationSeconds:measured,localTempo:speed,videoDurationSeconds:p.durationSeconds,timedWords:captions.length}));
+console.log(JSON.stringify({voicePath,rawDurationSeconds:rawDuration,measuredDurationSeconds:measured,localTempo:speed,videoDurationSeconds:p.durationSeconds,timedWords:p.captions.length}));

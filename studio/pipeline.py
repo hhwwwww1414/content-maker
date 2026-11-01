@@ -14,6 +14,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DB = ROOT / 'runs/studio/studio.sqlite3'
+STANDARDS = json.loads((ROOT / 'config/reel.standards.json').read_text())
+CATALOG = json.loads((ROOT / 'studio/lib/visual-catalog.json').read_text())
 
 
 def connect():
@@ -129,55 +131,143 @@ def draft(niche):
                 'status': 'unverified_idea',
                 'editorialTasks': ['Read the full source and confirm the core claim',
                                    'Check originality and audience interest',
-                                   'Choose one 20–25 second angle',
+                                   'Choose one ' + str(STANDARDS['duration']['targetSeconds']) + ' second angle',
                                    'Write and approve a sourced scene script']}
         path = directory / f'{iid}.json'
         path.write_text(json.dumps(item, ensure_ascii=False, indent=2) + '\n')
         print(path)
 
 
-def validate(path):
+def norm_word(text):
+    return re.sub(r'[^\w]', '', text.lower().replace('ё', 'е'))
+
+
+def walk_cues(node):
+    """Yield every voice cue in a visual spec: a string under a *cue/until key."""
+    if isinstance(node, list):
+        for child in node:
+            yield from walk_cues(child)
+    elif isinstance(node, dict):
+        for key, value in node.items():
+            if isinstance(value, str) and (key.lower().endswith('cue') or key == 'until'):
+                yield value
+            else:
+                yield from walk_cues(value)
+
+
+def check_visual(scene, errors):
+    sid = scene.get('id', '?')
+    visual = scene['visual']
+    layers = visual.get('layers') or []
+    if not layers:
+        errors.append(f'{sid}: visual has no layers')
+    for layer in layers:
+        if layer.get('type') not in CATALOG['layers']:
+            errors.append(f'{sid}: unknown layer {layer.get("type")}')
+    transition = (visual.get('transition') or {}).get('type', 'cut')
+    if transition not in CATALOG['transitions']:
+        errors.append(f'{sid}: unknown transition {transition}')
+    if visual.get('backdrop') and visual['backdrop'] not in CATALOG['backdrops']:
+        errors.append(f'{sid}: unknown backdrop {visual["backdrop"]}')
+    spoken = [norm_word(w) for w in scene.get('voice', '').split()]
+    cues = list(walk_cues(visual))
+    for cue in cues:
+        word, _, nth = cue.partition('#')
+        matches = [w for w in spoken if w.startswith(norm_word(word))]
+        if len(matches) < (int(nth) if nth else 1):
+            errors.append(f'{sid}: cue "{cue}" is not spoken in this scene')
+    # A scene with no spoken cue cannot be synced to the voice.
+    if not cues:
+        errors.append(f'{sid}: no voice cues; animation is not tied to speech')
+
+
+def check_variety(scenes, errors):
+    """Reject a reel that repeats itself. This is the machine half of art direction."""
+    visual = [s for s in scenes if s.get('visual')]
+    leads, seen = [], {}
+    for scene in visual:
+        types = [l.get('type') for l in scene['visual'].get('layers', []) if l.get('type') != 'light']
+        lead = types[0] if types else None
+        signature = tuple(sorted(set(types)))
+        if signature in seen:
+            errors.append(f'{scene["id"]}: repeats the visual recipe of {seen[signature]}: {", ".join(signature)}')
+        seen[signature] = scene['id']
+        if leads and leads[-1] == lead:
+            errors.append(f'{scene["id"]}: same lead visual as previous scene: {lead}')
+        leads.append(lead)
+    kinds = [(s['visual'].get('transition') or {}).get('type', 'cut') for s in visual[1:]]
+    for i in range(1, len(kinds)):
+        if kinds[i] != 'cut' and kinds[i] == kinds[i - 1]:
+            errors.append(f'{visual[i + 1]["id"]}: same transition twice in a row: {kinds[i]}')
+    if len(visual) >= 4 and len(set(leads)) < 3:
+        errors.append('Fewer than 3 distinct lead visuals in the reel')
+
+
+def validate(path, stage='full'):
     project = json.loads(Path(path).read_text())
-    errors = []
+    errors, warnings = [], []
     needed = ['id', 'topic', 'niche', 'sources', 'status', 'centralIdea', 'scenes', 'audio']
     errors += [f'Missing {key}' for key in needed if key not in project]
     scenes = project.get('scenes', [])
     if not scenes:
         errors.append('No scenes')
+    limits = {**STANDARDS['duration'], **project.get('limits', {})}
+    read = STANDARDS['readability']
     known_sources = {s.get('id') for s in project.get('sources', [])}
+    timed = stage == 'full'
     cursor = 0
     for scene in scenes:
         sid = scene.get('id', '?')
-        if abs(scene.get('start', -99) - cursor) > 0.001:
-            errors.append(f'{sid}: scene gap or overlap')
         duration = scene.get('duration', 0)
-        if duration < 2:
-            errors.append(f'{sid}: less than 2 seconds for reading')
+        if timed:
+            if abs(scene.get('start', -99) - cursor) > 0.001:
+                errors.append(f'{sid}: scene gap or overlap')
+            if duration < read['minSceneSeconds']:
+                errors.append(f'{sid}: less than {read["minSceneSeconds"]} seconds for reading')
+            if len(scene.get('voice', '').split()) / max(duration, .1) > read['maxWordsPerSecond']:
+                errors.append(f'{sid}: speech rate exceeds {read["maxWordsPerSecond"]} words/s')
         cursor += duration
-        for field in ['voice', 'thought', 'template', 'animation', 'onScreen']:
+        for field in ['voice', 'thought', 'animation', 'onScreen']:
             if not scene.get(field):
                 errors.append(f'{sid}: missing {field}')
+        if not scene.get('template') and not scene.get('visual') and not scene.get('component'):
+            errors.append(f'{sid}: needs visual, component or template')
+        if scene.get('visual'):
+            check_visual(scene, errors)
         if not scene.get('sources') or set(scene['sources']) - known_sources:
             errors.append(f'{sid}: missing or unknown sources')
-        if len(scene.get('onScreen', '')) > 38:
-            errors.append(f'{sid}: on-screen text over 38 characters')
-        if len(scene.get('voice', '').split()) / max(duration, .1) > 3.6:
-            errors.append(f'{sid}: estimated speech rate exceeds 3.6 words/s')
-    if cursor > 30 or abs(cursor - project.get('durationSeconds', -1)) > .001:
-        errors.append('Total duration invalid or over 30 seconds')
-    if project.get('status', {}).get('factCheck') != 'reviewed':
-        errors.append('Facts require editorial review')
-    if project.get('status', {}).get('scriptApproval') != 'approved':
-        errors.append('Script requires approval')
+        if len(scene.get('onScreen', '')) > read['maxOnScreenChars']:
+            errors.append(f'{sid}: on-screen text over {read["maxOnScreenChars"]} characters')
+    check_variety(scenes, errors)
+    if project.get('theme') and project['theme'] not in CATALOG['themes']:
+        errors.append(f'Unknown theme {project["theme"]}')
+    if timed:
+        total_ok = limits['minSeconds'] <= cursor <= limits['maxSeconds']
+        if not total_ok or abs(cursor - project.get('durationSeconds', -1)) > .001:
+            errors.append(f'Total duration {cursor:.2f}s invalid or outside {limits["minSeconds"]}–{limits["maxSeconds"]}s')
+        status = project.get('status', {})
+        demo = status.get('scriptApproval') == 'demo' and status.get('factCheck') in ('reviewed', 'partial')
+        if demo:
+            warnings.append('Demo status: renders from an existing take only, not publishable until approved')
+        else:
+            if status.get('factCheck') != 'reviewed':
+                errors.append('Facts require editorial review')
+            if status.get('scriptApproval') != 'approved':
+                errors.append('Script requires approval')
+    for warning in warnings:
+        print('WARN: ' + warning)
     if errors:
         print('\n'.join('FAIL: ' + e for e in errors))
         return 1
+    if not timed:
+        print(f'PASS (script): {project["id"]}, {len(scenes)} scenes')
+        return 0
     conn = connect()
     conn.execute('INSERT INTO projects(id,path,status,updated,render_path,qa_path) VALUES(?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET path=excluded.path,status=excluded.status,updated=excluded.updated,render_path=excluded.render_path,qa_path=excluded.qa_path',
         (project['id'], str(Path(path).resolve()), project.get('status', {}).get('production', 'approved'), dt.datetime.now(dt.timezone.utc).isoformat(), project.get('renderPath'), project.get('qa', {}).get('path') if project.get('qa') else None))
     conn.commit()
     conn.close()
-    print(f'PASS: {project["id"]}, {cursor}s, {len(scenes)} scenes; editorial approval recorded in project')
+    print(f'PASS: {project["id"]}, {cursor}s, {len(scenes)} scenes; editorial status recorded in project')
     return 0
 
 
@@ -185,12 +275,13 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('command', choices=['research', 'rank', 'draft', 'validate'])
     parser.add_argument('argument', help='niche or project JSON path')
+    parser.add_argument('--stage', choices=['script', 'full'], default='full', help='script: before audio exists, skip timing and approval')
     a = parser.parse_args()
     try:
         if a.command == 'research': fetch(a.argument)
         elif a.command == 'rank': rank(a.argument)
         elif a.command == 'draft': draft(a.argument)
-        else: sys.exit(validate(a.argument))
+        else: sys.exit(validate(a.argument, a.stage))
     except Exception as exc:
         print(f'ERROR: {exc}', file=sys.stderr)
         sys.exit(1)

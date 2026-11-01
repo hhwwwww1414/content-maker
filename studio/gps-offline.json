@@ -45,6 +45,13 @@
   "width": 1080,
   "height": 1920,
   "durationSeconds": 21.133333333333333,
+  "limits": {
+    "minSeconds": 20,
+    "maxSeconds": 25,
+    "maxTempo": 1.18,
+    "tempoHeadroomSeconds": 0.6,
+    "audioPadSeconds": 0.3
+  },
   "scenes": [
     {
       "id": "question",
@@ -135,7 +142,8 @@
     "durationSeconds": 20.611813,
     "localTempo": 1,
     "cacheHash": "cd7f00dee5d755e7",
-    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades"
+    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades",
+    "refineOnsets": false
   },
   "captions": [
     {

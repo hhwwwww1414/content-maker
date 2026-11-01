@@ -24,3 +24,7 @@ RSS/official feeds → local SQLite source and idea records → explainable limi
 ## Migration and risks
 
 The existing pipeline remains callable through its existing npm scripts. New files do not mutate its content. Promote a reel to the new schema manually, preserving source JSON. `studio/pipeline.py` creates a separate SQLite database under `runs/studio/`; it does not migrate old data. Voice calls consume ElevenLabs quota only with the explicit `voice` command. Feed popularity is unknown, so scores use a clearly labeled limited-evidence proxy. Audio-derived word timing is only used if the API returns it; otherwise caption timing is approximate. Automated visual checks cannot certify aesthetics or factual accuracy; both require review before publication.
+
+## Update 2026-11-01
+
+The factory replaced the GPS-only wiring: any project JSON renders through the `EditorialReel` composition, and limits live in `config/reel.standards.json`. See [REEL_FACTORY.md](REEL_FACTORY.md). The statements above about 15–25 second formats describe the system as audited on 2026-10-20.

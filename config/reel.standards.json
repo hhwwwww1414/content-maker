@@ -1,0 +1,15 @@
+{
+  "duration": {"targetSeconds": 30, "minSeconds": 25, "maxSeconds": 35, "endHoldSeconds": 0.5, "audioPadSeconds": 0.3},
+  "voice": {"maxTempo": 1.1, "tempoHeadroomSeconds": 0.4},
+  "format": {"fps": 30, "width": 1080, "height": 1920, "previewWidth": 540, "previewHeight": 960, "codec": "h264"},
+  "safe": {"left": 80, "right": 940, "top": 200, "bottom": 1600},
+  "readability": {
+    "minFontPx": 30,
+    "minCaptionFontPx": 44,
+    "minContrast": 4.5,
+    "maxOnScreenChars": 38,
+    "maxWordsPerSecond": 3.6,
+    "minSceneSeconds": 2
+  },
+  "motion": {"maxStaticSeconds": 2.0, "staticDiffThreshold": 0.08}
+}

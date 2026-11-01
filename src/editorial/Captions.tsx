@@ -1,24 +1,28 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import type {Caption} from '@remotion/captions';
 import {useCurrentFrame, useVideoConfig} from 'remotion';
-import project from '../../studio/gps-offline.json';
+import type {Project} from './kit/types';
 import {palette} from './Design';
 
-const estimated:Caption[]=project.scenes.flatMap(scene=>{
-  const words=scene.voice.split(/\s+/);
-  return words.map((text,i)=>({text,startMs:1000*(scene.start+scene.duration*i/words.length),endMs:1000*(scene.start+scene.duration*(i+1)/words.length),timestampMs:null,confidence:null}));
-});
-const words:Caption[]=project.captions.length?project.captions as Caption[]:estimated;
-export const captionPages:Caption[][]=[];
-for(const word of words){
-  const last=captionPages[captionPages.length-1];
-  const combined=last?[...last,word].map(w=>w.text).join(' '):'';
-  if(!last||last.length>=4||combined.length>38||word.startMs-last[0].startMs>1450||/[.!?]$/.test(last[last.length-1].text)){
-    captionPages.push([word]);
-  }else last.push(word);
-}
+const buildPages=(project:Project)=>{
+  const estimated:Caption[]=project.scenes.flatMap(scene=>{
+    const words=scene.voice.split(/\s+/);
+    return words.map((text,i)=>({text,startMs:1000*(scene.start+scene.duration*i/words.length),endMs:1000*(scene.start+scene.duration*(i+1)/words.length),timestampMs:null,confidence:null}));
+  });
+  const words:Caption[]=project.captions.length?project.captions:estimated;
+  const captionPages:Caption[][]=[];
+  for(const word of words){
+    const last=captionPages[captionPages.length-1];
+    const combined=last?[...last,word].map(w=>w.text).join(' '):'';
+    if(!last||last.length>=4||combined.length>38||word.startMs-last[0].startMs>1450||/[.!?]$/.test(last[last.length-1].text)){
+      captionPages.push([word]);
+    }else last.push(word);
+  }
+  return captionPages;
+};
 
-export const Captions:React.FC = () => {
+export const Captions:React.FC<{project:Project}> = ({project}) => {
+  const captionPages=useMemo(()=>buildPages(project),[project]);
   const frame=useCurrentFrame();
   const {fps}=useVideoConfig();
   const now=frame/fps*1000;

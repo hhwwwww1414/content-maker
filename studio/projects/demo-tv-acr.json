@@ -1,0 +1,890 @@
+{
+  "id": "demo-tv-acr",
+  "topic": "Телевизор снимает свой экран: как работает ACR",
+  "niche": "tech",
+  "language": "ru",
+  "status": {
+    "factCheck": "partial",
+    "scriptApproval": "demo",
+    "publication": "draft",
+    "production": "rendered"
+  },
+  "sources": [
+    {
+      "id": "imc",
+      "url": "https://arxiv.org/abs/2409.06203",
+      "publisher": "ACM IMC 2024",
+      "accessed": "2026-11-01",
+      "claim": "ACR captures frames, builds a fingerprint, matches it; works over HDMI / external display; Samsung docs state 500 ms; used for ad targeting; opt-out stops ACR traffic."
+    },
+    {
+      "id": "txag",
+      "url": "https://texasattorneygeneral.gov/news/releases/attorney-general-paxton-secures-major-agreement-samsung-ensure-texans-are-protected-smart-tvs",
+      "publisher": "Генпрокурор Техаса",
+      "accessed": "2026-11-01",
+      "claim": "Suit against five TV makers (Dec 2025); Samsung agreed to stop ACR collection from Texans without express consent (Feb 2026). Seen via search results and secondary coverage: the page itself refuses automated fetches."
+    }
+  ],
+  "title": "Телевизор смотрит на тебя",
+  "hook": "Ты включил телевизор. Он снял с экрана кадр.",
+  "centralIdea": "Умный телевизор сам снимает кадры с экрана и по ним узнаёт, что ты смотришь, но это можно выключить.",
+  "style": "dark technical explainer: device on stage, data visibly leaving it",
+  "theme": "signal",
+  "captionStyle": "plate",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 32.333333333333336,
+  "scenes": [
+    {
+      "id": "hook",
+      "start": 0,
+      "duration": 5.633333333333334,
+      "voice": "Ты включил телевизор. Он снял с экрана кадр. Через полсекунды — ещё один.",
+      "onScreen": "ТЕЛЕВИЗОР СНИМАЕТ СВОЙ ЭКРАН",
+      "thought": "ТВ сам делает снимки своего экрана.",
+      "animation": "screen powers on, flashes, thumbnails drop out on the spoken words",
+      "sources": [
+        "imc"
+      ],
+      "visual": {
+        "layers": [
+          {
+            "type": "tv",
+            "box": [
+              110,
+              500,
+              800,
+              800
+            ],
+            "powerCue": "включил",
+            "shots": [
+              "снял",
+              "ещё"
+            ],
+            "shotLabel": "Кадр"
+          },
+          {
+            "type": "kinetic",
+            "box": [
+              110,
+              260,
+              800,
+              210
+            ],
+            "text": "Телевизор *снимает* свой экран",
+            "size": 62,
+            "mode": "mask",
+            "cue": 0.15
+          },
+          {
+            "type": "light",
+            "kind": "sweep",
+            "cue": "снял"
+          }
+        ],
+        "camera": [
+          {
+            "cue": "снял",
+            "scale": 1.03,
+            "y": -6
+          }
+        ]
+      }
+    },
+    {
+      "id": "what",
+      "start": 5.633333333333334,
+      "duration": 5.533333333333332,
+      "voice": "Кадр сводят к отпечатку. По нему узнают, что смотришь. Дальше — рекламным сетям.",
+      "onScreen": "КАДР → ОТПЕЧАТОК → РЕКЛАМА",
+      "thought": "Кадр сводится к отпечатку и сверяется с базой; результат используют для рекламы.",
+      "animation": "mosaic collapses into a code, then a flow runs to ad networks",
+      "sources": [
+        "imc"
+      ],
+      "visual": {
+        "layers": [
+          {
+            "type": "fingerprint",
+            "box": [
+              110,
+              270,
+              800,
+              560
+            ],
+            "cue": 0,
+            "collapseCue": "отпечатку"
+          },
+          {
+            "type": "flow",
+            "box": [
+              110,
+              880,
+              800,
+              400
+            ],
+            "nodes": [
+              {
+                "id": "a",
+                "label": "Совпадение в базе",
+                "x": 0,
+                "y": 0,
+                "w": 370,
+                "cue": "узнают"
+              },
+              {
+                "id": "b",
+                "label": "Что ты смотришь",
+                "x": 430,
+                "y": 0,
+                "w": 370,
+                "cue": "смотришь",
+                "tone": "accent"
+              },
+              {
+                "id": "c",
+                "label": "Рекламные сети",
+                "x": 215,
+                "y": 230,
+                "w": 370,
+                "cue": "рекламным",
+                "tone": "accent2",
+                "hotCue": "сетям"
+              }
+            ],
+            "edges": [
+              {
+                "from": "a",
+                "to": "b",
+                "cue": "смотришь"
+              },
+              {
+                "from": "b",
+                "to": "c",
+                "cue": "рекламным",
+                "tone": "accent2"
+              }
+            ]
+          }
+        ],
+        "transition": {
+          "type": "iris",
+          "origin": [
+            0.5,
+            0.45
+          ],
+          "frames": 16
+        }
+      }
+    },
+    {
+      "id": "twist",
+      "start": 11.166666666666666,
+      "duration": 4.7666666666666675,
+      "voice": "Консоль не спасает. Снимается весь экран. Даже то, что по кабелю.",
+      "onScreen": "ДАЖЕ ТО, ЧТО ПО КАБЕЛЮ",
+      "thought": "ACR работает и когда ТВ служит просто монитором.",
+      "animation": "bold type lands, scan bar crosses the HDMI picture",
+      "sources": [
+        "imc"
+      ],
+      "visual": {
+        "layers": [
+          {
+            "type": "kinetic",
+            "box": [
+              110,
+              260,
+              800,
+              210
+            ],
+            "text": "Консоль *не спасает*",
+            "size": 76,
+            "mode": "punch",
+            "cue": "Консоль"
+          },
+          {
+            "type": "tv",
+            "box": [
+              110,
+              500,
+              800,
+              560
+            ],
+            "powerCue": 0,
+            "scanCue": "снимается",
+            "input": "HDMI",
+            "inputCue": "кабелю"
+          },
+          {
+            "type": "callout",
+            "box": [
+              110,
+              1100,
+              800,
+              130
+            ],
+            "text": "Снимается весь экран",
+            "cue": "весь",
+            "tone": "accent"
+          }
+        ],
+        "transition": {
+          "type": "whip",
+          "frames": 14
+        },
+        "backdrop": "dots"
+      }
+    },
+    {
+      "id": "proof",
+      "start": 15.933333333333334,
+      "duration": 7.033333333333331,
+      "voice": "В декабре 2025 Техас подал иск. Ответчиков было пять. В феврале Samsung согласилась.",
+      "onScreen": "ТЕХАС ПРОТИВ ПЯТИ ПРОИЗВОДИТЕЛЕЙ",
+      "thought": "Иск к пяти производителям; Samsung согласилась собирать ACR только с согласия.",
+      "animation": "rail draws date by date, five chips, one lights up",
+      "sources": [
+        "txag"
+      ],
+      "visual": {
+        "layers": [
+          {
+            "type": "timeline",
+            "box": [
+              110,
+              260,
+              800,
+              540
+            ],
+            "items": [
+              {
+                "date": "Декабрь 2025",
+                "label": "Техас подал иск",
+                "cue": "декабре"
+              },
+              {
+                "date": "Февраль 2026",
+                "label": "Samsung: только с согласия",
+                "cue": "феврале",
+                "tone": "accent2"
+              }
+            ]
+          },
+          {
+            "type": "roster",
+            "box": [
+              110,
+              830,
+              800,
+              430
+            ],
+            "items": [
+              "Samsung",
+              "Sony",
+              "LG",
+              "Hisense",
+              "TCL"
+            ],
+            "cue": "Ответчиков",
+            "until": "пять",
+            "hot": "Samsung",
+            "hotCue": "Samsung"
+          }
+        ],
+        "transition": {
+          "type": "shutter",
+          "frames": 16
+        }
+      }
+    },
+    {
+      "id": "fix",
+      "start": 22.966666666666665,
+      "duration": 6.033333333333335,
+      "voice": "По умолчанию включено. Выключается в настройках. Пункт «распознавание контента».",
+      "onScreen": "ВЫКЛЮЧАЕТСЯ В НАСТРОЙКАХ",
+      "thought": "Отказ останавливает передачу данных ACR.",
+      "animation": "settings screen rises, camera pushes in, the toggle flips on the spoken word",
+      "sources": [
+        "imc"
+      ],
+      "visual": {
+        "layers": [
+          {
+            "type": "phone",
+            "box": [
+              200,
+              330,
+              680,
+              860
+            ],
+            "title": "Настройки ТВ",
+            "cue": "умолчанию",
+            "rows": [
+              {
+                "label": "Обновления",
+                "on": true
+              },
+              {
+                "label": "Распознавание контента",
+                "on": true,
+                "offCue": "контента",
+                "hot": true,
+                "cue": "Пункт"
+              },
+              {
+                "label": "Сеть",
+                "on": true
+              }
+            ]
+          },
+          {
+            "type": "light",
+            "kind": "glow",
+            "cue": "Пункт",
+            "x": 540,
+            "y": 620,
+            "size": 820
+          }
+        ],
+        "camera": [
+          {
+            "cue": "Пункт",
+            "scale": 1.08,
+            "y": -10
+          }
+        ],
+        "transition": {
+          "type": "blinds",
+          "frames": 16
+        },
+        "backdrop": "aurora"
+      }
+    },
+    {
+      "id": "cta",
+      "start": 29,
+      "duration": 3.3333333333333357,
+      "voice": "Пойдёшь выключать? Пойду. Пусть смотрит.",
+      "onScreen": "ПОЙДЁШЬ ВЫКЛЮЧАТЬ?",
+      "thought": "Вопрос зрителю.",
+      "animation": "question rises, two answers land on their words",
+      "sources": [
+        "imc"
+      ],
+      "visual": {
+        "layers": [
+          {
+            "type": "poll",
+            "box": [
+              110,
+              300,
+              800,
+              860
+            ],
+            "question": "Пойдёшь выключать?",
+            "questionCue": "Пойдёшь",
+            "options": [
+              {
+                "text": "Пойду",
+                "cue": "Пойду"
+              },
+              {
+                "text": "Пусть смотрит",
+                "cue": "Пусть"
+              }
+            ]
+          }
+        ],
+        "transition": {
+          "type": "zoomThrough",
+          "frames": 14
+        }
+      }
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/demo-tv-acr/voice-imported-1c6a3d3d58466b2f.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "musicLicense": null,
+    "timingMode": "ElevenLabs alignment imported from the legacy take",
+    "importedFrom": "tv-watches-you",
+    "sourceSha256": "1c6a3d3d58466b2f",
+    "durationSeconds": 31.82,
+    "sourceDurationSeconds": 31.82,
+    "localTempo": 1
+  },
+  "captions": [
+    {
+      "text": "Ты",
+      "startMs": 40,
+      "endMs": 60,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "включил",
+      "startMs": 113,
+      "endMs": 460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "телевизор.",
+      "startMs": 520,
+      "endMs": 1300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Он",
+      "startMs": 1470,
+      "endMs": 1580,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "снял",
+      "startMs": 1620,
+      "endMs": 1820,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "с",
+      "startMs": 1860,
+      "endMs": 1900,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "экрана",
+      "startMs": 1927,
+      "endMs": 2300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "кадр.",
+      "startMs": 2370,
+      "endMs": 2620,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Через",
+      "startMs": 3200,
+      "endMs": 3340,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "полсекунды",
+      "startMs": 3380,
+      "endMs": 3980,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 3980,
+      "endMs": 4320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ещё",
+      "startMs": 4320,
+      "endMs": 4620,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "один.",
+      "startMs": 4668,
+      "endMs": 4940,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Кадр",
+      "startMs": 5620,
+      "endMs": 5820,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сводят",
+      "startMs": 5873,
+      "endMs": 6220,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "к",
+      "startMs": 6260,
+      "endMs": 6300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "отпечатку.",
+      "startMs": 6353,
+      "endMs": 7020,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "По",
+      "startMs": 7360,
+      "endMs": 7388,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "нему",
+      "startMs": 7388,
+      "endMs": 7580,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "узнают,",
+      "startMs": 7620,
+      "endMs": 7980,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "что",
+      "startMs": 8020,
+      "endMs": 8140,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "смотришь.",
+      "startMs": 8188,
+      "endMs": 8820,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Дальше",
+      "startMs": 8920,
+      "endMs": 9340,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 9340,
+      "endMs": 9560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "рекламным",
+      "startMs": 9610,
+      "endMs": 9980,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сетям.",
+      "startMs": 10040,
+      "endMs": 10460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Консоль",
+      "startMs": 11180,
+      "endMs": 11500,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 11553,
+      "endMs": 11660,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "спасает.",
+      "startMs": 11708,
+      "endMs": 12380,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Снимается",
+      "startMs": 12510,
+      "endMs": 12940,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "весь",
+      "startMs": 12988,
+      "endMs": 13180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "экран.",
+      "startMs": 13207,
+      "endMs": 13700,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Даже",
+      "startMs": 13800,
+      "endMs": 14060,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "то,",
+      "startMs": 14113,
+      "endMs": 14300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "что",
+      "startMs": 14340,
+      "endMs": 14460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "по",
+      "startMs": 14513,
+      "endMs": 14620,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "кабелю.",
+      "startMs": 14680,
+      "endMs": 15021,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "В",
+      "startMs": 15930,
+      "endMs": 15960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "декабре",
+      "startMs": 15960,
+      "endMs": 16380,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "2025",
+      "startMs": 16420,
+      "endMs": 17660,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Техас",
+      "startMs": 17740,
+      "endMs": 18140,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "подал",
+      "startMs": 18200,
+      "endMs": 18460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "иск.",
+      "startMs": 18560,
+      "endMs": 18940,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Ответчиков",
+      "startMs": 19160,
+      "endMs": 19660,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "было",
+      "startMs": 19708,
+      "endMs": 19900,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "пять.",
+      "startMs": 19980,
+      "endMs": 20380,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "В",
+      "startMs": 20580,
+      "endMs": 20780,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "феврале",
+      "startMs": 20820,
+      "endMs": 21180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Samsung",
+      "startMs": 21240,
+      "endMs": 21660,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "согласилась.",
+      "startMs": 21729,
+      "endMs": 22433,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "По",
+      "startMs": 22950,
+      "endMs": 22993,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "умолчанию",
+      "startMs": 22993,
+      "endMs": 23580,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "включено.",
+      "startMs": 23633,
+      "endMs": 24140,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Выключается",
+      "startMs": 24580,
+      "endMs": 25180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 25300,
+      "endMs": 25420,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "настройках.",
+      "startMs": 25447,
+      "endMs": 26060,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Пункт",
+      "startMs": 26680,
+      "endMs": 26940,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "«распознавание",
+      "startMs": 27020,
+      "endMs": 27820,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "контента».",
+      "startMs": 27884,
+      "endMs": 28460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Пойдёшь",
+      "startMs": 29000,
+      "endMs": 29260,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "выключать?",
+      "startMs": 29287,
+      "endMs": 30060,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Пойду.",
+      "startMs": 30380,
+      "endMs": 30860,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Пусть",
+      "startMs": 31120,
+      "endMs": 31260,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "смотрит.",
+      "startMs": 31300,
+      "endMs": 31820,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "editorialReview": {
+    "reviewedAt": "2026-11-01",
+    "verdict": "partial: demo only",
+    "verified": [
+      "500 ms comes from Samsung documentation, as quoted in the IMC 2024 paper; LG documents 10 ms, so \"через полсекунды\" is Samsung-specific.",
+      "Fingerprint, content-library matching, ad targeting and HDMI capture are in the IMC 2024 paper."
+    ],
+    "openClaims": [
+      "\"По умолчанию включено\" is not confirmed by a page that was read. The paper only confirms that opting out stops ACR traffic.",
+      "Texas suit and Samsung agreement rest on search results and secondary coverage; a person should read the Texas AG release, which refuses automated fetches.",
+      "The setting name \"распознавание контента\" varies by brand."
+    ]
+  },
+  "renderPath": "out/studio/demo-tv-acr.mp4",
+  "qa": {
+    "path": "out/studio/demo-tv-acr-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  }
+}

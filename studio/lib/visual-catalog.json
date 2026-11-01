@@ -1,0 +1,8 @@
+{
+  "layers": ["kinetic", "flow", "counter", "unitgrid", "compare", "checklist", "poll", "tv", "phone", "fingerprint", "stamp", "document", "timeline", "roster", "light", "callout"],
+  "transitions": ["cut", "iris", "whip", "shutter", "diagonal", "zoomThrough", "blinds"],
+  "themes": ["signal", "paper", "cobalt", "solar"],
+  "backdrops": ["aurora", "grid", "paper", "rays", "dots"],
+  "captionStyles": ["plate", "ink", "tape"],
+  "cameraless": ["light"]
+}
