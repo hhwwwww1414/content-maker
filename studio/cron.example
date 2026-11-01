@@ -1,0 +1,3 @@
+# Optional local cron example; adjust the Python path and repository path.
+# At 09:00 local time, collect public space feeds, update scores and write unverified idea briefs.
+0 9 * * * cd /Users/qwezyid/projects/content-maker && /usr/bin/python3 studio/pipeline.py research space && /usr/bin/python3 studio/pipeline.py rank space >/dev/null && /usr/bin/python3 studio/pipeline.py draft space

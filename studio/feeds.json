@@ -1,0 +1,6 @@
+{
+  "niches": {
+    "space": ["https://www.esa.int/rssfeed/Our_Activities/Space_Science", "https://www.nasa.gov/feed/"],
+    "technology": ["https://www.technologyreview.com/feed/"]
+  }
+}

@@ -1,0 +1,466 @@
+{
+  "id": "gps-offline",
+  "topic": "Почему GPS работает даже без интернета?",
+  "niche": "space",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "publication": "draft",
+    "production": "rendered"
+  },
+  "sources": [
+    {
+      "id": "gpsgov",
+      "url": "https://www.gps.gov/trilateration",
+      "publisher": "GPS.gov",
+      "accessed": "2026-10-20",
+      "claim": "Time of flight and satellite geometry determine position."
+    },
+    {
+      "id": "esa",
+      "url": "https://www.esa.int/Applications/Satellite_navigation/How_existing_satellite_navigation_systems_work",
+      "publisher": "ESA",
+      "accessed": "2026-10-20",
+      "claim": "A fourth satellite helps correct receiver clock error."
+    },
+    {
+      "id": "googlemaps",
+      "url": "https://support.google.com/maps/answer/6291838?hl=en",
+      "publisher": "Google Maps Help",
+      "accessed": "2026-10-20",
+      "claim": "Downloaded areas can be used for offline maps and routes within the downloaded area."
+    }
+  ],
+  "ideaScore": {
+    "mode": "demonstration; no trend claim",
+    "score": null,
+    "reason": "Evergreen explanation selected by the user."
+  },
+  "title": "GPS без интернета",
+  "hook": "Телефон знает, где ты, даже без сети.",
+  "centralIdea": "Координаты вычисляет спутниковый приёмник; интернет нужен для загрузки онлайн-карты, если она не сохранена.",
+  "style": "premium technology editorial motion design",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 21.133333333333333,
+  "scenes": [
+    {
+      "id": "question",
+      "start": 0,
+      "duration": 3.033333333333333,
+      "template": "phone",
+      "thought": "Телефон может определять положение без мобильной сети.",
+      "voice": "Даже без интернета телефон может узнать, где ты.",
+      "onScreen": "ГДЕ Я?",
+      "animation": "device reveal",
+      "sources": [
+        "gpsgov"
+      ]
+    },
+    {
+      "id": "broadcast",
+      "start": 3.033333333333333,
+      "duration": 4.7,
+      "template": "satellites",
+      "thought": "Спутники посылают односторонние радиосигналы с данными о времени.",
+      "voice": "Спутники передают своё положение и точное время отправки сигнала.",
+      "onScreen": "СИГНАЛ СО СПУТНИКОВ",
+      "animation": "satellite orbit and radio waves",
+      "sources": [
+        "gpsgov",
+        "esa"
+      ]
+    },
+    {
+      "id": "ranging",
+      "start": 7.733333333333333,
+      "duration": 3.6000000000000005,
+      "template": "ranging",
+      "thought": "Приёмник оценивает время прохождения сигнала, чтобы получить псевдодальности.",
+      "voice": "По времени в пути телефон оценивает расстояния до них.",
+      "onScreen": "ВРЕМЯ → РАССТОЯНИЕ",
+      "animation": "timing pulses and range arcs",
+      "sources": [
+        "gpsgov",
+        "esa"
+      ]
+    },
+    {
+      "id": "fix",
+      "start": 11.333333333333334,
+      "duration": 4.966666666666667,
+      "template": "intersection",
+      "thought": "По сигналам как минимум четырёх спутников решаются три координаты и смещение часов приёмника.",
+      "voice": "Сигналы четырёх спутников дают координаты и поправку часов телефона.",
+      "onScreen": "ЧЕТЫРЕ СИГНАЛА.\nОДНА ТОЧКА.",
+      "animation": "range intersection",
+      "sources": [
+        "esa"
+      ]
+    },
+    {
+      "id": "maps",
+      "start": 16.3,
+      "duration": 4.833333333333332,
+      "template": "map",
+      "thought": "Позиционирование и загрузка карты — разные процессы.",
+      "voice": "Сеть нужна для загрузки карты. Скачанная карта работает офлайн.",
+      "onScreen": "КООРДИНАТЫ ≠ КАРТА",
+      "animation": "map tiles reveal",
+      "sources": [
+        "googlemaps"
+      ]
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/gps-offline/voice-cd7f00dee5d755e7-mix.wav",
+    "voiceId": "iP95p4xoKVk53GoZ742B",
+    "timingMode": "ElevenLabs character alignment",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "musicLicense": null,
+    "modelId": "eleven_multilingual_v2",
+    "voiceSettings": {
+      "stability": 0.58,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.04
+    },
+    "sourcePath": "generated/gps-offline/voice-cd7f00dee5d755e7.mp3",
+    "sourceDurationSeconds": 20.662857,
+    "durationSeconds": 20.611813,
+    "localTempo": 1,
+    "cacheHash": "cd7f00dee5d755e7",
+    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades"
+  },
+  "captions": [
+    {
+      "text": "Даже",
+      "startMs": 0,
+      "endMs": 279,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "без",
+      "startMs": 313,
+      "endMs": 453,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "интернета",
+      "startMs": 499,
+      "endMs": 987,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "телефон",
+      "startMs": 1022,
+      "endMs": 1405,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "может",
+      "startMs": 1440,
+      "endMs": 1672,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "узнать,",
+      "startMs": 1741,
+      "endMs": 2032,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "где",
+      "startMs": 2055,
+      "endMs": 2264,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ты.",
+      "startMs": 2310,
+      "endMs": 2647,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Спутники",
+      "startMs": 3019,
+      "endMs": 3553,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "передают",
+      "startMs": 3599,
+      "endMs": 3982,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "своё",
+      "startMs": 4017,
+      "endMs": 4203,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "положение",
+      "startMs": 4261,
+      "endMs": 4783,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 5016,
+      "endMs": 5108,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "точное",
+      "startMs": 5224,
+      "endMs": 5631,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "время",
+      "startMs": 5677,
+      "endMs": 5979,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "отправки",
+      "startMs": 6014,
+      "endMs": 6467,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сигнала.",
+      "startMs": 6513,
+      "endMs": 7140,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "По",
+      "startMs": 7721,
+      "endMs": 7860,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "времени",
+      "startMs": 7883,
+      "endMs": 8220,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 8255,
+      "endMs": 8278,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "пути",
+      "startMs": 8336,
+      "endMs": 8545,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "телефон",
+      "startMs": 8603,
+      "endMs": 8986,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "оценивает",
+      "startMs": 9056,
+      "endMs": 9497,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "расстояния",
+      "startMs": 9555,
+      "endMs": 10124,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "до",
+      "startMs": 10182,
+      "endMs": 10252,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "них.",
+      "startMs": 10298,
+      "endMs": 10658,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Сигналы",
+      "startMs": 11331,
+      "endMs": 11773,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "четырёх",
+      "startMs": 11819,
+      "endMs": 12167,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "спутников",
+      "startMs": 12202,
+      "endMs": 12713,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "дают",
+      "startMs": 12783,
+      "endMs": 12992,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "координаты",
+      "startMs": 13050,
+      "endMs": 13711,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 13909,
+      "endMs": 14002,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "поправку",
+      "startMs": 14083,
+      "endMs": 14605,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "часов",
+      "startMs": 14675,
+      "endMs": 14976,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "телефона.",
+      "startMs": 15034,
+      "endMs": 15708,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Сеть",
+      "startMs": 16288,
+      "endMs": 16602,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "нужна",
+      "startMs": 16648,
+      "endMs": 16950,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "для",
+      "startMs": 17008,
+      "endMs": 17136,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "загрузки",
+      "startMs": 17182,
+      "endMs": 17670,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "карты.",
+      "startMs": 17728,
+      "endMs": 18216,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Скачанная",
+      "startMs": 18587,
+      "endMs": 19028,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "карта",
+      "startMs": 19075,
+      "endMs": 19342,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "работает",
+      "startMs": 19377,
+      "endMs": 19771,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "офлайн.",
+      "startMs": 19853,
+      "endMs": 20619,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "renderPath": "out/studio/gps-offline.mp4",
+  "qa": {
+    "path": "out/studio/gps-offline-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  },
+  "editorialReview": {
+    "reviewedAt": "2026-10-20",
+    "verdict": "approved",
+    "notes": [
+      "GPS.gov confirms one-way radio broadcasts, time-of-flight and the distance relation.",
+      "ESA confirms timestamps, satellite position and receiver clock bias resolved using a fourth satellite.",
+      "Google Maps confirms use of downloaded areas offline; the narration makes no claim that every route type or region is supported.",
+      "The final range diagram is explicitly a 2D schematic, not a scale model or a claim that circles represent the real 3D solution."
+    ]
+  }
+}
