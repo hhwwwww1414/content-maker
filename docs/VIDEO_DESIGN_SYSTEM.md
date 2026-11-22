@@ -31,6 +31,9 @@ An art direction is a set of decisions, not a skin: three palettes, a type voice
 | `brash` | Provocation, opinion, a dare | Geologica Black | `solid` | snappy | marker |
 | `soft` | A hard subject told gently | Geologica Bold, Onest | `gradient` | calm | colour |
 | `marker` | Quotes cut to a beat, no voice | Noto Serif Display, Onest | `paper` | snappy | marker |
+| `keynote` | Launches, products, phenomena, money told calmly | Inter Tight | `stage` | keynote | gradient |
+
+The `keynote` direction has its own components and rules: `docs/KEYNOTE_DIRECTION.md`.
 
 Each has `base`, `inverse` and `block` palettes. A scene picks one with `art.variant`; changing it between scenes gives a reel its colour rhythm, and three scenes in a row in one palette raises a warning.
 

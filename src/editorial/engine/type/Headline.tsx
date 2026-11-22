@@ -56,6 +56,11 @@ const Emphasized: React.FC<{word: SetWord; kind: EmphasisKind; p: number; size: 
       <span style={{position: 'absolute', inset: `${size * 0.04}px ${-size * 0.1}px ${-size * 0.02}px`, border: `${Math.max(4, size * 0.035)}px solid ${palette.accent}`, borderRadius: size * 0.12, clipPath: `inset(0 ${(1 - c) * 100}% 0 0)`}}/>
       {children}</span>;
   }
+  if (kind === 'gradient') {
+    // A gradient sweeps across the word from left to right (shotcraft typography/gradient-word-sweep).
+    const grad = `linear-gradient(100deg, ${palette.accent} 0%, ${palette.accent2} 46%, ${color} 54%, ${color} 100%)`;
+    return <span style={{...common, backgroundImage: grad, backgroundSize: '200% 100%', backgroundPosition: `${(1 - c) * 100}% 0`, WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent', paddingBottom: size * 0.12, marginBottom: -size * 0.12}}>{children}</span>;
+  }
   if (kind === 'italic') {
     return <span style={{...common, color: palette.accent, fontFamily: italicRole.family, fontWeight: italicRole.weight, fontStyle: 'italic'}}>{children}</span>;
   }
@@ -100,6 +105,14 @@ export const SetText: React.FC<{spec: TextSpec; set: ReturnType<typeof useSettin
     const rendered = line.words.map((word, wi) => {
       const index = wordIndex++;
       let wordStyle: React.CSSProperties = {};
+      if (spec.reveal === 'focus') {
+        // Blur-slide: words 4 frames apart, a breath between lines, the accented word lands last and slower.
+        const s = begin + sec(index * profile.stagger + li * 0.2, fps);
+        const seconds = word.accent ? 1.0 : 0.73;
+        const p = tween(frame, s, seconds, fps, 'quint');
+        settled = Math.max(settled, s + sec(seconds, fps));
+        wordStyle = entrance('focus', p, line.size);
+      }
       if (spec.reveal === 'words' || spec.reveal === 'spoken') {
         const s = spec.reveal === 'spoken' ? spokenFrames[index] ?? begin : begin + sec(index * profile.stagger, fps);
         const p = springFrom(frame, s, fps, spec.reveal === 'spoken' ? 'snap' : profile.enter);
@@ -112,9 +125,11 @@ export const SetText: React.FC<{spec: TextSpec; set: ReturnType<typeof useSettin
         const p = springFrom(frame, s, fps, profile.enter);
         return <span key={ci} style={{display: 'inline-block', whiteSpace: 'pre', ...entrance('rise', p, 40)}}>{ch}</span>;
       }) : word.text;
-      const emphasisStart = spec.emphasisCue !== undefined ? start(spec.emphasisCue) : (spec.reveal === 'spoken' ? spokenFrames[index] ?? begin : begin) + sec(0.2, fps);
+      // A focus reveal lets the word land before its emphasis plays.
+      const landing = spec.reveal === 'focus' ? sec(index * profile.stagger + li * 0.2 + 0.6, fps) : sec(0.2, fps);
+      const emphasisStart = spec.emphasisCue !== undefined ? start(spec.emphasisCue) : (spec.reveal === 'spoken' ? spokenFrames[index] ?? begin : begin) + landing;
       const content = word.accent
-        ? <Emphasized word={word} kind={kind} p={tween(frame, emphasisStart, 0.45, fps, 'out')} size={line.size} color={base} role={role} italicRole={italicRole}>{chars}</Emphasized>
+        ? <Emphasized word={word} kind={kind} p={tween(frame, emphasisStart, kind === 'gradient' ? 0.8 : 0.45, fps, kind === 'gradient' ? 'inOut' : 'out')} size={line.size} color={base} role={role} italicRole={italicRole}>{chars}</Emphasized>
         : chars;
       return <span key={wi} style={{display: 'inline-block', whiteSpace: 'pre', marginRight: wi < line.words.length - 1 ? space : 0, ...wordStyle}}>{content}</span>;
     });

@@ -8,9 +8,9 @@ const Box = z.tuple([z.number(), z.number(), z.number().positive(), z.number().p
 const Norm = z.tuple([z.number().min(-0.5).max(1.5), z.number().min(-0.5).max(1.5)]).describe('[x, y] as a fraction of the frame or image');
 const Markup = z.string().min(1).describe('Text; *accent* marks emphasis, "/" forces a line break in poster settings');
 const Tone = z.enum(['ink', 'accent', 'accent2', 'muted', 'danger']);
-const Spring = z.enum(['settle', 'soft', 'snap', 'pop', 'bounce', 'heavy', 'camera']);
-const Emphasis = z.enum(['color', 'marker', 'underline', 'italic', 'strike', 'box']);
-const Reveal = z.enum(['lines', 'words', 'chars', 'spoken', 'punch', 'none']);
+const Spring = z.enum(['settle', 'soft', 'snap', 'pop', 'bounce', 'heavy', 'camera', 'smooth', 'crisp', 'lively', 'hero', 'glide']);
+const Emphasis = z.enum(['color', 'marker', 'underline', 'italic', 'strike', 'box', 'gradient']);
+const Reveal = z.enum(['lines', 'words', 'chars', 'spoken', 'punch', 'focus', 'none']);
 const Anchor = z.enum(['top', 'center', 'bottom']);
 const Align = z.enum(['left', 'center', 'right']);
 
@@ -185,9 +185,9 @@ export const Direction = z.strictObject({
   art: z.strictObject({
     direction: z.string().optional().describe('Override only as a deliberate contrast beat; must be compatible'),
     variant: z.enum(['base', 'inverse', 'block']).default('base'),
-    field: z.enum(['silk', 'ink', 'beam', 'paper', 'gradient', 'solid']).optional(),
+    field: z.enum(['silk', 'ink', 'beam', 'paper', 'gradient', 'solid', 'stage']).optional(),
     light: Norm.optional(),
-    motion: z.enum(['fluid', 'snappy', 'weighty', 'calm']).optional(),
+    motion: z.enum(['fluid', 'snappy', 'weighty', 'calm', 'keynote']).optional(),
   }).prefault({}),
   hierarchy: z.strictObject({primary: z.string(), secondary: z.array(z.string()).default([])}).describe('The one thing seen first, and what supports it'),
   layers: z.strictObject({background: z.string().optional(), foreground: z.string().optional()}).optional(),
@@ -195,7 +195,7 @@ export const Direction = z.strictObject({
   shot: Shot,
   choreography: z.array(z.strictObject({cue: Cue, action: z.string()})).default([]).describe('The planned beats, for humans and the density check'),
   camera: z.strictObject({
-    move: z.enum(['still', 'pushIn', 'pullOut', 'panLeft', 'panRight', 'tiltUp', 'tiltDown', 'driftUp']).default('pushIn'),
+    move: z.enum(['still', 'pushIn', 'pullOut', 'panLeft', 'panRight', 'tiltUp', 'tiltDown', 'driftUp', 'creep']).default('pushIn'),
     keys: z.array(z.strictObject({cue: Cue, x: z.number().optional(), y: z.number().optional(), scale: z.number().optional(), rotate: z.number().optional(), seconds: z.number().optional(), spring: Spring.optional()})).default([]),
     handheld: z.number().min(0).max(2).optional(),
   }).prefault({}),
@@ -209,7 +209,7 @@ export type DirectionSpec = z.output<typeof Direction>;
 
 export const ProjectArt = z.strictObject({
   direction: z.string(),
-  motion: z.enum(['fluid', 'snappy', 'weighty', 'calm']).optional(),
+  motion: z.enum(['fluid', 'snappy', 'weighty', 'calm', 'keynote']).optional(),
   music: z.strictObject({asset: Asset, volume: z.number().min(0).max(1).default(0.14), duck: z.number().min(0).max(1).default(0.45)}).optional(),
 });
 

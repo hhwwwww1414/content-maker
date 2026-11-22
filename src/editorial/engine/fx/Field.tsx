@@ -38,6 +38,18 @@ const SHADERS: Record<Exclude<FieldKind, 'solid'>, string> = {
     float fib=fbm(p*vec2(60.,180.)+s)*.5+fbm(p*vec2(190.,60.)+s)*.5;float cloud=fbm(p*2.4+s);
     float fall=smoothstep(1.35,.15,distance(u,l));
     vec3 col=mix(b,a,clamp(fall*.9+cloud*.25,0.,1.));col*=.985+.03*fib;gl_FragColor=vec4(col,1.);}`,
+  // A product stage: one soft key from above, a pool of light where the hero stands, haze in the beam.
+  // Dark palettes light up towards bg2; light palettes fall off gently at the edges instead.
+  stage: `void main(){vec2 u=gl_FragCoord.xy/r;vec2 asp=vec2(r.x/r.y,1.);
+    vec2 d=(u-vec2(l.x,.54))*asp*vec2(1.,1.3);float pool=exp(-dot(d,d)*3.6);
+    float w=.06+.34*(1.-u.y);float bx=abs((u.x-l.x)*asp.x);
+    float beam=smoothstep(w,w*.12,bx)*smoothstep(.2,1.,u.y);
+    float haze=fbm(u*asp*2.8+vec2(t*.012,-t*.022)+s);
+    float i=clamp(pool*.9+beam*.34*(.5+.8*haze),0.,1.);
+    float bright=dot(a,vec3(.3,.6,.1));
+    vec3 dark=mix(a,b*1.35,i)+c*.035*pool;
+    vec3 light=mix(a*.9,b,clamp(.3+i,0.,1.));
+    gl_FragColor=vec4(mix(dark,light,step(.5,bright)),1.);}`,
   // A slow, soft colour mesh with no visible bands.
   gradient: `void main(){vec2 u=gl_FragCoord.xy/r;vec2 p=vec2(u.x*r.x/r.y,u.y)+s;
     float v=fbm(p*1.15+vec2(t*.03,-t*.024));float w=fbm(p*.9+vec2(-t*.02,t*.03)+7.);

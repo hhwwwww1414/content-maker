@@ -6,7 +6,19 @@ import {ROOT} from './project.mjs';
 export {ROOT};
 export const MANIFEST = 'public/library/manifest.json';
 const file = resolve(ROOT, MANIFEST);
-export const readManifest = () => (existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : {version: 1, assets: {}});
+/** The tracked manifest only. Anything that writes the manifest starts from this. */
+export const readPublicManifest = () => (existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : {version: 1, assets: {}});
+// Private assets (unpublished product screens, client material) live in public/private/, which git ignores.
+// Their entries are merged in at read time and are never written back to the tracked manifest.
+export const PRIVATE_MANIFEST = 'public/private/manifest.json';
+const privateFile = resolve(ROOT, PRIVATE_MANIFEST);
+export const readManifest = () => {
+  const manifest = readPublicManifest();
+  if (!existsSync(privateFile)) return manifest;
+  const extra = JSON.parse(readFileSync(privateFile, 'utf8')).assets ?? {};
+  for (const id of Object.keys(extra)) if (manifest.assets[id]) throw Error(`Private asset "${id}" shadows a public one in ${MANIFEST}`);
+  return {...manifest, assets: {...manifest.assets, ...extra}};
+};
 export const writeManifest = (m) => writeFileSync(file, JSON.stringify(m, null, 1) + '\n');
 
 export const projectAssetIds = (project) => {

@@ -7,6 +7,26 @@ import type {ArtDirection} from '../themes';
 import type {Scene} from '../../kit/types';
 import type {DirectionSpec} from '../spec/schema';
 
+const bare = (w: string) => w.toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
+/** Rewrites spoken spellings for display: a run of words becomes one word spanning their time, keeping trailing punctuation. */
+export const displayWords = <W extends {text: string; startMs: number; endMs: number}>(words: W[], rules: Array<{from: string; to: string}> = []): W[] => {
+  let out = words;
+  for (const rule of rules) {
+    const want = rule.from.split(/\s+/).map(bare).filter(Boolean);
+    const next: W[] = [];
+    for (let i = 0; i < out.length; i++) {
+      if (want.length && want.every((w, k) => out[i + k] && bare(out[i + k].text) === w)) {
+        const last = out[i + want.length - 1];
+        const tail = last.text.match(/[^\p{L}\p{N}]+$/u)?.[0] ?? '';
+        next.push({...out[i], text: rule.to + tail, endMs: last.endMs});
+        i += want.length - 1;
+      } else next.push(out[i]);
+    }
+    out = next;
+  }
+  return out;
+};
+
 /** Word-synced captions. They move out of the way when a scene's subject owns the bottom, and yield to spoken type. */
 export const EngineCaptions: React.FC<{words: PageWord[]; art: ArtDirection; scenes: Scene[]}> = ({words, art, scenes}) => {
   const frame = useCurrentFrame();

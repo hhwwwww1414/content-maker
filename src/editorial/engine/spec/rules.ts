@@ -135,7 +135,8 @@ export const checkProject = (project: RawProject, library: Library = {}): Findin
     const paints = (x: typeof a) => (x.d.shot as {type: string}).type !== 'media';
     if (a.d.art.variant === b.d.art.variant && i >= 2 && specs[i - 2].d.art.variant === a.d.art.variant && paints(a) && paints(b) && paints(specs[i - 2])) add('warn', b.scene.id, 'variety', `Three scenes in a row in the ${b.d.art.variant} palette: no colour rhythm`);
   }
-  const systems = new Set(specs.map((s) => (s.d.shot as {type: string}).type));
+  // A registered custom component is its own system: a lit phone and a glass stat card are different compositions.
+  const systems = new Set(specs.map((s) => { const shot = s.d.shot as {type: string; component?: string}; return shot.type === 'custom' ? `custom:${shot.component}` : shot.type; }));
   if (specs.length >= 4 && systems.size < 3) add('error', '*', 'variety', `Only ${systems.size} scene systems in ${specs.length} scenes`);
   const counts = new Map<string, number>();
   for (const s of specs) counts.set(shotSignature(s.d), (counts.get(shotSignature(s.d)) ?? 0) + 1);

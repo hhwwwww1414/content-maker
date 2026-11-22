@@ -16,10 +16,24 @@ export const ease = {
   expoInOut: Easing.bezier(0.87, 0, 0.13, 1),
   back: Easing.bezier(0.34, 1.56, 0.64, 1),
   anticipate: Easing.bezier(0.68, -0.4, 0.32, 1.2),
+  /** Quint-out: the blur-slide reveal curve (video-shotcraft typography/blur-slide). */
+  quint: Easing.bezier(0.22, 1, 0.36, 1),
+  /** A long, even camera move: slow start, long settle. */
+  camera: Easing.bezier(0.45, 0, 0.2, 1),
 };
 export type EaseName = keyof typeof ease;
 
-/** Spring presets by physical feel. Controlled overshoot comes only from `pop` and `bounce`. */
+/**
+ * A spring described the way SwiftUI describes it (WWDC23 "Animate with springs"): a perceptual duration and a bounce.
+ * Mass is 1, stiffness follows from the duration, damping from the bounce. Bounce 0 is critically damped: no overshoot.
+ */
+export const appleSpring = (duration: number, bounce = 0) => {
+  const stiffness = (2 * Math.PI / duration) ** 2;
+  const damping = bounce >= 0 ? (4 * Math.PI * (1 - bounce)) / duration : (4 * Math.PI) / ((1 + bounce) * duration);
+  return {mass: 1, stiffness, damping};
+};
+
+/** Spring presets by physical feel. Controlled overshoot comes only from `pop`, `bounce` and `lively`. */
 export const springs = {
   settle: {damping: 200, stiffness: 120, mass: 1},
   soft: {damping: 24, stiffness: 90, mass: 1},
@@ -28,6 +42,12 @@ export const springs = {
   bounce: {damping: 9, stiffness: 120, mass: 0.8},
   heavy: {damping: 26, stiffness: 55, mass: 2.2},
   camera: {damping: 30, stiffness: 42, mass: 1.5},
+  // Keynote family, from appleSpring(duration, bounce).
+  smooth: appleSpring(0.5, 0),
+  crisp: appleSpring(0.38, 0.12),
+  lively: appleSpring(0.5, 0.3),
+  hero: appleSpring(1.0, 0),
+  glide: appleSpring(1.6, 0),
 } as const;
 export type SpringName = keyof typeof springs;
 
@@ -38,6 +58,8 @@ export const profiles: Record<MotionPersonality, MotionProfile> = {
   snappy: {enter: 'snap', emphasis: 'pop', camera: 'soft', stagger: 0.035, lineStagger: 0.07, drift: 0.012, handheld: 0},
   weighty: {enter: 'heavy', emphasis: 'snap', camera: 'camera', stagger: 0.06, lineStagger: 0.14, drift: 0.03, handheld: 1},
   calm: {enter: 'settle', emphasis: 'soft', camera: 'camera', stagger: 0.07, lineStagger: 0.16, drift: 0.022, handheld: 0},
+  // Words 4 frames apart at 30 fps, lines a breath apart, no handheld (shotcraft Q3).
+  keynote: {enter: 'smooth', emphasis: 'lively', camera: 'glide', stagger: 0.133, lineStagger: 0.2, drift: 0.01, handheld: 0},
 };
 
 export const clamp01 = (v: number) => Math.min(1, Math.max(0, v));
@@ -58,7 +80,7 @@ const clampedRange = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as co
 export const range = (v: number, from: [number, number], to: [number, number], easing?: EaseName) => interpolate(v, from, to, {...clampedRange, easing: easing ? ease[easing] : undefined});
 
 /** Named entrances: progress in, CSS out. Keeps choreography as data rather than scattered inline maths. */
-export type EnterName = 'rise' | 'mask' | 'pop' | 'slideL' | 'slideR' | 'drop' | 'blur' | 'fade' | 'track' | 'unfold';
+export type EnterName = 'rise' | 'mask' | 'pop' | 'slideL' | 'slideR' | 'drop' | 'blur' | 'fade' | 'track' | 'unfold' | 'focus';
 export const entrance = (name: EnterName, p: number, distance = 60): CSSProperties => {
   const c = clamp01(p);
   switch (name) {
@@ -70,6 +92,8 @@ export const entrance = (name: EnterName, p: number, distance = 60): CSSProperti
     case 'drop': return {transform: `translateY(${(1 - p) * -distance * 3}px) rotate(${(1 - p) * -5}deg)`, opacity: Math.min(1, c * 4)};
     case 'blur': return {filter: c < 1 ? `blur(${(1 - c) * 24}px)` : undefined, opacity: c, transform: `scale(${1.06 - 0.06 * p})`};
     case 'track': return {letterSpacing: `${(1 - c) * 0.34}em`, opacity: c};
+    // Out of focus into place: y, blur and opacity on one progress. `distance` is the font size.
+    case 'focus': return {transform: `translateY(${(1 - c) * distance * 0.38}px)`, filter: c < 1 ? `blur(${((1 - c) * distance * 0.1).toFixed(2)}px)` : undefined, opacity: c};
     case 'unfold': return {transform: `perspective(1400px) rotateX(${(1 - p) * -64}deg)`, transformOrigin: '50% 0%', opacity: c};
     default: return {opacity: c};
   }
@@ -80,7 +104,7 @@ export const wander = (t: number, seed = 0) => Math.sin(t * 0.73 + seed) * 0.6 +
 
 export type CameraState = {x: number; y: number; scale: number; rotate: number};
 export type CameraKey = {cue: string | number; x?: number; y?: number; scale?: number; rotate?: number; seconds?: number; spring?: SpringName; ease?: EaseName};
-export type CameraMove = 'still' | 'pushIn' | 'pullOut' | 'panLeft' | 'panRight' | 'tiltUp' | 'tiltDown' | 'driftUp';
+export type CameraMove = 'still' | 'pushIn' | 'pullOut' | 'panLeft' | 'panRight' | 'tiltUp' | 'tiltDown' | 'driftUp' | 'creep';
 
 const MOVES: Record<CameraMove, (p: number) => Partial<CameraState>> = {
   still: () => ({}),
@@ -91,6 +115,8 @@ const MOVES: Record<CameraMove, (p: number) => Partial<CameraState>> = {
   tiltUp: (p) => ({y: -44 + 88 * p, scale: 1.06}),
   tiltDown: (p) => ({y: 44 - 88 * p, scale: 1.06}),
   driftUp: (p) => ({y: 18 - 36 * p, scale: 1 + 0.03 * p}),
+  // The keynote camera: a 4% push on a long ease, never a constant-speed zoom.
+  creep: (p) => ({scale: 1 + 0.04 * ease.camera(p)}),
 };
 
 /** One deterministic camera: a base move over the scene plus keyed moves on spoken words. */

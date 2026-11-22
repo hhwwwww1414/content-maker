@@ -15,7 +15,7 @@ export const Backdrop: React.FC<{seed?: string; light?: [number, number]}> = ({s
   const kind = direction.art.field ?? art.field;
   return (
     <div style={{position: 'absolute', inset: -40, ...parallaxStyle(camera, -0.5)}}>
-      <Field kind={kind} palette={palette} seed={seed ?? scene.id} light={direction.art.light ?? light ?? [0.68, -0.22]}/>
+      <Field kind={kind} palette={palette} seed={seed ?? scene.id} light={direction.art.light ?? light ?? (kind === 'stage' ? [0.5, -0.2] : [0.68, -0.22])}/>
     </div>
   );
 };

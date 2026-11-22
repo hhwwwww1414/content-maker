@@ -59,7 +59,7 @@ export const useRegion = () => {
 /** Marks a layer as still animating: the layout guard judges it once it has landed. */
 /** Largest size a plane reaches under this scene's camera: text fitted to `width / k` stays in the safe area all the way. */
 export const planeGrowth = (camera: DirectionSpec['camera'], z: number) => {
-  const peak = Math.max(1, ...camera.keys.map((key) => key.scale ?? 1), ({pushIn: 1.07, pullOut: 1.09, panLeft: 1.06, panRight: 1.06, tiltUp: 1.06, tiltDown: 1.06, driftUp: 1.03, still: 1} as Record<string, number>)[camera.move]);
+  const peak = Math.max(1, ...camera.keys.map((key) => key.scale ?? 1), ({pushIn: 1.07, pullOut: 1.09, panLeft: 1.06, panRight: 1.06, tiltUp: 1.06, tiltDown: 1.06, driftUp: 1.03, creep: 1.04, still: 1} as Record<string, number>)[camera.move]);
   return 1 + (peak - 1) * Math.max(0, 1 + z);
 };
 

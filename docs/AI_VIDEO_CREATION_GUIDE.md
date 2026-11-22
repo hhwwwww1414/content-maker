@@ -46,7 +46,7 @@ For each scene, answer before choosing a component:
 
 Then the reel as a whole:
 
-- **One art direction** that fits the story (`docs/VIDEO_DESIGN_SYSTEM.md`). Check it differs from the previous reel.
+- **One art direction** that fits the story (`docs/VIDEO_DESIGN_SYSTEM.md`). Check it differs from the previous reel. For a premium product-film look use `keynote` and read `docs/KEYNOTE_DIRECTION.md`; shot recipes are in `vendor/video-shotcraft/`.
 - **A palette rhythm.** Alternate `base`, `inverse`, `block`. Put `block` on the turn or climax.
 - **Different compositions.** See the table of beats in `docs/SCENE_ARCHITECTURE.md`.
 - **A reason for each transition**, in `intent`. Hard cut where the word itself is the turn.

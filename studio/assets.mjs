@@ -11,7 +11,7 @@ import {existsSync, mkdirSync, readFileSync, writeFileSync} from 'node:fs';
 import {extname, resolve} from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {allowedLicense, providers} from './lib/asset-providers.mjs';
-import {libraryOf, MANIFEST, projectAssetIds, readManifest, ROOT, writeManifest} from './lib/library.mjs';
+import {libraryOf, MANIFEST, projectAssetIds, readManifest, readPublicManifest, ROOT, writeManifest} from './lib/library.mjs';
 
 const argv = process.argv.slice(2);
 const opt = (name) => (argv.includes(name) ? argv[argv.indexOf(name) + 1] : undefined);
@@ -40,7 +40,7 @@ const install = (id, data, meta) => {
   writeFileSync(resolve(ROOT, 'public', path), data);
   const measured = probe(resolve(ROOT, 'public', path));
   const durationSeconds = kind === 'image' ? undefined : measured.durationSeconds;
-  const manifest = readManifest();
+  const manifest = readPublicManifest();
   manifest.assets[id] = {id, kind, path, width: measured.width, height: measured.height, durationSeconds, sha256: sha(data), bytes: data.length, license: meta.license, licenseUrl: meta.licenseUrl ?? '', author: meta.author ?? '', source: meta.source ?? '', attributionRequired: !!meta.attribution, description: meta.description ?? '', tags: meta.tags ?? [], focus: meta.focus, retrieved: new Date().toISOString().slice(0, 10)};
   writeManifest(manifest);
   console.log(`${id}: ${measured.width ?? '-'}x${measured.height ?? '-'} ${meta.license} → public/${path}`);

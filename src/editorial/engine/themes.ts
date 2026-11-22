@@ -6,9 +6,9 @@ export type Palette = {
   ink: string; muted: string; accent: string; accent2: string; danger: string; onAccent: string;
 };
 export type Variant = 'base' | 'inverse' | 'block';
-export type FieldKind = 'silk' | 'ink' | 'beam' | 'paper' | 'gradient' | 'solid';
-export type MotionPersonality = 'fluid' | 'snappy' | 'weighty' | 'calm';
-export type EmphasisKind = 'color' | 'marker' | 'underline' | 'italic' | 'strike' | 'box';
+export type FieldKind = 'silk' | 'ink' | 'beam' | 'paper' | 'gradient' | 'solid' | 'stage';
+export type MotionPersonality = 'fluid' | 'snappy' | 'weighty' | 'calm' | 'keynote';
+export type EmphasisKind = 'color' | 'marker' | 'underline' | 'italic' | 'strike' | 'box' | 'gradient';
 export type FontRole = {family: string; weight: number; tracking: number; leading: number};
 
 export type ArtDirection = {
@@ -159,6 +159,25 @@ export const artDirections: Record<string, ArtDirection> = {
     compatibleWith: [],
   },
 };
+
+/**
+ * Keynote: product-film restraint. A black or near-white stage lit by one soft key, tight Inter Tight display,
+ * words that come out of focus, springs without bounce, and one gradient word per reel. See docs/KEYNOTE_DIRECTION.md.
+ */
+artDirections.keynote = {
+  id: 'keynote', label: 'Keynote product film', intent: 'Launches, products, phenomena, money told calmly: a lit stage, one hero, huge tight type, motion without bounce.',
+  palettes: {
+    base: {bg: '#000000', bg2: '#2C2C34', surface: '#1C1C1E', line: '#3A3A3C', ink: '#F5F5F7', muted: '#A1A1A6', accent: '#FF8A4C', accent2: '#B18CFF', danger: '#FF6961', onAccent: '#000000'},
+    inverse: {bg: '#F5F5F7', bg2: '#FFFFFF', surface: '#FFFFFF', line: '#D2D2D7', ink: '#1D1D1F', muted: '#6E6E73', accent: '#C2410C', accent2: '#6D28D9', danger: '#C81E1E', onAccent: '#FFFFFF'},
+    block: {bg: '#030A1F', bg2: '#1E3C8C', surface: '#0B1A3D', line: '#33508F', ink: '#F5F5F7', muted: '#B4C3E6', accent: '#FFB36B', accent2: '#9DB8FF', danger: '#FF8F80', onAccent: '#030A1F'},
+  },
+  display: role(tight, 700, -3.5, 0.94), statement: role(tight, 700, -2.5, 1.0), italic: role(tight, 500, -2, 1.02),
+  body: role(tight, 500, -0.5, 1.3), label2: role(tight, 500, 0.5, 1.2), mono: monoRole,
+  field: 'stage', grain: 0.22, vignette: 0.32, radius: 40, motion: 'keynote', emphasis: 'gradient',
+  captions: {background: '#1C1C1E', ink: '#F5F5F7', hot: '#FFB36B', radius: 22, font: role(tight, 700, -0.5, 1.15)},
+  compatibleWith: [],
+};
+
 export const artIds = Object.keys(artDirections);
 
 /** A scene's colours: its direction's palette in the requested variant. */

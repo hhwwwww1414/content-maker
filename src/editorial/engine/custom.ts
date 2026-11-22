@@ -9,6 +9,7 @@ import {WaterTest} from './scenes/custom/WaterTest';
 import {ScrollClock} from './scenes/custom/ScrollClock';
 import {FeedTunnel} from './scenes/custom/FeedTunnel';
 import {BookEnd} from './scenes/custom/BookEnd';
+import {KeynoteBlink, KeynotePhone, KeynoteStat} from './scenes/custom/Keynote';
 import {DecisionFall, LossPhone, QuietButton, ZeroCorridor} from './scenes/custom/LossTrap';
 
 /**
@@ -17,4 +18,4 @@ import {DecisionFall, LossPhone, QuietButton, ZeroCorridor} from './scenes/custo
  * and the same layout guard. Add a Lab story and look at real frames when you add one.
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const customShots: Record<string, React.FC<any>> = {signalRings: SignalRings, egoDoors: EgoDoors, beatPaper: BeatPaper, beatStrike: BeatStrike, wantGauges: WantGauges, letterWall: LetterWall, feedWall: FeedWall, waterTest: WaterTest,scrollClock: ScrollClock, feedTunnel: FeedTunnel, bookEnd: BookEnd, lossPhone: LossPhone, zeroCorridor: ZeroCorridor, decisionFall: DecisionFall, quietButton: QuietButton};
+export const customShots: Record<string, React.FC<any>> = {signalRings: SignalRings, egoDoors: EgoDoors, beatPaper: BeatPaper, beatStrike: BeatStrike, wantGauges: WantGauges, letterWall: LetterWall, feedWall: FeedWall, waterTest: WaterTest,scrollClock: ScrollClock, feedTunnel: FeedTunnel, bookEnd: BookEnd, lossPhone: LossPhone, zeroCorridor: ZeroCorridor, decisionFall: DecisionFall, quietButton: QuietButton, keynoteBlink: KeynoteBlink, keynoteStat: KeynoteStat, keynotePhone: KeynotePhone};

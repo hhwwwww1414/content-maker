@@ -18,10 +18,10 @@ A cue that is not spoken in the scene throws. A silent miss would desync the ree
 
 ## Presets
 
-- **Eases:** `linear`, `out`, `outSoft`, `in`, `inOut`, `expoInOut`, `back`, `anticipate`.
-- **Springs:** `settle`, `soft`, `snap`, `pop`, `bounce`, `heavy`, `camera`. Controlled overshoot comes only from `pop` and `bounce`, and a test bounds it.
-- **Entrances** (`entrance(name, p)`): `rise`, `mask`, `pop`, `slideL`, `slideR`, `drop`, `blur`, `fade`, `track`, `unfold`.
-- **Pacing profiles** (`fluid`, `snappy`, `weighty`, `calm`) choose springs, stagger, drift and handheld. An art direction names one; `project.art.motion` or `direction.art.motion` overrides it.
+- **Eases:** `linear`, `out`, `outSoft`, `in`, `inOut`, `expoInOut`, `back`, `anticipate`, `quint`, `camera`.
+- **Springs:** `settle`, `soft`, `snap`, `pop`, `bounce`, `heavy`, `camera`, and the keynote family from `appleSpring(duration, bounce)`: `smooth`, `crisp`, `lively`, `hero`, `glide`. Controlled overshoot comes only from `pop`, `bounce` and `lively`.
+- **Entrances** (`entrance(name, p)`): `rise`, `mask`, `pop`, `slideL`, `slideR`, `drop`, `blur`, `fade`, `track`, `unfold`, `focus` (pass the font size as distance).
+- **Pacing profiles** (`fluid`, `snappy`, `weighty`, `calm`, `keynote`) choose springs, stagger, drift and handheld. An art direction names one; `project.art.motion` or `direction.art.motion` overrides it.
 
 `studio/lab.mjs boards` shows all of them, and `Lab-Motion-60` shows them at 60 fps.
 

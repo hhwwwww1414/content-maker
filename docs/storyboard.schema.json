@@ -14,7 +14,8 @@
       "fluid",
       "snappy",
       "weighty",
-      "calm"
+      "calm",
+      "keynote"
      ]
     },
     "music": {
@@ -102,7 +103,8 @@
         "beam",
         "paper",
         "gradient",
-        "solid"
+        "solid",
+        "stage"
        ]
       },
       "light": {
@@ -127,7 +129,8 @@
         "fluid",
         "snappy",
         "weighty",
-        "calm"
+        "calm",
+        "keynote"
        ]
       }
      },
@@ -232,6 +235,7 @@
             "chars",
             "spoken",
             "punch",
+            "focus",
             "none"
            ]
           },
@@ -244,7 +248,8 @@
             "underline",
             "italic",
             "strike",
-            "box"
+            "box",
+            "gradient"
            ]
           },
           "emphasisCue": {
@@ -348,6 +353,7 @@
             "chars",
             "spoken",
             "punch",
+            "focus",
             "none"
            ]
           },
@@ -360,7 +366,8 @@
             "underline",
             "italic",
             "strike",
-            "box"
+            "box",
+            "gradient"
            ]
           },
           "emphasisCue": {
@@ -650,6 +657,7 @@
                "chars",
                "spoken",
                "punch",
+               "focus",
                "none"
               ]
              },
@@ -662,7 +670,8 @@
                "underline",
                "italic",
                "strike",
-               "box"
+               "box",
+               "gradient"
               ]
              },
              "emphasisCue": {
@@ -792,6 +801,7 @@
             "chars",
             "spoken",
             "punch",
+            "focus",
             "none"
            ]
           },
@@ -804,7 +814,8 @@
             "underline",
             "italic",
             "strike",
-            "box"
+            "box",
+            "gradient"
            ]
           },
           "emphasisCue": {
@@ -1036,6 +1047,7 @@
               "chars",
               "spoken",
               "punch",
+              "focus",
               "none"
              ]
             },
@@ -1048,7 +1060,8 @@
               "underline",
               "italic",
               "strike",
-              "box"
+              "box",
+              "gradient"
              ]
             },
             "emphasisCue": {
@@ -1216,6 +1229,7 @@
               "chars",
               "spoken",
               "punch",
+              "focus",
               "none"
              ]
             },
@@ -1228,7 +1242,8 @@
               "underline",
               "italic",
               "strike",
-              "box"
+              "box",
+              "gradient"
              ]
             },
             "emphasisCue": {
@@ -1400,6 +1415,7 @@
               "chars",
               "spoken",
               "punch",
+              "focus",
               "none"
              ]
             },
@@ -1412,7 +1428,8 @@
               "underline",
               "italic",
               "strike",
-              "box"
+              "box",
+              "gradient"
              ]
             },
             "emphasisCue": {
@@ -1603,6 +1620,7 @@
               "chars",
               "spoken",
               "punch",
+              "focus",
               "none"
              ]
             },
@@ -1615,7 +1633,8 @@
               "underline",
               "italic",
               "strike",
-              "box"
+              "box",
+              "gradient"
              ]
             },
             "emphasisCue": {
@@ -2210,6 +2229,7 @@
             "chars",
             "spoken",
             "punch",
+            "focus",
             "none"
            ]
           },
@@ -2222,7 +2242,8 @@
             "underline",
             "italic",
             "strike",
-            "box"
+            "box",
+            "gradient"
            ]
           },
           "emphasisCue": {
@@ -2405,6 +2426,7 @@
               "chars",
               "spoken",
               "punch",
+              "focus",
               "none"
              ]
             },
@@ -2417,7 +2439,8 @@
               "underline",
               "italic",
               "strike",
-              "box"
+              "box",
+              "gradient"
              ]
             },
             "emphasisCue": {
@@ -2640,6 +2663,7 @@
               "chars",
               "spoken",
               "punch",
+              "focus",
               "none"
              ]
             },
@@ -2652,7 +2676,8 @@
               "underline",
               "italic",
               "strike",
-              "box"
+              "box",
+              "gradient"
              ]
             },
             "emphasisCue": {
@@ -2876,6 +2901,7 @@
               "chars",
               "spoken",
               "punch",
+              "focus",
               "none"
              ]
             },
@@ -2888,7 +2914,8 @@
               "underline",
               "italic",
               "strike",
-              "box"
+              "box",
+              "gradient"
              ]
             },
             "emphasisCue": {
@@ -3157,6 +3184,7 @@
               "chars",
               "spoken",
               "punch",
+              "focus",
               "none"
              ]
             },
@@ -3169,7 +3197,8 @@
               "underline",
               "italic",
               "strike",
-              "box"
+              "box",
+              "gradient"
              ]
             },
             "emphasisCue": {
@@ -3367,6 +3396,7 @@
               "chars",
               "spoken",
               "punch",
+              "focus",
               "none"
              ]
             },
@@ -3379,7 +3409,8 @@
               "underline",
               "italic",
               "strike",
-              "box"
+              "box",
+              "gradient"
              ]
             },
             "emphasisCue": {
@@ -3610,6 +3641,7 @@
               "chars",
               "spoken",
               "punch",
+              "focus",
               "none"
              ]
             },
@@ -3622,7 +3654,8 @@
               "underline",
               "italic",
               "strike",
-              "box"
+              "box",
+              "gradient"
              ]
             },
             "emphasisCue": {
@@ -4301,6 +4334,7 @@
             "chars",
             "spoken",
             "punch",
+            "focus",
             "none"
            ]
           },
@@ -4313,7 +4347,8 @@
             "underline",
             "italic",
             "strike",
-            "box"
+            "box",
+            "gradient"
            ]
           },
           "emphasisCue": {
@@ -4469,7 +4504,8 @@
         "panRight",
         "tiltUp",
         "tiltDown",
-        "driftUp"
+        "driftUp",
+        "creep"
        ]
       },
       "keys": {
@@ -4515,7 +4551,12 @@
            "pop",
            "bounce",
            "heavy",
-           "camera"
+           "camera",
+           "smooth",
+           "crisp",
+           "lively",
+           "hero",
+           "glide"
           ]
          }
         },

@@ -21,7 +21,12 @@ def norm(text):
 
 
 model = WhisperModel('small', device='cpu', compute_type='int8', download_root=str(ROOT / 'runs/studio/whisper-models'), local_files_only=True)
-segments, _ = model.transcribe(str(ROOT / 'public' / project['audio']['voicePath']), language='ru', word_timestamps=True, vad_filter=False)
+# Whisper writes numerals as digits and mangles brand names spoken phonetically. audio.whisperHint names the brands
+# and asks for numbers in words; it never contains the script, so the check stays an independent hearing.
+# Opt-in per project: a hint changes how Whisper hears everything, so reels that pass without one keep none.
+extra = project['audio'].get('whisperHint')
+hint = f'Все числа записываются словами. {extra}' if extra else None
+segments, _ = model.transcribe(str(ROOT / 'public' / project['audio']['voicePath']), language='ru', word_timestamps=True, vad_filter=False, initial_prompt=hint)
 heard = [(norm(w.word), w.start) for s in segments for w in s.words if norm(w.word)]
 captions = [(norm(c['text']), c['startMs'] / 1000) for c in project['captions'] if norm(c['text'])]
 matcher = difflib.SequenceMatcher(a=[w for w, _ in captions], b=[w for w, _ in heard], autojunk=False)

@@ -18,7 +18,7 @@ import {Finish} from './engine/fx/Finish';
 import {ShotView, parseDirection} from './engine/ShotView';
 import {duckedVolume} from './engine/sound';
 import {transitionFrames, TransitionOverlay, TransitionShell} from './engine/transitions/Transitions';
-import {EngineCaptions} from './engine/type/Captions';
+import {displayWords, EngineCaptions} from './engine/type/Captions';
 import {artDirections} from './engine/themes';
 import {cueSeconds, normWord} from './kit/cue';
 import {staticFile as assetFile} from 'remotion';
@@ -99,7 +99,7 @@ const DirectedVideo: React.FC<{project: Project}> = ({project}) => {
             </Sequence>
           );
         })}
-        <EngineCaptions words={project.captions} art={main} scenes={scenes}/>
+        <EngineCaptions words={displayWords(project.captions, project.captionDisplay)} art={main} scenes={scenes}/>
         <Finish art={main}/>
         <LayoutGuard root={root}/>
         {/* Headroom for the mix: music and effects sum on top of a voice mastered to -1.5 dBTP. */}

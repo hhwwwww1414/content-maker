@@ -24,6 +24,8 @@ export type Project = {
   /** Library entries this reel uses, inlined by studio/render.mjs. */
   assets?: Record<string, unknown>;
   scenes: Scene[]; captions: Caption[];
+  /** How spoken words are written on screen: "вин ту вин" → "VIN2WIN". Timing and voice are unchanged. */
+  captionDisplay?: Array<{from: string; to: string}>;
   sources: Array<{id: string; publisher: string}>;
   audio: {mode?: 'music'; voicePath?: string | null; musicPath?: string | null; volume?: number; sfx?: Array<{path: string; start: number; volume: number; license: string}>};
 };
