@@ -1,0 +1,1337 @@
+{
+  "id": "gambling-loss-trap-claude",
+  "topic": "Почему после проигрыша хочется поставить ещё",
+  "niche": "psychology",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "publication": "draft",
+    "production": "rendered",
+    "approvedScriptHash": "0a1a3fbe98477a0a",
+    "approval": {
+      "by": "qwezyid (одобрено в чате, 2026-11-02)",
+      "at": "2026-11-02"
+    }
+  },
+  "sources": [
+    {
+      "id": "nhs",
+      "publisher": "NHS",
+      "url": "https://www.nhs.uk/live-well/healthy-body/gambling-addiction/",
+      "accessed": "2026-11-02",
+      "claim": "Чек-лист NHS называет chasing losses: «Have you tried to win back money you have lost (chasing losses)?»; также финансовые и психологические последствия и куда обращаться (Великобритания)."
+    },
+    {
+      "id": "who",
+      "publisher": "ВОЗ",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/gambling",
+      "accessed": "2026-11-02",
+      "claim": "Информационный бюллетень 02.12.2024: расстройство по МКБ-11 включает нарушение контроля над игрой и продолжение игры несмотря на негативные последствия. Статистика в ролике не используется."
+    },
+    {
+      "id": "banerjee2023",
+      "publisher": "Banerjee et al., 2023",
+      "url": "https://doi.org/10.1016/j.neubiorev.2023.105377",
+      "accessed": "2026-11-02",
+      "claim": "Абстракт: погоня за проигрышем — склонность продолжать и/или усиливать игру после проигрышей; ключевой клинический симптом, но понятие операционализируют по-разному. Полный текст не читался."
+    },
+    {
+      "id": "campbell2008",
+      "publisher": "Campbell-Meiklejohn et al., 2008",
+      "url": "https://doi.org/10.1016/j.biopsych.2007.05.014",
+      "accessed": "2026-11-02",
+      "claim": "Абстракт: «continued gambling to recover previous losses (loss-chasing)». Нейро-выводы статьи в ролике не используются. Полный текст не читался."
+    },
+    {
+      "id": "brown2020",
+      "publisher": "Brown et al., 2020",
+      "url": "https://doi.org/10.31222/osf.io/hnefr",
+      "accessed": "2026-11-02",
+      "claim": "Абстракт: 607 оценок из 150 статей, средний коэффициент неприятия потерь 1,955. Основание для «обычно ощущается тяжелее». Коэффициент в ролике не называется. Читалась версия-препринт."
+    },
+    {
+      "id": "yechiam2019",
+      "publisher": "Yechiam, 2019",
+      "url": "https://doi.org/10.1007/s00426-018-1013-8",
+      "accessed": "2026-11-02",
+      "claim": "Абстракт: критика — большие потери перевешивают, а малые часто нет. Поэтому в тексте стоит «обычно», а не «всегда». Полный текст не читался."
+    }
+  ],
+  "title": "Самая дорогая кнопка в твоей жизни",
+  "hook": "Ты проиграл тысячу. И теперь готов потерять десять, лишь бы вернуть её.",
+  "centralIdea": "Погоня за проигрышем выдаёт ещё одну ставку за план; вернуть прошлую тысячу никто не обещает, а следующая пока твоя.",
+  "theme": "signal",
+  "captionStyle": "plate",
+  "art": {
+    "direction": "thriller",
+    "motion": "weighty",
+    "music": {
+      "asset": "bed-loss-trap",
+      "volume": 0.28,
+      "duck": 0.45
+    }
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 40.96666666666667,
+  "scenes": [
+    {
+      "id": "hook",
+      "voice": "Ты проиграл тысячу. И теперь готов потерять десять, лишь бы вернуть её.",
+      "onScreen": "−1 000 ₽",
+      "thought": "Маленькая сумма светится как приговор",
+      "animation": "Огромный телефон в темноте, камера идёт в экран",
+      "sources": [
+        "nhs"
+      ],
+      "start": 0,
+      "duration": 5.066666666666666,
+      "direction": {
+        "purpose": "opening",
+        "emotion": "холод, узнавание",
+        "concept": "Маленькая сумма стоит монументом: комната гаснет, телефон один светится, тысяча на глазах становится десятью",
+        "art": {
+          "variant": "base"
+        },
+        "hierarchy": {
+          "primary": "−1 000 на экране телефона"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "lossPhone",
+          "props": {
+            "darkCue": "потерять",
+            "tenCue": "десять",
+            "buttonCue": "вернуть"
+          },
+          "review": "Телефон-монолит со своим светом и отражением: device рисует плоский интерфейс, а не объект в комнате"
+        },
+        "camera": {
+          "move": "still"
+        },
+        "source": "hide",
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "choreography": [
+          {
+            "cue": "потерять",
+            "action": "комната гаснет, камера идёт к экрану"
+          },
+          {
+            "cue": "десять",
+            "action": "сумма превращается в −10 000, толчок камеры"
+          },
+          {
+            "cue": "вернуть",
+            "action": "кнопка «Ещё раз» разгорается"
+          }
+        ],
+        "sound": [
+          {
+            "cue": 0.02,
+            "sfx": "notify-muted",
+            "volume": 0.5
+          },
+          {
+            "cue": "десять",
+            "sfx": "impact-sub",
+            "volume": 0.37
+          }
+        ]
+      }
+    },
+    {
+      "id": "weight",
+      "voice": "Потеря обычно ощущается тяжелее такого же выигрыша. Тысяча ушла, а дело будто не закончено.",
+      "onScreen": "−1 000 тяжелее +1 000",
+      "thought": "Равные суммы весят по-разному",
+      "animation": "Уведомление становится грузом, весы проседают",
+      "sources": [
+        "brown2020",
+        "yechiam2019"
+      ],
+      "start": 5.066666666666666,
+      "duration": 6.366666666666667,
+      "direction": {
+        "purpose": "explain",
+        "emotion": "тяжесть",
+        "concept": "Равные суммы на одних весах, но чаша с потерей падает: у одной и той же тысячи разный вес",
+        "art": {
+          "variant": "base",
+          "field": "ink"
+        },
+        "hierarchy": {
+          "primary": "чаша с −1 000 уходит вниз",
+          "secondary": [
+            "+1 000"
+          ]
+        },
+        "shot": {
+          "type": "stage3d",
+          "preset": "balance",
+          "left": "weight",
+          "right": "weight",
+          "leftCount": 1,
+          "rightCount": 1,
+          "tilts": [
+            {
+              "cue": "тяжелее",
+              "tilt": 0.3
+            },
+            {
+              "cue": "закончено",
+              "tilt": 0.36
+            }
+          ],
+          "pushCue": "ощущается",
+          "orbit": 0.14,
+          "labels": [
+            {
+              "target": 0,
+              "text": "+1 000",
+              "cue": "такого"
+            },
+            {
+              "target": 1,
+              "text": "−1 000",
+              "cue": "Потеря"
+            }
+          ],
+          "title": {
+            "text": "Та же тысяча. *Другой вес.*",
+            "cue": "Потеря",
+            "reveal": "lines",
+            "emphasis": "color",
+            "tone": "ink"
+          },
+          "titleAnchor": "top"
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "through",
+          "origin": [
+            0.5,
+            0.42
+          ],
+          "seconds": 0.7,
+          "intent": "Камера входит в сумму на экране и выходит к ней уже как к весу"
+        },
+        "source": "show",
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "choreography": [
+          {
+            "cue": "тяжелее",
+            "action": "чаша с потерей падает"
+          },
+          {
+            "cue": "ощущается",
+            "action": "камера наезжает на чашу с потерей"
+          },
+          {
+            "cue": "закончено",
+            "action": "чаша проседает ещё"
+          }
+        ],
+        "sound": [
+          {
+            "cue": "тяжелее",
+            "sfx": "impact-sub",
+            "volume": 0.34
+          },
+          {
+            "cue": "закончено",
+            "sfx": "thud",
+            "volume": 0.25
+          }
+        ]
+      }
+    },
+    {
+      "id": "corridor",
+      "voice": "Ещё одна попытка, и всё отменится. Минус две. Минус пять. Минус десять. Ноль всё дальше, а шаг к нему всё дороже.",
+      "onScreen": "−10 000",
+      "thought": "Идёшь к нулю, а он отдаляется",
+      "animation": "Полёт по сужающемуся коридору из чисел",
+      "sources": [
+        "campbell2008"
+      ],
+      "start": 11.433333333333334,
+      "duration": 8.866666666666667,
+      "direction": {
+        "purpose": "turn",
+        "emotion": "нарастающая теснота",
+        "concept": "Коридор из чисел: идёшь к нулю, а он отступает, и единственное, что приближается, это стены",
+        "art": {
+          "variant": "block",
+          "field": "solid"
+        },
+        "hierarchy": {
+          "primary": "счётчик минуса",
+          "secondary": [
+            "ноль вдали"
+          ]
+        },
+        "shot": {
+          "type": "custom",
+          "component": "zeroCorridor",
+          "props": {
+            "amounts": [
+              "−1 000",
+              "−2 000",
+              "−5 000",
+              "−10 000"
+            ],
+            "cues": [
+              "Минус",
+              "Минус#2",
+              "Минус#3"
+            ],
+            "farCue": "Ноль",
+            "costCue": "шаг"
+          },
+          "review": "Полёт в сужающемся 3D-коридоре с убегающим нулём: у timeline corridor нет ни сужения, ни отступающей цели"
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "depth",
+          "seconds": 0.6,
+          "intent": "Шаг вперёд: весы отступают, и зритель уже внутри коридора"
+        },
+        "source": "hide",
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "choreography": [
+          {
+            "cue": "Минус",
+            "action": "ноль отброшен, стены сжались"
+          },
+          {
+            "cue": "Минус#2",
+            "action": "ещё дальше и теснее"
+          },
+          {
+            "cue": "Минус#3",
+            "action": "пик сжатия"
+          },
+          {
+            "cue": "Ноль",
+            "action": "ноль становится точкой"
+          },
+          {
+            "cue": "шаг",
+            "action": "камера почти останавливается"
+          }
+        ],
+        "sound": [
+          {
+            "cue": "Минус",
+            "sfx": "impact-sub",
+            "volume": 0.34
+          },
+          {
+            "cue": "Минус#2",
+            "sfx": "impact-sub",
+            "volume": 0.41
+          },
+          {
+            "cue": "Минус#3",
+            "sfx": "impact-sub",
+            "volume": 0.49
+          }
+        ]
+      }
+    },
+    {
+      "id": "name",
+      "voice": "Это называют погоней за проигрышем. Так бывает не у всех. Но когда бывает, цель меняется: не выиграть, а вернуться в ноль.",
+      "onScreen": "Погоня за проигрышем",
+      "thought": "У ловушки есть имя",
+      "animation": "Название занимает кадр, «выиграть» перечёркнуто",
+      "sources": [
+        "banerjee2023",
+        "nhs"
+      ],
+      "start": 20.3,
+      "duration": 8.733333333333334,
+      "direction": {
+        "purpose": "reveal",
+        "emotion": "ясность после давления",
+        "concept": "У ловушки появляется имя: весь экран занимает название, а прежняя цель вычёркивается прямо на глазах",
+        "art": {
+          "variant": "block",
+          "field": "silk"
+        },
+        "hierarchy": {
+          "primary": "Погоня за проигрышем",
+          "secondary": [
+            "Выиграть зачёркнуто"
+          ]
+        },
+        "shot": {
+          "type": "type",
+          "layout": "poster",
+          "anchor": "center",
+          "ghost": "0",
+          "headline": {
+            "text": "Погоня за / *проигрышем*",
+            "cue": "называют",
+            "reveal": "lines",
+            "emphasis": "color",
+            "emphasisCue": "проигрышем"
+          },
+          "sub": {
+            "text": "*Выиграть.* Вернуться в ноль.",
+            "cue": "цель",
+            "reveal": "lines",
+            "emphasis": "strike",
+            "emphasisCue": "выиграть",
+            "role": "statement",
+            "tone": "accent2",
+            "maxSize": 98
+          }
+        },
+        "camera": {
+          "move": "pushIn",
+          "keys": [
+            {
+              "cue": "меняется",
+              "scale": 1.05,
+              "seconds": 1.2
+            }
+          ]
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Само слово и есть поворот: из темноты в бордо без перехода"
+        },
+        "source": "show",
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "choreography": [
+          {
+            "cue": "называют",
+            "action": "название вырастает на весь кадр"
+          },
+          {
+            "cue": "меняется",
+            "action": "камера чуть наезжает"
+          },
+          {
+            "cue": "выиграть",
+            "action": "зачёркивание"
+          }
+        ],
+        "sound": []
+      }
+    },
+    {
+      "id": "fall",
+      "voice": "Ты же хотел остановиться. «Верну и уйду» звучит как план. А на деле это ещё одна ставка.",
+      "onScreen": "Верну и уйду",
+      "thought": "Обещание остановиться само стало ставкой",
+      "animation": "Падение сквозь стеклянные слои решений",
+      "sources": [
+        "who",
+        "banerjee2023"
+      ],
+      "start": 29.033333333333335,
+      "duration": 6.4999999999999964,
+      "direction": {
+        "purpose": "climax",
+        "emotion": "падение, разоблачение",
+        "concept": "Монета падает сквозь стёкла с обещаниями и разбивает каждое на слове; последнее стекло держит, и на нём уже не план, а ставка",
+        "art": {
+          "variant": "base"
+        },
+        "hierarchy": {
+          "primary": "«Верну и уйду»",
+          "secondary": [
+            "ещё одна ставка"
+          ]
+        },
+        "shot": {
+          "type": "custom",
+          "component": "decisionFall",
+          "props": {
+            "panes": [
+              "Хватит",
+              "Сейчас отыграюсь",
+              "Верну и уйду",
+              "Последняя"
+            ],
+            "hits": [
+              "остановиться",
+              "уйду",
+              "план",
+              "ставка"
+            ],
+            "planCue": "Верну",
+            "betCue": "ставка",
+            "plan": "«Верну и уйду»",
+            "bet": "ещё одна ставка"
+          },
+          "review": "Камера падает за объектом сквозь разбивающиеся слои: journey descend ведёт по узлам и не разбивает поверхности"
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "mask",
+          "shape": "circle",
+          "origin": [
+            0.5,
+            0.45
+          ],
+          "seconds": 0.5,
+          "intent": "Ноль из прошлой сцены раскрывается провалом, в который всё падает"
+        },
+        "source": "hide",
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "choreography": [
+          {
+            "cue": "остановиться",
+            "action": "разбито «Хватит»"
+          },
+          {
+            "cue": "уйду",
+            "action": "разбито второе стекло"
+          },
+          {
+            "cue": "план",
+            "action": "разбито «Верну и уйду»"
+          },
+          {
+            "cue": "ставка",
+            "action": "монета падает на последнее стекло, текст сменяется"
+          }
+        ],
+        "sound": [
+          {
+            "cue": "остановиться",
+            "sfx": "glass-crack",
+            "volume": 0.3
+          },
+          {
+            "cue": "уйду",
+            "sfx": "glass-crack",
+            "volume": 0.36
+          },
+          {
+            "cue": "план",
+            "sfx": "glass-crack",
+            "volume": 0.42
+          },
+          {
+            "cue": "ставка",
+            "sfx": "impact-sub",
+            "volume": 0.48
+          }
+        ]
+      }
+    },
+    {
+      "id": "end",
+      "voice": "Тысячу ты, может, и не вернёшь. Зато следующая всё ещё твоя.",
+      "onScreen": "Следующая всё ещё твоя",
+      "thought": "Рука останавливается, экран гаснет",
+      "animation": "Тень пальца замирает над кнопкой и уходит, экран гаснет",
+      "sources": [
+        "nhs"
+      ],
+      "start": 35.53333333333333,
+      "duration": 5.433333333333337,
+      "direction": {
+        "purpose": "payoff",
+        "emotion": "тишина, облегчение без победы",
+        "concept": "Первый кадр наоборот: палец приближается к кнопке и замирает, экран гаснет, и монолит снова в комнате со светом",
+        "art": {
+          "variant": "base"
+        },
+        "hierarchy": {
+          "primary": "Следующая всё ещё твоя"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "quietButton",
+          "props": {
+            "stopCue": "вернёшь",
+            "leaveCue": "Зато",
+            "offCue": "следующая",
+            "lineCue": "следующая",
+            "line": "Следующая всё ещё *твоя*"
+          },
+          "review": "Закрывает образ телефона-монолита из первой сцены: ни одна система не держит тот же объект и свет"
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Удар и сразу тишина: контраст и есть смысл финала"
+        },
+        "source": "hide",
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "timing": {
+          "minSeconds": 4.5
+        },
+        "choreography": [
+          {
+            "cue": "вернёшь",
+            "action": "палец замирает над кнопкой"
+          },
+          {
+            "cue": "Зато",
+            "action": "палец уходит"
+          },
+          {
+            "cue": "следующая",
+            "action": "экран гаснет, камера отъезжает"
+          }
+        ],
+        "sound": [
+          {
+            "cue": "следующая",
+            "sfx": "screen-off",
+            "volume": 0.22
+          }
+        ]
+      }
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/gambling-loss-trap-claude/voice-5cd31b22ef3357af-mix.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "voiceId": "iP95p4xoKVk53GoZ742B",
+    "modelId": "eleven_v3",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.8,
+      "style": 0,
+      "speed": 1
+    },
+    "sourcePath": "generated/gambling-loss-trap-claude/voice-5cd31b22ef3357af.mp3",
+    "timingMode": "ElevenLabs character alignment",
+    "sourceDurationSeconds": 39.47102,
+    "durationSeconds": 39.432,
+    "localTempo": 1,
+    "cacheHash": "5cd31b22ef3357af",
+    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades"
+  },
+  "captions": [
+    {
+      "text": "Ты",
+      "startMs": 100,
+      "endMs": 200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "проиграл",
+      "startMs": 250,
+      "endMs": 560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тысячу.",
+      "startMs": 667,
+      "endMs": 1440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "И",
+      "startMs": 1690,
+      "endMs": 1726,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "теперь",
+      "startMs": 1726,
+      "endMs": 2000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "готов",
+      "startMs": 2053,
+      "endMs": 2320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "потерять",
+      "startMs": 2373,
+      "endMs": 2720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "десять,",
+      "startMs": 2800,
+      "endMs": 3480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "лишь",
+      "startMs": 3530,
+      "endMs": 3680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "бы",
+      "startMs": 3707,
+      "endMs": 3760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вернуть",
+      "startMs": 3820,
+      "endMs": 4160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "её.",
+      "startMs": 4240,
+      "endMs": 4480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Потеря",
+      "startMs": 5070,
+      "endMs": 5280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "обычно",
+      "startMs": 5349,
+      "endMs": 5760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ощущается",
+      "startMs": 5870,
+      "endMs": 6480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тяжелее",
+      "startMs": 6570,
+      "endMs": 7040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "такого",
+      "startMs": 7097,
+      "endMs": 7440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "же",
+      "startMs": 7493,
+      "endMs": 7600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "выигрыша.",
+      "startMs": 7653,
+      "endMs": 8240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Тысяча",
+      "startMs": 8580,
+      "endMs": 8880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ушла,",
+      "startMs": 8960,
+      "endMs": 9440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "а",
+      "startMs": 9520,
+      "endMs": 9600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "дело",
+      "startMs": 9600,
+      "endMs": 9920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "будто",
+      "startMs": 9973,
+      "endMs": 10240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 10293,
+      "endMs": 10400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "закончено.",
+      "startMs": 10467,
+      "endMs": 11040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Ещё",
+      "startMs": 11420,
+      "endMs": 11600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "одна",
+      "startMs": 11648,
+      "endMs": 11840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "попытка,",
+      "startMs": 11893,
+      "endMs": 12400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 12480,
+      "endMs": 12540,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "всё",
+      "startMs": 12540,
+      "endMs": 12720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "отменится.",
+      "startMs": 12773,
+      "endMs": 13440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Минус",
+      "startMs": 13480,
+      "endMs": 13760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "две.",
+      "startMs": 13860,
+      "endMs": 14240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Минус",
+      "startMs": 14460,
+      "endMs": 14800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "пять.",
+      "startMs": 14896,
+      "endMs": 15600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Минус",
+      "startMs": 15640,
+      "endMs": 16080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "десять.",
+      "startMs": 16150,
+      "endMs": 16960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Ноль",
+      "startMs": 17000,
+      "endMs": 17280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "всё",
+      "startMs": 17360,
+      "endMs": 17600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "дальше,",
+      "startMs": 17664,
+      "endMs": 18160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "а",
+      "startMs": 18200,
+      "endMs": 18240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "шаг",
+      "startMs": 18320,
+      "endMs": 18560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "к",
+      "startMs": 18730,
+      "endMs": 18768,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "нему",
+      "startMs": 18770,
+      "endMs": 18960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "всё",
+      "startMs": 19040,
+      "endMs": 19280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "дороже.",
+      "startMs": 19340,
+      "endMs": 19840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Это",
+      "startMs": 20290,
+      "endMs": 20400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "называют",
+      "startMs": 20440,
+      "endMs": 20960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "погоней",
+      "startMs": 21240,
+      "endMs": 21760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "за",
+      "startMs": 21840,
+      "endMs": 22000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "проигрышем.",
+      "startMs": 22080,
+      "endMs": 22800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Так",
+      "startMs": 23330,
+      "endMs": 23360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "бывает",
+      "startMs": 23400,
+      "endMs": 23760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 23813,
+      "endMs": 23920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "у",
+      "startMs": 23960,
+      "endMs": 24000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "всех.",
+      "startMs": 24080,
+      "endMs": 24480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Но",
+      "startMs": 24620,
+      "endMs": 24800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "когда",
+      "startMs": 24853,
+      "endMs": 25120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "бывает,",
+      "startMs": 25160,
+      "endMs": 25760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "цель",
+      "startMs": 25792,
+      "endMs": 25920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "меняется:",
+      "startMs": 25984,
+      "endMs": 26720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 26773,
+      "endMs": 26880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "выиграть,",
+      "startMs": 26960,
+      "endMs": 27520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "а",
+      "startMs": 27610,
+      "endMs": 27660,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вернуться",
+      "startMs": 27660,
+      "endMs": 28160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 28200,
+      "endMs": 28240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ноль.",
+      "startMs": 28280,
+      "endMs": 28560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Ты",
+      "startMs": 29040,
+      "endMs": 29067,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "же",
+      "startMs": 29067,
+      "endMs": 29120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "хотел",
+      "startMs": 29187,
+      "endMs": 29520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "остановиться.",
+      "startMs": 29570,
+      "endMs": 30240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "«Верну",
+      "startMs": 30920,
+      "endMs": 31280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 31400,
+      "endMs": 31520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "уйду»",
+      "startMs": 31600,
+      "endMs": 32160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "звучит",
+      "startMs": 32260,
+      "endMs": 32560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "как",
+      "startMs": 32610,
+      "endMs": 32720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "план.",
+      "startMs": 32880,
+      "endMs": 33120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "А",
+      "startMs": 33410,
+      "endMs": 33440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "на",
+      "startMs": 33467,
+      "endMs": 33520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "деле",
+      "startMs": 33600,
+      "endMs": 33920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "это",
+      "startMs": 33980,
+      "endMs": 34160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ещё",
+      "startMs": 34220,
+      "endMs": 34400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "одна",
+      "startMs": 34448,
+      "endMs": 34640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ставка.",
+      "startMs": 34688,
+      "endMs": 35120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Тысячу",
+      "startMs": 35520,
+      "endMs": 35840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ты,",
+      "startMs": 35920,
+      "endMs": 36240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "может,",
+      "startMs": 36280,
+      "endMs": 36520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 36540,
+      "endMs": 36560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 36587,
+      "endMs": 36640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вернёшь.",
+      "startMs": 36720,
+      "endMs": 37320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Зато",
+      "startMs": 37400,
+      "endMs": 37600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "следующая",
+      "startMs": 37660,
+      "endMs": 38240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "всё",
+      "startMs": 38320,
+      "endMs": 38560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ещё",
+      "startMs": 38640,
+      "endMs": 38880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "твоя.",
+      "startMs": 38960,
+      "endMs": 39440,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "limits": {
+    "minSeconds": 35,
+    "maxSeconds": 45,
+    "endHoldSeconds": 1.5
+  },
+  "editorialReview": {
+    "openClaims": [
+      "«Цель меняется: не выиграть, а вернуться в ноль» — авторская формулировка на основе определения погони как игры ради возврата проигранного (Campbell-Meiklejohn 2008, NHS). Прямой источник про точку отсчёта и break-even (Thaler & Johnson 1990) открыть не удалось.",
+      "Неприятие потерь оспаривается (Yechiam 2019), особенно на малых суммах; в тексте смягчено словом «обычно». Погоня за проигрышем и неприятие потерь — связанные, но разные понятия.",
+      "Механизм не объясняет всю игровую зависимость и встречается не у всех: это проговорено в тексте.",
+      "Суммы 1 000, 2 000, 5 000, 10 000 вымышленные. Интерфейс на телефоне вымышленный, брендов нет.",
+      "Российская линия помощи при игровой зависимости не подтверждена. Для подписи к посту контакт нужно проверить отдельно; в ролик не добавлен."
+    ]
+  },
+  "renderPath": "out/studio/gambling-loss-trap-claude.mp4",
+  "qa": {
+    "path": "out/studio/gambling-loss-trap-claude-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  }
+}

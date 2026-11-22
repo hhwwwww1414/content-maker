@@ -61,7 +61,40 @@ export const wordsForRange = (timedChars, charStart, charEnd) => {
       startMs: Math.round(word.startMs),
       endMs: Math.round(word.endMs),
     }))
+    // `[calm]` and friends are instructions to the voice, not words on screen.
+    .filter((word) => !/^\[[^\]]*\]$/u.test(word.text))
     .filter((word) => word.clean.length > 0 || !PUNCT.test(word.text));
+};
+
+/**
+ * A spelled-out number occupies several spoken words ("две тысячи двадцать
+ * пятого") but exactly one written token on screen ("2025"). Substituting word
+ * by word would replace only the part that happens to match and print
+ * "ТЫСЯЧИ 29", so the whole run is merged into a single word before clustering.
+ * Merging also stops a cluster boundary from landing inside a number.
+ */
+const mergeDisplayPhrases = (words, display) => {
+  const phrases = [...display.keys()]
+    .filter((key) => key.includes(' '))
+    .map((key) => ({key, parts: key.split(/\s+/u)}))
+    .sort((a, b) => b.parts.length - a.parts.length);
+  if (phrases.length === 0) return words;
+
+  const out = [];
+  for (let i = 0; i < words.length; ) {
+    const match = phrases.find(({parts}) =>
+      parts.every((part, offset) => words[i + offset]?.clean.toLowerCase() === part),
+    );
+    if (!match) {
+      out.push(words[i]);
+      i += 1;
+      continue;
+    }
+    const span = words.slice(i, i + match.parts.length);
+    out.push({...span[0], clean: match.key, text: match.key, endMs: span[span.length - 1].endMs});
+    i += match.parts.length;
+  }
+  return out;
 };
 
 /**
@@ -177,7 +210,7 @@ export const buildCaptions = (lineRanges, timedChars, config) => {
   const lineTimings = [];
 
   for (const range of lineRanges) {
-    const words = wordsForRange(timedChars, range.charStart, range.charEnd);
+    const words = mergeDisplayPhrases(wordsForRange(timedChars, range.charStart, range.charEnd), display);
     if (words.length === 0) {
       lineTimings.push({...range, startMs: null, endMs: null, wordCount: 0});
       continue;

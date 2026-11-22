@@ -1,0 +1,836 @@
+{
+  "id": "gta6-phenomenon",
+  "topic": "GTA VI: в чём феномен",
+  "niche": "games",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "publication": "draft",
+    "production": "rendered",
+    "approvedScriptHash": "054b5baf0e06f282",
+    "approval": {
+      "by": "qwezyid",
+      "at": "2026-11-18"
+    }
+  },
+  "sources": [
+    {
+      "id": "rs-date",
+      "publisher": "Rockstar",
+      "url": "https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026",
+      "accessed": "2026-11-18",
+      "claim": "GTA VI выходит 19 ноября 2026 года (после переноса с 26 мая 2026)"
+    },
+    {
+      "id": "guinness-t1",
+      "publisher": "Guinness",
+      "url": "https://www.tweaktown.com/news/105101/grand-theft-auto-6-trailer-2-fails-to-beat-the-world-record-set-by-1/index.html",
+      "accessed": "2026-11-18",
+      "claim": "Первый трейлер: 90 421 491 просмотр на YouTube за 24 часа, рекорд Гиннесса для анонса видеоигры"
+    },
+    {
+      "id": "thr-t2",
+      "publisher": "THR",
+      "url": "https://www.hollywoodreporter.com/business/business-news/gta-6-trailer-2-views-record-1236210396/",
+      "accessed": "2026-11-18",
+      "claim": "Второй трейлер: более 475 млн просмотров на всех платформах за первые сутки"
+    },
+    {
+      "id": "tt-gta5",
+      "publisher": "Take-Two",
+      "url": "https://www.gamedeveloper.com/business/gta-v-surpasses-230-million-sales-months-before-gta-vi-touches-down",
+      "accessed": "2026-11-18",
+      "claim": "GTA V: более 230 млн копий (sold-in), вышла в 2013 году"
+    }
+  ],
+  "title": "GTA VI: почему её ждут как событие",
+  "hook": "19 ноября выходит GTA VI, и это уже не просто игра.",
+  "centralIdea": "GTA VI ждут не как игру, а как событие, которое случается раз в десятилетие.",
+  "theme": "signal",
+  "captionStyle": "plate",
+  "art": {
+    "direction": "bold",
+    "music": {
+      "asset": "bed-pulse",
+      "volume": 0.11,
+      "duck": 0.55
+    }
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 26.1,
+  "scenes": [
+    {
+      "id": "hook",
+      "voice": "Девятнадцатого ноября выходит GTA шесть. И это уже не просто игра.",
+      "onScreen": "GTA VI · 19 НОЯБРЯ",
+      "thought": "Дата релиза как анонс события, а не строчка в магазине",
+      "animation": "Огромная дата на сплошном цвете — постер премьеры",
+      "sources": [
+        "rs-date"
+      ],
+      "direction": {
+        "purpose": "opening",
+        "emotion": "предвкушение",
+        "concept": "Название и дата занимают весь кадр, как афиша премьеры, а не карточка товара",
+        "hierarchy": {
+          "primary": "GTA VI"
+        },
+        "art": {
+          "variant": "block"
+        },
+        "shot": {
+          "type": "type",
+          "layout": "poster",
+          "headline": {
+            "text": "GTA VI / *19 ноября*",
+            "cue": "Девятнадцатого"
+          },
+          "sub": {
+            "text": "Уже не просто *игра*",
+            "cue": "игра"
+          }
+        },
+        "camera": {
+          "move": "pushIn",
+          "keys": [
+            {
+              "cue": "игра",
+              "scale": 1.08,
+              "seconds": 1.2
+            }
+          ]
+        },
+        "sound": [
+          {
+            "cue": "GTA",
+            "sfx": "thud",
+            "volume": 0.4
+          }
+        ]
+      },
+      "start": 0,
+      "duration": 4.333333333333333
+    },
+    {
+      "id": "wait",
+      "voice": "Между пятой и шестой частью прошло тринадцать лет. Целое поколение выросло, ожидая её.",
+      "onScreen": "13 ЛЕТ ОЖИДАНИЯ",
+      "thought": "Тринадцать лет — это длиннее детства",
+      "animation": "Экран занят 2013 годом, на слове «шестой» снизу въезжает 2026, на «тринадцать» он вытесняет прошлое",
+      "sources": [
+        "rs-date",
+        "tt-gta5"
+      ],
+      "direction": {
+        "purpose": "explain",
+        "emotion": "осознание срока",
+        "concept": "Две эпохи делят один экран: новая часть вытесняет старую, и подпись «13 лет» стоит на шве",
+        "hierarchy": {
+          "primary": "13 лет"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "split",
+          "axis": "horizontal",
+          "start": 1,
+          "a": {
+            "kicker": "GTA V",
+            "value": "2013",
+            "variant": "base"
+          },
+          "b": {
+            "value": "2026",
+            "note": "GTA VI · 13 лет спустя",
+            "variant": "block"
+          },
+          "keys": [
+            {
+              "cue": "шестой",
+              "at": 0.55
+            },
+            {
+              "cue": "тринадцать",
+              "at": 0.45
+            }
+          ]
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "push",
+          "direction": "left",
+          "seconds": 0.5,
+          "intent": "Афиша уезжает влево — время пошло вперёд"
+        },
+        "sound": [
+          {
+            "cue": "тринадцать",
+            "sfx": "tick",
+            "volume": 0.4
+          }
+        ]
+      },
+      "start": 4.333333333333333,
+      "duration": 5.8
+    },
+    {
+      "id": "trailer",
+      "voice": "Первый трейлер за сутки посмотрели девяносто миллионов раз. Это рекорд Гиннесса.",
+      "onScreen": "90 000 000 за сутки",
+      "thought": "Девяносто миллионов просмотров — масштаб, который не уложить в голову",
+      "animation": "Счётчик крутится и приземляется на слове «миллионов»",
+      "sources": [
+        "guinness-t1"
+      ],
+      "direction": {
+        "purpose": "proof",
+        "emotion": "масштаб",
+        "concept": "Число, которое крутится дольше, чем ожидаешь: интерес измерен рекордом",
+        "hierarchy": {
+          "primary": "90 млн"
+        },
+        "art": {
+          "variant": "inverse"
+        },
+        "shot": {
+          "type": "data",
+          "mode": "counter",
+          "value": 90,
+          "cue": "Первый",
+          "landCue": "миллионов",
+          "unit": "млн",
+          "label": "просмотров за сутки",
+          "footnote": {
+            "text": "Рекорд Гиннесса",
+            "cue": "Гиннесса"
+          }
+        },
+        "camera": {
+          "move": "pushIn",
+          "keys": [
+            {
+              "cue": "Гиннесса",
+              "scale": 1.14,
+              "seconds": 0.8
+            }
+          ]
+        },
+        "transition": {
+          "type": "through",
+          "origin": [
+            0.5,
+            0.5
+          ],
+          "seconds": 0.6,
+          "intent": "Камера ныряет в рельсу и выходит в цифре"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "whoosh",
+            "volume": 0.28
+          },
+          {
+            "cue": "миллионов",
+            "sfx": "thud",
+            "volume": 0.4
+          }
+        ]
+      },
+      "start": 10.133333333333333,
+      "duration": 4.633333333333335
+    },
+    {
+      "id": "sales",
+      "voice": "Пятую часть купили больше двухсот тридцати миллионов раз. Планка для шестой уже задрана.",
+      "onScreen": "GTA V: 230 млн копий",
+      "thought": "Прошлая часть сама стала планкой",
+      "animation": "Башня из коробок растёт — это и есть планка для шестой",
+      "sources": [
+        "tt-gta5"
+      ],
+      "direction": {
+        "purpose": "data",
+        "emotion": "давление ожиданий",
+        "concept": "Продажи пятой части складываются в башню: её высота и есть планка, которую шестой надо перепрыгнуть",
+        "hierarchy": {
+          "primary": "230 млн копий"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "stage3d",
+          "preset": "tower",
+          "count": 12,
+          "piece": "book",
+          "buildCue": "Пятую",
+          "seconds": 2.4,
+          "title": {
+            "text": "*230 млн* копий GTA V",
+            "cue": "Пятую"
+          },
+          "labels": [
+            {
+              "target": 0,
+              "text": "планка для GTA VI",
+              "cue": "задрана"
+            }
+          ]
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "mask",
+          "shape": "diagonal",
+          "seconds": 0.55,
+          "intent": "Диагональ срезает счётчик: от интереса к деньгам"
+        },
+        "sound": [
+          {
+            "cue": "задрана",
+            "sfx": "pop",
+            "volume": 0.3
+          }
+        ]
+      },
+      "start": 14.766666666666667,
+      "duration": 5.933333333333332
+    },
+    {
+      "id": "turn",
+      "voice": "Вот и весь феномен: GTA ждут не как игру, а как событие раз в десятилетие.",
+      "onScreen": "НЕ ИГРА — СОБЫТИЕ",
+      "thought": "Итог: событие, а не игра",
+      "animation": "Жёсткая склейка на вывод крупным шрифтом на сплошном цвете",
+      "sources": [
+        "rs-date",
+        "guinness-t1",
+        "tt-gta5"
+      ],
+      "direction": {
+        "purpose": "climax",
+        "emotion": "вывод",
+        "concept": "Слово «игра» уступает слову «событие»: главное слово ролика крупнее всего",
+        "hierarchy": {
+          "primary": "событие"
+        },
+        "art": {
+          "variant": "block"
+        },
+        "shot": {
+          "type": "type",
+          "layout": "poster",
+          "anchor": "center",
+          "headline": {
+            "text": "Не игра, / а *событие*",
+            "cue": 0,
+            "emphasisCue": "событие"
+          },
+          "ghost": "VI"
+        },
+        "camera": {
+          "move": "pushIn",
+          "keys": [
+            {
+              "cue": "событие",
+              "scale": 1.14,
+              "seconds": 0.8
+            }
+          ]
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Жёсткая склейка: вывод звучит без подготовки"
+        },
+        "sound": [
+          {
+            "cue": "событие",
+            "sfx": "thud",
+            "volume": 0.4
+          }
+        ]
+      },
+      "start": 20.7,
+      "duration": 5.400000000000002
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/gta6-phenomenon/voice-82a795cabc68d953-mix.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "sourcePath": "generated/gta6-phenomenon/voice-82a795cabc68d953.mp3",
+    "voiceId": "iP95p4xoKVk53GoZ742B",
+    "modelId": "eleven_v3",
+    "timingMode": "ElevenLabs character alignment",
+    "sourceDurationSeconds": 25.626122,
+    "durationSeconds": 25.597458,
+    "localTempo": 1,
+    "cacheHash": "82a795cabc68d953",
+    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades"
+  },
+  "captions": [
+    {
+      "text": "Девятнадцатого",
+      "startMs": 40,
+      "endMs": 560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ноября",
+      "startMs": 617,
+      "endMs": 960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "выходит",
+      "startMs": 1013,
+      "endMs": 1360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "GTA",
+      "startMs": 1460,
+      "endMs": 1760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "шесть.",
+      "startMs": 1880,
+      "endMs": 2560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "И",
+      "startMs": 2610,
+      "endMs": 2640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "это",
+      "startMs": 2680,
+      "endMs": 2800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "уже",
+      "startMs": 2840,
+      "endMs": 2960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 3013,
+      "endMs": 3120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "просто",
+      "startMs": 3166,
+      "endMs": 3440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "игра.",
+      "startMs": 3504,
+      "endMs": 4240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Между",
+      "startMs": 4340,
+      "endMs": 4480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "пятой",
+      "startMs": 4560,
+      "endMs": 4880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 4920,
+      "endMs": 4960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "шестой",
+      "startMs": 5000,
+      "endMs": 5280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "частью",
+      "startMs": 5347,
+      "endMs": 5760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "прошло",
+      "startMs": 5808,
+      "endMs": 6080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тринадцать",
+      "startMs": 6160,
+      "endMs": 6720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "лет.",
+      "startMs": 6840,
+      "endMs": 7360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Целое",
+      "startMs": 7400,
+      "endMs": 7680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "поколение",
+      "startMs": 7733,
+      "endMs": 8240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "выросло,",
+      "startMs": 8293,
+      "endMs": 8800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ожидая",
+      "startMs": 8827,
+      "endMs": 9280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "её.",
+      "startMs": 9360,
+      "endMs": 10000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Первый",
+      "startMs": 10120,
+      "endMs": 10320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "трейлер",
+      "startMs": 10347,
+      "endMs": 10720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "за",
+      "startMs": 10773,
+      "endMs": 10880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сутки",
+      "startMs": 10920,
+      "endMs": 11200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "посмотрели",
+      "startMs": 11290,
+      "endMs": 11760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "девяносто",
+      "startMs": 11820,
+      "endMs": 12400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "миллионов",
+      "startMs": 12460,
+      "endMs": 12880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "раз.",
+      "startMs": 12960,
+      "endMs": 13360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Это",
+      "startMs": 13450,
+      "endMs": 13520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "рекорд",
+      "startMs": 13580,
+      "endMs": 13920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Гиннесса.",
+      "startMs": 13960,
+      "endMs": 14560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Пятую",
+      "startMs": 14780,
+      "endMs": 14960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "часть",
+      "startMs": 15013,
+      "endMs": 15280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "купили",
+      "startMs": 15340,
+      "endMs": 15680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "больше",
+      "startMs": 15737,
+      "endMs": 16080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "двухсот",
+      "startMs": 16144,
+      "endMs": 16480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тридцати",
+      "startMs": 16560,
+      "endMs": 17120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "миллионов",
+      "startMs": 17173,
+      "endMs": 17680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "раз.",
+      "startMs": 17770,
+      "endMs": 18160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Планка",
+      "startMs": 18360,
+      "endMs": 18640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "для",
+      "startMs": 18680,
+      "endMs": 18800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "шестой",
+      "startMs": 18840,
+      "endMs": 19280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "уже",
+      "startMs": 19380,
+      "endMs": 19600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "задрана.",
+      "startMs": 19680,
+      "endMs": 20640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Вот",
+      "startMs": 20710,
+      "endMs": 20880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 20940,
+      "endMs": 21000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "весь",
+      "startMs": 21024,
+      "endMs": 21120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "феномен:",
+      "startMs": 21200,
+      "endMs": 22000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "GTA",
+      "startMs": 22120,
+      "endMs": 22480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ждут",
+      "startMs": 22520,
+      "endMs": 22720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 22773,
+      "endMs": 22880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "как",
+      "startMs": 22920,
+      "endMs": 23040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "игру,",
+      "startMs": 23130,
+      "endMs": 23520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "а",
+      "startMs": 23560,
+      "endMs": 23600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "как",
+      "startMs": 23640,
+      "endMs": 23760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "событие",
+      "startMs": 23840,
+      "endMs": 24400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "раз",
+      "startMs": 24460,
+      "endMs": 24640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 24680,
+      "endMs": 24720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "десятилетие.",
+      "startMs": 24789,
+      "endMs": 25600,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "editorialReview": {
+    "openClaims": [
+      "475 млн просмотров второго трейлера — цифра самой Rockstar, сумма по всем платформам; в сценарии не используется",
+      "230 млн копий GTA V — отгрузки (sold-in), а не продажи игрокам",
+      "13 лет: GTA V вышла 17.09.2013, GTA VI — 19.11.2026; дата релиза может сдвинуться по регионам на часы"
+    ]
+  },
+  "renderPath": "out/studio/gta6-phenomenon.mp4",
+  "qa": {
+    "path": "out/studio/gta6-phenomenon-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  }
+}

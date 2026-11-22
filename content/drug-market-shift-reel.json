@@ -1,0 +1,235 @@
+{
+  "id": "drug-market-shift",
+  "compositionId": "DrugMarketShiftReel",
+  "contactSheetCompositionId": "DrugMarketShiftContactSheet",
+  "npmPrefix": "drug-market",
+  "title": "Афганистан запретил мак — наркотиков стало больше",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/drug-market-shift/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 800,
+  "background": {
+    "type": "loop-video",
+    "file": "assets/background.mp4",
+    "muted": true,
+    "fit": "cover",
+    "overlayOpacity": 0.44,
+    "note": "Единственный фон ролика. Зациклен, без звука, нижний постоянный слой."
+  },
+  "source": {
+    "primary": "UNODC World Drug Report 2026",
+    "secondary": "Пресс-релиз ООН, 26 июня 2026",
+    "topic": "мировой рынок наркотиков, доклад ООН 2026"
+  },
+  "tts": {
+    "language": "ru",
+    "speed": 1.2,
+    "direction": "Ровный документальный тон, без осуждения и без смакования. Хук — три факта подряд, третий бьёт. Глава про переезд рынка — чуть медленнее. Финал — как вопрос, а не вывод.",
+    "note": "Числа проговариваются модулем numerals, на экране остаются цифрами."
+  },
+  "captionClusters": {
+    "targetSeconds": [0.5, 0.8],
+    "growUntilSeconds": 0.3,
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и", "а", "но", "не", "ни", "в", "во", "на", "по", "за", "из", "от", "до",
+      "к", "ко", "с", "со", "у", "о", "об", "про", "для", "что", "как", "это",
+      "всё", "ещё", "же", "ты", "он", "она", "я", "мы", "чтобы", "так", "там",
+      "уже", "или", "бы", "тебе", "этот", "над", "тем", "её", "его", "ему", "их",
+      "то", "есть", "если", "теперь", "они", "себе", "вот", "даже", "будет",
+      "только", "когда", "тут", "им", "ним", "где", "неё", "был"
+    ],
+    "highlightWords": {
+      "red": ["больше", "рухнуло", "рынок", "рынка"],
+      "yellow": ["запретил", "запрет", "мак", "синтетика", "синтетику"],
+      "mint": ["поле", "адрес"]
+    },
+    "displayReplacements": {
+      "мьянму": "Мьянму",
+      "афганистан": "Афганистан"
+    }
+  },
+  "lines": [
+    {"id": "l01", "chapter": "hook", "text": "Афганистан запретил мак.", "breakAfter": "line"},
+    {"id": "l02", "chapter": "hook", "text": "Производство рухнуло.", "breakAfter": "line"},
+    {"id": "l03", "chapter": "hook", "text": "Наркотиков в мире стало больше.", "breakAfter": "block"},
+
+    {"id": "l04", "chapter": "scale", "text": "Их употребляет 331 миллион.", "breakAfter": "line"},
+    {"id": "l05", "chapter": "scale", "text": "Это каждый шестнадцатый.", "breakAfter": "line"},
+    {"id": "l06", "chapter": "scale", "text": "Десять лет назад — двадцатый.", "breakAfter": "block"},
+
+    {"id": "l07", "chapter": "shift", "text": "Мак переехал в Мьянму.", "breakAfter": "line"},
+    {"id": "l08", "chapter": "shift", "text": "Там больше тысячи тонн.", "breakAfter": "line"},
+    {"id": "l09", "chapter": "shift", "text": "Опий вытесняет синтетика.", "breakAfter": "block"},
+
+    {"id": "l10", "chapter": "synth", "text": "Её варят где угодно.", "breakAfter": "line"},
+    {"id": "l11", "chapter": "synth", "text": "Поле не нужно.", "breakAfter": "line"},
+    {"id": "l12", "chapter": "synth", "text": "Нашли 755 новых веществ.", "breakAfter": "block"},
+
+    {"id": "l13", "chapter": "recap", "text": "Запрет убрал поле.", "breakAfter": "line"},
+    {"id": "l14", "chapter": "recap", "text": "Но не рынок.", "breakAfter": "line"},
+    {"id": "l15", "chapter": "recap", "text": "Рынок сменил адрес.", "breakAfter": "block"},
+
+    {"id": "l16", "chapter": "cta", "text": "Что сильнее: запрет или спрос?", "breakAfter": "line"},
+    {"id": "l17", "chapter": "cta", "text": "Запрет.", "breakAfter": "line"},
+    {"id": "l18", "chapter": "cta", "text": "Спрос.", "breakAfter": "none"}
+  ],
+  "chapters": [
+    {
+      "id": "hook",
+      "label": "ЧТО ПРОИЗОШЛО",
+      "headline": "ПОЛЕ УБРАЛИ,\nРЫНОК ОСТАЛСЯ",
+      "fromLine": "l01",
+      "toLine": "l03",
+      "grammar": {
+        "type": "statement",
+        "card": "ЛОГИКА, КОТОРАЯ НЕ СРАБОТАЛА",
+        "claim": "НЕТ ПОЛЯ — НЕТ РЫНКА",
+        "claimTone": "yellow",
+        "strikeAt": "l03",
+        "items": [
+          {"label": "ЗАПРЕТ 2022 ГОДА", "note": "БЫЛО СВЫШЕ 6000 ТОНН", "tone": "neutral", "at": "l01", "noteAt": "l02"},
+          {"label": "СТАЛО ПОЧТИ НОЛЬ", "tone": "mint", "at": "l02", "offsetMs": 800}
+        ],
+        "verdict": {"label": "В МИРЕ СТАЛО БОЛЬШЕ", "tone": "red", "at": "l03"}
+      }
+    },
+    {
+      "id": "scale",
+      "label": "СКОЛЬКО ЭТО ЛЮДЕЙ",
+      "headline": "КАЖДЫЙ\nШЕСТНАДЦАТЫЙ",
+      "fromLine": "l04",
+      "toLine": "l06",
+      "grammar": {
+        "type": "counters",
+        "card": "ДОКЛАД ООН, ДАННЫЕ ЗА 2024 ГОД",
+        "lead": {"label": "ВЗРОСЛЫЕ ОТ 15 ДО 64 ЛЕТ", "at": "l04"},
+        "counters": [
+          {"label": "331 МЛН ЧЕЛОВЕК", "tone": "red", "at": "l04", "offsetMs": 900},
+          {"label": "6,2% ВЗРОСЛЫХ", "tone": "yellow", "at": "l05"}
+        ],
+        "chips": [
+          {"label": "В 2014 БЫЛО 5,2%", "tone": "neutral", "at": "l06"}
+        ]
+      }
+    },
+    {
+      "id": "shift",
+      "label": "КУДА ОН ПЕРЕЕХАЛ",
+      "headline": "СМЕНИЛИСЬ СТРАНА\nИ СЫРЬЁ",
+      "fromLine": "l07",
+      "toLine": "l09",
+      "grammar": {
+        "type": "split",
+        "card": "ОДИН РЫНОК, ДВА НАПРАВЛЕНИЯ",
+        "subject": "ОПИЙНЫЙ РЫНОК",
+        "splitAt": "l07",
+        "left": {"label": "УЕХАЛ В МЬЯНМУ", "tone": "yellow", "at": "l08"},
+        "right": {"label": "УШЁЛ В СИНТЕТИКУ", "tone": "red", "at": "l09"},
+        "verdict": {"label": "СПРОС НИКУДА НЕ ДЕЛСЯ", "tone": "red", "at": "l09", "offsetMs": 800}
+      }
+    },
+    {
+      "id": "synth",
+      "label": "ПОЧЕМУ СИНТЕТИКА",
+      "headline": "ЕЙ НЕ НУЖНА\nЗЕМЛЯ",
+      "fromLine": "l10",
+      "toLine": "l12",
+      "grammar": {
+        "type": "tiles",
+        "card": "ЧЕГО НЕ ТРЕБУЕТ ЛАБОРАТОРИЯ",
+        "badge": "НЕ НУЖНО",
+        "lead": {"label": "ПОЭТОМУ ЕЁ НЕ ВЫЖЕЧЬ", "at": "l10"},
+        "tiles": [
+          {"label": "ПОЛЕ", "tone": "red", "at": "l11"},
+          {"label": "КЛИМАТ", "tone": "red", "at": "l11", "offsetMs": 500},
+          {"label": "СЕЗОН", "tone": "red", "at": "l11", "offsetMs": 1000}
+        ],
+        "verdict": {"label": "755 НОВЫХ ВЕЩЕСТВ ЗА 2024", "tone": "red", "at": "l12"}
+      }
+    },
+    {
+      "id": "recap",
+      "label": "ГЛАВНОЕ",
+      "headline": "РЫНОК СМЕНИЛ\nАДРЕС",
+      "fromLine": "l13",
+      "toLine": "l15",
+      "grammar": null
+    },
+    {
+      "id": "cta",
+      "label": "ТВОЙ ХОД",
+      "headline": "ЧТО СИЛЬНЕЕ:\nЗАПРЕТ ИЛИ СПРОС?",
+      "fromLine": "l16",
+      "toLine": "l18",
+      "grammar": null
+    }
+  ],
+  "avatarStates": [
+    {"at": "l01", "state": "thinking"},
+    {"at": "l04", "state": "shocked"},
+    {"at": "l07", "state": "skeptical"},
+    {"at": "l10", "state": "idea"},
+    {"at": "l13", "state": "question"},
+    {"at": "l16", "state": "approved"}
+  ],
+  "chips": [
+    {"label": "КАЖДЫЙ 16-Й ВЗРОСЛЫЙ", "tone": "red", "at": "l05"},
+    {"label": "РЫНОК ПЕРЕЕХАЛ", "tone": "yellow", "at": "l08"},
+    {"label": "755 ВЕЩЕСТВ", "tone": "red", "at": "l12", "offsetMs": 1600}
+  ],
+  "mood": {
+    "alarm": {"from": "l04", "to": "l13"},
+    "calm": {"from": "l13", "to": "l16"}
+  },
+  "memoryFrame": {
+    "fromLine": "l13",
+    "untilLine": "l16",
+    "maxHoldMs": 9000,
+    "staggerMs": 420,
+    "minHoldSeconds": 2.4,
+    "title": "ЧТО ПОКАЗАЛ ДОКЛАД ООН",
+    "items": [
+      "331 МЛН ЧЕЛОВЕК ЗА 2024 ГОД",
+      "ЗАПРЕТ СМЕСТИЛ ПРОИЗВОДСТВО",
+      "РАСТЕНИЯ МЕНЯЮТСЯ НА СИНТЕТИКУ"
+    ]
+  },
+  "cta": {
+    "fromLine": "l16",
+    "prompt": "ЧТО СИЛЬНЕЕ: ЗАПРЕТ ИЛИ СПРОС?",
+    "divider": "или",
+    "options": [
+      {"label": "ЗАПРЕТ", "tone": "mint", "at": "l17"},
+      {"label": "СПРОС", "tone": "yellow", "at": "l18"}
+    ],
+    "comment": "Ответь одним словом в комментарии.",
+    "teaser": "КУДА УХОДЯТ ДЕНЬГИ, УКРАДЕННЫЕ У ЛЮДЕЙ",
+    "hint": {"at": "l17"},
+    "teaserCue": {"at": "l18"},
+    "teaserDetailCue": {"at": "l18", "offsetMs": 600}
+  },
+  "qa": {
+    "durationSeconds": [25, 35],
+    "contentPolarity": "light-on-dark",
+    "scriptQuality": {
+      "hookLines": 3,
+      "maxHookWordsPerLine": 8,
+      "minAnchors": 3
+    }
+  },
+  "publish": {
+    "cover": "ПОЛЕ УБРАЛИ — РЫНОК ОСТАЛСЯ",
+    "coverSub": "Доклад ООН о наркорынке, 2026",
+    "caption": "Всемирный доклад ООН о наркотиках вышел 26 июня 2026 года. Главное в нём — не про рост, а про смещение.\n\nЗапрет на опийный мак, введённый в Афганистане в 2022 году, обрушил производство опия с более чем 6000 тонн почти до нуля. Но мировой рынок не исчез. Производство частично переехало в Мьянму — там объём вырос до более чем 1000 тонн к 2025 году, — и этот рост всё равно не покрывает афганское падение. Разницу закрывают синтетические опиоиды, которым не нужны ни поле, ни климат, ни сезон.\n\nМасштаб потребления: 331 млн человек в 2024 году, это 6,2% населения планеты в возрасте от 15 до 64 лет против 5,2% десятью годами ранее. По веществам: каннабис — 256 млн, опиоиды — 63 млн, амфетамины — 32 млн, кокаин — 25 млн, экстази — 21 млн.\n\nЧисло новых психоактивных веществ в 2024 году достигло 755, из них 118 зафиксированы впервые. Типов веществ в изъятиях стало впятеро больше, чем до 2000 года.\n\nВывод доклада простой и неудобный: запрет убирает конкретное поле, а не рынок. Рынок меняет страну и сырьё.",
+    "hashtags": ["#ООН", "#наркополитика", "#статистика", "#мир"],
+    "sources": {
+      "UNODC World Drug Report 2026 (пресс-релиз ООН)": "https://indonesia.un.org/en/318378-unodc-world-drug-report-2026-global-drug-markets-transforming-rapidly-technology-novel-drug",
+      "UNODC — World Drug Report 2026": "https://www.unodc.org/unodc/en/data-and-analysis/world-drug-report-2026.html"
+    }
+  }
+}

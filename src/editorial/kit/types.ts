@@ -13,11 +13,17 @@ export type Visual = {
 export type Scene = {
   id: string; start: number; duration: number; voice: string; onScreen: string; sources: string[];
   template?: string; component?: string; visual?: Visual;
+  /** A directed scene: see src/editorial/engine/spec/schema.ts. */
+  direction?: unknown;
 };
 export type Project = {
   id: string; fps: number; width: number; height: number; durationSeconds: number;
   theme?: string; captionStyle?: string; backdrop?: string;
+  /** Art direction of a directed reel. */
+  art?: {direction: string; motion?: string; music?: {asset: string; volume: number; duck: number}};
+  /** Library entries this reel uses, inlined by studio/render.mjs. */
+  assets?: Record<string, unknown>;
   scenes: Scene[]; captions: Caption[];
   sources: Array<{id: string; publisher: string}>;
-  audio: {voicePath?: string | null; musicPath?: string | null; volume?: number; sfx?: Array<{path: string; start: number; volume: number; license: string}>};
+  audio: {mode?: 'music'; voicePath?: string | null; musicPath?: string | null; volume?: number; sfx?: Array<{path: string; start: number; volume: number; license: string}>};
 };

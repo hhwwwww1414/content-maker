@@ -4,6 +4,7 @@ import {resolve} from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {readPng, luminanceStats} from '../scripts/eleven/lib/png.mjs';
 import {ROOT as root, STANDARDS, gateFor, limitsFor, loadProject, projectPath, saveProject} from './lib/project.mjs';
+import {onsetsOf, shareOnBeat} from './lib/beats.mjs';
 
 const argv = process.argv.slice(2);
 if (argv.length < 1 || argv.length > 2) throw Error('Usage: node studio/qa.mjs <project.json> [preview|production]');
@@ -13,7 +14,7 @@ const mode = argv[1] || 'production';
 if (!['preview', 'production'].includes(mode)) throw Error('Usage: node studio/qa.mjs <project.json> [preview|production]');
 const limits = limitsFor(p);
 const fmt = STANDARDS.format;
-const isKit = p.scenes.some((s) => s.visual || s.component);
+const isKit = p.scenes.some((s) => s.visual || s.component || s.direction);
 const rel = (name) => `out/studio/${p.id}${name}`;
 const video = resolve(root, mode === 'preview' ? rel('-preview.mp4') : rel('.mp4'));
 if (!existsSync(video)) throw Error('Missing ' + video);
@@ -28,9 +29,11 @@ const a = probe.streams.find((s) => s.codec_type === 'audio');
 const seconds = Number(probe.format.duration);
 const expectedText = p.scenes.map((s) => s.voice).join(' ');
 const hasVoice = p.captions.length > 0;
+// Music only: nothing is spoken, no caption is drawn, and the words are timed to the track.
+const musicOnly = p.audio?.mode === 'music';
 const checks = {
   dimensions: v?.width === (mode === 'preview' ? fmt.previewWidth : fmt.width) && v?.height === (mode === 'preview' ? fmt.previewHeight : fmt.height),
-  fps: v?.r_frame_rate === `${fmt.fps}/1`, h264: v?.codec_name === fmt.codec,
+  fps: v?.r_frame_rate === `${p.fps}/1`, h264: v?.codec_name === fmt.codec,
   duration: seconds >= limits.minSeconds && seconds <= limits.maxSeconds + 0.1 && Math.abs(seconds - p.durationSeconds) < .1,
   audio: mode === 'preview' || !!a,
   approval: gateFor(p).mayRender,
@@ -50,7 +53,14 @@ const luminance = (r, g, b) => {
 };
 // Caption readability from pixels: ink against plate in the centre of the caption, which always holds text.
 const plate = {x: Math.round(300 * k), y: Math.round(1440 * k), width: Math.round(480 * k), height: Math.round(110 * k)};
-const captionContrast = (png) => {
+const sceneAt = (ms) => [...p.scenes].reverse().find((s) => ms / 1000 >= s.start) ?? p.scenes[0];
+// Directed captions stand on the band's lower edge, or at the top of the frame in the high zone.
+const plateFor = (ms) => {
+  const captions = sceneAt(ms).direction?.captions;
+  if (!sceneAt(ms).direction) return plate;
+  return captions?.zone === 'high' ? {x: Math.round(420 * k), y: Math.round(225 * k), width: Math.round(240 * k), height: Math.round(50 * k)} : {x: Math.round(420 * k), y: Math.round(1525 * k), width: Math.round(240 * k), height: Math.round(50 * k)};
+};
+const captionContrast = (png, plate) => {
   const values = [];
   for (let y = plate.y; y < plate.y + plate.height; y += 1) {
     for (let x = plate.x; x < plate.x + plate.width; x += 1) {
@@ -68,13 +78,22 @@ for (const time of [...new Set(sampleTimes.map((t) => Math.max(0, Math.min(secon
   const png = readPng(file);
   const stats = luminanceStats(png, {x: 0, y: 0, width: v.width, height: v.height});
   const ms = Number(time) * 1000;
-  const speaking = hasVoice && isKit && p.captions.some((c) => ms >= c.startMs + 80 && ms < c.endMs);
-  sampleFrames.push({seconds: Number(time), path: file, ...stats, captionContrast: speaking ? captionContrast(png) : null});
+  const speaking = hasVoice && isKit && sceneAt(ms).direction?.captions?.mode !== 'off' && p.captions.some((c) => ms >= c.startMs + 80 && ms < c.endMs);
+  sampleFrames.push({seconds: Number(time), path: file, ...stats, captionContrast: speaking ? captionContrast(png, plateFor(ms)) : null});
 }
-checks.sampledFramesVisible = sampleFrames.every((s) => s.mean > 7 && s.stdDev > 6);
+// A transition may cover or dim the frame on purpose around its boundary: it is judged by black-frame and flash checks.
+const covered = (t) => p.scenes.some((s) => {
+  const d = s.direction?.transition;
+  if (!d || d.type === 'cut') return false;
+  const half = (d.seconds ?? .7) / 2;
+  return t >= s.start - half && t <= s.start + half;
+});
+const blank = (s) => !(s.mean > 7 && s.stdDev > 6) && !covered(s.seconds);
+checks.sampledFramesVisible = !sampleFrames.some(blank);
+const blankFrames = sampleFrames.filter(blank).map((s) => ({seconds: s.seconds, scene: [...p.scenes].reverse().find((sc) => s.seconds >= sc.start)?.id, mean: Number(s.mean.toFixed(1)), stdDev: Number(s.stdDev.toFixed(1))}));
 const contrasts = sampleFrames.map((s) => s.captionContrast).filter((c) => c !== null);
 const minCaptionContrast = contrasts.length ? Math.min(...contrasts) : null;
-if (isKit && hasVoice) checks.captionContrast = contrasts.length > 0 && minCaptionContrast >= STANDARDS.readability.minContrast;
+if (isKit && hasVoice && !musicOnly) checks.captionContrast = contrasts.length > 0 && minCaptionContrast >= STANDARDS.readability.minContrast;
 
 // Decode every frame, rather than inferring corruption or black frames from a few stills.
 const W = 54, H = 96;
@@ -84,27 +103,43 @@ const stride = W * H * 3, frameCount = Math.floor(decoded.length / stride);
 const stageRows = Math.floor(H * 1390 / 1920);
 const stageDiff = [];
 let blackFrames = 0, maxLuminanceJump = 0, previous = 0;
+const lumaTrack = [];
 for (let offset = 0; offset + stride <= decoded.length; offset += stride) {
   let sum = 0;
   for (let i = offset; i < offset + stride; i += 3) sum += .2126 * decoded[i] + .7152 * decoded[i + 1] + .0722 * decoded[i + 2];
   const mean = sum / (W * H);
+  lumaTrack.push(mean);
   if (mean < 3) blackFrames++;
   if (offset) {
     maxLuminanceJump = Math.max(maxLuminanceJump, Math.abs(mean - previous));
     let diff = 0;
     for (let i = 0; i < stageRows * W * 3; i++) diff += Math.abs(decoded[offset + i] - decoded[offset + i - stride]);
-    stageDiff.push(diff / (stageRows * W * 3));
+    // Change per thirtieth of a second, so the same motion scores the same at 30 and 60 fps.
+    stageDiff.push((diff / (stageRows * W * 3)) * (p.fps / 30));
   }
   previous = mean;
 }
 checks.completeDecode = frameCount === Math.round(p.durationSeconds * p.fps);
 checks.noBlackFrames = blackFrames === 0;
-checks.noFullFrameFlashes = maxLuminanceJump < 60;
+// A flash goes up and comes back. In a directed reel a hard cut from a light palette to a dark one is a change
+// of world and stays changed, so it is told apart by whether the level returns within a few frames.
+const flashes = [];
+if (p.scenes.some((s) => s.direction)) {
+  for (let i = 1; i < lumaTrack.length - 1; i++) {
+    const jump = lumaTrack[i] - lumaTrack[i - 1];
+    if (Math.abs(jump) < 60) continue;
+    const back = lumaTrack.slice(i + 1, i + 5).some((v) => Math.abs(v - lumaTrack[i - 1]) < 25);
+    if (back) flashes.push(i);
+  }
+  checks.noFullFrameFlashes = flashes.length === 0;
+} else checks.noFullFrameFlashes = maxLuminanceJump < 60;
 
 // Anti-slideshow: the longest run where the stage is effectively frozen.
-let longestStatic = 0, run_ = 0;
-for (const d of stageDiff) { run_ = d < STANDARDS.motion.staticDiffThreshold ? run_ + 1 : 0; longestStatic = Math.max(longestStatic, run_); }
-const motion = {longestStaticSeconds: longestStatic / p.fps, meanStageDiff: stageDiff.reduce((s, d) => s + d, 0) / stageDiff.length};
+let longestStatic = 0, run_ = 0, staticEnd = 0;
+stageDiff.forEach((d, i) => { run_ = d < STANDARDS.motion.staticDiffThreshold ? run_ + 1 : 0; if (run_ > longestStatic) { longestStatic = run_; staticEnd = i; } });
+const staticStart = staticEnd - longestStatic + 1;
+const sceneOfFrame = (f) => [...p.scenes].reverse().find((s) => f / p.fps >= s.start)?.id ?? p.scenes[0].id;
+const motion = {longestStaticSeconds: longestStatic / p.fps, longestStaticFrames: [staticStart, staticEnd], longestStaticScene: sceneOfFrame(staticStart), meanStageDiff: stageDiff.reduce((s, d) => s + d, 0) / stageDiff.length, flashFrames: flashes};
 if (isKit) checks.noFrozenStage = motion.longestStaticSeconds <= STANDARDS.motion.maxStaticSeconds;
 
 // Picture follows voice: motion near each spoken cue must rise above that scene's own quiet level.
@@ -124,12 +159,12 @@ if (isKit && hasVoice) {
     const from = Math.round(scene.start * p.fps), to = Math.round((scene.start + scene.duration) * p.fps);
     const window = stageDiff.slice(from, to);
     const quiet = [...window].sort((m, n) => m - n)[Math.floor(window.length * .25)] ?? 0;
-    for (const cue of new Set(walk(scene.visual ?? {}))) {
+    for (const cue of new Set(walk(scene.visual ?? scene.direction ?? {}))) {
       const [word, nth] = cue.split('#');
       const found = words.filter((w) => norm(w.text).startsWith(norm(word)))[(nth ? Number(nth) : 1) - 1];
       if (!found) continue;
       const f = Math.round(found.startMs / 1000 * p.fps);
-      const peak = Math.max(...stageDiff.slice(Math.max(0, f - 1), f + 9));
+      const peak = Math.max(...stageDiff.slice(Math.max(0, f - Math.round(p.fps / 30)), f + Math.round(9 * p.fps / 30)));
       total++;
       if (peak > Math.max(quiet * 1.5, .25)) hit++; else missed.push(`${scene.id}:${cue}`);
     }
@@ -162,7 +197,9 @@ if (a) {
   audioMetrics.endHoldSeconds = seconds - audioMetrics.durationSeconds;
   // The planned final visual hold is intentionally silent. Check the spoken
   // content for truncation and the measured track against its source length.
-  checks.audioVideoDuration = Math.abs(audioMetrics.durationSeconds - p.audio.durationSeconds) < .15 && audioMetrics.durationSeconds >= lastWordEnd - .03 && audioMetrics.endHoldSeconds >= -.05 && audioMetrics.endHoldSeconds <= 1;
+  // A music bed legitimately runs to the end of the picture; the voice length is then checked by the word timings.
+  const trackLength = p.art?.music || musicOnly ? seconds : p.audio.durationSeconds;
+  checks.audioVideoDuration = Math.abs(audioMetrics.durationSeconds - trackLength) < .15 && audioMetrics.durationSeconds >= lastWordEnd - .03 && audioMetrics.endHoldSeconds >= -.05 && audioMetrics.endHoldSeconds <= 1;
   // Independent of the timing file's own claims: is there actually speech inside each caption's word?
   const rmsAt = (fromMs, toMs) => {
     const start = Math.floor(fromMs * 48) * 2, end = Math.min(decodedAudio.length, Math.floor(toMs * 48) * 2);
@@ -174,6 +211,13 @@ if (a) {
   const voiced = spoken.filter((c) => rmsAt(c.startMs, Math.max(c.endMs, c.startMs + 60)) > rms * .12);
   audioMetrics.voicedWords = {voiced: voiced.length, total: spoken.length};
   checks.captionsOnSpeech = voiced.length / spoken.length >= .95;
+  if (musicOnly) {
+    const samples = new Float64Array(decodedAudio.length / 2);
+    for (let i = 0; i < samples.length; i++) samples[i] = decodedAudio.readInt16LE(i * 2) / 32768;
+    const onBeat = shareOnBeat(p.captions.map((c) => c.startMs / 1000), onsetsOf(samples, 48000), 0.05);
+    audioMetrics.wordsOnBeats = onBeat;
+    checks.wordsOnBeats = onBeat.share >= .85;
+  }
 }
 
 const manualFile = resolve(root, rel('-manual-review.json'));
@@ -184,7 +228,7 @@ const manualReview = existsSync(manualFile) ? JSON.parse(readFileSync(manualFile
 const gate = gateFor(p);
 const report = {
   project: p.id, mode, video,
-  measured: {durationSeconds: seconds, width: v.width, height: v.height, fps: v.r_frame_rate, videoCodec: v.codec_name, audioCodec: a?.codec_name || null, frameCount, blackFrames, maxLuminanceJump, minCaptionContrast, motion, audio: audioMetrics},
+  measured: {durationSeconds: seconds, width: v.width, height: v.height, fps: v.r_frame_rate, videoCodec: v.codec_name, audioCodec: a?.codec_name || null, frameCount, blackFrames, maxLuminanceJump, blankFrames, minCaptionContrast, motion, audio: audioMetrics},
   checks, passed: Object.values(checks).every(Boolean), publishReady: gate.publishReady, manualReview, sampleFrames,
 };
 const reportPath = resolve(root, rel(`-${mode}-qa.json`));

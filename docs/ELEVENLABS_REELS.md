@@ -15,13 +15,19 @@ phrase-level caption pages, и один накапливающийся холс�
 | 4 | `website-controls-ai` | `WebsiteControlsAiReel` | `components/injection/` | `reel:prompt-injection` |
 | 5 | `how-sites-detect-vpn` | `HowSitesDetectVpnReel` | `components/vpndetect/` | `reel:vpn-detection` |
 | 6 | `passkey-explained` | `PasskeyExplainedReel` | `components/passkey/` | `reel:passkey` |
+| 7 | `ai-browser-hijack` | `AiBrowserHijackReel` | `components/agentbrowser/` | `reel:agent-browser` |
 
 Ролик 1 — единственный на светлом холсте `#F3F3EF` с палитрой `vibe`. Ролики
-2–6 идут поверх зацикленного `public/assets/background.mp4` с палитрой `night`
+2–7 идут поверх зацикленного `public/assets/background.mp4` с палитрой `night`
 (белый текст на затемнённом видео) и `qa.contentPolarity: light-on-dark`.
 
 Ролики 4–6 — связанная серия: каждый заканчивается тизером следующего
 (prompt injection → определение VPN → passkey), и её начинает тизер ролика 3.
+
+Ролик 7 продолжает линию ролика 4, но с другим тезисом. Ролик 4 объясняет, что
+чужой текст на странице может стать командой; ролик 7 — что агентный браузер
+исполняет её **внутри уже залогиненной сессии пользователя**, поэтому граница
+проходит по правам агента, а не по «уму» модели.
 
 Общие между роликами: `AvatarZone` (есть режим `sticker` для видео-фона),
 `KineticCaptions` (принимает `palette`), `primitives`, `theme`,
@@ -41,6 +47,7 @@ npm run reel:ai-test:all          # третий
 npm run reel:prompt-injection:all # четвёртый
 npm run reel:vpn-detection:all    # пятый
 npm run reel:passkey:all          # шестой
+npm run reel:agent-browser:all    # седьмой
 
 npm run reel:vpn:voice           # озвучка + тайминги + кластеры (кэш по хешу)
 npm run reel:vpn:voice:force     # принудительно перезапросить у ElevenLabs
@@ -52,6 +59,11 @@ npm run reel:vpn:preview         # remotion studio
 ```
 
 Каждый шаг можно вызвать и напрямую: `node scripts/eleven/qa.mjs --slug <name>`.
+
+## Озвучка
+
+Пайплайн озвучки переписан: чанкинг по сценам, дубли, Audio Tags и мастеринг.
+Подробно — [VOICE.md](VOICE.md). Итог теперь WAV 48 кГц, а не MP3.
 
 ## Секреты
 

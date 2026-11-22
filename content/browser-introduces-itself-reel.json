@@ -1,0 +1,625 @@
+{
+  "id": "browser-introduces-itself",
+  "compositionId": "BrowserIntroducesItselfReel",
+  "contactSheetCompositionId": "BrowserIntroducesItselfContactSheet",
+  "npmPrefix": "browser-introduces-itself",
+  "title": "Браузер представляется каждому сайту сам",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/browser-introduces-itself/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 900,
+  "background": {
+    "type": "loop-video",
+    "file": "assets/background.mp4",
+    "muted": true,
+    "fit": "cover",
+    "overlayOpacity": 0.44,
+    "note": "Единственный фон ролика. Зациклен, без звука, нижний постоянный слой."
+  },
+  "source": {
+    "primary": "MDN Web Docs",
+    "secondary": "WICG UA Client Hints",
+    "topic": "User-Agent Client Hints"
+  },
+  "tts": {
+    "language": "ru",
+    "speed": 1.1,
+    "direction": "Хук — сухо и быстро, без разгона. «Куки тут ни при чём» — точка. Поворот на Accept-CH — тише и медленнее. Финал — дружелюбно.",
+    "note": "text = произносимый вариант: Accept-CH → «эксепт-си-эйч», VPN → «ви-пи-эн», Chrome → «хром». На экране показываются оригинальные написания.",
+    "speedNote": "eleven_v3, судя по замерам, игнорирует voice_settings.speed: 1.0 → 45.6 с, 1.1 → 47.5 с. Ритм субтитров регулируется growUntilSeconds, а не скоростью."
+  },
+  "captionClusters": {
+    "targetSeconds": [
+      0.55,
+      0.85
+    ],
+    "growUntilSeconds": 0.32,
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и",
+      "а",
+      "но",
+      "не",
+      "ни",
+      "в",
+      "во",
+      "на",
+      "по",
+      "за",
+      "из",
+      "от",
+      "до",
+      "к",
+      "ко",
+      "с",
+      "со",
+      "у",
+      "о",
+      "об",
+      "про",
+      "для",
+      "что",
+      "как",
+      "это",
+      "всё",
+      "ещё",
+      "же",
+      "ты",
+      "он",
+      "она",
+      "я",
+      "мы",
+      "который",
+      "которую",
+      "которая",
+      "которой",
+      "чтобы",
+      "так",
+      "там",
+      "уже",
+      "или",
+      "бы",
+      "тебе",
+      "этот",
+      "над",
+      "тем",
+      "её",
+      "его",
+      "ему",
+      "их",
+      "то",
+      "есть",
+      "одной",
+      "своей",
+      "потом",
+      "чего",
+      "самое",
+      "могут",
+      "своё",
+      "если",
+      "твоему",
+      "твоём",
+      "твоим",
+      "теперь",
+      "моё",
+      "они",
+      "себе",
+      "почти",
+      "вот",
+      "даже",
+      "будет",
+      "была",
+      "только",
+      "когда",
+      "потому",
+      "поэтому",
+      "вообще",
+      "тут",
+      "им",
+      "ним",
+      "таких",
+      "такому",
+      "оттуда",
+      "тогда"
+    ],
+    "highlightWords": {
+      "red": [
+        "разрешал",
+        "куки",
+        "нечего",
+        "отпечаток",
+        "архитектуру"
+      ],
+      "yellow": [
+        "браузер",
+        "версию",
+        "три",
+        "подписи",
+        "миллионов",
+        "тысячи"
+      ],
+      "mint": [
+        "стереть",
+        "урезает",
+        "помогает"
+      ]
+    },
+    "displayReplacements": {
+      "эксепт-си-эйч": "Accept-CH",
+      "ви-пи-эн": "VPN",
+      "хром": "Chrome"
+    }
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "chapter": "hook",
+      "text": "Ты ничего не разрешал.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l02",
+      "chapter": "hook",
+      "text": "Сайт уже знает твою систему.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l03",
+      "chapter": "hook",
+      "text": "И браузер. И версию.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l04",
+      "chapter": "hook",
+      "text": "Куки тут ни при чём.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l05",
+      "chapter": "what",
+      "text": "В каждом запросе три подписи.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l06",
+      "chapter": "what",
+      "text": "Какой у тебя браузер.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l07",
+      "chapter": "what",
+      "text": "Мобильный ты или нет.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l08",
+      "chapter": "what",
+      "text": "И какая система стоит.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l09",
+      "chapter": "notcookie",
+      "text": "Куку можно стереть.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l10",
+      "chapter": "notcookie",
+      "text": "Это не куки.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l11",
+      "chapter": "notcookie",
+      "text": "Это часть самого запроса.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l12",
+      "chapter": "notcookie",
+      "text": "Стирать нечего.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l13",
+      "chapter": "more",
+      "text": "И это только начало.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l14",
+      "chapter": "more",
+      "text": "Сайт отвечает строкой эксепт-си-эйч.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l15",
+      "chapter": "more",
+      "text": "Браузер добавляет точную версию.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l16",
+      "chapter": "more",
+      "text": "Архитектуру. Модель устройства.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l17",
+      "chapter": "print",
+      "text": "Каждая деталь сужает круг.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l18",
+      "chapter": "print",
+      "text": "Из миллионов остаются тысячи.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l19",
+      "chapter": "print",
+      "text": "Так и собирают отпечаток.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l20",
+      "chapter": "defense",
+      "text": "Ви-пи-эн прячет адрес, не заголовки.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l21",
+      "chapter": "defense",
+      "text": "Помогает браузер, который их урезает.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l22",
+      "chapter": "defense",
+      "text": "Хром из коробки так не умеет.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l23",
+      "chapter": "cta",
+      "text": "Пойдёшь проверять свой отпечаток?",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l24",
+      "chapter": "cta",
+      "text": "Пойду.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l25",
+      "chapter": "cta",
+      "text": "Боюсь смотреть.",
+      "breakAfter": "none"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "hook",
+      "label": "ХУК",
+      "headline": "ТЫ НИЧЕГО\nНЕ РАЗРЕШАЛ",
+      "fromLine": "l01",
+      "toLine": "l04",
+      "grammar": {
+        "type": "statement",
+        "card": "ОТКРЫЛ ЛЮБУЮ СТРАНИЦУ",
+        "claim": "СИСТЕМА · БРАУЗЕР · ВЕРСИЯ",
+        "claimTone": "yellow",
+        "items": [
+          {
+            "label": "НИ ОДНОГО КЛИКА",
+            "tone": "red",
+            "at": "l02"
+          },
+          {
+            "label": "БРАУЗЕР И ВЕРСИЯ",
+            "tone": "yellow",
+            "at": "l03"
+          }
+        ],
+        "verdict": {
+          "label": "БЕЗ ЕДИНОЙ КУКИ",
+          "tone": "red",
+          "at": "l04"
+        }
+      }
+    },
+    {
+      "id": "what",
+      "label": "ЧТО ИМЕННО",
+      "headline": "ТРИ ПОДПИСИ\nВ КАЖДОМ ЗАПРОСЕ",
+      "fromLine": "l05",
+      "toLine": "l08",
+      "grammar": {
+        "type": "tiles",
+        "card": "УХОДИТ ПО УМОЛЧАНИЮ",
+        "badge": "ВСЕГДА",
+        "tiles": [
+          {
+            "label": "БРАУЗЕР",
+            "tone": "yellow",
+            "at": "l06"
+          },
+          {
+            "label": "МОБИЛЬНЫЙ?",
+            "tone": "yellow",
+            "at": "l07"
+          },
+          {
+            "label": "СИСТЕМА",
+            "tone": "yellow",
+            "at": "l08"
+          }
+        ]
+      }
+    },
+    {
+      "id": "notcookie",
+      "label": "ПОЧЕМУ НЕ СТЕРЕТЬ",
+      "headline": "КУКУ СОТРЁШЬ\nА ЭТО — НЕТ",
+      "fromLine": "l09",
+      "toLine": "l12",
+      "grammar": {
+        "type": "split",
+        "card": "ДВЕ РАЗНЫЕ ВЕЩИ",
+        "subject": "ЧТО САЙТ ПОЛУЧАЕТ",
+        "splitAt": "l10",
+        "left": {
+          "label": "КУКА",
+          "note": "ЛЕЖИТ У ТЕБЯ · УДАЛЯЕТСЯ",
+          "tone": "mint",
+          "at": "l09"
+        },
+        "right": {
+          "label": "HTTP-ЗАГОЛОВОК",
+          "note": "ЧАСТЬ ЗАПРОСА · НЕ УДАЛИТЬ",
+          "tone": "red",
+          "at": "l11"
+        },
+        "verdict": {
+          "label": "СТИРАТЬ НЕЧЕГО",
+          "tone": "red",
+          "at": "l12"
+        }
+      }
+    },
+    {
+      "id": "more",
+      "label": "ПОВОРОТ",
+      "headline": "САЙТ ПОПРОСИТ —\nБРАУЗЕР ОТДАСТ",
+      "fromLine": "l13",
+      "toLine": "l16",
+      "grammar": {
+        "type": "steps",
+        "card": "ОДНА СТРОКА В ОТВЕТЕ САЙТА",
+        "steps": [
+          {
+            "label": "САЙТ ШЛЁТ ACCEPT-CH",
+            "note": "ОБЫЧНЫЙ ЗАГОЛОВОК ОТВЕТА",
+            "tone": "yellow",
+            "at": "l14",
+            "noteAt": "l14",
+            "offsetMs": 0
+          },
+          {
+            "label": "БРАУЗЕР ДОБАВЛЯЕТ ОСТАЛЬНОЕ",
+            "note": "ВЕРСИЯ · АРХИТЕКТУРА · МОДЕЛЬ",
+            "tone": "red",
+            "at": "l15",
+            "noteAt": "l16"
+          }
+        ]
+      }
+    },
+    {
+      "id": "print",
+      "label": "ЗАЧЕМ ЭТО НУЖНО",
+      "headline": "ИЗ МИЛЛИОНОВ\nОСТАЮТСЯ ТЫСЯЧИ",
+      "fromLine": "l17",
+      "toLine": "l19",
+      "grammar": {
+        "type": "counters",
+        "card": "СУЖЕНИЕ КРУГА",
+        "lead": {
+          "label": "КАЖДАЯ ДЕТАЛЬ ОТСЕКАЕТ ЛИШНИХ",
+          "at": "l17"
+        },
+        "counters": [
+          {
+            "label": "МИЛЛИОНЫ ПОХОЖИХ",
+            "tone": "neutral",
+            "at": "l18"
+          },
+          {
+            "label": "ТЫСЯЧИ ПОХОЖИХ",
+            "tone": "red",
+            "at": "l18",
+            "offsetMs": 1100
+          }
+        ],
+        "chips": [
+          {
+            "label": "ЭТО И ЕСТЬ ОТПЕЧАТОК",
+            "tone": "red",
+            "at": "l19"
+          }
+        ]
+      }
+    },
+    {
+      "id": "defense",
+      "label": "ЧТО ДЕЛАТЬ",
+      "headline": "ЧТО РЕАЛЬНО\nПОМОГАЕТ",
+      "fromLine": "l20",
+      "toLine": "l22",
+      "grammar": {
+        "type": "compare",
+        "card": "ЧТО СРАБОТАЕТ",
+        "rows": [
+          {
+            "label": "VPN — ПРЯЧЕТ АДРЕС",
+            "note": "ЗАГОЛОВКИ ОСТАЮТСЯ",
+            "tone": "yellow",
+            "glyph": "lock",
+            "at": "l20"
+          },
+          {
+            "label": "БРАУЗЕР, КОТОРЫЙ ИХ УРЕЗАЕТ",
+            "note": "CHROME ТАК НЕ УМЕЕТ",
+            "tone": "mint",
+            "glyph": "window",
+            "at": "l21"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "label": "ТВОЙ ХОД",
+      "headline": "ПРОВЕРИШЬ\nСВОЙ ОТПЕЧАТОК?",
+      "fromLine": "l23",
+      "toLine": "l25",
+      "grammar": null
+    }
+  ],
+  "avatarStates": [
+    {
+      "at": "l01",
+      "state": "question"
+    },
+    {
+      "at": "l05",
+      "state": "thinking"
+    },
+    {
+      "at": "l09",
+      "state": "shocked"
+    },
+    {
+      "at": "l13",
+      "state": "skeptical"
+    },
+    {
+      "at": "l17",
+      "state": "angry"
+    },
+    {
+      "at": "l20",
+      "state": "idea"
+    },
+    {
+      "at": "l23",
+      "state": "approved"
+    }
+  ],
+  "chips": [
+    {
+      "label": "ТРИ ПОДПИСИ ВСЕГДА",
+      "tone": "yellow",
+      "at": "l08"
+    },
+    {
+      "label": "НЕ УДАЛЯЮТСЯ",
+      "tone": "red",
+      "at": "l12"
+    },
+    {
+      "label": "ОСТАЛЬНОЕ ПО ЗАПРОСУ",
+      "tone": "red",
+      "at": "l14",
+      "offsetMs": 1900
+    }
+  ],
+  "mood": {
+    "alarm": {
+      "from": "l13",
+      "to": "l20"
+    },
+    "calm": {
+      "from": "l20",
+      "to": "l23"
+    }
+  },
+  "memoryFrame": {
+    "fromLine": "l20",
+    "untilLine": "l23",
+    "maxHoldMs": 9000,
+    "staggerMs": 560,
+    "minHoldSeconds": 2.8,
+    "title": "ОТПЕЧАТОК БРАУЗЕРА",
+    "items": [
+      "ТРИ ПОДПИСИ УХОДЯТ ВСЕГДА",
+      "ОСТАЛЬНОЕ — ПО ЗАПРОСУ САЙТА",
+      "КУКИ ТУТ НИ ПРИ ЧЁМ"
+    ]
+  },
+  "cta": {
+    "fromLine": "l23",
+    "prompt": "ПОЙДЁШЬ СМОТРЕТЬ СВОЙ ОТПЕЧАТОК?",
+    "divider": "или",
+    "options": [
+      {
+        "label": "ПОЙДУ",
+        "tone": "mint",
+        "at": "l24"
+      },
+      {
+        "label": "БОЮСЬ",
+        "tone": "yellow",
+        "at": "l25"
+      }
+    ],
+    "comment": "Ответь одним словом в комментарии.",
+    "teaser": "ЧТО ВИДИТ РАСШИРЕНИЕ БРАУЗЕРА",
+    "hint": {
+      "at": "l24"
+    },
+    "teaserCue": {
+      "at": "l25"
+    },
+    "teaserDetailCue": {
+      "at": "l25",
+      "offsetMs": 700
+    }
+  },
+  "qa": {
+    "durationSeconds": [
+      30,
+      60
+    ],
+    "contentPolarity": "light-on-dark",
+    "scriptQuality": {
+      "hookLines": 3,
+      "maxHookWordsPerLine": 8,
+      "minAnchors": 3
+    }
+  },
+  "publish": {
+    "cover": "ТЫ НИЧЕГО НЕ РАЗРЕШАЛ",
+    "coverSub": "Браузер сам называет сайту систему, браузер и версию",
+    "caption": "Куки тут ни при чём.\n\nВ каждом запросе браузер по умолчанию отправляет три заголовка: Sec-CH-UA, Sec-CH-UA-Mobile и Sec-CH-UA-Platform — бренд с мажорной версией, мобильный ты или нет и какая ОС.\n\nОстальное — точную версию, архитектуру, модель устройства — сайт дозапрашивает одной строкой Accept-CH, и браузер отдаёт.\n\nЭто не куки: заголовок не лежит у тебя, он часть самого запроса. Стирать нечего.\n\nVPN прячет адрес, но не заголовки.",
+    "hashtags": [
+      "#приватность",
+      "#браузер",
+      "#отпечаток",
+      "#кибербезопасность"
+    ],
+    "sources": {
+      "MDN — Sec-CH-UA": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Sec-CH-UA",
+      "WICG — UA Client Hints": "https://wicg.github.io/ua-client-hints/"
+    }
+  }
+}

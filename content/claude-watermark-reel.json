@@ -1,0 +1,269 @@
+{
+  "id": "claude-watermark",
+  "compositionId": "ClaudeWatermarkReel",
+  "contactSheetCompositionId": "ClaudeWatermarkContactSheet",
+  "npmPrefix": "claude-watermark",
+  "title": "Anthropic начала помечать весь текст Claude",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/claude-watermark/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 900,
+  "background": {
+    "type": "loop-video",
+    "file": "assets/background.mp4",
+    "muted": true,
+    "fit": "cover",
+    "overlayOpacity": 0.44,
+    "note": "Единственный фон ролика. Зациклен, без звука, нижний постоянный слой."
+  },
+  "source": {
+    "primary": "Anthropic — How Claude's text watermarking works",
+    "secondary": "TechCrunch",
+    "topic": "водяные знаки в тексте Claude, август 2026"
+  },
+  "tts": {
+    "language": "ru",
+    "speed": 1.2,
+    "direction": "Хук — сухо, четыре коротких удара. Механизм — спокойно и по делу. Глава про ограничения — тише и жёстче, это твист. Финал — дружелюбно.",
+    "note": "Клод → Claude, Энтропик → Anthropic. Даты и номера статей проговариваются модулем numerals, на экране остаются цифрами."
+  },
+  "captionClusters": {
+    "targetSeconds": [0.55, 0.85],
+    "growUntilSeconds": 0.45,
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и", "а", "но", "не", "ни", "в", "во", "на", "по", "за", "из", "от", "до",
+      "к", "ко", "с", "со", "у", "о", "об", "про", "для", "что", "как", "это",
+      "всё", "ещё", "же", "ты", "он", "она", "я", "мы", "который", "которая",
+      "чтобы", "так", "там", "уже", "или", "бы", "тебе", "этот", "над", "тем",
+      "её", "его", "ему", "их", "то", "есть", "своё", "свой", "если", "теперь",
+      "они", "себе", "почти", "вот", "даже", "будет", "была", "только", "когда",
+      "потому", "поэтому", "вообще", "тут", "им", "ним", "где", "два", "значит"
+    ],
+    "highlightWords": {
+      "red": ["стирает", "ничего", "доказывает", "человек"],
+      "yellow": ["метка", "метки", "ключ", "ключом", "статья", "подпись"],
+      "mint": ["невидимо", "коротко", "помечен"]
+    },
+    "displayReplacements": {
+      "клода": "Claude",
+      "клодом": "Claude",
+      "клод": "Claude",
+      "энтропик": "Anthropic"
+    }
+  },
+  "lines": [
+    {"id": "l01", "chapter": "hook", "text": "Ты скопировал ответ Клода.", "breakAfter": "line"},
+    {"id": "l02", "chapter": "hook", "text": "Вставил в свой документ.", "breakAfter": "line"},
+    {"id": "l03", "chapter": "hook", "text": "Метка приехала вместе с текстом.", "breakAfter": "line"},
+    {"id": "l04", "chapter": "hook", "text": "И её не видно.", "breakAfter": "block"},
+
+    {"id": "l05", "chapter": "law", "text": "2 августа 2026 года", "breakAfter": "line"},
+    {"id": "l06", "chapter": "law", "text": "в Европе заработала статья 50.", "breakAfter": "line"},
+    {"id": "l07", "chapter": "law", "text": "Она требует помечать вывод нейросети.", "breakAfter": "line"},
+    {"id": "l08", "chapter": "law", "text": "Энтропик включила метку во всех странах.", "breakAfter": "block"},
+
+    {"id": "l09", "chapter": "how", "text": "Скрытых символов нет.", "breakAfter": "line"},
+    {"id": "l10", "chapter": "how", "text": "Меняется сам выбор слова.", "breakAfter": "line"},
+    {"id": "l11", "chapter": "how", "text": "Там, где два слова равны,", "breakAfter": "line"},
+    {"id": "l12", "chapter": "how", "text": "нужное подсказывает секретный ключ.", "breakAfter": "line"},
+    {"id": "l13", "chapter": "how", "text": "Читатель её не замечает.", "breakAfter": "line"},
+    {"id": "l14", "chapter": "how", "text": "У кого есть ключ — видит узор.", "breakAfter": "block"},
+
+    {"id": "l15", "chapter": "files", "text": "С картинками иначе.", "breakAfter": "line"},
+    {"id": "l16", "chapter": "files", "text": "Подпись кладут в файл.", "breakAfter": "line"},
+    {"id": "l17", "chapter": "files", "text": "Она говорит: сделано Клодом.", "breakAfter": "block"},
+
+    {"id": "l18", "chapter": "limits", "text": "Только метка держится не всегда.", "breakAfter": "line"},
+    {"id": "l19", "chapter": "limits", "text": "В коротком ответе её мало.", "breakAfter": "line"},
+    {"id": "l20", "chapter": "limits", "text": "В сухом факте выбора нет.", "breakAfter": "line"},
+    {"id": "l21", "chapter": "limits", "text": "Полный пересказ её стирает.", "breakAfter": "line"},
+    {"id": "l22", "chapter": "limits", "text": "Обратно это не работает.", "breakAfter": "line"},
+    {"id": "l23", "chapter": "limits", "text": "Нет метки — не значит человек.", "breakAfter": "block"},
+
+    {"id": "l24", "chapter": "recap", "text": "Что в итоге.", "breakAfter": "line"},
+    {"id": "l25", "chapter": "recap", "text": "Текст Клода теперь подписан невидимо.", "breakAfter": "line"},
+    {"id": "l26", "chapter": "recap", "text": "Подпись переживает копирование.", "breakAfter": "block"},
+
+    {"id": "l27", "chapter": "cta", "text": "Тебя это напрягает?", "breakAfter": "line"},
+    {"id": "l28", "chapter": "cta", "text": "Норм.", "breakAfter": "line"},
+    {"id": "l29", "chapter": "cta", "text": "Напрягает.", "breakAfter": "none"}
+  ],
+  "chapters": [
+    {
+      "id": "hook",
+      "label": "ЧТО ИЗМЕНИЛОСЬ",
+      "headline": "В ТЕКСТЕ\nЕСТЬ МЕТКА",
+      "fromLine": "l01",
+      "toLine": "l04",
+      "grammar": {
+        "type": "document",
+        "card": "ТВОЙ ДОКУМЕНТ",
+        "visible": "ОТЧЁТ ЗА КВАРТАЛ\nТЕКСТ ИЗ ЧАТА",
+        "hidden": {"label": "МЕТКА В ВЫБОРЕ СЛОВ", "tone": "yellow", "at": "l03"},
+        "revealAt": "l03",
+        "aside": {"label": "ГЛАЗОМ НЕ ВИДНО", "tone": "neutral", "at": "l04"},
+        "verdict": {"label": "ЕДЕТ ВМЕСТЕ С ТЕКСТОМ", "tone": "red", "at": "l04", "offsetMs": 700}
+      }
+    },
+    {
+      "id": "law",
+      "label": "ПОЧЕМУ СЕЙЧАС",
+      "headline": "СРОК ПО ЗАКОНУ\nНАСТУПИЛ",
+      "fromLine": "l05",
+      "toLine": "l08",
+      "grammar": {
+        "type": "counters",
+        "card": "ЧТО ВКЛЮЧИЛОСЬ 2 АВГУСТА",
+        "lead": {"label": "ЕВРОПЕЙСКИЙ ЗАКОН ОБ ИИ", "at": "l05"},
+        "counters": [
+          {"label": "2026 ГОД", "tone": "yellow", "at": "l05", "offsetMs": 600},
+          {"label": "50 СТАТЬЯ", "tone": "yellow", "at": "l06"}
+        ],
+        "chips": [
+          {"label": "ПОМЕЧАТЬ ВЫВОД МОДЕЛИ", "tone": "neutral", "at": "l07"},
+          {"label": "ВО ВСЕХ СТРАНАХ, НЕ ТОЛЬКО В ЕС", "tone": "mint", "at": "l08"}
+        ]
+      }
+    },
+    {
+      "id": "how",
+      "label": "КАК ЭТО УСТРОЕНО",
+      "headline": "МЕТКА ЖИВЁТ\nВ ВЫБОРЕ СЛОВ",
+      "fromLine": "l09",
+      "toLine": "l14",
+      "grammar": {
+        "type": "split",
+        "card": "ОДНО МЕСТО, ДВА РАВНЫХ ВАРИАНТА",
+        "subject": "СЛЕДУЮЩЕЕ СЛОВО",
+        "splitAt": "l11",
+        "left": {"label": "РАНЬШЕ — СЛУЧАЙНО", "tone": "neutral", "at": "l11"},
+        "right": {"label": "ТЕПЕРЬ — ПО КЛЮЧУ", "tone": "yellow", "at": "l12"},
+        "verdict": {"label": "С КЛЮЧОМ УЗОР ЧИТАЕТСЯ", "tone": "mint", "at": "l14"}
+      }
+    },
+    {
+      "id": "files",
+      "label": "А ЧТО С ФАЙЛАМИ",
+      "headline": "КАРТИНКИ\nПОДПИСАНЫ ИНАЧЕ",
+      "fromLine": "l15",
+      "toLine": "l17",
+      "grammar": {
+        "type": "tiles",
+        "card": "ПОДПИСЬ ЛЕЖИТ В МЕТАДАННЫХ",
+        "badge": "C2PA",
+        "lead": {"label": "НЕ УЗОР, А ЗАПИСЬ В ФАЙЛЕ", "at": "l16"},
+        "tiles": [
+          {"label": "PNG", "tone": "mint", "at": "l16", "offsetMs": 400},
+          {"label": "JPG", "tone": "mint", "at": "l16", "offsetMs": 1000},
+          {"label": "SVG", "tone": "mint", "at": "l16", "offsetMs": 1600}
+        ],
+        "verdict": {"label": "СДЕЛАНО В CLAUDE", "tone": "yellow", "at": "l17"}
+      }
+    },
+    {
+      "id": "limits",
+      "label": "ГДЕ МЕТКА ЛОМАЕТСЯ",
+      "headline": "ЧИСТЫЙ ТЕКСТ\nНИЧЕГО НЕ ЗНАЧИТ",
+      "fromLine": "l18",
+      "toLine": "l23",
+      "grammar": {
+        "type": "statement",
+        "card": "ПРОВЕРКА ПОКАЗАЛА «МЕТКИ НЕТ»",
+        "claim": "ЗНАЧИТ, ПИСАЛ ЧЕЛОВЕК",
+        "claimTone": "yellow",
+        "strikeAt": "l22",
+        "items": [
+          {"label": "КОРОТКИЙ ОТВЕТ", "note": "ВЫБОРА СЛИШКОМ МАЛО", "tone": "yellow", "at": "l19", "noteAt": "l19"},
+          {"label": "СУХОЙ ФАКТ", "note": "ВАРИАНТ ТОЛЬКО ОДИН", "tone": "yellow", "at": "l20", "noteAt": "l20"},
+          {"label": "ПОЛНЫЙ ПЕРЕСКАЗ", "note": "МЕТКА СТЁРТА", "tone": "red", "at": "l21", "noteAt": "l21"}
+        ],
+        "verdict": {"label": "РАБОТАЕТ ТОЛЬКО В ОДНУ СТОРОНУ", "tone": "red", "at": "l23"}
+      }
+    },
+    {
+      "id": "recap",
+      "label": "ГЛАВНОЕ",
+      "headline": "ЧТО ТЕПЕРЬ\nЗНАТЬ ПРО ТЕКСТ",
+      "fromLine": "l24",
+      "toLine": "l26",
+      "grammar": null
+    },
+    {
+      "id": "cta",
+      "label": "ТВОЙ ХОД",
+      "headline": "ТЕБЯ ЭТО\nНАПРЯГАЕТ?",
+      "fromLine": "l27",
+      "toLine": "l29",
+      "grammar": null
+    }
+  ],
+  "avatarStates": [
+    {"at": "l01", "state": "question"},
+    {"at": "l05", "state": "thinking"},
+    {"at": "l09", "state": "idea"},
+    {"at": "l15", "state": "skeptical"},
+    {"at": "l18", "state": "shocked"},
+    {"at": "l24", "state": "idea"},
+    {"at": "l27", "state": "approved"}
+  ],
+  "chips": [
+    {"label": "МЕТКА В ТЕКСТЕ", "tone": "yellow", "at": "l04"},
+    {"label": "ТРЕБОВАНИЕ ЗАКОНА ЕС", "tone": "neutral", "at": "l06"},
+    {"label": "ЧИСТО ≠ ЧЕЛОВЕК", "tone": "red", "at": "l23"}
+  ],
+  "mood": {
+    "calm": {"from": "l09", "to": "l18"},
+    "alarm": {"from": "l18", "to": "l24"}
+  },
+  "memoryFrame": {
+    "fromLine": "l24",
+    "untilLine": "l27",
+    "maxHoldMs": 9000,
+    "staggerMs": 560,
+    "minHoldSeconds": 2.8,
+    "title": "ЧТО ЗАПОМНИТЬ",
+    "items": [
+      "ТЕКСТ CLAUDE ПОДПИСАН НЕВИДИМО",
+      "ПОДПИСЬ ПЕРЕЖИВАЕТ КОПИРОВАНИЕ",
+      "ЕЁ ОТСУТСТВИЕ НИЧЕГО НЕ ДОКАЗЫВАЕТ"
+    ]
+  },
+  "cta": {
+    "fromLine": "l27",
+    "prompt": "ТЕБЯ ЭТО НАПРЯГАЕТ?",
+    "divider": "или",
+    "options": [
+      {"label": "НОРМ", "tone": "mint", "at": "l28"},
+      {"label": "НАПРЯГАЕТ", "tone": "yellow", "at": "l29"}
+    ],
+    "comment": "Ответь одним словом в комментарии.",
+    "teaser": "ПОЧЕМУ ДЕТЕКТОРЫ ИИ ОШИБАЮТСЯ НА ЖИВЫХ ЛЮДЯХ",
+    "hint": {"at": "l28"},
+    "teaserCue": {"at": "l29"},
+    "teaserDetailCue": {"at": "l29", "offsetMs": 700}
+  },
+  "qa": {
+    "durationSeconds": [30, 60],
+    "contentPolarity": "light-on-dark",
+    "scriptQuality": {
+      "hookLines": 3,
+      "maxHookWordsPerLine": 8,
+      "minAnchors": 3
+    }
+  },
+  "publish": {
+    "cover": "В ТЕКСТЕ CLAUDE ТЕПЕРЬ ЕСТЬ МЕТКА",
+    "coverSub": "Её не видно, но она копируется вместе с текстом",
+    "caption": "2 августа 2026 года в ЕС заработали требования AI Act к прозрачности: вывод генеративных моделей должен быть помечен машиночитаемо. Anthropic включила маркировку не только в Европе, а во всех странах, где доступен Claude.\n\nМетка не добавляет в текст скрытых символов. Она меняет источник случайности при выборе слова там, где несколько вариантов равнозначны. Подход основан на SynthID-Text от Google DeepMind. Читатель разницы не видит, качество и скорость ответов не меняются.\n\nДля файлов PNG, JPG и SVG Claude добавляет подписанные метаданные C2PA.\n\nГраницы метода Anthropic называет сама: на коротких ответах и на сухих фактах метки почти нет, полный пересказ её стирает, а отсутствие метки не доказывает, что текст писал человек.",
+    "hashtags": ["#нейросети", "#ии", "#claude", "#технологии"],
+    "sources": {
+      "Anthropic — How Claude's text watermarking works": "https://www.anthropic.com/news/claude-text-watermark",
+      "TechCrunch — Anthropic says it will watermark text generated by its AI models": "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/"
+    }
+  }
+}

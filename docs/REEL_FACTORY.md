@@ -1,5 +1,7 @@
 # Фабрика Reels
 
+> Новые ролики строятся на режиссируемом движке: начните с [AI_VIDEO_CREATION_GUIDE.md](AI_VIDEO_CREATION_GUIDE.md). Этот документ описывает общий цикл и старый слой `visual` (`src/editorial/kit/`), который продолжает рендериться для существующих проектов.
+
 Один запрос к Claude Code («сделай ролик про X») запускает скилл `editorial-pipeline`. Он ведёт проект от сценария до MP4 через `node studio/reel.mjs` и никогда не публикует сам.
 
 ## Команды
@@ -16,7 +18,7 @@ node studio/reel.mjs storyboard my-reel
 
 node studio/import-voice.mjs my-reel --from <legacy-slug>   # взять готовый дубль из public/generated, 0 квоты
 node studio/visual-test.mjs my-reel [--update]              # визуальная регрессия
-node --experimental-strip-types --no-warnings --test 'studio/tests/*.test.mjs'
+node --no-warnings --test --test-concurrency=1 'studio/tests/*.test.mjs'
 ```
 
 Коды выхода `run`: 2 — сценарий невалиден, 3 — нужно одобрение, 4 — нужна озвучка, 5 — рендер или QA упали.

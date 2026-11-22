@@ -1,0 +1,893 @@
+{
+  "id": "reels-scroll-trap",
+  "topic": "Почему так трудно перестать листать Reels?",
+  "niche": "social media / human behavior",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "publication": "draft",
+    "production": "rendered",
+    "approvedScriptHash": "f64c55ad382e172f",
+    "approval": {
+      "by": "Пользователь",
+      "at": "2026-11-01"
+    }
+  },
+  "sources": [
+    {
+      "id": "meta-reels",
+      "publisher": "Meta",
+      "url": "https://ai.meta.com/blog/how-ai-powers-experiences-facebook-instagram-system-cards/",
+      "accessed": "2026-11-02",
+      "claim": "Meta описывает рекомендации Reels как прогнозы интереса с учётом прошлого взаимодействия пользователя с похожими публикациями."
+    },
+    {
+      "id": "wang-2026",
+      "publisher": "Information & Management",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0378720626000169",
+      "accessed": "2026-11-02",
+      "claim": "Исследование коротких видео связывает неопределённость следующего ролика, ожидание и рекомендации с повторяющимся скроллингом; выводы получены из опроса, а не причинного эксперимента."
+    },
+    {
+      "id": "apa-2024",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/topics/social-media-internet/healthy-teen-video-viewing",
+      "accessed": "2026-11-02",
+      "claim": "APA описывает быстрые переходы между короткими видео, автозапуск и персональные рекомендации как функции, способные продлевать просмотр."
+    },
+    {
+      "id": "apa-stopping",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/monitor/2022/03/feature-minimize-instagram-effects",
+      "accessed": "2026-11-02",
+      "claim": "Эксперт APA объясняет, что бесконечная лента почти не даёт естественных сигналов остановки, характерных для страниц или глав."
+    }
+  ],
+  "title": "Почему так трудно перестать листать Reels?",
+  "hook": "Ты открыл Reels на минуту. Как уже прошло полчаса?",
+  "centralIdea": "Неопределённость следующего ролика и лента без естественного конца делают продолжение просмотра лёгким; остановку приходится выбрать самому.",
+  "theme": "signal",
+  "captionStyle": "plate",
+  "art": {
+    "direction": "culture",
+    "music": {
+      "asset": "bed-pulse",
+      "volume": 0.09,
+      "duck": 0.6
+    }
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 27.3,
+  "scenes": [
+    {
+      "id": "hook",
+      "voice": "Ты открыл Reels на минуту. Как уже прошло полчаса?",
+      "onScreen": "МИНУТА → ПОЛЧАСА",
+      "thought": "Узнаваемый провал времени в одном жесте",
+      "animation": "Палец листает, а часы ускоряются",
+      "sources": [
+        "apa-stopping"
+      ],
+      "direction": {
+        "purpose": "opening",
+        "emotion": "узнавание и лёгкий шок",
+        "concept": "Один и тот же экран телефона остаётся в руках, пока окружающий свет меняется, а время уходит",
+        "hierarchy": {
+          "primary": "телефон и скачок времени"
+        },
+        "art": {
+          "variant": "inverse"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "scrollClock",
+          "props": {},
+          "review": "The opening combines a continuous phone feed, a gestural swipe and a time jump that the standard device shot cannot stage together"
+        },
+        "camera": {
+          "move": "pushIn"
+        },
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "source": "hide",
+        "sound": [
+          {
+            "cue": "минуту",
+            "sfx": "tick",
+            "volume": 0.22
+          },
+          {
+            "cue": "полчаса",
+            "sfx": "thud",
+            "volume": 0.24
+          }
+        ]
+      },
+      "start": 0,
+      "duration": 3.2666666666666666
+    },
+    {
+      "id": "unknown",
+      "voice": "Один свайп — и неизвестно, что дальше. Скучно? Ещё свайп. А вдруг следующий ролик — прямо в точку?",
+      "onScreen": "А ВДРУГ СЛЕДУЮЩИЙ?",
+      "thought": "Каждый следующий ролик остаётся скрытым до жеста",
+      "animation": "Кадры сменяются как закрытые двери, одна раскрывается",
+      "sources": [
+        "wang-2026"
+      ],
+      "direction": {
+        "purpose": "question",
+        "emotion": "любопытство",
+        "concept": "За каждым свайпом очередная закрытая дверь; содержание видно только после открытия",
+        "hierarchy": {
+          "primary": "закрытые двери следующего видео"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "journey",
+          "route": "descend",
+          "nodes": [
+            {
+              "text": "?",
+              "icon": "search",
+              "cue": "свайп"
+            },
+            {
+              "text": "скучно",
+              "icon": "eye",
+              "cue": "Скучно"
+            },
+            {
+              "text": "в точку",
+              "icon": "question",
+              "cue": "точку"
+            }
+          ],
+          "overviewCue": "следующий"
+        },
+        "camera": {
+          "move": "driftUp"
+        },
+        "transition": {
+          "type": "through",
+          "origin": [
+            0.5,
+            0.5
+          ],
+          "seconds": 0.55,
+          "intent": "Камера проходит в первый свайп"
+        },
+        "source": "hide",
+        "sound": [
+          {
+            "cue": "свайп",
+            "sfx": "swish",
+            "volume": 0.16
+          },
+          {
+            "cue": "точку",
+            "sfx": "pop",
+            "volume": 0.18
+          }
+        ]
+      },
+      "start": 3.2666666666666666,
+      "duration": 6.8
+    },
+    {
+      "id": "recommend",
+      "voice": "Лента замечает, что ты досматриваешь, и предлагает похожее.",
+      "onScreen": "ЕЩЁ ПОХОЖЕЕ",
+      "thought": "Выбор роликов отражает прежние действия зрителя",
+      "animation": "Один досмотренный кадр разветвляется в ряд родственных",
+      "sources": [
+        "meta-reels"
+      ],
+      "direction": {
+        "purpose": "explain",
+        "emotion": "узнавание механизма",
+        "concept": "Просмотренный ролик порождает похожие варианты в ленте",
+        "hierarchy": {
+          "primary": "размножающаяся лента"
+        },
+        "art": {
+          "variant": "inverse"
+        },
+        "shot": {
+          "type": "device",
+          "layout": "offset",
+          "screen": {
+            "app": "feed",
+            "title": "Для тебя",
+            "scrollCue": "похожее",
+            "items": [
+              {
+                "author": "Видео",
+                "text": "Ты досмотрел",
+                "likes": 8200
+              },
+              {
+                "author": "Следующее",
+                "text": "Похожее видео",
+                "likes": 9100
+              }
+            ]
+          }
+        },
+        "camera": {
+          "move": "panLeft"
+        },
+        "transition": {
+          "type": "mask",
+          "shape": "circle",
+          "origin": [
+            0.5,
+            0.5
+          ],
+          "seconds": 0.55,
+          "intent": "Один увиденный ролик раскрывает следующую группу"
+        },
+        "source": "hide",
+        "sound": [
+          {
+            "cue": "похожее",
+            "sfx": "swish",
+            "volume": 0.14
+          }
+        ]
+      },
+      "start": 10.066666666666666,
+      "duration": 4
+    },
+    {
+      "id": "friction",
+      "voice": "Новое видео начинается сразу. Между ними почти нет момента спросить себя: «Я ещё хочу смотреть?»",
+      "onScreen": "СРАЗУ СЛЕДУЮЩЕЕ",
+      "thought": "Поток ускоряется, пространство для решения сжимается",
+      "animation": "Лента становится бесконечным коридором без паузы",
+      "sources": [
+        "apa-2024"
+      ],
+      "direction": {
+        "purpose": "explain",
+        "emotion": "ускорение",
+        "concept": "В перспективном коридоре экранов нет видимой паузы между эпизодами",
+        "hierarchy": {
+          "primary": "перспектива бесконечных экранов"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "feedTunnel",
+          "props": {},
+          "review": "The continual perspective flow of short videos and a late pause symbol cannot be expressed by the static event timeline system"
+        },
+        "camera": {
+          "move": "pushIn"
+        },
+        "transition": {
+          "type": "depth",
+          "seconds": 0.55,
+          "intent": "Телефон раскрывается в поток без швов"
+        },
+        "source": "hide",
+        "sound": [
+          {
+            "cue": "сразу",
+            "sfx": "whoosh",
+            "volume": 0.18
+          }
+        ]
+      },
+      "start": 14.066666666666666,
+      "duration": 6.300000000000001
+    },
+    {
+      "id": "endless",
+      "voice": "У книги есть последняя страница. У этой ленты — нет.",
+      "onScreen": "ГДЕ КОНЕЦ?",
+      "thought": "Физический конец книги противопоставлен ленте без конца",
+      "animation": "Последняя страница закрывается, коридор продолжает уходить вдаль",
+      "sources": [
+        "apa-stopping"
+      ],
+      "direction": {
+        "purpose": "turn",
+        "emotion": "ясность",
+        "concept": "Последняя страница книги останавливается; справа лента продолжает движение",
+        "hierarchy": {
+          "primary": "книга с концом и лента без конца"
+        },
+        "art": {
+          "direction": "dimensional",
+          "variant": "block"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "bookEnd",
+          "props": {},
+          "review": "The book page and continuing short-video feed must share one frame and change on the final spoken word"
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Слово «книги» резко открывает контраст"
+        },
+        "source": "hide",
+        "sound": [
+          {
+            "cue": "нет",
+            "sfx": "thud",
+            "volume": 0.2
+          }
+        ]
+      },
+      "start": 20.366666666666667,
+      "duration": 3.3999999999999986
+    },
+    {
+      "id": "payoff",
+      "voice": "Поэтому точку ставишь ты. Не следующий ролик. Ты.",
+      "onScreen": "ТОЧКУ СТАВИШЬ ТЫ",
+      "thought": "Рука останавливает поток и гасит экран",
+      "animation": "Вся лента замирает; в тишине появляется точка",
+      "sources": [
+        "apa-stopping"
+      ],
+      "direction": {
+        "purpose": "payoff",
+        "emotion": "спокойный контроль",
+        "concept": "Визуальный поток гаснет; одна точка остаётся в центре кадра",
+        "hierarchy": {
+          "primary": "точку ставишь ты"
+        },
+        "art": {
+          "variant": "inverse"
+        },
+        "shot": {
+          "type": "type",
+          "layout": "poster",
+          "headline": {
+            "text": "Точку / ставишь / *ты*",
+            "cue": "точку",
+            "reveal": "lines",
+            "emphasis": "color"
+          }
+        },
+        "camera": {
+          "move": "pushIn",
+          "keys": [
+            {
+              "cue": "Ты#2",
+              "scale": 1.08,
+              "seconds": 0.7
+            }
+          ]
+        },
+        "transition": {
+          "type": "field",
+          "origin": [
+            0.5,
+            0.5
+          ],
+          "seconds": 0.65,
+          "intent": "Лента растворяется в чистой плоскости для финальной точки"
+        },
+        "source": "hide"
+      },
+      "start": 23.766666666666666,
+      "duration": 3.533333333333335
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/reels-scroll-trap/voice-local-mix.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "sourcePath": "generated/reels-scroll-trap/voice-local-mix.wav",
+    "timingMode": "Local macOS Milena voice; faster-whisper word alignment; ElevenLabs geo-restricted",
+    "sourceDurationSeconds": 26.9110625,
+    "durationSeconds": 26.9110625,
+    "localTempo": 1,
+    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP"
+  },
+  "captions": [
+    {
+      "text": "Ты",
+      "startMs": 0,
+      "endMs": 100,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "открыл",
+      "startMs": 100,
+      "endMs": 440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Reels",
+      "startMs": 440,
+      "endMs": 720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "на",
+      "startMs": 720,
+      "endMs": 800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "минуту.",
+      "startMs": 800,
+      "endMs": 1260,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Как",
+      "startMs": 1500,
+      "endMs": 1640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "уже",
+      "startMs": 1640,
+      "endMs": 1880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "прошло",
+      "startMs": 1880,
+      "endMs": 2340,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "полчаса?",
+      "startMs": 2340,
+      "endMs": 2920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Один",
+      "startMs": 3259,
+      "endMs": 3519,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "свайп",
+      "startMs": 3519,
+      "endMs": 3899,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 3899,
+      "endMs": 3929,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 3929,
+      "endMs": 3979,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "неизвестно,",
+      "startMs": 3979,
+      "endMs": 4519,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "что",
+      "startMs": 4799,
+      "endMs": 4999,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "дальше.",
+      "startMs": 4999,
+      "endMs": 5359,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Скучно?",
+      "startMs": 5759,
+      "endMs": 6279,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Ещё",
+      "startMs": 6599,
+      "endMs": 6859,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "свайп.",
+      "startMs": 6859,
+      "endMs": 7399,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "А",
+      "startMs": 7559,
+      "endMs": 7699,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вдруг",
+      "startMs": 7699,
+      "endMs": 7939,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "следующий",
+      "startMs": 7939,
+      "endMs": 8579,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ролик",
+      "startMs": 8579,
+      "endMs": 8839,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 8839,
+      "endMs": 8859,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "прямо",
+      "startMs": 8859,
+      "endMs": 9059,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 9059,
+      "endMs": 9279,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "точку?",
+      "startMs": 9279,
+      "endMs": 9719,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Лента",
+      "startMs": 10057,
+      "endMs": 10317,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "замечает,",
+      "startMs": 10317,
+      "endMs": 10937,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "что",
+      "startMs": 11177,
+      "endMs": 11377,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ты",
+      "startMs": 11377,
+      "endMs": 11517,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "досматриваешь,",
+      "startMs": 11517,
+      "endMs": 12277,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 12537,
+      "endMs": 12597,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "предлагает",
+      "startMs": 12597,
+      "endMs": 13197,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "похожее.",
+      "startMs": 13197,
+      "endMs": 13697,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Новое",
+      "startMs": 14080,
+      "endMs": 14380,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "видео",
+      "startMs": 14380,
+      "endMs": 14620,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "начинается",
+      "startMs": 14620,
+      "endMs": 15220,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сразу.",
+      "startMs": 15220,
+      "endMs": 15540,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Между",
+      "startMs": 15940,
+      "endMs": 16200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ними",
+      "startMs": 16200,
+      "endMs": 16440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "почти",
+      "startMs": 16440,
+      "endMs": 16740,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "нет",
+      "startMs": 16740,
+      "endMs": 17080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "момента",
+      "startMs": 17080,
+      "endMs": 17580,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "спросить",
+      "startMs": 17580,
+      "endMs": 18060,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "себя:",
+      "startMs": 18060,
+      "endMs": 18300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "«Я",
+      "startMs": 18620,
+      "endMs": 18820,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ещё",
+      "startMs": 18820,
+      "endMs": 19080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "хочу",
+      "startMs": 19080,
+      "endMs": 19340,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "смотреть?»",
+      "startMs": 19340,
+      "endMs": 19780,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "У",
+      "startMs": 20378,
+      "endMs": 20458,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "книги",
+      "startMs": 20458,
+      "endMs": 20798,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "есть",
+      "startMs": 20798,
+      "endMs": 21018,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "последняя",
+      "startMs": 21018,
+      "endMs": 21618,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "страница.",
+      "startMs": 21618,
+      "endMs": 22178,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "У",
+      "startMs": 22438,
+      "endMs": 22578,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "этой",
+      "startMs": 22578,
+      "endMs": 22758,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ленты",
+      "startMs": 22758,
+      "endMs": 23058,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 23058,
+      "endMs": 23078,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "нет.",
+      "startMs": 23078,
+      "endMs": 23278,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Поэтому",
+      "startMs": 23773,
+      "endMs": 24093,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "точку",
+      "startMs": 24093,
+      "endMs": 24553,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ставишь",
+      "startMs": 24553,
+      "endMs": 24953,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ты.",
+      "startMs": 24953,
+      "endMs": 25073,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Не",
+      "startMs": 25373,
+      "endMs": 25513,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "следующий",
+      "startMs": 25513,
+      "endMs": 26093,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ролик.",
+      "startMs": 26093,
+      "endMs": 26453,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Ты.",
+      "startMs": 26633,
+      "endMs": 26773,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "editorialReview": {
+    "note": "Сценарий и фактическая основа одобрены пользователем. Полчаса в хуке — драматургический пример, а не статистическое утверждение. Финальный MP4 создан с локальной русской озвучкой Milena: ElevenLabs отклонил запрос проверки квоты географическим ограничением до генерации речи.",
+    "openClaims": []
+  },
+  "renderPath": "out/studio/reels-scroll-trap.mp4",
+  "qa": {
+    "path": "out/studio/reels-scroll-trap-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  }
+}

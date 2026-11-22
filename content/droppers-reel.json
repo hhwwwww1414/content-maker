@@ -1,0 +1,229 @@
+{
+  "id": "droppers",
+  "compositionId": "DroppersReel",
+  "contactSheetCompositionId": "DroppersContactSheet",
+  "npmPrefix": "droppers",
+  "title": "Дал карту за деньги — получил статью 187",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/droppers/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 800,
+  "background": {
+    "type": "loop-video",
+    "file": "assets/background.mp4",
+    "muted": true,
+    "fit": "cover",
+    "overlayOpacity": 0.44,
+    "note": "Единственный фон ролика. Зациклен, без звука, нижний постоянный слой."
+  },
+  "source": {
+    "primary": "ФЗ от 24.06.2025 № 176-ФЗ — изменения в ст. 187 УК РФ",
+    "secondary": "Банк России — статистика операций без согласия клиента, 2026",
+    "topic": "дропперы, уголовная ответственность с 05.07.2025"
+  },
+  "tts": {
+    "language": "ru",
+    "speed": 1.2,
+    "direction": "Хук — сухо, без сочувствия и без осуждения, три факта подряд. Глава про то, кого поймают — медленнее и тише, это твист. Наказание — ровным голосом, цифры не давить. Финал — по-человечески.",
+    "note": "Числа проговариваются модулем numerals, на экране остаются цифрами."
+  },
+  "captionClusters": {
+    "targetSeconds": [0.5, 0.8],
+    "growUntilSeconds": 0.36,
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и", "а", "но", "не", "ни", "в", "во", "на", "по", "за", "из", "от", "до",
+      "к", "ко", "с", "со", "у", "о", "об", "про", "для", "что", "как", "это",
+      "всё", "ещё", "же", "ты", "он", "она", "я", "мы", "чтобы", "так", "там",
+      "уже", "или", "бы", "тебе", "этот", "над", "тем", "её", "его", "ему", "их",
+      "то", "есть", "если", "теперь", "они", "себе", "вот", "даже", "будет",
+      "только", "когда", "тут", "им", "ним", "где", "кому", "тех", "том", "нём"
+    ],
+    "highlightWords": {
+      "red": ["статья", "найдут", "лет", "уголовное", "шести"],
+      "yellow": ["карту", "счёт", "счёта", "штраф", "реквизиты", "наличными"],
+      "mint": ["признаки", "одни"]
+    },
+    "displayReplacements": {}
+  },
+  "lines": [
+    {"id": "l01", "chapter": "hook", "text": "Ему предложили денег за карту.", "breakAfter": "line"},
+    {"id": "l02", "chapter": "hook", "text": "Он просто дал реквизиты.", "breakAfter": "line"},
+    {"id": "l03", "chapter": "hook", "text": "Теперь это статья 187.", "breakAfter": "block"},
+
+    {"id": "l04", "chapter": "path", "text": "Деньги жертвы приходят ему.", "breakAfter": "line"},
+    {"id": "l05", "chapter": "path", "text": "Дальше — по цепочке чужих карт.", "breakAfter": "line"},
+    {"id": "l06", "chapter": "path", "text": "В конце их снимают наличными.", "breakAfter": "block"},
+
+    {"id": "l07", "chapter": "twist", "text": "Мошенника не найдут.", "breakAfter": "line"},
+    {"id": "l08", "chapter": "twist", "text": "Найдут владельца счёта.", "breakAfter": "line"},
+    {"id": "l09", "chapter": "twist", "text": "То есть его.", "breakAfter": "block"},
+
+    {"id": "l10", "chapter": "price", "text": "Штраф до миллиона рублей.", "breakAfter": "line"},
+    {"id": "l11", "chapter": "price", "text": "Или до шести лет.", "breakAfter": "line"},
+    {"id": "l12", "chapter": "price", "text": "Отвечают с шестнадцати.", "breakAfter": "block"},
+
+    {"id": "l13", "chapter": "who", "text": "Подростков стало втрое меньше.", "breakAfter": "line"},
+    {"id": "l14", "chapter": "who", "text": "Теперь зовут студентов.", "breakAfter": "line"},
+    {"id": "l15", "chapter": "who", "text": "Признаки всегда одни и те же.", "breakAfter": "block"},
+
+    {"id": "l16", "chapter": "cta", "text": "Тебе такое предлагали?", "breakAfter": "line"},
+    {"id": "l17", "chapter": "cta", "text": "Было.", "breakAfter": "line"},
+    {"id": "l18", "chapter": "cta", "text": "Не было.", "breakAfter": "none"}
+  ],
+  "chapters": [
+    {
+      "id": "hook",
+      "label": "ЧТО ОН СДЕЛАЛ",
+      "headline": "ОТДАЛ КАРТУ\nЗА ДЕНЬГИ",
+      "fromLine": "l01",
+      "toLine": "l03",
+      "grammar": {
+        "type": "split",
+        "card": "ОДНА ПРОСЬБА, ДВА ИСХОДА",
+        "subject": "ДАЙ СВОЮ КАРТУ",
+        "splitAt": "l02",
+        "left": {"label": "ОБЕЩАЛИ ЛЁГКИЕ ДЕНЬГИ", "tone": "yellow", "at": "l02"},
+        "right": {"label": "ПОЛУЧИЛ УГОЛОВНОЕ ДЕЛО", "tone": "red", "at": "l03"},
+        "verdict": {"label": "СТАТЬЯ 187 УК", "tone": "red", "at": "l03", "offsetMs": 700}
+      }
+    },
+    {
+      "id": "path",
+      "label": "КУДА ИДУТ ДЕНЬГИ",
+      "headline": "ЕГО СЧЁТ —\nПЕРВАЯ ОСТАНОВКА",
+      "fromLine": "l04",
+      "toLine": "l06",
+      "grammar": {
+        "type": "steps",
+        "card": "ПУТЬ УКРАДЕННЫХ ДЕНЕГ",
+        "steps": [
+          {"label": "СПИСАЛИ У ЖЕРТВЫ", "note": "ПРИШЛИ НА ЕГО КАРТУ", "tone": "yellow", "at": "l04", "noteAt": "l04", "noteAtOffsetMs": 700},
+          {"label": "РАЗОГНАЛИ ПО ЧУЖИМ КАРТАМ", "note": "СЛЕД РВЁТСЯ", "tone": "yellow", "at": "l05", "noteAt": "l05"},
+          {"label": "СНЯЛИ НАЛИЧНЫМИ", "note": "ВЕРНУТЬ УЖЕ НЕ С ЧЕГО", "tone": "red", "at": "l06", "noteAt": "l06"}
+        ]
+      }
+    },
+    {
+      "id": "twist",
+      "label": "КОГО НАЙДУТ",
+      "headline": "ИЩУТ НЕ ТОГО,\nКТО ЗВОНИЛ",
+      "fromLine": "l07",
+      "toLine": "l09",
+      "grammar": {
+        "type": "statement",
+        "card": "КТО ОСТАЁТСЯ В ДЕЛЕ",
+        "claim": "НАЙДУТ МОШЕННИКА",
+        "claimTone": "yellow",
+        "strikeAt": "l07",
+        "items": [
+          {"label": "ЗВОНИЛ ИЗ-ЗА ГРАНИЦЫ", "tone": "neutral", "at": "l07", "offsetMs": 600},
+          {"label": "СЧЁТ ОФОРМЛЕН НА ЖИВОГО ЧЕЛОВЕКА", "tone": "red", "at": "l08"}
+        ],
+        "verdict": {"label": "В ДЕЛЕ ОСТАЁТСЯ ВЛАДЕЛЕЦ КАРТЫ", "tone": "red", "at": "l09"}
+      }
+    },
+    {
+      "id": "price",
+      "label": "ЧТО ЗА ЭТО",
+      "headline": "ЦЕНА ОДНОЙ\nПЕРЕДАННОЙ КАРТЫ",
+      "fromLine": "l10",
+      "toLine": "l12",
+      "grammar": {
+        "type": "counters",
+        "card": "СТ. 187 УК РФ, С 5 ИЮЛЯ 2025",
+        "lead": {"label": "НЕПРАВОМЕРНЫЙ ОБОРОТ СРЕДСТВ", "at": "l10"},
+        "counters": [
+          {"label": "1 МЛН ШТРАФА", "tone": "yellow", "at": "l10", "offsetMs": 900},
+          {"label": "6 ЛЕТ СРОКА", "tone": "red", "at": "l11"}
+        ],
+        "chips": [
+          {"label": "ОТВЕТСТВЕННОСТЬ С 16 ЛЕТ", "tone": "red", "at": "l12"}
+        ]
+      }
+    },
+    {
+      "id": "who",
+      "label": "КОГО ЗОВУТ СЕЙЧАС",
+      "headline": "ИСКАТЬ СТАЛИ\nПОСТАРШЕ",
+      "fromLine": "l13",
+      "toLine": "l15",
+      "grammar": null
+    },
+    {
+      "id": "cta",
+      "label": "ТВОЙ ХОД",
+      "headline": "ТЕБЕ ТАКОЕ\nПРЕДЛАГАЛИ?",
+      "fromLine": "l16",
+      "toLine": "l18",
+      "grammar": null
+    }
+  ],
+  "avatarStates": [
+    {"at": "l01", "state": "question"},
+    {"at": "l04", "state": "thinking"},
+    {"at": "l07", "state": "shocked"},
+    {"at": "l10", "state": "angry"},
+    {"at": "l13", "state": "idea"},
+    {"at": "l16", "state": "approved"}
+  ],
+  "chips": [
+    {"label": "СТАТЬЯ 187 УК", "tone": "red", "at": "l03"},
+    {"label": "ЛОВЯТ ВЛАДЕЛЬЦА СЧЁТА", "tone": "red", "at": "l09"},
+    {"label": "ДО 6 ЛЕТ", "tone": "red", "at": "l11"}
+  ],
+  "mood": {
+    "alarm": {"from": "l07", "to": "l13"},
+    "calm": {"from": "l13", "to": "l16"}
+  },
+  "memoryFrame": {
+    "fromLine": "l13",
+    "untilLine": "l16",
+    "maxHoldMs": 9000,
+    "staggerMs": 420,
+    "minHoldSeconds": 2.4,
+    "title": "ПО ЧЕМУ УЗНАТЬ ТАКУЮ «РАБОТУ»",
+    "items": [
+      "ПРОСЯТ КАРТУ ИЛИ ДОСТУП К СЧЁТУ",
+      "ПЛАТЯТ ЗА САМ ФАКТ ПЕРЕВОДА",
+      "ТОРОПЯТ И ЗОВУТ В МЕССЕНДЖЕР"
+    ]
+  },
+  "cta": {
+    "fromLine": "l16",
+    "prompt": "ТЕБЕ ТАКОЕ ПРЕДЛАГАЛИ?",
+    "divider": "или",
+    "options": [
+      {"label": "БЫЛО", "tone": "yellow", "at": "l17"},
+      {"label": "НЕ БЫЛО", "tone": "mint", "at": "l18"}
+    ],
+    "comment": "Ответь одним словом в комментарии.",
+    "teaser": "КУДА ЗВОНЯТ ИЗ КОЛЛ-ЦЕНТРОВ И ПОЧЕМУ ИМЕННО ТЕБЕ",
+    "hint": {"at": "l17"},
+    "teaserCue": {"at": "l18"},
+    "teaserDetailCue": {"at": "l18", "offsetMs": 600}
+  },
+  "qa": {
+    "durationSeconds": [25, 35],
+    "contentPolarity": "light-on-dark",
+    "scriptQuality": {
+      "hookLines": 3,
+      "maxHookWordsPerLine": 8,
+      "minAnchors": 3
+    }
+  },
+  "publish": {
+    "cover": "ОТДАЛ КАРТУ ЗА ДЕНЬГИ — ПОЛУЧИЛ СТАТЬЮ",
+    "coverSub": "До 6 лет, ответственность с 16",
+    "caption": "Дроппер — человек, через чью карту или счёт прогоняют украденные у других деньги. Схема простая: списанное у жертвы приходит на его счёт, дальше расходится по цепочке чужих карт и снимается наличными.\n\nФедеральный закон от 24.06.2025 № 176-ФЗ, вступивший в силу 5 июля 2025 года, внёс изменения в статью 187 УК РФ «Неправомерный оборот средств платежей». Теперь ответственность наступает и за оформление или передачу своей карты другому лицу: штраф до 1 млн рублей или лишение свободы на срок до 6 лет. Уголовная ответственность по этой статье — с 16 лет.\n\nВажное, что видно из практики: организатор звонит из-за границы и в деле не появляется, а счёт оформлен на конкретного живого человека — именно он остаётся тем, к кому есть вопросы.\n\nПо данным Банка России, в I квартале 2026 года число несовершеннолетних дропперов снизилось более чем втрое к середине 2025 года — но вербовщики переключились на взрослую молодёжь и людей в трудной ситуации.\n\nПризнаки вербовки не меняются: просят карту или доступ к счёту, платят за сам факт перевода, торопят и уводят разговор в мессенджер.",
+    "hashtags": ["#мошенники", "#дропперы", "#финансы", "#право"],
+    "sources": {
+      "ФЗ от 24.06.2025 № 176-ФЗ (ст. 187 УК РФ)": "https://t-j.ru/news/dropper-doljen-sidet-v-turme/",
+      "Банк России — статистика операций без согласия клиента, I кв. 2026": "https://iz.ru/2097487/2026-05-15/tcb-zafiksiroval-snizhenie-finansovykh-poter-rossiian-ot-moshennikov"
+    }
+  }
+}

@@ -1,0 +1,584 @@
+{
+  "id": "ai-voice-scam-48k",
+  "compositionId": "AiVoiceScam48kReel",
+  "contactSheetCompositionId": "AiVoiceScam48kContactSheet",
+  "npmPrefix": "ai-voice-scam-48k",
+  "title": "ИИ копирует голос за 3 секунды",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/ai-voice-scam-48k/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 900,
+  "background": {
+    "type": "loop-video",
+    "file": "assets/background.mp4",
+    "muted": true,
+    "fit": "cover",
+    "overlayOpacity": 0.44,
+    "note": "Единственный фон ролика. Зациклен, без звука, нижний постоянный слой."
+  },
+  "source": {
+    "primary": "Microsoft Research",
+    "secondary": "",
+    "topic": "ИИ копирует голос за 3 секунды"
+  },
+  "tts": {
+    "language": "ru",
+    "speed": 1.2,
+    "direction": "Хук — быстро и с нажимом. Поворот — медленнее и тише. Финал — дружелюбно.",
+    "note": "text = произносимый вариант: VALL-E 2 → «Вэлл-и два», OpenVoice → «Оупен-войс», GitHub → «Гитхабе». На экране показываются оригинальные написания."
+  },
+  "captionClusters": {
+    "targetSeconds": [
+      0.55,
+      0.85
+    ],
+    "growUntilSeconds": 0.45,
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и",
+      "а",
+      "но",
+      "не",
+      "ни",
+      "в",
+      "во",
+      "на",
+      "по",
+      "за",
+      "из",
+      "от",
+      "до",
+      "к",
+      "ко",
+      "с",
+      "со",
+      "у",
+      "о",
+      "об",
+      "про",
+      "для",
+      "что",
+      "как",
+      "это",
+      "всё",
+      "ещё",
+      "же",
+      "ты",
+      "он",
+      "она",
+      "я",
+      "мы",
+      "который",
+      "которую",
+      "которая",
+      "которой",
+      "чтобы",
+      "так",
+      "там",
+      "уже",
+      "или",
+      "бы",
+      "тебе",
+      "этот",
+      "над",
+      "тем",
+      "её",
+      "его",
+      "ему",
+      "их",
+      "то",
+      "есть",
+      "одной",
+      "своей",
+      "потом",
+      "чего",
+      "самое",
+      "могут",
+      "своё",
+      "если",
+      "твоему",
+      "твоём",
+      "твоим",
+      "теперь",
+      "моё",
+      "они",
+      "себе",
+      "почти",
+      "вот",
+      "даже",
+      "будет",
+      "была",
+      "только",
+      "когда",
+      "потому",
+      "поэтому",
+      "вообще",
+      "тут",
+      "им",
+      "ним",
+      "таких",
+      "такому",
+      "оттуда",
+      "тогда"
+    ],
+    "highlightWords": {
+      "red": [
+        "копирует",
+        "маме",
+        "пароль",
+        "школьник"
+      ],
+      "yellow": [
+        "вэлл-и",
+        "три",
+        "секунды",
+        "оупен-войс"
+      ],
+      "mint": [
+        "кодовом",
+        "слове",
+        "слово",
+        "фактора"
+      ]
+    },
+    "displayReplacements": {
+      "вэлл-и": "VALL-E 2",
+      "оупен-войс": "OpenVoice",
+      "гитхабе": "GitHub",
+      "майкрософт": "Microsoft"
+    }
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "chapter": "hook",
+      "text": "Ты говоришь «Алло?» в трубку",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l02",
+      "chapter": "hook",
+      "text": "ИИ за три секунды копирует голос",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l03",
+      "chapter": "hook",
+      "text": "Теперь он звонит твоей маме",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l04",
+      "chapter": "tech",
+      "text": "Модель «Вэлл-и два» от Майкрософт",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l05",
+      "chapter": "tech",
+      "text": "Исследование вышло в июне двадцать четвёртого",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l06",
+      "chapter": "tech",
+      "text": "Нужно всего три секунды записи",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l07",
+      "chapter": "quality",
+      "text": "Сохраняет тембр и эмоции говорящего",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l08",
+      "chapter": "quality",
+      "text": "На тестах — уровень живого человека",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l09",
+      "chapter": "quality",
+      "text": "Модель не обучали на твоём голосе",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l10",
+      "chapter": "threat",
+      "text": "Банки используют голос как пароль",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l11",
+      "chapter": "threat",
+      "text": "Голосовая проверка на это не рассчитана",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l12",
+      "chapter": "threat",
+      "text": "Майкрософт модель в доступ не выложил",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l13",
+      "chapter": "twist",
+      "text": "Но «Оупен-войс» лежит на Гитхабе открыто",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l14",
+      "chapter": "twist",
+      "text": "Клонировать голос теперь может школьник",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l15",
+      "chapter": "twist",
+      "text": "Стоит это ноль рублей",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l16",
+      "chapter": "defense",
+      "text": "Договорись о кодовом слове с семьёй",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l17",
+      "chapter": "defense",
+      "text": "Не верь голосу без второго фактора",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l18",
+      "chapter": "defense",
+      "text": "Кодовое слово надёжнее биометрии",
+      "breakAfter": "none"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "hook",
+      "label": "ХУК",
+      "headline": "ТРИ СЕКУНДЫ —\nИ ГОЛОС ТВОЙ",
+      "fromLine": "l01",
+      "toLine": "l03",
+      "grammar": {
+        "type": "tiles",
+        "card": "ОДИН ОТВЕТ В ТРУБКУ",
+        "tiles": [
+          {
+            "label": "«АЛЛО?»",
+            "tone": "neutral",
+            "at": "l01"
+          },
+          {
+            "label": "ГОЛОС СНЯТ",
+            "tone": "red",
+            "at": "l02"
+          },
+          {
+            "label": "ЗВОНОК МАМЕ",
+            "tone": "red",
+            "at": "l03"
+          }
+        ],
+        "verdict": {
+          "label": "ТРИ СЕКУНДЫ",
+          "tone": "yellow",
+          "at": "l02",
+          "offsetMs": 900
+        }
+      }
+    },
+    {
+      "id": "tech",
+      "label": "ТЕХНОЛОГИЯ",
+      "headline": "ЧТО ЗА\nМОДЕЛЬ",
+      "fromLine": "l04",
+      "toLine": "l06",
+      "grammar": {
+        "type": "steps",
+        "card": "ИСТОЧНИК",
+        "steps": [
+          {
+            "label": "VALL-E 2 · MICROSOFT RESEARCH",
+            "at": "l04",
+            "note": "МОДЕЛЬ СИНТЕЗА РЕЧИ",
+            "noteAt": "l04"
+          },
+          {
+            "label": "ИЮНЬ 2024",
+            "note": "ПУБЛИКАЦИЯ ИССЛЕДОВАНИЯ",
+            "at": "l05",
+            "noteAt": "l05"
+          },
+          {
+            "label": "ТРИ СЕКУНДЫ ЗАПИСИ",
+            "note": "БОЛЬШЕ НЕ НУЖНО",
+            "at": "l06",
+            "noteAt": "l06"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quality",
+      "label": "КАЧЕСТВО",
+      "headline": "КОПИРУЕТ\nВСЁ",
+      "fromLine": "l07",
+      "toLine": "l09",
+      "grammar": {
+        "type": "tiles",
+        "card": "ЧТО ИМЕННО КОПИРУЕТСЯ",
+        "tiles": [
+          {
+            "label": "ТЕМБР",
+            "tone": "mint",
+            "at": "l07"
+          },
+          {
+            "label": "ЭМОЦИИ",
+            "tone": "mint",
+            "at": "l07",
+            "offsetMs": 900
+          },
+          {
+            "label": "МАНЕРА РЕЧИ",
+            "tone": "mint",
+            "at": "l08"
+          }
+        ],
+        "verdict": {
+          "label": "ТЕБЯ НЕ ЗАПИСЫВАЛИ ЧАСАМИ",
+          "tone": "yellow",
+          "at": "l09"
+        }
+      }
+    },
+    {
+      "id": "threat",
+      "label": "УГРОЗА",
+      "headline": "ГОЛОС\nКАК ПАРОЛЬ",
+      "fromLine": "l10",
+      "toLine": "l12",
+      "grammar": {
+        "type": "flow",
+        "card": "ПОЧЕМУ ЭТО ОПАСНО",
+        "nodes": [
+          {
+            "label": "ТВОЙ ГОЛОС",
+            "tone": "neutral",
+            "at": "l10"
+          },
+          {
+            "label": "ПРОВЕРКА В БАНКЕ",
+            "note": "ГОЛОС КАК ПАРОЛЬ",
+            "tone": "yellow",
+            "at": "l10"
+          },
+          {
+            "label": "КЛОН",
+            "tone": "red",
+            "at": "l11"
+          }
+        ],
+        "verdict": {
+          "label": "ПРОВЕРКА НА ЭТО НЕ РАССЧИТАНА",
+          "tone": "red",
+          "at": "l11"
+        }
+      }
+    },
+    {
+      "id": "twist",
+      "label": "ПОВОРОТ",
+      "headline": "ЭТО УЖЕ\nВ ОТКРЫТОМ ДОСТУПЕ",
+      "fromLine": "l13",
+      "toLine": "l15",
+      "grammar": {
+        "type": "compare",
+        "card": "ГДЕ ЭТО ЛЕЖИТ",
+        "rows": [
+          {
+            "label": "MICROSOFT — ЗАКРЫТО",
+            "note": "МОДЕЛЬ НЕ ВЫЛОЖИЛИ",
+            "tone": "mint",
+            "glyph": "lock",
+            "at": "l12"
+          },
+          {
+            "label": "OPENVOICE — ОТКРЫТО",
+            "note": "GITHUB, БЕСПЛАТНО",
+            "tone": "red",
+            "glyph": "doc",
+            "at": "l13"
+          }
+        ],
+        "chips": [
+          {
+            "label": "ЗАПУСТИТ ШКОЛЬНИК",
+            "tone": "red",
+            "at": "l14"
+          },
+          {
+            "label": "НОЛЬ РУБЛЕЙ",
+            "tone": "red",
+            "at": "l15"
+          }
+        ]
+      }
+    },
+    {
+      "id": "defense",
+      "label": "ЗАЩИТА",
+      "headline": "ЧТО РЕАЛЬНО\nПОМОГАЕТ",
+      "fromLine": "l16",
+      "toLine": "l18",
+      "grammar": {
+        "type": "steps",
+        "card": "ГРАНИЦА",
+        "steps": [
+          {
+            "label": "КОДОВОЕ СЛОВО С СЕМЬЁЙ",
+            "note": "ОТВЕТ, КОТОРОГО НЕТ В СЕТИ",
+            "at": "l16",
+            "noteAt": "l16"
+          },
+          {
+            "label": "НЕ ВЕРЬ ГОЛОСУ БЕЗ ВТОРОГО ФАКТО",
+            "note": "ПЕРЕЗВОНИ САМ",
+            "at": "l17",
+            "noteAt": "l18"
+          }
+        ]
+      }
+    }
+  ],
+  "avatarStates": [
+    {
+      "at": "l01",
+      "state": "question"
+    },
+    {
+      "at": "l04",
+      "state": "thinking"
+    },
+    {
+      "at": "l07",
+      "state": "shocked"
+    },
+    {
+      "at": "l10",
+      "state": "skeptical"
+    },
+    {
+      "at": "l13",
+      "state": "angry"
+    },
+    {
+      "at": "l16",
+      "state": "idea"
+    }
+  ],
+  "chips": [
+    {
+      "label": "ТРИ СЕКУНДЫ ГОЛОСА",
+      "tone": "yellow",
+      "at": "l06"
+    },
+    {
+      "label": "АНАЛОГИ ОТКРЫТЫ",
+      "tone": "red",
+      "at": "l13"
+    },
+    {
+      "label": "КОДОВОЕ СЛОВО",
+      "tone": "mint",
+      "at": "l16"
+    }
+  ],
+  "mood": {
+    "alarm": {
+      "from": "l10",
+      "to": "l16"
+    },
+    "calm": {
+      "from": "l16",
+      "to": "l18"
+    }
+  },
+  "memoryFrame": {
+    "fromLine": "l13",
+    "untilLine": "l16",
+    "maxHoldMs": 9000,
+    "staggerMs": 560,
+    "minHoldSeconds": 2.8,
+    "title": "ЗАПОМНИ",
+    "items": [
+      "ТРЁХ СЕКУНД ГОЛОСА ДОСТАТОЧНО",
+      "ОТКРЫТЫЕ АНАЛОГИ УЖЕ ЕСТЬ",
+      "СПАСАЕТ КОДОВОЕ СЛОВО С СЕМЬЁЙ"
+    ]
+  },
+  "cta": {
+    "fromLine": "l16",
+    "prompt": "У ТВОЕЙ СЕМЬИ ЕСТЬ КОДОВОЕ СЛОВО?",
+    "divider": "или",
+    "options": [
+      {
+        "label": "ЕСТЬ",
+        "tone": "yellow",
+        "at": "l17"
+      },
+      {
+        "label": "НЕТ",
+        "tone": "mint",
+        "at": "l18"
+      }
+    ],
+    "comment": "Ответь одним словом в комментарии.",
+    "teaser": "ПОЧЕМУ КОД ИЗ СМС ТОЖЕ НЕ СПАСАЕТ",
+    "hint": {
+      "at": "l17"
+    },
+    "teaserCue": {
+      "at": "l18"
+    },
+    "teaserDetailCue": {
+      "at": "l18",
+      "offsetMs": 700
+    }
+  },
+  "qa": {
+    "durationSeconds": [
+      30,
+      60
+    ],
+    "contentPolarity": "light-on-dark",
+    "scriptQuality": {
+      "hookLines": 3,
+      "maxHookWordsPerLine": 8,
+      "minAnchors": 3
+    }
+  },
+  "publish": {
+    "cover": "ИИ КОПИРУЕТ ГОЛОС ЗА 3 СЕКУНДЫ",
+    "coverSub": "Современные модели клонируют речь из фразы на секрете и обходят банковскую верификацию.",
+    "caption": "Современные модели клонируют речь из фразы на секрете и обходят банковскую верификацию.\n\nМодель VALL-E 2 синтезирует речь говорящего из 3-секундного образца с сохранением тембра и эмоций.\n\nКонкретная цифра «3 секунды» ломает привычку «голос = личность» и заставляет переслать родственникам.",
+    "hashtags": [
+      "#кибербезопасность",
+      "#приватность",
+      "#интернет"
+    ],
+    "sources": {
+      "Microsoft Research": "https://arxiv.org/abs/2406.05370"
+    }
+  }
+}

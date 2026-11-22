@@ -1,0 +1,99 @@
+{
+  "id": "motivation-beat-quotes",
+  "topic": "Мотивационные цитаты под исходный бит",
+  "niche": "motivation",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "publication": "draft",
+    "production": "draft",
+    "approvedScriptHash": "e4b1e37163d83db0",
+    "approval": {
+      "by": "Пользователь (подтверждено в чате 2026-11-05)",
+      "at": "2026-11-05"
+    }
+  },
+  "sources": [
+    {
+      "id": "original-copy",
+      "publisher": "Оригинальный текст проекта, утверждён пользователем",
+      "url": "local:2026-11-05 12.15.07.mp4",
+      "accessed": "2026-11-05",
+      "claim": "Фразы написаны для этого ролика; фактических утверждений и приписанной кому-либо цитаты нет."
+    }
+  ],
+  "title": "Продолжай",
+  "hook": "Не жди, пока страх пройдёт.",
+  "centralIdea": "Сделай первый шаг, даже если страшно, и продолжай в своём темпе.",
+  "fps": 30,
+  "width": 1080,
+  "height": 1080,
+  "durationSeconds": 15.8,
+  "limits": {
+    "minSeconds": 15.7,
+    "maxSeconds": 15.9
+  },
+  "audio": {
+    "voicePath": null,
+    "musicPath": "library/media/motivation-beat-source.m4a",
+    "musicLicense": "Звук из файла, предоставленного пользователем для этого ролика",
+    "sfx": [],
+    "volume": 1
+  },
+  "captions": [],
+  "scenes": [
+    {
+      "id": "paper",
+      "start": 0,
+      "duration": 9.5,
+      "voice": "Не жди, пока страх пройдёт. Сделай шаг вместе с ним.",
+      "onScreen": "Не жди, пока страх пройдёт.",
+      "thought": "Первый шаг возможен и со страхом.",
+      "animation": "Слова допечатываются по ударам, жёлтый маркер открывает две строки.",
+      "component": "beatQuotePaper",
+      "sources": [
+        "original-copy"
+      ]
+    },
+    {
+      "id": "movement",
+      "start": 9.5,
+      "duration": 2.17,
+      "voice": "Сила приходит в движении.",
+      "onScreen": "Сила приходит в движении",
+      "thought": "Сила нарастает после начала движения.",
+      "animation": "Жёсткая склейка на светлый кадр, силуэт делает шаг.",
+      "component": "beatQuoteMovement",
+      "sources": [
+        "original-copy"
+      ]
+    },
+    {
+      "id": "tempo",
+      "start": 11.67,
+      "duration": 2,
+      "voice": "Твой темп — тоже путь.",
+      "onScreen": "Твой темп — тоже путь",
+      "thought": "Медленное продвижение остаётся продвижением.",
+      "animation": "Крупные слова и линия пути раскрываются по ударам.",
+      "component": "beatQuoteTempo",
+      "sources": [
+        "original-copy"
+      ]
+    },
+    {
+      "id": "continue",
+      "start": 13.67,
+      "duration": 2.13,
+      "voice": "Продолжай.",
+      "onScreen": "Продолжай",
+      "thought": "Финальный импульс.",
+      "animation": "Тёмная гора, фигура поднимается, слово проявляется на ударе.",
+      "component": "beatQuoteContinue",
+      "sources": [
+        "original-copy"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1425 @@
+{
+  "id": "reels-scroll-claude",
+  "topic": "Почему так трудно перестать листать Reels?",
+  "niche": "psychology",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "publication": "draft",
+    "production": "rendered",
+    "approvedScriptHash": "c0ced7e4d2511102",
+    "approval": {
+      "by": "qwezyid (одобрено в чате, 2026-11-02)",
+      "at": "2026-11-01"
+    }
+  },
+  "sources": [
+    {
+      "id": "shen2015",
+      "publisher": "Journal of Consumer Research, 2015",
+      "url": "https://faculty.chicagobooth.edu/-/media/faculty/ayelet-fishbach/research/uncertainty_jcr.pdf",
+      "accessed": "2026-11-02",
+      "claim": "Shen, Fishbach, Hsee. Исследование 1: 87 студентов Чикагского университета, 1,4 л воды за 2 минуты. Справились 43% при награде ровно 2 $ и 70% при награде 2 $ или 1 $ по монетке (χ²=6,25, p=0,012). Эффект возникает при фокусе на процессе, а не на результате."
+    },
+    {
+      "id": "baughan2022",
+      "publisher": "CHI 2022, Вашингтонский университет",
+      "url": "https://techxplore.com/news/2022-05-dont-people-dissociative-state-social.html",
+      "accessed": "2026-11-02",
+      "claim": "Baughan et al.: «как прошло 30 минут? Я хотел проверить одно уведомление»; платформам нужен «опыт завершения использования». Аннотация DOI 10.1145/3491102.3501899: дизайн-вмешательства снизили нормативную диссоциацию. Исследование частично финансировал Facebook."
+    },
+    {
+      "id": "anderson2021",
+      "publisher": "Consumer Psychology Review",
+      "url": "https://doi.org/10.1002/arcp.1063",
+      "accessed": "2026-11-02",
+      "claim": "Anderson, Wood. Прочитана только аннотация: награды соцсетей формируют привычку, дизайн даёт сигналы, которые автоматически её запускают и подталкивают продолжать."
+    },
+    {
+      "id": "rixen2023",
+      "publisher": "MobileHCI 2023",
+      "url": "https://doi.org/10.1145/3604275",
+      "accessed": "2026-11-02",
+      "claim": "Rixen et al. Прочитана только аннотация: полевое исследование, N=46. Бесконечная прокрутка ощущается как петля; внутри сессии есть внутренние петли, снаружи их окружает привычная."
+    },
+    {
+      "id": "instagram2023",
+      "publisher": "Instagram",
+      "url": "https://about.instagram.com/blog/announcements/instagram-ranking-explained",
+      "accessed": "2026-11-02",
+      "claim": "Mosseri, 2023: большая часть Reels приходит от аккаунтов, на которые человек не подписан; система предсказывает, досмотрит ли он ролик до конца."
+    }
+  ],
+  "title": "Почему так трудно перестать листать Reels?",
+  "hook": "Ещё один ролик — и спать. Ты сказал это полчаса назад.",
+  "centralIdea": "Ленту трудно бросить не только из-за содержания: в ней нет конца, а неизвестность следующего ролика сама мотивирует продолжать.",
+  "art": {
+    "direction": "culture",
+    "music": {
+      "asset": "bed-pulse",
+      "volume": 0.1,
+      "duck": 0.5
+    }
+  },
+  "theme": "signal",
+  "captionStyle": "plate",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 32.833333333333336,
+  "audio": {
+    "voicePath": "generated/reels-scroll-claude/voice-620fcd79afc92695-mix.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "voiceId": "iP95p4xoKVk53GoZ742B",
+    "modelId": "eleven_v3",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.8,
+      "style": 0,
+      "speed": 1
+    },
+    "sourcePath": "generated/reels-scroll-claude/voice-620fcd79afc92695.mp3",
+    "timingMode": "ElevenLabs character alignment",
+    "sourceDurationSeconds": 32.365714,
+    "durationSeconds": 32.314729,
+    "localTempo": 1,
+    "cacheHash": "620fcd79afc92695",
+    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades"
+  },
+  "captions": [
+    {
+      "text": "Ещё",
+      "startMs": 50,
+      "endMs": 240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "один",
+      "startMs": 288,
+      "endMs": 480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ролик",
+      "startMs": 520,
+      "endMs": 800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 850,
+      "endMs": 880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 930,
+      "endMs": 960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "спать.",
+      "startMs": 1040,
+      "endMs": 1440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Ты",
+      "startMs": 2050,
+      "endMs": 2080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сказал",
+      "startMs": 2149,
+      "endMs": 2560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "это",
+      "startMs": 2600,
+      "endMs": 2720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "полчаса",
+      "startMs": 2900,
+      "endMs": 3280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "назад.",
+      "startMs": 3347,
+      "endMs": 3760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "У",
+      "startMs": 4340,
+      "endMs": 4400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "книги",
+      "startMs": 4400,
+      "endMs": 4800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "есть",
+      "startMs": 4848,
+      "endMs": 5040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "последняя",
+      "startMs": 5180,
+      "endMs": 5600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "страница.",
+      "startMs": 5680,
+      "endMs": 6320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "У",
+      "startMs": 6510,
+      "endMs": 6540,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сериала",
+      "startMs": 6540,
+      "endMs": 6960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 7000,
+      "endMs": 7040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "титры.",
+      "startMs": 7100,
+      "endMs": 7840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "У",
+      "startMs": 7930,
+      "endMs": 8000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ленты",
+      "startMs": 8000,
+      "endMs": 8400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "дна",
+      "startMs": 8560,
+      "endMs": 9040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "нет.",
+      "startMs": 9230,
+      "endMs": 9600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Выпей",
+      "startMs": 10320,
+      "endMs": 10720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "почти",
+      "startMs": 10820,
+      "endMs": 11120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "полтора",
+      "startMs": 11180,
+      "endMs": 11520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "литра",
+      "startMs": 11580,
+      "endMs": 11840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "воды",
+      "startMs": 11920,
+      "endMs": 12240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "за",
+      "startMs": 12347,
+      "endMs": 12560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "два",
+      "startMs": 12600,
+      "endMs": 12720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "доллара.",
+      "startMs": 12800,
+      "endMs": 13280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Справились",
+      "startMs": 13610,
+      "endMs": 14160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сорок",
+      "startMs": 14280,
+      "endMs": 14600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "три",
+      "startMs": 14670,
+      "endMs": 14720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "процента.",
+      "startMs": 14768,
+      "endMs": 15680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "А",
+      "startMs": 15760,
+      "endMs": 15867,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "за",
+      "startMs": 15867,
+      "endMs": 16080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "«доллар",
+      "startMs": 16200,
+      "endMs": 16560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "или",
+      "startMs": 16620,
+      "endMs": 16800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "два»",
+      "startMs": 16880,
+      "endMs": 17200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 17490,
+      "endMs": 17520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "семьдесят.",
+      "startMs": 17560,
+      "endMs": 18080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Денег",
+      "startMs": 18700,
+      "endMs": 18960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "меньше,",
+      "startMs": 19017,
+      "endMs": 19440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "а",
+      "startMs": 19480,
+      "endMs": 19520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "стараются",
+      "startMs": 19573,
+      "endMs": 20000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "больше.",
+      "startMs": 20057,
+      "endMs": 20480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "С",
+      "startMs": 20980,
+      "endMs": 21040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "лентой",
+      "startMs": 21040,
+      "endMs": 21360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "похоже:",
+      "startMs": 21450,
+      "endMs": 22000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "следующий",
+      "startMs": 22110,
+      "endMs": 22560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ролик",
+      "startMs": 22600,
+      "endMs": 22880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 23000,
+      "endMs": 23120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "то",
+      "startMs": 23220,
+      "endMs": 23253,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ли",
+      "startMs": 23253,
+      "endMs": 23360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ерунда,",
+      "startMs": 23440,
+      "endMs": 24000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "то",
+      "startMs": 24320,
+      "endMs": 24373,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ли",
+      "startMs": 24373,
+      "endMs": 24480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "лучший",
+      "startMs": 24560,
+      "endMs": 24880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "за",
+      "startMs": 24960,
+      "endMs": 25120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "день.",
+      "startMs": 25168,
+      "endMs": 25440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Каждый",
+      "startMs": 25850,
+      "endMs": 26080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вечер",
+      "startMs": 26140,
+      "endMs": 26400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "так",
+      "startMs": 26530,
+      "endMs": 26640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 26720,
+      "endMs": 26800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 26890,
+      "endMs": 26960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "палец",
+      "startMs": 26960,
+      "endMs": 27360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "листает",
+      "startMs": 27456,
+      "endMs": 28000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сам.",
+      "startMs": 28100,
+      "endMs": 28400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Конец",
+      "startMs": 29150,
+      "endMs": 29440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тут",
+      "startMs": 29520,
+      "endMs": 29760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "никто",
+      "startMs": 29827,
+      "endMs": 30160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 30213,
+      "endMs": 30320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "нарисовал.",
+      "startMs": 30360,
+      "endMs": 31120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Придётся",
+      "startMs": 31250,
+      "endMs": 31680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "самому.",
+      "startMs": 31760,
+      "endMs": 32320,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "editorialReview": {
+    "note": "Сценарий и факты одобрены человеком 2026-11-02 с открытыми оговорками ниже. Голос как в sample-droppers по его просьбе.",
+    "openClaims": [
+      "Перенос эффекта неопределённости с воды на ленту — наша аналогия. Статья соцсети не изучала, поэтому в тексте «похоже», а не «так же».",
+      "Эффект показан на 87 студентах одного университета в одном из четырёх исследований статьи; остальные три измеряли другие задачи.",
+      "«У ленты дна нет» — наблюдение за интерфейсом, а не вывод источника. Instagram подтверждает только, что Reels приходят и от аккаунтов без подписки.",
+      "«Палец листает сам» — образная передача тезиса Anderson & Wood об автоматическом запуске привычки по сигналам. Читалась только аннотация.",
+      "«Конец никто не нарисовал» опирается на слова Baughan о нужде в «опыте завершения»; исследование шло на клиенте Twitter, а не на Reels, и частично финансировалось Facebook."
+    ],
+    "hookCandidates": [
+      {
+        "text": "Ещё один ролик — и спать. Ты сказал это полчаса назад.",
+        "verdict": "Выбран: это внутренний голос зрителя, смешно и сразу уличает."
+      },
+      {
+        "text": "Ты открыл Instagram на минуту. Как прошло полчаса?",
+        "verdict": "Исходный вариант, сильный запасной. Вопрос работает, но звучит более привычно."
+      },
+      {
+        "text": "Тебя держит не этот ролик. А следующий.",
+        "verdict": "Хороший тезис, но раскрывает развязку."
+      },
+      {
+        "text": "За меньшие деньги люди стараются больше. И ты тоже.",
+        "verdict": "Интрига есть, но нет узнавания."
+      },
+      {
+        "text": "В этой ленте нет дна. Проверь сам.",
+        "verdict": "Звучит угрозой, узнавания нет."
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "voice": "Ещё один ролик — и спать. Ты сказал это полчаса назад.",
+      "onScreen": "23:04 → 23:34. Ещё один — и спать",
+      "thought": "Обещание, которое зритель дал себе, и часы, которые его опровергают",
+      "animation": "Стена роликов ползёт за часами; на «полчаса» цифры прокручиваются до 23:34, стена срывается в размытие, «и спать» зачёркивается",
+      "sources": [
+        "baughan2022"
+      ],
+      "direction": {
+        "purpose": "opening",
+        "emotion": "узнавание и лёгкий стыд",
+        "concept": "Слова обещают один ролик, а часы и стена за ними показывают, сколько их прошло на самом деле",
+        "art": {
+          "variant": "inverse",
+          "field": "solid"
+        },
+        "hierarchy": {
+          "primary": "часы",
+          "secondary": [
+            "зачёркнутое «и спать»",
+            "стена роликов"
+          ]
+        },
+        "layers": {
+          "background": "наклонная стена роликов",
+          "foreground": "огромные часы"
+        },
+        "assets": [
+          "scroll-cat",
+          "scroll-ramen",
+          "scroll-concert",
+          "scroll-surf",
+          "scroll-corgi",
+          "scroll-food",
+          "scroll-fireworks2",
+          "scroll-sunrise",
+          "scroll-puppy",
+          "scroll-ramen-dark"
+        ],
+        "shot": {
+          "type": "custom",
+          "component": "feedWall",
+          "review": "Часы с прокруткой цифр поверх трёхмерной стены карточек нельзя выразить штатным device или type: сцена держится на связи времени и скорости ленты.",
+          "props": {
+            "from": "23:04",
+            "to": "23:34",
+            "line": "Ещё один — *и спать*",
+            "rushCue": "полчаса",
+            "settleCue": "назад",
+            "cards": [
+              "scroll-cat",
+              "scroll-ramen",
+              "scroll-concert",
+              "scroll-surf",
+              "scroll-corgi",
+              "scroll-food",
+              "scroll-fireworks2",
+              "scroll-sunrise",
+              "scroll-puppy",
+              "scroll-ramen-dark"
+            ]
+          }
+        },
+        "choreography": [
+          {
+            "cue": "полчаса",
+            "action": "цифры прокручиваются, стена срывается в размытие"
+          },
+          {
+            "cue": "назад",
+            "action": "стена почти замирает"
+          }
+        ],
+        "camera": {
+          "move": "pushIn"
+        },
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "sound": [
+          {
+            "cue": "полчаса",
+            "sfx": "whoosh",
+            "volume": 0.55
+          },
+          {
+            "cue": "назад",
+            "sfx": "thud",
+            "volume": 0.4
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 0,
+      "duration": 4.333333333333333
+    },
+    {
+      "id": "noBottom",
+      "voice": "У книги есть последняя страница. У сериала — титры. У ленты дна нет.",
+      "onScreen": "Страница, серия, дна нет",
+      "thought": "У всего, что мы смотрим, есть точка, где можно остановиться. Кроме этого",
+      "animation": "Страницы книги листаются всё быстрее, мелькает «Конец», обложка захлопывается. Серии проносятся до последней, идут титры, экран гаснет полоской. Лента падает и не останавливается",
+      "sources": [
+        "baughan2022",
+        "instagram2023"
+      ],
+      "direction": {
+        "purpose": "explain",
+        "emotion": "азарт, затем смутная тревога",
+        "concept": "У книги и сериала есть физический конец: обложка захлопывается, экран гаснет. Лента просто падает дальше, и остановить её нечем",
+        "art": {
+          "variant": "inverse"
+        },
+        "hierarchy": {
+          "primary": "то, как заканчивается каждая вещь",
+          "secondary": [
+            "названия концовок"
+          ]
+        },
+        "shot": {
+          "type": "media",
+          "grade": "none",
+          "titleAnchor": "top",
+          "plates": [
+            {
+              "asset": "scroll-clip-book",
+              "zoom": 1,
+              "endZoom": 1.03,
+              "title": {
+                "text": "Последняя страница",
+                "cue": "книги",
+                "reveal": "lines"
+              }
+            },
+            {
+              "asset": "scroll-clip-series",
+              "cue": "сериала",
+              "zoom": 1,
+              "endZoom": 1.03,
+              "title": {
+                "text": "Последняя серия",
+                "cue": "сериала",
+                "reveal": "lines"
+              }
+            },
+            {
+              "asset": "scroll-clip-feed",
+              "cue": "ленты",
+              "zoom": 1,
+              "endZoom": 1.03,
+              "title": {
+                "text": "Дна нет",
+                "cue": "ленты",
+                "reveal": "lines",
+                "tone": "accent"
+              }
+            }
+          ]
+        },
+        "choreography": [
+          {
+            "cue": "книги",
+            "action": "страницы летят"
+          },
+          {
+            "cue": "страница",
+            "action": "мелькает «Конец», к концу слова обложка захлопывается"
+          },
+          {
+            "cue": "сериала",
+            "action": "серии проносятся"
+          },
+          {
+            "cue": "титры",
+            "action": "титры, экран гаснет"
+          },
+          {
+            "cue": "ленты",
+            "action": "лента падает без конца"
+          }
+        ],
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "push",
+          "direction": "up",
+          "seconds": 0.5,
+          "intent": "Стена уезжает вверх, как свайп, и начинается падение"
+        },
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "sound": [
+          {
+            "cue": 0.12,
+            "sfx": "tick",
+            "volume": 0.22
+          },
+          {
+            "cue": 0.28,
+            "sfx": "tick",
+            "volume": 0.22
+          },
+          {
+            "cue": 0.42,
+            "sfx": "tick",
+            "volume": 0.22
+          },
+          {
+            "cue": 0.55,
+            "sfx": "tick",
+            "volume": 0.22
+          },
+          {
+            "cue": 0.66,
+            "sfx": "tick",
+            "volume": 0.22
+          },
+          {
+            "cue": 0.76,
+            "sfx": "tick",
+            "volume": 0.22
+          },
+          {
+            "cue": 0.86,
+            "sfx": "tick",
+            "volume": 0.22
+          },
+          {
+            "cue": 0.95,
+            "sfx": "tick",
+            "volume": 0.22
+          },
+          {
+            "cue": 1.04,
+            "sfx": "tick",
+            "volume": 0.22
+          },
+          {
+            "cue": 1.77,
+            "sfx": "thud",
+            "volume": 0.6
+          },
+          {
+            "cue": "сериала",
+            "sfx": "swish",
+            "volume": 0.42
+          },
+          {
+            "cue": 2.45,
+            "sfx": "tick",
+            "volume": 0.2
+          },
+          {
+            "cue": 2.56,
+            "sfx": "tick",
+            "volume": 0.2
+          },
+          {
+            "cue": 2.67,
+            "sfx": "tick",
+            "volume": 0.2
+          },
+          {
+            "cue": 2.78,
+            "sfx": "tick",
+            "volume": 0.2
+          },
+          {
+            "cue": 2.89,
+            "sfx": "tick",
+            "volume": 0.2
+          },
+          {
+            "cue": 3.62,
+            "sfx": "tick",
+            "volume": 0.42
+          },
+          {
+            "cue": "ленты",
+            "sfx": "whoosh",
+            "volume": 0.55
+          }
+        ],
+        "source": "hide",
+        "layers": {
+          "background": "собственные клипы",
+          "foreground": "заголовки концовок"
+        },
+        "assets": [
+          "scroll-clip-book",
+          "scroll-clip-series",
+          "scroll-clip-feed"
+        ]
+      },
+      "start": 4.333333333333333,
+      "duration": 6.000000000000001
+    },
+    {
+      "id": "water",
+      "voice": "Выпей почти полтора литра воды за два доллара. Справились сорок три процента. А за «доллар или два» — семьдесят.",
+      "onScreen": "1,4 л за 2 минуты. 43% против 70%",
+      "thought": "Награда стала в среднем меньше, а справляться стали чаще",
+      "animation": "Один стакан осушается до линии, отходит влево и становится мерой 43%; справа въезжает второй с монетой и наполняется до 70%",
+      "sources": [
+        "shen2015"
+      ],
+      "direction": {
+        "purpose": "proof",
+        "emotion": "удивление",
+        "concept": "Настоящий эксперимент на сцене: вода сначала сама задача, затем мера того, сколько людей с ней справилось",
+        "art": {
+          "variant": "base",
+          "field": "solid"
+        },
+        "hierarchy": {
+          "primary": "два стакана и разница в уровне",
+          "secondary": [
+            "43%",
+            "70%",
+            "монета"
+          ]
+        },
+        "shot": {
+          "type": "custom",
+          "component": "waterTest",
+          "review": "В штатных data-режимах нет превращения задачи в меру результата и монеты: без этого цифры читаются как обычный график.",
+          "props": {
+            "title": "1,4 литра за *2 минуты*",
+            "drinkCue": "Выпей",
+            "leftCue": "Справились",
+            "rightCue": "доллар#2",
+            "landCue": "семьдесят",
+            "left": {
+              "value": 43,
+              "label": "ровно 2 доллара"
+            },
+            "right": {
+              "value": 70,
+              "label": "1 или 2 доллара"
+            },
+            "note": "87 студентов, Чикагский университет"
+          }
+        },
+        "choreography": [
+          {
+            "cue": "Выпей",
+            "action": "стакан осушается"
+          },
+          {
+            "cue": "Справились",
+            "action": "стакан отходит, 43%"
+          },
+          {
+            "cue": "доллар#2",
+            "action": "второй стакан с монетой"
+          },
+          {
+            "cue": "семьдесят",
+            "action": "вода поднимается до 70%"
+          }
+        ],
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "mask",
+          "shape": "rise",
+          "seconds": 0.55,
+          "intent": "Светлый кадр поднимается снизу, как вода"
+        },
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "timing": {
+          "minSeconds": 6
+        },
+        "sound": [
+          {
+            "cue": "Справились",
+            "sfx": "tick",
+            "volume": 0.45
+          },
+          {
+            "cue": "доллар#2",
+            "sfx": "pop",
+            "volume": 0.45
+          },
+          {
+            "cue": "семьдесят",
+            "sfx": "thud",
+            "volume": 0.45
+          }
+        ],
+        "source": "show"
+      },
+      "start": 10.333333333333334,
+      "duration": 8.366666666666665
+    },
+    {
+      "id": "turn",
+      "voice": "Денег меньше, а стараются больше.",
+      "onScreen": "Денег меньше, стараются больше",
+      "thought": "Это не сходится, и в этом весь смысл",
+      "animation": "Жёсткая склейка на плакат, камера наезжает на «больше»",
+      "sources": [
+        "shen2015"
+      ],
+      "direction": {
+        "purpose": "turn",
+        "emotion": "озарение",
+        "concept": "Парадокс на весь экран одной фразой: логика не сошлась, и зритель это видит",
+        "art": {
+          "variant": "block",
+          "field": "solid"
+        },
+        "hierarchy": {
+          "primary": "больше"
+        },
+        "shot": {
+          "type": "type",
+          "layout": "poster",
+          "headline": {
+            "text": "Денег / меньше / стараются / *больше*",
+            "cue": "Денег",
+            "reveal": "punch",
+            "emphasis": "box",
+            "emphasisCue": "больше"
+          }
+        },
+        "choreography": [
+          {
+            "cue": "больше",
+            "action": "плашка и наезд камеры"
+          }
+        ],
+        "camera": {
+          "move": "still",
+          "keys": [
+            {
+              "cue": "больше",
+              "scale": 1.06,
+              "seconds": 0.9
+            }
+          ]
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Слово само является поворотом"
+        },
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "sound": [
+          {
+            "cue": "Денег",
+            "sfx": "stamp",
+            "volume": 0.5
+          },
+          {
+            "cue": "больше",
+            "sfx": "thud",
+            "volume": 0.45
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 18.7,
+      "duration": 2.2666666666666657
+    },
+    {
+      "id": "nextOne",
+      "voice": "С лентой похоже: следующий ролик — то ли ерунда, то ли лучший за день.",
+      "onScreen": "Ерунда или лучший за день",
+      "thought": "Держит не этот ролик, а то, что неизвестно, какой будет следующий",
+      "animation": "Диагональный шов мечется между серой пробкой и фейерверком на словах",
+      "sources": [
+        "shen2015",
+        "instagram2023"
+      ],
+      "direction": {
+        "purpose": "explain",
+        "emotion": "азарт",
+        "concept": "Один и тот же кадр может оказаться чем угодно: шов переключает его, как монету в воздухе",
+        "art": {
+          "variant": "inverse",
+          "field": "solid"
+        },
+        "hierarchy": {
+          "primary": "шов между двумя роликами",
+          "secondary": [
+            "ерунда",
+            "лучший за день"
+          ]
+        },
+        "assets": [
+          "scroll-traffic",
+          "scroll-fireworks2"
+        ],
+        "shot": {
+          "type": "split",
+          "axis": "diagonal",
+          "a": {
+            "word": "ерунда",
+            "asset": "scroll-traffic",
+            "variant": "base"
+          },
+          "b": {
+            "word": "лучший за день",
+            "asset": "scroll-fireworks2",
+            "variant": "block"
+          },
+          "start": 0.78,
+          "keys": [
+            {
+              "cue": "следующий",
+              "at": 0.3
+            },
+            {
+              "cue": "ролик",
+              "at": 0.8
+            },
+            {
+              "cue": "ерунда",
+              "at": 0.88
+            },
+            {
+              "cue": "лучший",
+              "at": 0.12
+            }
+          ]
+        },
+        "choreography": [
+          {
+            "cue": "следующий",
+            "action": "шов мечется, как монета в воздухе"
+          },
+          {
+            "cue": "ерунда",
+            "action": "шов сдвигается, серый кадр занимает экран"
+          },
+          {
+            "cue": "лучший",
+            "action": "шов перелетает, экран занимает фейерверк"
+          }
+        ],
+        "camera": {
+          "move": "pushIn"
+        },
+        "transition": {
+          "type": "mask",
+          "shape": "diagonal",
+          "seconds": 0.45,
+          "intent": "Плакат раскрывается по будущему шву"
+        },
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "sound": [
+          {
+            "cue": "ерунда",
+            "sfx": "swish",
+            "volume": 0.4
+          },
+          {
+            "cue": "лучший",
+            "sfx": "whoosh",
+            "volume": 0.5
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 20.966666666666665,
+      "duration": 4.900000000000002
+    },
+    {
+      "id": "habit",
+      "voice": "Каждый вечер так — и палец листает сам.",
+      "onScreen": "Пн, Вт, Ср: ещё один",
+      "thought": "Решение повторилось столько раз, что перестало быть решением",
+      "animation": "Камера пролетает дверные проёмы дней, в каждом одно и то же «ещё один»; в последнем «сам»",
+      "sources": [
+        "anderson2021",
+        "rixen2023"
+      ],
+      "direction": {
+        "purpose": "explain",
+        "emotion": "неизбежность",
+        "concept": "Коридор одинаковых вечеров: дни меняются, надпись нет, и в конце решает уже не ты",
+        "art": {
+          "variant": "block",
+          "field": "gradient"
+        },
+        "hierarchy": {
+          "primary": "повторяющееся «ещё один»"
+        },
+        "shot": {
+          "type": "timeline",
+          "style": "corridor",
+          "events": [
+            {
+              "date": "Пн",
+              "text": "ещё один",
+              "cue": 0
+            },
+            {
+              "date": "Вт",
+              "text": "ещё один",
+              "cue": 0.38
+            },
+            {
+              "date": "Ср",
+              "text": "ещё один",
+              "cue": 0.76
+            },
+            {
+              "date": "Сам",
+              "text": "без решения",
+              "cue": "так"
+            }
+          ]
+        },
+        "choreography": [
+          {
+            "cue": 0,
+            "action": "первый проём"
+          },
+          {
+            "cue": "так",
+            "action": "последний проём, камера останавливается"
+          }
+        ],
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "through",
+          "origin": [
+            0.5,
+            0.42
+          ],
+          "seconds": 0.45,
+          "intent": "Из фейерверка внутрь коридора"
+        },
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "tick",
+            "volume": 0.35
+          },
+          {
+            "cue": 0.38,
+            "sfx": "tick",
+            "volume": 0.35
+          },
+          {
+            "cue": 0.76,
+            "sfx": "tick",
+            "volume": 0.35
+          },
+          {
+            "cue": "так",
+            "sfx": "pop",
+            "volume": 0.4
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 25.866666666666667,
+      "duration": 3.3000000000000007
+    },
+    {
+      "id": "end",
+      "voice": "Конец тут никто не нарисовал. Придётся самому.",
+      "onScreen": "Конец тут никто не нарисовал",
+      "thought": "Ролик сам становится примером и ставит точку",
+      "animation": "После тёмного коридора светлый кадр; на «самому» падает огромная точка",
+      "sources": [
+        "baughan2022"
+      ],
+      "direction": {
+        "purpose": "payoff",
+        "emotion": "облегчение и улыбка",
+        "concept": "Огромная точка, поставленная на последнем слове: то самое завершение, которого в ленте нет",
+        "art": {
+          "variant": "base",
+          "field": "solid"
+        },
+        "hierarchy": {
+          "primary": "точка",
+          "secondary": [
+            "фраза"
+          ]
+        },
+        "shot": {
+          "type": "type",
+          "layout": "spoken",
+          "anchor": "top",
+          "headline": {
+            "text": "Конец тут *никто* не нарисовал. Придётся самому.",
+            "cue": "Конец",
+            "reveal": "spoken",
+            "emphasis": "box",
+            "emphasisCue": "никто"
+          },
+          "shape": "disc",
+          "shapeCue": "Придётся"
+        },
+        "choreography": [
+          {
+            "cue": "никто",
+            "action": "плашка"
+          },
+          {
+            "cue": "Придётся",
+            "action": "падает точка"
+          }
+        ],
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Резкий свет после тёмного коридора"
+        },
+        "captions": {
+          "mode": "off",
+          "zone": "low"
+        },
+        "sound": [
+          {
+            "cue": "самому",
+            "sfx": "thud",
+            "volume": 0.6
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 29.166666666666668,
+      "duration": 3.666666666666668
+    }
+  ],
+  "renderPath": "out/studio/reels-scroll-claude.mp4",
+  "qa": {
+    "path": "out/studio/reels-scroll-claude-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  }
+}

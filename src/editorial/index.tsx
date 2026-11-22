@@ -1,10 +1,14 @@
 import {registerRoot, Composition} from 'remotion';
 import {EditorialVideo} from './EditorialVideo';
+import {Lab} from './engine/lab/Lab';
+import {BeatQuoteVideo} from './engine/scenes/custom/BeatQuoteVideo';
 import type {Project} from './kit/types';
 import gps from '../../studio/gps-offline.json';
 
 // Any valid project renders through --props; GPS only supplies Studio's default preview.
 const Root = () => (
+  <>
+  <Composition id="MotivationBeatQuotes" component={BeatQuoteVideo} width={1080} height={1080} fps={30} durationInFrames={474}/>
   <Composition
     id="EditorialReel"
     component={EditorialVideo as unknown as React.FC<Record<string, unknown>>}
@@ -18,5 +22,7 @@ const Root = () => (
       return {durationInFrames: Math.round(project.durationSeconds * project.fps), fps: project.fps, width: project.width, height: project.height};
     }}
   />
+  <Lab/>
+  </>
 );
 registerRoot(Root);

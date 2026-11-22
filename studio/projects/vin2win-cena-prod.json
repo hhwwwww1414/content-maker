@@ -1,0 +1,546 @@
+{
+  "id": "vin2win-cena-prod",
+  "topic": "Цена и выгода",
+  "niche": "vin2win",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "production": "draft",
+    "publication": "draft",
+    "approval": {
+      "by": "qwezyid",
+      "at": "2026-11-21",
+      "evidence": "Explicit approval of both scripts and one ElevenLabs take each in this chat."
+    },
+    "approvedScriptHash": "5e10008346d4e09d"
+  },
+  "sources": [
+    {
+      "id": "prod-capture",
+      "publisher": "VIN2WIN production app",
+      "url": "file:///Users/qwezyid/projects/vin2win/output/viral-compare/public/real/",
+      "accessed": "2026-11-21",
+      "claim": "Production captures inherited from Claude session; prices and status are seller-entered, not independently verified."
+    }
+  ],
+  "centralIdea": "Цена и выгода",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 23.966666666666665,
+  "limits": {
+    "minSeconds": 15,
+    "maxSeconds": 40
+  },
+  "audio": {
+    "voicePath": "generated/vin2win-cena-prod/voice-05f5ca2346a65682-mix.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "voiceId": "iP95p4xoKVk53GoZ742B",
+    "modelId": "eleven_v3",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.8,
+      "style": 0,
+      "speed": 1
+    },
+    "sourcePath": "generated/vin2win-cena-prod/voice-05f5ca2346a65682.mp3",
+    "timingMode": "ElevenLabs character alignment",
+    "sourceDurationSeconds": 23.484082,
+    "durationSeconds": 23.435208,
+    "localTempo": 1,
+    "cacheHash": "05f5ca2346a65682",
+    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades"
+  },
+  "captions": [
+    {
+      "text": "Сравниваешь",
+      "startMs": 30,
+      "endMs": 560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "цены",
+      "startMs": 600,
+      "endMs": 880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 970,
+      "endMs": 987,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "трёх",
+      "startMs": 1030,
+      "endMs": 1120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вкладках?",
+      "startMs": 1173,
+      "endMs": 2040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "В",
+      "startMs": 2370,
+      "endMs": 2400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин",
+      "startMs": 2440,
+      "endMs": 2560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ту",
+      "startMs": 2613,
+      "endMs": 2720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин",
+      "startMs": 2780,
+      "endMs": 2960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "разница",
+      "startMs": 3000,
+      "endMs": 3360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "уже",
+      "startMs": 3420,
+      "endMs": 3600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 3640,
+      "endMs": 3680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "карточке.",
+      "startMs": 3720,
+      "endMs": 4241,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Вот",
+      "startMs": 4530,
+      "endMs": 4720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "реальный",
+      "startMs": 4773,
+      "endMs": 5280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Роллс-Ройс",
+      "startMs": 5360,
+      "endMs": 6000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Рэйт.",
+      "startMs": 6040,
+      "endMs": 6320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Продавец",
+      "startMs": 6670,
+      "endMs": 6960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "указал:",
+      "startMs": 7024,
+      "endMs": 7520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "на",
+      "startMs": 7640,
+      "endMs": 7669,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "площадках",
+      "startMs": 7669,
+      "endMs": 8240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 8280,
+      "endMs": 8320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "двадцать",
+      "startMs": 8370,
+      "endMs": 8640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "два",
+      "startMs": 8680,
+      "endMs": 8800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "миллиона,",
+      "startMs": 8840,
+      "endMs": 9440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 9570,
+      "endMs": 9600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "руки",
+      "startMs": 9680,
+      "endMs": 10000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 10080,
+      "endMs": 10160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "двадцать",
+      "startMs": 10208,
+      "endMs": 10480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "миллионов.",
+      "startMs": 10520,
+      "endMs": 11280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Разница",
+      "startMs": 11340,
+      "endMs": 11760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 11880,
+      "endMs": 12000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "два",
+      "startMs": 12040,
+      "endMs": 12160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "миллиона",
+      "startMs": 12213,
+      "endMs": 12640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "рублей.",
+      "startMs": 12686,
+      "endMs": 13040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Это",
+      "startMs": 13650,
+      "endMs": 13760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сравнение",
+      "startMs": 13808,
+      "endMs": 14320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "цен",
+      "startMs": 14400,
+      "endMs": 14640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "продавца,",
+      "startMs": 14672,
+      "endMs": 15280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "а",
+      "startMs": 15320,
+      "endMs": 15360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 15413,
+      "endMs": 15520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "обещание",
+      "startMs": 15573,
+      "endMs": 16080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "заработка.",
+      "startMs": 16133,
+      "endMs": 16720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Открой",
+      "startMs": 17020,
+      "endMs": 17280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "каталог",
+      "startMs": 17340,
+      "endMs": 17760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 17830,
+      "endMs": 17840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "смотри",
+      "startMs": 17904,
+      "endMs": 18240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "выгоду",
+      "startMs": 18320,
+      "endMs": 18720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "до",
+      "startMs": 18827,
+      "endMs": 19040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "звонка.",
+      "startMs": 19093,
+      "endMs": 19600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Вин",
+      "startMs": 20090,
+      "endMs": 20240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ту",
+      "startMs": 20293,
+      "endMs": 20400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин.",
+      "startMs": 20460,
+      "endMs": 20720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Пока",
+      "startMs": 20930,
+      "endMs": 21040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "другие",
+      "startMs": 21097,
+      "endMs": 21440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ищут",
+      "startMs": 21580,
+      "endMs": 21840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 22110,
+      "endMs": 22133,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вы",
+      "startMs": 22133,
+      "endMs": 22240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "закрываете",
+      "startMs": 22300,
+      "endMs": 23040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сделки!",
+      "startMs": 23100,
+      "endMs": 23440,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1",
+      "voice": "Сравниваешь цены в трёх вкладках? В вин ту вин разница уже в карточке.",
+      "onScreen": "Разница уже в карточке",
+      "thought": "Разница уже в карточке",
+      "animation": "Камера и подсветка реального экрана; переход к слогану",
+      "component": "VO1",
+      "sources": [
+        "prod-capture"
+      ],
+      "start": 0,
+      "duration": 4.533333333333333
+    },
+    {
+      "id": "s2",
+      "voice": "Вот реальный Роллс-Ройс Рэйт. Продавец указал: на площадках — двадцать два миллиона, в руки — двадцать миллионов.",
+      "onScreen": "22 млн на ресурсах · 20 млн в руки",
+      "thought": "22 млн на ресурсах · 20 млн в руки",
+      "animation": "Камера и подсветка реального экрана; переход к слогану",
+      "component": "VO1",
+      "sources": [
+        "prod-capture"
+      ],
+      "start": 4.533333333333333,
+      "duration": 6.800000000000001
+    },
+    {
+      "id": "s3",
+      "voice": "Разница — два миллиона рублей. Это сравнение цен продавца, а не обещание заработка.",
+      "onScreen": "Разница по ценам продавца: 2 млн ₽",
+      "thought": "Разница по ценам продавца: 2 млн ₽",
+      "animation": "Камера и подсветка реального экрана; переход к слогану",
+      "component": "VO1",
+      "sources": [
+        "prod-capture"
+      ],
+      "start": 11.333333333333334,
+      "duration": 5.700000000000001
+    },
+    {
+      "id": "s4",
+      "voice": "Открой каталог и смотри выгоду до звонка.",
+      "onScreen": "Смотри выгоду до звонка",
+      "thought": "Смотри выгоду до звонка",
+      "animation": "Камера и подсветка реального экрана; переход к слогану",
+      "component": "VO1",
+      "sources": [
+        "prod-capture"
+      ],
+      "start": 17.033333333333335,
+      "duration": 3.0666666666666664
+    },
+    {
+      "id": "s5",
+      "voice": "Вин ту вин. Пока другие ищут — вы закрываете сделки!",
+      "onScreen": "Пока другие ищут —",
+      "thought": "Пока другие ищут —",
+      "animation": "Камера и подсветка реального экрана; переход к слогану",
+      "component": "VO1",
+      "sources": [
+        "prod-capture"
+      ],
+      "start": 20.1,
+      "duration": 3.8666666666666636
+    }
+  ]
+}

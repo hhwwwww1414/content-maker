@@ -11,6 +11,9 @@
 | Unbounded | Заголовки и субтитры | SIL Open Font License 1.1 | https://github.com/google/fonts/tree/main/ofl/unbounded |
 | Playfair Display | Заголовки темы `paper` в Editorial | SIL Open Font License 1.1 | https://github.com/google/fonts/tree/main/ofl/playfairdisplay |
 | Manrope | Поясняющий текст и UI | SIL Open Font License 1.1 | https://github.com/google/fonts/tree/main/ofl/manrope |
+| Noto Serif Display, Sofia Sans Extra Condensed, Spectral, Onest, Geologica, Cormorant, Tenor Sans, Inter Tight, JetBrains Mono | Шрифты движка, лежат в `public/library/fonts/` | SIL Open Font License 1.1 | https://github.com/google/fonts/tree/main/ofl |
+| three.js | 3D-сцены движка | MIT | https://github.com/mrdoob/three.js/blob/dev/LICENSE |
+| lucide-react | Иконки движка | ISC | https://github.com/lucide-icons/lucide/blob/main/LICENSE |
 | TypeScript | Компиляция | Apache-2.0 | https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt |
 | NumPy | Обработка аудио | BSD-3-Clause | https://github.com/numpy/numpy/blob/main/LICENSE.txt |
 | SciPy | Ресемплинг и фильтры | BSD-3-Clause | https://github.com/scipy/scipy/blob/main/LICENSE.txt |
@@ -18,7 +21,7 @@
 | ONNX Runtime | Выполнение модели Piper | MIT | https://github.com/microsoft/onnxruntime/blob/main/LICENSE |
 | Zod | Проверка/типизация данных | MIT | https://github.com/colinhacks/zod/blob/main/LICENSE |
 
-В проект не включены фотостоки, сторонняя музыка, чужие логотипы или заимствованный арт. Маскот, интерфейсные элементы и SFX созданы программно для этого проекта.
+В проект не включены фотостоки, сторонняя музыка, чужие логотипы или заимствованный арт, кроме файлов из `public/library/manifest.json`: у каждого там указаны лицензия, автор и источник (NASA, Wikimedia Commons). Подпись для публикации выдаёт `node studio/assets.mjs credits <проект>`. Маскот, интерфейсные элементы и SFX созданы программно для этого проекта.
 
 ## Изученные референсы Editorial
 

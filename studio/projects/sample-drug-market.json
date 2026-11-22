@@ -1,0 +1,892 @@
+{
+  "id": "sample-drug-market",
+  "topic": "Афганистан запретил мак — наркотиков стало больше",
+  "niche": "engine-sample",
+  "language": "ru",
+  "status": {
+    "factCheck": "partial",
+    "scriptApproval": "demo",
+    "publication": "draft",
+    "production": "rendered"
+  },
+  "sources": [
+    {
+      "id": "primary",
+      "publisher": "UNODC, доклад 2026",
+      "claim": "UNODC World Drug Report 2026",
+      "url": "",
+      "accessed": "2026-11-01"
+    },
+    {
+      "id": "secondary",
+      "publisher": "Пресс-релиз ООН, 26 июня 2026",
+      "claim": "Пресс-релиз ООН, 26 июня 2026",
+      "url": "",
+      "accessed": "2026-11-01"
+    }
+  ],
+  "title": "Афганистан запретил мак — наркотиков стало больше",
+  "hook": "Афганистан запретил мак. Производство рухнуло. Наркотиков в мире стало больше.",
+  "centralIdea": "Запрет убрал поле, но не рынок.",
+  "art": {
+    "direction": "documentary",
+    "music": {
+      "asset": "bed-tense",
+      "volume": 0.12,
+      "duck": 0.55
+    }
+  },
+  "theme": "signal",
+  "captionStyle": "plate",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 33.166666666666664,
+  "scenes": [
+    {
+      "id": "hook",
+      "voice": "Афганистан запретил мак. Производство рухнуло. Наркотиков в мире стало больше.",
+      "onScreen": "поле мака",
+      "thought": "Настоящее поле, настоящая земля: запрет сработал, и это видно из окна",
+      "animation": "Настоящее поле, настоящая земля: запрет сработал, и это видно из окна",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "opening",
+        "emotion": "масштаб и парадокс",
+        "concept": "Настоящее поле, настоящая земля: запрет сработал, и это видно из окна",
+        "hierarchy": {
+          "primary": "поле мака"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "media",
+          "grade": "warm",
+          "plates": [
+            {
+              "asset": "poppy-field-c",
+              "focus": [
+                0.42,
+                0.6
+              ],
+              "zoom": 1.02,
+              "endZoom": 1.16,
+              "endFocus": [
+                0.46,
+                0.6
+              ],
+              "title": {
+                "text": "Афганистан *запретил* мак",
+                "cue": 0.1,
+                "reveal": "lines"
+              }
+            },
+            {
+              "asset": "earth-night",
+              "cue": "Наркотиков",
+              "focus": [
+                0.62,
+                0.42
+              ],
+              "zoom": 1.2,
+              "endZoom": 1.34,
+              "title": {
+                "text": "В мире *стало больше*",
+                "reveal": "lines"
+              }
+            }
+          ],
+          "titleAnchor": "top"
+        },
+        "camera": {
+          "move": "pushIn"
+        },
+        "assets": [
+          "poppy-field-c",
+          "earth-night"
+        ],
+        "source": "hide"
+      },
+      "start": 0,
+      "duration": 5.9
+    },
+    {
+      "id": "scale",
+      "voice": "Их употребляет 331 миллион. Это каждый шестнадцатый. Десять лет назад — двадцатый.",
+      "onScreen": "каждый шестнадцатый",
+      "thought": "Толпа, в которой выделяется один из шестнадцати: цифра становится людьми",
+      "animation": "Толпа, в которой выделяется один из шестнадцати: цифра становится людьми",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "data",
+        "emotion": "узнавание себя",
+        "concept": "Толпа, в которой выделяется один из шестнадцати: цифра становится людьми",
+        "hierarchy": {
+          "primary": "каждый шестнадцатый"
+        },
+        "art": {
+          "variant": "base",
+          "field": "solid"
+        },
+        "shot": {
+          "type": "data",
+          "mode": "units",
+          "total": 320,
+          "highlight": 20,
+          "glyph": "person",
+          "columns": 16,
+          "cue": "Их",
+          "highlightCue": "шестнадцатый",
+          "title": {
+            "text": "331 *миллион*",
+            "cue": "331",
+            "reveal": "punch",
+            "emphasis": "color"
+          },
+          "titleAnchor": "top"
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "depth",
+          "seconds": 0.6,
+          "intent": "Земля уходит вдаль, из неё выходят люди"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "whoosh",
+            "volume": 0.28
+          },
+          {
+            "cue": "шестнадцатый",
+            "sfx": "pop",
+            "volume": 0.3
+          }
+        ]
+      },
+      "start": 5.9,
+      "duration": 6.7333333333333325
+    },
+    {
+      "id": "shift",
+      "voice": "Мак переехал в Мьянму. Там больше тысячи тонн. Опий вытесняет синтетика.",
+      "onScreen": "Мьянма",
+      "thought": "Глобус поворачивается и камера летит к новой точке: рынок просто переехал",
+      "animation": "Глобус поворачивается и камера летит к новой точке: рынок просто переехал",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "turn",
+        "emotion": "движение",
+        "concept": "Глобус поворачивается и камера летит к новой точке: рынок просто переехал",
+        "hierarchy": {
+          "primary": "Мьянма"
+        },
+        "art": {
+          "variant": "base",
+          "field": "beam",
+          "light": [
+            0.5,
+            -0.22
+          ]
+        },
+        "shot": {
+          "type": "stage3d",
+          "preset": "orbit",
+          "satellites": 0,
+          "texture": "earth-map",
+          "pin": [
+            21,
+            96
+          ],
+          "lockCue": "Мьянму",
+          "title": {
+            "text": "Мак *переехал*",
+            "cue": "Мак",
+            "reveal": "lines"
+          },
+          "labels": [
+            {
+              "target": 0,
+              "text": "Больше тысячи тонн",
+              "cue": "тысячи"
+            }
+          ],
+          "orbit": 0
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "mask",
+          "shape": "diagonal",
+          "seconds": 0.55,
+          "intent": "Диагональ срезает толпу: новая глава той же истории"
+        },
+        "assets": [
+          "earth-map"
+        ],
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "swish",
+            "volume": 0.28
+          }
+        ]
+      },
+      "start": 12.633333333333333,
+      "duration": 5.433333333333334
+    },
+    {
+      "id": "synth",
+      "voice": "Её варят где угодно. Поле не нужно. Нашли 755 новых веществ.",
+      "onScreen": "755 новых веществ",
+      "thought": "После земли и полей только лабораторная цифра на чистом цвете",
+      "animation": "После земли и полей только лабораторная цифра на чистом цвете",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "data",
+        "emotion": "холодок",
+        "concept": "После земли и полей только лабораторная цифра на чистом цвете",
+        "hierarchy": {
+          "primary": "755 новых веществ"
+        },
+        "art": {
+          "variant": "block",
+          "field": "ink"
+        },
+        "shot": {
+          "type": "data",
+          "mode": "counter",
+          "value": 755,
+          "cue": "варят",
+          "landCue": "755",
+          "label": "новых веществ. Поле не нужно.",
+          "anchor": "bottom"
+        },
+        "camera": {
+          "move": "pushIn"
+        },
+        "transition": {
+          "type": "through",
+          "origin": [
+            0.6,
+            0.42
+          ],
+          "seconds": 0.6,
+          "intent": "Камера входит в точку на карте и выходит в лаборатории"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "whoosh",
+            "volume": 0.28
+          },
+          {
+            "cue": "755",
+            "sfx": "thud",
+            "volume": 0.4
+          }
+        ]
+      },
+      "start": 18.066666666666666,
+      "duration": 5.800000000000001
+    },
+    {
+      "id": "recap",
+      "voice": "Запрет убрал поле. Но не рынок. Рынок сменил адрес.",
+      "onScreen": "рынок сменил адрес",
+      "thought": "Слова становятся окном: поле теперь видно только сквозь букву",
+      "animation": "Слова становятся окном: поле теперь видно только сквозь букву",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "climax",
+        "emotion": "итог",
+        "concept": "Слова становятся окном: поле теперь видно только сквозь букву",
+        "hierarchy": {
+          "primary": "рынок сменил адрес"
+        },
+        "art": {
+          "variant": "base",
+          "field": "solid"
+        },
+        "shot": {
+          "type": "type",
+          "layout": "window",
+          "anchor": "center",
+          "headline": {
+            "text": "Рынок / сменил / адрес",
+            "cue": "Запрет",
+            "reveal": "none"
+          },
+          "fill": "poppy-farmer"
+        },
+        "camera": {
+          "move": "pushIn",
+          "keys": [
+            {
+              "cue": "адрес",
+              "scale": 1.1,
+              "seconds": 1
+            }
+          ]
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Жёсткая склейка на вывод"
+        },
+        "assets": [
+          "poppy-farmer"
+        ]
+      },
+      "start": 23.866666666666667,
+      "duration": 4.266666666666666
+    },
+    {
+      "id": "cta",
+      "voice": "Что сильнее: запрет или спрос? Запрет. Спрос.",
+      "onScreen": "запрет или спрос",
+      "thought": "Весы отвечают по очереди: сначала запрет, потом спрос",
+      "animation": "Весы отвечают по очереди: сначала запрет, потом спрос",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "question",
+        "emotion": "спор",
+        "concept": "Весы отвечают по очереди: сначала запрет, потом спрос",
+        "hierarchy": {
+          "primary": "запрет или спрос"
+        },
+        "art": {
+          "variant": "inverse",
+          "field": "paper"
+        },
+        "shot": {
+          "type": "stage3d",
+          "preset": "balance",
+          "left": "book",
+          "leftCount": 1,
+          "right": "coin",
+          "rightCount": 3,
+          "tilts": [
+            {
+              "cue": "запрет#2",
+              "tilt": -0.2
+            },
+            {
+              "cue": "спрос#2",
+              "tilt": 0.24
+            }
+          ],
+          "title": {
+            "text": "Что *сильнее*?",
+            "cue": "Что",
+            "reveal": "lines"
+          },
+          "labels": [
+            {
+              "target": 0,
+              "text": "Запрет",
+              "cue": 0.5
+            },
+            {
+              "target": 1,
+              "text": "Спрос",
+              "cue": 0.5
+            }
+          ],
+          "orbit": 0.05
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "push",
+          "direction": "left",
+          "seconds": 0.5,
+          "intent": "Следующий вопрос въезжает боковым движением"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "whoosh",
+            "volume": 0.28
+          },
+          {
+            "cue": "запрет#2",
+            "sfx": "tick",
+            "volume": 0.4
+          },
+          {
+            "cue": "спрос#2",
+            "sfx": "tick",
+            "volume": 0.4
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 28.133333333333333,
+      "duration": 5.033333333333331
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/sample-drug-market/voice-imported-7791fb49a9eaf752.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "importedFromLegacy": "drug-market-shift",
+    "timingMode": "ElevenLabs alignment imported from the legacy take",
+    "importedFrom": "drug-market-shift",
+    "sourceSha256": "7791fb49a9eaf752",
+    "durationSeconds": 32.14,
+    "sourceDurationSeconds": 32.14,
+    "localTempo": 1
+  },
+  "captions": [
+    {
+      "text": "Афганистан",
+      "startMs": 87,
+      "endMs": 580,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "запретил",
+      "startMs": 620,
+      "endMs": 1060,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "мак.",
+      "startMs": 1140,
+      "endMs": 1700,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Производство",
+      "startMs": 2020,
+      "endMs": 2500,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "рухнуло.",
+      "startMs": 2540,
+      "endMs": 3180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Наркотиков",
+      "startMs": 3520,
+      "endMs": 4020,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 4060,
+      "endMs": 4100,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "мире",
+      "startMs": 4164,
+      "endMs": 4420,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "стало",
+      "startMs": 4487,
+      "endMs": 4820,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "больше.",
+      "startMs": 4889,
+      "endMs": 5380,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Их",
+      "startMs": 5910,
+      "endMs": 5940,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "употребляет",
+      "startMs": 5990,
+      "endMs": 6580,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "331",
+      "startMs": 6700,
+      "endMs": 7460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "миллион.",
+      "startMs": 7513,
+      "endMs": 8020,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Это",
+      "startMs": 8350,
+      "endMs": 8500,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "каждый",
+      "startMs": 8580,
+      "endMs": 8900,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "шестнадцатый.",
+      "startMs": 9080,
+      "endMs": 9780,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Десять",
+      "startMs": 10330,
+      "endMs": 10501,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "лет",
+      "startMs": 10560,
+      "endMs": 10740,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "назад",
+      "startMs": 10850,
+      "endMs": 11140,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 11140,
+      "endMs": 11348,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "двадцатый.",
+      "startMs": 11350,
+      "endMs": 11940,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Мак",
+      "startMs": 12630,
+      "endMs": 12740,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "переехал",
+      "startMs": 12780,
+      "endMs": 13220,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 13260,
+      "endMs": 13300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Мьянму.",
+      "startMs": 13340,
+      "endMs": 13860,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Там",
+      "startMs": 14200,
+      "endMs": 14260,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "больше",
+      "startMs": 14306,
+      "endMs": 14580,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тысячи",
+      "startMs": 14687,
+      "endMs": 15140,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тонн.",
+      "startMs": 15220,
+      "endMs": 15461,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Опий",
+      "startMs": 16160,
+      "endMs": 16420,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вытесняет",
+      "startMs": 16447,
+      "endMs": 16980,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "синтетика.",
+      "startMs": 17040,
+      "endMs": 17660,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Её",
+      "startMs": 18070,
+      "endMs": 18180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "варят",
+      "startMs": 18220,
+      "endMs": 18420,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "где",
+      "startMs": 18480,
+      "endMs": 18660,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "угодно.",
+      "startMs": 18724,
+      "endMs": 19300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Поле",
+      "startMs": 19380,
+      "endMs": 19540,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 19567,
+      "endMs": 19620,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "нужно.",
+      "startMs": 19700,
+      "endMs": 20300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Нашли",
+      "startMs": 20510,
+      "endMs": 20820,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "755",
+      "startMs": 20900,
+      "endMs": 22020,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "новых",
+      "startMs": 22113,
+      "endMs": 22580,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "веществ.",
+      "startMs": 22670,
+      "endMs": 23540,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Запрет",
+      "startMs": 23870,
+      "endMs": 24180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "убрал",
+      "startMs": 24233,
+      "endMs": 24500,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "поле.",
+      "startMs": 24560,
+      "endMs": 25100,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Но",
+      "startMs": 25270,
+      "endMs": 25300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 25353,
+      "endMs": 25460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "рынок.",
+      "startMs": 25513,
+      "endMs": 26060,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Рынок",
+      "startMs": 26200,
+      "endMs": 26500,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сменил",
+      "startMs": 26580,
+      "endMs": 27220,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "адрес.",
+      "startMs": 27260,
+      "endMs": 27500,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Что",
+      "startMs": 28140,
+      "endMs": 28260,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сильнее:",
+      "startMs": 28292,
+      "endMs": 28820,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "запрет",
+      "startMs": 28880,
+      "endMs": 29220,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "или",
+      "startMs": 29290,
+      "endMs": 29460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "спрос?",
+      "startMs": 29527,
+      "endMs": 29940,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Запрет.",
+      "startMs": 30540,
+      "endMs": 31340,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Спрос.",
+      "startMs": 31670,
+      "endMs": 32660,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "editorialReview": {
+    "note": "Engineering sample of the video engine. Facts come from the legacy reel and were not re-verified.",
+    "openClaims": [
+      "Facts inherited from the legacy reel; not re-verified for this sample."
+    ]
+  },
+  "renderPath": "out/studio/sample-drug-market.mp4",
+  "qa": {
+    "path": "out/studio/sample-drug-market-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  }
+}

@@ -285,6 +285,8 @@ out/                   результаты рендера (в .gitignore)
 
 ## Editorial pipeline: Reels factory
 
+New reels use the directed engine. Start at [docs/AI_VIDEO_CREATION_GUIDE.md](docs/AI_VIDEO_CREATION_GUIDE.md). Reference: [design system](docs/VIDEO_DESIGN_SYSTEM.md), [motion](docs/MOTION_SYSTEM.md), [scenes](docs/SCENE_ARCHITECTURE.md), [quality checklist](docs/VIDEO_QUALITY_CHECKLIST.md). `npm run lab` opens the visual explorer.
+
 The original reel pipeline and its outputs remain available. This path turns any valid project JSON into a 1080×1920 H.264 reel using free local tools, Remotion and ElevenLabs. It never publishes. Full guide: [docs/REEL_FACTORY.md](docs/REEL_FACTORY.md).
 
 ```bash

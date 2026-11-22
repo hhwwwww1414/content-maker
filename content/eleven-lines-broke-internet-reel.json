@@ -1,0 +1,617 @@
+{
+  "id": "eleven-lines-broke-internet",
+  "compositionId": "ElevenLinesBrokeInternetReel",
+  "contactSheetCompositionId": "ElevenLinesBrokeInternetContactSheet",
+  "npmPrefix": "eleven-lines-broke-internet",
+  "title": "Один человек удалил 11 строк и сломал интернет",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/eleven-lines-broke-internet/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 900,
+  "background": {
+    "type": "loop-video",
+    "file": "assets/background.mp4",
+    "muted": true,
+    "fit": "cover",
+    "overlayOpacity": 0.44,
+    "note": "Единственный фон ролика. Зациклен, без звука, нижний постоянный слой."
+  },
+  "source": {
+    "primary": "Wikipedia — npm left-pad incident",
+    "secondary": "The Register",
+    "topic": "npm left-pad, 2016"
+  },
+  "tts": {
+    "language": "ru",
+    "speed": 1.2,
+    "direction": "Хук — сухо и быстро. «Он удалил 11 строк» — точка. История — как рассказ у костра. «И всё посыпалось» — тише. Финал — дружелюбно.",
+    "note": "left-pad → «лефт-пэд», Facebook/Netflix/Airbnb → «фейсбук/нетфликс/эйрбиэнби». Числа проговариваются модулем numerals."
+  },
+  "captionClusters": {
+    "targetSeconds": [
+      0.55,
+      0.85
+    ],
+    "growUntilSeconds": 0.45,
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и",
+      "а",
+      "но",
+      "не",
+      "ни",
+      "в",
+      "во",
+      "на",
+      "по",
+      "за",
+      "из",
+      "от",
+      "до",
+      "к",
+      "ко",
+      "с",
+      "со",
+      "у",
+      "о",
+      "об",
+      "про",
+      "для",
+      "что",
+      "как",
+      "это",
+      "всё",
+      "ещё",
+      "же",
+      "ты",
+      "он",
+      "она",
+      "я",
+      "мы",
+      "который",
+      "которую",
+      "которая",
+      "которой",
+      "чтобы",
+      "так",
+      "там",
+      "уже",
+      "или",
+      "бы",
+      "тебе",
+      "этот",
+      "над",
+      "тем",
+      "её",
+      "его",
+      "ему",
+      "их",
+      "то",
+      "есть",
+      "одной",
+      "своей",
+      "потом",
+      "чего",
+      "самое",
+      "могут",
+      "своё",
+      "если",
+      "твоему",
+      "твоём",
+      "твоим",
+      "теперь",
+      "моё",
+      "они",
+      "себе",
+      "почти",
+      "вот",
+      "даже",
+      "будет",
+      "была",
+      "только",
+      "когда",
+      "потому",
+      "поэтому",
+      "вообще",
+      "тут",
+      "им",
+      "ним",
+      "таких",
+      "такому",
+      "оттуда",
+      "тогда"
+    ],
+    "highlightWords": {
+      "red": [
+        "удалил",
+        "сломал",
+        "посыпалось",
+        "перестали",
+        "одиннадцать"
+      ],
+      "yellow": [
+        "пакеты",
+        "пакет",
+        "чужих",
+        "чужом",
+        "название"
+      ],
+      "mint": [
+        "запомни",
+        "главное",
+        "держит"
+      ]
+    },
+    "displayReplacements": {
+      "лефт-пэд": "left-pad",
+      "фейсбук": "Facebook",
+      "нетфликс": "Netflix",
+      "эйрбиэнби": "Airbnb"
+    }
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "chapter": "hook",
+      "text": "Один человек удалил свой код.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l02",
+      "chapter": "hook",
+      "text": "В тот же день",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l03",
+      "chapter": "hook",
+      "text": "половина интернета не собралась.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l04",
+      "chapter": "hook",
+      "text": "Он удалил 11 строк.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l05",
+      "chapter": "what",
+      "text": "Программы не пишут с нуля.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l06",
+      "chapter": "what",
+      "text": "Готовые куски берут у других.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l07",
+      "chapter": "what",
+      "text": "Их называют пакеты.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l08",
+      "chapter": "what",
+      "text": "Один пакет тянет десять чужих.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l09",
+      "chapter": "story",
+      "text": "Март 2016 года.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l10",
+      "chapter": "story",
+      "text": "Компания захотела название пакета.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l11",
+      "chapter": "story",
+      "text": "Оно уже было у программиста.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l12",
+      "chapter": "story",
+      "text": "Площадка отдала название компании.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l13",
+      "chapter": "boom",
+      "text": "Программист удалил все свои пакеты.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l14",
+      "chapter": "boom",
+      "text": "Все 273 штуки.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l15",
+      "chapter": "boom",
+      "text": "Среди них — лефт-пэд.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l16",
+      "chapter": "boom",
+      "text": "Он добавлял пробелы в начало строки.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l17",
+      "chapter": "crash",
+      "text": "И всё посыпалось.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l18",
+      "chapter": "crash",
+      "text": "Тысячи проектов перестали собираться.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l19",
+      "chapter": "crash",
+      "text": "Фейсбук, Нетфликс, Эйрбиэнби.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l20",
+      "chapter": "crash",
+      "text": "Из-за 11 строк.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l21",
+      "chapter": "recap",
+      "text": "Запомни главное.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l22",
+      "chapter": "recap",
+      "text": "Программы стоят на чужом коде.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l23",
+      "chapter": "recap",
+      "text": "Один кирпич держит тысячи домов.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l24",
+      "chapter": "cta",
+      "text": "Знал, что так бывает?",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l25",
+      "chapter": "cta",
+      "text": "Знал.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l26",
+      "chapter": "cta",
+      "text": "Впервые слышу.",
+      "breakAfter": "none"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "hook",
+      "label": "ЧТО СЛУЧИЛОСЬ",
+      "headline": "ОДИН ЧЕЛОВЕК\nСЛОМАЛ ИНТЕРНЕТ",
+      "fromLine": "l01",
+      "toLine": "l04",
+      "grammar": {
+        "type": "statement",
+        "card": "ОДНА КНОПКА «УДАЛИТЬ»",
+        "claim": "ПОЛОВИНА СБОРОК ПО МИРУ УПАЛА",
+        "claimTone": "red",
+        "items": [
+          {
+            "label": "НИКАКОГО ВЗЛОМА",
+            "tone": "yellow",
+            "at": "l02"
+          }
+        ],
+        "verdict": {
+          "label": "11 СТРОК КОДА",
+          "tone": "red",
+          "at": "l04"
+        }
+      }
+    },
+    {
+      "id": "what",
+      "label": "ПОЧЕМУ ТАК ВЫШЛО",
+      "headline": "ПРОГРАММЫ СТОЯТ\nНА ЧУЖОМ КОДЕ",
+      "fromLine": "l05",
+      "toLine": "l08",
+      "grammar": {
+        "type": "flow",
+        "card": "ИЗ ЧЕГО СОБРАНА ЛЮБАЯ ПРОГРАММА",
+        "nodes": [
+          {
+            "label": "ТВОЯ ПРОГРАММА",
+            "tone": "mint",
+            "at": "l05"
+          },
+          {
+            "label": "ЧУЖОЙ ПАКЕТ",
+            "tone": "yellow",
+            "at": "l06"
+          },
+          {
+            "label": "ЕЩЁ ДЕСЯТЬ",
+            "tone": "red",
+            "at": "l07"
+          }
+        ],
+        "verdict": {
+          "label": "И ТАК ВГЛУБЬ",
+          "tone": "red",
+          "at": "l08"
+        }
+      }
+    },
+    {
+      "id": "story",
+      "label": "С ЧЕГО НАЧАЛОСЬ",
+      "headline": "ССОРА ИЗ-ЗА\nОДНОГО НАЗВАНИЯ",
+      "fromLine": "l09",
+      "toLine": "l12",
+      "grammar": {
+        "type": "steps",
+        "card": "КАК ДОШЛО ДО КОНФЛИКТА",
+        "steps": [
+          {
+            "label": "КОМПАНИЯ ПРОСИТ НАЗВАНИЕ",
+            "note": "ОНО ЗАНЯТО",
+            "tone": "yellow",
+            "at": "l10",
+            "noteAt": "l11"
+          },
+          {
+            "label": "ПЛОЩАДКА ОТДАЁТ ЕГО",
+            "note": "ПРОГРАММИСТА НЕ СПРОСИЛИ",
+            "tone": "red",
+            "at": "l12",
+            "noteAt": "l12"
+          }
+        ]
+      }
+    },
+    {
+      "id": "boom",
+      "label": "ЧТО ОН СДЕЛАЛ",
+      "headline": "УДАЛИЛ ВСЁ\nЗА ОДНУ МИНУТУ",
+      "fromLine": "l13",
+      "toLine": "l16",
+      "grammar": {
+        "type": "counters",
+        "card": "МАСШТАБ УДАЛЕНИЯ",
+        "lead": {
+          "label": "ОДИН ЧЕЛОВЕК, ОДНО РЕШЕНИЕ",
+          "at": "l13"
+        },
+        "counters": [
+          {
+            "label": "273 ПАКЕТА",
+            "tone": "red",
+            "at": "l14"
+          },
+          {
+            "label": "11 СТРОК В ГЛАВНОМ",
+            "tone": "yellow",
+            "at": "l15"
+          }
+        ],
+        "chips": [
+          {
+            "label": "ДОБАВЛЯЛ ПРОБЕЛЫ",
+            "tone": "neutral",
+            "at": "l16"
+          }
+        ]
+      }
+    },
+    {
+      "id": "crash",
+      "label": "ЧТО ПОСЫПАЛОСЬ",
+      "headline": "ТЫСЯЧИ ПРОЕКТОВ\nВСТАЛИ РАЗОМ",
+      "fromLine": "l17",
+      "toLine": "l20",
+      "grammar": {
+        "type": "tiles",
+        "card": "КТО ЗАВИСЕЛ ОТ ЭТИХ СТРОК",
+        "badge": "СБОРКА УПАЛА",
+        "lead": {
+          "label": "ЭТО НЕ МЕЛКИЕ САЙТЫ",
+          "at": "l18"
+        },
+        "tiles": [
+          {
+            "label": "FACEBOOK",
+            "tone": "red",
+            "at": "l19"
+          },
+          {
+            "label": "NETFLIX",
+            "tone": "red",
+            "at": "l19",
+            "offsetMs": 700
+          },
+          {
+            "label": "AIRBNB",
+            "tone": "red",
+            "at": "l19",
+            "offsetMs": 1400
+          }
+        ],
+        "verdict": {
+          "label": "ИЗ-ЗА ОДИННАДЦАТИ СТРОК",
+          "tone": "red",
+          "at": "l20"
+        }
+      }
+    },
+    {
+      "id": "recap",
+      "label": "ГЛАВНОЕ",
+      "headline": "ЧУЖОЙ КОД\nДЕРЖИТ ВСЁ",
+      "fromLine": "l21",
+      "toLine": "l23",
+      "grammar": null
+    },
+    {
+      "id": "cta",
+      "label": "ТВОЙ ХОД",
+      "headline": "ЗНАЛ,\nЧТО ТАК БЫВАЕТ?",
+      "fromLine": "l24",
+      "toLine": "l26",
+      "grammar": null
+    }
+  ],
+  "avatarStates": [
+    {
+      "at": "l01",
+      "state": "question"
+    },
+    {
+      "at": "l05",
+      "state": "thinking"
+    },
+    {
+      "at": "l09",
+      "state": "shocked"
+    },
+    {
+      "at": "l13",
+      "state": "skeptical"
+    },
+    {
+      "at": "l17",
+      "state": "angry"
+    },
+    {
+      "at": "l21",
+      "state": "idea"
+    },
+    {
+      "at": "l24",
+      "state": "approved"
+    }
+  ],
+  "chips": [
+    {
+      "label": "ЧУЖОЙ КОД ВЕЗДЕ",
+      "tone": "yellow",
+      "at": "l08"
+    },
+    {
+      "label": "273 ПАКЕТА",
+      "tone": "red",
+      "at": "l14"
+    },
+    {
+      "label": "11 СТРОК",
+      "tone": "red",
+      "at": "l20"
+    }
+  ],
+  "mood": {
+    "alarm": {
+      "from": "l13",
+      "to": "l21"
+    },
+    "calm": {
+      "from": "l21",
+      "to": "l24"
+    }
+  },
+  "memoryFrame": {
+    "fromLine": "l21",
+    "untilLine": "l24",
+    "maxHoldMs": 9000,
+    "staggerMs": 560,
+    "minHoldSeconds": 2.8,
+    "title": "ЧТО ЗАПОМНИТЬ",
+    "items": [
+      "ПРОГРАММЫ СОБРАНЫ ИЗ ЧУЖИХ КУСКОВ",
+      "ОДИН КУСОК ДЕРЖИТ ТЫСЯЧИ ПРОГРАММ",
+      "ЕГО МОЖЕТ УБРАТЬ ОДИН ЧЕЛОВЕК"
+    ]
+  },
+  "cta": {
+    "fromLine": "l24",
+    "prompt": "ЗНАЛ, ЧТО ТАК БЫВАЕТ?",
+    "divider": "или",
+    "options": [
+      {
+        "label": "ЗНАЛ",
+        "tone": "mint",
+        "at": "l25"
+      },
+      {
+        "label": "ВПЕРВЫЕ",
+        "tone": "yellow",
+        "at": "l26"
+      }
+    ],
+    "comment": "Ответь одним словом в комментарии.",
+    "teaser": "ПОЧЕМУ ПРОГРАММУ НЕЛЬЗЯ ПРОСТО ДОДЕЛАТЬ",
+    "hint": {
+      "at": "l25"
+    },
+    "teaserCue": {
+      "at": "l26"
+    },
+    "teaserDetailCue": {
+      "at": "l26",
+      "offsetMs": 700
+    }
+  },
+  "qa": {
+    "durationSeconds": [
+      30,
+      60
+    ],
+    "contentPolarity": "light-on-dark",
+    "scriptQuality": {
+      "hookLines": 3,
+      "maxHookWordsPerLine": 8,
+      "minAnchors": 3
+    }
+  },
+  "publish": {
+    "cover": "ОДИН ЧЕЛОВЕК СЛОМАЛ ИНТЕРНЕТ",
+    "coverSub": "Он удалил 11 строк кода",
+    "caption": "22 марта 2016 года программист Azer Koçulu поссорился с площадкой npm из-за названия пакета и удалил оттуда все свои 273 пакета.\n\nСреди них был left-pad — 11 строк, которые добавляют пробелы в начало строки.\n\nВ тот же день перестали собираться тысячи проектов по всему миру, включая те, что использовали Facebook, Netflix и Airbnb. npm пришлось впервые в истории восстановить удалённый пакет принудительно.\n\nПрограммы не пишут с нуля. Их собирают из чужих кусков, и каждый кусок тянет за собой десяток других.",
+    "hashtags": [
+      "#программирование",
+      "#айти",
+      "#кодинг",
+      "#интернет"
+    ],
+    "sources": {
+      "Wikipedia — npm left-pad incident": "https://en.wikipedia.org/wiki/Npm_left-pad_incident",
+      "The Register — npm left-pad chaos": "https://www.theregister.com/2016/03/23/npm_left_pad_chaos/"
+    }
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "id": "credit-self-ban",
+  "compositionId": "CreditSelfBanReel",
+  "contactSheetCompositionId": "CreditSelfBanContactSheet",
+  "npmPrefix": "credit-ban",
+  "title": "Самозапрет на кредиты: пять минут против чужого займа",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/credit-self-ban/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 800,
+  "background": {
+    "type": "loop-video",
+    "file": "assets/background.mp4",
+    "muted": true,
+    "fit": "cover",
+    "overlayOpacity": 0.44,
+    "note": "Единственный фон ролика. Зациклен, без звука, нижний постоянный слой."
+  },
+  "source": {
+    "primary": "Банк России — самозапрет на потребительские кредиты",
+    "secondary": "Банк России — 20,4 млн действующих самозапретов на 01.05.2026",
+    "topic": "самозапрет на кредиты, с 01.03.2025"
+  },
+  "tts": {
+    "language": "ru",
+    "speed": 1.2,
+    "direction": "Хук — тревожно, но без нагнетания. Глава про долг, который не смогут требовать, — с явным облегчением, это лучшая новость ролика. Финал — приглашающе.",
+    "note": "Числа проговариваются модулем numerals, на экране остаются цифрами."
+  },
+  "captionClusters": {
+    "targetSeconds": [0.5, 0.8],
+    "growUntilSeconds": 0.36,
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и", "а", "но", "не", "ни", "в", "во", "на", "по", "за", "из", "от", "до",
+      "к", "ко", "с", "со", "у", "о", "об", "про", "для", "что", "как", "это",
+      "всё", "ещё", "же", "ты", "он", "она", "я", "мы", "чтобы", "так", "там",
+      "уже", "или", "бы", "тебе", "этот", "над", "тем", "её", "его", "ему", "их",
+      "то", "есть", "если", "теперь", "они", "себе", "вот", "даже", "будет",
+      "только", "когда", "тут", "им", "ним", "где", "ним", "своё"
+    ],
+    "highlightWords": {
+      "red": ["чужой", "паспортных", "выдаст"],
+      "yellow": ["кредит", "кредиты", "запрет", "ипотеку", "автокредит"],
+      "mint": ["самозапрет", "бесплатно", "спасает"]
+    },
+    "displayReplacements": {}
+  },
+  "lines": [
+    {"id": "l01", "chapter": "hook", "text": "Кредит на тебя может взять чужой.", "breakAfter": "line"},
+    {"id": "l02", "chapter": "hook", "text": "Хватит паспортных данных.", "breakAfter": "line"},
+    {"id": "l03", "chapter": "hook", "text": "Выключается за пять минут.", "breakAfter": "block"},
+
+    {"id": "l04", "chapter": "what", "text": "Называется самозапрет.", "breakAfter": "line"},
+    {"id": "l05", "chapter": "what", "text": "Банк обязан его проверить.", "breakAfter": "line"},
+    {"id": "l06", "chapter": "what", "text": "С ним кредит не дадут.", "breakAfter": "block"},
+
+    {"id": "l07", "chapter": "twist", "text": "А если выдаст всё равно,", "breakAfter": "line"},
+    {"id": "l08", "chapter": "twist", "text": "долг с тебя требовать не смогут.", "breakAfter": "line"},
+    {"id": "l09", "chapter": "twist", "text": "Это его проблема.", "breakAfter": "block"},
+
+    {"id": "l10", "chapter": "numbers", "text": "Работает с марта 2025.", "breakAfter": "line"},
+    {"id": "l11", "chapter": "numbers", "text": "Поставили 20 миллионов.", "breakAfter": "line"},
+    {"id": "l12", "chapter": "numbers", "text": "Бесплатно, через Госуслуги.", "breakAfter": "block"},
+
+    {"id": "l13", "chapter": "catch", "text": "Ипотеку и автокредит не закроет.", "breakAfter": "line"},
+    {"id": "l14", "chapter": "catch", "text": "Снятие ждёт двое суток.", "breakAfter": "line"},
+    {"id": "l15", "chapter": "catch", "text": "Пауза и спасает.", "breakAfter": "block"},
+
+    {"id": "l16", "chapter": "cta", "text": "Поставишь себе?", "breakAfter": "line"},
+    {"id": "l17", "chapter": "cta", "text": "Поставлю.", "breakAfter": "line"},
+    {"id": "l18", "chapter": "cta", "text": "Уже стоит.", "breakAfter": "none"}
+  ],
+  "chapters": [
+    {
+      "id": "hook",
+      "label": "ЧЕМ ЭТО ГРОЗИТ",
+      "headline": "ЧУЖОЙ КРЕДИТ\nНА ТВОЁ ИМЯ",
+      "fromLine": "l01",
+      "toLine": "l03",
+      "grammar": {
+        "type": "compare",
+        "card": "ОДНА ЗАЯВКА, ДВА ИСХОДА",
+        "rows": [
+          {"label": "БЕЗ ЗАПРЕТА", "note": "ХВАТИТ ПАСПОРТНЫХ ДАННЫХ", "glyph": "doc", "tone": "red", "at": "l02", "noteAt": "l02"},
+          {"label": "С ЗАПРЕТОМ", "note": "ОТКАЗ НА СТОРОНЕ БАНКА", "glyph": "lock", "tone": "mint", "at": "l03", "noteAt": "l03"}
+        ]
+      }
+    },
+    {
+      "id": "what",
+      "label": "КАК ЭТО УСТРОЕНО",
+      "headline": "ЗАПРЕТ ЛЕЖИТ\nВ КРЕДИТНОЙ ИСТОРИИ",
+      "fromLine": "l04",
+      "toLine": "l06",
+      "grammar": {
+        "type": "flow",
+        "card": "ЧТО ПРОИСХОДИТ ПРИ ЗАЯВКЕ",
+        "direction": "column",
+        "nodes": [
+          {"label": "ЗАЯВКА НА КРЕДИТ", "tone": "neutral", "at": "l04"},
+          {"label": "ПРОВЕРКА ЗАПРЕТА", "tone": "yellow", "at": "l05"},
+          {"label": "ОТКАЗ", "tone": "mint", "at": "l06"}
+        ],
+        "verdict": {"label": "ПРОВЕРКА ОБЯЗАТЕЛЬНА ДЛЯ БАНКА", "tone": "mint", "at": "l06", "offsetMs": 800}
+      }
+    },
+    {
+      "id": "twist",
+      "label": "ЛУЧШЕЕ В ЭТОМ",
+      "headline": "ВЫДАЛИ ВОПРЕКИ —\nПЛАТИТЬ НЕ ТЕБЕ",
+      "fromLine": "l07",
+      "toLine": "l09",
+      "grammar": {
+        "type": "statement",
+        "card": "ЕСЛИ ЗАПРЕТ ПРОИГНОРИРОВАЛИ",
+        "claim": "ДОЛГ ВСЁ РАВНО ТВОЙ",
+        "claimTone": "yellow",
+        "strikeAt": "l08",
+        "items": [
+          {"label": "ТРЕБОВАТЬ ВОЗВРАТ НЕ СМОГУТ", "tone": "mint", "at": "l08", "offsetMs": 700}
+        ],
+        "verdict": {"label": "РИСК ПЕРЕХОДИТ К КРЕДИТОРУ", "tone": "mint", "at": "l09"}
+      }
+    },
+    {
+      "id": "numbers",
+      "label": "СКОЛЬКО УЖЕ ПОСТАВИЛИ",
+      "headline": "ЭТО НЕ РЕДКАЯ\nИСТОРИЯ",
+      "fromLine": "l10",
+      "toLine": "l12",
+      "grammar": {
+        "type": "counters",
+        "card": "ДАННЫЕ БАНКА РОССИИ",
+        "lead": {"label": "СЕРВИС РАБОТАЕТ С 1 МАРТА 2025", "at": "l10"},
+        "counters": [
+          {"label": "20 МЛН ЧЕЛОВЕК", "tone": "mint", "at": "l11"},
+          {"label": "0 РУБЛЕЙ ЗА УСТАНОВКУ", "tone": "mint", "at": "l12"}
+        ],
+        "chips": [
+          {"label": "ГОСУСЛУГИ ИЛИ МФЦ", "tone": "neutral", "at": "l12", "offsetMs": 700}
+        ]
+      }
+    },
+    {
+      "id": "catch",
+      "label": "ЧЕГО ОН НЕ УМЕЕТ",
+      "headline": "ЗАКРЫВАЕТ\nНЕ ВСЁ ПОДРЯД",
+      "fromLine": "l13",
+      "toLine": "l15",
+      "grammar": null
+    },
+    {
+      "id": "cta",
+      "label": "ТВОЙ ХОД",
+      "headline": "ПОСТАВИШЬ\nСЕБЕ?",
+      "fromLine": "l16",
+      "toLine": "l18",
+      "grammar": null
+    }
+  ],
+  "avatarStates": [
+    {"at": "l01", "state": "shocked"},
+    {"at": "l04", "state": "thinking"},
+    {"at": "l07", "state": "idea"},
+    {"at": "l10", "state": "skeptical"},
+    {"at": "l13", "state": "question"},
+    {"at": "l16", "state": "approved"}
+  ],
+  "chips": [
+    {"label": "ПАСПОРТА ХВАТАЕТ", "tone": "red", "at": "l02"},
+    {"label": "ДОЛГ НЕ ТВОЙ", "tone": "mint", "at": "l08"},
+    {"label": "20 МЛН УЖЕ", "tone": "mint", "at": "l11"}
+  ],
+  "mood": {
+    "alarm": {"from": "l01", "to": "l07"},
+    "calm": {"from": "l07", "to": "l13"}
+  },
+  "memoryFrame": {
+    "fromLine": "l13",
+    "untilLine": "l16",
+    "maxHoldMs": 9000,
+    "staggerMs": 420,
+    "minHoldSeconds": 2.4,
+    "title": "ЧТО ЗНАТЬ ПРО САМОЗАПРЕТ",
+    "items": [
+      "ГОСУСЛУГИ ИЛИ МФЦ, БЕСПЛАТНО",
+      "ИПОТЕКА И АВТОКРЕДИТ НЕ ВХОДЯТ",
+      "СНЯТЬ МОЖНО, НО НЕ МГНОВЕННО"
+    ]
+  },
+  "cta": {
+    "fromLine": "l16",
+    "prompt": "ПОСТАВИШЬ СЕБЕ?",
+    "divider": "или",
+    "options": [
+      {"label": "ПОСТАВЛЮ", "tone": "mint", "at": "l17"},
+      {"label": "УЖЕ СТОИТ", "tone": "yellow", "at": "l18"}
+    ],
+    "comment": "Ответь одним словом в комментарии.",
+    "teaser": "ЧТО БУДЕТ, ЕСЛИ ОТДАТЬ СВОЮ КАРТУ ЗА ДЕНЬГИ",
+    "hint": {"at": "l17"},
+    "teaserCue": {"at": "l18"},
+    "teaserDetailCue": {"at": "l18", "offsetMs": 600}
+  },
+  "qa": {
+    "durationSeconds": [25, 35],
+    "contentPolarity": "light-on-dark",
+    "scriptQuality": {
+      "hookLines": 3,
+      "maxHookWordsPerLine": 8,
+      "minAnchors": 3
+    }
+  },
+  "publish": {
+    "cover": "ЧУЖОЙ КРЕДИТ НА ТВОЁ ИМЯ",
+    "coverSub": "Закрывается за пять минут и бесплатно",
+    "caption": "Самозапрет — отметка в кредитной истории о том, что вам нельзя выдавать потребительские кредиты и займы. Кредитор обязан проверить её перед выдачей.\n\nСамое важное: если кредит выдали вопреки действующему самозапрету, кредитор не вправе требовать исполнения обязательств по такому договору. То есть риск переходит на того, кто не проверил.\n\nСервис работает с 1 марта 2025 года через Госуслуги, с 1 сентября 2025 года — ещё и через МФЦ. Услуга бесплатная, ставить и снимать можно сколько угодно раз. На 1 мая 2026 года действующий самозапрет был у 20,4 млн человек.\n\nЧего он не закрывает: ипотеку, автокредит под залог автомобиля и образовательные кредиты с переводом средств напрямую учебному заведению.\n\nУстановка вступает в силу на следующий день после записи, а снятие — только на второй календарный день. Эта пауза и есть защита: за сутки под давлением мошенников снять запрет и тут же взять кредит не получится.",
+    "hashtags": ["#кредиты", "#финансы", "#мошенники", "#госуслуги"],
+    "sources": {
+      "Банк России — самозапрет на потребительские кредиты": "https://cbr.ru/ckki/self-prohibition_credit/",
+      "Банки.ру — статистика самозапретов на 01.05.2026": "https://www.banki.ru/news/lenta/?id=11024149"
+    }
+  }
+}

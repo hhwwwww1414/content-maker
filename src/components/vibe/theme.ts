@@ -54,7 +54,7 @@ export const slots = {
   sourceBadge: {x: 90, y: 248, width: 900, height: 44},
   eyebrow: {x: 90, y: 306, width: 900, height: 30},
   headline: {x: 90, y: 340, width: 900, height: 140},
-  chipRail: {x: 90, y: 500, width: 810, height: 62},
+  chipRail: {x: 90, y: 500, width: 900, height: 62},
   body: {x: 90, y: 584, width: 900, height: 520},
   avatar: {x: 46, y: 1116, width: 290, height: 290},
   captions: {x: 356, y: 1150, width: 522, height: 250},

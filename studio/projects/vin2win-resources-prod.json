@@ -1,0 +1,525 @@
+{
+  "id": "vin2win-resources-prod",
+  "topic": "Не размещено на ресурсах",
+  "niche": "vin2win",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "production": "draft",
+    "publication": "draft",
+    "approval": {
+      "by": "qwezyid",
+      "at": "2026-11-21",
+      "evidence": "Explicit approval of both scripts and one ElevenLabs take each in this chat."
+    },
+    "approvedScriptHash": "5d7ab092291c16b7"
+  },
+  "sources": [
+    {
+      "id": "prod-capture",
+      "publisher": "VIN2WIN production app",
+      "url": "file:///Users/qwezyid/projects/vin2win/output/viral-compare/public/real/",
+      "accessed": "2026-11-21",
+      "claim": "Production captures inherited from Claude session; prices and status are seller-entered, not independently verified."
+    }
+  ],
+  "centralIdea": "Не размещено на ресурсах",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 22.833333333333332,
+  "limits": {
+    "minSeconds": 15,
+    "maxSeconds": 40
+  },
+  "audio": {
+    "voicePath": "generated/vin2win-resources-prod/voice-2ea6fb7b4d020848-mix.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "voiceId": "iP95p4xoKVk53GoZ742B",
+    "modelId": "eleven_v3",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.8,
+      "style": 0,
+      "speed": 1
+    },
+    "sourcePath": "generated/vin2win-resources-prod/voice-2ea6fb7b4d020848.mp3",
+    "timingMode": "ElevenLabs character alignment",
+    "sourceDurationSeconds": 22.360816,
+    "durationSeconds": 22.3165,
+    "localTempo": 1,
+    "cacheHash": "2ea6fb7b4d020848",
+    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades"
+  },
+  "captions": [
+    {
+      "text": "Эту",
+      "startMs": 80,
+      "endMs": 160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "машину",
+      "startMs": 220,
+      "endMs": 560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "можно",
+      "startMs": 613,
+      "endMs": 880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "найти",
+      "startMs": 933,
+      "endMs": 1200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 1280,
+      "endMs": 1360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин",
+      "startMs": 1380,
+      "endMs": 1440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ту",
+      "startMs": 1520,
+      "endMs": 1680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин.",
+      "startMs": 1740,
+      "endMs": 2240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "А",
+      "startMs": 2330,
+      "endMs": 2360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 2360,
+      "endMs": 2400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "её",
+      "startMs": 2453,
+      "endMs": 2560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "карточке",
+      "startMs": 2600,
+      "endMs": 3040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "продавец",
+      "startMs": 3088,
+      "endMs": 3520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "указал:",
+      "startMs": 3584,
+      "endMs": 4000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "на",
+      "startMs": 4200,
+      "endMs": 4240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ресурсах",
+      "startMs": 4297,
+      "endMs": 4800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 4907,
+      "endMs": 5120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "размещено.",
+      "startMs": 5177,
+      "endMs": 6080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Это",
+      "startMs": 6240,
+      "endMs": 6400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Роллс-Ройс",
+      "startMs": 6480,
+      "endMs": 7120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Гоуст.",
+      "startMs": 7250,
+      "endMs": 7920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Цена",
+      "startMs": 8090,
+      "endMs": 8320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 8360,
+      "endMs": 8400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "руки",
+      "startMs": 8480,
+      "endMs": 8800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 8880,
+      "endMs": 8960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тридцать",
+      "startMs": 9080,
+      "endMs": 9280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "миллионов",
+      "startMs": 9333,
+      "endMs": 9840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "девятьсот",
+      "startMs": 10040,
+      "endMs": 10480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "пятьдесят",
+      "startMs": 10580,
+      "endMs": 10800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тысяч",
+      "startMs": 10867,
+      "endMs": 11200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "рублей.",
+      "startMs": 11269,
+      "endMs": 12080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "У",
+      "startMs": 12200,
+      "endMs": 12240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Зикра",
+      "startMs": 12280,
+      "endMs": 12560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "восемь",
+      "startMs": 12620,
+      "endMs": 13000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "икс",
+      "startMs": 13070,
+      "endMs": 13200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 13360,
+      "endMs": 13520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тот",
+      "startMs": 13620,
+      "endMs": 13680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "же",
+      "startMs": 13733,
+      "endMs": 13840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "статус.",
+      "startMs": 13897,
+      "endMs": 14320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Смотри",
+      "startMs": 14570,
+      "endMs": 14880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "реальные",
+      "startMs": 14933,
+      "endMs": 15280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "объявления",
+      "startMs": 15320,
+      "endMs": 15840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 15920,
+      "endMs": 16000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "уточняй",
+      "startMs": 16064,
+      "endMs": 16560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "условия",
+      "startMs": 16620,
+      "endMs": 17040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "у",
+      "startMs": 17080,
+      "endMs": 17120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "продавца.",
+      "startMs": 17180,
+      "endMs": 17760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Вин",
+      "startMs": 18430,
+      "endMs": 18640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ту",
+      "startMs": 18693,
+      "endMs": 18800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин.",
+      "startMs": 18880,
+      "endMs": 19320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Пока",
+      "startMs": 19550,
+      "endMs": 19680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "другие",
+      "startMs": 19749,
+      "endMs": 20160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ищут",
+      "startMs": 20280,
+      "endMs": 20560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 20870,
+      "endMs": 20880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вы",
+      "startMs": 20880,
+      "endMs": 21040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "закрываете",
+      "startMs": 21100,
+      "endMs": 21680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сделки!",
+      "startMs": 21744,
+      "endMs": 22320,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1",
+      "voice": "Эту машину можно найти в вин ту вин. А в её карточке продавец указал: на ресурсах не размещено.",
+      "onScreen": "На ресурсах: не размещено",
+      "thought": "На ресурсах: не размещено",
+      "animation": "Камера и подсветка реального экрана; переход к слогану",
+      "component": "VO2",
+      "sources": [
+        "prod-capture"
+      ],
+      "start": 0,
+      "duration": 6.233333333333333
+    },
+    {
+      "id": "s2",
+      "voice": "Это Роллс-Ройс Гоуст. Цена в руки — тридцать миллионов девятьсот пятьдесят тысяч рублей.",
+      "onScreen": "Rolls-Royce Ghost · 30 950 000 ₽",
+      "thought": "Rolls-Royce Ghost · 30 950 000 ₽",
+      "animation": "Камера и подсветка реального экрана; переход к слогану",
+      "component": "VO2",
+      "sources": [
+        "prod-capture"
+      ],
+      "start": 6.233333333333333,
+      "duration": 5.966666666666666
+    },
+    {
+      "id": "s3",
+      "voice": "У Зикра восемь икс — тот же статус.",
+      "onScreen": "Zeekr 8X: тоже не размещено",
+      "thought": "Zeekr 8X: тоже не размещено",
+      "animation": "Камера и подсветка реального экрана; переход к слогану",
+      "component": "VO2",
+      "sources": [
+        "prod-capture"
+      ],
+      "start": 12.2,
+      "duration": 2.366666666666667
+    },
+    {
+      "id": "s4",
+      "voice": "Смотри реальные объявления и уточняй условия у продавца.",
+      "onScreen": "Уточняй условия у продавца",
+      "thought": "Уточняй условия у продавца",
+      "animation": "Камера и подсветка реального экрана; переход к слогану",
+      "component": "VO2",
+      "sources": [
+        "prod-capture"
+      ],
+      "start": 14.566666666666666,
+      "duration": 3.866666666666667
+    },
+    {
+      "id": "s5",
+      "voice": "Вин ту вин. Пока другие ищут — вы закрываете сделки!",
+      "onScreen": "Пока другие ищут —",
+      "thought": "Пока другие ищут —",
+      "animation": "Камера и подсветка реального экрана; переход к слогану",
+      "component": "VO2",
+      "sources": [
+        "prod-capture"
+      ],
+      "start": 18.433333333333334,
+      "duration": 4.399999999999999
+    }
+  ]
+}

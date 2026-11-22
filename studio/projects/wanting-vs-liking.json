@@ -1,0 +1,691 @@
+{
+  "id": "wanting-vs-liking",
+  "topic": "Зависимость: хочется и нравится — разные вещи",
+  "niche": "psychology",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "publication": "draft",
+    "production": "rendered",
+    "approvedScriptHash": "b025866902578f5d",
+    "approval": {
+      "by": "qwezyid (текст, факты и озвучка одобрены в чате, 2026-11-05)",
+      "at": "2026-11-05"
+    }
+  },
+  "sources": [
+    {
+      "id": "berridge2016",
+      "publisher": "Berridge, Robinson. American Psychologist, 2016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5171207/",
+      "accessed": "2026-11-05",
+      "claim": "«Хочется» и «нравится» опираются на разделимые системы; при сенситизации «хочется» усиливается, а «нравится» может не расти и даже снижаться; тягу запускают сигналы и образы; она может сохраняться годами."
+    },
+    {
+      "id": "nida-addiction",
+      "publisher": "NIDA, Drug Misuse and Addiction, 2020",
+      "url": "https://nida.nih.gov/publications/drugs-brains-behavior-science-addiction/drug-misuse-addiction",
+      "accessed": "2026-11-05",
+      "claim": "При зависимости способность к самоконтролю может быть серьёзно нарушена."
+    },
+    {
+      "id": "nida-treatment",
+      "publisher": "NIDA, Treatment and Recovery, 2020",
+      "url": "https://nida.nih.gov/publications/drugs-brains-behavior-science-addiction/treatment-recovery",
+      "accessed": "2026-11-05",
+      "claim": "Зависимость поддаётся лечению; лечение помогает управлять состоянием, срыв не означает его провала."
+    }
+  ],
+  "title": "Хочется и нравится",
+  "hook": "Зависимость — это не когда очень нравится.",
+  "centralIdea": "При зависимости «хочется» и «нравится» расходятся: удовольствие может падать, а тяга расти.",
+  "theme": "signal",
+  "captionStyle": "plate",
+  "art": {
+    "direction": "soft",
+    "music": {
+      "asset": "bed-warm",
+      "volume": 0.09,
+      "duck": 0.5
+    }
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 21.566666666666666,
+  "scenes": [
+    {
+      "id": "hook",
+      "voice": "Зависимость — это не когда очень нравится.",
+      "onScreen": "Это не когда очень нравится",
+      "thought": "Обычно думают, что всё дело в удовольствии",
+      "animation": "Слова появляются по мере речи, «очень нравится» зачёркивается на последнем слове",
+      "sources": [
+        "berridge2016"
+      ],
+      "direction": {
+        "source": "hide",
+        "purpose": "opening",
+        "emotion": "спокойное любопытство",
+        "concept": "Привычное объяснение зачёркивается мягко, без обвинения зрителя",
+        "art": {
+          "variant": "base"
+        },
+        "hierarchy": {
+          "primary": "фраза целиком"
+        },
+        "shot": {
+          "type": "type",
+          "layout": "spoken",
+          "anchor": "center",
+          "headline": {
+            "text": "Зависимость — это не когда *очень нравится.*",
+            "reveal": "spoken",
+            "emphasis": "strike",
+            "emphasisCue": "нравится",
+            "cue": "Зависимость"
+          }
+        },
+        "choreography": [
+          {
+            "cue": "Зависимость",
+            "action": "первое слово"
+          },
+          {
+            "cue": "нравится",
+            "action": "зачёркивание"
+          }
+        ],
+        "camera": {
+          "move": "pushIn"
+        },
+        "captions": {
+          "mode": "off"
+        }
+      },
+      "start": 0,
+      "duration": 3.3
+    },
+    {
+      "id": "two",
+      "voice": "«Нравится» и «хочется» в мозге — разные системы.",
+      "onScreen": "нравится / хочется",
+      "thought": "Это два разных механизма, а не одно чувство",
+      "animation": "Весь кадр занят словом «нравится», на «хочется» шов делит экран пополам",
+      "sources": [
+        "berridge2016"
+      ],
+      "direction": {
+        "source": "hide",
+        "purpose": "explain",
+        "emotion": "ясность",
+        "concept": "Одно чувство на глазах оказывается двумя: кадр буквально делится пополам",
+        "art": {
+          "variant": "inverse"
+        },
+        "hierarchy": {
+          "primary": "два слова в двух половинах"
+        },
+        "shot": {
+          "type": "split",
+          "axis": "horizontal",
+          "a": {
+            "word": "нравится",
+            "variant": "base"
+          },
+          "b": {
+            "word": "хочется",
+            "variant": "block"
+          },
+          "keys": [
+            {
+              "cue": "хочется",
+              "at": 0.5
+            }
+          ],
+          "start": 1
+        },
+        "choreography": [
+          {
+            "cue": "хочется",
+            "action": "кадр делится"
+          }
+        ],
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "field",
+          "seconds": 0.7,
+          "intent": "Мягко, без удара: тон объяснения, а не разоблачения"
+        }
+      },
+      "start": 3.3,
+      "duration": 3.866666666666667
+    },
+    {
+      "id": "diverge",
+      "voice": "При зависимости «хочется» растёт, а «нравится» может даже падать.",
+      "onScreen": "хочется растёт, нравится падает",
+      "thought": "Они расходятся: это и есть зависимость",
+      "animation": "Два равных столбика расходятся на словах «растёт» и «падать»",
+      "sources": [
+        "berridge2016"
+      ],
+      "direction": {
+        "source": "hide",
+        "purpose": "reveal",
+        "emotion": "понимание",
+        "concept": "Весь смысл видно без слов: один столбик вверх, другой вниз",
+        "art": {
+          "variant": "base"
+        },
+        "hierarchy": {
+          "primary": "столбик «хочется»",
+          "secondary": [
+            "столбик «нравится»"
+          ]
+        },
+        "shot": {
+          "type": "custom",
+          "component": "wantGauges",
+          "review": "Системе data нужен один набор значений, а здесь два столбика должны расходиться каждый на своём слове.",
+          "props": {
+            "likeLabel": "нравится",
+            "wantLabel": "хочется",
+            "riseCue": "растёт",
+            "fallCue": "падать"
+          }
+        },
+        "choreography": [
+          {
+            "cue": "растёт",
+            "action": "столбик вверх"
+          },
+          {
+            "cue": "падать",
+            "action": "столбик вниз"
+          }
+        ],
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "push",
+          "direction": "up",
+          "seconds": 0.5,
+          "intent": "Следующая мысль вырастает из предыдущей"
+        }
+      },
+      "start": 7.166666666666667,
+      "duration": 5.033333333333332
+    },
+    {
+      "id": "signal",
+      "voice": "Тягу включает знакомое место или просто мысль — даже спустя годы.",
+      "onScreen": "хочется",
+      "thought": "Поэтому тянет не тогда, когда плохо, а когда что-то напомнило",
+      "animation": "Обычная улица, на «мысль» сверху появляется крупное «хочется»",
+      "sources": [
+        "berridge2016"
+      ],
+      "direction": {
+        "source": "hide",
+        "purpose": "proof",
+        "emotion": "тихое узнавание",
+        "concept": "Ничего страшного в кадре нет: самая обычная улица, и в этом всё дело",
+        "art": {
+          "variant": "inverse"
+        },
+        "hierarchy": {
+          "primary": "слово «хочется» над обычной улицей",
+          "secondary": [
+            "улица"
+          ]
+        },
+        "shot": {
+          "type": "media",
+          "plates": [
+            {
+              "asset": "dep-street",
+              "focus": [
+                0.5,
+                0.75
+              ],
+              "zoom": 1.15,
+              "endZoom": 1.25,
+              "callouts": []
+            }
+          ],
+          "grade": "none",
+          "title": {
+            "text": "*хочется*",
+            "cue": "мысль",
+            "reveal": "lines",
+            "tone": "accent"
+          },
+          "titleAnchor": "top"
+        },
+        "choreography": [
+          {
+            "cue": "мысль",
+            "action": "слово появляется"
+          }
+        ],
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "mask",
+          "shape": "circle",
+          "seconds": 0.55,
+          "intent": "Кадр открывается, как воспоминание"
+        }
+      },
+      "start": 12.2,
+      "duration": 4.933333333333334
+    },
+    {
+      "id": "end",
+      "voice": "Поэтому одной воли бывает мало. И это лечат.",
+      "onScreen": "Одной воли бывает мало. Это лечат.",
+      "thought": "Без стыда: это состояние, и им занимаются врачи",
+      "animation": "Спокойная крупная фраза, на «лечат» акцент",
+      "sources": [
+        "nida-addiction",
+        "nida-treatment"
+      ],
+      "direction": {
+        "source": "hide",
+        "purpose": "payoff",
+        "emotion": "облегчение",
+        "concept": "Тёплый цвет на весь кадр: история заканчивается выходом, а не приговором",
+        "art": {
+          "variant": "block"
+        },
+        "hierarchy": {
+          "primary": "фраза"
+        },
+        "shot": {
+          "type": "type",
+          "layout": "poster",
+          "anchor": "center",
+          "headline": {
+            "text": "Одной воли / бывает мало. / *Это лечат.*",
+            "cue": "Поэтому",
+            "reveal": "lines",
+            "emphasis": "color",
+            "emphasisCue": "лечат",
+            "tone": "ink"
+          }
+        },
+        "choreography": [
+          {
+            "cue": "Поэтому",
+            "action": "фраза"
+          },
+          {
+            "cue": "лечат",
+            "action": "акцент"
+          }
+        ],
+        "camera": {
+          "move": "pushIn"
+        },
+        "transition": {
+          "type": "field",
+          "seconds": 0.7,
+          "intent": "Тепло заполняет кадр"
+        }
+      },
+      "start": 17.133333333333333,
+      "duration": 4.433333333333334
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/wanting-vs-liking/voice-0887eb783f0681a5-mix.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "voiceId": "iP95p4xoKVk53GoZ742B",
+    "modelId": "eleven_v3",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.8,
+      "style": 0,
+      "speed": 1
+    },
+    "sourcePath": "generated/wanting-vs-liking/voice-0887eb783f0681a5.mp3",
+    "timingMode": "ElevenLabs character alignment",
+    "sourceDurationSeconds": 20.610612,
+    "durationSeconds": 20.551854,
+    "localTempo": 1,
+    "cacheHash": "0887eb783f0681a5",
+    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades"
+  },
+  "captions": [
+    {
+      "text": "Зависимость",
+      "startMs": 50,
+      "endMs": 800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 1010,
+      "endMs": 1020,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "это",
+      "startMs": 1020,
+      "endMs": 1200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 1280,
+      "endMs": 1440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "когда",
+      "startMs": 1493,
+      "endMs": 1760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "очень",
+      "startMs": 1827,
+      "endMs": 2160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "нравится.",
+      "startMs": 2240,
+      "endMs": 2800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "«Нравится»",
+      "startMs": 3310,
+      "endMs": 3920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 3970,
+      "endMs": 4000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "«хочется»",
+      "startMs": 4040,
+      "endMs": 4760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 4830,
+      "endMs": 4880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "мозге",
+      "startMs": 4940,
+      "endMs": 5280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 5540,
+      "endMs": 5580,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "разные",
+      "startMs": 5580,
+      "endMs": 5920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "системы.",
+      "startMs": 5980,
+      "endMs": 6480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "При",
+      "startMs": 7150,
+      "endMs": 7200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "зависимости",
+      "startMs": 7273,
+      "endMs": 8080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "«хочется»",
+      "startMs": 8190,
+      "endMs": 9040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "растёт,",
+      "startMs": 9088,
+      "endMs": 9760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "а",
+      "startMs": 9840,
+      "endMs": 9880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "«нравится»",
+      "startMs": 9880,
+      "endMs": 10560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "может",
+      "startMs": 10587,
+      "endMs": 10720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "даже",
+      "startMs": 10768,
+      "endMs": 10960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "падать.",
+      "startMs": 11040,
+      "endMs": 11520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Тягу",
+      "startMs": 12210,
+      "endMs": 12480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "включает",
+      "startMs": 12533,
+      "endMs": 13040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "знакомое",
+      "startMs": 13067,
+      "endMs": 13520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "место",
+      "startMs": 13600,
+      "endMs": 14000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "или",
+      "startMs": 14060,
+      "endMs": 14240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "просто",
+      "startMs": 14286,
+      "endMs": 14560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "мысль",
+      "startMs": 14640,
+      "endMs": 15040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 15310,
+      "endMs": 15328,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "даже",
+      "startMs": 15328,
+      "endMs": 15520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "спустя",
+      "startMs": 15573,
+      "endMs": 16000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "годы.",
+      "startMs": 16064,
+      "endMs": 16400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Поэтому",
+      "startMs": 17120,
+      "endMs": 17520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "одной",
+      "startMs": 17580,
+      "endMs": 17840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "воли",
+      "startMs": 17920,
+      "endMs": 18240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "бывает",
+      "startMs": 18280,
+      "endMs": 18640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "мало.",
+      "startMs": 18704,
+      "endMs": 19040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "И",
+      "startMs": 19400,
+      "endMs": 19440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "это",
+      "startMs": 19610,
+      "endMs": 19840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "лечат.",
+      "startMs": 19960,
+      "endMs": 20560,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "limits": {
+    "minSeconds": 18,
+    "maxSeconds": 22,
+    "targetSeconds": 20,
+    "endHoldSeconds": 1
+  },
+  "editorialReview": {
+    "openClaims": [
+      "Это теория Берриджа и Робинсона, не общепризнанный факт: авторы признают, что часть исследований показала почти обратное.",
+      "Речь в основном о веществах. Телефон, игры и сахар намеренно не упомянуты: по пересказу статьи механизмы зависимостей без веществ ещё не поняты, дословно этот раздел не прочитан.",
+      "«Одной воли бывает мало» — формулировка автора ролика: NIDA говорит о нарушении самоконтроля, а слово «воля» не использует.",
+      "«Это лечат» упрощает: по NIDA лечение не излечение, а управление состоянием, срывы возможны."
+    ],
+    "human": "Текст и факты одобрены qwezyid 2026-11-05. Источник не выводится на экран, его стоит указать в подписи к посту."
+  },
+  "renderPath": "out/studio/wanting-vs-liking.mp4",
+  "qa": {
+    "path": "out/studio/wanting-vs-liking-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  }
+}

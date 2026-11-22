@@ -7,6 +7,7 @@ import {join, resolve} from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {readPng} from '../scripts/eleven/lib/png.mjs';
 import {ROOT as root, loadProject, projectPath} from './lib/project.mjs';
+import {libraryOf} from './lib/library.mjs';
 
 export const THRESHOLD = {meanDiff: 1.5, blockDiff: 14, block: 16};
 const W = 270, H = 480;
@@ -41,12 +42,12 @@ const sh = (cmd, args) => {
 export const renderFrames = (project, frames, outDir) => {
   const bundle = mkdtempSync(join(tmpdir(), 'reel-bundle-'));
   const propsFile = join(bundle, '..', `${project.id}-props-${process.pid}.json`);
-  writeFileSync(propsFile, JSON.stringify({project}));
+  writeFileSync(propsFile, JSON.stringify({project: project.scenes.some((s) => s.direction) ? {...project, assets: libraryOf(project)} : project}));
   try {
     sh('npx', ['remotion', 'bundle', 'src/editorial/index.tsx', `--out-dir=${bundle}`, '--log=error']);
     for (const frame of frames) {
       const raw = join(outDir, `raw-${frame}.png`);
-      sh('npx', ['remotion', 'still', bundle, 'EditorialReel', raw, `--props=${propsFile}`, `--frame=${frame}`, '--image-format=png', '--log=error']);
+      sh('npx', ['remotion', 'still', bundle, 'EditorialReel', raw, `--props=${propsFile}`, `--frame=${frame}`, '--image-format=png', '--gl=angle', '--log=error']);
       sh('ffmpeg', ['-y', '-v', 'error', '-i', raw, '-vf', `scale=${W}:${H}:flags=area`, join(outDir, `f${String(frame).padStart(4, '0')}.png`)]);
       rmSync(raw);
     }

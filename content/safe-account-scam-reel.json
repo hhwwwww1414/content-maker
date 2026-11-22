@@ -1,0 +1,229 @@
+{
+  "id": "safe-account-scam",
+  "compositionId": "SafeAccountScamReel",
+  "contactSheetCompositionId": "SafeAccountScamContactSheet",
+  "npmPrefix": "safe-account",
+  "title": "«Безопасный счёт»: схема, которой не существует",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/safe-account-scam/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 800,
+  "background": {
+    "type": "loop-video",
+    "file": "assets/background.mp4",
+    "muted": true,
+    "fit": "cover",
+    "overlayOpacity": 0.44,
+    "note": "Единственный фон ролика. Зациклен, без звука, нижний постоянный слой."
+  },
+  "source": {
+    "primary": "Банк России — противодействие мошенничеству",
+    "secondary": "Банк России — объём операций без согласия клиента, 2025",
+    "topic": "схема «безопасный счёт», 2026"
+  },
+  "tts": {
+    "language": "ru",
+    "speed": 1.2,
+    "direction": "Хук — ровно и негромко, будто пересказываешь чужой звонок. Глава про несуществующий счёт — твёрдо, это главное утверждение ролика. Финал — по-доброму, без нравоучения.",
+    "note": "Числа проговариваются модулем numerals, на экране остаются цифрами."
+  },
+  "captionClusters": {
+    "targetSeconds": [0.5, 0.8],
+    "growUntilSeconds": 0.36,
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и", "а", "но", "не", "ни", "в", "во", "на", "по", "за", "из", "от", "до",
+      "к", "ко", "с", "со", "у", "о", "об", "про", "для", "что", "как", "это",
+      "всё", "ещё", "же", "ты", "он", "она", "я", "мы", "чтобы", "так", "там",
+      "уже", "или", "бы", "тебе", "этот", "над", "тем", "её", "его", "ему", "их",
+      "то", "есть", "если", "теперь", "они", "себе", "вот", "даже", "будет",
+      "только", "когда", "тут", "им", "ним", "где", "нигде", "такого"
+    ],
+    "highlightWords": {
+      "red": ["пугают", "торопят", "мошеннику", "уголовным"],
+      "yellow": ["снять", "банкомат", "деньги", "счёта", "трубку"],
+      "mint": ["перезвонить", "правило"]
+    },
+    "displayReplacements": {}
+  },
+  "lines": [
+    {"id": "l01", "chapter": "hook", "text": "Голос в трубке спокойный.", "breakAfter": "line"},
+    {"id": "l02", "chapter": "hook", "text": "Просит снять все деньги.", "breakAfter": "line"},
+    {"id": "l03", "chapter": "hook", "text": "И внести их в другой банкомат.", "breakAfter": "block"},
+
+    {"id": "l04", "chapter": "why", "text": "Пугают уголовным делом.", "breakAfter": "line"},
+    {"id": "l05", "chapter": "why", "text": "Потом торопят.", "breakAfter": "line"},
+    {"id": "l06", "chapter": "why", "text": "Думать некогда.", "breakAfter": "block"},
+
+    {"id": "l07", "chapter": "twist", "text": "Безопасного счёта не существует.", "breakAfter": "line"},
+    {"id": "l08", "chapter": "twist", "text": "Ни в банке, ни в полиции.", "breakAfter": "line"},
+    {"id": "l09", "chapter": "twist", "text": "Деньги уходят прямо мошеннику.", "breakAfter": "block"},
+
+    {"id": "l10", "chapter": "scale", "text": "За 2025 год — 29 миллиардов.", "breakAfter": "line"},
+    {"id": "l11", "chapter": "scale", "text": "На 6 процентов больше.", "breakAfter": "line"},
+    {"id": "l12", "chapter": "scale", "text": "Схема стала самой частой.", "breakAfter": "block"},
+
+    {"id": "l13", "chapter": "do", "text": "Правило одно.", "breakAfter": "line"},
+    {"id": "l14", "chapter": "do", "text": "Положить трубку.", "breakAfter": "line"},
+    {"id": "l15", "chapter": "do", "text": "И перезвонить самому.", "breakAfter": "block"},
+
+    {"id": "l16", "chapter": "cta", "text": "Тебе так звонили?", "breakAfter": "line"},
+    {"id": "l17", "chapter": "cta", "text": "Звонили.", "breakAfter": "line"},
+    {"id": "l18", "chapter": "cta", "text": "Пока нет.", "breakAfter": "none"}
+  ],
+  "chapters": [
+    {
+      "id": "hook",
+      "label": "ЧТО ПРОСЯТ СДЕЛАТЬ",
+      "headline": "СНЯТЬ ВСЁ\nИ ВНЕСТИ ОБРАТНО",
+      "fromLine": "l01",
+      "toLine": "l03",
+      "grammar": {
+        "type": "split",
+        "card": "ПРОСЬБА, КОТОРОЙ НЕ БЫВАЕТ",
+        "subject": "ТВОИ ДЕНЬГИ",
+        "splitAt": "l02",
+        "left": {"label": "СНЯТЬ В ОДНОМ БАНКОМАТЕ", "tone": "yellow", "at": "l02"},
+        "right": {"label": "ВНЕСТИ В ДРУГОЙ", "tone": "red", "at": "l03"},
+        "verdict": {"label": "ПО ЧУЖИМ РЕКВИЗИТАМ", "tone": "red", "at": "l03", "offsetMs": 800}
+      }
+    },
+    {
+      "id": "why",
+      "label": "ПОЧЕМУ ЛЮДИ СОГЛАШАЮТСЯ",
+      "headline": "СНАЧАЛА СТРАХ,\nПОТОМ СПЕШКА",
+      "fromLine": "l04",
+      "toLine": "l06",
+      "grammar": {
+        "type": "steps",
+        "card": "КАК ДАВЯТ НА ЧЕЛОВЕКА",
+        "steps": [
+          {"label": "ПУГАЮТ УГОЛОВНЫМ ДЕЛОМ", "note": "ВАШИ ДАННЫЕ УТЕКЛИ", "tone": "yellow", "at": "l04", "noteAt": "l04"},
+          {"label": "СТАВЯТ СРОК", "note": "РЕШАТЬ НАДО СЕЙЧАС", "tone": "yellow", "at": "l05", "noteAt": "l05"},
+          {"label": "НЕ ДАЮТ ПОЛОЖИТЬ ТРУБКУ", "note": "И ПОЗВОНИТЬ БЛИЗКИМ", "tone": "red", "at": "l06", "noteAt": "l06"}
+        ]
+      }
+    },
+    {
+      "id": "twist",
+      "label": "ГЛАВНОЕ ПРО ЭТУ СХЕМУ",
+      "headline": "ТАКОГО СЧЁТА\nНЕ СУЩЕСТВУЕТ",
+      "fromLine": "l07",
+      "toLine": "l09",
+      "grammar": {
+        "type": "statement",
+        "card": "«БЕЗОПАСНЫЙ СЧЁТ»",
+        "claim": "ТУДА ПЕРЕВЕДУТ И СБЕРЕГУТ",
+        "claimTone": "yellow",
+        "strikeAt": "l07",
+        "items": [
+          {"label": "БАНК ТАК НЕ ДЕЛАЕТ", "tone": "neutral", "at": "l08"},
+          {"label": "ПОЛИЦИЯ ТОЖЕ", "tone": "neutral", "at": "l08", "offsetMs": 700}
+        ],
+        "verdict": {"label": "ЭТО СЧЁТ МОШЕННИКА", "tone": "red", "at": "l09"}
+      }
+    },
+    {
+      "id": "scale",
+      "label": "СКОЛЬКО ТЕРЯЮТ",
+      "headline": "ЭТО НЕ РЕДКИЙ\nСЛУЧАЙ",
+      "fromLine": "l10",
+      "toLine": "l12",
+      "grammar": {
+        "type": "counters",
+        "card": "ПОТЕРИ ГРАЖДАН ЗА 2025 ГОД",
+        "lead": {"label": "ПО ДАННЫМ БАНКА РОССИИ", "at": "l10"},
+        "counters": [
+          {"label": "29 МЛРД РУБЛЕЙ", "tone": "red", "at": "l10", "offsetMs": 900},
+          {"label": "6% РОСТА ЗА ГОД", "tone": "yellow", "at": "l11"}
+        ],
+        "chips": [
+          {"label": "САМАЯ ЧАСТАЯ СХЕМА 2026 ГОДА", "tone": "red", "at": "l12"}
+        ]
+      }
+    },
+    {
+      "id": "do",
+      "label": "ЧТО ДЕЛАТЬ",
+      "headline": "ОДНО ДЕЙСТВИЕ\nЗАКРЫВАЕТ ВСЁ",
+      "fromLine": "l13",
+      "toLine": "l15",
+      "grammar": null
+    },
+    {
+      "id": "cta",
+      "label": "ТВОЙ ХОД",
+      "headline": "ТЕБЕ ТАК\nЗВОНИЛИ?",
+      "fromLine": "l16",
+      "toLine": "l18",
+      "grammar": null
+    }
+  ],
+  "avatarStates": [
+    {"at": "l01", "state": "question"},
+    {"at": "l04", "state": "thinking"},
+    {"at": "l07", "state": "angry"},
+    {"at": "l10", "state": "shocked"},
+    {"at": "l13", "state": "idea"},
+    {"at": "l16", "state": "approved"}
+  ],
+  "chips": [
+    {"label": "БАНКОМАТ — КРАСНЫЙ ФЛАГ", "tone": "yellow", "at": "l03"},
+    {"label": "ТАКОГО СЧЁТА НЕТ", "tone": "red", "at": "l07"},
+    {"label": "29 МЛРД ЗА ГОД", "tone": "red", "at": "l10", "offsetMs": 2600}
+  ],
+  "mood": {
+    "alarm": {"from": "l04", "to": "l13"},
+    "calm": {"from": "l13", "to": "l16"}
+  },
+  "memoryFrame": {
+    "fromLine": "l13",
+    "untilLine": "l16",
+    "maxHoldMs": 9000,
+    "staggerMs": 420,
+    "minHoldSeconds": 2.4,
+    "title": "ЧТО ДЕЛАТЬ ПРИ ТАКОМ ЗВОНКЕ",
+    "items": [
+      "ПОЛОЖИТЬ ТРУБКУ СРАЗУ",
+      "ПЕРЕЗВОНИТЬ ПО НОМЕРУ С КАРТЫ",
+      "НИКОМУ НЕ ДИКТОВАТЬ КОДЫ"
+    ]
+  },
+  "cta": {
+    "fromLine": "l16",
+    "prompt": "ТЕБЕ ТАК ЗВОНИЛИ?",
+    "divider": "или",
+    "options": [
+      {"label": "ЗВОНИЛИ", "tone": "yellow", "at": "l17"},
+      {"label": "ПОКА НЕТ", "tone": "mint", "at": "l18"}
+    ],
+    "comment": "Ответь одним словом в комментарии.",
+    "teaser": "КАК ЗАПРЕТИТЬ БРАТЬ КРЕДИТЫ НА СВОЁ ИМЯ",
+    "hint": {"at": "l17"},
+    "teaserCue": {"at": "l18"},
+    "teaserDetailCue": {"at": "l18", "offsetMs": 600}
+  },
+  "qa": {
+    "durationSeconds": [25, 35],
+    "contentPolarity": "light-on-dark",
+    "scriptQuality": {
+      "hookLines": 3,
+      "maxHookWordsPerLine": 8,
+      "minAnchors": 3
+    }
+  },
+  "publish": {
+    "cover": "«БЕЗОПАСНЫЙ СЧЁТ» НЕ СУЩЕСТВУЕТ",
+    "coverSub": "Самая частая схема 2026 года",
+    "caption": "Схема выглядит так: звонит «сотрудник» банка, финансовой разведки или правоохранительных органов и сообщает, что данные утекли, а с вашего счёта якобы финансируют что-то незаконное. Дальше — угроза уголовной ответственностью и требование срочно «спасти» деньги: снять всё в одном банкомате и внести на «безопасный счёт» через другой, по продиктованным реквизитам.\n\nБезопасного счёта не существует. Ни банк, ни Банк России, ни полиция, ни ФСБ не защищают деньги граждан таким способом. Реквизиты, которые диктуют по телефону, принадлежат мошенникам, и человек переводит деньги им сам — поэтому вернуть их почти невозможно.\n\nПо данным Банка России, за 2025 год мошенники похитили у граждан 29,3 млрд рублей — на 6,4% больше, чем годом ранее. В I квартале 2026 года схема с «безопасным счётом» стала самой распространённой.\n\nОдно действие закрывает всю схему: положить трубку и перезвонить самому по номеру, указанному на обратной стороне карты.",
+    "hashtags": ["#мошенники", "#безопасность", "#финансы", "#банки"],
+    "sources": {
+      "Банк России — противодействие мошенничеству": "https://www.cbr.ru/information_security/pmp/",
+      "Банк России о схеме «замены счёта»": "https://russian.rt.com/russia/news/1657463-moshenniki-zamena-schyota-centrobank"
+    }
+  }
+}

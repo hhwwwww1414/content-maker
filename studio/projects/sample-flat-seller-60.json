@@ -1,0 +1,897 @@
+{
+  "id": "sample-flat-seller-60",
+  "topic": "Купил квартиру — её вернули продавцу (60 fps mode check)",
+  "niche": "engine-sample",
+  "language": "ru",
+  "status": {
+    "factCheck": "partial",
+    "scriptApproval": "demo",
+    "publication": "draft",
+    "production": "rendered"
+  },
+  "sources": [
+    {
+      "id": "primary",
+      "publisher": "Верховный суд РФ, 16.12.2025",
+      "claim": "Определение Судебной коллегии по гражданским делам ВС РФ, 16.12.2025",
+      "url": "",
+      "accessed": "2026-11-01"
+    },
+    {
+      "id": "secondary",
+      "publisher": "Известия",
+      "claim": "Известия — статистика решений по спорам о возврате квартир, 2026",
+      "url": "",
+      "accessed": "2026-11-01"
+    }
+  ],
+  "title": "Купил квартиру — её вернули продавцу",
+  "hook": "Он купил квартиру. Через год её вернули продавцу. Деньги не вернули.",
+  "centralIdea": "Верховный суд встал на сторону покупателя, но риск остался.",
+  "art": {
+    "direction": "editorial",
+    "music": {
+      "asset": "bed-warm",
+      "volume": 0.11,
+      "duck": 0.55
+    }
+  },
+  "theme": "signal",
+  "captionStyle": "plate",
+  "fps": 60,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 31.4,
+  "scenes": [
+    {
+      "id": "hook",
+      "voice": "Он купил квартиру. Через год её вернули продавцу. Деньги не вернули.",
+      "onScreen": "квартира",
+      "thought": "Дом как предмет на постаменте: мечта освещена, пока что",
+      "animation": "Дом как предмет на постаменте: мечта освещена, пока что",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "opening",
+        "emotion": "уверенность перед ударом",
+        "concept": "Дом как предмет на постаменте: мечта освещена, пока что",
+        "hierarchy": {
+          "primary": "квартира"
+        },
+        "art": {
+          "variant": "base",
+          "field": "paper"
+        },
+        "shot": {
+          "type": "stage3d",
+          "preset": "spotlight",
+          "object": "house",
+          "lightCue": "купил",
+          "spinCue": "вернули",
+          "title": {
+            "text": "Он *купил* квартиру",
+            "cue": "купил",
+            "reveal": "lines"
+          },
+          "labels": [
+            {
+              "target": 0,
+              "text": "Через год вернули продавцу",
+              "cue": "вернули"
+            }
+          ],
+          "orbit": 0.08
+        },
+        "camera": {
+          "move": "still"
+        },
+        "source": "hide"
+      },
+      "start": 0,
+      "duration": 4.866666666666666
+    },
+    {
+      "id": "how",
+      "voice": "Продавец сказал: обманули. Суд отменил сделку. Квартира назад. Деньги — нет.",
+      "onScreen": "сделка отменена",
+      "thought": "Настоящий документ на столе: штамп падает на слове суда",
+      "animation": "Настоящий документ на столе: штамп падает на слове суда",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "explain",
+        "emotion": "несправедливость",
+        "concept": "Настоящий документ на столе: штамп падает на слове суда",
+        "hierarchy": {
+          "primary": "сделка отменена"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "collage",
+          "impactCue": "отменил",
+          "pieces": [
+            {
+              "kind": "paper",
+              "box": [
+                -60,
+                1000,
+                1300,
+                1100
+              ],
+              "rotate": -4,
+              "cue": 0,
+              "tone": "ink",
+              "torn": true,
+              "depth": -0.3
+            },
+            {
+              "kind": "document",
+              "box": [
+                100,
+                280,
+                830,
+                900
+              ],
+              "rotate": -1.5,
+              "cue": 0,
+              "text": "Договор купли-продажи",
+              "lines": [
+                "Продавец: «меня обманули»",
+                "Квартира возвращается",
+                "Деньги покупателю: нет"
+              ],
+              "markLine": 2,
+              "markCue": "нет",
+              "depth": -0.05
+            },
+            {
+              "kind": "stamp",
+              "box": [
+                270,
+                900,
+                620,
+                180
+              ],
+              "rotate": -8,
+              "cue": "отменил",
+              "text": "Отменено",
+              "depth": 0.1
+            }
+          ]
+        },
+        "camera": {
+          "move": "pushIn"
+        },
+        "transition": {
+          "type": "push",
+          "direction": "left",
+          "seconds": 0.5,
+          "intent": "Лист въезжает как следующая страница дела"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "whoosh",
+            "volume": 0.28
+          },
+          {
+            "cue": "отменил",
+            "sfx": "stamp",
+            "volume": 0.5
+          }
+        ]
+      },
+      "start": 4.866666666666666,
+      "duration": 5.666666666666667
+    },
+    {
+      "id": "turn",
+      "voice": "В декабре 2025 всё изменилось. Верховный суд — за покупателя. Отменив три инстанции.",
+      "onScreen": "верховный суд",
+      "thought": "Чёрная полоса редакционного разворота: большая фраза и дата",
+      "animation": "Чёрная полоса редакционного разворота: большая фраза и дата",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "turn",
+        "emotion": "разворот",
+        "concept": "Чёрная полоса редакционного разворота: большая фраза и дата",
+        "hierarchy": {
+          "primary": "верховный суд"
+        },
+        "art": {
+          "variant": "inverse",
+          "field": "silk"
+        },
+        "shot": {
+          "type": "type",
+          "layout": "poster",
+          "anchor": "center",
+          "kicker": "Декабрь 2025",
+          "headline": {
+            "text": "Верховный / суд / *за покупателя*",
+            "cue": "всё",
+            "reveal": "lines"
+          },
+          "sub": {
+            "text": "Отменив три инстанции",
+            "cue": "Отменив",
+            "reveal": "lines"
+          }
+        },
+        "camera": {
+          "move": "pushIn",
+          "keys": [
+            {
+              "cue": "покупателя",
+              "scale": 1.12,
+              "seconds": 1.4
+            }
+          ]
+        },
+        "transition": {
+          "type": "field",
+          "origin": [
+            0.5,
+            0.48
+          ],
+          "seconds": 0.75,
+          "intent": "Чернила штампа разливаются и становятся новым фоном"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "swish",
+            "volume": 0.28
+          }
+        ]
+      },
+      "start": 10.533333333333333,
+      "duration": 7.2333333333333325
+    },
+    {
+      "id": "numbers",
+      "voice": "Было — 41 процент. Стало — 85.",
+      "onScreen": "85 процентов",
+      "thought": "Столбцы стоят на общей земле: вторая вдвое выше",
+      "animation": "Столбцы стоят на общей земле: вторая вдвое выше",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "data",
+        "emotion": "облегчение",
+        "concept": "Столбцы стоят на общей земле: вторая вдвое выше",
+        "hierarchy": {
+          "primary": "85 процентов"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "data",
+          "mode": "bars",
+          "max": 100,
+          "items": [
+            {
+              "label": "было",
+              "value": 41,
+              "display": "41%",
+              "cue": "Было"
+            },
+            {
+              "label": "стало",
+              "value": 85,
+              "display": "85%",
+              "cue": "Стало",
+              "highlight": true
+            }
+          ]
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Склейка на первом слове: цифры идут в такт речи"
+        },
+        "sound": [
+          {
+            "cue": "Было",
+            "sfx": "tick",
+            "volume": 0.35
+          },
+          {
+            "cue": "Стало",
+            "sfx": "thud",
+            "volume": 0.35
+          }
+        ]
+      },
+      "start": 17.766666666666666,
+      "duration": 4.033333333333335
+    },
+    {
+      "id": "do",
+      "voice": "Риск остался один. Если признают больным. Проверять надо до сделки.",
+      "onScreen": "риск под водой",
+      "thought": "Над водой сделка, под водой риск: камера ныряет на слове о болезни",
+      "animation": "Над водой сделка, под водой риск: камера ныряет на слове о болезни",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "payoff",
+        "emotion": "осторожность",
+        "concept": "Над водой сделка, под водой риск: камера ныряет на слове о болезни",
+        "hierarchy": {
+          "primary": "риск под водой"
+        },
+        "art": {
+          "variant": "inverse",
+          "field": "gradient"
+        },
+        "shot": {
+          "type": "stage3d",
+          "preset": "iceberg",
+          "diveCue": "больным",
+          "title": {
+            "text": "Риск *остался один*",
+            "cue": "Риск",
+            "reveal": "lines",
+            "exitCue": "больным"
+          },
+          "labels": [
+            {
+              "target": 1,
+              "text": "Проверять до сделки",
+              "cue": "Проверять"
+            }
+          ],
+          "orbit": 0.05
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "mask",
+          "shape": "rise",
+          "seconds": 0.6,
+          "intent": "Шторка снизу вверх, как поднимающаяся вода"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "swish",
+            "volume": 0.28
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 21.8,
+      "duration": 5.766666666666666
+    },
+    {
+      "id": "cta",
+      "voice": "Купил бы такую квартиру? Купил бы. Ни за что.",
+      "onScreen": "купил бы или нет",
+      "thought": "Половины страницы спорят, граница ходит за голосом",
+      "animation": "Половины страницы спорят, граница ходит за голосом",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "question",
+        "emotion": "спор",
+        "concept": "Половины страницы спорят, граница ходит за голосом",
+        "hierarchy": {
+          "primary": "купил бы или нет"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "split",
+          "axis": "horizontal",
+          "start": 1,
+          "a": {
+            "kicker": "Такую?",
+            "word": "Купил *бы*",
+            "variant": "base"
+          },
+          "b": {
+            "word": "Ни за что",
+            "variant": "block"
+          },
+          "keys": [
+            {
+              "cue": "Ни",
+              "at": 0.5
+            }
+          ]
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "through",
+          "origin": [
+            0.5,
+            0.3
+          ],
+          "seconds": 0.6,
+          "intent": "Из-под воды обратно на поверхность страницы"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "whoosh",
+            "volume": 0.28
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 27.566666666666666,
+      "duration": 3.833333333333332
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/sample-flat-seller/voice-imported-4ecdea02daa896db.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "importedFromLegacy": "flat-back-to-seller",
+    "timingMode": "ElevenLabs alignment imported from the legacy take",
+    "importedFrom": "flat-back-to-seller",
+    "sourceSha256": "4ecdea02daa896db",
+    "durationSeconds": 30.88,
+    "sourceDurationSeconds": 30.88,
+    "localTempo": 1
+  },
+  "captions": [
+    {
+      "text": "Он",
+      "startMs": 40,
+      "endMs": 160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "купил",
+      "startMs": 220,
+      "endMs": 480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "квартиру.",
+      "startMs": 549,
+      "endMs": 1120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Через",
+      "startMs": 1410,
+      "endMs": 1600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "год",
+      "startMs": 1660,
+      "endMs": 1840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "её",
+      "startMs": 1930,
+      "endMs": 2080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вернули",
+      "startMs": 2120,
+      "endMs": 2480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "продавцу.",
+      "startMs": 2528,
+      "endMs": 3440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Деньги",
+      "startMs": 3530,
+      "endMs": 3760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 3813,
+      "endMs": 3920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вернули.",
+      "startMs": 3960,
+      "endMs": 4400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Продавец",
+      "startMs": 4850,
+      "endMs": 5120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сказал:",
+      "startMs": 5177,
+      "endMs": 5680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "обманули.",
+      "startMs": 5760,
+      "endMs": 6320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Суд",
+      "startMs": 6810,
+      "endMs": 6960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "отменил",
+      "startMs": 7013,
+      "endMs": 7360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сделку.",
+      "startMs": 7424,
+      "endMs": 7841,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Квартира",
+      "startMs": 8200,
+      "endMs": 8560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "назад.",
+      "startMs": 8627,
+      "endMs": 9160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Деньги",
+      "startMs": 9350,
+      "endMs": 9600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 9600,
+      "endMs": 9750,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "нет.",
+      "startMs": 9750,
+      "endMs": 9920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "В",
+      "startMs": 10530,
+      "endMs": 10540,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "декабре",
+      "startMs": 10540,
+      "endMs": 10880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "2025",
+      "startMs": 10920,
+      "endMs": 12240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "всё",
+      "startMs": 12340,
+      "endMs": 12640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "изменилось.",
+      "startMs": 12720,
+      "endMs": 13640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Верховный",
+      "startMs": 13700,
+      "endMs": 14080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "суд",
+      "startMs": 14160,
+      "endMs": 14400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 14400,
+      "endMs": 14693,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "за",
+      "startMs": 14693,
+      "endMs": 14800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "покупателя.",
+      "startMs": 14853,
+      "endMs": 15680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Отменив",
+      "startMs": 15820,
+      "endMs": 16240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "три",
+      "startMs": 16300,
+      "endMs": 16480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "инстанции.",
+      "startMs": 16560,
+      "endMs": 17240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Было",
+      "startMs": 17770,
+      "endMs": 18000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 18000,
+      "endMs": 18280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "41",
+      "startMs": 18280,
+      "endMs": 18640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "процент.",
+      "startMs": 18704,
+      "endMs": 19480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Стало",
+      "startMs": 19690,
+      "endMs": 20000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 20000,
+      "endMs": 20380,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "85.",
+      "startMs": 20380,
+      "endMs": 21200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Риск",
+      "startMs": 21790,
+      "endMs": 22000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "остался",
+      "startMs": 22070,
+      "endMs": 22480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "один.",
+      "startMs": 22560,
+      "endMs": 22960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Если",
+      "startMs": 23440,
+      "endMs": 23760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "признают",
+      "startMs": 23829,
+      "endMs": 24400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "больным.",
+      "startMs": 24432,
+      "endMs": 24880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Проверять",
+      "startMs": 25480,
+      "endMs": 25840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "надо",
+      "startMs": 25904,
+      "endMs": 26160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "до",
+      "startMs": 26293,
+      "endMs": 26560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сделки.",
+      "startMs": 26624,
+      "endMs": 27160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Купил",
+      "startMs": 27560,
+      "endMs": 27760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "бы",
+      "startMs": 27813,
+      "endMs": 27920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "такую",
+      "startMs": 27960,
+      "endMs": 28160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "квартиру?",
+      "startMs": 28217,
+      "endMs": 29000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Купил",
+      "startMs": 29360,
+      "endMs": 29600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "бы.",
+      "startMs": 29680,
+      "endMs": 30080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Ни",
+      "startMs": 30260,
+      "endMs": 30400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "за",
+      "startMs": 30453,
+      "endMs": 30560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "что.",
+      "startMs": 30620,
+      "endMs": 30880,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "editorialReview": {
+    "note": "Engineering sample of the video engine. Facts come from the legacy reel and were not re-verified.",
+    "openClaims": [
+      "Facts inherited from the legacy reel; not re-verified for this sample."
+    ]
+  },
+  "renderPath": "out/studio/sample-flat-seller-60.mp4",
+  "qa": {
+    "path": "out/studio/sample-flat-seller-60-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  }
+}

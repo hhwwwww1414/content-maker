@@ -2,7 +2,6 @@ import React from 'react';
 import {interpolate} from 'remotion';
 import {customScenes} from '../custom';
 import {Backdrop} from './Backdrop';
-import {bodyFont} from './fonts';
 import {layerRegistry} from './registry';
 import {EASE_IN_OUT, useScene} from './scene';
 import type {CameraKey, Layer, Project, Visual} from './types';
@@ -30,9 +29,8 @@ const LayerView: React.FC<{layer: Layer}> = ({layer}) => {
 };
 
 export const VisualScene: React.FC<{visual: Visual; project: Project}> = ({visual, project}) => {
-  const {theme, scene} = useScene();
+  const {theme} = useScene();
   const camera = useCamera(visual.camera);
-  const publishers = scene.sources.map((id) => project.sources.find((s) => s.id === id)?.publisher).filter(Boolean);
   return (
     <>
       <Backdrop kind={visual.backdrop ?? project.backdrop ?? theme.backdrop} camX={camera.x} camY={camera.y}/>
@@ -40,7 +38,6 @@ export const VisualScene: React.FC<{visual: Visual; project: Project}> = ({visua
         {visual.layers.filter((l) => !l.fixed).map((layer, i) => <LayerView key={i} layer={layer}/>)}
       </div>
       {visual.layers.filter((l) => l.fixed).map((layer, i) => <LayerView key={i} layer={layer}/>)}
-      {publishers.length > 0 && <div data-qa="text" data-qa-min="24" style={{position: 'absolute', left: 80, width: 860, top: 1340, height: 40, fontFamily: bodyFont, fontWeight: 600, fontSize: 26, lineHeight: '40px', color: theme.muted, whiteSpace: 'nowrap'}}>Источник: {publishers.join(', ')}</div>}
     </>
   );
 };

@@ -1,0 +1,720 @@
+{
+ "version": 1,
+ "assets": {
+  "poppy-farmer": {
+   "id": "poppy-farmer",
+   "kind": "image",
+   "path": "library/media/poppy-farmer.jpg",
+   "width": 3600,
+   "height": 2400,
+   "sha256": "445318abb60fb67d",
+   "bytes": 2051337,
+   "license": "Public domain",
+   "licenseUrl": "",
+   "author": "U.S. Marine Corps photo by Chief Warrant Officer Philippe Chasse",
+   "source": "https://commons.wikimedia.org/wiki/File:An_Afghani_farmer_stands_in_the_middle_of_his_poppy_field_in_Delaram,_Afghanistan.jpg",
+   "attributionRequired": false,
+   "description": "An Afghani farmer stands in the middle of his poppy field in Delaram, Afghanistan, watching U.S. Marines from 3rd Battalion, 8th Marine Regiment Combat Train conduct a resupply convoy down Highway 515, from Delaram to Bakwa, Afghanistan, March 25, 2009. The Iraqi government is working to eradicate p",
+   "tags": [
+    "poppy"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "earth-night": {
+   "id": "earth-night",
+   "kind": "image",
+   "path": "library/media/earth-night.jpg",
+   "width": 4256,
+   "height": 2913,
+   "sha256": "73c67c7474b14e98",
+   "bytes": 1473209,
+   "license": "Public domain",
+   "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+   "author": "NASA / JSC",
+   "source": "https://images.nasa.gov/details/iss025e015176",
+   "attributionRequired": true,
+   "description": "Night view of Earth taken by the Expedition 25 crew",
+   "tags": [
+    "earth",
+    "night"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "earth-clip": {
+   "id": "earth-clip",
+   "kind": "video",
+   "path": "library/media/earth-clip.mp4",
+   "width": 1280,
+   "height": 720,
+   "durationSeconds": 83.264,
+   "sha256": "7e7836a0c748902c",
+   "bytes": 23322263,
+   "license": "Public domain",
+   "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+   "author": "NASA / GSFC",
+   "source": "https://images.nasa.gov/details/GSFC_20170412_Lights_m12573_EarthAtNight",
+   "attributionRequired": true,
+   "description": "Lights of Human Activity Shine in NASA's Image of Earth at Night",
+   "tags": [
+    "earth",
+    "video"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "earth-map": {
+   "id": "earth-map",
+   "kind": "image",
+   "path": "library/media/earth-map.jpg",
+   "width": 3840,
+   "height": 1920,
+   "sha256": "16002ce631925ee6",
+   "bytes": 1114599,
+   "license": "Public domain",
+   "licenseUrl": "",
+   "author": "NASA/Goddard Space Flight Center",
+   "source": "https://commons.wikimedia.org/wiki/File:Whole_world_-_land_and_oceans_12000.jpg",
+   "attributionRequired": false,
+   "description": "Satellite composition of the whole Earth's surface.",
+   "tags": [
+    "earth",
+    "texture"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "poppy-field-c": {
+   "id": "poppy-field-c",
+   "kind": "image",
+   "path": "library/media/poppy-field-c.jpg",
+   "width": 3840,
+   "height": 2544,
+   "sha256": "fb142aa20f0f638e",
+   "bytes": 1848101,
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "author": "Mark Stroud from Camp Hanson",
+   "source": "https://commons.wikimedia.org/wiki/File:Poppy_Cultivation_in_Afghanistan.jpg",
+   "attributionRequired": true,
+   "description": "Afghans cultivate poppy fields south of Shir Ghazi.",
+   "tags": [],
+   "retrieved": "2026-11-01"
+  },
+  "whoosh": {
+   "id": "whoosh",
+   "kind": "sfx",
+   "path": "library/audio/whoosh.wav",
+   "durationSeconds": 0.55,
+   "sha256": "3f524e0c38a37d95",
+   "bytes": 52844,
+   "license": "Own work: synthesised by studio/synth-audio.mjs",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "studio/synth-audio.mjs",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "audio",
+    "generated"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "swish": {
+   "id": "swish",
+   "kind": "sfx",
+   "path": "library/audio/swish.wav",
+   "durationSeconds": 0.32,
+   "sha256": "c7849e6eae8efed1",
+   "bytes": 30764,
+   "license": "Own work: synthesised by studio/synth-audio.mjs",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "studio/synth-audio.mjs",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "audio",
+    "generated"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "thud": {
+   "id": "thud",
+   "kind": "sfx",
+   "path": "library/audio/thud.wav",
+   "durationSeconds": 0.45,
+   "sha256": "27323eee18e4de91",
+   "bytes": 43244,
+   "license": "Own work: synthesised by studio/synth-audio.mjs",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "studio/synth-audio.mjs",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "audio",
+    "generated"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "tick": {
+   "id": "tick",
+   "kind": "sfx",
+   "path": "library/audio/tick.wav",
+   "durationSeconds": 0.09,
+   "sha256": "1e9ae03192972715",
+   "bytes": 8684,
+   "license": "Own work: synthesised by studio/synth-audio.mjs",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "studio/synth-audio.mjs",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "audio",
+    "generated"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "stamp": {
+   "id": "stamp",
+   "kind": "sfx",
+   "path": "library/audio/stamp.wav",
+   "durationSeconds": 0.4,
+   "sha256": "7cf6f580407f9de0",
+   "bytes": 38444,
+   "license": "Own work: synthesised by studio/synth-audio.mjs",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "studio/synth-audio.mjs",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "audio",
+    "generated"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "pop": {
+   "id": "pop",
+   "kind": "sfx",
+   "path": "library/audio/pop.wav",
+   "durationSeconds": 0.16,
+   "sha256": "a5e936e402a6d803",
+   "bytes": 15404,
+   "license": "Own work: synthesised by studio/synth-audio.mjs",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "studio/synth-audio.mjs",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "audio",
+    "generated"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "bed-tense": {
+   "id": "bed-tense",
+   "kind": "music",
+   "path": "library/audio/bed-tense.wav",
+   "durationSeconds": 32,
+   "sha256": "913174af067e0067",
+   "bytes": 3072044,
+   "license": "Own work: synthesised by studio/synth-audio.mjs",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "studio/synth-audio.mjs",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "audio",
+    "generated"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "bed-warm": {
+   "id": "bed-warm",
+   "kind": "music",
+   "path": "library/audio/bed-warm.wav",
+   "durationSeconds": 32,
+   "sha256": "8dcb60b049639ef0",
+   "bytes": 3072044,
+   "license": "Own work: synthesised by studio/synth-audio.mjs",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "studio/synth-audio.mjs",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "audio",
+    "generated"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "bed-pulse": {
+   "id": "bed-pulse",
+   "kind": "music",
+   "path": "library/audio/bed-pulse.wav",
+   "durationSeconds": 32,
+   "sha256": "cd105dbc88fa8ef7",
+   "bytes": 3072044,
+   "license": "Own work: synthesised by studio/synth-audio.mjs",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "studio/synth-audio.mjs",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "audio",
+    "generated"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "lens-cutout": {
+   "id": "lens-cutout",
+   "kind": "image",
+   "path": "library/media/lens-cutout.svg",
+   "width": 800,
+   "height": 800,
+   "sha256": "76ec5bfe59b302d9",
+   "bytes": 632,
+   "license": "Own work: drawn for this repository",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "repository",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "svg",
+    "cutout"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "scroll-cat": {
+   "id": "scroll-cat",
+   "kind": "image",
+   "path": "library/media/scroll-cat.jpg",
+   "width": 2877,
+   "height": 3456,
+   "sha256": "f91f1e37a2334425",
+   "bytes": 2114775,
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "AdinaVoicu",
+   "source": "https://commons.wikimedia.org/wiki/File:Tabby_cat_with_blue_eyes-3336579.jpg",
+   "attributionRequired": false,
+   "description": "Portrait of a black tabby and white cat with Dominant Blue Eyes (DBE)",
+   "tags": [
+    "scroll-feed"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "scroll-ramen": {
+   "id": "scroll-ramen",
+   "kind": "image",
+   "path": "library/media/scroll-ramen.jpg",
+   "width": 3840,
+   "height": 2550,
+   "sha256": "8881c590edd81fe9",
+   "bytes": 1219915,
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "Ocdp",
+   "source": "https://commons.wikimedia.org/wiki/File:Ramen_Jump_002.jpg",
+   "attributionRequired": false,
+   "description": "A style of soupless Japanese ramen, Maze-soba.",
+   "tags": [
+    "scroll-feed"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "scroll-ramen-dark": {
+   "id": "scroll-ramen-dark",
+   "kind": "image",
+   "path": "library/media/scroll-ramen-dark.jpg",
+   "width": 3840,
+   "height": 2880,
+   "sha256": "589f6a028fad317e",
+   "bytes": 1506351,
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Soy_Milk_Ramen_and_Tonkotsu_Miso_Ramen_by_Goemon_Ramen_Bar.jpg",
+   "attributionRequired": false,
+   "description": "Soy Milk Ramen (Small) and Tonkotsu Miso Ramen (Medium) by Goemon Ramen Bar",
+   "tags": [
+    "scroll-feed"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "scroll-concert": {
+   "id": "scroll-concert",
+   "kind": "image",
+   "path": "library/media/scroll-concert.jpg",
+   "width": 3456,
+   "height": 2304,
+   "sha256": "508db6ceb6a4f9e0",
+   "bytes": 2963919,
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "Hannah Rodrigo hannahrodrigo",
+   "source": "https://commons.wikimedia.org/wiki/File:Concert_crowd_(Unsplash).jpg",
+   "attributionRequired": false,
+   "description": "Hannah Rodrigo 2015",
+   "tags": [
+    "scroll-feed"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "scroll-surf": {
+   "id": "scroll-surf",
+   "kind": "image",
+   "path": "library/media/scroll-surf.jpg",
+   "width": 3840,
+   "height": 2560,
+   "sha256": "30311a101ddf28fe",
+   "bytes": 1914688,
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "Austin Neill arstyy",
+   "source": "https://commons.wikimedia.org/wiki/File:Surfer_surfing_the_wave_(Unsplash).jpg",
+   "attributionRequired": false,
+   "description": "54th Street, Newport Beach, United States",
+   "tags": [
+    "scroll-feed"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "scroll-corgi": {
+   "id": "scroll-corgi",
+   "kind": "image",
+   "path": "library/media/scroll-corgi.jpg",
+   "width": 3126,
+   "height": 4682,
+   "sha256": "771679dc103ec749",
+   "bytes": 3371356,
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "Huoadg5888Minor edits made by Subsidiary account",
+   "source": "https://commons.wikimedia.org/wiki/File:Fawn_and_white_Welsh_Corgi_puppy_standing_on_rear_legs_and_sticking_out_the_tongue.jpg",
+   "attributionRequired": false,
+   "description": "Fawn and white Welsh Corgi puppy, standing on rear legs and sticking out the tongue.",
+   "tags": [
+    "scroll-feed"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "scroll-puppy": {
+   "id": "scroll-puppy",
+   "kind": "image",
+   "path": "library/media/scroll-puppy.jpg",
+   "width": 3840,
+   "height": 2560,
+   "sha256": "225b6a5f60d67468",
+   "bytes": 2049237,
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "no name provided",
+   "source": "https://commons.wikimedia.org/wiki/File:Puppy_filtered.jpg",
+   "attributionRequired": false,
+   "description": "white puppy",
+   "tags": [
+    "scroll-feed"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "scroll-food": {
+   "id": "scroll-food",
+   "kind": "image",
+   "path": "library/media/scroll-food.jpg",
+   "width": 3840,
+   "height": 1730,
+   "sha256": "ce5924326c3aad86",
+   "bytes": 1050255,
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "Obsidian Soul",
+   "source": "https://commons.wikimedia.org/wiki/File:Various_deep_fried_street_food_dishes_(Philippines)_01.jpg",
+   "attributionRequired": false,
+   "description": "Various deep fried street food dishes (Philippines)",
+   "tags": [
+    "scroll-feed"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "scroll-fireworks2": {
+   "id": "scroll-fireworks2",
+   "kind": "image",
+   "path": "library/media/scroll-fireworks2.jpg",
+   "width": 2610,
+   "height": 3340,
+   "sha256": "03d8a159cca651ea",
+   "bytes": 2476284,
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "Roc0ast3r",
+   "source": "https://commons.wikimedia.org/wiki/File:Fireworks_in_Sevierville,_Tennessee_on_4th_of_July_-_1.jpg",
+   "attributionRequired": false,
+   "description": "Fireworks in celebration of Independence Day in Sevierville, Tennessee, on July 4.",
+   "tags": [
+    "scroll-feed"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "scroll-sunrise": {
+   "id": "scroll-sunrise",
+   "kind": "image",
+   "path": "library/media/scroll-sunrise.jpg",
+   "width": 3840,
+   "height": 2560,
+   "sha256": "69bb79c5f3ccc73f",
+   "bytes": 1593946,
+   "license": "Public domain",
+   "licenseUrl": "",
+   "author": "Yellowstone National Park",
+   "source": "https://commons.wikimedia.org/wiki/File:Sunrise_on_Yellowstone_Lake_(Flat_Mountain_Arm)_(32985162453).jpg",
+   "attributionRequired": false,
+   "description": "NPS / Neal Herbert",
+   "tags": [
+    "scroll-feed"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "scroll-traffic": {
+   "id": "scroll-traffic",
+   "kind": "image",
+   "path": "library/media/scroll-traffic.jpg",
+   "width": 2272,
+   "height": 1704,
+   "sha256": "fb51357be49d536d",
+   "bytes": 1117055,
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "Syced",
+   "source": "https://commons.wikimedia.org/wiki/File:2005_car_traffic_in_Taipei_2.jpg",
+   "attributionRequired": false,
+   "description": "2005 car traffic in Taipei",
+   "tags": [
+    "scroll-feed"
+   ],
+   "retrieved": "2026-11-01"
+  },
+  "scroll-clip-book": {
+   "id": "scroll-clip-book",
+   "kind": "video",
+   "path": "library/media/scroll-clip-book.mp4",
+   "width": 1080,
+   "height": 1920,
+   "durationSeconds": 3.114667,
+   "sha256": "42c71848ed9942f8",
+   "bytes": 1484513,
+   "license": "Own work: rendered from src/editorial/clips/StopClips.tsx",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "src/editorial/clips/StopClips.tsx",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "scroll-feed"
+   ],
+   "retrieved": "2026-11-02"
+  },
+  "scroll-clip-series": {
+   "id": "scroll-clip-series",
+   "kind": "video",
+   "path": "library/media/scroll-clip-series.mp4",
+   "width": 1080,
+   "height": 1920,
+   "durationSeconds": 2.453333,
+   "sha256": "49f2d9cfd5820bbb",
+   "bytes": 812676,
+   "license": "Own work: rendered from src/editorial/clips/StopClips.tsx",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "src/editorial/clips/StopClips.tsx",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "scroll-feed"
+   ],
+   "retrieved": "2026-11-02"
+  },
+  "scroll-clip-feed": {
+   "id": "scroll-clip-feed",
+   "kind": "video",
+   "path": "library/media/scroll-clip-feed.mp4",
+   "width": 1080,
+   "height": 1920,
+   "durationSeconds": 3.52,
+   "sha256": "f98a24afd1b2e889",
+   "bytes": 5258083,
+   "license": "Own work: rendered from src/editorial/clips/StopClips.tsx",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "src/editorial/clips/StopClips.tsx",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "scroll-feed"
+   ],
+   "retrieved": "2026-11-02"
+  },
+  "notify-muted": {
+   "id": "notify-muted",
+   "kind": "sfx",
+   "path": "library/audio/notify-muted.wav",
+   "durationSeconds": 0.62,
+   "sha256": "6c36f116c007f536",
+   "bytes": 59564,
+   "license": "Own work: synthesised by studio/synth-audio.mjs",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "studio/synth-audio.mjs",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "audio",
+    "generated"
+   ],
+   "retrieved": "2026-11-02"
+  },
+  "impact-sub": {
+   "id": "impact-sub",
+   "kind": "sfx",
+   "path": "library/audio/impact-sub.wav",
+   "durationSeconds": 1.1,
+   "sha256": "94724fc5d61e83f2",
+   "bytes": 105644,
+   "license": "Own work: synthesised by studio/synth-audio.mjs",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "studio/synth-audio.mjs",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "audio",
+    "generated"
+   ],
+   "retrieved": "2026-11-02"
+  },
+  "glass-crack": {
+   "id": "glass-crack",
+   "kind": "sfx",
+   "path": "library/audio/glass-crack.wav",
+   "durationSeconds": 0.5,
+   "sha256": "adbf8cb9b26369d1",
+   "bytes": 48044,
+   "license": "Own work: synthesised by studio/synth-audio.mjs",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "studio/synth-audio.mjs",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "audio",
+    "generated"
+   ],
+   "retrieved": "2026-11-02"
+  },
+  "screen-off": {
+   "id": "screen-off",
+   "kind": "sfx",
+   "path": "library/audio/screen-off.wav",
+   "durationSeconds": 0.2,
+   "sha256": "101cfa9aa10fde4d",
+   "bytes": 19244,
+   "license": "Own work: synthesised by studio/synth-audio.mjs",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "studio/synth-audio.mjs",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "audio",
+    "generated"
+   ],
+   "retrieved": "2026-11-02"
+  },
+  "bed-loss-trap": {
+   "id": "bed-loss-trap",
+   "kind": "music",
+   "path": "library/audio/bed-loss-trap.wav",
+   "durationSeconds": 42,
+   "sha256": "580464052dd4f120",
+   "bytes": 4032044,
+   "license": "Own work: synthesised by studio/synth-audio.mjs",
+   "licenseUrl": "",
+   "author": "Content Maker",
+   "source": "studio/synth-audio.mjs",
+   "attributionRequired": false,
+   "description": "",
+   "tags": [
+    "audio",
+    "generated"
+   ],
+   "retrieved": "2026-11-02"
+  },
+  "beat-summit": {
+   "id": "beat-summit",
+   "kind": "image",
+   "path": "library/media/beat-summit.jpg",
+   "width": 3840,
+   "height": 2867,
+   "sha256": "c50cab913235dd45",
+   "bytes": 861773,
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "Chetan Menaria chetanmenaria",
+   "source": "https://commons.wikimedia.org/wiki/File:Sunset_silhoutte_(Unsplash).jpg",
+   "attributionRequired": false,
+   "description": "Chetan Menaria 2014-11-08",
+   "tags": [
+    "silhouette",
+    "summit",
+    "sunrise"
+   ],
+   "retrieved": "2026-11-05"
+  },
+  "beat-peak": {
+   "id": "beat-peak",
+   "kind": "image",
+   "path": "library/media/beat-peak.jpg",
+   "width": 3840,
+   "height": 2128,
+   "sha256": "da76eae7255248f8",
+   "bytes": 740597,
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "Nathan Anderson nathananderson",
+   "source": "https://commons.wikimedia.org/wiki/File:Silverthorne_peak_at_dusk_(Unsplash).jpg",
+   "attributionRequired": false,
+   "description": "Silverthorne, United States",
+   "tags": [
+    "peak",
+    "dusk",
+    "mountain"
+   ],
+   "retrieved": "2026-11-05"
+  },
+  "dep-street": {
+   "id": "dep-street",
+   "kind": "image",
+   "path": "library/media/dep-street.jpg",
+   "width": 3230,
+   "height": 4845,
+   "sha256": "e3b48b8cf1953a6d",
+   "bytes": 5745921,
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "Brandon Mattingly brandonmattingly",
+   "source": "https://commons.wikimedia.org/wiki/File:Wet_Chicago_day_(Unsplash).jpg",
+   "attributionRequired": false,
+   "description": "Chicago, United States",
+   "tags": [
+    "street",
+    "city",
+    "calm"
+   ],
+   "retrieved": "2026-11-05"
+  }
+ }
+}

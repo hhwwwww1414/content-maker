@@ -1,0 +1,660 @@
+{
+  "id": "vin2win-cena-vs-vygoda",
+  "topic": "vin2win: цена против выгоды",
+  "niche": "vin2win",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "publication": "draft",
+    "production": "draft",
+    "approvedScriptHash": "b6208f8c5f597499",
+    "approval": {
+      "by": "qwezyid",
+      "at": "2026-11-20"
+    }
+  },
+  "sources": [
+    {
+      "id": "app-code",
+      "publisher": "vin2win, исходный код приложения",
+      "url": "file:///Users/qwezyid/projects/vin2winmobileapp/src/components/marketplace/MarketDetail.jsx",
+      "accessed": "2026-11-21",
+      "claim": "«Выгода — разница между ценой на внешних площадках и ценой в руки, по данным продавца»; поля «На ресурсах», «В руки», «Выгода» в карточке"
+    },
+    {
+      "id": "catalog-shot",
+      "publisher": "vin2win, снимок карточки BMW 3 серии 320i",
+      "url": "file:///Users/qwezyid/projects/vin2win/output/mobile-promo/public/textures/detail.png",
+      "accessed": "2026-11-21",
+      "claim": "На ресурсах 3 550 000 ₽, в руки 3 290 000 ₽, выгода +260 000 ₽"
+    }
+  ],
+  "title": "vin2win: цена против выгоды",
+  "hook": "Ты всё ещё сравниваешь цену в трёх вкладках?",
+  "centralIdea": "Площадки показывают цену, vin2win — разницу между ценой на площадках и ценой в руки",
+  "theme": "signal",
+  "captionStyle": "plate",
+  "art": {
+    "direction": "product"
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 27.633333333333333,
+  "scenes": [
+    {
+      "id": "s1",
+      "voice": "Ты всё ещё сравниваешь цену в трёх вкладках?",
+      "onScreen": "Сравниваешь цену в трёх вкладках?",
+      "sources": [
+        "app-code"
+      ],
+      "start": 0,
+      "duration": 2.9
+    },
+    {
+      "id": "s2",
+      "voice": "Авито, Авто.ру, Дром, и везде просто цифра. А выгодно это или нет, решай сам.",
+      "onScreen": "Там ты видишь просто цифру",
+      "sources": [
+        "app-code"
+      ],
+      "start": 2.9,
+      "duration": 5.566666666666666
+    },
+    {
+      "id": "s3",
+      "voice": "В вин ту вин продавец пишет две цены: сколько машина стоит на площадках и сколько он отдаст в руки.",
+      "onScreen": "vin2win считает разницу за тебя",
+      "sources": [
+        "app-code"
+      ],
+      "start": 8.466666666666667,
+      "duration": 5.800000000000001
+    },
+    {
+      "id": "s4",
+      "voice": "Разница стоит прямо в карточке. Вот эта БМВ: на площадках три миллиона пятьсот пятьдесят тысяч, а в руки на двести шестьдесят тысяч дешевле.",
+      "onScreen": "+260 000 ₽",
+      "sources": [
+        "app-code"
+      ],
+      "start": 14.266666666666667,
+      "duration": 9.166666666666666
+    },
+    {
+      "id": "s5",
+      "voice": "Видишь выгоду ещё до звонка, а не торгуешься вслепую. Вин ту вин.",
+      "onScreen": "Видишь выгоду — забирай",
+      "sources": [
+        "app-code"
+      ],
+      "start": 23.433333333333334,
+      "duration": 4.199999999999999
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/vin2win-cena-vs-vygoda/voice-aea846c8eb4a4273-mix.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "voiceId": "iP95p4xoKVk53GoZ742B",
+    "modelId": "eleven_v3",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.8,
+      "style": 0,
+      "speed": 1
+    },
+    "sourcePath": "generated/vin2win-cena-vs-vygoda/voice-aea846c8eb4a4273.mp3",
+    "timingMode": "ElevenLabs character alignment",
+    "sourceDurationSeconds": 27.167347,
+    "durationSeconds": 27.114688,
+    "localTempo": 1,
+    "cacheHash": "aea846c8eb4a4273",
+    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades"
+  },
+  "captions": [
+    {
+      "text": "Ты",
+      "startMs": 100,
+      "endMs": 200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "всё",
+      "startMs": 230,
+      "endMs": 320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ещё",
+      "startMs": 380,
+      "endMs": 560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сравниваешь",
+      "startMs": 624,
+      "endMs": 1120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "цену",
+      "startMs": 1200,
+      "endMs": 1520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 1570,
+      "endMs": 1600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "трёх",
+      "startMs": 1740,
+      "endMs": 1920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вкладках?",
+      "startMs": 1973,
+      "endMs": 2560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Авито,",
+      "startMs": 2910,
+      "endMs": 3520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Авто.ру,",
+      "startMs": 3620,
+      "endMs": 4160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Дром,",
+      "startMs": 4240,
+      "endMs": 4640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 4910,
+      "endMs": 4920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "везде",
+      "startMs": 4920,
+      "endMs": 5200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "просто",
+      "startMs": 5257,
+      "endMs": 5600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "цифра.",
+      "startMs": 5720,
+      "endMs": 6080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "А",
+      "startMs": 6390,
+      "endMs": 6400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "выгодно",
+      "startMs": 6453,
+      "endMs": 6800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "это",
+      "startMs": 6840,
+      "endMs": 6960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "или",
+      "startMs": 7000,
+      "endMs": 7120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "нет,",
+      "startMs": 7180,
+      "endMs": 7480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "решай",
+      "startMs": 7510,
+      "endMs": 7760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сам.",
+      "startMs": 7820,
+      "endMs": 8080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "В",
+      "startMs": 8460,
+      "endMs": 8480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин",
+      "startMs": 8540,
+      "endMs": 8720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ту",
+      "startMs": 8747,
+      "endMs": 8800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин",
+      "startMs": 8860,
+      "endMs": 9040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "продавец",
+      "startMs": 9072,
+      "endMs": 9520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "пишет",
+      "startMs": 9547,
+      "endMs": 9840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "две",
+      "startMs": 9900,
+      "endMs": 10080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "цены:",
+      "startMs": 10120,
+      "endMs": 10560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сколько",
+      "startMs": 10650,
+      "endMs": 10960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "машина",
+      "startMs": 11008,
+      "endMs": 11280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "стоит",
+      "startMs": 11333,
+      "endMs": 11600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "на",
+      "startMs": 11627,
+      "endMs": 11680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "площадках",
+      "startMs": 11749,
+      "endMs": 12320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 12470,
+      "endMs": 12480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сколько",
+      "startMs": 12520,
+      "endMs": 12800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "он",
+      "startMs": 12880,
+      "endMs": 13040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "отдаст",
+      "startMs": 13093,
+      "endMs": 13520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 13560,
+      "endMs": 13600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "руки.",
+      "startMs": 13664,
+      "endMs": 14160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Разница",
+      "startMs": 14260,
+      "endMs": 14640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "стоит",
+      "startMs": 14693,
+      "endMs": 14960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "прямо",
+      "startMs": 15100,
+      "endMs": 15280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 15320,
+      "endMs": 15360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "карточке.",
+      "startMs": 15450,
+      "endMs": 15920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Вот",
+      "startMs": 16310,
+      "endMs": 16400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "эта",
+      "startMs": 16440,
+      "endMs": 16560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "БМВ:",
+      "startMs": 16680,
+      "endMs": 17320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "на",
+      "startMs": 17540,
+      "endMs": 17577,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "площадках",
+      "startMs": 17577,
+      "endMs": 18080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "три",
+      "startMs": 18120,
+      "endMs": 18240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "миллиона",
+      "startMs": 18293,
+      "endMs": 18800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "пятьсот",
+      "startMs": 18864,
+      "endMs": 19200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "пятьдесят",
+      "startMs": 19248,
+      "endMs": 19680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тысяч,",
+      "startMs": 19760,
+      "endMs": 20400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "а",
+      "startMs": 20530,
+      "endMs": 20560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 20600,
+      "endMs": 20640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "руки",
+      "startMs": 20704,
+      "endMs": 20960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "на",
+      "startMs": 21013,
+      "endMs": 21120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "двести",
+      "startMs": 21173,
+      "endMs": 21520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "шестьдесят",
+      "startMs": 21600,
+      "endMs": 22000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тысяч",
+      "startMs": 22080,
+      "endMs": 22480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "дешевле.",
+      "startMs": 22520,
+      "endMs": 23360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Видишь",
+      "startMs": 23420,
+      "endMs": 23680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "выгоду",
+      "startMs": 23707,
+      "endMs": 24000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ещё",
+      "startMs": 24040,
+      "endMs": 24160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "до",
+      "startMs": 24213,
+      "endMs": 24320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "звонка,",
+      "startMs": 24347,
+      "endMs": 24800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "а",
+      "startMs": 24860,
+      "endMs": 24880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 24933,
+      "endMs": 25040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "торгуешься",
+      "startMs": 25080,
+      "endMs": 25600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вслепую.",
+      "startMs": 25653,
+      "endMs": 26320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Вин",
+      "startMs": 26510,
+      "endMs": 26640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ту",
+      "startMs": 26693,
+      "endMs": 26800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин.",
+      "startMs": 26860,
+      "endMs": 27120,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "editorialReview": {
+    "note": "Озвучка для ролика в vin2win/output/viral-compare. Сам ролик собирается там, этот проект — только одобрение текста и покупка дубля.",
+    "openClaims": [
+      "Цена «на ресурсах» указана продавцом; платформа её не сверяет с площадками (в интерфейсе: «по данным продавца»).",
+      "Цифры BMW взяты со снимка карточки; нужно подтвердить, что объявление реальное и актуальное, иначе пометить как пример.",
+      "Названия Авито, Авто.ру, Дром звучат в голосе; в кадре нет их логотипов и интерфейса."
+    ]
+  }
+}

@@ -1,0 +1,914 @@
+{
+  "id": "sample-safe-account",
+  "topic": "«Безопасный счёт»: схема, которой не существует",
+  "niche": "engine-sample",
+  "language": "ru",
+  "status": {
+    "factCheck": "partial",
+    "scriptApproval": "demo",
+    "publication": "draft",
+    "production": "rendered"
+  },
+  "sources": [
+    {
+      "id": "primary",
+      "publisher": "Банк России",
+      "claim": "Банк России — противодействие мошенничеству",
+      "url": "",
+      "accessed": "2026-11-01"
+    },
+    {
+      "id": "secondary",
+      "publisher": "Банк России",
+      "claim": "Банк России — объём операций без согласия клиента, 2025",
+      "url": "",
+      "accessed": "2026-11-01"
+    }
+  ],
+  "title": "«Безопасный счёт»: схема, которой не существует",
+  "hook": "Голос в трубке спокойный. Просит снять все деньги. И внести их в другой банкомат.",
+  "centralIdea": "Безопасного счёта не существует: положи трубку и перезвони сам.",
+  "art": {
+    "direction": "culture",
+    "music": {
+      "asset": "bed-tense",
+      "volume": 0.12,
+      "duck": 0.55
+    }
+  },
+  "theme": "signal",
+  "captionStyle": "plate",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 33,
+  "scenes": [
+    {
+      "id": "hook",
+      "voice": "Голос в трубке спокойный. Просит снять все деньги. И внести их в другой банкомат.",
+      "onScreen": "входящий вызов",
+      "thought": "Спокойный звонок на чёрном фоне: всё выглядит официально, и в этом ловушка",
+      "animation": "Спокойный звонок на чёрном фоне: всё выглядит официально, и в этом ловушка",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "opening",
+        "emotion": "тихая тревога",
+        "concept": "Спокойный звонок на чёрном фоне: всё выглядит официально, и в этом ловушка",
+        "hierarchy": {
+          "primary": "входящий вызов"
+        },
+        "art": {
+          "variant": "inverse"
+        },
+        "shot": {
+          "type": "device",
+          "layout": "hero",
+          "screen": {
+            "app": "call",
+            "name": "Служба безопасности",
+            "detail": "Банк",
+            "answerCue": "спокойный",
+            "lines": [
+              {
+                "text": "Снимите все деньги",
+                "cue": "снять"
+              },
+              {
+                "text": "Внесите в другой банкомат",
+                "cue": "внести"
+              }
+            ]
+          },
+          "poses": [
+            {
+              "cue": "снять",
+              "scale": 0.86,
+              "ry": -6,
+              "rx": 4,
+              "rz": 1,
+              "y": 80
+            },
+            {
+              "cue": "внести",
+              "scale": 0.98,
+              "ry": 0,
+              "rx": 0,
+              "rz": 0,
+              "y": -40
+            }
+          ]
+        },
+        "camera": {
+          "move": "still"
+        },
+        "captions": {
+          "zone": "low"
+        },
+        "source": "hide"
+      },
+      "start": 0,
+      "duration": 5.866666666666666
+    },
+    {
+      "id": "why",
+      "voice": "Пугают уголовным делом. Потом торопят. Думать некогда.",
+      "onScreen": "уголовное дело",
+      "thought": "На стол падают бумаги: дело, печать, требование. Страх устроен как стопка документов",
+      "animation": "На стол падают бумаги: дело, печать, требование. Страх устроен как стопка документов",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "turn",
+        "emotion": "страх и спешка",
+        "concept": "На стол падают бумаги: дело, печать, требование. Страх устроен как стопка документов",
+        "hierarchy": {
+          "primary": "уголовное дело"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "collage",
+          "impactCue": "торопят",
+          "pieces": [
+            {
+              "kind": "document",
+              "box": [
+                118,
+                280,
+                790,
+                840
+              ],
+              "rotate": -2,
+              "cue": "Пугают",
+              "text": "Уголовное дело",
+              "lines": [
+                "Вы подозреваемый",
+                "Не сообщайте никому",
+                "Ждите звонка следователя"
+              ],
+              "markLine": 1,
+              "markCue": "уголовным",
+              "depth": -0.1
+            },
+            {
+              "kind": "stamp",
+              "box": [
+                280,
+                850,
+                590,
+                190
+              ],
+              "rotate": -9,
+              "cue": "торопят",
+              "text": "Срочно",
+              "depth": 0.1
+            },
+            {
+              "kind": "note",
+              "box": [
+                110,
+                1120,
+                540,
+                230
+              ],
+              "rotate": -3,
+              "cue": "Думать",
+              "text": "Думать некогда",
+              "depth": 0.25
+            }
+          ]
+        },
+        "camera": {
+          "move": "pushIn"
+        },
+        "transition": {
+          "type": "push",
+          "direction": "up",
+          "seconds": 0.45,
+          "intent": "Звонок сменяется давлением: кадр толкает следующий, не давая паузы"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "whoosh",
+            "volume": 0.28
+          },
+          {
+            "cue": "торопят",
+            "sfx": "stamp",
+            "volume": 0.45
+          }
+        ]
+      },
+      "start": 5.866666666666666,
+      "duration": 4.033333333333334
+    },
+    {
+      "id": "twist",
+      "voice": "Безопасного счёта не существует. Ни в банке, ни в полиции. Деньги уходят прямо мошеннику.",
+      "onScreen": "не существует",
+      "thought": "Плакатная фраза на всю высоту: одно слово отменяет всю легенду",
+      "animation": "Плакатная фраза на всю высоту: одно слово отменяет всю легенду",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "reveal",
+        "emotion": "ледяная ясность",
+        "concept": "Плакатная фраза на всю высоту: одно слово отменяет всю легенду",
+        "hierarchy": {
+          "primary": "не существует"
+        },
+        "art": {
+          "variant": "block"
+        },
+        "shot": {
+          "type": "type",
+          "layout": "poster",
+          "anchor": "center",
+          "headline": {
+            "text": "Безопасного / счёта *не* / *существует*",
+            "cue": "Безопасного",
+            "reveal": "lines",
+            "emphasis": "color"
+          },
+          "ghost": "0"
+        },
+        "camera": {
+          "move": "pushIn",
+          "keys": [
+            {
+              "cue": "мошеннику",
+              "scale": 1.12,
+              "seconds": 0.8
+            }
+          ]
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Жёсткая склейка на первом слове: разоблачение не нуждается в украшении"
+        }
+      },
+      "start": 9.9,
+      "duration": 7.299999999999999
+    },
+    {
+      "id": "scale",
+      "voice": "За 2025 год — 29 миллиардов. На 6 процентов больше. Схема стала самой частой.",
+      "onScreen": "29 миллиардов",
+      "thought": "Число занимает всю ширину кадра, как табло",
+      "animation": "Число занимает всю ширину кадра, как табло",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "data",
+        "emotion": "масштаб",
+        "concept": "Число занимает всю ширину кадра, как табло",
+        "hierarchy": {
+          "primary": "29 миллиардов"
+        },
+        "art": {
+          "variant": "inverse",
+          "field": "gradient"
+        },
+        "shot": {
+          "type": "data",
+          "mode": "counter",
+          "value": 29,
+          "cue": "2025",
+          "landCue": "миллиардов",
+          "unit": "миллиардов",
+          "label": "На 6 процентов больше. Самая частая схема.",
+          "anchor": "center"
+        },
+        "transition": {
+          "type": "through",
+          "origin": [
+            0.5,
+            0.5
+          ],
+          "seconds": 0.6,
+          "intent": "Камера проходит сквозь плакат в цифру"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "whoosh",
+            "volume": 0.28
+          },
+          {
+            "cue": "миллиардов",
+            "sfx": "thud",
+            "volume": 0.4
+          }
+        ]
+      },
+      "start": 17.2,
+      "duration": 8
+    },
+    {
+      "id": "do",
+      "voice": "Правило одно. Положить трубку. И перезвонить самому.",
+      "onScreen": "положить трубку",
+      "thought": "Один жест: красная кнопка на весь экран",
+      "animation": "Один жест: красная кнопка на весь экран",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "payoff",
+        "emotion": "облегчение",
+        "concept": "Один жест: красная кнопка на весь экран",
+        "hierarchy": {
+          "primary": "положить трубку"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "device",
+          "layout": "macro",
+          "screen": {
+            "app": "call",
+            "name": "Служба безопасности",
+            "detail": "Банк",
+            "answerCue": 0,
+            "hangupCue": "Положить",
+            "lines": [
+              {
+                "text": "Правило одно",
+                "cue": "Правило"
+              }
+            ]
+          },
+          "poses": [
+            {
+              "cue": "Положить",
+              "y": -10,
+              "scale": 1.04
+            },
+            {
+              "cue": "перезвонить",
+              "scale": 0.84,
+              "rz": -3,
+              "ry": -12,
+              "y": 0
+            }
+          ]
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "mask",
+          "shape": "circle",
+          "origin": [
+            0.5,
+            0.75
+          ],
+          "seconds": 0.6,
+          "intent": "Круг раскрывается из точки, где будет кнопка отбоя"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "swish",
+            "volume": 0.28
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 25.2,
+      "duration": 4.366666666666667
+    },
+    {
+      "id": "cta",
+      "voice": "Тебе так звонили? Звонили. Пока нет.",
+      "onScreen": "звонили или нет",
+      "thought": "Экран делится на две честные половины, граница движется на ответах",
+      "animation": "Экран делится на две честные половины, граница движется на ответах",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "question",
+        "emotion": "вовлечение",
+        "concept": "Экран делится на две честные половины, граница движется на ответах",
+        "hierarchy": {
+          "primary": "звонили или нет"
+        },
+        "art": {
+          "variant": "inverse"
+        },
+        "shot": {
+          "type": "split",
+          "axis": "diagonal",
+          "start": 1,
+          "a": {
+            "kicker": "Тебе так звонили?",
+            "word": "Звонили",
+            "variant": "inverse"
+          },
+          "b": {
+            "word": "Пока нет",
+            "variant": "block"
+          },
+          "keys": [
+            {
+              "cue": "Пока",
+              "at": 0.5
+            }
+          ]
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "field",
+          "origin": [
+            0.5,
+            0.8
+          ],
+          "seconds": 0.7,
+          "intent": "Цвет следующего кадра растёт из той же точки, что и кнопка"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "swish",
+            "volume": 0.28
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 29.566666666666666,
+      "duration": 3.4333333333333336
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/sample-safe-account/voice-imported-73e38a7fc7e5ff69.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "importedFromLegacy": "safe-account-scam",
+    "timingMode": "ElevenLabs alignment imported from the legacy take",
+    "importedFrom": "safe-account-scam",
+    "sourceSha256": "73e38a7fc7e5ff69",
+    "durationSeconds": 32.5,
+    "sourceDurationSeconds": 32.5,
+    "localTempo": 1
+  },
+  "captions": [
+    {
+      "text": "Голос",
+      "startMs": 90,
+      "endMs": 340,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 380,
+      "endMs": 420,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "трубке",
+      "startMs": 468,
+      "endMs": 820,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "спокойный.",
+      "startMs": 868,
+      "endMs": 1660,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Просит",
+      "startMs": 1940,
+      "endMs": 2180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "снять",
+      "startMs": 2220,
+      "endMs": 2500,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "все",
+      "startMs": 2560,
+      "endMs": 2740,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "деньги.",
+      "startMs": 2797,
+      "endMs": 3340,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "И",
+      "startMs": 3520,
+      "endMs": 3540,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "внести",
+      "startMs": 3580,
+      "endMs": 4020,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "их",
+      "startMs": 4073,
+      "endMs": 4180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 4220,
+      "endMs": 4260,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "другой",
+      "startMs": 4330,
+      "endMs": 4660,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "банкомат.",
+      "startMs": 4700,
+      "endMs": 5407,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Пугают",
+      "startMs": 5860,
+      "endMs": 6180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "уголовным",
+      "startMs": 6233,
+      "endMs": 6740,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "делом.",
+      "startMs": 6800,
+      "endMs": 7380,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Потом",
+      "startMs": 7520,
+      "endMs": 7700,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "торопят.",
+      "startMs": 7760,
+      "endMs": 8380,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Думать",
+      "startMs": 8450,
+      "endMs": 8740,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "некогда.",
+      "startMs": 8870,
+      "endMs": 9340,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Безопасного",
+      "startMs": 9890,
+      "endMs": 10500,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "счёта",
+      "startMs": 10553,
+      "endMs": 10900,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 10980,
+      "endMs": 11140,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "существует.",
+      "startMs": 11213,
+      "endMs": 12140,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Ни",
+      "startMs": 12240,
+      "endMs": 12380,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 12400,
+      "endMs": 12420,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "банке,",
+      "startMs": 12500,
+      "endMs": 13220,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ни",
+      "startMs": 13300,
+      "endMs": 13460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 13500,
+      "endMs": 13540,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "полиции.",
+      "startMs": 13680,
+      "endMs": 14460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Деньги",
+      "startMs": 14760,
+      "endMs": 15060,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "уходят",
+      "startMs": 15124,
+      "endMs": 15460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "прямо",
+      "startMs": 15540,
+      "endMs": 15860,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "мошеннику.",
+      "startMs": 15900,
+      "endMs": 16540,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "За",
+      "startMs": 17200,
+      "endMs": 17300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "2025",
+      "startMs": 17340,
+      "endMs": 18500,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "год",
+      "startMs": 18580,
+      "endMs": 18820,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 18820,
+      "endMs": 19300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "29",
+      "startMs": 19300,
+      "endMs": 20180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "миллиардов.",
+      "startMs": 20273,
+      "endMs": 21140,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "На",
+      "startMs": 21430,
+      "endMs": 21540,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "6",
+      "startMs": 21620,
+      "endMs": 21780,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "процентов",
+      "startMs": 21828,
+      "endMs": 22340,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "больше.",
+      "startMs": 22386,
+      "endMs": 22661,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Схема",
+      "startMs": 23110,
+      "endMs": 23460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "стала",
+      "startMs": 23513,
+      "endMs": 23780,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "самой",
+      "startMs": 23860,
+      "endMs": 24260,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "частой.",
+      "startMs": 24330,
+      "endMs": 24740,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Правило",
+      "startMs": 25190,
+      "endMs": 25540,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "одно.",
+      "startMs": 25604,
+      "endMs": 25861,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Положить",
+      "startMs": 26250,
+      "endMs": 26580,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "трубку.",
+      "startMs": 26680,
+      "endMs": 27180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "И",
+      "startMs": 27310,
+      "endMs": 27380,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "перезвонить",
+      "startMs": 27440,
+      "endMs": 28100,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "самому.",
+      "startMs": 28180,
+      "endMs": 28740,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Тебе",
+      "startMs": 29560,
+      "endMs": 29780,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "так",
+      "startMs": 29820,
+      "endMs": 29940,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "звонили?",
+      "startMs": 29993,
+      "endMs": 30420,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Звонили.",
+      "startMs": 31160,
+      "endMs": 31620,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Пока",
+      "startMs": 32040,
+      "endMs": 32180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "нет.",
+      "startMs": 32240,
+      "endMs": 32500,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "editorialReview": {
+    "note": "Engineering sample of the video engine. Facts come from the legacy reel and were not re-verified.",
+    "openClaims": [
+      "Facts inherited from the legacy reel; not re-verified for this sample."
+    ]
+  },
+  "renderPath": "out/studio/sample-safe-account.mp4",
+  "qa": {
+    "path": "out/studio/sample-safe-account-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  }
+}

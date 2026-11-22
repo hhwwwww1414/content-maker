@@ -1,0 +1,794 @@
+{
+  "id": "ego-vs-freedom",
+  "topic": "Эго и свобода: эгоизм не в том, что живёшь как хочешь, а в том, что заставляешь других",
+  "niche": "psychology",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "publication": "draft",
+    "production": "rendered",
+    "approvedScriptHash": "ac2b66ec00eb8816",
+    "approval": {
+      "by": "qwezyid (склейка после «Но» одобрена в чате, 2026-11-04)",
+      "at": "2026-11-04"
+    }
+  },
+  "sources": [
+    {
+      "id": "wilde1891",
+      "publisher": "Оскар Уайльд. The Soul of Man Under Socialism, 1891 (Project Gutenberg)",
+      "url": "https://www.gutenberg.org/files/1017/old/slman10h.htm",
+      "accessed": "2026-11-04",
+      "claim": "«Selfishness is not living as one wishes to live, it is asking others to live as one wishes to live.» Дальше: «And unselfishness is letting other people’s lives alone, not interfering with them.» У Уайльда asking (просить), а не заставлять; принципы в оригинале не упомянуты."
+    }
+  ],
+  "title": "Эго и свобода",
+  "hook": "У каждого второго эго не влезает в дверь. И он зовёт это свободой.",
+  "centralIdea": "Свобода не требует чужого согласия, а эго без него не живёт.",
+  "theme": "signal",
+  "captionStyle": "plate",
+  "art": {
+    "direction": "brash",
+    "music": {
+      "asset": "bed-tense",
+      "volume": 0.09,
+      "duck": 0.5
+    }
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 19.9,
+  "scenes": [
+    {
+      "id": "hook",
+      "voice": "У каждого второго эго не влезает в дверь. И он зовёт это свободой. Но",
+      "onScreen": "Эго не влезает в дверь",
+      "thought": "Самомнение, которое объявили свободой",
+      "animation": "Каждая вторая дверь с огромным Я; камера влетает в одну, косяк трещит, на Я лепят ярлык «свобода»",
+      "sources": [
+        "wilde1891"
+      ],
+      "direction": {
+        "purpose": "opening",
+        "emotion": "злорадное узнавание",
+        "concept": "Буквальный каждый второй: в половине дверей Я шире проёма, и на него ещё наклеен ярлык свободы",
+        "art": {
+          "variant": "base",
+          "field": "solid"
+        },
+        "hierarchy": {
+          "primary": "огромная Я в дверях",
+          "secondary": [
+            "ярлык «свобода»"
+          ]
+        },
+        "shot": {
+          "type": "custom",
+          "component": "egoDoors",
+          "review": "Ни одна система не даёт предмет, который ломает проём и получает ярлык на слове.",
+          "props": {
+            "zoomCue": "эго",
+            "shoveCue": "влезает",
+            "jamCue": "дверь",
+            "labelCue": "свободой",
+            "label": "свобода"
+          }
+        },
+        "choreography": [
+          {
+            "cue": "эго",
+            "action": "камера в дверь"
+          },
+          {
+            "cue": "влезает",
+            "action": "удар"
+          },
+          {
+            "cue": "дверь",
+            "action": "косяк трескается"
+          },
+          {
+            "cue": "свободой",
+            "action": "ярлык"
+          }
+        ],
+        "camera": {
+          "move": "still"
+        },
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "sound": [
+          {
+            "cue": "влезает",
+            "sfx": "thud",
+            "volume": 0.36
+          },
+          {
+            "cue": "дверь",
+            "sfx": "glass-crack",
+            "volume": 0.32
+          },
+          {
+            "cue": "свободой",
+            "sfx": "stamp",
+            "volume": 0.44
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 0,
+      "duration": 4.833333333333333
+    },
+    {
+      "id": "notThat",
+      "voice": "эгоизм не в том, что человек живёт как хочет.",
+      "onScreen": "Не эгоизм: живёт как хочет",
+      "thought": "Снимаем обвинение с того, кто просто живёт по-своему",
+      "animation": "Из двери на светлый кадр, слова по ударам, «как хочет» под маркером",
+      "sources": [
+        "wilde1891"
+      ],
+      "direction": {
+        "purpose": "explain",
+        "emotion": "неожиданная защита",
+        "concept": "Ждали обвинения, а звучит оправдание: жить как хочешь разрешено",
+        "art": {
+          "variant": "inverse",
+          "field": "solid"
+        },
+        "hierarchy": {
+          "primary": "как хочет"
+        },
+        "shot": {
+          "type": "type",
+          "layout": "poster",
+          "headline": {
+            "text": "Не эгоизм: / живёт / *как хочет*",
+            "cue": "эгоизм",
+            "reveal": "punch",
+            "emphasis": "marker",
+            "emphasisCue": "как"
+          }
+        },
+        "choreography": [
+          {
+            "cue": "как",
+            "action": "маркер"
+          }
+        ],
+        "camera": {
+          "move": "pushIn"
+        },
+        "transition": {
+          "type": "through",
+          "origin": [
+            0.5,
+            0.42
+          ],
+          "seconds": 0.45,
+          "intent": "Проходим сквозь ту самую дверь"
+        },
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "sound": [
+          {
+            "cue": "как",
+            "sfx": "pop",
+            "volume": 0.32
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 4.833333333333333,
+      "duration": 2.7
+    },
+    {
+      "id": "force",
+      "voice": "А в том, что он заставляет других жить по своим принципам.",
+      "onScreen": "Все буквы становятся Я",
+      "thought": "Настоящий эгоизм — сделать всех похожими на себя",
+      "animation": "Стена разноцветных пляшущих букв; от одной Я волна переворачивает все буквы в такие же Я, на «принципам» стена замирает строем",
+      "sources": [
+        "wilde1891"
+      ],
+      "direction": {
+        "purpose": "climax",
+        "emotion": "холодок",
+        "concept": "Я — буква среди равных, пока не решает, что других букв быть не должно",
+        "art": {
+          "variant": "base",
+          "field": "solid"
+        },
+        "hierarchy": {
+          "primary": "стена букв"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "letterWall",
+          "review": "Волна замены каждой буквы на одну, идущая от точки на слове, в системах не выражается.",
+          "props": {
+            "spreadCue": "заставляет",
+            "lockCue": "принципам"
+          }
+        },
+        "choreography": [
+          {
+            "cue": "заставляет",
+            "action": "волна пошла"
+          },
+          {
+            "cue": "принципам",
+            "action": "строй замер"
+          }
+        ],
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "«А» — и сразу удар"
+        },
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "sound": [
+          {
+            "cue": "заставляет",
+            "sfx": "whoosh",
+            "volume": 0.32
+          },
+          {
+            "cue": "принципам",
+            "sfx": "impact-sub",
+            "volume": 0.4
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 7.533333333333333,
+      "duration": 3.866666666666667
+    },
+    {
+      "id": "test",
+      "voice": "Свободному твоё согласие не нужно. Эго без него не живёт.",
+      "onScreen": "Свобода и эго",
+      "thought": "Сравнение в одну строку: кому нужно чужое «да»",
+      "animation": "Шов сдвигается: сперва кадр у свободы, на «Эго» половину забирает эго",
+      "sources": [
+        "wilde1891"
+      ],
+      "direction": {
+        "purpose": "contrast",
+        "emotion": "ясность",
+        "concept": "Две половины одного кадра: свобода спокойно занимает своё, эго вламывается",
+        "art": {
+          "variant": "inverse",
+          "field": "solid"
+        },
+        "hierarchy": {
+          "primary": "шов между свободой и эго"
+        },
+        "shot": {
+          "type": "split",
+          "axis": "horizontal",
+          "a": {
+            "word": "Свободе согласие *не нужно*",
+            "variant": "inverse"
+          },
+          "b": {
+            "word": "Эго без него *не живёт*",
+            "variant": "base"
+          },
+          "start": 0.9,
+          "keys": [
+            {
+              "cue": "Эго",
+              "at": 0.46
+            }
+          ]
+        },
+        "choreography": [
+          {
+            "cue": "Эго",
+            "action": "шов рывком вверх"
+          }
+        ],
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "push",
+          "seconds": 0.35,
+          "intent": "Строй букв уезжает, остаётся сравнение"
+        },
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "sound": [
+          {
+            "cue": "Эго",
+            "sfx": "swish",
+            "volume": 0.36
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 11.4,
+      "duration": 4.366666666666667
+    },
+    {
+      "id": "end",
+      "voice": "Кого ты сегодня учил жить?",
+      "onScreen": "Кого ты сегодня учил жить?",
+      "thought": "Обвинение разворачивается на зрителя",
+      "animation": "Жёсткая склейка на плакат, на «учил» плашка и наезд",
+      "sources": [
+        "wilde1891"
+      ],
+      "direction": {
+        "purpose": "payoff",
+        "emotion": "неловкость и усмешка",
+        "concept": "Ролик весь про других, и последний вопрос про тебя",
+        "art": {
+          "variant": "block",
+          "field": "solid"
+        },
+        "hierarchy": {
+          "primary": "учил жить"
+        },
+        "shot": {
+          "type": "type",
+          "layout": "stack",
+          "headline": {
+            "text": "Кого ты сегодня *учил жить?*",
+            "cue": "Кого",
+            "reveal": "punch",
+            "emphasis": "marker",
+            "emphasisCue": "учил"
+          }
+        },
+        "choreography": [
+          {
+            "cue": "учил",
+            "action": "маркер и наезд"
+          },
+          {
+            "cue": "жить",
+            "action": "вопрос висит в тишине, камера медленно наезжает"
+          }
+        ],
+        "camera": {
+          "move": "still",
+          "keys": [
+            {
+              "cue": "учил",
+              "scale": 1.05,
+              "seconds": 0.7
+            },
+            {
+              "cue": 1.6,
+              "scale": 1.13,
+              "seconds": 2.5
+            }
+          ]
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Вопрос бьёт сразу"
+        },
+        "captions": {
+          "mode": "on",
+          "zone": "low"
+        },
+        "sound": [
+          {
+            "cue": "Кого",
+            "sfx": "stamp",
+            "volume": 0.4
+          },
+          {
+            "cue": "учил",
+            "sfx": "thud",
+            "volume": 0.36
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 15.766666666666667,
+      "duration": 4.133333333333331
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/ego-vs-freedom/voice-1a69351210bb658d-mix.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "voiceId": "iP95p4xoKVk53GoZ742B",
+    "modelId": "eleven_v3",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.8,
+      "style": 0,
+      "speed": 1
+    },
+    "sourcePath": "generated/ego-vs-freedom/voice-1a69351210bb658d.mp3",
+    "timingMode": "ElevenLabs character alignment",
+    "sourceDurationSeconds": 17.240816,
+    "durationSeconds": 17.195354,
+    "localTempo": 1,
+    "cacheHash": "1a69351210bb658d",
+    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades"
+  },
+  "captions": [
+    {
+      "text": "У",
+      "startMs": 70,
+      "endMs": 80,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "каждого",
+      "startMs": 130,
+      "endMs": 480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "второго",
+      "startMs": 528,
+      "endMs": 960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "эго",
+      "startMs": 1080,
+      "endMs": 1360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 1387,
+      "endMs": 1440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "влезает",
+      "startMs": 1480,
+      "endMs": 1920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 1960,
+      "endMs": 2000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "дверь.",
+      "startMs": 2048,
+      "endMs": 2520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "И",
+      "startMs": 2700,
+      "endMs": 2720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "он",
+      "startMs": 2773,
+      "endMs": 2880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "зовёт",
+      "startMs": 2920,
+      "endMs": 3200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "это",
+      "startMs": 3300,
+      "endMs": 3360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "свободой.",
+      "startMs": 3430,
+      "endMs": 4640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Но",
+      "startMs": 4770,
+      "endMs": 4800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "эгоизм",
+      "startMs": 4840,
+      "endMs": 5280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 5307,
+      "endMs": 5360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 5440,
+      "endMs": 5520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "том,",
+      "startMs": 5580,
+      "endMs": 5800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "что",
+      "startMs": 5830,
+      "endMs": 5920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "человек",
+      "startMs": 5970,
+      "endMs": 6320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "живёт",
+      "startMs": 6360,
+      "endMs": 6640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "как",
+      "startMs": 6690,
+      "endMs": 6800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "хочет.",
+      "startMs": 6900,
+      "endMs": 7440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "А",
+      "startMs": 7520,
+      "endMs": 7560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 7560,
+      "endMs": 7600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "том,",
+      "startMs": 7640,
+      "endMs": 7840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "что",
+      "startMs": 7880,
+      "endMs": 8000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "он",
+      "startMs": 8080,
+      "endMs": 8240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "заставляет",
+      "startMs": 8286,
+      "endMs": 8800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "других",
+      "startMs": 8880,
+      "endMs": 9360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "жить",
+      "startMs": 9490,
+      "endMs": 9680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "по",
+      "startMs": 9830,
+      "endMs": 9840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "своим",
+      "startMs": 9880,
+      "endMs": 10080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "принципам.",
+      "startMs": 10140,
+      "endMs": 10720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Свободному",
+      "startMs": 11410,
+      "endMs": 12080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "твоё",
+      "startMs": 12120,
+      "endMs": 12320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "согласие",
+      "startMs": 12389,
+      "endMs": 12880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 12933,
+      "endMs": 13040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "нужно.",
+      "startMs": 13107,
+      "endMs": 13520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Эго",
+      "startMs": 13840,
+      "endMs": 14080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "без",
+      "startMs": 14120,
+      "endMs": 14240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "него",
+      "startMs": 14288,
+      "endMs": 14480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 14533,
+      "endMs": 14640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "живёт.",
+      "startMs": 14700,
+      "endMs": 15120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Кого",
+      "startMs": 15750,
+      "endMs": 15920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ты",
+      "startMs": 15973,
+      "endMs": 16080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сегодня",
+      "startMs": 16130,
+      "endMs": 16480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "учил",
+      "startMs": 16533,
+      "endMs": 16800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "жить?",
+      "startMs": 16880,
+      "endMs": 17200,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "limits": {
+    "minSeconds": 18,
+    "maxSeconds": 22,
+    "targetSeconds": 20,
+    "endHoldSeconds": 2.7
+  },
+  "editorialReview": {
+    "openClaims": [
+      "«У каждого второго» — художественное преувеличение автора, не статистика.",
+      "Формулировка цитаты вольная: у Уайльда «просить других жить, как хочется тебе», в ролике «заставляет жить по своим принципам». По решению автора имя Уайльда на экран не выводится; источник стоит указать в подписи к посту.",
+      "«Свободному согласие не нужно, эго без него не живёт» — авторский тезис, не вывод источника. Эго здесь в бытовом смысле, не термин психологии."
+    ]
+  },
+  "renderPath": "out/studio/ego-vs-freedom.mp4",
+  "qa": {
+    "path": "out/studio/ego-vs-freedom-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  }
+}

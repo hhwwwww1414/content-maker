@@ -11,13 +11,16 @@ const USAGE = `Usage: node studio/reel.mjs <command> <project>
   approve <project> --script --facts --by "name"   record a human decision
   run <project> [--voice] [--preview-only]         full cycle; stops at each gate
   storyboard <project>          contact sheet from the latest preview
+  sheet <project> [--mobile]    contact sheet from fresh frames, with layout problems listed
+  gates <project> [--mode=preview]   the seven quality gates; writes -gates.json and -gates.md
+  schema                        write the storyboard JSON Schema to docs/storyboard.schema.json
   scene <project> <sceneId>     re-render one scene only (preview quality)
 Exit codes: 2 script invalid, 3 needs approval, 4 needs voice, 5 render or QA failed`;
 
 const argv = process.argv.slice(2);
 const flag = (name) => argv.includes(name);
 const option = (name) => (argv.includes(name) ? argv[argv.indexOf(name) + 1] : undefined);
-const [command, target, extra] = argv.filter((a, i) => !a.startsWith('--') && !(argv[i - 1] === '--topic' || argv[i - 1] === '--by'));
+const [command, target, extra] = argv.filter((a, i) => !a.startsWith('--') && !['--topic', '--by', '--art'].includes(argv[i - 1]));
 if (!command) { console.log(USAGE); process.exit(0); }
 
 const step = (title) => console.log(`\n── ${title}`);
@@ -46,11 +49,16 @@ if (command === 'new') {
   saveProject(file, {
     id: target, topic: option('--topic') ?? target, niche: 'general', language: 'ru',
     status: {factCheck: 'pending', scriptApproval: 'pending', publication: 'draft', production: 'draft'},
-    sources: [], title: '', hook: '', centralIdea: '', theme: 'signal', captionStyle: 'plate',
+    sources: [], title: '', hook: '', centralIdea: '', theme: 'signal', captionStyle: 'plate', art: {direction: option('--art') ?? 'documentary'},
     fps, width, height, durationSeconds: STANDARDS.duration.targetSeconds,
     scenes: [], audio: {voicePath: null, musicPath: null, sfx: [], volume: 1}, captions: [],
   });
   console.log(`studio/projects/${target}.json`);
+  process.exit(0);
+}
+
+if (command === 'schema') {
+  exec('node', ['--no-warnings', 'studio/spec-check.mjs', '--schema'], 1);
   process.exit(0);
 }
 
@@ -70,6 +78,10 @@ if (command === 'status') {
   console.log(JSON.stringify(p.status));
 } else if (command === 'storyboard') {
   storyboard(p);
+} else if (command === 'sheet') {
+  exec('node', ['--no-warnings', 'studio/sheet.mjs', file, ...argv.filter((a) => a.startsWith('--'))], 5);
+} else if (command === 'gates') {
+  exec('node', ['--no-warnings', 'studio/gates.mjs', file, ...argv.filter((a) => a.startsWith('--'))], 5);
 } else if (command === 'scene') {
   const scene = p.scenes.find((s) => s.id === extra);
   if (!scene) throw Error(`Scene ${extra} not in ${p.id}: ${p.scenes.map((s) => s.id).join(', ')}`);
@@ -91,7 +103,10 @@ if (command === 'status') {
   console.log(gate.approved ? 'Одобрено.' : 'Демо-статус: собирается только из готового дубля, не для публикации.');
 
   step('4/8 Озвучка');
-  if (voiceFile(p) && existsSync(voiceFile(p)) && p.captions?.length) {
+  if (p.audio?.mode === 'music') {
+    exec('node', ['studio/beat-map.mjs', file], 4);
+    console.log('Только музыка: голоса нет по решению автора, квота не расходуется.');
+  } else if (voiceFile(p) && existsSync(voiceFile(p)) && p.captions?.length) {
     console.log(`Готовый дубль, квота не расходуется: ${p.audio.voicePath}`);
   } else if (exec('node', ['studio/voice.mjs', file, '--cache-only'])) {
     console.log('Дубль взят из кэша, квота не расходуется.');
@@ -112,6 +127,7 @@ if (command === 'status') {
 
   step('7/8 Проверка кадров, субтитров и звука');
   exec('node', ['studio/qa.mjs', file, 'preview'], 5);
+  if (p.scenes.some((s) => s.direction)) exec('node', ['--no-warnings', 'studio/gates.mjs', file, '--mode=preview'], 5);
 
   if (flag('--preview-only')) { console.log(`\nЧерновик готов: out/studio/${p.id}-preview.mp4`); process.exit(0); }
 
@@ -119,10 +135,12 @@ if (command === 'status') {
   exec('node', ['studio/render.mjs', file, 'production'], 5);
   exec('node', ['studio/qa.mjs', file, 'production'], 5);
   const venv = resolve(root, 'runs/studio/audio-qa-venv/bin/python');
-  if (existsSync(venv)) {
+  if (p.audio?.mode === 'music') console.log('Только музыка: сверять голос с субтитрами не нужно.');
+  else if (existsSync(venv)) {
     console.log('\n── Независимая сверка голоса и субтитров (локальный Whisper)');
     exec(venv, ['-I', 'studio/sync-check.py', file], 5);
   } else console.log('Whisper не установлен: независимая сверка пропущена.');
+  if (p.scenes.some((s) => s.direction)) exec('node', ['--no-warnings', 'studio/gates.mjs', file, '--mode=production'], 5);
   const done = loadProject(file);
   mkdirSync(resolve(root, 'out/studio'), {recursive: true});
   writeFileSync(resolve(root, `out/studio/${p.id}-receipt.json`), JSON.stringify({id: p.id, video: `out/studio/${p.id}.mp4`, preview: `out/studio/${p.id}-preview.mp4`, storyboard: `out/studio/${p.id}-storyboard.png`, qa: done.qa, publishReady: gate.publishReady, voice: done.audio.timingMode, published: false}, null, 2) + '\n');

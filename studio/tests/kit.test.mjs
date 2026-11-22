@@ -1,4 +1,4 @@
-// Run: node --experimental-strip-types --no-warnings --test 'studio/tests/*.test.mjs'
+// Run: node --no-warnings --test 'studio/tests/*.test.mjs'
 import assert from 'node:assert/strict';
 import {readFileSync, existsSync, mkdtempSync, writeFileSync} from 'node:fs';
 import {tmpdir} from 'node:os';

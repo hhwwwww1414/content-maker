@@ -17,6 +17,7 @@ import {readSlug, loadScript} from './lib/script.mjs';
 import {probeStreams} from './lib/audio.mjs';
 import {inkFraction, luminanceStats, readPng} from './lib/png.mjs';
 import {checkFactFraming} from './lib/fact-framing.mjs';
+import {checkScriptQuality} from './lib/slop-check.mjs';
 
 const SLUG = readSlug();
 const OUT_DIR = path.join(ROOT, 'out');
@@ -38,7 +39,7 @@ const AVATARS = [
 ];
 
 const THRESHOLDS = {
-  durationSeconds: script.qa?.durationSeconds ?? [52, 68],
+  durationSeconds: script.qa?.durationSeconds ?? [30, 60],
   firstMeaningfulFrameSeconds: 0.25,
   captionSeconds: script.captionClusters?.targetSeconds ?? [0.55, 0.85],
   maxStaticForegroundSeconds: 3.5,
@@ -74,12 +75,32 @@ const extractFrame = (seconds, file) => {
 };
 
 /** Longest stretch of foreground without a scripted, meaning-carrying change. */
+/** Every resolved cue anywhere in a grammar tree, chips list or action list. */
+const collectCues = (node, out = []) => {
+  if (Array.isArray(node)) {
+    for (const child of node) collectCues(child, out);
+    return out;
+  }
+  if (node === null || typeof node !== 'object') return out;
+  for (const [key, value] of Object.entries(node)) {
+    if (key.endsWith('Ms') && typeof value === 'number') out.push(value);
+    else collectCues(value, out);
+  }
+  return out;
+};
+
 const staticStretch = () => {
   const events = [
     0,
     ...timeline.chapters.map((chapter) => chapter.startMs),
-    ...timeline.actions.map((action) => action.atMs),
-    ...timeline.actions.map((action) => action.untilMs),
+    // Grammar-driven reels carry their beats inside chapters[].grammar and chips;
+    // legacy reels carry them in actions. Both are collected the same way.
+    ...collectCues(timeline.chapters.map((chapter) => chapter.grammar ?? null)),
+    ...collectCues(timeline.chips ?? []),
+    // the closing question has its own beats: options, the comment cue, the teaser
+    ...collectCues(timeline.cta ?? {}),
+    ...(timeline.actions ?? []).map((action) => action.atMs),
+    ...(timeline.actions ?? []).map((action) => action.untilMs),
     ...timeline.avatarStates.map((state) => state.atMs),
     timeline.memoryFrame.startMs,
     timeline.memoryFrame.endMs,
@@ -260,6 +281,7 @@ const main = () => {
   const staticForeground = staticStretch();
   const secrets = scanForSecrets();
   const factFraming = checkFactFraming(script);
+  const scriptQuality = checkScriptQuality(script);
 
   // --- verdict ---------------------------------------------------------------
   check(
@@ -299,7 +321,13 @@ const main = () => {
   );
   check('safeZonePassed', unsafeHits.length === 0, `${unsafeHits.length} попаданий в unsafe-зоны`);
   check('secretLeakPassed', secrets.passed, `ключ найден в: ${secrets.files.join(', ')}`);
-  check('sourceBadgePresent', Boolean(script.source?.badge));
+  // Attribution must exist, but not necessarily as an on-canvas pill: a reel
+  // that keeps the frame clean is allowed to carry its sources in the caption.
+  check(
+    'attributionPresent',
+    Boolean(script.source?.badge) || Object.keys(script.publish?.sources ?? {}).length > 0,
+    'нет ни бейджа источника на холсте, ни publish.sources в подписи',
+  );
   check('contactSheet', existsSync(CONTACT_SHEET), 'нет contact sheet');
 
   if (background) {
@@ -310,6 +338,9 @@ const main = () => {
       darkFrames.length === 0 && flatBackdropFrames.length === 0,
       `${darkFrames.length} тёмных кадров, ${flatBackdropFrames.length} кадров без движения фона`,
     );
+  }
+  if (scriptQuality.applicable) {
+    check('scriptQualityPassed', scriptQuality.passed, scriptQuality.failures.join('; '));
   }
   if (factFraming.applicable) {
     check(
@@ -369,10 +400,13 @@ const main = () => {
     safeZoneHits: unsafeHits,
     factFramingPassed: factFraming.applicable ? factFraming.passed : null,
     factFraming,
+    scriptQualityPassed: scriptQuality.applicable ? scriptQuality.passed : null,
+    scriptQuality,
     secretLeakPassed: secrets.passed,
     secretScanFiles: secrets.scannedFiles,
     sourceBadgePresent: Boolean(script.source?.badge),
     sourceBadge: script.source?.badge ?? null,
+    attributionSources: Object.keys(script.publish?.sources ?? {}),
     contentPolarity: CONTENT_POLARITY,
     thresholds: THRESHOLDS,
     failures,
@@ -389,6 +423,13 @@ const main = () => {
   console.log(`  первый кадр    ink ${(firstInk * 100).toFixed(2)}% → meaningful at ${firstMeaningfulFrameSeconds}s`);
   console.log(`  статика max    ${staticForeground.seconds}s (на ${staticForeground.atSeconds}s)`);
   console.log(`  memory frame   ${memoryFrameHoldSeconds}s`);
+  if (scriptQuality.applicable) {
+    console.log(
+      `  текст          ${scriptQuality.passed ? 'ок' : 'провал'} · фактов ` +
+        `${scriptQuality.anchorCount} · вода ${scriptQuality.filler.length} · ` +
+        `шаблон ${scriptQuality.cliche.length} · смягчители ${scriptQuality.hedge.length}`,
+    );
+  }
   if (background) {
     console.log(
       `  фон            ${background.file} · ${background.sourceSeconds}s × ${background.loops} петель · ` +

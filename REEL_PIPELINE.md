@@ -1,5 +1,9 @@
 # GhostPepeBot Reel Pipeline
 
+Правила подачи (длительность, хук, плотность текста на экране, запреты в
+сценарии) — в [docs/REEL_CRAFT.md](docs/REEL_CRAFT.md). Здесь описан порядок
+шагов, там — стандарт, которому обязан соответствовать результат.
+
 New reels must move through the pipeline before TSX implementation:
 
 `idea -> history / novelty analysis -> creative direction -> storyboard -> layout plan -> asset strategy -> motion plan -> implementation -> collision QA -> keyframe QA -> motion QA -> final render`

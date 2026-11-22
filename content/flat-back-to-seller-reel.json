@@ -1,0 +1,507 @@
+{
+  "id": "flat-back-to-seller",
+  "compositionId": "FlatBackToSellerReel",
+  "contactSheetCompositionId": "FlatBackToSellerContactSheet",
+  "npmPrefix": "flat-back",
+  "title": "Купил квартиру — её вернули продавцу",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/flat-back-to-seller/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 800,
+  "background": {
+    "type": "loop-video",
+    "file": "assets/background.mp4",
+    "muted": true,
+    "fit": "cover",
+    "overlayOpacity": 0.44,
+    "note": "Единственный фон ролика. Зациклен, без звука, нижний постоянный слой."
+  },
+  "source": {
+    "primary": "Определение Судебной коллегии по гражданским делам ВС РФ, 16.12.2025",
+    "secondary": "Известия — статистика решений по спорам о возврате квартир, 2026",
+    "topic": "«эффект Долиной», практика 2025–2026"
+  },
+  "tts": {
+    "language": "ru",
+    "speed": 1.2,
+    "direction": "Хук — три сухих факта, без жалости. Глава про суды — как хроника. Цифры 41 и 85 — раздельно, с паузой между ними. Финал — спокойно и практично.",
+    "note": "Числа проговариваются модулем numerals, на экране остаются цифрами."
+  },
+  "captionClusters": {
+    "targetSeconds": [
+      0.5,
+      0.8
+    ],
+    "growUntilSeconds": 0.26,
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и",
+      "а",
+      "но",
+      "не",
+      "ни",
+      "в",
+      "во",
+      "на",
+      "по",
+      "за",
+      "из",
+      "от",
+      "до",
+      "к",
+      "ко",
+      "с",
+      "со",
+      "у",
+      "о",
+      "об",
+      "про",
+      "для",
+      "что",
+      "как",
+      "это",
+      "всё",
+      "ещё",
+      "же",
+      "ты",
+      "он",
+      "она",
+      "я",
+      "мы",
+      "чтобы",
+      "так",
+      "там",
+      "уже",
+      "или",
+      "бы",
+      "тебе",
+      "этот",
+      "над",
+      "тем",
+      "её",
+      "его",
+      "ему",
+      "их",
+      "то",
+      "есть",
+      "если",
+      "теперь",
+      "они",
+      "себе",
+      "вот",
+      "даже",
+      "будет",
+      "только",
+      "когда",
+      "тут",
+      "им",
+      "ним",
+      "где",
+      "стало",
+      "было"
+    ],
+    "highlightWords": {
+      "red": [
+        "вернули",
+        "отменил",
+        "никуда",
+        "обманули"
+      ],
+      "yellow": [
+        "квартиру",
+        "квартира",
+        "деньги",
+        "сделку",
+        "сделки"
+      ],
+      "mint": [
+        "покупателя",
+        "проверять"
+      ]
+    },
+    "displayReplacements": {}
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "chapter": "hook",
+      "text": "Он купил квартиру.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l02",
+      "chapter": "hook",
+      "text": "Через год её вернули продавцу.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l03",
+      "chapter": "hook",
+      "text": "Деньги не вернули.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l04",
+      "chapter": "how",
+      "text": "Продавец сказал: обманули.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l05",
+      "chapter": "how",
+      "text": "Суд отменил сделку.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l06",
+      "chapter": "how",
+      "text": "Квартира назад. Деньги — нет.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l07",
+      "chapter": "turn",
+      "text": "В декабре 2025 всё изменилось.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l08",
+      "chapter": "turn",
+      "text": "Верховный суд — за покупателя.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l09",
+      "chapter": "turn",
+      "text": "Отменив три инстанции.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l10",
+      "chapter": "numbers",
+      "text": "Было — 41 процент.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l11",
+      "chapter": "numbers",
+      "text": "Стало — 85.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l13",
+      "chapter": "do",
+      "text": "Риск остался один.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l14",
+      "chapter": "do",
+      "text": "Если признают больным.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l15",
+      "chapter": "do",
+      "text": "Проверять надо до сделки.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l16",
+      "chapter": "cta",
+      "text": "Купил бы такую квартиру?",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l17",
+      "chapter": "cta",
+      "text": "Купил бы.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l18",
+      "chapter": "cta",
+      "text": "Ни за что.",
+      "breakAfter": "none"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "hook",
+      "label": "ЧТО ПРОИЗОШЛО",
+      "headline": "КВАРТИРУ ЗАБРАЛИ,\nДЕНЬГИ НЕТ",
+      "fromLine": "l01",
+      "toLine": "l03",
+      "grammar": {
+        "type": "document",
+        "card": "ДОГОВОР КУПЛИ-ПРОДАЖИ",
+        "visible": "ПОДПИСАН\nДЕНЬГИ ПЕРЕДАНЫ",
+        "hidden": {
+          "label": "СДЕЛКУ МОЖНО ОСПОРИТЬ",
+          "tone": "red",
+          "at": "l02"
+        },
+        "revealAt": "l02",
+        "aside": {
+          "label": "ЧЕРЕЗ ГОД ПОСЛЕ ПОКУПКИ",
+          "tone": "neutral",
+          "at": "l02",
+          "offsetMs": 800
+        },
+        "verdict": {
+          "label": "ПОКУПАТЕЛЬ НИ С ЧЕМ",
+          "tone": "red",
+          "at": "l03"
+        }
+      }
+    },
+    {
+      "id": "how",
+      "label": "КАК ЭТО РАБОТАЛО",
+      "headline": "ОДНА СДЕЛКА,\nДВА РАЗНЫХ ИТОГА",
+      "fromLine": "l04",
+      "toLine": "l06",
+      "grammar": {
+        "type": "split",
+        "card": "ЧТО ОСТАВАЛОСЬ У КАЖДОГО",
+        "subject": "СДЕЛКА ОТМЕНЕНА",
+        "splitAt": "l05",
+        "left": {
+          "label": "ПРОДАВЦУ — КВАРТИРА",
+          "tone": "yellow",
+          "at": "l05"
+        },
+        "right": {
+          "label": "ПОКУПАТЕЛЮ — НИЧЕГО",
+          "tone": "red",
+          "at": "l06"
+        },
+        "verdict": {
+          "label": "ДЕНЬГИ УЖЕ У МОШЕННИКОВ",
+          "tone": "red",
+          "at": "l06",
+          "offsetMs": 800
+        }
+      }
+    },
+    {
+      "id": "turn",
+      "label": "ЧТО ИЗМЕНИЛОСЬ",
+      "headline": "ВЕРХОВНЫЙ СУД\nСКАЗАЛ ИНАЧЕ",
+      "fromLine": "l07",
+      "toLine": "l09",
+      "grammar": {
+        "type": "flow",
+        "card": "ПУТЬ ОДНОГО ДЕЛА",
+        "direction": "column",
+        "nodes": [
+          {
+            "label": "ПЕРВАЯ ИНСТАНЦИЯ",
+            "tone": "red",
+            "at": "l07"
+          },
+          {
+            "label": "АПЕЛЛЯЦИЯ",
+            "tone": "red",
+            "at": "l07",
+            "offsetMs": 800
+          },
+          {
+            "label": "КАССАЦИЯ",
+            "tone": "red",
+            "at": "l08"
+          },
+          {
+            "label": "ВЕРХОВНЫЙ СУД",
+            "tone": "mint",
+            "at": "l08",
+            "offsetMs": 900
+          }
+        ],
+        "verdict": {
+          "label": "КВАРТИРА ОСТАЛАСЬ ПОКУПАТЕЛЮ",
+          "tone": "mint",
+          "at": "l09"
+        }
+      }
+    },
+    {
+      "id": "numbers",
+      "label": "НАСКОЛЬКО ПОВЕРНУЛОСЬ",
+      "headline": "СУДЫ СТАЛИ\nРЕШАТЬ ИНАЧЕ",
+      "fromLine": "l10",
+      "toLine": "l11",
+      "grammar": {
+        "type": "counters",
+        "card": "РЕШЕНИЯ В ПОЛЬЗУ ПОКУПАТЕЛЯ",
+        "lead": {
+          "label": "ДО И ПОСЛЕ ДЕКАБРЯ 2025",
+          "at": "l10"
+        },
+        "counters": [
+          {
+            "label": "41% В 2025 ГОДУ",
+            "tone": "red",
+            "at": "l10",
+            "offsetMs": 900
+          },
+          {
+            "label": "85% В 2026 ГОДУ",
+            "tone": "mint",
+            "at": "l11"
+          }
+        ],
+        "chips": [
+          {
+            "label": "ГАРАНТИИ ВСЁ РАВНО НЕТ",
+            "tone": "yellow",
+            "at": "l11",
+            "offsetMs": 1200
+          }
+        ]
+      }
+    },
+    {
+      "id": "do",
+      "label": "ГДЕ РИСК ОСТАЛСЯ",
+      "headline": "ОДНА ЛАЗЕЙКА\nНЕ ЗАКРЫТА",
+      "fromLine": "l13",
+      "toLine": "l15",
+      "grammar": null
+    },
+    {
+      "id": "cta",
+      "label": "ТВОЙ ХОД",
+      "headline": "КУПИЛ БЫ ТАКУЮ\nКВАРТИРУ?",
+      "fromLine": "l16",
+      "toLine": "l18",
+      "grammar": null
+    }
+  ],
+  "avatarStates": [
+    {
+      "at": "l01",
+      "state": "question"
+    },
+    {
+      "at": "l04",
+      "state": "shocked"
+    },
+    {
+      "at": "l07",
+      "state": "thinking"
+    },
+    {
+      "at": "l10",
+      "state": "skeptical"
+    },
+    {
+      "at": "l13",
+      "state": "idea"
+    },
+    {
+      "at": "l16",
+      "state": "approved"
+    }
+  ],
+  "chips": [
+    {
+      "label": "СДЕЛКУ МОГУТ ОТМЕНИТЬ",
+      "tone": "red",
+      "at": "l03"
+    },
+    {
+      "label": "БЫЛО 41%",
+      "tone": "yellow",
+      "at": "l10"
+    },
+    {
+      "label": "СТАЛО 85%",
+      "tone": "mint",
+      "at": "l11"
+    }
+  ],
+  "mood": {
+    "alarm": {
+      "from": "l01",
+      "to": "l07"
+    },
+    "calm": {
+      "from": "l07",
+      "to": "l13"
+    }
+  },
+  "memoryFrame": {
+    "fromLine": "l13",
+    "untilLine": "l16",
+    "maxHoldMs": 9000,
+    "staggerMs": 420,
+    "minHoldSeconds": 2.4,
+    "title": "ЧТО ПРОВЕРИТЬ ДО ПОКУПКИ",
+    "items": [
+      "ИСТОРИЯ КВАРТИРЫ И ДОКУМЕНТЫ",
+      "ЦЕНА НИЖЕ РЫНКА НА 20% — ЗНАК",
+      "СПРАВКИ О СОСТОЯНИИ ПРОДАВЦА"
+    ]
+  },
+  "cta": {
+    "fromLine": "l16",
+    "prompt": "КУПИЛ БЫ ТАКУЮ КВАРТИРУ?",
+    "divider": "или",
+    "options": [
+      {
+        "label": "КУПИЛ БЫ",
+        "tone": "mint",
+        "at": "l17"
+      },
+      {
+        "label": "НИ ЗА ЧТО",
+        "tone": "red",
+        "at": "l18"
+      }
+    ],
+    "comment": "Ответь одним словом в комментарии.",
+    "teaser": "ПОЧЕМУ «БЕЗОПАСНОГО СЧЁТА» НЕ СУЩЕСТВУЕТ",
+    "hint": {
+      "at": "l17"
+    },
+    "teaserCue": {
+      "at": "l18"
+    },
+    "teaserDetailCue": {
+      "at": "l18",
+      "offsetMs": 600
+    }
+  },
+  "qa": {
+    "durationSeconds": [
+      25,
+      35
+    ],
+    "contentPolarity": "light-on-dark",
+    "scriptQuality": {
+      "hookLines": 3,
+      "maxHookWordsPerLine": 8,
+      "minAnchors": 3
+    }
+  },
+  "publish": {
+    "cover": "КУПИЛ КВАРТИРУ — ЕЁ ВЕРНУЛИ ПРОДАВЦУ",
+    "coverSub": "И деньги не вернули никому",
+    "caption": "Явление получило название «эффект Долиной». Продавец через суд требует вернуть квартиру, объясняя, что продал её под влиянием мошенников. Суды первых инстанций сделку отменяли — и покупатель оставался без квартиры и без денег, потому что деньги к тому моменту уже уходили мошенникам.\n\n16 декабря 2025 года Судебная коллегия по гражданским делам Верховного суда отменила решения трёх инстанций по делу Ларисы Долиной и отказала в иске о признании сделки недействительной. В июле 2026 года Верховный суд утвердил обзор практики по таким спорам.\n\nПерелом виден в цифрах: в 2025 году суды поддерживали покупателей лишь в 41% случаев, в 2026-м — в 85%. Всего таких споров за 2025 и начало 2026 года набралось около 150.\n\nЛазейка осталась одна и существенная: если психиатрическая экспертиза покажет, что продавец не понимал значения своих действий, перебить такой вывод в суде тяжело. Поэтому проверять историю квартиры, документы и состояние продавца надо до сделки, а цена на 20% ниже рынка — повод насторожиться.",
+    "hashtags": [
+      "#недвижимость",
+      "#квартира",
+      "#право",
+      "#мошенники"
+    ],
+    "sources": {
+      "Известия — после дела Долиной суды вдвое чаще защищают покупателей": "https://iz.ru/2143228/milana-gadzhieva/posle-dela-dolinoj-sudy-vdvoe-chashche-zashchishchayut-pokupatelej-kvartir",
+      "Фонтанка — Верховный суд утвердил принципы по делам с «эффектом Долиной»": "https://www.fontanka.ru/2026/07/01/76510182/"
+    }
+  }
+}

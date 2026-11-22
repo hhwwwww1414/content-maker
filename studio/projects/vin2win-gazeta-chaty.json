@@ -1,0 +1,659 @@
+{
+  "id": "vin2win-gazeta-chaty",
+  "topic": "vin2win: от газет и чатов к площадке для профессионалов",
+  "niche": "vin2win",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "publication": "draft",
+    "production": "draft",
+    "approvedScriptHash": "ce7c97bd13b34b4e",
+    "approval": {
+      "by": "qwezyid",
+      "at": "2026-11-21"
+    }
+  },
+  "sources": [
+    {
+      "id": "guest-home",
+      "publisher": "vin2win, прод-приложение (гостевая главная)",
+      "url": "https://vin2win.ru",
+      "accessed": "2026-11-21",
+      "claim": "«vin2win — площадка для тех, кто работает с автомобилями. После проверки профиля откроются полный каталог, фильтры, цены «в руки» и диалоги с продавцами.»"
+    },
+    {
+      "id": "prod-capture",
+      "publisher": "vin2win, снимки прод-приложения 21.11.2026",
+      "url": "file:///Users/qwezyid/projects/vin2win/output/viral-compare/public/real",
+      "accessed": "2026-11-21",
+      "claim": "Каталог 766 авто; карточка Rolls-Royce Wraith: в руки 20 000 000 ₽, на ресурсах 22 000 000 ₽, выгода +2 000 000 ₽; кнопка «Написать»"
+    }
+  ],
+  "title": "От газет до vin2win",
+  "hook": "Раньше машины продавали через газету",
+  "centralIdea": "Авторынок прошёл путь газета → чаты → площадка для профессионалов, где сделки закрываются быстрее",
+  "theme": "signal",
+  "captionStyle": "plate",
+  "art": {
+    "direction": "product"
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 34.766666666666666,
+  "scenes": [
+    {
+      "id": "s1",
+      "voice": "Раньше машины продавали через газету: маленькое объявление, номер телефона, и ждёшь звонка.",
+      "onScreen": "Раньше — объявление в газете",
+      "sources": [
+        "guest-home"
+      ],
+      "start": 0,
+      "duration": 6.866666666666666
+    },
+    {
+      "id": "s2",
+      "voice": "Потом рынок ушёл в чаты. Там уже только профессионалы, но лента летит, и нужная машина тонет в сообщениях.",
+      "onScreen": "Потом — чаты",
+      "sources": [
+        "guest-home"
+      ],
+      "start": 6.866666666666666,
+      "duration": 7.966666666666668
+    },
+    {
+      "id": "s3",
+      "voice": "Вин ту вин — площадка для тех, кто работает с автомобилями. Каждый профиль проходит проверку.",
+      "onScreen": "Площадка для профессионалов",
+      "sources": [
+        "guest-home"
+      ],
+      "start": 14.833333333333334,
+      "duration": 5.799999999999999
+    },
+    {
+      "id": "s4",
+      "voice": "Все машины в одном каталоге: фильтры, цена в руки и выгода прямо в карточке. Нашёл — написал продавцу — закрыл сделку.",
+      "onScreen": "Нашёл — написал — закрыл сделку",
+      "sources": [
+        "guest-home"
+      ],
+      "start": 20.633333333333333,
+      "duration": 9.5
+    },
+    {
+      "id": "s5",
+      "voice": "Вин ту вин. Пока другие ищут — вы закрываете сделки!",
+      "onScreen": "Пока другие ищут — Вы закрываете сделки!",
+      "sources": [
+        "guest-home"
+      ],
+      "start": 30.133333333333333,
+      "duration": 4.633333333333333
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/vin2win-gazeta-chaty/voice-92b56a8dcc457da5-mix.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "voiceId": "iP95p4xoKVk53GoZ742B",
+    "modelId": "eleven_v3",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.8,
+      "style": 0,
+      "speed": 1
+    },
+    "sourcePath": "generated/vin2win-gazeta-chaty/voice-92b56a8dcc457da5.mp3",
+    "timingMode": "ElevenLabs character alignment",
+    "sourceDurationSeconds": 35.082449,
+    "durationSeconds": 34.261729,
+    "localTempo": 1.0228119241982505,
+    "cacheHash": "92b56a8dcc457da5",
+    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades"
+  },
+  "captions": [
+    {
+      "text": "Раньше",
+      "startMs": 30,
+      "endMs": 313,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "машины",
+      "startMs": 360,
+      "endMs": 704,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "продавали",
+      "startMs": 735,
+      "endMs": 1173,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "через",
+      "startMs": 1212,
+      "endMs": 1408,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "газету:",
+      "startMs": 1486,
+      "endMs": 2346,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "маленькое",
+      "startMs": 2470,
+      "endMs": 2816,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "объявление,",
+      "startMs": 2855,
+      "endMs": 3676,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "номер",
+      "startMs": 3728,
+      "endMs": 3989,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "телефона,",
+      "startMs": 4041,
+      "endMs": 4849,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 4967,
+      "endMs": 5084,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ждёшь",
+      "startMs": 5162,
+      "endMs": 5475,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "звонка.",
+      "startMs": 5527,
+      "endMs": 6023,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Потом",
+      "startMs": 6860,
+      "endMs": 7039,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "рынок",
+      "startMs": 7066,
+      "endMs": 7274,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ушёл",
+      "startMs": 7370,
+      "endMs": 7587,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 7665,
+      "endMs": 7743,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "чаты.",
+      "startMs": 7782,
+      "endMs": 8486,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Там",
+      "startMs": 8740,
+      "endMs": 8838,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "уже",
+      "startMs": 8917,
+      "endMs": 9151,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "только",
+      "startMs": 9207,
+      "endMs": 9542,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "профессионалы,",
+      "startMs": 9574,
+      "endMs": 10481,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "но",
+      "startMs": 10559,
+      "endMs": 10716,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "лента",
+      "startMs": 10833,
+      "endMs": 11263,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "летит,",
+      "startMs": 11322,
+      "endMs": 11732,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 11830,
+      "endMs": 11889,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "нужная",
+      "startMs": 11947,
+      "endMs": 12280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "машина",
+      "startMs": 12342,
+      "endMs": 12749,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тонет",
+      "startMs": 12847,
+      "endMs": 13218,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 13258,
+      "endMs": 13297,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сообщениях.",
+      "startMs": 13362,
+      "endMs": 14392,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Вин",
+      "startMs": 14820,
+      "endMs": 14939,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ту",
+      "startMs": 14991,
+      "endMs": 15096,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин",
+      "startMs": 15154,
+      "endMs": 15330,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 15369,
+      "endMs": 15409,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "площадка",
+      "startMs": 15780,
+      "endMs": 16112,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "для",
+      "startMs": 16160,
+      "endMs": 16269,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тех,",
+      "startMs": 16328,
+      "endMs": 16504,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "кто",
+      "startMs": 16543,
+      "endMs": 16660,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "работает",
+      "startMs": 16712,
+      "endMs": 17129,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "с",
+      "startMs": 17227,
+      "endMs": 17325,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "автомобилями.",
+      "startMs": 17380,
+      "endMs": 17911,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Каждый",
+      "startMs": 18550,
+      "endMs": 18772,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "профиль",
+      "startMs": 18834,
+      "endMs": 19163,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "проходит",
+      "startMs": 19202,
+      "endMs": 19632,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "проверку.",
+      "startMs": 19677,
+      "endMs": 20453,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Все",
+      "startMs": 20620,
+      "endMs": 20727,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "машины",
+      "startMs": 20805,
+      "endMs": 21196,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 21275,
+      "endMs": 21353,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "одном",
+      "startMs": 21405,
+      "endMs": 21666,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "каталоге:",
+      "startMs": 21705,
+      "endMs": 22526,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "фильтры,",
+      "startMs": 22620,
+      "endMs": 23152,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "цена",
+      "startMs": 23280,
+      "endMs": 23621,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 23778,
+      "endMs": 23934,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "руки",
+      "startMs": 24028,
+      "endMs": 24403,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 24720,
+      "endMs": 24794,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "выгода",
+      "startMs": 24873,
+      "endMs": 25264,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "прямо",
+      "startMs": 25329,
+      "endMs": 25655,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 25694,
+      "endMs": 25733,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "карточке.",
+      "startMs": 25780,
+      "endMs": 26632,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Нашёл",
+      "startMs": 27020,
+      "endMs": 27297,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 27415,
+      "endMs": 27532,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "написал",
+      "startMs": 27580,
+      "endMs": 27845,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "продавцу",
+      "startMs": 27892,
+      "endMs": 28549,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 28627,
+      "endMs": 28705,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "закрыл",
+      "startMs": 28800,
+      "endMs": 29174,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сделку.",
+      "startMs": 29237,
+      "endMs": 29918,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Вин",
+      "startMs": 30140,
+      "endMs": 30348,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ту",
+      "startMs": 30426,
+      "endMs": 30582,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин.",
+      "startMs": 30661,
+      "endMs": 30973,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Пока",
+      "startMs": 31490,
+      "endMs": 31599,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "другие",
+      "startMs": 31655,
+      "endMs": 31990,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ищут",
+      "startMs": 32108,
+      "endMs": 32460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 32760,
+      "endMs": 32799,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вы",
+      "startMs": 32799,
+      "endMs": 33007,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "закрываете",
+      "startMs": 33085,
+      "endMs": 33789,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сделки!",
+      "startMs": 33836,
+      "endMs": 34258,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "editorialReview": {
+    "note": "Озвучка для ролика в vin2win/output/viral-compare (VO3).",
+    "openClaims": [
+      "«В чатах уже только профессионалы» — оценка рынка заказчиком, источника нет.",
+      "«Сделки закрываются быстрее» в ролике не утверждается как измеренный факт."
+    ]
+  }
+}

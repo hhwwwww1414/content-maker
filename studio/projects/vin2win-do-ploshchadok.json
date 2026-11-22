@@ -1,0 +1,604 @@
+{
+  "id": "vin2win-do-ploshchadok",
+  "topic": "vin2win: машины до площадок",
+  "niche": "vin2win",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "publication": "draft",
+    "production": "draft",
+    "approvedScriptHash": "54000349bbfad0d8",
+    "approval": {
+      "by": "qwezyid",
+      "at": "2026-11-20"
+    }
+  },
+  "sources": [
+    {
+      "id": "status-code",
+      "publisher": "vin2win, исходный код сайта и backend",
+      "url": "file:///Users/qwezyid/projects/vin2win/lib/listing-change-diff.ts",
+      "accessed": "2026-11-21",
+      "claim": "Статус объявления before_resources = «До публикации на ресурсах»"
+    },
+    {
+      "id": "access",
+      "publisher": "vin2win, карта экранов",
+      "url": "file:///Users/qwezyid/projects/vin2winmobileapp/docs/site-screen-map.md",
+      "accessed": "2026-11-21",
+      "claim": "Каталог с ценами открывается участнику с допуском после регистрации и проверки профиля"
+    },
+    {
+      "id": "market",
+      "publisher": "vkirove.ru (через desk research vin2win)",
+      "url": "https://vkirove.ru/news/2025/10/15/kak_telegram_kanaly_i_chastnye_chaty_menyayut_rynok_prodazhi_avto_v_rossii.html",
+      "accessed": "2026-11-21",
+      "claim": "Часть ликвидных машин продаётся в закрытых чатах до публикации на классифайдах"
+    }
+  ],
+  "title": "vin2win: машины до площадок",
+  "hook": "Почему хорошие машины не доходят до Авито?",
+  "centralIdea": "На vin2win видны объявления со статусом «до публикации на ресурсах»",
+  "theme": "signal",
+  "captionStyle": "plate",
+  "art": {
+    "direction": "product"
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 25.966666666666665,
+  "scenes": [
+    {
+      "id": "s1",
+      "voice": "Почему хорошие машины не доходят до Авито?",
+      "onScreen": "Почему хорошие машины не доходят до Авито?",
+      "sources": [
+        "status-code"
+      ],
+      "start": 0,
+      "duration": 2.8
+    },
+    {
+      "id": "s2",
+      "voice": "Потому что их забирают раньше, чем выходит объявление. Пока ты обновляешь ленту, кто-то уже договорился о показе.",
+      "onScreen": "Их забирают раньше, чем выходит объявление",
+      "sources": [
+        "status-code"
+      ],
+      "start": 2.8,
+      "duration": 6.466666666666668
+    },
+    {
+      "id": "s3",
+      "voice": "В вин ту вин у объявления может стоять статус „до публикации на ресурсах“.",
+      "onScreen": "Статус «до ресурсов»",
+      "sources": [
+        "status-code"
+      ],
+      "start": 9.266666666666667,
+      "duration": 4.266666666666666
+    },
+    {
+      "id": "s4",
+      "voice": "Это значит, машину видно здесь, пока на площадках её ещё нет. Каталог открывается после регистрации и проверки профиля.",
+      "onScreen": "Видишь машину, пока её нет на площадках",
+      "sources": [
+        "status-code"
+      ],
+      "start": 13.533333333333333,
+      "duration": 7.066666666666668
+    },
+    {
+      "id": "s5",
+      "voice": "Не жди, пока объявление выйдет. Смотри машины до площадок. Вин ту вин.",
+      "onScreen": "Смотри машины до площадок",
+      "sources": [
+        "status-code"
+      ],
+      "start": 20.6,
+      "duration": 5.366666666666664
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/vin2win-do-ploshchadok/voice-0428623ce7635303-mix.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "voiceId": "iP95p4xoKVk53GoZ742B",
+    "modelId": "eleven_v3",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.8,
+      "style": 0,
+      "speed": 1
+    },
+    "sourcePath": "generated/vin2win-do-ploshchadok/voice-0428623ce7635303.mp3",
+    "timingMode": "ElevenLabs character alignment",
+    "sourceDurationSeconds": 25.469388,
+    "durationSeconds": 25.436167,
+    "localTempo": 1,
+    "cacheHash": "0428623ce7635303",
+    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades"
+  },
+  "captions": [
+    {
+      "text": "Почему",
+      "startMs": 70,
+      "endMs": 320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "хорошие",
+      "startMs": 360,
+      "endMs": 800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "машины",
+      "startMs": 880,
+      "endMs": 1280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 1333,
+      "endMs": 1440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "доходят",
+      "startMs": 1493,
+      "endMs": 1840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "до",
+      "startMs": 1893,
+      "endMs": 2000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Авито?",
+      "startMs": 2040,
+      "endMs": 2720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Потому",
+      "startMs": 2810,
+      "endMs": 3040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "что",
+      "startMs": 3080,
+      "endMs": 3200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "их",
+      "startMs": 3227,
+      "endMs": 3280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "забирают",
+      "startMs": 3320,
+      "endMs": 3840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "раньше,",
+      "startMs": 3886,
+      "endMs": 4240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "чем",
+      "startMs": 4280,
+      "endMs": 4400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "выходит",
+      "startMs": 4453,
+      "endMs": 4800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "объявление.",
+      "startMs": 4900,
+      "endMs": 5760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Пока",
+      "startMs": 5870,
+      "endMs": 6000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ты",
+      "startMs": 6053,
+      "endMs": 6160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "обновляешь",
+      "startMs": 6187,
+      "endMs": 6720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ленту,",
+      "startMs": 6760,
+      "endMs": 7120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "кто-то",
+      "startMs": 7270,
+      "endMs": 7360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "уже",
+      "startMs": 7420,
+      "endMs": 7600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "договорился",
+      "startMs": 7640,
+      "endMs": 8160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "о",
+      "startMs": 8260,
+      "endMs": 8320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "показе.",
+      "startMs": 8410,
+      "endMs": 9200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "В",
+      "startMs": 9280,
+      "endMs": 9360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин",
+      "startMs": 9380,
+      "endMs": 9440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ту",
+      "startMs": 9493,
+      "endMs": 9600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин",
+      "startMs": 9660,
+      "endMs": 9840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "у",
+      "startMs": 9920,
+      "endMs": 10000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "объявления",
+      "startMs": 10040,
+      "endMs": 10560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "может",
+      "startMs": 10600,
+      "endMs": 10800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "стоять",
+      "startMs": 10864,
+      "endMs": 11200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "статус",
+      "startMs": 11257,
+      "endMs": 11600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "„до",
+      "startMs": 11680,
+      "endMs": 11920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "публикации",
+      "startMs": 12000,
+      "endMs": 12560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "на",
+      "startMs": 12587,
+      "endMs": 12640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ресурсах“.",
+      "startMs": 12697,
+      "endMs": 13440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Это",
+      "startMs": 13520,
+      "endMs": 13600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "значит,",
+      "startMs": 13646,
+      "endMs": 14040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "машину",
+      "startMs": 14070,
+      "endMs": 14400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "видно",
+      "startMs": 14453,
+      "endMs": 14720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "здесь,",
+      "startMs": 14760,
+      "endMs": 15040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "пока",
+      "startMs": 15160,
+      "endMs": 15280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "на",
+      "startMs": 15307,
+      "endMs": 15360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "площадках",
+      "startMs": 15417,
+      "endMs": 15920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "её",
+      "startMs": 16060,
+      "endMs": 16240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ещё",
+      "startMs": 16320,
+      "endMs": 16560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "нет.",
+      "startMs": 16620,
+      "endMs": 16880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Каталог",
+      "startMs": 17390,
+      "endMs": 17680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "открывается",
+      "startMs": 17730,
+      "endMs": 18240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "после",
+      "startMs": 18293,
+      "endMs": 18559,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "регистрации",
+      "startMs": 18560,
+      "endMs": 19200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 19280,
+      "endMs": 19360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "проверки",
+      "startMs": 19406,
+      "endMs": 19840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "профиля.",
+      "startMs": 19880,
+      "endMs": 20520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Не",
+      "startMs": 20610,
+      "endMs": 20720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "жди,",
+      "startMs": 20760,
+      "endMs": 21080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "пока",
+      "startMs": 21104,
+      "endMs": 21200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "объявление",
+      "startMs": 21260,
+      "endMs": 21840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "выйдет.",
+      "startMs": 21893,
+      "endMs": 22320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Смотри",
+      "startMs": 22380,
+      "endMs": 22720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "машины",
+      "startMs": 22784,
+      "endMs": 23200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "до",
+      "startMs": 23370,
+      "endMs": 23520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "площадок.",
+      "startMs": 23600,
+      "endMs": 24240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Вин",
+      "startMs": 24760,
+      "endMs": 24880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ту",
+      "startMs": 24960,
+      "endMs": 25120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин.",
+      "startMs": 25180,
+      "endMs": 25440,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "editorialReview": {
+    "note": "Озвучка для ролика в vin2win/output/viral-compare. Сам ролик собирается там, этот проект — только одобрение текста и покупка дубля.",
+    "openClaims": [
+      "«Хорошие машины забирают раньше, чем выходит объявление» — тезис из desk research (закрытые чаты, перекупы), статистики нет.",
+      "Статус «до публикации на ресурсах» ставит продавец; выйдет ли объявление на площадки потом, платформа не гарантирует.",
+      "Сколько сейчас в каталоге объявлений со статусом «до ресурсов», не проверено: если их почти нет, ролик обещает больше, чем есть."
+    ]
+  }
+}

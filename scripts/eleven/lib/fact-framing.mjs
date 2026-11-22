@@ -35,6 +35,28 @@ export const collectTexts = (script) => {
     for (const item of action.items ?? []) push(item, `action:${action.id}:item`, inherited);
   }
 
+  // Reels built from scene grammars carry their on-screen text inside
+  // `chapters[].grammar`, at arbitrary depth. Walk it rather than enumerating
+  // every grammar's slot names — a new grammar must not silently escape the gate.
+  const walkGrammar = (node, origin, framing) => {
+    if (Array.isArray(node)) {
+      for (const child of node) walkGrammar(child, origin, framing);
+      return;
+    }
+    if (node === null || typeof node !== 'object') return;
+    for (const [key, value] of Object.entries(node)) {
+      if (typeof value === 'string' && ['label', 'note', 'card', 'claim', 'visible', 'subject', 'badge'].includes(key)) {
+        push(value, `${origin}:${key}`, node.framing ?? framing);
+      } else {
+        walkGrammar(value, origin, node.framing ?? framing);
+      }
+    }
+  };
+  for (const chapter of script.chapters ?? []) {
+    if (chapter.grammar) walkGrammar(chapter.grammar, `grammar:${chapter.id}`, chapter.framing);
+  }
+  walkGrammar(script.chips ?? [], 'chips', null);
+
   const memory = script.memoryFrame ?? {};
   push(memory.title, 'memoryFrame:title', memory.framing);
   for (const item of memory.items ?? memory.chain ?? []) push(item, 'memoryFrame:item', memory.framing);

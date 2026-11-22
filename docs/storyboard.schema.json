@@ -1,0 +1,4951 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "properties": {
+  "art": {
+   "type": "object",
+   "properties": {
+    "direction": {
+     "type": "string"
+    },
+    "motion": {
+     "type": "string",
+     "enum": [
+      "fluid",
+      "snappy",
+      "weighty",
+      "calm"
+     ]
+    },
+    "music": {
+     "type": "object",
+     "properties": {
+      "asset": {
+       "type": "string",
+       "minLength": 1,
+       "description": "An id from public/library/manifest.json"
+      },
+      "volume": {
+       "default": 0.14,
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      },
+      "duck": {
+       "default": 0.45,
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      }
+     },
+     "required": [
+      "asset"
+     ],
+     "additionalProperties": false
+    }
+   },
+   "required": [
+    "direction"
+   ],
+   "additionalProperties": false
+  },
+  "direction": {
+   "type": "object",
+   "properties": {
+    "purpose": {
+     "type": "string",
+     "enum": [
+      "opening",
+      "question",
+      "reveal",
+      "explain",
+      "proof",
+      "data",
+      "contrast",
+      "turn",
+      "climax",
+      "payoff"
+     ]
+    },
+    "emotion": {
+     "type": "string",
+     "minLength": 2,
+     "description": "What the viewer should feel"
+    },
+    "concept": {
+     "type": "string",
+     "minLength": 8,
+     "description": "The visual idea: what the picture says that the words do not"
+    },
+    "art": {
+     "default": {},
+     "type": "object",
+     "properties": {
+      "direction": {
+       "description": "Override only as a deliberate contrast beat; must be compatible",
+       "type": "string"
+      },
+      "variant": {
+       "default": "base",
+       "type": "string",
+       "enum": [
+        "base",
+        "inverse",
+        "block"
+       ]
+      },
+      "field": {
+       "type": "string",
+       "enum": [
+        "silk",
+        "ink",
+        "beam",
+        "paper",
+        "gradient",
+        "solid"
+       ]
+      },
+      "light": {
+       "type": "array",
+       "prefixItems": [
+        {
+         "type": "number",
+         "minimum": -0.5,
+         "maximum": 1.5
+        },
+        {
+         "type": "number",
+         "minimum": -0.5,
+         "maximum": 1.5
+        }
+       ],
+       "description": "[x, y] as a fraction of the frame or image"
+      },
+      "motion": {
+       "type": "string",
+       "enum": [
+        "fluid",
+        "snappy",
+        "weighty",
+        "calm"
+       ]
+      }
+     },
+     "additionalProperties": false
+    },
+    "hierarchy": {
+     "type": "object",
+     "properties": {
+      "primary": {
+       "type": "string"
+      },
+      "secondary": {
+       "default": [],
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      }
+     },
+     "required": [
+      "primary"
+     ],
+     "additionalProperties": false,
+     "description": "The one thing seen first, and what supports it"
+    },
+    "layers": {
+     "type": "object",
+     "properties": {
+      "background": {
+       "type": "string"
+      },
+      "foreground": {
+       "type": "string"
+      }
+     },
+     "additionalProperties": false
+    },
+    "assets": {
+     "default": [],
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 1,
+      "description": "An id from public/library/manifest.json"
+     }
+    },
+    "shot": {
+     "anyOf": [
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "type"
+        },
+        "layout": {
+         "type": "string",
+         "enum": [
+          "poster",
+          "stack",
+          "spoken",
+          "window"
+         ],
+         "description": "poster: each line fills the width; stack: balanced lines; spoken: words land as said; window: letters show an image"
+        },
+        "anchor": {
+         "default": "center",
+         "type": "string",
+         "enum": [
+          "top",
+          "center",
+          "bottom"
+         ]
+        },
+        "headline": {
+         "type": "object",
+         "properties": {
+          "text": {
+           "type": "string",
+           "minLength": 1,
+           "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+          },
+          "cue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          },
+          "reveal": {
+           "default": "lines",
+           "type": "string",
+           "enum": [
+            "lines",
+            "words",
+            "chars",
+            "spoken",
+            "punch",
+            "none"
+           ]
+          },
+          "emphasis": {
+           "description": "Defaults to the art direction's emphasis",
+           "type": "string",
+           "enum": [
+            "color",
+            "marker",
+            "underline",
+            "italic",
+            "strike",
+            "box"
+           ]
+          },
+          "emphasisCue": {
+           "description": "The word that triggers the emphasis animation",
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ]
+          },
+          "role": {
+           "default": "display",
+           "type": "string",
+           "enum": [
+            "display",
+            "statement",
+            "italic",
+            "body"
+           ]
+          },
+          "tone": {
+           "default": "ink",
+           "type": "string",
+           "enum": [
+            "ink",
+            "accent",
+            "accent2",
+            "muted",
+            "danger"
+           ]
+          },
+          "align": {
+           "default": "left",
+           "type": "string",
+           "enum": [
+            "left",
+            "center",
+            "right"
+           ]
+          },
+          "maxSize": {
+           "type": "number",
+           "exclusiveMinimum": 0
+          },
+          "exitCue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          }
+         },
+         "required": [
+          "text"
+         ],
+         "additionalProperties": false
+        },
+        "kicker": {
+         "type": "string",
+         "minLength": 1,
+         "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+        },
+        "sub": {
+         "type": "object",
+         "properties": {
+          "text": {
+           "type": "string",
+           "minLength": 1,
+           "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+          },
+          "cue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          },
+          "reveal": {
+           "default": "lines",
+           "type": "string",
+           "enum": [
+            "lines",
+            "words",
+            "chars",
+            "spoken",
+            "punch",
+            "none"
+           ]
+          },
+          "emphasis": {
+           "description": "Defaults to the art direction's emphasis",
+           "type": "string",
+           "enum": [
+            "color",
+            "marker",
+            "underline",
+            "italic",
+            "strike",
+            "box"
+           ]
+          },
+          "emphasisCue": {
+           "description": "The word that triggers the emphasis animation",
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ]
+          },
+          "role": {
+           "default": "display",
+           "type": "string",
+           "enum": [
+            "display",
+            "statement",
+            "italic",
+            "body"
+           ]
+          },
+          "tone": {
+           "default": "ink",
+           "type": "string",
+           "enum": [
+            "ink",
+            "accent",
+            "accent2",
+            "muted",
+            "danger"
+           ]
+          },
+          "align": {
+           "default": "left",
+           "type": "string",
+           "enum": [
+            "left",
+            "center",
+            "right"
+           ]
+          },
+          "maxSize": {
+           "type": "number",
+           "exclusiveMinimum": 0
+          },
+          "exitCue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          }
+         },
+         "required": [
+          "text"
+         ],
+         "additionalProperties": false
+        },
+        "ghost": {
+         "description": "A giant background word or number that bleeds off frame",
+         "type": "string"
+        },
+        "shape": {
+         "default": "none",
+         "description": "One large graphic mass behind the type",
+         "type": "string",
+         "enum": [
+          "none",
+          "band",
+          "disc",
+          "slab"
+         ]
+        },
+        "shapeCue": {
+         "anyOf": [
+          {
+           "type": "string",
+           "minLength": 1
+          },
+          {
+           "type": "number",
+           "minimum": 0
+          }
+         ],
+         "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+        },
+        "fill": {
+         "description": "Image shown through the letters (window layout)",
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "required": [
+        "type",
+        "layout",
+        "headline"
+       ],
+       "additionalProperties": false
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "media"
+        },
+        "plates": {
+         "minItems": 1,
+         "maxItems": 4,
+         "type": "array",
+         "items": {
+          "type": "object",
+          "properties": {
+           "asset": {
+            "type": "string",
+            "minLength": 1,
+            "description": "An id from public/library/manifest.json"
+           },
+           "cue": {
+            "anyOf": [
+             {
+              "type": "string",
+              "minLength": 1
+             },
+             {
+              "type": "number",
+              "minimum": 0
+             }
+            ],
+            "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+           },
+           "focus": {
+            "default": [
+             0.5,
+             0.5
+            ],
+            "type": "array",
+            "prefixItems": [
+             {
+              "type": "number",
+              "minimum": -0.5,
+              "maximum": 1.5
+             },
+             {
+              "type": "number",
+              "minimum": -0.5,
+              "maximum": 1.5
+             }
+            ],
+            "description": "[x, y] as a fraction of the frame or image"
+           },
+           "zoom": {
+            "default": 1.1,
+            "type": "number",
+            "minimum": 1,
+            "maximum": 4
+           },
+           "endFocus": {
+            "type": "array",
+            "prefixItems": [
+             {
+              "type": "number",
+              "minimum": -0.5,
+              "maximum": 1.5
+             },
+             {
+              "type": "number",
+              "minimum": -0.5,
+              "maximum": 1.5
+             }
+            ],
+            "description": "[x, y] as a fraction of the frame or image"
+           },
+           "endZoom": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 4
+           },
+           "callouts": {
+            "default": [],
+            "type": "array",
+            "items": {
+             "type": "object",
+             "properties": {
+              "at": {
+               "type": "array",
+               "prefixItems": [
+                {
+                 "type": "number",
+                 "minimum": -0.5,
+                 "maximum": 1.5
+                },
+                {
+                 "type": "number",
+                 "minimum": -0.5,
+                 "maximum": 1.5
+                }
+               ],
+               "description": "[x, y] as a fraction of the frame or image"
+              },
+              "text": {
+               "type": "string",
+               "minLength": 1,
+               "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+              },
+              "cue": {
+               "anyOf": [
+                {
+                 "type": "string",
+                 "minLength": 1
+                },
+                {
+                 "type": "number",
+                 "minimum": 0
+                }
+               ],
+               "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+              },
+              "side": {
+               "default": "right",
+               "type": "string",
+               "enum": [
+                "left",
+                "right",
+                "above",
+                "below"
+               ]
+              },
+              "tone": {
+               "default": "accent",
+               "type": "string",
+               "enum": [
+                "ink",
+                "accent",
+                "accent2",
+                "muted",
+                "danger"
+               ]
+              }
+             },
+             "required": [
+              "at",
+              "text",
+              "cue"
+             ],
+             "additionalProperties": false
+            }
+           },
+           "title": {
+            "description": "Replaces the shot title while this plate is on screen",
+            "type": "object",
+            "properties": {
+             "text": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+             },
+             "cue": {
+              "anyOf": [
+               {
+                "type": "string",
+                "minLength": 1
+               },
+               {
+                "type": "number",
+                "minimum": 0
+               }
+              ],
+              "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+             },
+             "reveal": {
+              "default": "lines",
+              "type": "string",
+              "enum": [
+               "lines",
+               "words",
+               "chars",
+               "spoken",
+               "punch",
+               "none"
+              ]
+             },
+             "emphasis": {
+              "description": "Defaults to the art direction's emphasis",
+              "type": "string",
+              "enum": [
+               "color",
+               "marker",
+               "underline",
+               "italic",
+               "strike",
+               "box"
+              ]
+             },
+             "emphasisCue": {
+              "description": "The word that triggers the emphasis animation",
+              "anyOf": [
+               {
+                "type": "string",
+                "minLength": 1
+               },
+               {
+                "type": "number",
+                "minimum": 0
+               }
+              ]
+             },
+             "role": {
+              "default": "display",
+              "type": "string",
+              "enum": [
+               "display",
+               "statement",
+               "italic",
+               "body"
+              ]
+             },
+             "tone": {
+              "default": "ink",
+              "type": "string",
+              "enum": [
+               "ink",
+               "accent",
+               "accent2",
+               "muted",
+               "danger"
+              ]
+             },
+             "align": {
+              "default": "left",
+              "type": "string",
+              "enum": [
+               "left",
+               "center",
+               "right"
+              ]
+             },
+             "maxSize": {
+              "type": "number",
+              "exclusiveMinimum": 0
+             },
+             "exitCue": {
+              "anyOf": [
+               {
+                "type": "string",
+                "minLength": 1
+               },
+               {
+                "type": "number",
+                "minimum": 0
+               }
+              ],
+              "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+             }
+            },
+            "required": [
+             "text"
+            ],
+            "additionalProperties": false
+           }
+          },
+          "required": [
+           "asset"
+          ],
+          "additionalProperties": false
+         },
+         "description": "Full-bleed images or video; later plates cut in on their cue"
+        },
+        "grade": {
+         "default": "none",
+         "type": "string",
+         "enum": [
+          "none",
+          "mono",
+          "warm",
+          "cold",
+          "noir",
+          "duotone"
+         ]
+        },
+        "reveal": {
+         "default": "none",
+         "type": "string",
+         "enum": [
+          "none",
+          "iris",
+          "wipe",
+          "blinds",
+          "rise"
+         ]
+        },
+        "title": {
+         "type": "object",
+         "properties": {
+          "text": {
+           "type": "string",
+           "minLength": 1,
+           "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+          },
+          "cue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          },
+          "reveal": {
+           "default": "lines",
+           "type": "string",
+           "enum": [
+            "lines",
+            "words",
+            "chars",
+            "spoken",
+            "punch",
+            "none"
+           ]
+          },
+          "emphasis": {
+           "description": "Defaults to the art direction's emphasis",
+           "type": "string",
+           "enum": [
+            "color",
+            "marker",
+            "underline",
+            "italic",
+            "strike",
+            "box"
+           ]
+          },
+          "emphasisCue": {
+           "description": "The word that triggers the emphasis animation",
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ]
+          },
+          "role": {
+           "default": "display",
+           "type": "string",
+           "enum": [
+            "display",
+            "statement",
+            "italic",
+            "body"
+           ]
+          },
+          "tone": {
+           "default": "ink",
+           "type": "string",
+           "enum": [
+            "ink",
+            "accent",
+            "accent2",
+            "muted",
+            "danger"
+           ]
+          },
+          "align": {
+           "default": "left",
+           "type": "string",
+           "enum": [
+            "left",
+            "center",
+            "right"
+           ]
+          },
+          "maxSize": {
+           "type": "number",
+           "exclusiveMinimum": 0
+          },
+          "exitCue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          }
+         },
+         "required": [
+          "text"
+         ],
+         "additionalProperties": false
+        },
+        "titleAnchor": {
+         "default": "top",
+         "type": "string",
+         "enum": [
+          "top",
+          "center",
+          "bottom"
+         ]
+        },
+        "foreground": {
+         "description": "A transparent cutout on its own parallax plane",
+         "type": "object",
+         "properties": {
+          "asset": {
+           "type": "string",
+           "minLength": 1,
+           "description": "An id from public/library/manifest.json"
+          },
+          "depth": {
+           "default": 0.5,
+           "type": "number"
+          },
+          "box": {
+           "type": "array",
+           "prefixItems": [
+            {
+             "type": "number"
+            },
+            {
+             "type": "number"
+            },
+            {
+             "type": "number",
+             "exclusiveMinimum": 0
+            },
+            {
+             "type": "number",
+             "exclusiveMinimum": 0
+            }
+           ],
+           "description": "[left, top, width, height] in 1080x1920 frame pixels"
+          }
+         },
+         "required": [
+          "asset",
+          "box"
+         ],
+         "additionalProperties": false
+        }
+       },
+       "required": [
+        "type",
+        "plates"
+       ],
+       "additionalProperties": false
+      },
+      {
+       "oneOf": [
+        {
+         "type": "object",
+         "properties": {
+          "type": {
+           "type": "string",
+           "const": "data"
+          },
+          "mode": {
+           "type": "string",
+           "const": "counter"
+          },
+          "value": {
+           "type": "number"
+          },
+          "from": {
+           "default": 0,
+           "type": "number"
+          },
+          "decimals": {
+           "default": 0,
+           "type": "integer",
+           "minimum": 0,
+           "maximum": 2
+          },
+          "prefix": {
+           "default": "",
+           "type": "string"
+          },
+          "suffix": {
+           "default": "",
+           "type": "string"
+          },
+          "unit": {
+           "type": "string"
+          },
+          "label": {
+           "type": "string",
+           "minLength": 1,
+           "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+          },
+          "cue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          },
+          "landCue": {
+           "description": "The word on which the number lands",
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ]
+          },
+          "roll": {
+           "default": "digits",
+           "type": "string",
+           "enum": [
+            "digits",
+            "count",
+            "none"
+           ]
+          },
+          "footnote": {
+           "type": "object",
+           "properties": {
+            "text": {
+             "type": "string",
+             "minLength": 1,
+             "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+            },
+            "cue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            },
+            "reveal": {
+             "default": "lines",
+             "type": "string",
+             "enum": [
+              "lines",
+              "words",
+              "chars",
+              "spoken",
+              "punch",
+              "none"
+             ]
+            },
+            "emphasis": {
+             "description": "Defaults to the art direction's emphasis",
+             "type": "string",
+             "enum": [
+              "color",
+              "marker",
+              "underline",
+              "italic",
+              "strike",
+              "box"
+             ]
+            },
+            "emphasisCue": {
+             "description": "The word that triggers the emphasis animation",
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ]
+            },
+            "role": {
+             "default": "display",
+             "type": "string",
+             "enum": [
+              "display",
+              "statement",
+              "italic",
+              "body"
+             ]
+            },
+            "tone": {
+             "default": "ink",
+             "type": "string",
+             "enum": [
+              "ink",
+              "accent",
+              "accent2",
+              "muted",
+              "danger"
+             ]
+            },
+            "align": {
+             "default": "left",
+             "type": "string",
+             "enum": [
+              "left",
+              "center",
+              "right"
+             ]
+            },
+            "maxSize": {
+             "type": "number",
+             "exclusiveMinimum": 0
+            },
+            "exitCue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            }
+           },
+           "required": [
+            "text"
+           ],
+           "additionalProperties": false
+          },
+          "anchor": {
+           "default": "center",
+           "type": "string",
+           "enum": [
+            "top",
+            "center",
+            "bottom"
+           ]
+          }
+         },
+         "required": [
+          "type",
+          "mode",
+          "value"
+         ],
+         "additionalProperties": false
+        },
+        {
+         "type": "object",
+         "properties": {
+          "type": {
+           "type": "string",
+           "const": "data"
+          },
+          "mode": {
+           "type": "string",
+           "const": "bars"
+          },
+          "items": {
+           "minItems": 2,
+           "maxItems": 5,
+           "type": "array",
+           "items": {
+            "type": "object",
+            "properties": {
+             "label": {
+              "type": "string"
+             },
+             "value": {
+              "type": "number"
+             },
+             "display": {
+              "type": "string"
+             },
+             "cue": {
+              "anyOf": [
+               {
+                "type": "string",
+                "minLength": 1
+               },
+               {
+                "type": "number",
+                "minimum": 0
+               }
+              ],
+              "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+             },
+             "highlight": {
+              "default": false,
+              "type": "boolean"
+             }
+            },
+            "required": [
+             "label",
+             "value"
+            ],
+            "additionalProperties": false
+           }
+          },
+          "title": {
+           "type": "object",
+           "properties": {
+            "text": {
+             "type": "string",
+             "minLength": 1,
+             "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+            },
+            "cue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            },
+            "reveal": {
+             "default": "lines",
+             "type": "string",
+             "enum": [
+              "lines",
+              "words",
+              "chars",
+              "spoken",
+              "punch",
+              "none"
+             ]
+            },
+            "emphasis": {
+             "description": "Defaults to the art direction's emphasis",
+             "type": "string",
+             "enum": [
+              "color",
+              "marker",
+              "underline",
+              "italic",
+              "strike",
+              "box"
+             ]
+            },
+            "emphasisCue": {
+             "description": "The word that triggers the emphasis animation",
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ]
+            },
+            "role": {
+             "default": "display",
+             "type": "string",
+             "enum": [
+              "display",
+              "statement",
+              "italic",
+              "body"
+             ]
+            },
+            "tone": {
+             "default": "ink",
+             "type": "string",
+             "enum": [
+              "ink",
+              "accent",
+              "accent2",
+              "muted",
+              "danger"
+             ]
+            },
+            "align": {
+             "default": "left",
+             "type": "string",
+             "enum": [
+              "left",
+              "center",
+              "right"
+             ]
+            },
+            "maxSize": {
+             "type": "number",
+             "exclusiveMinimum": 0
+            },
+            "exitCue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            }
+           },
+           "required": [
+            "text"
+           ],
+           "additionalProperties": false
+          },
+          "max": {
+           "type": "number",
+           "exclusiveMinimum": 0
+          }
+         },
+         "required": [
+          "type",
+          "mode",
+          "items"
+         ],
+         "additionalProperties": false
+        },
+        {
+         "type": "object",
+         "properties": {
+          "type": {
+           "type": "string",
+           "const": "data"
+          },
+          "mode": {
+           "type": "string",
+           "const": "units"
+          },
+          "total": {
+           "type": "integer",
+           "minimum": 4,
+           "maximum": 900
+          },
+          "highlight": {
+           "type": "integer",
+           "minimum": 1,
+           "maximum": 9007199254740991
+          },
+          "columns": {
+           "type": "integer",
+           "minimum": 2,
+           "maximum": 30
+          },
+          "glyph": {
+           "default": "person",
+           "type": "string",
+           "enum": [
+            "dot",
+            "person",
+            "square"
+           ]
+          },
+          "cue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          },
+          "highlightCue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          },
+          "title": {
+           "type": "object",
+           "properties": {
+            "text": {
+             "type": "string",
+             "minLength": 1,
+             "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+            },
+            "cue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            },
+            "reveal": {
+             "default": "lines",
+             "type": "string",
+             "enum": [
+              "lines",
+              "words",
+              "chars",
+              "spoken",
+              "punch",
+              "none"
+             ]
+            },
+            "emphasis": {
+             "description": "Defaults to the art direction's emphasis",
+             "type": "string",
+             "enum": [
+              "color",
+              "marker",
+              "underline",
+              "italic",
+              "strike",
+              "box"
+             ]
+            },
+            "emphasisCue": {
+             "description": "The word that triggers the emphasis animation",
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ]
+            },
+            "role": {
+             "default": "display",
+             "type": "string",
+             "enum": [
+              "display",
+              "statement",
+              "italic",
+              "body"
+             ]
+            },
+            "tone": {
+             "default": "ink",
+             "type": "string",
+             "enum": [
+              "ink",
+              "accent",
+              "accent2",
+              "muted",
+              "danger"
+             ]
+            },
+            "align": {
+             "default": "left",
+             "type": "string",
+             "enum": [
+              "left",
+              "center",
+              "right"
+             ]
+            },
+            "maxSize": {
+             "type": "number",
+             "exclusiveMinimum": 0
+            },
+            "exitCue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            }
+           },
+           "required": [
+            "text"
+           ],
+           "additionalProperties": false
+          },
+          "titleAnchor": {
+           "default": "top",
+           "type": "string",
+           "enum": [
+            "top",
+            "center",
+            "bottom"
+           ]
+          }
+         },
+         "required": [
+          "type",
+          "mode",
+          "total",
+          "highlight"
+         ],
+         "additionalProperties": false
+        },
+        {
+         "type": "object",
+         "properties": {
+          "type": {
+           "type": "string",
+           "const": "data"
+          },
+          "mode": {
+           "type": "string",
+           "const": "line"
+          },
+          "points": {
+           "minItems": 2,
+           "maxItems": 40,
+           "type": "array",
+           "items": {
+            "type": "number"
+           }
+          },
+          "labels": {
+           "default": [],
+           "type": "array",
+           "items": {
+            "type": "object",
+            "properties": {
+             "at": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+             },
+             "text": {
+              "type": "string"
+             },
+             "cue": {
+              "anyOf": [
+               {
+                "type": "string",
+                "minLength": 1
+               },
+               {
+                "type": "number",
+                "minimum": 0
+               }
+              ],
+              "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+             }
+            },
+            "required": [
+             "at",
+             "text"
+            ],
+            "additionalProperties": false
+           }
+          },
+          "cue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          },
+          "seconds": {
+           "type": "number",
+           "exclusiveMinimum": 0
+          },
+          "end": {
+           "type": "string"
+          },
+          "title": {
+           "type": "object",
+           "properties": {
+            "text": {
+             "type": "string",
+             "minLength": 1,
+             "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+            },
+            "cue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            },
+            "reveal": {
+             "default": "lines",
+             "type": "string",
+             "enum": [
+              "lines",
+              "words",
+              "chars",
+              "spoken",
+              "punch",
+              "none"
+             ]
+            },
+            "emphasis": {
+             "description": "Defaults to the art direction's emphasis",
+             "type": "string",
+             "enum": [
+              "color",
+              "marker",
+              "underline",
+              "italic",
+              "strike",
+              "box"
+             ]
+            },
+            "emphasisCue": {
+             "description": "The word that triggers the emphasis animation",
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ]
+            },
+            "role": {
+             "default": "display",
+             "type": "string",
+             "enum": [
+              "display",
+              "statement",
+              "italic",
+              "body"
+             ]
+            },
+            "tone": {
+             "default": "ink",
+             "type": "string",
+             "enum": [
+              "ink",
+              "accent",
+              "accent2",
+              "muted",
+              "danger"
+             ]
+            },
+            "align": {
+             "default": "left",
+             "type": "string",
+             "enum": [
+              "left",
+              "center",
+              "right"
+             ]
+            },
+            "maxSize": {
+             "type": "number",
+             "exclusiveMinimum": 0
+            },
+            "exitCue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            }
+           },
+           "required": [
+            "text"
+           ],
+           "additionalProperties": false
+          },
+          "area": {
+           "default": true,
+           "type": "boolean"
+          }
+         },
+         "required": [
+          "type",
+          "mode",
+          "points"
+         ],
+         "additionalProperties": false
+        }
+       ]
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "device"
+        },
+        "layout": {
+         "type": "string",
+         "enum": [
+          "hero",
+          "rise",
+          "macro",
+          "offset"
+         ],
+         "description": "hero: phone tilted, centre; rise: bleeds off the bottom under a title; macro: the screen fills the frame; offset: phone bleeds off the right edge"
+        },
+        "screen": {
+         "oneOf": [
+          {
+           "type": "object",
+           "properties": {
+            "app": {
+             "type": "string",
+             "const": "call"
+            },
+            "name": {
+             "type": "string"
+            },
+            "detail": {
+             "type": "string"
+            },
+            "answerCue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            },
+            "lines": {
+             "default": [],
+             "type": "array",
+             "items": {
+              "type": "object",
+              "properties": {
+               "text": {
+                "type": "string"
+               },
+               "cue": {
+                "anyOf": [
+                 {
+                  "type": "string",
+                  "minLength": 1
+                 },
+                 {
+                  "type": "number",
+                  "minimum": 0
+                 }
+                ],
+                "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+               }
+              },
+              "required": [
+               "text",
+               "cue"
+              ],
+              "additionalProperties": false
+             }
+            },
+            "hangupCue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            }
+           },
+           "required": [
+            "app",
+            "name"
+           ],
+           "additionalProperties": false
+          },
+          {
+           "type": "object",
+           "properties": {
+            "app": {
+             "type": "string",
+             "const": "chat"
+            },
+            "title": {
+             "type": "string"
+            },
+            "items": {
+             "minItems": 1,
+             "maxItems": 7,
+             "type": "array",
+             "items": {
+              "type": "object",
+              "properties": {
+               "from": {
+                "default": "them",
+                "type": "string",
+                "enum": [
+                 "them",
+                 "me"
+                ]
+               },
+               "text": {
+                "type": "string"
+               },
+               "cue": {
+                "anyOf": [
+                 {
+                  "type": "string",
+                  "minLength": 1
+                 },
+                 {
+                  "type": "number",
+                  "minimum": 0
+                 }
+                ],
+                "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+               }
+              },
+              "required": [
+               "text",
+               "cue"
+              ],
+              "additionalProperties": false
+             }
+            }
+           },
+           "required": [
+            "app",
+            "title",
+            "items"
+           ],
+           "additionalProperties": false
+          },
+          {
+           "type": "object",
+           "properties": {
+            "app": {
+             "type": "string",
+             "const": "notifications"
+            },
+            "clock": {
+             "default": "9:41",
+             "type": "string"
+            },
+            "date": {
+             "type": "string"
+            },
+            "items": {
+             "minItems": 1,
+             "maxItems": 6,
+             "type": "array",
+             "items": {
+              "type": "object",
+              "properties": {
+               "app": {
+                "type": "string"
+               },
+               "text": {
+                "type": "string"
+               },
+               "cue": {
+                "anyOf": [
+                 {
+                  "type": "string",
+                  "minLength": 1
+                 },
+                 {
+                  "type": "number",
+                  "minimum": 0
+                 }
+                ],
+                "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+               },
+               "urgent": {
+                "default": false,
+                "type": "boolean"
+               }
+              },
+              "required": [
+               "app",
+               "text",
+               "cue"
+              ],
+              "additionalProperties": false
+             }
+            }
+           },
+           "required": [
+            "app",
+            "items"
+           ],
+           "additionalProperties": false
+          },
+          {
+           "type": "object",
+           "properties": {
+            "app": {
+             "type": "string",
+             "const": "bank"
+            },
+            "title": {
+             "default": "Счёт",
+             "type": "string"
+            },
+            "balance": {
+             "type": "number"
+            },
+            "to": {
+             "type": "number"
+            },
+            "balanceCue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            },
+            "currency": {
+             "default": "₽",
+             "type": "string"
+            },
+            "items": {
+             "default": [],
+             "type": "array",
+             "items": {
+              "type": "object",
+              "properties": {
+               "text": {
+                "type": "string"
+               },
+               "amount": {
+                "type": "string"
+               },
+               "cue": {
+                "anyOf": [
+                 {
+                  "type": "string",
+                  "minLength": 1
+                 },
+                 {
+                  "type": "number",
+                  "minimum": 0
+                 }
+                ],
+                "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+               }
+              },
+              "required": [
+               "text",
+               "amount",
+               "cue"
+              ],
+              "additionalProperties": false
+             }
+            }
+           },
+           "required": [
+            "app",
+            "balance"
+           ],
+           "additionalProperties": false
+          },
+          {
+           "type": "object",
+           "properties": {
+            "app": {
+             "type": "string",
+             "const": "settings"
+            },
+            "title": {
+             "type": "string"
+            },
+            "items": {
+             "minItems": 1,
+             "maxItems": 7,
+             "type": "array",
+             "items": {
+              "type": "object",
+              "properties": {
+               "text": {
+                "type": "string"
+               },
+               "on": {
+                "default": true,
+                "type": "boolean"
+               },
+               "flipCue": {
+                "anyOf": [
+                 {
+                  "type": "string",
+                  "minLength": 1
+                 },
+                 {
+                  "type": "number",
+                  "minimum": 0
+                 }
+                ],
+                "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+               },
+               "focus": {
+                "default": false,
+                "type": "boolean"
+               }
+              },
+              "required": [
+               "text"
+              ],
+              "additionalProperties": false
+             }
+            }
+           },
+           "required": [
+            "app",
+            "title",
+            "items"
+           ],
+           "additionalProperties": false
+          },
+          {
+           "type": "object",
+           "properties": {
+            "app": {
+             "type": "string",
+             "const": "feed"
+            },
+            "title": {
+             "type": "string"
+            },
+            "items": {
+             "minItems": 1,
+             "maxItems": 6,
+             "type": "array",
+             "items": {
+              "type": "object",
+              "properties": {
+               "author": {
+                "type": "string"
+               },
+               "text": {
+                "type": "string"
+               },
+               "likes": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+               },
+               "cue": {
+                "anyOf": [
+                 {
+                  "type": "string",
+                  "minLength": 1
+                 },
+                 {
+                  "type": "number",
+                  "minimum": 0
+                 }
+                ],
+                "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+               },
+               "asset": {
+                "type": "string",
+                "minLength": 1,
+                "description": "An id from public/library/manifest.json"
+               }
+              },
+              "required": [
+               "author",
+               "text"
+              ],
+              "additionalProperties": false
+             }
+            },
+            "scrollCue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            }
+           },
+           "required": [
+            "app",
+            "items"
+           ],
+           "additionalProperties": false
+          },
+          {
+           "type": "object",
+           "properties": {
+            "app": {
+             "type": "string",
+             "const": "browser"
+            },
+            "url": {
+             "type": "string"
+            },
+            "typeCue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            },
+            "heading": {
+             "type": "string"
+            },
+            "body": {
+             "type": "string"
+            },
+            "warning": {
+             "type": "object",
+             "properties": {
+              "text": {
+               "type": "string"
+              },
+              "cue": {
+               "anyOf": [
+                {
+                 "type": "string",
+                 "minLength": 1
+                },
+                {
+                 "type": "number",
+                 "minimum": 0
+                }
+               ],
+               "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+              }
+             },
+             "required": [
+              "text",
+              "cue"
+             ],
+             "additionalProperties": false
+            }
+           },
+           "required": [
+            "app",
+            "url",
+            "heading"
+           ],
+           "additionalProperties": false
+          }
+         ]
+        },
+        "title": {
+         "type": "object",
+         "properties": {
+          "text": {
+           "type": "string",
+           "minLength": 1,
+           "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+          },
+          "cue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          },
+          "reveal": {
+           "default": "lines",
+           "type": "string",
+           "enum": [
+            "lines",
+            "words",
+            "chars",
+            "spoken",
+            "punch",
+            "none"
+           ]
+          },
+          "emphasis": {
+           "description": "Defaults to the art direction's emphasis",
+           "type": "string",
+           "enum": [
+            "color",
+            "marker",
+            "underline",
+            "italic",
+            "strike",
+            "box"
+           ]
+          },
+          "emphasisCue": {
+           "description": "The word that triggers the emphasis animation",
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ]
+          },
+          "role": {
+           "default": "display",
+           "type": "string",
+           "enum": [
+            "display",
+            "statement",
+            "italic",
+            "body"
+           ]
+          },
+          "tone": {
+           "default": "ink",
+           "type": "string",
+           "enum": [
+            "ink",
+            "accent",
+            "accent2",
+            "muted",
+            "danger"
+           ]
+          },
+          "align": {
+           "default": "left",
+           "type": "string",
+           "enum": [
+            "left",
+            "center",
+            "right"
+           ]
+          },
+          "maxSize": {
+           "type": "number",
+           "exclusiveMinimum": 0
+          },
+          "exitCue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          }
+         },
+         "required": [
+          "text"
+         ],
+         "additionalProperties": false
+        },
+        "titleStage": {
+         "default": "top",
+         "description": "poster: the title takes the whole frame, for when a pose sends the phone away",
+         "type": "string",
+         "enum": [
+          "top",
+          "poster"
+         ]
+        },
+        "poses": {
+         "default": [],
+         "description": "Tilt and zoom keyed to words: the camera tracks the phone",
+         "type": "array",
+         "items": {
+          "type": "object",
+          "properties": {
+           "cue": {
+            "anyOf": [
+             {
+              "type": "string",
+              "minLength": 1
+             },
+             {
+              "type": "number",
+              "minimum": 0
+             }
+            ],
+            "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+           },
+           "rx": {
+            "type": "number"
+           },
+           "ry": {
+            "type": "number"
+           },
+           "rz": {
+            "type": "number"
+           },
+           "scale": {
+            "type": "number"
+           },
+           "x": {
+            "type": "number"
+           },
+           "y": {
+            "type": "number"
+           }
+          },
+          "required": [
+           "cue"
+          ],
+          "additionalProperties": false
+         }
+        },
+        "enterCue": {
+         "anyOf": [
+          {
+           "type": "string",
+           "minLength": 1
+          },
+          {
+           "type": "number",
+           "minimum": 0
+          }
+         ],
+         "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+        }
+       },
+       "required": [
+        "type",
+        "layout",
+        "screen"
+       ],
+       "additionalProperties": false
+      },
+      {
+       "oneOf": [
+        {
+         "type": "object",
+         "properties": {
+          "type": {
+           "type": "string",
+           "const": "stage3d"
+          },
+          "title": {
+           "type": "object",
+           "properties": {
+            "text": {
+             "type": "string",
+             "minLength": 1,
+             "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+            },
+            "cue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            },
+            "reveal": {
+             "default": "lines",
+             "type": "string",
+             "enum": [
+              "lines",
+              "words",
+              "chars",
+              "spoken",
+              "punch",
+              "none"
+             ]
+            },
+            "emphasis": {
+             "description": "Defaults to the art direction's emphasis",
+             "type": "string",
+             "enum": [
+              "color",
+              "marker",
+              "underline",
+              "italic",
+              "strike",
+              "box"
+             ]
+            },
+            "emphasisCue": {
+             "description": "The word that triggers the emphasis animation",
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ]
+            },
+            "role": {
+             "default": "display",
+             "type": "string",
+             "enum": [
+              "display",
+              "statement",
+              "italic",
+              "body"
+             ]
+            },
+            "tone": {
+             "default": "ink",
+             "type": "string",
+             "enum": [
+              "ink",
+              "accent",
+              "accent2",
+              "muted",
+              "danger"
+             ]
+            },
+            "align": {
+             "default": "left",
+             "type": "string",
+             "enum": [
+              "left",
+              "center",
+              "right"
+             ]
+            },
+            "maxSize": {
+             "type": "number",
+             "exclusiveMinimum": 0
+            },
+            "exitCue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            }
+           },
+           "required": [
+            "text"
+           ],
+           "additionalProperties": false
+          },
+          "titleAnchor": {
+           "default": "top",
+           "type": "string",
+           "enum": [
+            "top",
+            "center",
+            "bottom"
+           ]
+          },
+          "labels": {
+           "default": [],
+           "type": "array",
+           "items": {
+            "type": "object",
+            "properties": {
+             "target": {
+              "anyOf": [
+               {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+               },
+               {
+                "type": "string"
+               }
+              ],
+              "description": "Index of a piece"
+             },
+             "text": {
+              "type": "string"
+             },
+             "cue": {
+              "anyOf": [
+               {
+                "type": "string",
+                "minLength": 1
+               },
+               {
+                "type": "number",
+                "minimum": 0
+               }
+              ],
+              "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+             }
+            },
+            "required": [
+             "target",
+             "text"
+            ],
+            "additionalProperties": false
+           }
+          },
+          "orbit": {
+           "default": 0.12,
+           "description": "Radians the camera travels around the subject",
+           "type": "number"
+          },
+          "floor": {
+           "default": true,
+           "type": "boolean"
+          },
+          "preset": {
+           "type": "string",
+           "const": "dominoes"
+          },
+          "count": {
+           "type": "integer",
+           "minimum": 3,
+           "maximum": 16
+          },
+          "startCue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          },
+          "seconds": {
+           "default": 2,
+           "type": "number",
+           "exclusiveMinimum": 0
+          },
+          "stopAt": {
+           "description": "Index that survives",
+           "type": "integer",
+           "minimum": -9007199254740991,
+           "maximum": 9007199254740991
+          },
+          "piece": {
+           "type": "string",
+           "enum": [
+            "house",
+            "card",
+            "coin",
+            "phone",
+            "box",
+            "sphere",
+            "key",
+            "book",
+            "tv",
+            "weight"
+           ]
+          }
+         },
+         "required": [
+          "type",
+          "preset",
+          "count"
+         ],
+         "additionalProperties": false
+        },
+        {
+         "type": "object",
+         "properties": {
+          "type": {
+           "type": "string",
+           "const": "stage3d"
+          },
+          "title": {
+           "type": "object",
+           "properties": {
+            "text": {
+             "type": "string",
+             "minLength": 1,
+             "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+            },
+            "cue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            },
+            "reveal": {
+             "default": "lines",
+             "type": "string",
+             "enum": [
+              "lines",
+              "words",
+              "chars",
+              "spoken",
+              "punch",
+              "none"
+             ]
+            },
+            "emphasis": {
+             "description": "Defaults to the art direction's emphasis",
+             "type": "string",
+             "enum": [
+              "color",
+              "marker",
+              "underline",
+              "italic",
+              "strike",
+              "box"
+             ]
+            },
+            "emphasisCue": {
+             "description": "The word that triggers the emphasis animation",
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ]
+            },
+            "role": {
+             "default": "display",
+             "type": "string",
+             "enum": [
+              "display",
+              "statement",
+              "italic",
+              "body"
+             ]
+            },
+            "tone": {
+             "default": "ink",
+             "type": "string",
+             "enum": [
+              "ink",
+              "accent",
+              "accent2",
+              "muted",
+              "danger"
+             ]
+            },
+            "align": {
+             "default": "left",
+             "type": "string",
+             "enum": [
+              "left",
+              "center",
+              "right"
+             ]
+            },
+            "maxSize": {
+             "type": "number",
+             "exclusiveMinimum": 0
+            },
+            "exitCue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            }
+           },
+           "required": [
+            "text"
+           ],
+           "additionalProperties": false
+          },
+          "titleAnchor": {
+           "default": "top",
+           "type": "string",
+           "enum": [
+            "top",
+            "center",
+            "bottom"
+           ]
+          },
+          "labels": {
+           "default": [],
+           "type": "array",
+           "items": {
+            "type": "object",
+            "properties": {
+             "target": {
+              "anyOf": [
+               {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+               },
+               {
+                "type": "string"
+               }
+              ],
+              "description": "Index of a piece"
+             },
+             "text": {
+              "type": "string"
+             },
+             "cue": {
+              "anyOf": [
+               {
+                "type": "string",
+                "minLength": 1
+               },
+               {
+                "type": "number",
+                "minimum": 0
+               }
+              ],
+              "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+             }
+            },
+            "required": [
+             "target",
+             "text"
+            ],
+            "additionalProperties": false
+           }
+          },
+          "orbit": {
+           "default": 0.12,
+           "description": "Radians the camera travels around the subject",
+           "type": "number"
+          },
+          "floor": {
+           "default": true,
+           "type": "boolean"
+          },
+          "preset": {
+           "type": "string",
+           "const": "tower"
+          },
+          "count": {
+           "type": "integer",
+           "minimum": 2,
+           "maximum": 60
+          },
+          "piece": {
+           "default": "coin",
+           "type": "string",
+           "enum": [
+            "coin",
+            "box",
+            "book"
+           ]
+          },
+          "buildCue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          },
+          "seconds": {
+           "default": 1.6,
+           "type": "number",
+           "exclusiveMinimum": 0
+          },
+          "collapseCue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          }
+         },
+         "required": [
+          "type",
+          "preset",
+          "count"
+         ],
+         "additionalProperties": false
+        },
+        {
+         "type": "object",
+         "properties": {
+          "type": {
+           "type": "string",
+           "const": "stage3d"
+          },
+          "title": {
+           "type": "object",
+           "properties": {
+            "text": {
+             "type": "string",
+             "minLength": 1,
+             "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+            },
+            "cue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            },
+            "reveal": {
+             "default": "lines",
+             "type": "string",
+             "enum": [
+              "lines",
+              "words",
+              "chars",
+              "spoken",
+              "punch",
+              "none"
+             ]
+            },
+            "emphasis": {
+             "description": "Defaults to the art direction's emphasis",
+             "type": "string",
+             "enum": [
+              "color",
+              "marker",
+              "underline",
+              "italic",
+              "strike",
+              "box"
+             ]
+            },
+            "emphasisCue": {
+             "description": "The word that triggers the emphasis animation",
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ]
+            },
+            "role": {
+             "default": "display",
+             "type": "string",
+             "enum": [
+              "display",
+              "statement",
+              "italic",
+              "body"
+             ]
+            },
+            "tone": {
+             "default": "ink",
+             "type": "string",
+             "enum": [
+              "ink",
+              "accent",
+              "accent2",
+              "muted",
+              "danger"
+             ]
+            },
+            "align": {
+             "default": "left",
+             "type": "string",
+             "enum": [
+              "left",
+              "center",
+              "right"
+             ]
+            },
+            "maxSize": {
+             "type": "number",
+             "exclusiveMinimum": 0
+            },
+            "exitCue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            }
+           },
+           "required": [
+            "text"
+           ],
+           "additionalProperties": false
+          },
+          "titleAnchor": {
+           "default": "top",
+           "type": "string",
+           "enum": [
+            "top",
+            "center",
+            "bottom"
+           ]
+          },
+          "labels": {
+           "default": [],
+           "type": "array",
+           "items": {
+            "type": "object",
+            "properties": {
+             "target": {
+              "anyOf": [
+               {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+               },
+               {
+                "type": "string"
+               }
+              ],
+              "description": "Index of a piece"
+             },
+             "text": {
+              "type": "string"
+             },
+             "cue": {
+              "anyOf": [
+               {
+                "type": "string",
+                "minLength": 1
+               },
+               {
+                "type": "number",
+                "minimum": 0
+               }
+              ],
+              "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+             }
+            },
+            "required": [
+             "target",
+             "text"
+            ],
+            "additionalProperties": false
+           }
+          },
+          "orbit": {
+           "default": 0.12,
+           "description": "Radians the camera travels around the subject",
+           "type": "number"
+          },
+          "floor": {
+           "default": true,
+           "type": "boolean"
+          },
+          "preset": {
+           "type": "string",
+           "const": "balance"
+          },
+          "left": {
+           "type": "string",
+           "enum": [
+            "house",
+            "card",
+            "coin",
+            "phone",
+            "box",
+            "sphere",
+            "key",
+            "book",
+            "tv",
+            "weight"
+           ]
+          },
+          "right": {
+           "type": "string",
+           "enum": [
+            "house",
+            "card",
+            "coin",
+            "phone",
+            "box",
+            "sphere",
+            "key",
+            "book",
+            "tv",
+            "weight"
+           ]
+          },
+          "leftCount": {
+           "default": 1,
+           "type": "integer",
+           "minimum": 1,
+           "maximum": 8
+          },
+          "rightCount": {
+           "default": 1,
+           "type": "integer",
+           "minimum": 1,
+           "maximum": 8
+          },
+          "tilts": {
+           "minItems": 1,
+           "type": "array",
+           "items": {
+            "type": "object",
+            "properties": {
+             "cue": {
+              "anyOf": [
+               {
+                "type": "string",
+                "minLength": 1
+               },
+               {
+                "type": "number",
+                "minimum": 0
+               }
+              ],
+              "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+             },
+             "tilt": {
+              "type": "number",
+              "minimum": -0.5,
+              "maximum": 0.5
+             }
+            },
+            "required": [
+             "cue",
+             "tilt"
+            ],
+            "additionalProperties": false
+           },
+           "description": "Positive lowers the right pan"
+          },
+          "pushCue": {
+           "description": "The camera moves in on the lowered side on this word",
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ]
+          }
+         },
+         "required": [
+          "type",
+          "preset",
+          "left",
+          "right",
+          "tilts"
+         ],
+         "additionalProperties": false
+        },
+        {
+         "type": "object",
+         "properties": {
+          "type": {
+           "type": "string",
+           "const": "stage3d"
+          },
+          "title": {
+           "type": "object",
+           "properties": {
+            "text": {
+             "type": "string",
+             "minLength": 1,
+             "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+            },
+            "cue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            },
+            "reveal": {
+             "default": "lines",
+             "type": "string",
+             "enum": [
+              "lines",
+              "words",
+              "chars",
+              "spoken",
+              "punch",
+              "none"
+             ]
+            },
+            "emphasis": {
+             "description": "Defaults to the art direction's emphasis",
+             "type": "string",
+             "enum": [
+              "color",
+              "marker",
+              "underline",
+              "italic",
+              "strike",
+              "box"
+             ]
+            },
+            "emphasisCue": {
+             "description": "The word that triggers the emphasis animation",
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ]
+            },
+            "role": {
+             "default": "display",
+             "type": "string",
+             "enum": [
+              "display",
+              "statement",
+              "italic",
+              "body"
+             ]
+            },
+            "tone": {
+             "default": "ink",
+             "type": "string",
+             "enum": [
+              "ink",
+              "accent",
+              "accent2",
+              "muted",
+              "danger"
+             ]
+            },
+            "align": {
+             "default": "left",
+             "type": "string",
+             "enum": [
+              "left",
+              "center",
+              "right"
+             ]
+            },
+            "maxSize": {
+             "type": "number",
+             "exclusiveMinimum": 0
+            },
+            "exitCue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            }
+           },
+           "required": [
+            "text"
+           ],
+           "additionalProperties": false
+          },
+          "titleAnchor": {
+           "default": "top",
+           "type": "string",
+           "enum": [
+            "top",
+            "center",
+            "bottom"
+           ]
+          },
+          "labels": {
+           "default": [],
+           "type": "array",
+           "items": {
+            "type": "object",
+            "properties": {
+             "target": {
+              "anyOf": [
+               {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+               },
+               {
+                "type": "string"
+               }
+              ],
+              "description": "Index of a piece"
+             },
+             "text": {
+              "type": "string"
+             },
+             "cue": {
+              "anyOf": [
+               {
+                "type": "string",
+                "minLength": 1
+               },
+               {
+                "type": "number",
+                "minimum": 0
+               }
+              ],
+              "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+             }
+            },
+            "required": [
+             "target",
+             "text"
+            ],
+            "additionalProperties": false
+           }
+          },
+          "orbit": {
+           "default": 0.12,
+           "description": "Radians the camera travels around the subject",
+           "type": "number"
+          },
+          "floor": {
+           "default": true,
+           "type": "boolean"
+          },
+          "preset": {
+           "type": "string",
+           "const": "iceberg"
+          },
+          "diveCue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          },
+          "surface": {
+           "type": "string"
+          },
+          "depth": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "type",
+          "preset",
+          "diveCue"
+         ],
+         "additionalProperties": false
+        },
+        {
+         "type": "object",
+         "properties": {
+          "type": {
+           "type": "string",
+           "const": "stage3d"
+          },
+          "title": {
+           "type": "object",
+           "properties": {
+            "text": {
+             "type": "string",
+             "minLength": 1,
+             "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+            },
+            "cue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            },
+            "reveal": {
+             "default": "lines",
+             "type": "string",
+             "enum": [
+              "lines",
+              "words",
+              "chars",
+              "spoken",
+              "punch",
+              "none"
+             ]
+            },
+            "emphasis": {
+             "description": "Defaults to the art direction's emphasis",
+             "type": "string",
+             "enum": [
+              "color",
+              "marker",
+              "underline",
+              "italic",
+              "strike",
+              "box"
+             ]
+            },
+            "emphasisCue": {
+             "description": "The word that triggers the emphasis animation",
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ]
+            },
+            "role": {
+             "default": "display",
+             "type": "string",
+             "enum": [
+              "display",
+              "statement",
+              "italic",
+              "body"
+             ]
+            },
+            "tone": {
+             "default": "ink",
+             "type": "string",
+             "enum": [
+              "ink",
+              "accent",
+              "accent2",
+              "muted",
+              "danger"
+             ]
+            },
+            "align": {
+             "default": "left",
+             "type": "string",
+             "enum": [
+              "left",
+              "center",
+              "right"
+             ]
+            },
+            "maxSize": {
+             "type": "number",
+             "exclusiveMinimum": 0
+            },
+            "exitCue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            }
+           },
+           "required": [
+            "text"
+           ],
+           "additionalProperties": false
+          },
+          "titleAnchor": {
+           "default": "top",
+           "type": "string",
+           "enum": [
+            "top",
+            "center",
+            "bottom"
+           ]
+          },
+          "labels": {
+           "default": [],
+           "type": "array",
+           "items": {
+            "type": "object",
+            "properties": {
+             "target": {
+              "anyOf": [
+               {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+               },
+               {
+                "type": "string"
+               }
+              ],
+              "description": "Index of a piece"
+             },
+             "text": {
+              "type": "string"
+             },
+             "cue": {
+              "anyOf": [
+               {
+                "type": "string",
+                "minLength": 1
+               },
+               {
+                "type": "number",
+                "minimum": 0
+               }
+              ],
+              "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+             }
+            },
+            "required": [
+             "target",
+             "text"
+            ],
+            "additionalProperties": false
+           }
+          },
+          "orbit": {
+           "default": 0.12,
+           "description": "Radians the camera travels around the subject",
+           "type": "number"
+          },
+          "floor": {
+           "default": true,
+           "type": "boolean"
+          },
+          "preset": {
+           "type": "string",
+           "const": "orbit"
+          },
+          "satellites": {
+           "default": 4,
+           "type": "integer",
+           "minimum": 0,
+           "maximum": 8
+          },
+          "texture": {
+           "type": "string",
+           "minLength": 1,
+           "description": "An id from public/library/manifest.json"
+          },
+          "signalCue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          },
+          "lockCue": {
+           "description": "The camera flies to the pin on this word",
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ]
+          },
+          "pin": {
+           "description": "[latitude, longitude]",
+           "type": "array",
+           "prefixItems": [
+            {
+             "type": "number",
+             "minimum": -90,
+             "maximum": 90
+            },
+            {
+             "type": "number",
+             "minimum": -180,
+             "maximum": 180
+            }
+           ]
+          }
+         },
+         "required": [
+          "type",
+          "preset"
+         ],
+         "additionalProperties": false
+        },
+        {
+         "type": "object",
+         "properties": {
+          "type": {
+           "type": "string",
+           "const": "stage3d"
+          },
+          "title": {
+           "type": "object",
+           "properties": {
+            "text": {
+             "type": "string",
+             "minLength": 1,
+             "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+            },
+            "cue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            },
+            "reveal": {
+             "default": "lines",
+             "type": "string",
+             "enum": [
+              "lines",
+              "words",
+              "chars",
+              "spoken",
+              "punch",
+              "none"
+             ]
+            },
+            "emphasis": {
+             "description": "Defaults to the art direction's emphasis",
+             "type": "string",
+             "enum": [
+              "color",
+              "marker",
+              "underline",
+              "italic",
+              "strike",
+              "box"
+             ]
+            },
+            "emphasisCue": {
+             "description": "The word that triggers the emphasis animation",
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ]
+            },
+            "role": {
+             "default": "display",
+             "type": "string",
+             "enum": [
+              "display",
+              "statement",
+              "italic",
+              "body"
+             ]
+            },
+            "tone": {
+             "default": "ink",
+             "type": "string",
+             "enum": [
+              "ink",
+              "accent",
+              "accent2",
+              "muted",
+              "danger"
+             ]
+            },
+            "align": {
+             "default": "left",
+             "type": "string",
+             "enum": [
+              "left",
+              "center",
+              "right"
+             ]
+            },
+            "maxSize": {
+             "type": "number",
+             "exclusiveMinimum": 0
+            },
+            "exitCue": {
+             "anyOf": [
+              {
+               "type": "string",
+               "minLength": 1
+              },
+              {
+               "type": "number",
+               "minimum": 0
+              }
+             ],
+             "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+            }
+           },
+           "required": [
+            "text"
+           ],
+           "additionalProperties": false
+          },
+          "titleAnchor": {
+           "default": "top",
+           "type": "string",
+           "enum": [
+            "top",
+            "center",
+            "bottom"
+           ]
+          },
+          "labels": {
+           "default": [],
+           "type": "array",
+           "items": {
+            "type": "object",
+            "properties": {
+             "target": {
+              "anyOf": [
+               {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+               },
+               {
+                "type": "string"
+               }
+              ],
+              "description": "Index of a piece"
+             },
+             "text": {
+              "type": "string"
+             },
+             "cue": {
+              "anyOf": [
+               {
+                "type": "string",
+                "minLength": 1
+               },
+               {
+                "type": "number",
+                "minimum": 0
+               }
+              ],
+              "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+             }
+            },
+            "required": [
+             "target",
+             "text"
+            ],
+            "additionalProperties": false
+           }
+          },
+          "orbit": {
+           "default": 0.12,
+           "description": "Radians the camera travels around the subject",
+           "type": "number"
+          },
+          "floor": {
+           "default": true,
+           "type": "boolean"
+          },
+          "preset": {
+           "type": "string",
+           "const": "spotlight"
+          },
+          "object": {
+           "type": "string",
+           "enum": [
+            "house",
+            "card",
+            "coin",
+            "phone",
+            "box",
+            "sphere",
+            "key",
+            "book",
+            "tv",
+            "weight"
+           ]
+          },
+          "lightCue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          },
+          "spinCue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          },
+          "breakCue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          }
+         },
+         "required": [
+          "type",
+          "preset",
+          "object"
+         ],
+         "additionalProperties": false
+        }
+       ]
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "split"
+        },
+        "axis": {
+         "default": "horizontal",
+         "description": "horizontal: A on top, B below",
+         "type": "string",
+         "enum": [
+          "horizontal",
+          "vertical",
+          "diagonal"
+         ]
+        },
+        "a": {
+         "type": "object",
+         "properties": {
+          "kicker": {
+           "type": "string"
+          },
+          "word": {
+           "type": "string",
+           "minLength": 1,
+           "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+          },
+          "value": {
+           "type": "string"
+          },
+          "note": {
+           "type": "string"
+          },
+          "asset": {
+           "type": "string",
+           "minLength": 1,
+           "description": "An id from public/library/manifest.json"
+          },
+          "variant": {
+           "type": "string",
+           "enum": [
+            "base",
+            "inverse",
+            "block"
+           ]
+          }
+         },
+         "additionalProperties": false
+        },
+        "b": {
+         "type": "object",
+         "properties": {
+          "kicker": {
+           "type": "string"
+          },
+          "word": {
+           "type": "string",
+           "minLength": 1,
+           "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+          },
+          "value": {
+           "type": "string"
+          },
+          "note": {
+           "type": "string"
+          },
+          "asset": {
+           "type": "string",
+           "minLength": 1,
+           "description": "An id from public/library/manifest.json"
+          },
+          "variant": {
+           "type": "string",
+           "enum": [
+            "base",
+            "inverse",
+            "block"
+           ]
+          }
+         },
+         "additionalProperties": false
+        },
+        "keys": {
+         "minItems": 1,
+         "type": "array",
+         "items": {
+          "type": "object",
+          "properties": {
+           "cue": {
+            "anyOf": [
+             {
+              "type": "string",
+              "minLength": 1
+             },
+             {
+              "type": "number",
+              "minimum": 0
+             }
+            ],
+            "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+           },
+           "at": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+           }
+          },
+          "required": [
+           "cue",
+           "at"
+          ],
+          "additionalProperties": false
+         },
+         "description": "Where the seam moves to: 0 is all B, 1 is all A"
+        },
+        "start": {
+         "default": 1,
+         "type": "number",
+         "minimum": 0,
+         "maximum": 1
+        }
+       },
+       "required": [
+        "type",
+        "a",
+        "b",
+        "keys"
+       ],
+       "additionalProperties": false
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "timeline"
+        },
+        "events": {
+         "minItems": 2,
+         "maxItems": 5,
+         "type": "array",
+         "items": {
+          "type": "object",
+          "properties": {
+           "date": {
+            "type": "string"
+           },
+           "text": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+           },
+           "cue": {
+            "anyOf": [
+             {
+              "type": "string",
+              "minLength": 1
+             },
+             {
+              "type": "number",
+              "minimum": 0
+             }
+            ],
+            "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+           },
+           "tone": {
+            "default": "ink",
+            "type": "string",
+            "enum": [
+             "ink",
+             "accent",
+             "accent2",
+             "muted",
+             "danger"
+            ]
+           }
+          },
+          "required": [
+           "date",
+           "text",
+           "cue"
+          ],
+          "additionalProperties": false
+         }
+        },
+        "style": {
+         "default": "corridor",
+         "type": "string",
+         "enum": [
+          "corridor",
+          "rail"
+         ]
+        }
+       },
+       "required": [
+        "type",
+        "events"
+       ],
+       "additionalProperties": false
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "collage"
+        },
+        "pieces": {
+         "minItems": 1,
+         "maxItems": 10,
+         "type": "array",
+         "items": {
+          "type": "object",
+          "properties": {
+           "kind": {
+            "type": "string",
+            "enum": [
+             "paper",
+             "photo",
+             "stamp",
+             "note",
+             "document",
+             "tape",
+             "word",
+             "receipt"
+            ]
+           },
+           "box": {
+            "type": "array",
+            "prefixItems": [
+             {
+              "type": "number"
+             },
+             {
+              "type": "number"
+             },
+             {
+              "type": "number",
+              "exclusiveMinimum": 0
+             },
+             {
+              "type": "number",
+              "exclusiveMinimum": 0
+             }
+            ],
+            "description": "[left, top, width, height] in 1080x1920 frame pixels"
+           },
+           "rotate": {
+            "default": 0,
+            "type": "number"
+           },
+           "cue": {
+            "anyOf": [
+             {
+              "type": "string",
+              "minLength": 1
+             },
+             {
+              "type": "number",
+              "minimum": 0
+             }
+            ],
+            "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+           },
+           "text": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+           },
+           "lines": {
+            "type": "array",
+            "items": {
+             "type": "string"
+            }
+           },
+           "markLine": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+           },
+           "markCue": {
+            "anyOf": [
+             {
+              "type": "string",
+              "minLength": 1
+             },
+             {
+              "type": "number",
+              "minimum": 0
+             }
+            ],
+            "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+           },
+           "asset": {
+            "type": "string",
+            "minLength": 1,
+            "description": "An id from public/library/manifest.json"
+           },
+           "tone": {
+            "type": "string",
+            "enum": [
+             "ink",
+             "accent",
+             "accent2",
+             "muted",
+             "danger"
+            ]
+           },
+           "depth": {
+            "default": 0,
+            "type": "number"
+           },
+           "size": {
+            "type": "number",
+            "exclusiveMinimum": 0
+           },
+           "torn": {
+            "default": false,
+            "type": "boolean"
+           }
+          },
+          "required": [
+           "kind",
+           "box"
+          ],
+          "additionalProperties": false
+         }
+        },
+        "impactCue": {
+         "description": "Camera shakes once on this word",
+         "anyOf": [
+          {
+           "type": "string",
+           "minLength": 1
+          },
+          {
+           "type": "number",
+           "minimum": 0
+          }
+         ]
+        }
+       },
+       "required": [
+        "type",
+        "pieces"
+       ],
+       "additionalProperties": false
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "journey"
+        },
+        "nodes": {
+         "minItems": 2,
+         "maxItems": 6,
+         "type": "array",
+         "items": {
+          "type": "object",
+          "properties": {
+           "text": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+           },
+           "icon": {
+            "type": "string",
+            "enum": [
+             "user",
+             "wallet",
+             "card",
+             "bank",
+             "phone",
+             "mail",
+             "lock",
+             "shield",
+             "alert",
+             "money",
+             "chain",
+             "gavel",
+             "house",
+             "eye",
+             "globe",
+             "search",
+             "chip",
+             "tv",
+             "hand",
+             "cash",
+             "question"
+            ]
+           },
+           "value": {
+            "type": "string"
+           },
+           "cue": {
+            "anyOf": [
+             {
+              "type": "string",
+              "minLength": 1
+             },
+             {
+              "type": "number",
+              "minimum": 0
+             }
+            ],
+            "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+           },
+           "tone": {
+            "default": "accent",
+            "type": "string",
+            "enum": [
+             "ink",
+             "accent",
+             "accent2",
+             "muted",
+             "danger"
+            ]
+           }
+          },
+          "required": [
+           "text",
+           "cue"
+          ],
+          "additionalProperties": false
+         }
+        },
+        "route": {
+         "default": "zigzag",
+         "type": "string",
+         "enum": [
+          "zigzag",
+          "descend",
+          "climb"
+         ]
+        },
+        "overviewCue": {
+         "description": "Pull back to show the whole chain at once",
+         "anyOf": [
+          {
+           "type": "string",
+           "minLength": 1
+          },
+          {
+           "type": "number",
+           "minimum": 0
+          }
+         ]
+        },
+        "title": {
+         "type": "object",
+         "properties": {
+          "text": {
+           "type": "string",
+           "minLength": 1,
+           "description": "Text; *accent* marks emphasis, \"/\" forces a line break in poster settings"
+          },
+          "cue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          },
+          "reveal": {
+           "default": "lines",
+           "type": "string",
+           "enum": [
+            "lines",
+            "words",
+            "chars",
+            "spoken",
+            "punch",
+            "none"
+           ]
+          },
+          "emphasis": {
+           "description": "Defaults to the art direction's emphasis",
+           "type": "string",
+           "enum": [
+            "color",
+            "marker",
+            "underline",
+            "italic",
+            "strike",
+            "box"
+           ]
+          },
+          "emphasisCue": {
+           "description": "The word that triggers the emphasis animation",
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ]
+          },
+          "role": {
+           "default": "display",
+           "type": "string",
+           "enum": [
+            "display",
+            "statement",
+            "italic",
+            "body"
+           ]
+          },
+          "tone": {
+           "default": "ink",
+           "type": "string",
+           "enum": [
+            "ink",
+            "accent",
+            "accent2",
+            "muted",
+            "danger"
+           ]
+          },
+          "align": {
+           "default": "left",
+           "type": "string",
+           "enum": [
+            "left",
+            "center",
+            "right"
+           ]
+          },
+          "maxSize": {
+           "type": "number",
+           "exclusiveMinimum": 0
+          },
+          "exitCue": {
+           "anyOf": [
+            {
+             "type": "string",
+             "minLength": 1
+            },
+            {
+             "type": "number",
+             "minimum": 0
+            }
+           ],
+           "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+          }
+         },
+         "required": [
+          "text"
+         ],
+         "additionalProperties": false
+        }
+       },
+       "required": [
+        "type",
+        "nodes"
+       ],
+       "additionalProperties": false
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "custom"
+        },
+        "component": {
+         "type": "string",
+         "description": "A name registered in src/editorial/engine/custom.ts"
+        },
+        "props": {
+         "default": {},
+         "type": "object",
+         "propertyNames": {
+          "type": "string"
+         },
+         "additionalProperties": {}
+        },
+        "review": {
+         "type": "string",
+         "minLength": 10,
+         "description": "Why no system fits. Custom scenes need tests and a human look"
+        }
+       },
+       "required": [
+        "type",
+        "component",
+        "review"
+       ],
+       "additionalProperties": false
+      }
+     ]
+    },
+    "choreography": {
+     "default": [],
+     "description": "The planned beats, for humans and the density check",
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "cue": {
+        "anyOf": [
+         {
+          "type": "string",
+          "minLength": 1
+         },
+         {
+          "type": "number",
+          "minimum": 0
+         }
+        ],
+        "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+       },
+       "action": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "cue",
+       "action"
+      ],
+      "additionalProperties": false
+     }
+    },
+    "camera": {
+     "default": {},
+     "type": "object",
+     "properties": {
+      "move": {
+       "default": "pushIn",
+       "type": "string",
+       "enum": [
+        "still",
+        "pushIn",
+        "pullOut",
+        "panLeft",
+        "panRight",
+        "tiltUp",
+        "tiltDown",
+        "driftUp"
+       ]
+      },
+      "keys": {
+       "default": [],
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "cue": {
+          "anyOf": [
+           {
+            "type": "string",
+            "minLength": 1
+           },
+           {
+            "type": "number",
+            "minimum": 0
+           }
+          ],
+          "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+         },
+         "x": {
+          "type": "number"
+         },
+         "y": {
+          "type": "number"
+         },
+         "scale": {
+          "type": "number"
+         },
+         "rotate": {
+          "type": "number"
+         },
+         "seconds": {
+          "type": "number"
+         },
+         "spring": {
+          "type": "string",
+          "enum": [
+           "settle",
+           "soft",
+           "snap",
+           "pop",
+           "bounce",
+           "heavy",
+           "camera"
+          ]
+         }
+        },
+        "required": [
+         "cue"
+        ],
+        "additionalProperties": false
+       }
+      },
+      "handheld": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 2
+      }
+     },
+     "additionalProperties": false
+    },
+    "transition": {
+     "description": "How this scene arrives, centred on its first spoken word",
+     "oneOf": [
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "cut"
+        },
+        "intent": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "type"
+       ],
+       "additionalProperties": false
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "push"
+        },
+        "direction": {
+         "default": "up",
+         "type": "string",
+         "enum": [
+          "left",
+          "right",
+          "up",
+          "down"
+         ]
+        },
+        "seconds": {
+         "default": 0.5,
+         "type": "number",
+         "minimum": 0.15,
+         "maximum": 1.2
+        },
+        "intent": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "type"
+       ],
+       "additionalProperties": false
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "through"
+        },
+        "origin": {
+         "default": [
+          0.5,
+          0.45
+         ],
+         "type": "array",
+         "prefixItems": [
+          {
+           "type": "number",
+           "minimum": -0.5,
+           "maximum": 1.5
+          },
+          {
+           "type": "number",
+           "minimum": -0.5,
+           "maximum": 1.5
+          }
+         ],
+         "description": "[x, y] as a fraction of the frame or image"
+        },
+        "seconds": {
+         "default": 0.6,
+         "type": "number",
+         "minimum": 0.2,
+         "maximum": 1.2
+        },
+        "intent": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "type"
+       ],
+       "additionalProperties": false
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "mask"
+        },
+        "shape": {
+         "default": "circle",
+         "type": "string",
+         "enum": [
+          "circle",
+          "diamond",
+          "diagonal",
+          "bars",
+          "rise"
+         ]
+        },
+        "origin": {
+         "default": [
+          0.5,
+          0.5
+         ],
+         "type": "array",
+         "prefixItems": [
+          {
+           "type": "number",
+           "minimum": -0.5,
+           "maximum": 1.5
+          },
+          {
+           "type": "number",
+           "minimum": -0.5,
+           "maximum": 1.5
+          }
+         ],
+         "description": "[x, y] as a fraction of the frame or image"
+        },
+        "seconds": {
+         "default": 0.55,
+         "type": "number",
+         "minimum": 0.2,
+         "maximum": 1.2
+        },
+        "intent": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "type"
+       ],
+       "additionalProperties": false
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "field"
+        },
+        "origin": {
+         "default": [
+          0.5,
+          0.5
+         ],
+         "type": "array",
+         "prefixItems": [
+          {
+           "type": "number",
+           "minimum": -0.5,
+           "maximum": 1.5
+          },
+          {
+           "type": "number",
+           "minimum": -0.5,
+           "maximum": 1.5
+          }
+         ],
+         "description": "[x, y] as a fraction of the frame or image"
+        },
+        "seconds": {
+         "default": 0.7,
+         "type": "number",
+         "minimum": 0.3,
+         "maximum": 1.4
+        },
+        "intent": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "type"
+       ],
+       "additionalProperties": false
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "morph"
+        },
+        "from": {
+         "type": "array",
+         "prefixItems": [
+          {
+           "type": "number"
+          },
+          {
+           "type": "number"
+          },
+          {
+           "type": "number",
+           "exclusiveMinimum": 0
+          },
+          {
+           "type": "number",
+           "exclusiveMinimum": 0
+          }
+         ],
+         "description": "[left, top, width, height] in 1080x1920 frame pixels"
+        },
+        "to": {
+         "type": "array",
+         "prefixItems": [
+          {
+           "type": "number"
+          },
+          {
+           "type": "number"
+          },
+          {
+           "type": "number",
+           "exclusiveMinimum": 0
+          },
+          {
+           "type": "number",
+           "exclusiveMinimum": 0
+          }
+         ],
+         "description": "[left, top, width, height] in 1080x1920 frame pixels"
+        },
+        "color": {
+         "default": "accent",
+         "type": "string",
+         "enum": [
+          "accent",
+          "accent2",
+          "ink",
+          "bg"
+         ]
+        },
+        "radius": {
+         "default": 0,
+         "type": "number",
+         "minimum": 0
+        },
+        "seconds": {
+         "default": 0.8,
+         "type": "number",
+         "minimum": 0.3,
+         "maximum": 1.4
+        },
+        "intent": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "type",
+        "from"
+       ],
+       "additionalProperties": false
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "glyph"
+        },
+        "glyph": {
+         "type": "string",
+         "minLength": 1,
+         "maxLength": 3
+        },
+        "seconds": {
+         "default": 0.9,
+         "type": "number",
+         "minimum": 0.4,
+         "maximum": 1.6
+        },
+        "intent": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "type",
+        "glyph"
+       ],
+       "additionalProperties": false
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "const": "depth"
+        },
+        "seconds": {
+         "default": 0.65,
+         "type": "number",
+         "minimum": 0.25,
+         "maximum": 1.2
+        },
+        "intent": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "type"
+       ],
+       "additionalProperties": false
+      }
+     ]
+    },
+    "captions": {
+     "default": {},
+     "type": "object",
+     "properties": {
+      "mode": {
+       "default": "on",
+       "type": "string",
+       "enum": [
+        "on",
+        "off"
+       ]
+      },
+      "zone": {
+       "default": "low",
+       "type": "string",
+       "enum": [
+        "low",
+        "high"
+       ]
+      }
+     },
+     "additionalProperties": false
+    },
+    "timing": {
+     "description": "What this picture needs to read",
+     "type": "object",
+     "properties": {
+      "minSeconds": {
+       "type": "number"
+      },
+      "maxSeconds": {
+       "type": "number"
+      }
+     },
+     "additionalProperties": false
+    },
+    "sound": {
+     "default": [],
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "cue": {
+        "anyOf": [
+         {
+          "type": "string",
+          "minLength": 1
+         },
+         {
+          "type": "number",
+          "minimum": 0
+         }
+        ],
+        "description": "A spoken word prefix (\"снял\", \"кадр#2\" for the second) or seconds from the scene start"
+       },
+       "sfx": {
+        "type": "string"
+       },
+       "volume": {
+        "default": 0.5,
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+       }
+      },
+      "required": [
+       "cue",
+       "sfx"
+      ],
+      "additionalProperties": false
+     }
+    },
+    "source": {
+     "default": "hide",
+     "description": "Deprecated and ignored: sources are never shown on screen; they go in the post caption",
+     "type": "string",
+     "enum": [
+      "show",
+      "hide"
+     ]
+    }
+   },
+   "required": [
+    "purpose",
+    "emotion",
+    "concept",
+    "hierarchy",
+    "shot"
+   ],
+   "additionalProperties": false
+  }
+ },
+ "required": [
+  "art",
+  "direction"
+ ],
+ "additionalProperties": false
+}

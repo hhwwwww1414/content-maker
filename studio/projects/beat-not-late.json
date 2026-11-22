@@ -1,0 +1,614 @@
+{
+  "id": "beat-not-late",
+  "topic": "Мотивирующие цитаты под бит, без голоса",
+  "niche": "motivation",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "publication": "draft",
+    "production": "rendered",
+    "approvedScriptHash": "647e39e9d83e8293",
+    "approval": {
+      "by": "qwezyid (цитаты одобрены в чате, без голоса, звук из видео, 2026-11-05)",
+      "at": "2026-11-05"
+    }
+  },
+  "sources": [
+    {
+      "id": "original-copy",
+      "publisher": "Оригинальный текст, одобрен автором",
+      "url": "local:studio/projects/beat-not-late.json",
+      "accessed": "2026-11-05",
+      "claim": "Фразы написаны для этого ролика, фактических утверждений и приписанных кому-либо цитат нет."
+    }
+  ],
+  "title": "Ты не опоздал",
+  "hook": "Ты не опоздал. Ты просто ещё не начал.",
+  "centralIdea": "Начать можно сейчас, в любом темпе, и за тебя этого никто не сделает.",
+  "theme": "signal",
+  "captionStyle": "plate",
+  "art": {
+    "direction": "marker"
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 15.666666666666666,
+  "scenes": [
+    {
+      "id": "paper",
+      "voice": "Ты не опоздал. Ты просто ещё не начал.",
+      "onScreen": "Ты не опоздал. Ты просто ещё не начал.",
+      "thought": "Поздно не бывает, есть только ещё не начатое",
+      "animation": "Жёлтые полосы маркера уже на бумаге, слова падают на удары, затем влетает карточка со следующим кадром",
+      "sources": [
+        "original-copy"
+      ],
+      "direction": {
+        "purpose": "opening",
+        "emotion": "ободряющая уверенность",
+        "concept": "Пустые полосы маркера заранее ждут слова: место уже оставлено, осталось его заполнить",
+        "art": {
+          "variant": "base"
+        },
+        "assets": [
+          "beat-summit"
+        ],
+        "hierarchy": {
+          "primary": "строки на полосах маркера",
+          "secondary": [
+            "карточка со следующим кадром"
+          ]
+        },
+        "shot": {
+          "type": "custom",
+          "component": "beatPaper",
+          "review": "Ни одна система не даёт заранее размеченные полосы маркера и удар карточки поверх текста.",
+          "props": {
+            "asset": "beat-summit",
+            "focus": [
+              0.5,
+              0.5
+            ],
+            "cardCue": 9.03,
+            "lines": [
+              [
+                {
+                  "word": "Ты",
+                  "cue": "Ты"
+                },
+                {
+                  "word": "не",
+                  "cue": "не"
+                },
+                {
+                  "word": "опоздал.",
+                  "cue": "опоздал"
+                }
+              ],
+              [
+                {
+                  "word": "Ты",
+                  "cue": "Ты#2"
+                },
+                {
+                  "word": "просто",
+                  "cue": "просто"
+                }
+              ],
+              [
+                {
+                  "word": "ещё",
+                  "cue": "ещё"
+                },
+                {
+                  "word": "не",
+                  "cue": "не#2"
+                },
+                {
+                  "word": "начал.",
+                  "cue": "начал"
+                }
+              ]
+            ]
+          }
+        },
+        "choreography": [
+          {
+            "cue": "Ты",
+            "action": "первое слово"
+          },
+          {
+            "cue": "начал",
+            "action": "последнее слово"
+          },
+          {
+            "cue": 9.03,
+            "action": "удар карточки"
+          }
+        ],
+        "camera": {
+          "move": "still",
+          "handheld": 0.4
+        },
+        "captions": {
+          "mode": "off"
+        },
+        "source": "hide"
+      },
+      "start": 0,
+      "duration": 9.566666666666666
+    },
+    {
+      "id": "climb",
+      "voice": "Медленно — тоже вперёд.",
+      "onScreen": "Медленно — тоже вперёд.",
+      "thought": "Скорость не отменяет движения",
+      "animation": "Резкая склейка из карточки в полный кадр, слова на ударах",
+      "sources": [
+        "original-copy"
+      ],
+      "direction": {
+        "purpose": "turn",
+        "emotion": "спокойная сила",
+        "concept": "Один человек на гребне, рассвет и никакой спешки: он уже наверху, и путь занял столько, сколько занял",
+        "art": {
+          "variant": "block"
+        },
+        "hierarchy": {
+          "primary": "силуэт на гребне",
+          "secondary": [
+            "фраза"
+          ]
+        },
+        "shot": {
+          "type": "media",
+          "plates": [
+            {
+              "asset": "beat-summit",
+              "focus": [
+                0.5,
+                0.5
+              ],
+              "zoom": 1.2,
+              "endZoom": 1.3
+            }
+          ],
+          "grade": "none",
+          "title": {
+            "text": "Медленно — тоже *вперёд.*",
+            "reveal": "spoken",
+            "tone": "ink",
+            "emphasis": "color",
+            "maxSize": 150
+          },
+          "titleAnchor": "top"
+        },
+        "choreography": [
+          {
+            "cue": "Медленно",
+            "action": "склейка"
+          },
+          {
+            "cue": "вперёд",
+            "action": "акцент"
+          }
+        ],
+        "camera": {
+          "move": "still",
+          "handheld": 0.5
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Удар превращает карточку в целый мир"
+        },
+        "captions": {
+          "mode": "off"
+        },
+        "source": "hide"
+      },
+      "start": 9.566666666666666,
+      "duration": 2.033333333333333
+    },
+    {
+      "id": "nobody",
+      "voice": "Никто, кроме тебя. Пока не смог.",
+      "onScreen": "Никто, кроме тебя. Пока не смог.",
+      "thought": "Ответственность твоя, а неудача временная",
+      "animation": "Бумага поднимается снизу и вытесняет кадр, слова на ударах; склейка в сумерки; «Не смогу» зачёркивается маркером и исправляется",
+      "sources": [
+        "original-copy"
+      ],
+      "direction": {
+        "purpose": "climax",
+        "emotion": "вызов",
+        "concept": "Фраза-приговор буквально зачёркивается: одно слово «пока» меняет смысл",
+        "art": {
+          "variant": "base"
+        },
+        "assets": [
+          "beat-peak"
+        ],
+        "hierarchy": {
+          "primary": "зачёркивание «Не смогу»",
+          "secondary": [
+            "«Пока не смог.»"
+          ]
+        },
+        "shot": {
+          "type": "custom",
+          "component": "beatStrike",
+          "review": "Нужны склейка внутри сцены на ударе и зачёркивание маркером с исправлением на слове.",
+          "props": {
+            "asset": "beat-peak",
+            "focus": [
+              0.62,
+              0.5
+            ],
+            "cutCue": 1.01,
+            "struck": "Не смогу",
+            "strikeCue": "Пока",
+            "fix": [
+              {
+                "word": "Пока",
+                "cue": "Пока"
+              },
+              {
+                "word": "не",
+                "cue": "не"
+              },
+              {
+                "word": "смог.",
+                "cue": "смог"
+              }
+            ],
+            "lines": [
+              [
+                {
+                  "word": "Никто,",
+                  "cue": "Никто"
+                }
+              ],
+              [
+                {
+                  "word": "кроме",
+                  "cue": "кроме"
+                }
+              ],
+              [
+                {
+                  "word": "тебя.",
+                  "cue": "тебя"
+                }
+              ]
+            ]
+          }
+        },
+        "choreography": [
+          {
+            "cue": "Никто",
+            "action": "первое слово"
+          },
+          {
+            "cue": 1.01,
+            "action": "склейка в сумерки"
+          },
+          {
+            "cue": "Пока",
+            "action": "зачёркивание"
+          }
+        ],
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "mask",
+          "shape": "rise",
+          "seconds": 0.4,
+          "intent": "Лист бумаги вытесняет кадр снизу на ударе"
+        },
+        "captions": {
+          "mode": "off"
+        },
+        "source": "hide"
+      },
+      "start": 11.6,
+      "duration": 2.033333333333333
+    },
+    {
+      "id": "today",
+      "voice": "Без сил. Без плана. Но сегодня.",
+      "onScreen": "Без сил. Без плана. Но сегодня.",
+      "thought": "Условий не будет: только сегодняшний день",
+      "animation": "Слова падают на удары в темноте, на «сегодня» снизу поднимается солнце",
+      "sources": [
+        "original-copy"
+      ],
+      "direction": {
+        "purpose": "payoff",
+        "emotion": "решимость",
+        "concept": "Сил и плана нет, но солнце всё равно встаёт: «сегодня» буквально восходит",
+        "art": {
+          "variant": "block"
+        },
+        "hierarchy": {
+          "primary": "восходящий диск",
+          "secondary": [
+            "три короткие фразы"
+          ]
+        },
+        "shot": {
+          "type": "type",
+          "layout": "spoken",
+          "anchor": "top",
+          "headline": {
+            "text": "Без сил. Без плана. Но *сегодня.*",
+            "reveal": "spoken",
+            "tone": "ink",
+            "emphasis": "color",
+            "maxSize": 150
+          },
+          "shape": "disc",
+          "shapeCue": "Но"
+        },
+        "choreography": [
+          {
+            "cue": "Без",
+            "action": "склейка в темноту"
+          },
+          {
+            "cue": "Но",
+            "action": "восход начинается"
+          }
+        ],
+        "camera": {
+          "move": "still",
+          "handheld": 0.3
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Резкая темнота перед последним ударом"
+        },
+        "captions": {
+          "mode": "off"
+        },
+        "source": "hide"
+      },
+      "start": 13.633333333333333,
+      "duration": 2.033333333333333
+    }
+  ],
+  "audio": {
+    "mode": "music",
+    "voicePath": null,
+    "musicPath": "generated/beat-not-late/beat-source.wav",
+    "musicLicense": "Права не подтверждены. Звук взят по просьбе автора из «2026-11-05 12.15.07.mp4»; до публикации подтвердить право на трек или выбрать его в аудиотеке платформы.",
+    "sfx": [],
+    "volume": 1,
+    "beats": {
+      "scenes": {
+        "paper": 0,
+        "climb": 9.57,
+        "nobody": 11.6,
+        "today": 13.63
+      },
+      "words": [
+        0.2,
+        1.34,
+        2.73,
+        3.46,
+        4.95,
+        5.78,
+        7.03,
+        7.98,
+        9.57,
+        9.84,
+        10.12,
+        10.79,
+        11.85,
+        12.1,
+        12.28,
+        13.05,
+        13.17,
+        13.17,
+        13.67,
+        14.09,
+        14.26,
+        14.5,
+        14.84,
+        15.21
+      ]
+    },
+    "durationSeconds": 15.696689,
+    "sourceSha256": "e908f9d94a3f5a9f",
+    "timingMode": "Word times placed on measured onsets of the track"
+  },
+  "captions": [
+    {
+      "text": "Ты",
+      "startMs": 200,
+      "endMs": 600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 1340,
+      "endMs": 1740,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "опоздал.",
+      "startMs": 2730,
+      "endMs": 3130,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Ты",
+      "startMs": 3460,
+      "endMs": 3860,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "просто",
+      "startMs": 4950,
+      "endMs": 5350,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ещё",
+      "startMs": 5780,
+      "endMs": 6180,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 7030,
+      "endMs": 7430,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "начал.",
+      "startMs": 7980,
+      "endMs": 8380,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Медленно",
+      "startMs": 9570,
+      "endMs": 9840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 9840,
+      "endMs": 10120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тоже",
+      "startMs": 10120,
+      "endMs": 10520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вперёд.",
+      "startMs": 10790,
+      "endMs": 11190,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Никто,",
+      "startMs": 11850,
+      "endMs": 12100,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "кроме",
+      "startMs": 12100,
+      "endMs": 12280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тебя.",
+      "startMs": 12280,
+      "endMs": 12680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Пока",
+      "startMs": 13050,
+      "endMs": 13170,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 13170,
+      "endMs": 13210,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "смог.",
+      "startMs": 13170,
+      "endMs": 13570,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Без",
+      "startMs": 13670,
+      "endMs": 14070,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сил.",
+      "startMs": 14090,
+      "endMs": 14260,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Без",
+      "startMs": 14260,
+      "endMs": 14500,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "плана.",
+      "startMs": 14500,
+      "endMs": 14840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Но",
+      "startMs": 14840,
+      "endMs": 15210,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сегодня.",
+      "startMs": 15210,
+      "endMs": 15610,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "limits": {
+    "minSeconds": 15.6,
+    "maxSeconds": 15.8,
+    "targetSeconds": 15.67
+  },
+  "editorialReview": {
+    "openClaims": [
+      "Право на звук не подтверждено: трек взят из присланного видео, его автор и лицензия неизвестны.",
+      "Фразы не цитируют никого конкретного; это авторский текст, не цитаты известных людей."
+    ]
+  },
+  "renderPath": "out/studio/beat-not-late.mp4",
+  "qa": {
+    "path": "out/studio/beat-not-late-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  }
+}

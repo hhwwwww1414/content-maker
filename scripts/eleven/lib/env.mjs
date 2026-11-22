@@ -32,8 +32,14 @@ const DEFAULTS = {
  */
 export const readElevenLabsEnv = () => {
   loadDotEnv();
+  // ELEVENLABS_API_KEY, then _2, _3… Keys are tried in order so a run can
+  // continue on the next account when one is out of characters.
+  const keys = [process.env.ELEVENLABS_API_KEY, process.env.ELEVENLABS_API_KEY_2, process.env.ELEVENLABS_API_KEY_3]
+    .map((key) => (key ?? '').trim())
+    .filter(Boolean);
   const cfg = {
-    apiKey: process.env.ELEVENLABS_API_KEY ?? '',
+    keys,
+    apiKey: keys[0] ?? '',
     voiceId: process.env.ELEVENLABS_VOICE_ID ?? '',
     modelId: process.env.ELEVENLABS_MODEL_ID || DEFAULTS.ELEVENLABS_MODEL_ID,
     outputFormat: process.env.ELEVENLABS_OUTPUT_FORMAT || DEFAULTS.ELEVENLABS_OUTPUT_FORMAT,

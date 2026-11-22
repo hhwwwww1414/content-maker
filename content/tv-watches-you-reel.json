@@ -1,0 +1,236 @@
+{
+  "id": "tv-watches-you",
+  "compositionId": "TvWatchesYouReel",
+  "contactSheetCompositionId": "TvWatchesYouContactSheet",
+  "npmPrefix": "tv-watches-you",
+  "title": "Твой телевизор снимает твой экран два раза в секунду",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/tv-watches-you/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 800,
+  "background": {
+    "type": "loop-video",
+    "file": "assets/background.mp4",
+    "muted": true,
+    "fit": "cover",
+    "overlayOpacity": 0.44,
+    "note": "Единственный фон ролика. Зациклен, без звука, нижний постоянный слой."
+  },
+  "source": {
+    "primary": "Texas Attorney General — Samsung ACR agreement",
+    "secondary": "UCL / ACM IMC 2024 — smart TV ACR measurement",
+    "topic": "ACR в умных телевизорах, иск Техаса 2025–2026"
+  },
+  "tts": {
+    "language": "ru",
+    "speed": 1.2,
+    "direction": "Тридцать секунд, темп плотный. Хук — три коротких удара без паузы. Твист про консоль — на полтона ниже. Финал — быстро и дружелюбно.",
+    "note": "Самсунг → Samsung. Даты и числа проговариваются модулем numerals, на экране остаются цифрами."
+  },
+  "captionClusters": {
+    "targetSeconds": [0.5, 0.8],
+    "growUntilSeconds": 0.42,
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и", "а", "но", "не", "ни", "в", "во", "на", "по", "за", "из", "от", "до",
+      "к", "ко", "с", "со", "у", "о", "об", "про", "для", "что", "как", "это",
+      "всё", "ещё", "же", "ты", "он", "она", "я", "мы", "чтобы", "так", "там",
+      "уже", "или", "бы", "тебе", "этот", "над", "тем", "её", "его", "ему", "их",
+      "то", "есть", "если", "теперь", "они", "себе", "вот", "даже", "будет",
+      "только", "когда", "тут", "им", "ним", "где", "два", "оно", "сам"
+    ],
+    "highlightWords": {
+      "red": ["снял", "снимается", "иск", "весь", "целиком"],
+      "yellow": ["кадр", "отпечаток", "рекламным", "кабелю", "умолчанию"],
+      "mint": ["выключается", "настройках"]
+    },
+    "displayReplacements": {
+      "самсунг": "Samsung"
+    }
+  },
+  "lines": [
+    {"id": "l01", "chapter": "hook", "text": "Ты включил телевизор.", "breakAfter": "line"},
+    {"id": "l02", "chapter": "hook", "text": "Он снял с экрана кадр.", "breakAfter": "line"},
+    {"id": "l03", "chapter": "hook", "text": "Через полсекунды — ещё один.", "breakAfter": "block"},
+
+    {"id": "l04", "chapter": "what", "text": "Кадр сводят к отпечатку.", "breakAfter": "line"},
+    {"id": "l05", "chapter": "what", "text": "По нему узнают, что смотришь.", "breakAfter": "line"},
+    {"id": "l06", "chapter": "what", "text": "Дальше — рекламным сетям.", "breakAfter": "block"},
+
+    {"id": "l07", "chapter": "twist", "text": "Консоль не спасает.", "breakAfter": "line"},
+    {"id": "l08", "chapter": "twist", "text": "Снимается весь экран.", "breakAfter": "line"},
+    {"id": "l09", "chapter": "twist", "text": "Даже то, что по кабелю.", "breakAfter": "block"},
+
+    {"id": "l10", "chapter": "proof", "text": "В декабре 2025 Техас подал иск.", "breakAfter": "line"},
+    {"id": "l11", "chapter": "proof", "text": "Ответчиков было пять.", "breakAfter": "line"},
+    {"id": "l12", "chapter": "proof", "text": "В феврале Самсунг согласилась.", "breakAfter": "block"},
+
+    {"id": "l13", "chapter": "fix", "text": "По умолчанию включено.", "breakAfter": "line"},
+    {"id": "l14", "chapter": "fix", "text": "Выключается в настройках.", "breakAfter": "line"},
+    {"id": "l15", "chapter": "fix", "text": "Пункт «распознавание контента».", "breakAfter": "block"},
+
+    {"id": "l16", "chapter": "cta", "text": "Пойдёшь выключать?", "breakAfter": "line"},
+    {"id": "l17", "chapter": "cta", "text": "Пойду.", "breakAfter": "line"},
+    {"id": "l18", "chapter": "cta", "text": "Пусть смотрит.", "breakAfter": "none"}
+  ],
+  "chapters": [
+    {
+      "id": "hook",
+      "label": "ЧТО ДЕЛАЕТ ТЕЛЕВИЗОР",
+      "headline": "ОН СНИМАЕТ\nТВОЙ ЭКРАН",
+      "fromLine": "l01",
+      "toLine": "l03",
+      "grammar": {
+        "type": "counters",
+        "card": "ЧАСТОТА СЪЁМКИ ЭКРАНА",
+        "lead": {"label": "ПОКА ТЕЛЕВИЗОР ВКЛЮЧЁН", "at": "l01"},
+        "counters": [
+          {"label": "500 МС МЕЖДУ КАДРАМИ", "tone": "yellow", "at": "l02"},
+          {"label": "2 КАДРА В СЕКУНДУ", "tone": "red", "at": "l03"}
+        ]
+      }
+    },
+    {
+      "id": "what",
+      "label": "КУДА ЭТО ИДЁТ",
+      "headline": "КАДР СТАНОВИТСЯ\nСТРОЧКОЙ О ТЕБЕ",
+      "fromLine": "l04",
+      "toLine": "l06",
+      "grammar": {
+        "type": "flow",
+        "card": "ПУТЬ ОДНОГО КАДРА",
+        "direction": "column",
+        "nodes": [
+          {"label": "КАДР С ЭКРАНА", "tone": "neutral", "at": "l04"},
+          {"label": "ОТПЕЧАТОК", "tone": "yellow", "at": "l04", "offsetMs": 700},
+          {"label": "ПОИСК ПО БАЗЕ", "tone": "yellow", "at": "l05"},
+          {"label": "РЕКЛАМНЫЕ СЕТИ", "tone": "red", "at": "l06"}
+        ],
+        "verdict": {"label": "ЗНАЮТ, ЧТО ТЫ СМОТРИШЬ", "tone": "red", "at": "l06", "offsetMs": 700}
+      }
+    },
+    {
+      "id": "twist",
+      "label": "ПОЧЕМУ НЕ СПРЯТАТЬСЯ",
+      "headline": "СНИМАЕТСЯ\nВЕСЬ ЭКРАН",
+      "fromLine": "l07",
+      "toLine": "l09",
+      "grammar": {
+        "type": "statement",
+        "card": "ЧАСТОЕ ВОЗРАЖЕНИЕ",
+        "claim": "У МЕНЯ КОНСОЛЬ, МЕНЯ НЕ ПИШУТ",
+        "claimTone": "yellow",
+        "strikeAt": "l08",
+        "items": [
+          {"label": "ПРИСТАВКА", "tone": "red", "at": "l08"},
+          {"label": "НОУТБУК В РАЗЪЁМЕ", "tone": "red", "at": "l09"}
+        ],
+        "verdict": {"label": "ТЕЛЕВИЗОР СМОТРИТ НА ПИКСЕЛИ", "tone": "red", "at": "l09", "offsetMs": 600}
+      }
+    },
+    {
+      "id": "proof",
+      "label": "КТО УЖЕ В СУДЕ",
+      "headline": "ИСК ТЕХАСА,\nДЕКАБРЬ 2025",
+      "fromLine": "l10",
+      "toLine": "l12",
+      "grammar": {
+        "type": "tiles",
+        "card": "ОТВЕТЧИКИ ПО ИСКУ",
+        "badge": "В СУДЕ",
+        "lead": {"label": "СРАЗУ ПЯТЬ ПРОИЗВОДИТЕЛЕЙ", "at": "l10"},
+        "tiles": [
+          {"label": "SAMSUNG", "tone": "yellow", "at": "l10", "offsetMs": 1900},
+          {"label": "SONY", "tone": "red", "at": "l11", "offsetMs": 350},
+          {"label": "LG", "tone": "red", "at": "l11", "offsetMs": 700},
+          {"label": "HISENSE", "tone": "red", "at": "l11", "offsetMs": 1050},
+          {"label": "TCL", "tone": "red", "at": "l11", "offsetMs": 1400}
+        ],
+        "verdict": {"label": "SAMSUNG СОГЛАСИЛАСЬ СПРАШИВАТЬ", "tone": "mint", "at": "l12"}
+      }
+    },
+    {
+      "id": "fix",
+      "label": "ЧТО СДЕЛАТЬ",
+      "headline": "ЭТО\nВЫКЛЮЧАЕТСЯ",
+      "fromLine": "l13",
+      "toLine": "l15",
+      "grammar": null
+    },
+    {
+      "id": "cta",
+      "label": "ТВОЙ ХОД",
+      "headline": "ПОЙДЁШЬ\nВЫКЛЮЧАТЬ?",
+      "fromLine": "l16",
+      "toLine": "l18",
+      "grammar": null
+    }
+  ],
+  "avatarStates": [
+    {"at": "l01", "state": "question"},
+    {"at": "l04", "state": "thinking"},
+    {"at": "l07", "state": "shocked"},
+    {"at": "l10", "state": "skeptical"},
+    {"at": "l13", "state": "idea"},
+    {"at": "l16", "state": "approved"}
+  ],
+  "chips": [
+    {"label": "2 КАДРА В СЕКУНДУ", "tone": "red", "at": "l03"},
+    {"label": "ВЕСЬ ЭКРАН", "tone": "red", "at": "l09"},
+    {"label": "ВЫКЛЮЧАЕТСЯ", "tone": "mint", "at": "l14"}
+  ],
+  "mood": {
+    "alarm": {"from": "l07", "to": "l13"},
+    "calm": {"from": "l13", "to": "l16"}
+  },
+  "memoryFrame": {
+    "fromLine": "l13",
+    "untilLine": "l16",
+    "maxHoldMs": 9000,
+    "staggerMs": 420,
+    "minHoldSeconds": 2.4,
+    "title": "ЧТО СДЕЛАТЬ СЕЙЧАС",
+    "items": [
+      "ОТКРЫТЬ НАСТРОЙКИ ТЕЛЕВИЗОРА",
+      "НАЙТИ РАСПОЗНАВАНИЕ КОНТЕНТА",
+      "ВЫКЛЮЧИТЬ — ОНО СТОИТ САМО"
+    ]
+  },
+  "cta": {
+    "fromLine": "l16",
+    "prompt": "ПОЙДЁШЬ ВЫКЛЮЧАТЬ?",
+    "divider": "или",
+    "options": [
+      {"label": "ПОЙДУ", "tone": "mint", "at": "l17"},
+      {"label": "ПУСТЬ СМОТРИТ", "tone": "yellow", "at": "l18"}
+    ],
+    "comment": "Ответь одним словом в комментарии.",
+    "teaser": "ЧТО ЕЩЁ В ДОМЕ СЛУШАЕТ БЕЗ СПРОСА",
+    "hint": {"at": "l17"},
+    "teaserCue": {"at": "l18"},
+    "teaserDetailCue": {"at": "l18", "offsetMs": 600}
+  },
+  "qa": {
+    "durationSeconds": [25, 35],
+    "contentPolarity": "light-on-dark",
+    "scriptQuality": {
+      "hookLines": 3,
+      "maxHookWordsPerLine": 8,
+      "minAnchors": 3
+    }
+  },
+  "publish": {
+    "cover": "ТЕЛЕВИЗОР СНИМАЕТ ТВОЙ ЭКРАН",
+    "coverSub": "Два раза в секунду, пока он включён",
+    "caption": "Технология называется ACR — automated content recognition. Телевизор периодически снимает кадр с экрана, сводит его к отпечатку и ищет совпадение в базе. Так становится известно, что именно вы смотрите; дальше профиль уходит рекламным сетям.\n\nВ иске генпрокурора Техаса указано, что съёмка идёт каждые 500 миллисекунд. Иск подан в декабре 2025 года сразу к пяти производителям: Samsung, Sony, LG, Hisense и TCL. 26 февраля 2026 года Samsung согласилась не собирать данные ACR без явного согласия пользователя.\n\nВажное: снимается весь экран, а не только приложения самого телевизора. Приставка или ноутбук, воткнутые в разъём, тоже попадают в кадр — исследование UCL, опубликованное на ACM IMC 2024, показало это на телевизорах Samsung и LG.\n\nВыключается в настройках, но по умолчанию включено, а сам пункт спрятан среди рекламных настроек.",
+    "hashtags": ["#приватность", "#телевизор", "#технологии", "#данные"],
+    "sources": {
+      "Texas Attorney General — Samsung ACR agreement": "https://www.texasattorneygeneral.gov/news/releases/attorney-general-paxton-secures-major-agreement-samsung-ensure-texans-are-protected-smart-tvs",
+      "UCL — Smart TV tracking raises privacy concerns (ACM IMC 2024)": "https://www.ucl.ac.uk/news/2024/nov/smart-tv-tracking-raises-privacy-concerns"
+    }
+  }
+}

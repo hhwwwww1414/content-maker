@@ -5,8 +5,13 @@ import {manrope, unbounded} from '../../theme/fonts';
 import {enterStyle, useEnter, useExit, useMs} from '../vibe/primitives';
 import {Caption, Glass, NightChip} from './glass';
 
-export const SourceBadge: React.FC<{label: string; atMs: number | null}> = ({label, atMs}) => {
+/**
+ * Attribution pill. Reels that keep the canvas clean omit `label` entirely and
+ * carry the sources in the caption instead — the badge then renders nothing.
+ */
+export const SourceBadge: React.FC<{label?: string | null; atMs: number | null}> = ({label, atMs}) => {
   const enter = useEnter(atMs, {durationMs: 520, rise: 8});
+  if (!label) return null;
   return (
     <div
       style={{
@@ -36,10 +41,15 @@ export const SourceBadge: React.FC<{label: string; atMs: number | null}> = ({lab
 /**
  * Chapter headline. `strikeWord` is struck through in place when the narration
  * debunks it — the myth stays on screen, visibly cancelled, instead of vanishing.
+ *
+ * The kicker above the headline is assembled from whatever of `eyebrow` /
+ * `label` is supplied. Chapter numbering ("ГЛАВА 3") is deliberately optional:
+ * it costs a line of screen text and tells the viewer nothing they need, so
+ * newer reels pass only `label` — or omit the kicker entirely.
  */
 export const ChapterHead: React.FC<{
-  eyebrow: string;
-  label: string;
+  eyebrow?: string | null;
+  label?: string | null;
   headline: string;
   atMs: number | null;
   instant?: boolean;
@@ -50,9 +60,10 @@ export const ChapterHead: React.FC<{
   const enter = useEnter(instant ? null : atMs, {durationMs: 420, rise: 18});
   const lines = headline.split('\n');
   const longest = Math.max(...lines.map((line) => line.length));
-  // Unbounded 800 uppercase runs ~0.95 em per glyph; long headlines must shrink
-  // rather than wrap into the chip rail below.
-  const fontSize = Math.max(40, Math.min(62, Math.floor((slots.eyebrow.width - 40) / (longest * 0.95))));
+  // Unbounded 800 uppercase runs ~0.95 em per glyph, so a headline shrinks to fit
+  // rather than wrapping into the chip rail below. The floor used to be 40px,
+  // which let a 30-character line spill past the 900px slot; 26px keeps it in.
+  const fontSize = Math.max(26, Math.min(62, Math.floor((slots.eyebrow.width - 40) / (longest * 0.95))));
   const style = instant ? {opacity: 1, transform: 'none'} : enterStyle(enter);
   const strike =
     strikeAtMs == null
@@ -62,24 +73,28 @@ export const ChapterHead: React.FC<{
           extrapolateRight: 'clamp',
         });
 
+  const kicker = [eyebrow, label].filter(Boolean).join(' · ');
+
   return (
     <div style={{position: 'absolute', left: slots.eyebrow.x, top: slots.eyebrow.y, width: slots.eyebrow.width, ...style}}>
+      {kicker ? (
+        <div
+          style={{
+            fontFamily: manrope,
+            fontWeight: 800,
+            fontSize: 20,
+            letterSpacing: 3,
+            color: night.textSoft,
+            textTransform: 'uppercase',
+            textShadow: night.shadow,
+          }}
+        >
+          {kicker}
+        </div>
+      ) : null}
       <div
         style={{
-          fontFamily: manrope,
-          fontWeight: 800,
-          fontSize: 20,
-          letterSpacing: 3,
-          color: night.textSoft,
-          textTransform: 'uppercase',
-          textShadow: night.shadow,
-        }}
-      >
-        {eyebrow} · {label}
-      </div>
-      <div
-        style={{
-          marginTop: 12,
+          marginTop: kicker ? 12 : 0,
           fontFamily: unbounded,
           fontWeight: 800,
           fontSize,
@@ -126,6 +141,24 @@ export const ChipRail: React.FC<{chips: {label: string; tone: 'danger' | 'mint' 
   chips,
 }) => {
   const ms = useMs();
+
+  // The rail must never wrap. `slots.chipRail` is 62 px tall and the memory
+  // frame starts 66 px below it, so a second row is drawn straight through the
+  // cheat-sheet. Instead the chips shrink until the row fits.
+  const GAP = 12;
+  // Unbounded 700 uppercase runs wide, and Cyrillic wider still. The estimate is
+  // deliberately pessimistic — 0.62 and then 0.75 both left the last chip
+  // clipped, and a chip cut in half is worse than a chip one point smaller.
+  const estimateWidth = (label: string, size: number) => label.length * size * 0.85 + size * 1.9;
+  let size = 24;
+  while (
+    size > 13 &&
+    chips.reduce((sum, chip) => sum + estimateWidth(chip.label, size), 0) + GAP * (chips.length - 1) >
+      slots.chipRail.width
+  ) {
+    size -= 1;
+  }
+
   return (
     <div
       style={{
@@ -133,10 +166,12 @@ export const ChipRail: React.FC<{chips: {label: string; tone: 'danger' | 'mint' 
         left: slots.chipRail.x,
         top: slots.chipRail.y,
         width: slots.chipRail.width,
+        height: slots.chipRail.height,
         display: 'flex',
-        gap: 12,
+        gap: GAP,
         alignItems: 'center',
-        flexWrap: 'wrap',
+        flexWrap: 'nowrap',
+        overflow: 'hidden',
       }}
     >
       {chips.map((chip) => {
@@ -149,7 +184,7 @@ export const ChipRail: React.FC<{chips: {label: string; tone: 'danger' | 'mint' 
         if (on <= 0.001) return null;
         return (
           <div key={chip.label} style={{opacity: on, transform: `translateY(${(1 - on) * 10}px)`}}>
-            <NightChip label={chip.label} tone={chip.tone} size={24} />
+            <NightChip label={chip.label} tone={chip.tone} size={size} />
           </div>
         );
       })}

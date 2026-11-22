@@ -1,0 +1,611 @@
+{
+  "id": "why-software-is-never-done",
+  "compositionId": "WhySoftwareIsNeverDoneReel",
+  "contactSheetCompositionId": "WhySoftwareIsNeverDoneContactSheet",
+  "npmPrefix": "why-software-is-never-done",
+  "title": "Почему программу нельзя просто доделать",
+  "visualEngine": "avatar-persistent-canvas",
+  "captionMode": "kinetic-clusters",
+  "voiceoverFile": "generated/why-software-is-never-done/voiceover.mp3",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "finalHoldMs": 900,
+  "background": {
+    "type": "loop-video",
+    "file": "assets/background.mp4",
+    "muted": true,
+    "fit": "cover",
+    "overlayOpacity": 0.44,
+    "note": "Единственный фон ролика. Зациклен, без звука, нижний постоянный слой."
+  },
+  "source": {
+    "primary": "Programming Pearls, CACM 1985",
+    "secondary": "Ward Cunningham, OOPSLA 1992",
+    "topic": "Ninety-ninety rule, technical debt"
+  },
+  "tts": {
+    "language": "ru",
+    "speed": 1.2,
+    "direction": "Хук — устало и узнаваемо, как про свою жизнь. Правило 90 на 90 — с усмешкой. «В сумме 180» — пауза. Финал — примирительно.",
+    "note": "Chrome → «хром», Bell Labs → «Белл Лабс». Проценты и годы проговариваются модулем numerals."
+  },
+  "captionClusters": {
+    "targetSeconds": [
+      0.55,
+      0.85
+    ],
+    "growUntilSeconds": 0.45,
+    "maxWords": 3,
+    "maxLines": 2,
+    "functionWords": [
+      "и",
+      "а",
+      "но",
+      "не",
+      "ни",
+      "в",
+      "во",
+      "на",
+      "по",
+      "за",
+      "из",
+      "от",
+      "до",
+      "к",
+      "ко",
+      "с",
+      "со",
+      "у",
+      "о",
+      "об",
+      "про",
+      "для",
+      "что",
+      "как",
+      "это",
+      "всё",
+      "ещё",
+      "же",
+      "ты",
+      "он",
+      "она",
+      "я",
+      "мы",
+      "который",
+      "которую",
+      "которая",
+      "которой",
+      "чтобы",
+      "так",
+      "там",
+      "уже",
+      "или",
+      "бы",
+      "тебе",
+      "этот",
+      "над",
+      "тем",
+      "её",
+      "его",
+      "ему",
+      "их",
+      "то",
+      "есть",
+      "одной",
+      "своей",
+      "потом",
+      "чего",
+      "самое",
+      "могут",
+      "своё",
+      "если",
+      "твоему",
+      "твоём",
+      "твоим",
+      "теперь",
+      "моё",
+      "они",
+      "себе",
+      "почти",
+      "вот",
+      "даже",
+      "будет",
+      "была",
+      "только",
+      "когда",
+      "потому",
+      "поэтому",
+      "вообще",
+      "тут",
+      "им",
+      "ним",
+      "таких",
+      "такому",
+      "оттуда",
+      "тогда"
+    ],
+    "highlightWords": {
+      "red": [
+        "долг",
+        "долгу",
+        "проценты",
+        "недоделанными",
+        "дороже"
+      ],
+      "yellow": [
+        "девяносто",
+        "десять",
+        "обновиться",
+        "обновляется",
+        "правило"
+      ],
+      "mint": [
+        "нормально",
+        "правят",
+        "живёт"
+      ]
+    },
+    "displayReplacements": {
+      "хром": "Chrome",
+      "белл": "Bell",
+      "лабс": "Labs"
+    }
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "chapter": "hook",
+      "text": "Приложение снова просит обновиться.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l02",
+      "chapter": "hook",
+      "text": "И так каждый месяц.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l03",
+      "chapter": "hook",
+      "text": "Его никогда не доделают?",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l04",
+      "chapter": "hook",
+      "text": "Нет. И это нормально.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l05",
+      "chapter": "rule",
+      "text": "Есть правило 90 на 90.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l06",
+      "chapter": "rule",
+      "text": "Первые 90% кода —",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l07",
+      "chapter": "rule",
+      "text": "это 90% времени.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l08",
+      "chapter": "rule",
+      "text": "Последние 10% кода —",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l09",
+      "chapter": "rule",
+      "text": "ещё 90% времени.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l10",
+      "chapter": "who",
+      "text": "Это не шутка.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l11",
+      "chapter": "who",
+      "text": "Правило вывел инженер Белл Лабс.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l12",
+      "chapter": "who",
+      "text": "Опубликовано в 1985 году.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l13",
+      "chapter": "debt",
+      "text": "Почему хвост такой дорогой?",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l14",
+      "chapter": "debt",
+      "text": "Быстрый код берут в долг.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l15",
+      "chapter": "debt",
+      "text": "Его называют техническим.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l16",
+      "chapter": "debt",
+      "text": "Проценты платишь каждой правкой.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l17",
+      "chapter": "ship",
+      "text": "Поэтому программы выпускают недоделанными.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l18",
+      "chapter": "ship",
+      "text": "Хром обновляется каждые четыре недели.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l19",
+      "chapter": "ship",
+      "text": "А с сентября — каждые две.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l20",
+      "chapter": "ship",
+      "text": "Доделать нельзя. Можно выпускать.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l21",
+      "chapter": "recap",
+      "text": "Запомни главное.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l22",
+      "chapter": "recap",
+      "text": "Хвост дороже всей работы.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l23",
+      "chapter": "recap",
+      "text": "Программа живёт, пока её правят.",
+      "breakAfter": "block"
+    },
+    {
+      "id": "l24",
+      "chapter": "cta",
+      "text": "Бесит, когда приложение обновляется?",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l25",
+      "chapter": "cta",
+      "text": "Бесит.",
+      "breakAfter": "line"
+    },
+    {
+      "id": "l26",
+      "chapter": "cta",
+      "text": "Пусть обновляется.",
+      "breakAfter": "none"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "hook",
+      "label": "ЗНАКОМАЯ КАРТИНА",
+      "headline": "ПРОГРАММУ\nНЕЛЬЗЯ ДОДЕЛАТЬ",
+      "fromLine": "l01",
+      "toLine": "l04",
+      "grammar": {
+        "type": "statement",
+        "card": "КАЖДЫЙ МЕСЯЦ ОДНО И ТО ЖЕ",
+        "claim": "«ОБНОВИТЬ ПРИЛОЖЕНИЕ»",
+        "claimTone": "yellow",
+        "items": [
+          {
+            "label": "СНОВА",
+            "tone": "yellow",
+            "at": "l02"
+          }
+        ],
+        "verdict": {
+          "label": "ТАК И ЗАДУМАНО",
+          "tone": "mint",
+          "at": "l04"
+        }
+      }
+    },
+    {
+      "id": "rule",
+      "label": "ПОЧЕМУ ТАК",
+      "headline": "ПРАВИЛО\n90 НА 90",
+      "fromLine": "l05",
+      "toLine": "l09",
+      "grammar": {
+        "type": "counters",
+        "card": "КАК ДЕЛИТСЯ РАБОТА",
+        "lead": {
+          "label": "СЧИТАЕМ ЧЕСТНО",
+          "at": "l05"
+        },
+        "counters": [
+          {
+            "label": "90% КОДА — 90% ВРЕМЕНИ",
+            "tone": "neutral",
+            "at": "l06"
+          },
+          {
+            "label": "10% КОДА — ЕЩЁ 90%",
+            "tone": "red",
+            "at": "l08"
+          }
+        ],
+        "chips": [
+          {
+            "label": "В СУММЕ 180%",
+            "tone": "red",
+            "at": "l09"
+          }
+        ]
+      }
+    },
+    {
+      "id": "who",
+      "label": "ОТКУДА ЭТО",
+      "headline": "ЭТО НЕ ШУТКА\nА НАБЛЮДЕНИЕ",
+      "fromLine": "l10",
+      "toLine": "l12",
+      "grammar": {
+        "type": "steps",
+        "card": "ОТКУДА ВЗЯЛОСЬ ПРАВИЛО",
+        "steps": [
+          {
+            "label": "ИНЖЕНЕР BELL LABS",
+            "note": "ТОМ КАРГИЛЛ",
+            "tone": "mint",
+            "at": "l11",
+            "noteAt": "l11"
+          },
+          {
+            "label": "ОПУБЛИКОВАНО В 1985",
+            "note": "PROGRAMMING PEARLS",
+            "tone": "yellow",
+            "at": "l12",
+            "noteAt": "l12"
+          }
+        ]
+      }
+    },
+    {
+      "id": "debt",
+      "label": "ЧТО ТАКОЕ ХВОСТ",
+      "headline": "БЫСТРЫЙ КОД\nБЕРУТ В ДОЛГ",
+      "fromLine": "l13",
+      "toLine": "l16",
+      "grammar": {
+        "type": "flow",
+        "card": "КАК НАКАПЛИВАЕТСЯ ДОЛГ",
+        "nodes": [
+          {
+            "label": "СДЕЛАЛИ БЫСТРО",
+            "tone": "yellow",
+            "at": "l14"
+          },
+          {
+            "label": "ДОЛГ ВЫРОС",
+            "tone": "red",
+            "at": "l15"
+          },
+          {
+            "label": "ПЛАТИШЬ ПРАВКАМИ",
+            "tone": "red",
+            "at": "l16"
+          }
+        ],
+        "verdict": {
+          "label": "ЭТО И ЕСТЬ ТЕХНИЧЕСКИЙ ДОЛГ",
+          "tone": "red",
+          "at": "l16",
+          "offsetMs": 1200
+        }
+      }
+    },
+    {
+      "id": "ship",
+      "label": "КАК ЖИВУТ ПРОГРАММЫ",
+      "headline": "ПОЭТОМУ ВЫПУСКАЮТ\nНЕДОДЕЛАННЫМ",
+      "fromLine": "l17",
+      "toLine": "l20",
+      "grammar": {
+        "type": "tiles",
+        "card": "ПРИМЕР: ЦИКЛ ОБНОВЛЕНИЙ ХРОМА",
+        "badge": "НОВАЯ ВЕРСИЯ",
+        "lead": {
+          "label": "РЕЛИЗ ВЫХОДИТ ПО РАСПИСАНИЮ",
+          "at": "l17"
+        },
+        "tiles": [
+          {
+            "label": "4 НЕДЕЛИ",
+            "tone": "yellow",
+            "at": "l18"
+          },
+          {
+            "label": "2 НЕДЕЛИ",
+            "tone": "red",
+            "at": "l19"
+          }
+        ],
+        "verdict": {
+          "label": "ДОДЕЛАТЬ НЕЛЬЗЯ",
+          "tone": "red",
+          "at": "l20"
+        }
+      }
+    },
+    {
+      "id": "recap",
+      "label": "ГЛАВНОЕ",
+      "headline": "ХВОСТ ДОРОЖЕ\nВСЕЙ РАБОТЫ",
+      "fromLine": "l21",
+      "toLine": "l23",
+      "grammar": null
+    },
+    {
+      "id": "cta",
+      "label": "ТВОЙ ХОД",
+      "headline": "БЕСИТ?\nИЛИ ПУСТЬ БУДЕТ",
+      "fromLine": "l24",
+      "toLine": "l26",
+      "grammar": null
+    }
+  ],
+  "avatarStates": [
+    {
+      "at": "l01",
+      "state": "question"
+    },
+    {
+      "at": "l05",
+      "state": "thinking"
+    },
+    {
+      "at": "l10",
+      "state": "shocked"
+    },
+    {
+      "at": "l13",
+      "state": "skeptical"
+    },
+    {
+      "at": "l17",
+      "state": "angry"
+    },
+    {
+      "at": "l21",
+      "state": "idea"
+    },
+    {
+      "at": "l24",
+      "state": "approved"
+    }
+  ],
+  "chips": [
+    {
+      "label": "ХВОСТ ДОРОЖЕ",
+      "tone": "red",
+      "at": "l09"
+    },
+    {
+      "label": "ТЕХНИЧЕСКИЙ ДОЛГ",
+      "tone": "red",
+      "at": "l16"
+    },
+    {
+      "label": "РЕЛИЗ ПО ЧАСАМ",
+      "tone": "yellow",
+      "at": "l19"
+    }
+  ],
+  "mood": {
+    "alarm": {
+      "from": "l13",
+      "to": "l21"
+    },
+    "calm": {
+      "from": "l21",
+      "to": "l24"
+    }
+  },
+  "memoryFrame": {
+    "fromLine": "l21",
+    "untilLine": "l24",
+    "maxHoldMs": 9000,
+    "staggerMs": 560,
+    "minHoldSeconds": 2.8,
+    "title": "ЧТО ЗАПОМНИТЬ",
+    "items": [
+      "ПОСЛЕДНИЕ 10% СТОЯТ КАК ВСЁ ОСТАЛЬНОЕ",
+      "БЫСТРЫЙ КОД — ЭТО ДОЛГ",
+      "ПРОГРАММА ЖИВЁТ, ПОКА ЕЁ ПРАВЯТ"
+    ]
+  },
+  "cta": {
+    "fromLine": "l24",
+    "prompt": "ОБНОВЛЕНИЯ БЕСЯТ ИЛИ НЕТ?",
+    "divider": "или",
+    "options": [
+      {
+        "label": "БЕСЯТ",
+        "tone": "yellow",
+        "at": "l25"
+      },
+      {
+        "label": "ПУСТЬ",
+        "tone": "mint",
+        "at": "l26"
+      }
+    ],
+    "comment": "Ответь одним словом в комментарии.",
+    "teaser": "ПОЧЕМУ ПРИЛОЖЕНИЕ ВЕСИТ 300 МЕГАБАЙТ",
+    "hint": {
+      "at": "l25"
+    },
+    "teaserCue": {
+      "at": "l26"
+    },
+    "teaserDetailCue": {
+      "at": "l26",
+      "offsetMs": 700
+    }
+  },
+  "qa": {
+    "durationSeconds": [
+      30,
+      60
+    ],
+    "contentPolarity": "light-on-dark",
+    "scriptQuality": {
+      "hookLines": 3,
+      "maxHookWordsPerLine": 8,
+      "minAnchors": 3
+    }
+  },
+  "publish": {
+    "cover": "ПРОГРАММУ НЕЛЬЗЯ ДОДЕЛАТЬ",
+    "coverSub": "Правило 90 на 90 объясняет, почему",
+    "caption": "«Первые 90% кода занимают 90% времени. Оставшиеся 10% кода занимают ещё 90% времени.»\n\nЭто правило вывел Том Каргилл из Bell Labs, а популярным его сделал Джон Бентли в колонке Programming Pearls в 1985 году. В сумме получается 180% — и это не ошибка, а насмешка над тем, как программисты оценивают сроки.\n\nПочему хвост такой дорогой? Потому что быстрый код берут в долг. Термин «технический долг» придумал Уорд Каннингем в 1992-м: выпустить сырое — как взять кредит, и проценты по нему платят каждой следующей правкой.\n\nПоэтому программы не доделывают, а выпускают. Chrome с 2021 года обновляется каждые четыре недели, а с сентября 2026 перейдёт на две.",
+    "hashtags": [
+      "#программирование",
+      "#айти",
+      "#разработка",
+      "#технологии"
+    ],
+    "sources": {
+      "Ninety–ninety rule": "https://en.wikipedia.org/wiki/Ninety%E2%80%93ninety_rule",
+      "Martin Fowler — Technical Debt": "https://martinfowler.com/bliki/TechnicalDebt.html",
+      "Chrome — release cycle": "https://developer.chrome.com/blog/chrome-two-week-release"
+    }
+  }
+}

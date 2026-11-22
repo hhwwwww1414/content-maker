@@ -59,6 +59,8 @@ console.log(
 step('2/5 Рендер MP4', 'npx', [
   'remotion', 'render', timeline.compositionId, `out/${SLUG}-reel.mp4`,
   '--codec=h264', '--audio-codec=aac', '--crf=20', '--concurrency=2', '--log=error',
+  // A heavy frame can exceed the 30 s default and kill an otherwise fine render.
+  '--timeout=120000',
 ]);
 
 step('3/5 Contact sheet', 'npx', [

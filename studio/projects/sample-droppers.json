@@ -1,0 +1,913 @@
+{
+  "id": "sample-droppers",
+  "topic": "Дал карту за деньги — получил статью 187",
+  "niche": "engine-sample",
+  "language": "ru",
+  "status": {
+    "factCheck": "partial",
+    "scriptApproval": "demo",
+    "publication": "draft",
+    "production": "rendered"
+  },
+  "sources": [
+    {
+      "id": "primary",
+      "publisher": "УК РФ, ст. 187; Банк России",
+      "claim": "ФЗ от 24.06.2025 № 176-ФЗ — изменения в ст. 187 УК РФ",
+      "url": "",
+      "accessed": "2026-11-01"
+    },
+    {
+      "id": "secondary",
+      "publisher": "Банк России",
+      "claim": "Банк России — статистика операций без согласия клиента, 2026",
+      "url": "",
+      "accessed": "2026-11-01"
+    }
+  ],
+  "title": "Дал карту за деньги — получил статью 187",
+  "hook": "Ему предложили денег за карту. Он просто дал реквизиты. Теперь это статья 187.",
+  "centralIdea": "Кто дал реквизиты, тот и отвечает.",
+  "art": {
+    "direction": "bold",
+    "music": {
+      "asset": "bed-pulse",
+      "volume": 0.1,
+      "duck": 0.5
+    }
+  },
+  "theme": "signal",
+  "captionStyle": "plate",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 33.53333333333333,
+  "scenes": [
+    {
+      "id": "hook",
+      "voice": "Ему предложили денег за карту. Он просто дал реквизиты. Теперь это статья 187.",
+      "onScreen": "статья 187",
+      "thought": "Обычная переписка, смотрится безобидно, пока сверху не появляется статья",
+      "animation": "Обычная переписка, смотрится безобидно, пока сверху не появляется статья",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "opening",
+        "emotion": "лёгкость, потом холод",
+        "concept": "Обычная переписка, смотрится безобидно, пока сверху не появляется статья",
+        "hierarchy": {
+          "primary": "статья 187"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "device",
+          "layout": "hero",
+          "screen": {
+            "app": "chat",
+            "title": "Подработка",
+            "items": [
+              {
+                "from": "them",
+                "text": "Заплатим за карту",
+                "cue": "предложили"
+              },
+              {
+                "from": "me",
+                "text": "Вот реквизиты",
+                "cue": "реквизиты"
+              }
+            ]
+          },
+          "title": {
+            "text": "Статья / *187*",
+            "cue": "Теперь",
+            "reveal": "punch",
+            "emphasis": "marker"
+          },
+          "titleStage": "poster",
+          "poses": [
+            {
+              "cue": "Теперь",
+              "x": 120,
+              "y": 1500,
+              "scale": 0.8,
+              "rz": 10
+            }
+          ]
+        },
+        "camera": {
+          "move": "still"
+        },
+        "source": "hide",
+        "sound": [
+          {
+            "cue": "Теперь",
+            "sfx": "stamp",
+            "volume": 0.45
+          }
+        ]
+      },
+      "start": 0,
+      "duration": 6.366666666666666
+    },
+    {
+      "id": "path",
+      "voice": "Деньги жертвы приходят ему. Дальше — по цепочке чужих карт. В конце их снимают наличными.",
+      "onScreen": "цепочка карт",
+      "thought": "Камера едет за деньгами от узла к узлу, потом отъезжает: видна вся цепочка",
+      "animation": "Камера едет за деньгами от узла к узлу, потом отъезжает: видна вся цепочка",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "explain",
+        "emotion": "понимание схемы",
+        "concept": "Камера едет за деньгами от узла к узлу, потом отъезжает: видна вся цепочка",
+        "hierarchy": {
+          "primary": "цепочка карт"
+        },
+        "art": {
+          "variant": "inverse"
+        },
+        "shot": {
+          "type": "journey",
+          "route": "descend",
+          "overviewCue": "наличными",
+          "nodes": [
+            {
+              "text": "Деньги жертвы",
+              "icon": "user",
+              "cue": "Деньги"
+            },
+            {
+              "text": "Его карта",
+              "icon": "card",
+              "cue": "приходят"
+            },
+            {
+              "text": "Цепочка чужих карт",
+              "icon": "chain",
+              "cue": "цепочке"
+            },
+            {
+              "text": "Наличные",
+              "icon": "cash",
+              "cue": "конце"
+            }
+          ]
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "mask",
+          "shape": "bars",
+          "seconds": 0.6,
+          "intent": "Шторки: чат закрывается и открывается карта маршрута"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "swish",
+            "volume": 0.28
+          }
+        ]
+      },
+      "start": 6.366666666666666,
+      "duration": 7.233333333333333
+    },
+    {
+      "id": "twist",
+      "voice": "Мошенника не найдут. Найдут владельца счёта. То есть его.",
+      "onScreen": "найдут его",
+      "thought": "Единственный луч света падает на владельца карты, мошенника в кадре нет",
+      "animation": "Единственный луч света падает на владельца карты, мошенника в кадре нет",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "reveal",
+        "emotion": "ловушка",
+        "concept": "Единственный луч света падает на владельца карты, мошенника в кадре нет",
+        "hierarchy": {
+          "primary": "найдут его"
+        },
+        "art": {
+          "variant": "base",
+          "field": "solid"
+        },
+        "shot": {
+          "type": "stage3d",
+          "preset": "spotlight",
+          "object": "card",
+          "lightCue": "Найдут",
+          "title": {
+            "text": "Найдут *владельца*",
+            "cue": "Найдут",
+            "reveal": "lines",
+            "emphasis": "color"
+          },
+          "orbit": 0.08
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "morph",
+          "from": [
+            300,
+            640,
+            480,
+            480
+          ],
+          "color": "accent",
+          "seconds": 0.8,
+          "intent": "Точка маршрута вырастает и заливает кадр, из неё проявляется карта под лучом"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "swish",
+            "volume": 0.28
+          }
+        ]
+      },
+      "start": 13.6,
+      "duration": 4.866666666666665
+    },
+    {
+      "id": "price",
+      "voice": "Штраф до миллиона рублей. Или до шести лет. Отвечают с шестнадцати.",
+      "onScreen": "миллион, шесть лет",
+      "thought": "Двери коридора: каждая цифра ближе и страшнее",
+      "animation": "Двери коридора: каждая цифра ближе и страшнее",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "proof",
+        "emotion": "цена",
+        "concept": "Двери коридора: каждая цифра ближе и страшнее",
+        "hierarchy": {
+          "primary": "миллион, шесть лет"
+        },
+        "art": {
+          "variant": "inverse",
+          "field": "solid"
+        },
+        "shot": {
+          "type": "timeline",
+          "style": "corridor",
+          "events": [
+            {
+              "date": "1 000 000 ₽",
+              "text": "Штраф",
+              "cue": "Штраф"
+            },
+            {
+              "date": "6 лет",
+              "text": "Или срок",
+              "cue": "шести"
+            },
+            {
+              "date": "С 16 лет",
+              "text": "Уже отвечают",
+              "cue": "шестнадцати"
+            }
+          ]
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "depth",
+          "seconds": 0.55,
+          "intent": "Шаг вперёд, в коридор последствий"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "whoosh",
+            "volume": 0.28
+          }
+        ]
+      },
+      "start": 18.466666666666665,
+      "duration": 5.833333333333336
+    },
+    {
+      "id": "who",
+      "voice": "Подростков стало втрое меньше. Теперь зовут студентов. Признаки всегда одни и те же.",
+      "onScreen": "студенты",
+      "thought": "Слова появляются, как только сказаны: темп самой речи становится кадром",
+      "animation": "Слова появляются, как только сказаны: темп самой речи становится кадром",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "turn",
+        "emotion": "сдвиг",
+        "concept": "Слова появляются, как только сказаны: темп самой речи становится кадром",
+        "hierarchy": {
+          "primary": "студенты"
+        },
+        "art": {
+          "variant": "block",
+          "field": "solid"
+        },
+        "shot": {
+          "type": "type",
+          "layout": "spoken",
+          "anchor": "center",
+          "headline": {
+            "text": "Подростков стало втрое меньше. Теперь зовут *студентов*. Признаки всегда одни и те же.",
+            "cue": "Подростков",
+            "reveal": "spoken",
+            "role": "statement",
+            "emphasis": "marker"
+          }
+        },
+        "camera": {
+          "move": "driftUp"
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Склейка на первое слово: смена цвета сама объявляет новую мысль"
+        },
+        "captions": {
+          "mode": "off"
+        }
+      },
+      "start": 24.3,
+      "duration": 5.466666666666665
+    },
+    {
+      "id": "cta",
+      "voice": "Тебе такое предлагали? Было. Не было.",
+      "onScreen": "было или нет",
+      "thought": "Цепочка падает на слове «было» и останавливается на «не было»",
+      "animation": "Цепочка падает на слове «было» и останавливается на «не было»",
+      "sources": [
+        "primary"
+      ],
+      "direction": {
+        "purpose": "question",
+        "emotion": "вовлечение",
+        "concept": "Цепочка падает на слове «было» и останавливается на «не было»",
+        "hierarchy": {
+          "primary": "было или нет"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "stage3d",
+          "preset": "dominoes",
+          "count": 9,
+          "stopAt": 7,
+          "startCue": "Было",
+          "seconds": 1.1,
+          "title": {
+            "text": "Тебе такое *предлагали?*",
+            "cue": "Тебе",
+            "reveal": "lines"
+          },
+          "labels": [
+            {
+              "target": 7,
+              "text": "Не было",
+              "cue": "Не"
+            }
+          ],
+          "orbit": 0.1
+        },
+        "camera": {
+          "move": "still"
+        },
+        "transition": {
+          "type": "field",
+          "origin": [
+            0.5,
+            0.9
+          ],
+          "seconds": 0.7,
+          "intent": "Цвет кадра вырастает снизу, как пол под домино"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "swish",
+            "volume": 0.28
+          },
+          {
+            "cue": "Было",
+            "sfx": "thud",
+            "volume": 0.25
+          }
+        ],
+        "source": "hide"
+      },
+      "start": 29.766666666666666,
+      "duration": 3.7666666666666657
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/sample-droppers/voice-imported-a549f7b59a25880a.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "importedFromLegacy": "droppers",
+    "timingMode": "ElevenLabs alignment imported from the legacy take",
+    "importedFrom": "droppers",
+    "sourceSha256": "a549f7b59a25880a",
+    "durationSeconds": 33.01,
+    "sourceDurationSeconds": 33.01,
+    "localTempo": 1
+  },
+  "captions": [
+    {
+      "text": "Ему",
+      "startMs": 50,
+      "endMs": 130,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "предложили",
+      "startMs": 180,
+      "endMs": 610,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "денег",
+      "startMs": 670,
+      "endMs": 930,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "за",
+      "startMs": 983,
+      "endMs": 1090,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "карту.",
+      "startMs": 1200,
+      "endMs": 1491,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Он",
+      "startMs": 1790,
+      "endMs": 1970,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "просто",
+      "startMs": 2060,
+      "endMs": 2290,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "дал",
+      "startMs": 2330,
+      "endMs": 2450,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "реквизиты.",
+      "startMs": 2510,
+      "endMs": 3330,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Теперь",
+      "startMs": 3440,
+      "endMs": 3650,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "это",
+      "startMs": 3690,
+      "endMs": 3810,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "статья",
+      "startMs": 3863,
+      "endMs": 4290,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "187.",
+      "startMs": 4390,
+      "endMs": 5677,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Деньги",
+      "startMs": 6360,
+      "endMs": 6610,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "жертвы",
+      "startMs": 6650,
+      "endMs": 7090,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "приходят",
+      "startMs": 7159,
+      "endMs": 7730,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ему.",
+      "startMs": 7860,
+      "endMs": 8490,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Дальше",
+      "startMs": 8920,
+      "endMs": 9330,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 9330,
+      "endMs": 9623,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "по",
+      "startMs": 9680,
+      "endMs": 9730,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "цепочке",
+      "startMs": 9770,
+      "endMs": 10370,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "чужих",
+      "startMs": 10450,
+      "endMs": 10850,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "карт.",
+      "startMs": 11010,
+      "endMs": 11410,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "В",
+      "startMs": 11580,
+      "endMs": 11623,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "конце",
+      "startMs": 11623,
+      "endMs": 11890,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "их",
+      "startMs": 11917,
+      "endMs": 11970,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "снимают",
+      "startMs": 12010,
+      "endMs": 12450,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "наличными.",
+      "startMs": 12503,
+      "endMs": 13011,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Мошенника",
+      "startMs": 13590,
+      "endMs": 14050,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 14077,
+      "endMs": 14130,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "найдут.",
+      "startMs": 14178,
+      "endMs": 14730,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Найдут",
+      "startMs": 14960,
+      "endMs": 15330,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "владельца",
+      "startMs": 15410,
+      "endMs": 15970,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "счёта.",
+      "startMs": 16050,
+      "endMs": 16650,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "То",
+      "startMs": 16810,
+      "endMs": 16850,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "есть",
+      "startMs": 16898,
+      "endMs": 17090,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "его.",
+      "startMs": 17420,
+      "endMs": 17690,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Штраф",
+      "startMs": 18450,
+      "endMs": 18850,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "до",
+      "startMs": 18957,
+      "endMs": 19170,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "миллиона",
+      "startMs": 19250,
+      "endMs": 19810,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "рублей.",
+      "startMs": 19879,
+      "endMs": 20450,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Или",
+      "startMs": 20570,
+      "endMs": 20690,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "до",
+      "startMs": 20797,
+      "endMs": 21010,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "шести",
+      "startMs": 21090,
+      "endMs": 21410,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "лет.",
+      "startMs": 21490,
+      "endMs": 21810,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Отвечают",
+      "startMs": 22200,
+      "endMs": 22690,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "с",
+      "startMs": 22910,
+      "endMs": 22930,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "шестнадцати.",
+      "startMs": 22970,
+      "endMs": 23890,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Подростков",
+      "startMs": 24310,
+      "endMs": 24690,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "стало",
+      "startMs": 24743,
+      "endMs": 25010,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "втрое",
+      "startMs": 25050,
+      "endMs": 25330,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "меньше.",
+      "startMs": 25399,
+      "endMs": 25970,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Теперь",
+      "startMs": 26010,
+      "endMs": 26290,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "зовут",
+      "startMs": 26370,
+      "endMs": 26690,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "студентов.",
+      "startMs": 26738,
+      "endMs": 27570,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Признаки",
+      "startMs": 27690,
+      "endMs": 28050,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "всегда",
+      "startMs": 28107,
+      "endMs": 28450,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "одни",
+      "startMs": 28530,
+      "endMs": 28850,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 28910,
+      "endMs": 28970,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "те",
+      "startMs": 29010,
+      "endMs": 29090,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "же.",
+      "startMs": 29143,
+      "endMs": 29290,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Тебе",
+      "startMs": 29750,
+      "endMs": 30050,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "такое",
+      "startMs": 30117,
+      "endMs": 30450,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "предлагали?",
+      "startMs": 30482,
+      "endMs": 31410,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Было.",
+      "startMs": 31690,
+      "endMs": 32330,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Не",
+      "startMs": 32610,
+      "endMs": 32690,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "было.",
+      "startMs": 32738,
+      "endMs": 33010,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "editorialReview": {
+    "note": "Engineering sample of the video engine. Facts come from the legacy reel and were not re-verified.",
+    "openClaims": [
+      "Facts inherited from the legacy reel; not re-verified for this sample."
+    ]
+  },
+  "renderPath": "out/studio/sample-droppers.mp4",
+  "qa": {
+    "path": "out/studio/sample-droppers-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  }
+}

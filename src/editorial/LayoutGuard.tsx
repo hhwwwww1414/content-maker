@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import type {RefObject} from 'react';
-import {cancelRender, continueRender, delayRender, useCurrentFrame} from 'remotion';
+import {cancelRender, continueRender, delayRender, getInputProps, useCurrentFrame} from 'remotion';
 import standards from '../../config/reel.standards.json';
 
 const {safe, readability} = standards;
@@ -17,6 +17,9 @@ const effectiveOpacity = (el: Element, stop: Element) => {
   }
   return value;
 };
+
+// In collect mode (studio/gates.mjs) nothing throws: every frame reports all its problems and its geometry.
+const collectMode = () => (getInputProps() as {qa?: string}).qa === 'collect';
 
 // Check real rendered geometry on every frame, including preview frames.
 export const LayoutGuard = ({root: rootRef}: {root: RefObject<HTMLDivElement | null>}) => {
@@ -64,12 +67,14 @@ export const LayoutGuard = ({root: rootRef}: {root: RefObject<HTMLDivElement | n
         const el = text.el as HTMLElement;
         const style = getComputedStyle(el);
         // Effective size: a camera push or an entrance scale changes what the viewer reads.
-        const effective = parseFloat(style.fontSize) * (el.offsetWidth ? el.getBoundingClientRect().width / scale / el.offsetWidth : 1);
+        const nominal = Number(el.dataset.qaSize ?? parseFloat(style.fontSize));
+        const effective = nominal * (el.offsetWidth ? el.getBoundingClientRect().width / scale / el.offsetWidth : 1);
         const min = Number(el.dataset.qaMin ?? readability.minFontPx);
         if (effective < min - 0.5) errors.push(`Font ${effective.toFixed(1)}px below ${min}px ${describe(el)}`);
         if (outsideSafe(text)) errors.push(`Text outside safe area ${describe(el)} ${JSON.stringify(inFrame(el.getBoundingClientRect()))}`);
         // Tight line-height lets glyph ink exceed the line box slightly; that is not clipped text.
-        const slack = Math.max(3, parseFloat(style.fontSize) * 0.15);
+        // Set text carries padding for its reveal masks; its width is already fitted with real font metrics.
+        const slack = Math.max(3, Number(el.dataset.qaSlack ?? nominal * 0.15));
         if (el.scrollHeight > el.clientHeight + slack || el.scrollWidth > el.clientWidth + slack) errors.push(`Text overflow ${describe(el)} ${el.scrollWidth}x${el.scrollHeight}>${el.clientWidth}x${el.clientHeight}`);
       }
       const captionBox: Box[] = captions ? [{el: captions, ...inFrame(captions.getBoundingClientRect())}] : [];
@@ -79,14 +84,26 @@ export const LayoutGuard = ({root: rootRef}: {root: RefObject<HTMLDivElement | n
       for (let i = 0; i < all.length; i++) {
         for (let j = i + 1; j < all.length; j++) {
           const a = all[i], b = all[j];
-          if (related(a.el, b.el) || allowed(a.el) || allowed(b.el)) continue;
+          const group = a.el.closest('[data-qa-group-root]');
+          if (related(a.el, b.el) || allowed(a.el) || allowed(b.el) || (group && group.contains(b.el))) continue;
           const dx = Math.min(a.right, b.right) - Math.max(a.left, b.left);
           const dy = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
           if (dx > 2 && dy > 2) errors.push(`Overlap ${describe(a.el)} × ${describe(b.el)} (${Math.round(dx)}×${Math.round(dy)}px)`);
         }
       }
     }
-    if (errors.length) cancelRender(new Error('Editorial layout frame ' + frame + ': ' + [...new Set(errors)].slice(0, 6).join('; ')));
+    if (collectMode()) {
+      const live = scenes[scenes.length - 1];
+      const boxes = (selector: string) => (live ? [...live.querySelectorAll(selector)] : []).filter((el) => !el.closest('[data-qa-moving]') && effectiveOpacity(el, root) >= 0.6).map((el) => {
+        // The ink's own bounds, not its container: a short word in a wide box must not be judged by the empty box.
+        const range = document.createRange();
+        range.selectNodeContents(el);
+        const rect = el.matches('[data-qa-focal]') && !el.matches('[data-qa="text"]') ? el.getBoundingClientRect() : range.getBoundingClientRect();
+        return {text: (el.textContent ?? '').slice(0, 40), ...inFrame(rect)};
+      });
+      const caption = captions ? {text: (captions.textContent ?? '').slice(0, 40), zone: captions.dataset.qaZone ?? null, ...inFrame(captions.getBoundingClientRect())} : null;
+      console.log('QA_FRAME ' + JSON.stringify({frame, scene: live?.dataset.qaScene ?? null, settled, errors: [...new Set(errors)], texts: settled ? boxes('[data-qa="text"]') : [], focal: settled ? boxes('[data-qa-focal]') : [], caption}));
+    } else if (errors.length) cancelRender(new Error('Editorial layout frame ' + frame + ': ' + [...new Set(errors)].slice(0, 6).join('; ')));
     continueRender(handle);
   }, [frame, handle, rootRef]);
   return null;

@@ -120,6 +120,54 @@ import timelineHowSitesDetectVpn from './generated/timeline-how-sites-detect-vpn
 import {PasskeyExplainedReel} from './compositions/PasskeyExplainedReel';
 import {PasskeyExplainedContactSheet} from './compositions/PasskeyExplainedContactSheet';
 import timelinePasskeyExplained from './generated/timeline-passkey-explained.json';
+// --- agentic browser hijack (looping video background) ------------------------
+import {AiBrowserHijackReel} from './compositions/AiBrowserHijackReel';
+import {AiBrowserHijackContactSheet} from './compositions/AiBrowserHijackContactSheet';
+import timelineAiBrowserHijack from './generated/timeline-ai-browser-hijack.json';
+// --- ai-voice-scam-48k (grammar-driven) ---
+import {AiVoiceScam48kReel} from './compositions/AiVoiceScam48kReel';
+import {AiVoiceScam48kContactSheet} from './compositions/AiVoiceScam48kContactSheet';
+import timelineAiVoiceScam48k from './generated/timeline-ai-voice-scam-48k.json';
+// --- browser-introduces-itself (grammar-driven) ---
+import {BrowserIntroducesItselfReel} from './compositions/BrowserIntroducesItselfReel';
+import {BrowserIntroducesItselfContactSheet} from './compositions/BrowserIntroducesItselfContactSheet';
+import timelineBrowserIntroducesItself from './generated/timeline-browser-introduces-itself.json';
+// --- eleven-lines-broke-internet (grammar-driven) ---
+import {ElevenLinesBrokeInternetReel} from './compositions/ElevenLinesBrokeInternetReel';
+import {ElevenLinesBrokeInternetContactSheet} from './compositions/ElevenLinesBrokeInternetContactSheet';
+import timelineElevenLinesBrokeInternet from './generated/timeline-eleven-lines-broke-internet.json';
+// --- why-software-is-never-done (grammar-driven) ---
+import {WhySoftwareIsNeverDoneReel} from './compositions/WhySoftwareIsNeverDoneReel';
+import {WhySoftwareIsNeverDoneContactSheet} from './compositions/WhySoftwareIsNeverDoneContactSheet';
+import timelineWhySoftwareIsNeverDone from './generated/timeline-why-software-is-never-done.json';
+// --- claude-watermark (grammar-driven) ---
+import {ClaudeWatermarkReel} from './compositions/ClaudeWatermarkReel';
+import {ClaudeWatermarkContactSheet} from './compositions/ClaudeWatermarkContactSheet';
+import timelineClaudeWatermark from './generated/timeline-claude-watermark.json';
+// --- tv-watches-you (grammar-driven) ---
+import {TvWatchesYouReel} from './compositions/TvWatchesYouReel';
+import {TvWatchesYouContactSheet} from './compositions/TvWatchesYouContactSheet';
+import timelineTvWatchesYou from './generated/timeline-tv-watches-you.json';
+// --- droppers (grammar-driven) ---
+import {DroppersReel} from './compositions/DroppersReel';
+import {DroppersContactSheet} from './compositions/DroppersContactSheet';
+import timelineDroppers from './generated/timeline-droppers.json';
+// --- safe-account-scam (grammar-driven) ---
+import {SafeAccountScamReel} from './compositions/SafeAccountScamReel';
+import {SafeAccountScamContactSheet} from './compositions/SafeAccountScamContactSheet';
+import timelineSafeAccountScam from './generated/timeline-safe-account-scam.json';
+// --- flat-back-to-seller (grammar-driven) ---
+import {FlatBackToSellerReel} from './compositions/FlatBackToSellerReel';
+import {FlatBackToSellerContactSheet} from './compositions/FlatBackToSellerContactSheet';
+import timelineFlatBackToSeller from './generated/timeline-flat-back-to-seller.json';
+// --- credit-self-ban (grammar-driven) ---
+import {CreditSelfBanReel} from './compositions/CreditSelfBanReel';
+import {CreditSelfBanContactSheet} from './compositions/CreditSelfBanContactSheet';
+import timelineCreditSelfBan from './generated/timeline-credit-self-ban.json';
+// --- drug-market-shift (grammar-driven) ---
+import {DrugMarketShiftReel} from './compositions/DrugMarketShiftReel';
+import {DrugMarketShiftContactSheet} from './compositions/DrugMarketShiftContactSheet';
+import timelineDrugMarketShift from './generated/timeline-drug-market-shift.json';
 const calculateMetadata:CalculateMetadataFunction<Record<string,unknown>>=async()=>({durationInFrames:timeline.durationInFrames,defaultOutName:'ghostpepe-reel.mp4',defaultCodec:'h264'});
 const graveyard = computeGraveyardSceneFrames();
 export const RemotionRoot:React.FC=()=> <>
@@ -185,4 +233,28 @@ export const RemotionRoot:React.FC=()=> <>
   <Composition id="HowSitesDetectVpnContactSheet" component={HowSitesDetectVpnContactSheet} durationInFrames={1} fps={30} width={1080} height={1920} defaultProps={{}}/>
   <Composition id="PasskeyExplainedReel" component={PasskeyExplainedReel} durationInFrames={timelinePasskeyExplained.durationInFrames} fps={timelinePasskeyExplained.fps} width={timelinePasskeyExplained.width} height={timelinePasskeyExplained.height} defaultProps={{}}/>
   <Composition id="PasskeyExplainedContactSheet" component={PasskeyExplainedContactSheet} durationInFrames={1} fps={30} width={1080} height={1920} defaultProps={{}}/>
+  <Composition id="AiBrowserHijackReel" component={AiBrowserHijackReel} durationInFrames={timelineAiBrowserHijack.durationInFrames} fps={timelineAiBrowserHijack.fps} width={timelineAiBrowserHijack.width} height={timelineAiBrowserHijack.height} defaultProps={{}}/>
+  <Composition id="AiBrowserHijackContactSheet" component={AiBrowserHijackContactSheet} durationInFrames={1} fps={30} width={1080} height={1920} defaultProps={{}}/>
+  <Composition id="AiVoiceScam48kReel" component={AiVoiceScam48kReel} durationInFrames={timelineAiVoiceScam48k.durationInFrames} fps={timelineAiVoiceScam48k.fps} width={timelineAiVoiceScam48k.width} height={timelineAiVoiceScam48k.height} defaultProps={{}}/>
+  <Composition id="AiVoiceScam48kContactSheet" component={AiVoiceScam48kContactSheet} durationInFrames={1} fps={30} width={1080} height={1920} defaultProps={{}}/>
+  <Composition id="BrowserIntroducesItselfReel" component={BrowserIntroducesItselfReel} durationInFrames={timelineBrowserIntroducesItself.durationInFrames} fps={timelineBrowserIntroducesItself.fps} width={timelineBrowserIntroducesItself.width} height={timelineBrowserIntroducesItself.height} defaultProps={{}}/>
+  <Composition id="BrowserIntroducesItselfContactSheet" component={BrowserIntroducesItselfContactSheet} durationInFrames={1} fps={30} width={1080} height={1920} defaultProps={{}}/>
+  <Composition id="ElevenLinesBrokeInternetReel" component={ElevenLinesBrokeInternetReel} durationInFrames={timelineElevenLinesBrokeInternet.durationInFrames} fps={timelineElevenLinesBrokeInternet.fps} width={timelineElevenLinesBrokeInternet.width} height={timelineElevenLinesBrokeInternet.height} defaultProps={{}}/>
+  <Composition id="ElevenLinesBrokeInternetContactSheet" component={ElevenLinesBrokeInternetContactSheet} durationInFrames={1} fps={30} width={1080} height={1920} defaultProps={{}}/>
+  <Composition id="WhySoftwareIsNeverDoneReel" component={WhySoftwareIsNeverDoneReel} durationInFrames={timelineWhySoftwareIsNeverDone.durationInFrames} fps={timelineWhySoftwareIsNeverDone.fps} width={timelineWhySoftwareIsNeverDone.width} height={timelineWhySoftwareIsNeverDone.height} defaultProps={{}}/>
+  <Composition id="WhySoftwareIsNeverDoneContactSheet" component={WhySoftwareIsNeverDoneContactSheet} durationInFrames={1} fps={30} width={1080} height={1920} defaultProps={{}}/>
+  <Composition id="ClaudeWatermarkReel" component={ClaudeWatermarkReel} durationInFrames={timelineClaudeWatermark.durationInFrames} fps={timelineClaudeWatermark.fps} width={timelineClaudeWatermark.width} height={timelineClaudeWatermark.height} defaultProps={{}}/>
+  <Composition id="ClaudeWatermarkContactSheet" component={ClaudeWatermarkContactSheet} durationInFrames={1} fps={30} width={1080} height={1920} defaultProps={{}}/>
+  <Composition id="TvWatchesYouReel" component={TvWatchesYouReel} durationInFrames={timelineTvWatchesYou.durationInFrames} fps={timelineTvWatchesYou.fps} width={timelineTvWatchesYou.width} height={timelineTvWatchesYou.height} defaultProps={{}}/>
+  <Composition id="TvWatchesYouContactSheet" component={TvWatchesYouContactSheet} durationInFrames={1} fps={30} width={1080} height={1920} defaultProps={{}}/>
+  <Composition id="DroppersReel" component={DroppersReel} durationInFrames={timelineDroppers.durationInFrames} fps={timelineDroppers.fps} width={timelineDroppers.width} height={timelineDroppers.height} defaultProps={{}}/>
+  <Composition id="DroppersContactSheet" component={DroppersContactSheet} durationInFrames={1} fps={30} width={1080} height={1920} defaultProps={{}}/>
+  <Composition id="SafeAccountScamReel" component={SafeAccountScamReel} durationInFrames={timelineSafeAccountScam.durationInFrames} fps={timelineSafeAccountScam.fps} width={timelineSafeAccountScam.width} height={timelineSafeAccountScam.height} defaultProps={{}}/>
+  <Composition id="SafeAccountScamContactSheet" component={SafeAccountScamContactSheet} durationInFrames={1} fps={30} width={1080} height={1920} defaultProps={{}}/>
+  <Composition id="FlatBackToSellerReel" component={FlatBackToSellerReel} durationInFrames={timelineFlatBackToSeller.durationInFrames} fps={timelineFlatBackToSeller.fps} width={timelineFlatBackToSeller.width} height={timelineFlatBackToSeller.height} defaultProps={{}}/>
+  <Composition id="FlatBackToSellerContactSheet" component={FlatBackToSellerContactSheet} durationInFrames={1} fps={30} width={1080} height={1920} defaultProps={{}}/>
+  <Composition id="CreditSelfBanReel" component={CreditSelfBanReel} durationInFrames={timelineCreditSelfBan.durationInFrames} fps={timelineCreditSelfBan.fps} width={timelineCreditSelfBan.width} height={timelineCreditSelfBan.height} defaultProps={{}}/>
+  <Composition id="CreditSelfBanContactSheet" component={CreditSelfBanContactSheet} durationInFrames={1} fps={30} width={1080} height={1920} defaultProps={{}}/>
+  <Composition id="DrugMarketShiftReel" component={DrugMarketShiftReel} durationInFrames={timelineDrugMarketShift.durationInFrames} fps={timelineDrugMarketShift.fps} width={timelineDrugMarketShift.width} height={timelineDrugMarketShift.height} defaultProps={{}}/>
+  <Composition id="DrugMarketShiftContactSheet" component={DrugMarketShiftContactSheet} durationInFrames={1} fps={30} width={1080} height={1920} defaultProps={{}}/>
 </>;

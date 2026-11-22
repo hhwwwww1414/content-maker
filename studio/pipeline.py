@@ -7,6 +7,7 @@ import json
 import os
 import re
 import sqlite3
+import subprocess
 import sys
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -230,8 +231,8 @@ def validate(path, stage='full'):
         for field in ['voice', 'thought', 'animation', 'onScreen']:
             if not scene.get(field):
                 errors.append(f'{sid}: missing {field}')
-        if not scene.get('template') and not scene.get('visual') and not scene.get('component'):
-            errors.append(f'{sid}: needs visual, component or template')
+        if not scene.get('template') and not scene.get('visual') and not scene.get('component') and not scene.get('direction'):
+            errors.append(f'{sid}: needs direction, visual, component or template')
         if scene.get('visual'):
             check_visual(scene, errors)
         if not scene.get('sources') or set(scene['sources']) - known_sources:
@@ -239,6 +240,16 @@ def validate(path, stage='full'):
         if len(scene.get('onScreen', '')) > read['maxOnScreenChars']:
             errors.append(f'{sid}: on-screen text over {read["maxOnScreenChars"]} characters')
     check_variety(scenes, errors)
+    # Directed scenes have a typed contract and their own rules, shared with the renderer.
+    if any(s.get('direction') for s in scenes):
+        result = subprocess.run(['node', '--no-warnings', str(ROOT / 'studio/spec-check.mjs'), str(path)], capture_output=True, text=True)
+        for line in result.stdout.splitlines():
+            if line.startswith('FAIL '):
+                errors.append(line[5:])
+            elif line.startswith('WARN '):
+                warnings.append(line[5:])
+        if result.returncode != 0 and not any(l.startswith('FAIL ') for l in result.stdout.splitlines()):
+            errors.append('spec-check failed: ' + result.stderr[-400:])
     if project.get('theme') and project['theme'] not in CATALOG['themes']:
         errors.append(f'Unknown theme {project["theme"]}')
     if timed:
