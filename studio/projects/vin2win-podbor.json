@@ -1,0 +1,1137 @@
+{
+  "id": "vin2win-podbor",
+  "topic": "Запросы покупателей в подбор",
+  "niche": "vin2win",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "publication": "draft",
+    "production": "rendered",
+    "approvedScriptHash": "0d2ad26d4ef74062",
+    "approval": {
+      "by": "qwezyid",
+      "at": "2026-11-22"
+    }
+  },
+  "sources": [
+    {
+      "id": "prod-request",
+      "publisher": "vin2win, снимки прод-приложения 21.11.2026",
+      "url": "file:///Users/qwezyid/projects/vin2win/output/viral-compare/public/real",
+      "accessed": "2026-11-22",
+      "claim": "Главная: плитка «Подбор — Запросы покупателей», блок «Ищут покупатели». Запрос в подбор Toyota Camry: бюджет до 2 600 000 ₽, пробег до 150 000 км, Москва; комментарий: чёрная, максимальная комплектация, камеры 360; кнопка «Предложить автомобиль»"
+    }
+  ],
+  "title": "Покупатель сам пишет, что ищет",
+  "hook": "«Ищу Камри, срочно» тонет в чате",
+  "centralIdea": "В vin2win запрос покупателя не тонет, а лежит в «Подборе» с требованиями, и на него можно предложить машину",
+  "editorialReview": {
+    "openClaims": [
+      "Что происходит после «Предложить автомобиль» (уведомление покупателю и т.п.) не проверено; сценарий этого не утверждает",
+      "Снимок экрана от 21.11.2026; запрос может быть уже закрыт"
+    ]
+  },
+  "theme": "signal",
+  "captionStyle": "plate",
+  "art": {
+    "direction": "vin2win",
+    "music": {
+      "asset": "v2w-catwalk",
+      "volume": 0.14,
+      "duck": 0.6
+    }
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 32.36666666666667,
+  "audio": {
+    "voicePath": "generated/vin2win-podbor/voice-465c7b566d53cf47-mix.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "voiceId": "iP95p4xoKVk53GoZ742B",
+    "modelId": "eleven_v3",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.8,
+      "style": 0,
+      "speed": 1
+    },
+    "whisperHint": "Бренды: вин ту вин, Тойота Камри.",
+    "sourcePath": "generated/vin2win-podbor/voice-465c7b566d53cf47.mp3",
+    "timingMode": "ElevenLabs character alignment",
+    "sourceDurationSeconds": 31.869388,
+    "durationSeconds": 31.83225,
+    "localTempo": 1,
+    "cacheHash": "465c7b566d53cf47",
+    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades"
+  },
+  "captionDisplay": [
+    {
+      "from": "вин ту вин",
+      "to": "VIN2WIN"
+    },
+    {
+      "from": "Тойота Камри",
+      "to": "Toyota Camry"
+    }
+  ],
+  "captions": [
+    {
+      "text": "В",
+      "startMs": 80,
+      "endMs": 120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "чатах",
+      "startMs": 120,
+      "endMs": 400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "пишут:",
+      "startMs": 453,
+      "endMs": 1040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "«Ищу",
+      "startMs": 1310,
+      "endMs": 1520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Камри,",
+      "startMs": 1600,
+      "endMs": 2080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "срочно».",
+      "startMs": 2120,
+      "endMs": 2640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Через",
+      "startMs": 3110,
+      "endMs": 3200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "минуту",
+      "startMs": 3253,
+      "endMs": 3600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "это",
+      "startMs": 3660,
+      "endMs": 3840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сообщение",
+      "startMs": 3893,
+      "endMs": 4320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "уже",
+      "startMs": 4380,
+      "endMs": 4560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "утонуло",
+      "startMs": 4613,
+      "endMs": 5040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 5080,
+      "endMs": 5120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ленте.",
+      "startMs": 5160,
+      "endMs": 5520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "В",
+      "startMs": 6050,
+      "endMs": 6080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин",
+      "startMs": 6140,
+      "endMs": 6320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ту",
+      "startMs": 6373,
+      "endMs": 6480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин",
+      "startMs": 6520,
+      "endMs": 6640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "запрос",
+      "startMs": 6686,
+      "endMs": 6960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "покупателя",
+      "startMs": 7013,
+      "endMs": 7600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 7653,
+      "endMs": 7760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тонет:",
+      "startMs": 7820,
+      "endMs": 8320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "он",
+      "startMs": 8380,
+      "endMs": 8480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "лежит",
+      "startMs": 8520,
+      "endMs": 8720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 8760,
+      "endMs": 8800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "разделе",
+      "startMs": 8857,
+      "endMs": 9280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "«Подбор».",
+      "startMs": 9360,
+      "endMs": 10000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Вот",
+      "startMs": 10530,
+      "endMs": 10640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "реальный",
+      "startMs": 10693,
+      "endMs": 10960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "запрос:",
+      "startMs": 11017,
+      "endMs": 11840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Тойота",
+      "startMs": 11940,
+      "endMs": 12240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Камри,",
+      "startMs": 12320,
+      "endMs": 12880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "бюджет",
+      "startMs": 12960,
+      "endMs": 13360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "до",
+      "startMs": 13440,
+      "endMs": 13600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "двух",
+      "startMs": 13648,
+      "endMs": 13840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "миллионов",
+      "startMs": 13880,
+      "endMs": 14320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "шестисот",
+      "startMs": 14400,
+      "endMs": 14880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тысяч,",
+      "startMs": 15090,
+      "endMs": 15720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Москва,",
+      "startMs": 15771,
+      "endMs": 16320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "пробег",
+      "startMs": 16420,
+      "endMs": 16800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "до",
+      "startMs": 16880,
+      "endMs": 17040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ста",
+      "startMs": 17100,
+      "endMs": 17280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "пятидесяти",
+      "startMs": 17360,
+      "endMs": 17920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тысяч.",
+      "startMs": 18000,
+      "endMs": 18480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "А",
+      "startMs": 19050,
+      "endMs": 19080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 19080,
+      "endMs": 19120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "комментарии:",
+      "startMs": 19160,
+      "endMs": 20120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "чёрная,",
+      "startMs": 20440,
+      "endMs": 20880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "максимальная",
+      "startMs": 20980,
+      "endMs": 21440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "комплектация,",
+      "startMs": 21488,
+      "endMs": 22240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "камеры",
+      "startMs": 22490,
+      "endMs": 22800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "триста",
+      "startMs": 22880,
+      "endMs": 23280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "шестьдесят.",
+      "startMs": 23360,
+      "endMs": 24040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Есть",
+      "startMs": 24140,
+      "endMs": 24320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "такая?",
+      "startMs": 24387,
+      "endMs": 25200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Жми",
+      "startMs": 25610,
+      "endMs": 25920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "«Предложить",
+      "startMs": 25960,
+      "endMs": 26480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "автомобиль»",
+      "startMs": 26530,
+      "endMs": 27120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "прямо",
+      "startMs": 27270,
+      "endMs": 27520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 27640,
+      "endMs": 27760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "запросе.",
+      "startMs": 27820,
+      "endMs": 28080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Вин",
+      "startMs": 28600,
+      "endMs": 28720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ту",
+      "startMs": 28773,
+      "endMs": 28880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин.",
+      "startMs": 28940,
+      "endMs": 29200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Пока",
+      "startMs": 29470,
+      "endMs": 29600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "другие",
+      "startMs": 29657,
+      "endMs": 30000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ищут",
+      "startMs": 30080,
+      "endMs": 30400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 30480,
+      "endMs": 30560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вы",
+      "startMs": 30613,
+      "endMs": 30720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "закрываете",
+      "startMs": 30760,
+      "endMs": 31360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сделки!",
+      "startMs": 31408,
+      "endMs": 31840,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1",
+      "voice": "В чатах пишут: «Ищу Камри, срочно». Через минуту это сообщение уже утонуло в ленте.",
+      "onScreen": "Ищу Камри — и тишина",
+      "thought": "Запрос в чате живёт минуту",
+      "animation": "Сообщения копятся, нужное тонет",
+      "sources": [
+        "prod-request"
+      ],
+      "start": 0,
+      "duration": 6.066666666666666,
+      "direction": {
+        "purpose": "opening",
+        "emotion": "узнавание",
+        "concept": "Лента чата на наклонной плоскости разгоняется, зелёный запрос «Ищу Камри» тонет под сообщениями",
+        "hierarchy": {
+          "primary": "запрос тонет"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "v2wChat",
+          "review": "Chat flood with the request drowning",
+          "props": {
+            "askCue": "Ищу",
+            "fastCue": "Через",
+            "sinkCue": "утонуло",
+            "ask": "Ищу Камри, срочно",
+            "heads": [
+              {
+                "text": "В чатах пишут: *«Ищу Камри, срочно»*",
+                "cue": 0,
+                "off": 0,
+                "size": 72
+              },
+              {
+                "text": "Через минуту — *утонуло в ленте*",
+                "cue": "Через",
+                "size": 74
+              }
+            ]
+          }
+        },
+        "camera": {
+          "move": "still"
+        },
+        "captions": {
+          "mode": "off",
+          "zone": "low"
+        },
+        "sound": [
+          {
+            "cue": 0.83,
+            "sfx": "v2w-sparkle-touch",
+            "volume": 0.25
+          },
+          {
+            "cue": 4.15,
+            "sfx": "v2w-air-woosh-deep",
+            "volume": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2",
+      "voice": "В вин ту вин запрос покупателя не тонет: он лежит в разделе «Подбор».",
+      "onScreen": "Запросы — в разделе «Подбор»",
+      "thought": "У запроса есть постоянное место",
+      "animation": "Телефон поднимается, плитка «Подбор» в рамке",
+      "sources": [
+        "prod-request"
+      ],
+      "start": 6.066666666666666,
+      "duration": 4.466666666666667,
+      "direction": {
+        "purpose": "turn",
+        "emotion": "облегчение",
+        "concept": "Утонувший запрос всплывает из темноты и влетает в плитку «Подбор» в поднявшемся телефоне",
+        "hierarchy": {
+          "primary": "Подбор"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "v2wRescue",
+          "review": "The drowned request flies into the Podbor tile",
+          "props": {
+            "riseCue": "вин",
+            "liftCue": "запрос",
+            "landCue": "Подбор",
+            "ask": "Ищу Камри, срочно",
+            "screen": "home.jpg",
+            "tile": "home.podbor",
+            "heads": [
+              {
+                "text": "В vin2win запрос *не тонет*",
+                "cue": "вин",
+                "off": 0.25
+              },
+              {
+                "text": "Он лежит в разделе *«Подбор»*",
+                "cue": "лежит"
+              }
+            ]
+          }
+        },
+        "camera": {
+          "move": "still"
+        },
+        "captions": {
+          "mode": "off",
+          "zone": "low"
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Склейка на «вин ту вин»: из моря сообщений к приложению"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "v2w-whoosh-fast",
+            "volume": 0.3
+          },
+          {
+            "cue": 2.82,
+            "sfx": "v2w-sparkle-touch",
+            "volume": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3",
+      "voice": "Вот реальный запрос: Тойота Камри, бюджет до двух миллионов шестисот тысяч, Москва, пробег до ста пятидесяти тысяч.",
+      "onScreen": "Toyota Camry до 2 600 000 ₽",
+      "thought": "Требования покупателя видны по пунктам",
+      "animation": "Камера идёт по строкам требований",
+      "sources": [
+        "prod-request"
+      ],
+      "start": 10.533333333333333,
+      "duration": 8.533333333333333,
+      "direction": {
+        "purpose": "proof",
+        "emotion": "конкретика",
+        "concept": "Камера читает настоящий запрос по строкам: модель, бюджет, город, пробег",
+        "hierarchy": {
+          "primary": "требования"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "v2wPhone",
+          "review": "Real request read row by row",
+          "props": {
+            "screens": [
+              {
+                "cue": "Вот",
+                "src": "request-camry.jpg"
+              }
+            ],
+            "covers": [
+              "request.author"
+            ],
+            "cams": [
+              {
+                "cue": "Вот",
+                "k": 1.62,
+                "fy": 1180
+              },
+              {
+                "cue": "Тойота",
+                "x": 201,
+                "y": 200,
+                "k": 2.3,
+                "fy": 1120
+              },
+              {
+                "cue": "бюджет",
+                "x": 201,
+                "y": 330,
+                "k": 2.35,
+                "fy": 1100
+              },
+              {
+                "cue": "Москва",
+                "x": 201,
+                "y": 410,
+                "k": 2.35,
+                "fy": 1100
+              },
+              {
+                "cue": "пробег",
+                "x": 201,
+                "y": 410,
+                "k": 2.35,
+                "fy": 1100
+              },
+              {
+                "cue": "пробег",
+                "off": 0.7,
+                "x": 201,
+                "y": 385,
+                "k": 2.65,
+                "fy": 1060
+              }
+            ],
+            "spots": [
+              {
+                "cue": "Тойота",
+                "box": "request.title"
+              },
+              {
+                "cue": "бюджет",
+                "box": "request.budget"
+              },
+              {
+                "cue": "Москва",
+                "box": "request.city"
+              },
+              {
+                "cue": "пробег",
+                "box": "request.mileage"
+              }
+            ],
+            "heads": [
+              {
+                "text": "Вот *реальный запрос*",
+                "cue": "Вот"
+              },
+              {
+                "text": "Toyota Camry · *до 2 600 000 ₽*",
+                "cue": "бюджет",
+                "size": 66
+              },
+              {
+                "text": "Город — *Москва*",
+                "cue": "Москва",
+                "size": 70
+              },
+              {
+                "text": "Пробег *до 150 000 км*",
+                "cue": "пробег",
+                "off": -0.05,
+                "size": 70
+              }
+            ]
+          }
+        },
+        "camera": {
+          "move": "still"
+        },
+        "captions": {
+          "mode": "off",
+          "zone": "low"
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Склейка на «Вот»: внутрь запроса"
+        },
+        "sound": [
+          {
+            "cue": 1.41,
+            "sfx": "v2w-switch-tap",
+            "volume": 0.3
+          },
+          {
+            "cue": 2.43,
+            "sfx": "v2w-switch-tap",
+            "volume": 0.3
+          },
+          {
+            "cue": 5.24,
+            "sfx": "v2w-switch-tap",
+            "volume": 0.3
+          },
+          {
+            "cue": 5.89,
+            "sfx": "v2w-switch-tap",
+            "volume": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4",
+      "voice": "А в комментарии: чёрная, максимальная комплектация, камеры триста шестьдесят.",
+      "onScreen": "Чёрная, максималка, камеры 360°",
+      "thought": "Видно даже детали, которых нет в фильтрах",
+      "animation": "Комментарий выходит из экрана объёмной карточкой",
+      "sources": [
+        "prod-request"
+      ],
+      "start": 19.066666666666666,
+      "duration": 5.066666666666666,
+      "direction": {
+        "purpose": "explain",
+        "emotion": "интерес",
+        "concept": "Комментарий покупателя выходит из экрана объёмной карточкой, детали всплывают зелёными пилюлями",
+        "hierarchy": {
+          "primary": "комментарий"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "v2wPull",
+          "review": "The comment pulled out of the real screen",
+          "props": {
+            "src": "request-camry.jpg",
+            "covers": [
+              "request.author"
+            ],
+            "blocks": [
+              {
+                "box": "request.comment",
+                "cue": "комментарии",
+                "scale": 2.4,
+                "y": 800
+              }
+            ],
+            "pills": [
+              {
+                "text": "чёрная",
+                "cue": "чёрная",
+                "x": 320,
+                "y": 1110
+              },
+              {
+                "text": "макс. комплектация",
+                "cue": "максимальная",
+                "x": 540,
+                "y": 1240
+              },
+              {
+                "text": "камеры 360°",
+                "cue": "камеры",
+                "x": 690,
+                "y": 1370
+              }
+            ],
+            "heads": [
+              {
+                "text": "А в комментарии — *детали*",
+                "cue": "А",
+                "off": 0
+              }
+            ]
+          }
+        },
+        "camera": {
+          "move": "still"
+        },
+        "captions": {
+          "mode": "off",
+          "zone": "low"
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Склейка на «А в комментарии»"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "v2w-swoosh-quick",
+            "volume": 0.2
+          },
+          {
+            "cue": 1.37,
+            "sfx": "v2w-switch-tap",
+            "volume": 0.3
+          },
+          {
+            "cue": 1.91,
+            "sfx": "v2w-switch-tap",
+            "volume": 0.3
+          },
+          {
+            "cue": 3.42,
+            "sfx": "v2w-switch-tap",
+            "volume": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5",
+      "voice": "Есть такая? Жми «Предложить автомобиль» прямо в запросе.",
+      "onScreen": "Предложи автомобиль",
+      "thought": "Ответ — одной кнопкой",
+      "animation": "Касание кнопки, кольца",
+      "sources": [
+        "prod-request"
+      ],
+      "start": 24.133333333333333,
+      "duration": 4.466666666666669,
+      "direction": {
+        "purpose": "payoff",
+        "emotion": "действие",
+        "concept": "Палец нажимает «Предложить автомобиль» в том же запросе",
+        "hierarchy": {
+          "primary": "Предложить автомобиль"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "v2wPhone",
+          "review": "Tap on the offer button",
+          "props": {
+            "screens": [
+              {
+                "cue": "Есть",
+                "src": "request-camry.jpg"
+              }
+            ],
+            "covers": [
+              "request.author"
+            ],
+            "cams": [
+              {
+                "cue": "Есть",
+                "x": 201,
+                "y": 600,
+                "k": 1.9,
+                "fy": 1150
+              },
+              {
+                "cue": "Жми",
+                "off": -0.3,
+                "x": 284,
+                "y": 807,
+                "k": 2.6,
+                "fy": 1060
+              },
+              {
+                "cue": "запросе",
+                "x": 284,
+                "y": 807,
+                "k": 2.6,
+                "fy": 1060
+              },
+              {
+                "cue": "запросе",
+                "off": 0.6,
+                "x": 284,
+                "y": 807,
+                "k": 2.95,
+                "fy": 1030
+              }
+            ],
+            "spots": [
+              {
+                "cue": "Жми",
+                "off": -0.2,
+                "box": "request.offer"
+              }
+            ],
+            "taps": [
+              {
+                "cue": "Предложить",
+                "box": "request.offer"
+              }
+            ],
+            "hitCues": [
+              "Предложить"
+            ],
+            "heads": [
+              {
+                "text": "Есть *такая машина*?",
+                "cue": "Есть"
+              },
+              {
+                "text": "Жми *«Предложить автомобиль»*",
+                "cue": "Жми",
+                "size": 72
+              }
+            ]
+          }
+        },
+        "camera": {
+          "move": "still"
+        },
+        "captions": {
+          "mode": "off",
+          "zone": "low"
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Склейка на «Есть такая?»"
+        },
+        "sound": [
+          {
+            "cue": 1.64,
+            "sfx": "v2w-click-camera",
+            "volume": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6",
+      "voice": "Вин ту вин. Пока другие ищут — вы закрываете сделки!",
+      "onScreen": "Вы закрываете сделки!",
+      "thought": "Бренд и обещание",
+      "animation": "Логотип, слоган, адрес",
+      "sources": [
+        "prod-request"
+      ],
+      "start": 28.6,
+      "duration": 3.7666666666666657,
+      "direction": {
+        "purpose": "climax",
+        "emotion": "уверенность",
+        "concept": "Знак vin2win, слоган и адрес",
+        "hierarchy": {
+          "primary": "VIN2WIN"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "v2wOutro",
+          "review": "Brand outro",
+          "props": {
+            "heads": [
+              {
+                "text": "Пока другие ищут —",
+                "cue": "Вин"
+              },
+              {
+                "text": "*Вы закрываете сделки!*",
+                "cue": "вы"
+              }
+            ]
+          }
+        },
+        "camera": {
+          "move": "still"
+        },
+        "captions": {
+          "mode": "off",
+          "zone": "low"
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Склейка в знак"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "v2w-transition-soft",
+            "volume": 0.25
+          }
+        ]
+      }
+    }
+  ],
+  "renderPath": "out/studio/vin2win-podbor.mp4",
+  "qa": {
+    "path": "out/studio/vin2win-podbor-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  }
+}

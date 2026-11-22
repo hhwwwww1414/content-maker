@@ -64,3 +64,15 @@ export const FRESH = {
   home: { x: 0, y: 566, w: 402, h: 78 }, // home.jpg, 22.11.2026
   homeRequests: { x: 0, y: 346, w: 402, h: 96 }, // home-requests.jpg, 21.11.2026
 };
+
+// Запрос Toyota Camry (request-camry.jpg): строки требований, точки iPhone. Добавлено 22.11.2026 для vin2win-podbor.
+export const REQUEST_ROWS = {
+  title: { x: 14, y: 128, w: 200, h: 58 },
+  models: { x: 16, y: 253, w: 370, h: 51 },
+  budget: { x: 16, y: 306, w: 370, h: 51 },
+  mileage: { x: 16, y: 358, w: 370, h: 51 },
+  city: { x: 16, y: 411, w: 370, h: 52 },
+  extra: { x: 16, y: 465, w: 370, h: 62 },
+};
+// Главная (home.jpg): плитка «Подбор — запросы покупателей»
+export const HOME = { podbor: { x: 142, y: 183, w: 118, h: 104 } };

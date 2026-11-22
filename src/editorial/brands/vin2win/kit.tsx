@@ -212,4 +212,35 @@ export const Outro: React.FC<{at: number; line?: string; lineAt?: number[]}> = (
   );
 };
 
+/** A status pill in the app's style. */
+export const Pill: React.FC<{text: string; at: number; x: number; y: number; tone?: 'green' | 'dark'; size?: number}> = ({text, at, x, y, tone = 'green', size = 44}) => {
+  const f = useCurrentFrame();
+  if (f < at) return null;
+  const k = ramp(f, at, 12, EASE.overshoot);
+  const float = Math.sin((f - at) / 18 + x) * 6;
+  return (
+    <div data-qa="text" data-qa-size={size} {...(k < 0.99 ? {'data-qa-moving': ''} : {})} style={{position: 'absolute', left: x, top: y + float, transform: `translate(-50%,-50%) scale(${mix(0.3, 1, k).toFixed(3)})`, opacity: Math.min(1, k * 2), padding: `${size * 0.32}px ${size * 0.6}px`, borderRadius: 999, background: tone === 'green' ? 'rgba(22,163,74,0.22)' : '#181c1f', border: `2px solid ${tone === 'green' ? 'rgba(34,197,94,0.7)' : 'rgba(255,255,255,0.12)'}`, color: tone === 'green' ? C.greenText : C.ink, font: `800 ${size}px ${FONT}`, whiteSpace: 'nowrap', backdropFilter: 'blur(10px)', boxShadow: '0 16px 40px rgba(0,0,0,0.5)'}}>{text}</div>
+  );
+};
+
+/** A finger tap: a soft press and two rings. Coordinates are screen points. */
+export const Tap: React.FC<{at: number; x: number; y: number; color?: string}> = ({at, x, y, color = C.greenText}) => {
+  const frame = useCurrentFrame();
+  const f = frame - at;
+  if (f < -6 || f > 22) return null;
+  const press = interpolate(f, [-6, 0, 6, 14], [0, 1, 1, 0], clamp);
+  const pr = interpolate(f, [-6, 0, 3], [30, 22, 24], {...clamp, easing: EASE.out});
+  return (
+    <div style={{position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 30}}>
+      {[0, 3].map((d, i) => {
+        const t = interpolate(f, [d, d + 14], [0, 1], {...clamp, easing: EASE.out});
+        if (f < d || t >= 1) return null;
+        const r = mix(16, i === 0 ? 46 : 64, t);
+        return <div key={i} style={{position: 'absolute', left: x - r, top: y - r, width: r * 2, height: r * 2, borderRadius: '50%', border: `${i === 0 ? 2.5 : 1.6}px solid ${color}`, opacity: (1 - t) * 0.95, boxSizing: 'border-box'}}/>;
+      })}
+      <div style={{position: 'absolute', left: x - pr, top: y - pr, width: pr * 2, height: pr * 2, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.32) 60%, rgba(255,255,255,0.12) 100%)', boxShadow: '0 4px 18px rgba(0,0,0,0.35)', opacity: press}}/>
+    </div>
+  );
+};
+
 export {interpolate, SYS};
