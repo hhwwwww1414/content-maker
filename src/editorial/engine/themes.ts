@@ -178,6 +178,25 @@ artDirections.keynote = {
   compatibleWith: [],
 };
 
+/**
+ * vin2win: the app's own dark theme (mobile-app appearance tokens). Graphite stage under a green key light, Manrope,
+ * the yellow benefit badge. Its shots live in src/editorial/brands/vin2win and draw their own stage and headlines.
+ */
+const manrope = 'Manrope';
+artDirections.vin2win = {
+  id: 'vin2win', label: 'vin2win brand', intent: 'vin2win promos: the app design system, real production screens, objects in motion.',
+  palettes: {
+    base: {bg: '#0a0a0a', bg2: '#0d100f', surface: '#181c1f', line: '#2a2f31', ink: '#f4f7f7', muted: '#a6b4b4', accent: '#22c55e', accent2: '#ffd800', danger: '#ef4444', onAccent: '#04130a'},
+    inverse: {bg: '#f4f7f7', bg2: '#e4e7e8', surface: '#ffffff', line: '#c4cacc', ink: '#0a0a0a', muted: '#4b5557', accent: '#15803d', accent2: '#8a6d00', danger: '#b91c1c', onAccent: '#ffffff'},
+    block: {bg: '#0f3d22', bg2: '#15803d', surface: '#14532d', line: '#3f7a57', ink: '#f4f7f7', muted: '#c8e6d2', accent: '#ffd800', accent2: '#f4f7f7', danger: '#ffb4a8', onAccent: '#1f1600'},
+  },
+  display: role(manrope, 800, -3, 1.1), statement: role(manrope, 700, -2, 1.1), italic: role(manrope, 600, -1, 1.1),
+  body: role(manrope, 600, -0.5, 1.25), label2: role(manrope, 700, 0.5, 1.15), mono: monoRole,
+  field: 'solid', grain: 0, vignette: 0, radius: 26, motion: 'snappy', emphasis: 'color',
+  captions: {background: '#181c1f', ink: '#f4f7f7', hot: '#22c55e', radius: 18, font: role(manrope, 700, 0, 1.15)},
+  compatibleWith: [],
+};
+
 export const artIds = Object.keys(artDirections);
 
 /** A scene's colours: its direction's palette in the requested variant. */

@@ -93,7 +93,9 @@ checks.sampledFramesVisible = !sampleFrames.some(blank);
 const blankFrames = sampleFrames.filter(blank).map((s) => ({seconds: s.seconds, scene: [...p.scenes].reverse().find((sc) => s.seconds >= sc.start)?.id, mean: Number(s.mean.toFixed(1)), stdDev: Number(s.stdDev.toFixed(1))}));
 const contrasts = sampleFrames.map((s) => s.captionContrast).filter((c) => c !== null);
 const minCaptionContrast = contrasts.length ? Math.min(...contrasts) : null;
-if (isKit && hasVoice && !musicOnly) checks.captionContrast = contrasts.length > 0 && minCaptionContrast >= STANDARDS.readability.minContrast;
+// A reel whose scenes all switch captions off carries its own word-keyed headlines (gated by textContrast instead).
+const captionsShown = p.scenes.some((s) => s.direction?.captions?.mode !== 'off');
+if (isKit && hasVoice && !musicOnly && captionsShown) checks.captionContrast = contrasts.length > 0 && minCaptionContrast >= STANDARDS.readability.minContrast;
 
 // Decode every frame, rather than inferring corruption or black frames from a few stills.
 const W = 54, H = 96;

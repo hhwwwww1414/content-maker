@@ -115,7 +115,7 @@ export const checkProject = (project: RawProject, library: Library = {}): Findin
     // Spoken layout replaces the captions: forbid it from hiding text anywhere else.
     const shot = d.shot as {type: string; layout?: string};
     // A music-only reel has no speech to caption: its words are the picture.
-    if (d.captions.mode === 'off' && project.audio?.mode !== 'music' && !(shot.type === 'type' && shot.layout === 'spoken')) add('error', id, 'captions', 'Captions may be off only when the type itself is spoken word by word');
+    if (d.captions.mode === 'off' && project.audio?.mode !== 'music' && !(shot.type === 'type' && shot.layout === 'spoken') && !(shot.type === 'custom' && Array.isArray((shot as {props?: {heads?: unknown}}).props?.heads))) add('error', id, 'captions', 'Captions may be off only when the type itself is spoken word by word');
     // Shouting reads as cheap on a phone; reserve capitals for very short labels.
     for (const text of texts(d.shot as Record<string, unknown>)) {
       const letters = text.replace(/[^\p{L}]/gu, '');

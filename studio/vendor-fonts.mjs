@@ -19,6 +19,7 @@ const WANT = {
   TenorSans: {normal: ['400']},
   InterTight: {normal: ['500', '700', '900']},
   JetBrainsMono: {normal: ['500', '700']},
+  Manrope: {normal: ['500', '600', '700', '800']},
 };
 const SUBSETS = ['cyrillic', 'latin'];
 const out = resolve(ROOT, 'public/library/fonts');

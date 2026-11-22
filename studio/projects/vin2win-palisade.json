@@ -1,0 +1,1003 @@
+{
+  "id": "vin2win-palisade",
+  "topic": "Цена и выгода: Hyundai Palisade",
+  "niche": "vin2win",
+  "language": "ru",
+  "status": {
+    "factCheck": "reviewed",
+    "scriptApproval": "approved",
+    "publication": "draft",
+    "production": "rendered",
+    "approvedScriptHash": "5574dc8dc527ce7c",
+    "approval": {
+      "by": "qwezyid",
+      "at": "2026-11-22",
+      "evidence": "Script and take approved for vin2win-cena-palisade; on 2026-11-22 the user asked to rebuild it in the vin2win brand style of the earlier promos, with objects in motion."
+    }
+  },
+  "sources": [
+    {
+      "id": "prod-capture",
+      "publisher": "vin2win, снимки прод-приложения 22.11.2026",
+      "url": "file:///Users/qwezyid/projects/vin2win/output/viral-compare/public/real",
+      "accessed": "2026-11-22",
+      "claim": "Карточка Hyundai Palisade 2019 (68d3948f): в руки 4 000 000 ₽, на ресурсах 4 290 000 ₽, выгода +290 000 ₽ — по данным продавца"
+    }
+  ],
+  "title": "Цена и выгода: Hyundai Palisade",
+  "hook": "В vin2win разница уже в карточке",
+  "centralIdea": "Цена и выгода: Hyundai Palisade",
+  "theme": "signal",
+  "captionStyle": "plate",
+  "art": {
+    "direction": "vin2win",
+    "music": {
+      "asset": "v2w-catwalk",
+      "volume": 0.14,
+      "duck": 0.6
+    }
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 25.866666666666667,
+  "scenes": [
+    {
+      "id": "s1",
+      "voice": "Сравниваешь цены в трёх вкладках? В вин ту вин разница уже в карточке.",
+      "onScreen": "В vin2win разница уже в карточке",
+      "sources": [
+        "prod-capture"
+      ],
+      "start": 0,
+      "duration": 4.433333333333334,
+      "direction": {
+        "purpose": "opening",
+        "emotion": "узнавание",
+        "concept": "Три карточки площадок по очереди выходят вперёд, сверенные цены копятся кучей и падают, когда из света поднимается каталог vin2win с выгодой",
+        "hierarchy": {
+          "primary": "три вкладки"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "v2wCompare",
+          "review": "Objects compare prices and fall; the answer rises",
+          "props": {
+            "switchCues": [
+              0.25,
+              "цены",
+              "трёх",
+              "вкладках",
+              1.6
+            ],
+            "fallCue": "вин",
+            "lead": "4",
+            "heads": [
+              {
+                "text": "Сравниваешь цены в *трёх вкладках*?",
+                "cue": 0,
+                "off": 0
+              },
+              {
+                "text": "В vin2win разница *уже в карточке*",
+                "cue": "вин",
+                "off": 0.3,
+                "size": 74
+              }
+            ]
+          }
+        },
+        "camera": {
+          "move": "still"
+        },
+        "captions": {
+          "mode": "off",
+          "zone": "low"
+        },
+        "sound": [
+          {
+            "cue": 0.25,
+            "sfx": "v2w-switch-tap",
+            "volume": 0.3
+          },
+          {
+            "cue": 0.52,
+            "sfx": "v2w-switch-tap",
+            "volume": 0.3
+          },
+          {
+            "cue": 0.91,
+            "sfx": "v2w-switch-tap",
+            "volume": 0.3
+          },
+          {
+            "cue": 1.11,
+            "sfx": "v2w-switch-tap",
+            "volume": 0.3
+          },
+          {
+            "cue": 1.6,
+            "sfx": "v2w-switch-tap",
+            "volume": 0.3
+          },
+          {
+            "cue": 1.36,
+            "sfx": "v2w-whoosh-fast",
+            "volume": 0.3
+          }
+        ]
+      },
+      "thought": "Сравнивать цены по вкладкам долго, а ответ уже есть в одной карточке",
+      "animation": "Фразы бьют по кадру на каждом слове, ответ вспыхивает белым"
+    },
+    {
+      "id": "s2",
+      "voice": "Вот реальный Хёндэ Палисейд. Продавец указал: на площадках — четыре миллиона двести девяносто тысяч, в руки — четыре миллиона.",
+      "onScreen": "Hyundai Palisade",
+      "sources": [
+        "prod-capture"
+      ],
+      "start": 4.433333333333334,
+      "duration": 8.2,
+      "direction": {
+        "purpose": "proof",
+        "emotion": "доверие",
+        "concept": "Настоящая карточка Palisade в телефоне: камера идёт от машины к ценам, зелёное кольцо держит то, что говорит голос",
+        "hierarchy": {
+          "primary": "две цены"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "v2wPhone",
+          "review": "Real production card read by the camera",
+          "props": {
+            "screens": [
+              {
+                "cue": "Вот",
+                "src": "rec-palisade.mp4",
+                "video": true,
+                "trim": 75
+              },
+              {
+                "cue": "Продавец",
+                "src": "d-palisade-a.jpg"
+              }
+            ],
+            "cams": [
+              {
+                "cue": "Вот",
+                "k": 1.62,
+                "fy": 1300
+              },
+              {
+                "cue": "Продавец",
+                "x": 201,
+                "y": 594,
+                "k": 1.9,
+                "fy": 1150
+              },
+              {
+                "cue": "площадках",
+                "off": -0.25,
+                "x": 201,
+                "y": 594,
+                "k": 2.4,
+                "fy": 1120
+              },
+              {
+                "cue": "руки",
+                "x": 201,
+                "y": 594,
+                "k": 2.5,
+                "fy": 1110
+              },
+              {
+                "cue": "руки",
+                "off": 0.6,
+                "x": 201,
+                "y": 594,
+                "k": 2.75,
+                "fy": 1080
+              }
+            ],
+            "spots": [
+              {
+                "cue": "Продавец",
+                "box": "palisade.card"
+              },
+              {
+                "cue": "площадках",
+                "off": -0.25,
+                "box": "palisade.res"
+              },
+              {
+                "cue": "руки",
+                "off": -0.3,
+                "box": "palisade.hand"
+              }
+            ],
+            "heads": [
+              {
+                "text": "Реальный *Hyundai Palisade*",
+                "cue": "Вот",
+                "size": 78
+              },
+              {
+                "text": "Продавец указал *две цены*",
+                "cue": "Продавец"
+              },
+              {
+                "text": "На площадках — 4 290 000 ₽",
+                "cue": "площадках",
+                "off": -0.25,
+                "size": 68
+              },
+              {
+                "text": "В руки — *4 000 000 ₽*",
+                "cue": "руки",
+                "off": -0.3,
+                "size": 74
+              }
+            ]
+          }
+        },
+        "camera": {
+          "move": "still"
+        },
+        "captions": {
+          "mode": "off",
+          "zone": "low"
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Склейка на «Вот»: от каталога к одной машине"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "v2w-swoosh-quick",
+            "volume": 0.2
+          }
+        ]
+      },
+      "thought": "Это настоящая машина и настоящие цены продавца",
+      "animation": "Телефон поднимается в луче, камера подходит к цене, цены выходят на стекло"
+    },
+    {
+      "id": "s3",
+      "voice": "Разница — двести девяносто тысяч рублей. Это сравнение цен продавца, а не обещание заработка.",
+      "onScreen": "Разница — 290 000 ₽",
+      "sources": [
+        "prod-capture"
+      ],
+      "start": 12.633333333333333,
+      "duration": 6.400000000000002,
+      "direction": {
+        "purpose": "data",
+        "emotion": "выгода",
+        "concept": "Блок цены вырывается из экрана объёмной карточкой, на неё шлёпается жёлтая плашка выгоды; следом выходит оговорка",
+        "hierarchy": {
+          "primary": "+290 000 ₽"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "v2wPull",
+          "review": "A block of the real screen pulled out as an object",
+          "props": {
+            "src": "d-palisade-a.jpg",
+            "blocks": [
+              {
+                "box": "palisade.card",
+                "cue": "Разница",
+                "scale": 2.45,
+                "y": 860
+              },
+              {
+                "box": {
+                  "x": 16,
+                  "y": 682,
+                  "w": 370,
+                  "h": 38
+                },
+                "cue": "Это",
+                "scale": 2.5,
+                "y": 1010
+              }
+            ],
+            "chip": {
+              "text": "+290 000 ₽",
+              "cue": "двести",
+              "y": 1300
+            },
+            "heads": [
+              {
+                "text": "Разница — _290 000 ₽_",
+                "cue": "Разница"
+              },
+              {
+                "text": "Это цены продавца, *не обещание заработка*",
+                "cue": "Это",
+                "size": 66
+              }
+            ]
+          }
+        },
+        "camera": {
+          "move": "still"
+        },
+        "captions": {
+          "mode": "off",
+          "zone": "low"
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Склейка на «Разница»: цифра выходит из экрана"
+        },
+        "sound": [
+          {
+            "cue": 0.41,
+            "sfx": "v2w-click-camera",
+            "volume": 0.3
+          }
+        ]
+      },
+      "thought": "Разница двух цен и есть выгода",
+      "animation": "Карточка из стекла, число докручивается до 290 000"
+    },
+    {
+      "id": "s4",
+      "voice": "Открой каталог и смотри выгоду до звонка.",
+      "onScreen": "Смотри выгоду до звонка",
+      "sources": [
+        "prod-capture"
+      ],
+      "start": 19.033333333333335,
+      "duration": 2.799999999999997,
+      "direction": {
+        "purpose": "payoff",
+        "emotion": "лёгкость",
+        "concept": "Живая лента каталога с жёлтыми плашками выгоды на каждой машине",
+        "hierarchy": {
+          "primary": "выгода до звонка"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "v2wPhone",
+          "review": "Real catalog scroll from production",
+          "props": {
+            "screens": [
+              {
+                "cue": "Открой",
+                "src": "rec-grid.mp4",
+                "video": true,
+                "trim": 80
+              }
+            ],
+            "cams": [
+              {
+                "cue": "Открой",
+                "k": 1.75,
+                "fy": 1260
+              },
+              {
+                "cue": "выгоду",
+                "k": 1.62,
+                "fy": 1220
+              },
+              {
+                "cue": "звонка",
+                "off": 0.7,
+                "k": 1.45,
+                "fy": 1150
+              }
+            ],
+            "tilt": [
+              -12,
+              -5
+            ],
+            "heads": [
+              {
+                "text": "Смотри _выгоду_ *до звонка*",
+                "cue": "Открой",
+                "size": 80
+              }
+            ]
+          }
+        },
+        "camera": {
+          "move": "still"
+        },
+        "captions": {
+          "mode": "off",
+          "zone": "low"
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Склейка на «Открой»: действие"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "v2w-swoosh-quick",
+            "volume": 0.2
+          }
+        ]
+      },
+      "thought": "Выгода видна на каждой машине ещё до звонка",
+      "animation": "Телефон с живой лентой каталога, плашка «до звонка»"
+    },
+    {
+      "id": "s5",
+      "voice": "Вин ту вин. Пока другие ищут — вы закрываете сделки!",
+      "onScreen": "Вы закрываете сделки!",
+      "sources": [
+        "prod-capture"
+      ],
+      "start": 21.833333333333332,
+      "duration": 4.033333333333335,
+      "direction": {
+        "purpose": "climax",
+        "emotion": "уверенность",
+        "concept": "Знак vin2win, слоган и адрес",
+        "hierarchy": {
+          "primary": "VIN2WIN"
+        },
+        "art": {
+          "variant": "base"
+        },
+        "shot": {
+          "type": "custom",
+          "component": "v2wOutro",
+          "review": "Brand outro",
+          "props": {
+            "heads": [
+              {
+                "text": "Пока другие ищут —",
+                "cue": "Вин"
+              },
+              {
+                "text": "*Вы закрываете сделки!*",
+                "cue": "Пока"
+              }
+            ]
+          }
+        },
+        "camera": {
+          "move": "still"
+        },
+        "captions": {
+          "mode": "off",
+          "zone": "low"
+        },
+        "transition": {
+          "type": "cut",
+          "intent": "Склейка в знак"
+        },
+        "sound": [
+          {
+            "cue": 0,
+            "sfx": "v2w-transition-soft",
+            "volume": 0.25
+          }
+        ]
+      },
+      "thought": "Бренд и обещание",
+      "animation": "Знак под светом, слоган выходит из фокуса"
+    }
+  ],
+  "audio": {
+    "voicePath": "generated/vin2win-cena-palisade/voice-d7ab269adf77dcf7-mix.wav",
+    "musicPath": null,
+    "sfx": [],
+    "volume": 1,
+    "voiceId": "iP95p4xoKVk53GoZ742B",
+    "modelId": "eleven_v3",
+    "voiceSettings": {
+      "stability": 0.5,
+      "similarity_boost": 0.8,
+      "style": 0,
+      "speed": 1
+    },
+    "sourcePath": "generated/vin2win-cena-palisade/voice-d7ab269adf77dcf7.mp3",
+    "timingMode": "ElevenLabs character alignment",
+    "sourceDurationSeconds": 25.39102,
+    "durationSeconds": 25.352792,
+    "localTempo": 1,
+    "cacheHash": "d7ab269adf77dcf7",
+    "normalization": "FFmpeg loudnorm -16 LUFS, true peak -1.5 dBTP, 12 ms/80 ms fades",
+    "whisperHint": "Бренды: вин ту вин, Хёндэ Палисейд."
+  },
+  "captions": [
+    {
+      "text": "Сравниваешь",
+      "startMs": 20,
+      "endMs": 480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "цены",
+      "startMs": 520,
+      "endMs": 800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 840,
+      "endMs": 880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "трёх",
+      "startMs": 907,
+      "endMs": 1040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вкладках?",
+      "startMs": 1107,
+      "endMs": 1920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "В",
+      "startMs": 2100,
+      "endMs": 2160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин",
+      "startMs": 2200,
+      "endMs": 2320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ту",
+      "startMs": 2373,
+      "endMs": 2480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин",
+      "startMs": 2540,
+      "endMs": 2720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "разница",
+      "startMs": 2780,
+      "endMs": 3200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "уже",
+      "startMs": 3240,
+      "endMs": 3360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 3400,
+      "endMs": 3440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "карточке.",
+      "startMs": 3500,
+      "endMs": 4001,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Вот",
+      "startMs": 4430,
+      "endMs": 4640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "реальный",
+      "startMs": 4700,
+      "endMs": 5040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Хёндэ",
+      "startMs": 5120,
+      "endMs": 5440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Палисейд.",
+      "startMs": 5520,
+      "endMs": 6160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Продавец",
+      "startMs": 6500,
+      "endMs": 6800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "указал:",
+      "startMs": 6864,
+      "endMs": 7280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "на",
+      "startMs": 7500,
+      "endMs": 7520,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "площадках",
+      "startMs": 7589,
+      "endMs": 8160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 8200,
+      "endMs": 8240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "четыре",
+      "startMs": 8320,
+      "endMs": 8720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "миллиона",
+      "startMs": 8747,
+      "endMs": 9040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "двести",
+      "startMs": 9120,
+      "endMs": 9600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "девяносто",
+      "startMs": 9650,
+      "endMs": 10280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тысяч,",
+      "startMs": 10313,
+      "endMs": 10640,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "в",
+      "startMs": 10740,
+      "endMs": 10800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "руки",
+      "startMs": 10864,
+      "endMs": 11120,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 11200,
+      "endMs": 11280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "четыре",
+      "startMs": 11370,
+      "endMs": 11680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "миллиона.",
+      "startMs": 11720,
+      "endMs": 12480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Разница",
+      "startMs": 12620,
+      "endMs": 13040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 13120,
+      "endMs": 13200,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "двести",
+      "startMs": 13227,
+      "endMs": 13600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "девяносто",
+      "startMs": 13660,
+      "endMs": 14081,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "тысяч",
+      "startMs": 14210,
+      "endMs": 14560,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "рублей.",
+      "startMs": 14617,
+      "endMs": 15040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Это",
+      "startMs": 15590,
+      "endMs": 15760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сравнение",
+      "startMs": 15840,
+      "endMs": 16480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "цен",
+      "startMs": 16540,
+      "endMs": 16720,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "продавца,",
+      "startMs": 16768,
+      "endMs": 17360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "а",
+      "startMs": 17400,
+      "endMs": 17440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "не",
+      "startMs": 17493,
+      "endMs": 17600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "обещание",
+      "startMs": 17653,
+      "endMs": 18160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "заработка.",
+      "startMs": 18213,
+      "endMs": 18920,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Открой",
+      "startMs": 19020,
+      "endMs": 19280,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "каталог",
+      "startMs": 19340,
+      "endMs": 19760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "и",
+      "startMs": 19920,
+      "endMs": 19984,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "смотри",
+      "startMs": 19984,
+      "endMs": 20320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "выгоду",
+      "startMs": 20400,
+      "endMs": 20800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "до",
+      "startMs": 20853,
+      "endMs": 20960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "звонка.",
+      "startMs": 20987,
+      "endMs": 21440,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Вин",
+      "startMs": 21820,
+      "endMs": 22000,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ту",
+      "startMs": 22053,
+      "endMs": 22160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вин.",
+      "startMs": 22220,
+      "endMs": 22600,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Пока",
+      "startMs": 22830,
+      "endMs": 22960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "другие",
+      "startMs": 23017,
+      "endMs": 23360,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "ищут",
+      "startMs": 23500,
+      "endMs": 23840,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "—",
+      "startMs": 24030,
+      "endMs": 24053,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "вы",
+      "startMs": 24053,
+      "endMs": 24160,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "закрываете",
+      "startMs": 24220,
+      "endMs": 24800,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "сделки!",
+      "startMs": 24864,
+      "endMs": 25360,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ],
+  "editorialReview": {
+    "note": "Озвучка для ролика в vin2win/output/viral-compare.",
+    "openClaims": [
+      "Цены на площадках указаны продавцом, платформа их не сверяет."
+    ]
+  },
+  "limits": {
+    "minSeconds": 15,
+    "maxSeconds": 40
+  },
+  "captionDisplay": [
+    {
+      "from": "вин ту вин",
+      "to": "VIN2WIN"
+    },
+    {
+      "from": "Хёндэ Палисейд",
+      "to": "Hyundai Palisade"
+    },
+    {
+      "from": "четыре миллиона двести девяносто тысяч",
+      "to": "4 290 000 ₽"
+    },
+    {
+      "from": "двести девяносто тысяч рублей",
+      "to": "290 000 ₽"
+    },
+    {
+      "from": "четыре миллиона",
+      "to": "4 000 000 ₽"
+    }
+  ],
+  "renderPath": "out/studio/vin2win-palisade.mp4",
+  "qa": {
+    "path": "out/studio/vin2win-palisade-production-qa.json",
+    "passed": true,
+    "manualListeningRequired": true
+  }
+}
